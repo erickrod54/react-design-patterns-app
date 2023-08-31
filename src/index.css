@@ -1,13 +1,49 @@
+
+/**react-design-patterns-app - version 1.00 - index css  
+ * - Features: 
+ * 
+ *     --> Creating variables for the app colors
+ * 
+ * Note: Quick sort is going to be applied over
+ * numebrs array
+ */
+
+
+:root {
+  --mine-shaft: hsla(0, 0%, 16%, 1);      /* #2B2B2B */
+  --kangaroo: hsla(82, 6%, 76%, 1);      /* #C9CBC4 */
+  --gumbo: hsla(196, 21%, 56%, 1);       /* #7999A4 */
+  --bermuda-gray: hsla(204, 18%, 54%, 1); /* #6E8B9E */
+  
+  --yellow: hsla(60, 100%, 50%, 1);      /* Yellow */
+  --light-yellow: hsla(60, 100%, 80%, 1); /* Light Yellow */
+  --green: hsla(120, 100%, 25%, 1);      /* Green */
+  --light-green: hsla(120, 100%, 75%, 1); /* Light Green */
+}
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--mine-shaft);
+  color: var(--light-green);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@supports (-webkit-background-clip: text) {
+  .color-font {
+    background: linear-gradient(to right, var(--yellow), var(--light-green));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
