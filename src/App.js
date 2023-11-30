@@ -1,19 +1,22 @@
 import { HomePage } from './pages/index.pages'
 
-/**react-design-patterns-app - version 1.01 - App js  
+/**react-design-patterns-app - version 1.03 - App js  
  * - Features: 
  * 
- *     --> Placing 'HomePage' component
+ *     --> Refactoring main title
  * 
- * Note: This component will have later the main menu
- * to each pattern and its explanations and use cases
+ * Note: Pending to make responsive design
  */
 
 function App() {
   return (
     <>
-    <h2 className="color-font"> React Design Patterns App </h2>
-    <HomePage />
+    <div className='grid justify-center'>
+      <div className='bg-blue-600 p-24 flex justify-center items-center shadow-md border border-green-500 border-6 rounded-xl w-fit m-16'>
+        <h1 className="color-font text-4xl"> React Design Patterns App </h1>
+      </div>
+    </div>
+      <HomePage />
     </>
   );
 }
