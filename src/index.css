@@ -1,13 +1,16 @@
 
-/**react-design-patterns-app - version 1.00 - index css  
+/**react-design-patterns-app - version 1.03 - index css  
  * - Features: 
  * 
- *     --> Creating variables for the app colors
+ *     --> Adding tailwind base 
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
  */
 
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
 
 :root {
   --mine-shaft: hsla(0, 0%, 16%, 1);      /* #2B2B2B */
