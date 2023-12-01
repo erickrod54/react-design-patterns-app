@@ -1,9 +1,14 @@
 import { HomePage } from './pages/index.pages'
 
-/**react-design-patterns-app - version 1.03 - App js  
+import { 
+  BrowserRouter as Router, 
+  Routes, 
+  Route } from 'react-router-dom';
+
+/**react-design-patterns-app - version 1.07 - App js  
  * - Features: 
  * 
- *     --> Refactoring main title
+ *     --> Implementing React router 'V6'
  * 
  * Note: Pending to make responsive design
  */
@@ -16,7 +21,12 @@ function App() {
         <h1 className="color-font text-4xl"> React Design Patterns App </h1>
       </div>
     </div>
-      <HomePage />
+
+    <Router>
+        <Routes>
+                <Route index path='/' element={<HomePage />}/>
+        </Routes>
+    </Router>
     </>
   );
 }
