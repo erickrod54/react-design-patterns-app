@@ -1,7 +1,7 @@
-/**react-design-patterns-app - version 1.06 - data js  
+/**react-design-patterns-app - version 1.07 - data js  
  * - Features: 
  * 
- *     --> Adding 'category' fields
+ *     --> Clearing extra datass
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -65,7 +65,7 @@ export const patternCard = [
     {
       id:10,
       category:'Design System',
-      pattern:'Design System - React Composition',
+      pattern:'React Composition',
       description:''
     },
     {
@@ -119,13 +119,13 @@ export const patternCard = [
     {
       id:19,
       category:'Advanced TypeScript',
-      pattern:'Advanced TypeScript: Introduction',
+      pattern:'Introduction',
       description:''
     },
     {
       id:20,
       category:'Advanced TypeScript',
-      pattern:'Advanced TypeScript: Basics',
+      pattern:'Basics',
       description:''
     },
     {
