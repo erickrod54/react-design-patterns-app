@@ -1,10 +1,12 @@
 import React from "react";
 import { usePatternsAppContext } from "../context";
+import { Link } from "react-router-dom";
 
-/**react-design-patterns-app - version 1.07 - HomePage 
+/**react-design-patterns-app - version 1.08 - HomePage 
  * - Features: 
  * 
- *     --> Adjusting 'category' font size
+ *     --> Adding Link Component to redirect to 
+ *         the 'SinglePattern' Page
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -34,11 +36,13 @@ const HomePage = () =>  {
                         return(
                             <ul key={id}>
                                 <li className="m-2">
+                                <Link to={`${id}`}>
                                 <div className="bg-gray-400 p-4 flex
                                         m-4
                                         justify-center items-center
                                         shadow-md border
                                         border-green-500 border-6 cursor-pointer hover:scale-110 hover:rounded-lg duration-75">{pattern}</div>
+                                </Link>
                                 </li>
                             </ul>
                         )
@@ -56,11 +60,13 @@ const HomePage = () =>  {
                     return(
                         <ul key={id}>
                             <li className="m-2">
+                            <Link to={`${id}`}>
                             <div className="bg-gray-400 p-4 flex
                                      m-4
                                      justify-center items-center
                                      shadow-md border
                                      border-green-500 border-6 cursor-pointer hover:scale-110 hover:rounded-lg duration-75">{pattern}</div>
+                            </Link>
                             </li>
                         </ul>
                     )
@@ -78,11 +84,13 @@ const HomePage = () =>  {
                     return(
                         <ul key={id}>
                             <li className="m-2">
+                            <Link to={`${id}`}>
                             <div className="bg-gray-400 p-4 flex
                                      m-4
                                      justify-center items-center
                                      shadow-md border
                                      border-green-500 border-6 cursor-pointer hover:scale-110 hover:rounded-lg duration-75">{pattern}</div>
+                            </Link>
                             </li>
                         </ul>
                     )
@@ -100,11 +108,13 @@ const HomePage = () =>  {
                     return(
                         <ul key={id}>
                             <li className="m-2">
+                            <Link to={`${id}`}>
                             <div className="bg-gray-400 p-4 flex
                                      m-4
                                      justify-center items-center
                                      shadow-md border
                                      border-green-500 border-6 cursor-pointer hover:scale-110 hover:rounded-lg duration-75">{pattern}</div>
+                            </Link>
                             </li>
                         </ul>
                     )
@@ -122,11 +132,13 @@ const HomePage = () =>  {
                     return(
                         <ul key={id}>
                             <li className="m-2">
+                            <Link to={`${id}`}>    
                             <div className="bg-gray-400 p-4 flex
                                      m-4
                                      justify-center items-center
                                      shadow-md border
                                      border-green-500 border-6 cursor-pointer hover:scale-110 hover:rounded-lg duration-75">{pattern}</div>
+                            </Link>
                             </li>
                         </ul>
                     )
@@ -144,11 +156,13 @@ const HomePage = () =>  {
                     return(
                         <ul key={id}>
                             <li className="m-2">
+                            <Link to={`${id}`}>
                             <div className="bg-gray-400 p-4 flex
                                      m-4
                                      justify-center items-center
                                      shadow-md border
                                      border-green-500 border-6 cursor-pointer hover:scale-110 hover:rounded-lg duration-75">{pattern}</div>
+                            </Link>
                             </li>
                         </ul>
                     )
