@@ -1,14 +1,14 @@
-import { HomePage } from './pages/index.pages'
+import { HomePage, SinglePatternPage } from './pages/index.pages'
 
 import { 
   BrowserRouter as Router, 
   Routes, 
   Route } from 'react-router-dom';
 
-/**react-design-patterns-app - version 1.07 - App js  
+/**react-design-patterns-app - version 1.08 - App js  
  * - Features: 
  * 
- *     --> Implementing React router 'V6'
+ *     --> Adding 'SinglePatternPage' route
  * 
  * Note: Pending to make responsive design
  */
@@ -25,6 +25,7 @@ function App() {
     <Router>
         <Routes>
                 <Route index path='/' element={<HomePage />}/>
+                <Route path=":patternId" element={<SinglePatternPage />}/> 
         </Routes>
     </Router>
     </>
