@@ -1,4 +1,4 @@
-import SharedLayout from './components/shared.layout.component';
+import { SharedLayout } from './components/index.components';
 import { HomePage, SinglePatternPage } from './pages/index.pages'
 
 import { 
@@ -6,10 +6,10 @@ import {
   Routes, 
   Route } from 'react-router-dom';
 
-/**react-design-patterns-app - version 1.09 - App js  
+/**react-design-patterns-app - version 1.10 - App js  
  * - Features: 
  * 
- *     --> Wrapping  'SinglePatternPage' using 'SharedLayout' 
+ *     --> Changing 'SharedLayout' import  
  * 
  * Note: to set a standard layout to the 'SinglePatternPage'
  */
