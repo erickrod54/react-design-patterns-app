@@ -1,11 +1,12 @@
 import LayoutComponentPattern from "./laytout.pattern.component";
+import SharedLayout from "./shared.layout.component";
 
-/**react-design-patterns-app - version 1.08 - components > index  
+/**react-design-patterns-app - version 1.09 - components > index  
  * - Features: 
  * 
- *     --> Adding 'LayoutComponentPattern' route
+ *     --> Adding 'SharedLayout' route
  * 
  * Note: Pending to make responsive design
  */
 
-export { LayoutComponentPattern }
+export { LayoutComponentPattern, SharedLayout}
