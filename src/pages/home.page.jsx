@@ -2,11 +2,10 @@ import React from "react";
 import { usePatternsAppContext } from "../context";
 import { Link } from "react-router-dom";
 
-/**react-design-patterns-app - version 1.08 - HomePage 
+/**react-design-patterns-app - version 1.10 - HomePage 
  * - Features: 
  * 
- *     --> Adding Link Component to redirect to 
- *         the 'SinglePattern' Page
+ *     --> Restoring 'hover'
  * 
  * Note: the cards components with the card information
  * will be displayed here
