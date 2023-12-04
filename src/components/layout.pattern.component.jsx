@@ -1,9 +1,10 @@
 import React from "react";
+import CustomTitle from "./custom.title.component";
 
-/**react-design-patterns-app - version 1.10 - LayoutComponentPattern 
+/**react-design-patterns-app - version 1.11 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Modifying file name
+ *     --> testing capitalize styles
  * 
  * Note: This is the first topic
  */
@@ -11,7 +12,7 @@ import React from "react";
 const LayoutComponentPattern = () => {
 
     return(
-        <h2>Layout Component Pattern</h2>
+        <CustomTitle title={'layout component pattern'} />
     )
 }
 
