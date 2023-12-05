@@ -1,10 +1,10 @@
 import React from "react";
 import CustomTitle from "./custom.title.component";
 
-/**react-design-patterns-app - version 1.11 - LayoutComponentPattern 
+/**react-design-patterns-app - version 1.12 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> testing capitalize styles
+ *     --> Adding Custom Color
  * 
  * Note: This is the first topic
  */
@@ -12,7 +12,9 @@ import CustomTitle from "./custom.title.component";
 const LayoutComponentPattern = () => {
 
     return(
-        <CustomTitle title={'layout component pattern'} />
+        <div className="text-yellow-100">
+            <CustomTitle title={'layout component pattern'} />
+        </div>
     )
 }
 
