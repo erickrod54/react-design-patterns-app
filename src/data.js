@@ -1,7 +1,7 @@
-/**react-design-patterns-app - version 1.11 - data js  
+/**react-design-patterns-app - version 1.12 - data js  
  * - Features: 
  * 
- *     --> Changing category to 'Component Patterns'
+ *     --> Adding 'Advanced Concepts and Hooks' category
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -46,144 +46,162 @@ export const patternCard = [
     },
     {
       id:7,
-      category:'Component Patterns',
-      pattern:'Advanced Concepts and Hooks',
+      category:'Advanced Concepts and Hooks',
+      pattern:'React Portals',
       description:''
     },
     {
       id:8,
-      category:'Design System',
-      pattern:'Design System Core Concepts',
+      category:'Advanced Concepts and Hooks',
+      pattern:'Forwarding Refs',
       description:''
     },
     {
       id:9,
-      category:'Component Patterns',
-      pattern:'Building Components Using Figma',
+      category:'Advanced Concepts and Hooks',
+      pattern:'Error Boundaries',
       description:''
     },
     {
       id:10,
-      category:'Design System',
-      pattern:'React Composition',
+      category:'Advanced Concepts and Hooks',
+      pattern:'Advanced Hooks',
       description:''
     },
     {
       id:11,
       category:'Design System',
-      pattern:'Developing Components',
+      pattern:'Design System Core Concepts',
       description:''
     },
     {
       id:12,
-      category:'Design System',
-      pattern:'Encapsulating Styles',
+      category:'Component Patterns',
+      pattern:'Building Components Using Figma',
       description:''
     },
     {
       id:13,
       category:'Design System',
-      pattern:'Patterns for Spacing',
+      pattern:'React Composition',
       description:''
     },
     {
       id:14,
       category:'Design System',
-      pattern:'Patterns for more Complex Styles',
+      pattern:'Developing Components',
       description:''
     },
     {
       id:15,
+      category:'Design System',
+      pattern:'Encapsulating Styles',
+      description:''
+    },
+    {
+      id:16,
+      category:'Design System',
+      pattern:'Patterns for Spacing',
+      description:''
+    },
+    {
+      id:17,
+      category:'Design System',
+      pattern:'Patterns for more Complex Styles',
+      description:''
+    },
+    {
+      id:18,
       category:'Performance',
       pattern:'Optimization',
       description:''
     },
     {
-      id:16,
+      id:19,
       category:'Performance',
       pattern:'Fixing Rendering issues',
       description:''
     },
     {
-      id:17,
+      id:20,
       category:'Performance',
       pattern:'Expensive operations',
       description:''
     },
     {
-      id:18,
+      id:21,
       category:'Practices',
       pattern:'Clean Code Tips',
       description:''
     },
     {
-      id:19,
-      category:'Advanced TypeScript',
-      pattern:'Introduction',
-      description:''
-    },
-    {
-      id:20,
-      category:'Advanced TypeScript',
-      pattern:'Basics',
-      description:''
-    },
-    {
-      id:21,
-      category:'Advanced TypeScript',
-      pattern:'Typing Hooks',
-      description:''
-    },
-    {
       id:22,
       category:'Advanced TypeScript',
-      pattern:'Typing reducers',
+      pattern:'Introduction',
       description:''
     },
     {
       id:23,
       category:'Advanced TypeScript',
-      pattern:'Typing Context',
+      pattern:'Basics',
       description:''
     },
     {
       id:24,
       category:'Advanced TypeScript',
-      pattern:'Using Generics',
+      pattern:'Typing Hooks',
       description:''
     },
     {
       id:25,
       category:'Advanced TypeScript',
-      pattern:'More on TypeScript',
+      pattern:'Typing reducers',
       description:''
     },
     {
       id:26,
       category:'Advanced TypeScript',
-      pattern:'Component Patterns',
+      pattern:'Typing Context',
       description:''
     },
     {
       id:27,
+      category:'Advanced TypeScript',
+      pattern:'Using Generics',
+      description:''
+    },
+    {
+      id:28,
+      category:'Advanced TypeScript',
+      pattern:'More on TypeScript',
+      description:''
+    },
+    {
+      id:29,
+      category:'Advanced TypeScript',
+      pattern:'Component Patterns',
+      description:''
+    },
+    {
+      id:30,
       category:'React Router',
       pattern:'Introduction',
       description:''
     },
     {
-      id:28,
+      id:31,
       category:'React Router',
       pattern:'Basic Concepts',
       description:''
     },
     {
-      id:29,
+      id:32,
       category:'React Router',
       pattern:'Navigations and links',
       description:''
     },
     {
-      id:30,
+      id:33,
       category:'React Router',
       pattern:'Advanced Routing',
       description:''
