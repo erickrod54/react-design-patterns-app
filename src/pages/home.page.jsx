@@ -2,10 +2,10 @@ import React from "react";
 import { usePatternsAppContext } from "../context";
 import { Link } from "react-router-dom";
 
-/**react-design-patterns-app - version 1.10 - HomePage 
+/**react-design-patterns-app - version 1.11 - HomePage 
  * - Features: 
  * 
- *     --> Restoring 'hover'
+ *     --> Changing first category to 'Component Patterns'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -29,7 +29,7 @@ const HomePage = () =>  {
             <div className="m-8 p-8">
                 <p  className="text-3xl">{category_1}</p>
                 <div className="m-8 p-8 grid grid-cols-8 gap-2 max-2xl:grid-cols-4 max-sm:grid-cols-1 ">
-                    {patternCard.filter((patternString) => patternString.category.includes('Core Concepts')).map((Card) => {
+                    {patternCard.filter((patternString) => patternString.category.includes('Component Patterns')).map((Card) => {
 
                         const { id, pattern } = Card
                         return(
