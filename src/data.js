@@ -1,7 +1,7 @@
-/**react-design-patterns-app - version 1.07 - data js  
+/**react-design-patterns-app - version 1.11 - data js  
  * - Features: 
  * 
- *     --> Clearing extra datass
+ *     --> Changing category to 'Component Patterns'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -10,43 +10,43 @@
 export const patternCard = [
     {
       id:1,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Layout Components',
       description:''
     },
     {
       id:2,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Container Components',
       description:''
     },
     {
       id:3,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Controlled and Uncontrolled Components',
       description:''
     },
     {
       id:4,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Higher-Order Components',
       description:''
     },
     {
       id:5,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Custom Hooks Patterns',
       description:''
     },
     {
       id:6,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Functional Programming and React',
       description:''
     },
     {
       id:7,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Advanced Concepts and Hooks',
       description:''
     },
@@ -58,7 +58,7 @@ export const patternCard = [
     },
     {
       id:9,
-      category:'Core Concepts',
+      category:'Component Patterns',
       pattern:'Building Components Using Figma',
       description:''
     },
