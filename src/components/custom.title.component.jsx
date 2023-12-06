@@ -1,9 +1,9 @@
 import React from "react";
 
-/**react-design-patterns-app - version 1.11 - CustomTitle  
+/**react-design-patterns-app - version 1.13 - CustomTitle  
  * - Features: 
  * 
- *     --> Adding 'custom' tailwind css
+ *     --> Get rid of 'underline' prop
  * 
  * Note: Pending to make responsive design
  */
@@ -11,7 +11,7 @@ import React from "react";
 const CustomTitle = ({ title }) => {
 
     return(
-        <p className="text-4xl underline capitalize">
+        <p className="text-4xl capitalize">
             {title}
         </p>
     )
