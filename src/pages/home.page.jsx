@@ -1,11 +1,12 @@
 import React from "react";
 import { usePatternsAppContext } from "../context";
 import { Link } from "react-router-dom";
+import IntroComponent from "../components/intro.component";
 
-/**react-design-patterns-app - version 1.12 - HomePage 
+/**react-design-patterns-app - version 1.13 - HomePage 
  * - Features: 
  * 
- *     --> Adding 'Advanced Concepts and Hooks' section
+ *     --> Importing and placing IntroComponent
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -27,6 +28,9 @@ const HomePage = () =>  {
     
     return(
         <>
+
+            <IntroComponent />
+
             <div className="m-8 p-8">
                 <p  className="text-3xl">{category_1}</p>
                 <div className="m-8 p-8 grid grid-cols-8 gap-2 max-2xl:grid-cols-4 max-sm:grid-cols-1 ">
