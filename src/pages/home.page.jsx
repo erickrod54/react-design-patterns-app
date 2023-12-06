@@ -1,12 +1,12 @@
 import React from "react";
 import { usePatternsAppContext } from "../context";
 import { Link } from "react-router-dom";
-import IntroComponent from "../components/intro.component";
+import { IntroComponent } from "../components/index.components";
 
-/**react-design-patterns-app - version 1.13 - HomePage 
+/**react-design-patterns-app - version 1.14 - HomePage 
  * - Features: 
  * 
- *     --> Importing and placing IntroComponent
+ *     --> Changing 'IntroComponent' import
  * 
  * Note: the cards components with the card information
  * will be displayed here
