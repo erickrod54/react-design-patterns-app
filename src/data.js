@@ -1,7 +1,7 @@
-/**react-design-patterns-app - version 1.12 - data js  
+/**react-design-patterns-app - version 1.15 - data js  
  * - Features: 
  * 
- *     --> Adding 'Advanced Concepts and Hooks' category
+ *     --> Adding 'IntroComponentData'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -206,4 +206,23 @@ export const patternCard = [
       pattern:'Advanced Routing',
       description:''
     },
+]
+
+
+export const IntroComponentData = [
+  {
+    title: 'Introduction to React Pattterns',
+    description:'Design patterns are effective solutions for common challenges and some of this are specific patterns that come from actual industry experience',
+    items:[
+      {
+        item1:'Design patterns that are specific to React',
+      },
+      {
+        item2: 'Best practices to magaging form state',
+      },
+      {
+        item3:'Functional Programming in the context of react'
+      }
+    ]
+  }
 ]
