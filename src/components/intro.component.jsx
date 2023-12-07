@@ -2,10 +2,10 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 1.16 - IntroComponent 
+/**react-design-patterns-app - version 1.17 - IntroComponent 
  * - Features: 
  * 
- *     --> Mapping 'IntroComponentData' challenge list
+ *     --> Changing 'p' tag for a section to avoid p child error
  * 
  * Note: This is the first topic
  */
@@ -21,9 +21,9 @@ const IntroComponent = () => {
     return(
         <div className="flex justify-center items-center w-92">
             <div className="flex-col ">
-                <p className=" text-red-300 m-4 p-4">
+                <section className=" text-red-300 m-4 p-4">
                     <CustomTitle title={title} />
-                </p>
+                </section>
 
                 <div className="m-4 p-4">
                     <p className="flex justify-center items-center">
