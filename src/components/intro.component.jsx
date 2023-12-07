@@ -2,10 +2,10 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 1.15 - IntroComponent 
+/**react-design-patterns-app - version 1.16 - IntroComponent 
  * - Features: 
  * 
- *     --> Destructuring IntroData
+ *     --> Mapping 'IntroComponentData' challenge list
  * 
  * Note: This is the first topic
  */
@@ -16,7 +16,7 @@ const IntroComponent = () => {
 
     console.log({ IntroComponentData })
 
-    const { title, description } = IntroComponentData[0];
+    const { title, description, items } = IntroComponentData[0];
 
     return(
         <div className="flex justify-center items-center w-92">
@@ -31,15 +31,15 @@ const IntroComponent = () => {
                     </p>
 
                     <ul className="list-decimal	mt-6 ml-12">
-                        <li>
-                            Design patterns that are specific to React
-                        </li>
-                        <li>
-                            Best practices to magaging form state
-                        </li>
-                        <li>
-                            Functional Programming in the context of react
-                        </li>
+                        {items.map((item) => {
+
+                            const { id, challenge } = item;    
+                            return(
+                               <li key={id}>
+                                    {challenge}
+                               </li>     
+                            )
+                        })}
                     </ul>
                 </div>
             </div>
