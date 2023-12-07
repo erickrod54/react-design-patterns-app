@@ -1,7 +1,7 @@
-/**react-design-patterns-app - version 1.15 - data js  
+/**react-design-patterns-app - version 1.16 - data js  
  * - Features: 
  * 
- *     --> Adding 'IntroComponentData'
+ *     --> Adding 'IntroComponentData' items list
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -215,13 +215,16 @@ export const IntroComponentData = [
     description:'Design patterns are effective solutions for common challenges and some of this are specific patterns that come from actual industry experience',
     items:[
       {
-        item1:'Design patterns that are specific to React',
+        id:1,
+        challenge:'Design patterns that are specific to React',
       },
       {
-        item2: 'Best practices to magaging form state',
+        id:2,
+        challenge: 'Best practices to magaging form state',
       },
       {
-        item3:'Functional Programming in the context of react'
+        id:3,
+        challenge:'Functional Programming in the context of react'
       }
     ]
   }
