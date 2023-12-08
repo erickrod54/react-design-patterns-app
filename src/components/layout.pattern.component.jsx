@@ -1,15 +1,25 @@
 import React from "react";
 import CustomTitle from "./custom.title.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 1.17 - LayoutComponentPattern 
+/**react-design-patterns-app - version 1.18 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Starting 'LayoutComponentPattern'
+ *     --> Destructuring and testing the image
  * 
  * Note: This is the first topic
  */
 
 const LayoutComponentPattern = () => {
+
+    const { ImagesData } = usePatternsAppContext();
+
+    
+    const { list } = ImagesData[0]
+    
+    const layoutexamples = list[0].image
+    
+    console.log({layoutexamples})
 
     return(
         <div>
@@ -40,7 +50,6 @@ const LayoutComponentPattern = () => {
                 as can be seen in the following picture:
             </p>
 
-            
         </section>
         </div>
     )
