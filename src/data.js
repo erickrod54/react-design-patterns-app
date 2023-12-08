@@ -1,7 +1,11 @@
-/**react-design-patterns-app - version 1.16 - data js  
+import { layoutexamples } from "./assets/index.assets"
+
+/**react-design-patterns-app - version 1.17 - data js  
  * - Features: 
  * 
- *     --> Adding 'IntroComponentData' items list
+ *     --> Building 'ImagesData'
+ *    
+ *     --> Adding first asset 'layoutexamples' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -225,6 +229,19 @@ export const IntroComponentData = [
       {
         id:3,
         challenge:'Functional Programming in the context of react'
+      }
+    ]
+  }
+]
+
+export const ImagesData = [
+  {
+    id:1,
+    category: 'layout',
+    list:[
+      {
+        id:1,
+        image: layoutexamples
       }
     ]
   }
