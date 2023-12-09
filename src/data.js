@@ -1,11 +1,9 @@
-import { layoutexamples } from "./assets/index.assets"
+import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 1.17 - data js  
+/**react-design-patterns-app - version 1.20 - data js  
  * - Features: 
- * 
- *     --> Building 'ImagesData'
  *    
- *     --> Adding first asset 'layoutexamples' 
+ *     --> Adding 'sidebarexample' asset 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -242,6 +240,10 @@ export const ImagesData = [
       {
         id:1,
         image: layoutexamples
+      },
+      {
+        id:1,
+        image: sidebarexample
       }
     ]
   }
