@@ -2,10 +2,10 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 1.18 - LayoutComponentPattern 
+/**react-design-patterns-app - version 1.19 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Destructuring and testing the image
+ *     --> Placing image src
  * 
  * Note: This is the first topic
  */
@@ -49,6 +49,8 @@ const LayoutComponentPattern = () => {
             <p>
                 as can be seen in the following picture:
             </p>
+
+            <img src={layoutexamples} alt="layoutexamples" className="mt-10 w-auto h-auto"/>
 
         </section>
         </div>
