@@ -2,10 +2,12 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 1.20 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.00 - LayoutComponentPattern 
  * - Features: 
  * 
  *     --> Developing 'LayoutComponentPattern' concepts
+ * 
+ *     --> Placing image asset  
  * 
  * Note: This is the first topic
  */
@@ -17,9 +19,8 @@ const LayoutComponentPattern = () => {
     
     const { list } = ImagesData[0]
     
-    const layoutexamples = list[0].image
-    
-    console.log({layoutexamples})
+    const layoutexamples = list[0].image;
+    const sidebarexample = list[1].image;
 
     return(
         <div>
@@ -52,13 +53,15 @@ const LayoutComponentPattern = () => {
 
             <img src={layoutexamples} alt="layoutexamples" className="mt-10 w-auto h-auto"/>
 
-            <p>
+            <p className="mt-6">
                 an use case can be when is developed a side navigation
                 developers usually tend to include both as the html associated
                 styles within component itself as the image that follows:
             </p>
 
-            <p>
+            <img src={sidebarexample} alt="layoutexamples" className="mt-10 w-auto h-auto"/>
+
+            <p className="mt-6">
                 however with layout components adopt different approaches
                 by separating the actual layout styles into a dedicated component
                 and only insert the specific components like the side navigation
