@@ -2,12 +2,11 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 2.00 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.01 - LayoutComponentPattern 
  * - Features: 
  * 
  *     --> Developing 'LayoutComponentPattern' concepts
- * 
- *     --> Placing image asset  
+ *         in progress  
  * 
  * Note: This is the first topic
  */
@@ -67,6 +66,14 @@ const LayoutComponentPattern = () => {
                 and only insert the specific components like the side navigation
                 into the layout component
             </p>
+
+            <p className="mt-6 mb-8 first-letter:capitalize">
+                the <span className="text-white font-semibold">main advantage of using layout components </span> 
+                is that the individual components, the core content of a web
+                page <span className="text-white font-semibold">should be unaware and unconcerned about their 
+                precise location within the page structure</span>.  
+            </p>
+            
         </section>
         </div>
     )
