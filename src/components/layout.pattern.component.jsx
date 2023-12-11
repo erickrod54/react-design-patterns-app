@@ -1,12 +1,12 @@
 import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import { SectionWrapper } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 2.01 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.02 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Developing 'LayoutComponentPattern' concepts
- *         in progress  
+ *     --> Importing and placing 'SectionWrapper'
  * 
  * Note: This is the first topic
  */
@@ -23,11 +23,11 @@ const LayoutComponentPattern = () => {
 
     return(
         <div>
-        <div className="text-yellow-100 underline">
+        <div className="text-yellow-100 underline flex justify-center items-center">
             <CustomTitle title={'layout component pattern'} />
         </div>
         
-        <section className="mt-12 first-letter:capitalize text-lg">
+        <SectionWrapper>
             <p>
                 layout components focus on organizing other
                 components within a web page, some examples
@@ -74,7 +74,7 @@ const LayoutComponentPattern = () => {
                 precise location within the page structure</span>.  
             </p>
             
-        </section>
+        </SectionWrapper>
         </div>
     )
 }
