@@ -2,16 +2,19 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 2.03 - styled.components
+/**react-design-patterns-app - version 2.04 - styled.components
  * - Features: 
  * 
- *     --> Writting styles for section wrapper 
+ *     --> Adding custom classes and 'CustomTitleStyle'
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
  * and recent
  * 
  *          https://www.npmjs.com/package/twin.macro
+ * 
+ * i have to create a root access custom color palette in order 
+ * to use them in the custom titles
  */
 
 export const SectionWrapper = styled.section`
@@ -28,4 +31,18 @@ export const SectionWrapper = styled.section`
     p{
         ${tw`mt-6 mb-8 first-letter:capitalize`}
     }
+
+    `
+
+export const CustomTitleStyle = styled.div`
+
+&{
+    ${tw`flex justify-center items-center`}
+}
+
+.layout{
+    color:yellow;
+    text-decoration-line: underline;
+}
+
 `
