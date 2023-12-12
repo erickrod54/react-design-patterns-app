@@ -1,12 +1,12 @@
 import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
-import { SectionWrapper } from "../styledcomponents/styled.components.index";
+import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 2.03 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.04 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Migrating styles for 'SectionWrapper'
+ *     --> Placing 'CustomTitleStyle' component
  * 
  * Note: This is the first topic
  */
@@ -23,16 +23,15 @@ const LayoutComponentPattern = () => {
 
     return(
         <div>
-        <div className="text-yellow-100 underline flex justify-center items-center">
-            <CustomTitle title={'layout component pattern'} />
-        </div>
-        
+            <CustomTitleStyle>
+                <CustomTitle  title={<span className="layout">layout component pattern</span>} />
+            </CustomTitleStyle>
         <SectionWrapper>
             <p>
                 layout components focus on organizing other
                 components within a web page, some examples
                 of layout components can be:
-            </p>
+            </p> 
             
             <ul>
                 <li>
