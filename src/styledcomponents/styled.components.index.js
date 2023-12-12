@@ -1,10 +1,10 @@
-import { CustomTitleStyle, SectionWrapper } from "./styled.components";
+import { Container, CustomTitleStyle, Panel, SectionWrapper } from "./styled.components";
 
 
-/**react-design-patterns-app - version 2.04 - styledcomponents > index
+/**react-design-patterns-app - version 2.05 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'CustomTitleStyle'  
+ *     --> Importing and exporting 'Container' and 'Panel' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -14,4 +14,4 @@ import { CustomTitleStyle, SectionWrapper } from "./styled.components";
  */
 
 /**Sections and content */
-export { SectionWrapper, CustomTitleStyle}
+export { SectionWrapper, CustomTitleStyle, Container, Panel }
