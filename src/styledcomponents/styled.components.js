@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 2.04 - styled.components
+/**react-design-patterns-app - version 2.05 - styled.components
  * - Features: 
  * 
- *     --> Adding custom classes and 'CustomTitleStyle'
+ *     --> Building 'Container' and 'Panel' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -45,4 +45,16 @@ export const CustomTitleStyle = styled.div`
     text-decoration-line: underline;
 }
 
+`
+
+export const Container = styled.div`
+    &{
+        ${tw`flex border-4 border-white`}
+    }
+`
+
+export const Panel = styled.div`
+    &{
+        ${tw`flex-1 m-8 p-8 border-4 border-orange-100`}
+    }
 `
