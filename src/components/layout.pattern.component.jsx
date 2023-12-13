@@ -2,11 +2,13 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
+import { SplitScreen } from "./index.components";
+import { LeftSideComponent, RightSideComponent } from "./prop-sub-components/prop.components.index";
 
-/**react-design-patterns-app - version 2.04 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.05 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Placing 'CustomTitleStyle' component
+ *     --> Placing 'SplitScreen' component
  * 
  * Note: This is the first topic
  */
@@ -73,6 +75,11 @@ const LayoutComponentPattern = () => {
                 precise location within the page structure</span>.  
             </p>
             
+            <p>
+                Example of split screen pattern:
+            </p>
+
+            <SplitScreen Left={LeftSideComponent} Right={RightSideComponent}/>
         </SectionWrapper>
         </div>
     )
