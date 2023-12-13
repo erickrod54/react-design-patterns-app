@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Panel } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 2.05 - components > index  
+/**react-design-patterns-app - version 2.06 - components > index  
  * - Features: 
  * 
- *     --> Building 'SplitScreen' first layout component
+ *     --> Adding background colors to each Panel
  * 
  * Note: Pending to make responsive design
  */
@@ -13,10 +13,10 @@ const SplitScreen = ({ Left, Right }) => {
 
     return(
     <Container>
-            <Panel>
+            <Panel className="bg-red-400">
                 <Left />
             </Panel>
-            <Panel>
+            <Panel className="bg-red-500">
                 <Right />
             </Panel>
     </Container>
