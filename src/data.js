@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 1.20 - data js  
+/**react-design-patterns-app - version 2.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'sidebarexample' asset 
+ *     --> Building 'CodeData'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -248,3 +248,19 @@ export const ImagesData = [
     ]
   }
 ]
+
+export const CodeData = [
+  {
+    id: 1,
+    code: `
+<Container>
+  <Panel flex={leftWidth} className="bg-red-400">
+    <Left />
+  </Panel>
+  <Panel flex={rightWidth} className="bg-red-500">
+    <Right />
+  </Panel>
+</Container>
+    `
+  },
+];
