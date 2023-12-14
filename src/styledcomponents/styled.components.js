@@ -2,11 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 2.07 - styled.components
+/**react-design-patterns-app - version 2.08 - styled.components
  * - Features: 
  * 
- *     --> Adding a prop flex to get flex values from the 
- *         component 
+ *     --> Adding margin and padding to the Panel
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -56,4 +55,8 @@ export const Container = styled.div`
 
 export const Panel = styled.div`
         flex: ${(p) => p.flex};
+
+        &{
+            ${tw`m-8 p-8`}
+        }
 `
