@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
-import { ImagesData, IntroComponentData, patternCard } from "./data";
+import { CodeData, ImagesData, IntroComponentData, patternCard } from "./data";
 
-/**react-design-patterns-app - version 1.17 - context js  
+/**react-design-patterns-app - version 2.10 - context js  
  * - Features: 
  * 
- *     --> Placing and providing 'ImagesData'.
+ *     --> Importing and exporting 'CodeData'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -22,7 +22,8 @@ export const PatternsAppProvider = ({ children }) => {
         value={{
                 patternCard,
                 IntroComponentData,
-                ImagesData
+                ImagesData,
+                CodeData
              }}
         >
             {children}
