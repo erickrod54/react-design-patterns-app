@@ -5,10 +5,10 @@ import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.com
 import { SplitScreen } from "./index.components";
 import { LeftSideComponent, RightSideComponent } from "./prop-sub-components/prop.components.index";
 
-/**react-design-patterns-app - version 2.08 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.09 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Passing 'flex' prop values to the component
+ *     --> Developing 'Layout' pattern ( in progress )
  * 
  * Note: This is the first topic
  */
@@ -80,6 +80,11 @@ const LayoutComponentPattern = () => {
             </p>
 
             <SplitScreen Left={LeftSideComponent} Right={RightSideComponent} leftWidth={1} rightWidth={3}/>
+
+            <p>
+                where the left side has a <span className="text-white font-semibold"> flex value of 1 </span> and the right side has a 
+                <span className="text-white font-semibold"> flex value of 3</span> 
+            </p>
         </SectionWrapper>
         </div>
     )
