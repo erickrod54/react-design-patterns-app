@@ -5,10 +5,10 @@ import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.com
 import { SplitScreen } from "./index.components";
 import { LeftSideComponent, RightSideComponent } from "./prop-sub-components/prop.components.index";
 
-/**react-design-patterns-app - version 2.05 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.08 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Placing 'SplitScreen' component
+ *     --> Passing 'flex' prop values to the component
  * 
  * Note: This is the first topic
  */
@@ -79,7 +79,7 @@ const LayoutComponentPattern = () => {
                 Example of split screen pattern:
             </p>
 
-            <SplitScreen Left={LeftSideComponent} Right={RightSideComponent}/>
+            <SplitScreen Left={LeftSideComponent} Right={RightSideComponent} leftWidth={1} rightWidth={3}/>
         </SectionWrapper>
         </div>
     )
