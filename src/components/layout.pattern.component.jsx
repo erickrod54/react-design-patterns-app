@@ -4,24 +4,28 @@ import { usePatternsAppContext } from "../context";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
 import { SplitScreen } from "./index.components";
 import { LeftSideComponent, RightSideComponent } from "./prop-sub-components/prop.components.index";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 2.09 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.10 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Developing 'Layout' pattern ( in progress )
+ *     --> Placing 'BashCode' place code example
  * 
  * Note: This is the first topic
  */
 
 const LayoutComponentPattern = () => {
 
-    const { ImagesData } = usePatternsAppContext();
+    const { ImagesData, CodeData } = usePatternsAppContext();
 
     
+    console.log({ CodeData })
+
     const { list } = ImagesData[0]
     
     const layoutexamples = list[0].image;
     const sidebarexample = list[1].image;
+    const codelayout = CodeData[0].code;
 
     return(
         <div>
@@ -85,6 +89,19 @@ const LayoutComponentPattern = () => {
                 where the left side has a <span className="text-white font-semibold"> flex value of 1 </span> and the right side has a 
                 <span className="text-white font-semibold"> flex value of 3</span> 
             </p>
+
+            <p>
+                the result can be achieved by passing the values <span className="text-white font-semibold"> leftWidth </span> and 
+                <span className="text-white font-semibold"> rightWidth </span> corresponding with the flex values 
+            </p>
+
+            <BashCode code={codelayout} />
+
+            <p>
+                also there is another <span className="text-white font-semibold"> alternative </span>, that can result in a 
+                <span className="text-white font-semibold"> more reusable way the code </span>:
+            </p>
+            
         </SectionWrapper>
         </div>
     )
