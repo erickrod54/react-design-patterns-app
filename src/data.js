@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 2.10 - data js  
+/**react-design-patterns-app - version 2.11 - data js  
  * - Features: 
  *    
- *     --> Building 'CodeData'
+ *     --> Adding layout 'splitter variation' to 'CodeData'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -252,6 +252,7 @@ export const ImagesData = [
 export const CodeData = [
   {
     id: 1,
+    name:'layout splitter',
     code: `
 <Container>
   <Panel flex={leftWidth} className="bg-red-400">
@@ -261,6 +262,29 @@ export const CodeData = [
     <Right />
   </Panel>
 </Container>
+    `
+  },
+  {
+    id: 2,
+    name:'layout splitter variation',
+    code: `
+    const SplitScreenVariation = ({ children, leftWidth = 1, rightWidth = 1 }) => {
+
+      const [ left, right ] = children;
+      
+      return(
+      <Container>
+              <Panel flex={leftWidth} className="bg-red-400">
+                 {left}
+              </Panel>
+              <Panel flex={rightWidth} className="bg-red-500">
+                  {right}
+              </Panel>
+      </Container>
+      )
+  }
+  
+  export default SplitScreenVariation;
     `
   },
 ];
