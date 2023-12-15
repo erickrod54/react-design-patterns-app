@@ -2,14 +2,16 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
-import { SplitScreen } from "./index.components";
+import { SplitScreen, SplitScreenVariation } from "./index.components";
 import { LeftSideComponent, RightSideComponent } from "./prop-sub-components/prop.components.index";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 2.10 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.11 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Placing 'BashCode' place code example
+ *     --> Placing 'SplitScreenVariation' 
+ * 
+ *     --> Reusing 'BashCode' to show the code variation
  * 
  * Note: This is the first topic
  */
@@ -26,6 +28,7 @@ const LayoutComponentPattern = () => {
     const layoutexamples = list[0].image;
     const sidebarexample = list[1].image;
     const codelayout = CodeData[0].code;
+    const splitscreenvariation = CodeData[1].code;
 
     return(
         <div>
@@ -99,8 +102,26 @@ const LayoutComponentPattern = () => {
 
             <p>
                 also there is another <span className="text-white font-semibold"> alternative </span>, that can result in a 
-                <span className="text-white font-semibold"> more reusable way the code </span>:
+                <span className="text-white font-semibold"> more reusable way the code </span>, this variation make use 
+                of the <span className="text-white font-semibold"> open tag </span> of the component and 
+                <span className="text-white font-semibold">add the sub components as children</span>:
             </p>
+
+            <p>
+                the <span className="text-white font-semibold"> SplitScreenVariation </span> will use the children
+                prop by destructuring the <span className="text-white font-semibold"> children </span> in an array:
+            </p>
+
+            <BashCode code={splitscreenvariation} />
+
+            <p>
+                reuslting in: 
+            </p>
+
+            <SplitScreenVariation leftWidth={1} rightWidth={3}>
+                <LeftSideComponent />
+                <RightSideComponent/>
+            </SplitScreenVariation>
             
         </SectionWrapper>
         </div>
