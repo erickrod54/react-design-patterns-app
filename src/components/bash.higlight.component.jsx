@@ -6,12 +6,12 @@ import 'prismjs/components/prism-cshtml';
 import { AtomOneLight } from '../styledcomponents/styled.components';
 import { clipboard } from '../assets/index.assets';
 
-/**react-design-patterns-app - version 2.10 - BashCode
+/**react-design-patterns-app - version 2.11 - BashCode
  * - Features: 
  * 
- *     --> Building 'BashCode' to show the code
+ *     --> Fixing bug for 'button' for the 'copyToClipboard'
  * 
- * Note: this component is made in order to show the code
+ * Note: The clipboard was on top of the screen
  */
 
 const BashCode = ({ code }) => {
@@ -41,10 +41,10 @@ const BashCode = ({ code }) => {
   return (
     <AtomOneLight>
       <div className='sm:w-66'>
-        <button onClick={copyToClipboard} style={{ position: 'absolute', top: '10px', right: '10px' }}>
+        <pre>
+        <button onClick={copyToClipboard} >
           <img src={clipboard} alt='clipboard' className='mt-0 p-4 hover:bg-green-300 duration-75 rounded-md'/>
         </button>
-        <pre>
           <code ref={codeRef} className="lang-js">
             {code}
           </code>
