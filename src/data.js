@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 2.12 - data js  
+/**react-design-patterns-app - version 2.13 - data js  
  * - Features: 
  *    
- *     --> Adding layout 'splitter variation' #1 and #2
+ *     --> Adding 'authors' for list layout pattern
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -249,6 +249,7 @@ export const ImagesData = [
   }
 ]
 
+/**this is the code data in order to explain it */
 export const CodeData = [
   {
     id: 1,
@@ -308,3 +309,30 @@ export const CodeData = [
     `
   }
 ];
+
+/**List Pattern data  */
+
+export const authors = [
+  {
+    id:1,
+    name:'Sarah Waters',
+    age:55,
+    country:'United Kingdom',
+    books: ['Fingersmith', 'The Night Watch']
+  },
+  {
+    id:2,
+    name:'Haruki Murakami',
+    age:71,
+    country:'Japan',
+    books: ['Norwegian Wood', 'Kaftka in the Shore']
+  },
+  {
+    id:3,
+    name:'Chimanmanda Ngozi Adichire',
+    age:43,
+    country:'Nigeria',
+    books: ['Half of a Yellow Sun', 'Americanah']
+  }
+
+]
