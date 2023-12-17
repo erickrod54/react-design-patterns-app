@@ -2,14 +2,13 @@ import React from "react";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
-import { SplitScreen, SplitScreenVariation } from "./index.components";
+import { BashCode, SplitScreen, SplitScreenVariation } from "./index.components";
 import { LeftSideComponent, LeftSideComponentVariation, RightSideComponent, RightSideComponentVariation } from "./prop-sub-components/prop.components.index";
-import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 2.12 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.13 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Placing code for 'compositionvariation'
+ *     --> Fixing 'BashCode' import
  * 
  * Note: This is the first topic
  */
