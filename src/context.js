@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
-import { CodeData, ImagesData, IntroComponentData, authors, patternCard } from "./data";
+import { CodeData, ImagesData, IntroComponentData, authors, books, patternCard } from "./data";
 
-/**react-design-patterns-app - version 2.13 - context js  
+/**react-design-patterns-app - version 2.14 - context js  
  * - Features: 
  * 
- *     --> Importing and exporting 'authors' data
+ *     --> Importing and exporting 'books' data
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
