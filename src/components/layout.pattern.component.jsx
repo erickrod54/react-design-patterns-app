@@ -3,15 +3,13 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
 import { SplitScreen, SplitScreenVariation } from "./index.components";
-import { LeftSideComponent, RightSideComponent } from "./prop-sub-components/prop.components.index";
+import { LeftSideComponent, LeftSideComponentVariation, RightSideComponent, RightSideComponentVariation } from "./prop-sub-components/prop.components.index";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 2.11 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.12 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Placing 'SplitScreenVariation' 
- * 
- *     --> Reusing 'BashCode' to show the code variation
+ *     --> Placing code for 'compositionvariation'
  * 
  * Note: This is the first topic
  */
@@ -29,6 +27,8 @@ const LayoutComponentPattern = () => {
     const sidebarexample = list[1].image;
     const codelayout = CodeData[0].code;
     const splitscreenvariation = CodeData[1].code;
+    const splitscreenvariationcomposition = CodeData[2].code;
+    const compositionvariation = CodeData[3].code;
 
     return(
         <div>
@@ -81,6 +81,15 @@ const LayoutComponentPattern = () => {
                 page <span className="text-white font-semibold">should be unaware and unconcerned about their 
                 precise location within the page structure</span>.  
             </p>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<span className="split-screen">Split Screen</span>} />
+            </CustomTitleStyle>
+
+            <p>
+                Split Screen is a pattern that makes easy and highly efficient how the screen
+                splitting is made
+            </p>
             
             <p>
                 Example of split screen pattern:
@@ -115,6 +124,13 @@ const LayoutComponentPattern = () => {
             <BashCode code={splitscreenvariation} />
 
             <p>
+                and the <span className="text-white font-semibold"> composition of the variation </span> will be as follows:
+            </p>
+
+            <BashCode code={splitscreenvariationcomposition} />
+
+
+            <p>
                 reuslting in: 
             </p>
 
@@ -123,6 +139,25 @@ const LayoutComponentPattern = () => {
                 <RightSideComponent/>
             </SplitScreenVariation>
             
+            <p>
+                even with this variation the <span className="text-white font-semibold"> advantage </span> is how is earned
+                 more <span className="text-white font-semibold"> control over the components </span>, lets say i want to 
+                 add <span className="text-white font-semibold">custom features </span>, for this particular case let do it 
+                 with a title or custom content, with this last variation is way easier to make it, as it follows: 
+            </p>
+
+            <BashCode code={compositionvariation} />
+
+            <p>
+                resulting in:
+            </p>
+
+            <SplitScreenVariation leftWidth={1} rightWidth={3}>
+                <LeftSideComponentVariation  title={'the left custom content'}/>
+                <RightSideComponentVariation title={'the right custom content'} />
+            </SplitScreenVariation>
+
+
         </SectionWrapper>
         </div>
     )
