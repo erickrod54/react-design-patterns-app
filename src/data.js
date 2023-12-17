@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 2.13 - data js  
+/**react-design-patterns-app - version 2.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'authors' for list layout pattern
+ *     --> Adding 'books' for list layout pattern
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -310,7 +310,7 @@ export const CodeData = [
   }
 ];
 
-/**List Pattern data  */
+/**List Pattern data  -- start */
 
 export const authors = [
   {
@@ -336,3 +336,30 @@ export const authors = [
   }
 
 ]
+
+export const books = [
+  {
+    id:1,
+    name:'To Kill a Mockingbird',
+    pages:281,
+    title:'Harper Lee',
+    price: 12.99
+  },
+  {
+    id:2,
+    name:'The Catcher in the Eye',
+    pages:224,
+    title:'J.D Salinger',
+    price: 9.99
+  },
+  {
+    id:3,
+    name:'The Litle Prince',
+    pages:85,
+    title:'Antoine de Saint-Exupery',
+    price: 7.99
+  }
+
+]
+
+/**List Pattern data  -- end */
