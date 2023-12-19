@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 2.12 - styled.components
+/**react-design-patterns-app - version 2.15 - styled.components
  * - Features: 
  * 
- *     --> Adding 'split-screen' to 'Custom' title
+ *     --> Building 'ListWrapper' style component
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,26 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+
+export const ListWrapper = styled.div`
+
+		${tw`flex flex-col mt-24 m-48 `}
+
+		.author-name{
+			border-radius: 0.50rem;
+			padding: 1rem;
+			background-color: white;
+
+			span{
+				${tw`text-rose-600`}
+			}
+		}
+
+		span{
+			${tw`text-stone-100`}
+		}
+`
 
 export const SectionWrapper = styled.section`
     ${tw`m-12 p-12 mt-12 first-letter:capitalize text-lg`}
