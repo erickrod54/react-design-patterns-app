@@ -4,18 +4,22 @@ import { usePatternsAppContext } from "../context";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
 import { BashCode, SplitScreen, SplitScreenVariation } from "./index.components";
 import { LeftSideComponent, LeftSideComponentVariation, RightSideComponent, RightSideComponentVariation } from "./prop-sub-components/prop.components.index";
+import RegularList from "./regular.list.component";
+import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.component";
+import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
 
-/**react-design-patterns-app - version 2.13 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.15 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Fixing 'BashCode' import
+ *     --> Implementing 'RegularList' to rehuse it for Large and 
+ *          Small List
  * 
  * Note: This is the first topic
  */
 
 const LayoutComponentPattern = () => {
 
-    const { ImagesData, CodeData } = usePatternsAppContext();
+    const { ImagesData, CodeData, authors } = usePatternsAppContext();
 
     
     console.log({ CodeData })
@@ -156,7 +160,21 @@ const LayoutComponentPattern = () => {
                 <RightSideComponentVariation title={'the right custom content'} />
             </SplitScreenVariation>
 
+            <CustomTitleStyle>
+                <CustomTitle  title={<span className="list-pattern">List Pattern</span>} />
+            </CustomTitleStyle>
 
+            <p>
+                the first list will be ( Small list ) :
+            </p>
+            
+            <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorSmallListItems}/>
+
+            <p>
+                the second list will be ( Large list ):
+            </p>
+
+            <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorLargeListItems}/>
         </SectionWrapper>
         </div>
     )
