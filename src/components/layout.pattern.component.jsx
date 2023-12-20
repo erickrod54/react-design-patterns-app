@@ -8,10 +8,10 @@ import RegularList from "./regular.list.component";
 import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.component";
 import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
 
-/**react-design-patterns-app - version 2.16 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.17 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Reusing 'RegularList' with different source props.
+ *     --> Developing 'List Pattern' concept
  * 
  * Note: This is the first topic
  */
@@ -31,6 +31,8 @@ const LayoutComponentPattern = () => {
     const splitscreenvariation = CodeData[1].code;
     const splitscreenvariationcomposition = CodeData[2].code;
     const compositionvariation = CodeData[3].code;
+    const sourcesmalllist = CodeData[4].code;
+    const sourcelargelist = CodeData[5].code;
 
     return(
         <div>
@@ -160,8 +162,32 @@ const LayoutComponentPattern = () => {
             </SplitScreenVariation>
 
             <CustomTitleStyle>
-                <CustomTitle  title={<span className="list-pattern">List Pattern</span>} />
+                <CustomTitle  title={<p className="list-pattern"><span>List Pattern</span></p>} />
             </CustomTitleStyle>
+
+            <p>
+                the list pattern is based in a <span className="text-white font-semibold">composition technique </span> 
+                that has a <span className="text-white font-semibold">main component </span> ( that will be 
+                the <span className="text-white font-semibold">list layout with the pattern applied</span> ), 
+                and the <span className="text-white font-semibold">source component </span>, that will have 
+                <span className="text-white font-semibold"> source props </span> that will be pass to the 
+                <span className="text-white font-semibold">list layout or main component</span>
+            </p>
+
+            <p>
+                the <span className="text-white font-semibold">source component with the small list</span> of data 
+                and the code is as follows:
+            </p>
+  
+            
+            <BashCode code={sourcesmalllist} />
+
+            <p>
+                the <span className="text-white font-semibold">source component with the large list</span> of data 
+                and the code is as follows:
+            </p>
+
+            <BashCode code={sourcelargelist} />
 
             <p>
                 the first list will be ( Small list ) :
