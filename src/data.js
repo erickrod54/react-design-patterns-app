@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 2.17 - data js  
+/**react-design-patterns-app - version 2.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'author' code for CodeData
+ *     --> Adding 'main list component' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -360,6 +360,37 @@ export const CodeData = [
   }
   
   export default AuthorLargeListItems;
+    `
+  },
+  {
+    id: 7,
+    name:'layout list - main component',
+    code: `
+    const RegularList = ({ items, sourceName, ItemComponent }) => {
+
+      /**
+       *     items---------------> these are the items that 
+       *                          are going to be display in 
+       *                          the list ( the data )
+       * 
+       *      sourceName----------> is the prop name where the
+       *                            data is destructured in the 
+       *                            source component ( the name 
+       *                             of the data to be destructured)
+       * 
+       *      ItemComponent-------> it is the source component or 
+       *                            the source component
+           */
+          return(
+              <ListWrapper>
+                                /**the spread operator will bring all the source props as they are*/
+                  {items.map((item, index) => <ItemComponent key={index} { ...{[sourceName]: item}}/> )}
+              </ListWrapper>
+          )
+      
+      }
+      
+      export default RegularList;
     `
   }
 ];
