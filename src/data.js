@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 2.14 - data js  
+/**react-design-patterns-app - version 2.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'books' for list layout pattern
+ *     --> Adding 'author' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -306,6 +306,60 @@ export const CodeData = [
       <LeftSideComponentVariation  title={'the left custom content'}/>
       <RightSideComponentVariation title={'the right custom content'} />
     </SplitScreenVariation>
+    `
+  },
+  {
+    id: 5,
+    name:'layout list - small size',
+    code: `
+    const AuthorSmallListItems = ({ author }) => {
+      
+      /**the 'author' is the source name, and it will be a sorce prop
+       * for the 'list layout component'*/
+    
+      const { name, age } = author;
+    
+      return(
+          <>
+              <p><span></span> <span className="author-name"><span>{name}</span></span></p>
+              <p><span>Age:</span> { age }</p>
+          </>
+      )
+    }
+    
+    export default AuthorSmallListItems;
+    `
+  },
+  {
+    id: 6,
+    name:'layout list - large size',
+    code: `
+    const AuthorLargeListItems = ({ author }) => {
+      
+      /**the 'author' is the source name, and it will be a sorce prop
+       * for the 'list layout component'*/
+
+      const { name, age, country, books } = author;
+  
+      return(
+          <>
+              <h2><span className="author-name"><span>{name}</span></span></h2>
+              <p><span>Age:</span> {age}</p>
+              <p><span>Country:</span> {country}</p>
+              <h2><span>Books:</span></h2>
+              <ul>
+              {books.map((book) => {
+  
+                  return(
+                      <li key={book}>{book}</li>
+                  )
+              })}
+              </ul>
+          </>
+      )
+  }
+  
+  export default AuthorLargeListItems;
     `
   }
 ];
