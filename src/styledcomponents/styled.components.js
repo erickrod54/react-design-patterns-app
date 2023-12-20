@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 2.15 - styled.components
+/**react-design-patterns-app - version 2.17 - styled.components
  * - Features: 
  * 
- *     --> Building 'ListWrapper' style component
+ *     --> Building 'list-pattern' style class
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -68,6 +68,12 @@ export const CustomTitleStyle = styled.div`
 .layout{
     color:yellow;
     text-decoration-line: underline;
+}
+
+.list-pattern{
+	span{
+			${tw`text-amber-100 underline`}
+		}	
 }
 
 `
