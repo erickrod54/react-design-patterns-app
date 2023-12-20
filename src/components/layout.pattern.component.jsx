@@ -8,10 +8,10 @@ import RegularList from "./regular.list.component";
 import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.component";
 import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
 
-/**react-design-patterns-app - version 2.17 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.18 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Developing 'List Pattern' concept
+ *     --> Placing 'main list component'
  * 
  * Note: This is the first topic
  */
@@ -33,6 +33,7 @@ const LayoutComponentPattern = () => {
     const compositionvariation = CodeData[3].code;
     const sourcesmalllist = CodeData[4].code;
     const sourcelargelist = CodeData[5].code;
+    const sourcecomponent = CodeData[6].code;
 
     return(
         <div>
@@ -167,12 +168,20 @@ const LayoutComponentPattern = () => {
 
             <p>
                 the list pattern is based in a <span className="text-white font-semibold">composition technique </span> 
-                that has a <span className="text-white font-semibold">main component </span> ( that will be 
+                that has a <span className="text-white font-semibold">main list component </span> ( that will be 
                 the <span className="text-white font-semibold">list layout with the pattern applied</span> ), 
                 and the <span className="text-white font-semibold">source component </span>, that will have 
                 <span className="text-white font-semibold"> source props </span> that will be pass to the 
-                <span className="text-white font-semibold">list layout or main component</span>
+                <span className="text-white font-semibold"> list layout or main list component</span>
             </p>
+
+            <p>
+                the <span className="text-white font-semibold">main list component </span> ( that will be 
+                the <span className="text-white font-semibold">list layout with the pattern applied</span> )
+                is as follows:
+            </p>
+
+            <BashCode code={sourcecomponent} />
 
             <p>
                 the <span className="text-white font-semibold">source component with the small list</span> of data 
@@ -181,6 +190,14 @@ const LayoutComponentPattern = () => {
   
             
             <BashCode code={sourcesmalllist} />
+            
+            <p>
+                the first list will <span className="text-white font-semibold">result in ( Small list ) </span>:
+            </p>
+            
+            <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorSmallListItems}/>
+
+            <p>
 
             <p>
                 the <span className="text-white font-semibold">source component with the large list</span> of data 
@@ -189,14 +206,7 @@ const LayoutComponentPattern = () => {
 
             <BashCode code={sourcelargelist} />
 
-            <p>
-                the first list will be ( Small list ) :
-            </p>
-            
-            <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorSmallListItems}/>
-
-            <p>
-                the second list will be ( Large list ):
+                the second <span className="text-white font-semibold"> list will result in ( Large list ) </span>:
             </p>
 
             <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorLargeListItems}/>
