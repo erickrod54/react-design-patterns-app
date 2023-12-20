@@ -3,23 +3,22 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components.index";
 import { BashCode, SplitScreen, SplitScreenVariation } from "./index.components";
-import { LeftSideComponent, LeftSideComponentVariation, RightSideComponent, RightSideComponentVariation } from "./prop-sub-components/prop.components.index";
+import { BookLargeListItems, BooksSmallListItems, LeftSideComponent, LeftSideComponentVariation, RightSideComponent, RightSideComponentVariation } from "./prop-sub-components/prop.components.index";
 import RegularList from "./regular.list.component";
 import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.component";
 import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
 
-/**react-design-patterns-app - version 2.15 - LayoutComponentPattern 
+/**react-design-patterns-app - version 2.16 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Implementing 'RegularList' to rehuse it for Large and 
- *          Small List
+ *     --> Reusing 'RegularList' with different source props.
  * 
  * Note: This is the first topic
  */
 
 const LayoutComponentPattern = () => {
 
-    const { ImagesData, CodeData, authors } = usePatternsAppContext();
+    const { ImagesData, CodeData, authors, books } = usePatternsAppContext();
 
     
     console.log({ CodeData })
@@ -175,6 +174,23 @@ const LayoutComponentPattern = () => {
             </p>
 
             <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorLargeListItems}/>
+
+            <p>
+                and rehusing the code for a different list of items ( in this case will be books )
+            </p>
+
+            <p>
+                the first list will be ( Small list ) :
+            </p>
+
+            <RegularList items={books} sourceName={"book"} ItemComponent={BooksSmallListItems}/>
+
+            <p>
+                the second list will be ( Large list ) :
+            </p>
+
+            <RegularList items={books} sourceName={"book"} ItemComponent={BookLargeListItems}/>
+
         </SectionWrapper>
         </div>
     )
