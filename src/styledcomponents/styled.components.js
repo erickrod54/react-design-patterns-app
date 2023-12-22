@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 2.17 - styled.components
+/**react-design-patterns-app - version 2.19 - styled.components
  * - Features: 
  * 
- *     --> Building 'list-pattern' style class
+ *     --> Building 'ModalBackground' style class
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -17,6 +17,17 @@ import tw from 'twin.macro';
  * to use them in the custom titles
  */
 
+export const ModalBackground = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
 export const ListWrapper = styled.div`
 
