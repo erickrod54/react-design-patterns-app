@@ -1,9 +1,9 @@
-import { Container, CustomTitleStyle, ListWrapper, Panel, SectionWrapper } from "./styled.components";
+import { Container, CustomTitleStyle, ListWrapper, ModalBackground, Panel, SectionWrapper } from "./styled.components";
 
-/**react-design-patterns-app - version 2.15 - styledcomponents > index
+/**react-design-patterns-app - version 2.19 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ListWrapper' 
+ *     --> Importing and exporting 'ModalBackground' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -14,4 +14,4 @@ import { Container, CustomTitleStyle, ListWrapper, Panel, SectionWrapper } from 
 
 /**Sections and content */
 
-export { SectionWrapper, CustomTitleStyle, Container, Panel, ListWrapper }
+export { SectionWrapper, CustomTitleStyle, Container, Panel, ListWrapper, ModalBackground }
