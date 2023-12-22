@@ -1,9 +1,9 @@
 import React from "react";
 
-/**react-design-patterns-app - version 1.13 - CustomTitle  
+/**react-design-patterns-app - version 3.02 - CustomTitle  
  * - Features: 
  * 
- *     --> Get rid of 'underline' prop
+ *     --> Get rid of 'p' tag to fix wrap p > p error
  * 
  * Note: Pending to make responsive design
  */
@@ -11,9 +11,9 @@ import React from "react";
 const CustomTitle = ({ title }) => {
 
     return(
-        <p className="text-4xl capitalize">
+        <span className="text-4xl capitalize">
             {title}
-        </p>
+        </span>
     )
 }
 
