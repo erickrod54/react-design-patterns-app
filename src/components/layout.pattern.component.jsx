@@ -7,11 +7,12 @@ import { BookLargeListItems, BooksSmallListItems, LeftSideComponent, LeftSideCom
 import RegularList from "./regular.list.component";
 import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.component";
 import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
+import Modal from "./modal.component";
 
-/**react-design-patterns-app - version 2.18 - LayoutComponentPattern 
+/**react-design-patterns-app - version 3.03 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Placing 'main list component'
+ *     --> Developing 'Modal' concept
  * 
  * Note: This is the first topic
  */
@@ -34,6 +35,7 @@ const LayoutComponentPattern = () => {
     const sourcesmalllist = CodeData[4].code;
     const sourcelargelist = CodeData[5].code;
     const sourcecomponent = CodeData[6].code;
+    const modalcode = CodeData[7].code;
 
     return(
         <div>
@@ -163,69 +165,102 @@ const LayoutComponentPattern = () => {
             </SplitScreenVariation>
 
             <CustomTitleStyle>
-                <CustomTitle  title={<p className="list-pattern"><span>List Pattern</span></p>} />
+                <CustomTitle title={<p className="list-pattern"><span>List Pattern</span></p>} />
             </CustomTitleStyle>
 
             <p>
-                the list pattern is based in a <span className="text-white font-semibold">composition technique </span> 
-                that has a <span className="text-white font-semibold">main list component </span> ( that will be 
-                the <span className="text-white font-semibold">list layout with the pattern applied</span> ), 
-                and the <span className="text-white font-semibold">source component </span>, that will have 
-                <span className="text-white font-semibold"> source props </span> that will be pass to the 
-                <span className="text-white font-semibold"> list layout or main list component</span>
+                The list pattern relies on a <span className="text-white font-semibold">composition technique</span> comprising a <span className="text-white font-semibold">main list component, which serves as the layout with the applied pattern</span>. Additionally, there's a <span className="text-white font-semibold">source component</span> containing <span className="text-white font-semibold">source props</span> that will be passed to the <span className="text-white font-semibold">main list component or list layout</span>.
             </p>
 
             <p>
-                the <span className="text-white font-semibold">main list component </span> ( that will be 
-                the <span className="text-white font-semibold">list layout with the pattern applied</span> )
-                is as follows:
+                The <span className="text-white font-semibold">main list component</span> (that will be the <span className="text-white font-semibold">list layout with the pattern applied</span>) is as follows:
             </p>
 
             <BashCode code={sourcecomponent} />
 
             <p>
-                the <span className="text-white font-semibold">source component with the small list</span> of data 
-                and the code is as follows:
+                The <span className="text-white font-semibold">source component with the small list</span> of data and the code is as follows:
             </p>
-  
-            
+
             <BashCode code={sourcesmalllist} />
-            
+
             <p>
-                the first list will <span className="text-white font-semibold">result in ( Small list ) </span>:
+                The first list will <span className="text-white font-semibold">result in (Small list)</span>:
             </p>
-            
+
             <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorSmallListItems}/>
 
             <p>
-
-            <p>
-                the <span className="text-white font-semibold">source component with the large list</span> of data 
-                and the code is as follows:
+                The <span className="text-white font-semibold">source component with the large list</span> of data and the code is as follows:
             </p>
 
             <BashCode code={sourcelargelist} />
 
-                the second <span className="text-white font-semibold"> list will result in ( Large list ) </span>:
-            </p>
-
+            <p>
+                The second <span className="text-white font-semibold">list will result in (Large list)</span>:
+            </p> 
+            
             <RegularList items={authors} sourceName={"author"} ItemComponent={AuthorLargeListItems}/>
 
             <p>
-                and rehusing the code for a different list of items ( in this case will be books )
+                And reusing the code for a different list of items (in this case, it will be books):
             </p>
 
             <p>
-                the first list will be ( Small list ) :
+                The first list will be (Small list):
             </p>
 
             <RegularList items={books} sourceName={"book"} ItemComponent={BooksSmallListItems}/>
 
             <p>
-                the second list will be ( Large list ) :
+                The second list will be (Large list):
             </p>
 
             <RegularList items={books} sourceName={"book"} ItemComponent={BookLargeListItems}/>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="list-pattern"><span>Modal Pattern</span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+               In component-based architectures like React, <span className="text-white font-semibold"> integrating modals </span> is 
+               often regarded as a React pattern. The modal's <span className="text-white font-semibold"> behavior and layout scoping </span> 
+               typically utilize the <span className="text-white font-semibold"> children prop, separating layout concerns via JSX syntax </span>. 
+               Let's explore this process step by step.
+            </p>
+
+            <p>
+                so we have the modal code as follows:
+            </p>
+
+            <BashCode code={modalcode}/>
+
+            <p>
+            <span className="text-white font-semibold">ModalBackground </span> will contain 
+            <span className="text-white font-semibold"> styles for the background once the modal get trigger </span>
+                corresponding with this style component <span className="text-white font-semibold"> 
+                {`<ModalBackground onClick={closeModal}>`} </span> and ModalContent
+                will contain styles that are going to be applied to the content (that will be the children ) corresponding
+                with this line of code <span className="text-white font-semibold"> {`<ModalContent onClick={stopPropagation}>`} </span>, 
+                due to the nature behavior of the styles 3components it <span className="text-white font-semibold"> make highly custom the modal
+                </span> These style components offer extensive customization for the modal, ensuring a clear separation of concerns:
+            </p>
+
+            <ul>
+                <li>
+                    <span className="text-white font-semibold"> reusability </span>
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> cross-functionality </span>
+                </li>
+                <li>
+                <span className="text-white font-semibold"> design and behavior </span>
+                </li>
+            </ul>
+            
+            <Modal>
+                <BooksSmallListItems book={books[0]}/>
+            </Modal>
 
         </SectionWrapper>
         </div>
