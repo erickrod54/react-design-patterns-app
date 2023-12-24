@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 2.18 - data js  
+/**react-design-patterns-app - version 3.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'main list component' code for CodeData
+ *     --> Adding 'modal-code' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -391,6 +391,47 @@ export const CodeData = [
       }
       
       export default RegularList;
+    `
+  },
+  {
+    id: 8,
+    name:'layout modal - modal code',
+    code: `
+    /** the children prop is passed here*/
+    const Modal = ({ children }) => {
+        const [show, setShow] = useState(false);
+    
+        /**this 3 handlers are the functionality of the modal*/
+        const openModal = () => setShow(true);
+        const closeModal = () => setShow(false);
+
+        /**prevent events from any parent element keeping functionality*/
+        const stopPropagation = (e) => e.stopPropagation();
+    
+        return (
+            <>
+                <button onClick={openModal}>
+                    Show modal 
+                    <OpenModalWrapper>
+                        <img src={openmodal} alt="openmodal"/>
+                    </OpenModalWrapper>
+                </button>
+                {show && (
+                    <ModalBackground onClick={closeModal}>
+                        <ModalContent onClick={stopPropagation}>
+                            <button onClick={closeModal}>
+                            <img src={close} alt="close"/>
+                            </button>
+                            /**and children will be the content of the modal*/
+                            {children}
+                        </ModalContent>
+                    </ModalBackground>
+                )}
+            </>
+        );
+    };
+    
+    export default Modal;
     `
   }
 ];
