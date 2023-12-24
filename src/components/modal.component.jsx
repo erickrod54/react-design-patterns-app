@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { close, openmodal } from "../assets/index.assets";
 import { ModalBackground, ModalContent, OpenModalWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 3.02 - Modal 
+/**react-design-patterns-app - version 3.03 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Building 'Modal' Component
+ *     --> Modifying 'Modal' button content 
  * 
  * Note: This is the first topic
  */
@@ -20,7 +20,7 @@ const Modal = ({ children }) => {
     return (
         <>
             <button onClick={openModal}>
-                Show modal 
+                click in the circle for the modal:
                 <OpenModalWrapper>
                     <img src={openmodal} alt="openmodal"/>
                 </OpenModalWrapper>
