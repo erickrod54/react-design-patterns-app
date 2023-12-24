@@ -2,10 +2,11 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 3.00 - styled.components
+/**react-design-patterns-app - version 3.03 - styled.components
  * - Features: 
  * 
- *     --> Building 'OpenModalWrapper' style component
+ *     --> Refactoring Modal style components 
+ * 		   to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -18,34 +19,19 @@ import tw from 'twin.macro';
  */
 
 export const OpenModalWrapper = styled.div`
-    img{
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-
-        &:hover{
-            background-color: aliceblue;
-        }
+	${tw`hover:bg-sky-500`}
+    
+	img{
+        ${tw`h-6 rounded-full `}
     }
 `;
 
 export const ModalContent = styled.div`
-    padding: 24px;
-    background-color: white;
-    width: 50%;
-    color: black;
+    ${tw`p-6 bg-white w-1/2 text-black `}
 `;
 
 export const ModalBackground = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${tw`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center `}
 `;
 
 export const ListWrapper = styled.div`
