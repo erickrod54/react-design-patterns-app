@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { usePatternsAppContext } from "../context";
-import { LayoutComponentPattern } from "../components/index.components";
+import { ContainerPattern, LayoutComponentPattern } from "../components/index.components";
 
-/**react-design-patterns-app - version 1.08 - SinglePatternPage
+/**react-design-patterns-app - version 3.06 - SinglePatternPage
  * - Features: 
  * 
- *     --> Building 'Single Pattern Page'
+ *     --> Displaying 'ContainerPattern' content
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -25,6 +25,11 @@ const SinglePatternPage = () => {
     if ( Number(patternId) === 1 ) {
         return <LayoutComponentPattern />
     }
+
+    if ( Number(patternId) === 2 ) {
+        return <ContainerPattern />
+    }
+
 }
 
 export default SinglePatternPage;
