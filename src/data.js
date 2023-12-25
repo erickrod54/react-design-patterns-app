@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 3.04 - data js  
+/**react-design-patterns-app - version 3.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'ModalBackground' code for CodeData
+ *     --> Adding 'ModalContent' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -442,7 +442,17 @@ export const CodeData = [
     \${tw('fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center')}
     \`;
     `
-  }  
+  },
+  {
+    id: 10,
+    name: 'layout modal - ModalContent code',
+    code: `
+    /**this will be the children of the modal component, for this case a samll list*/
+    export const ModalContent = styled.div\`
+    \${tw'p-6 bg-white w-1/2 text-black '}
+    \`;
+    `
+  }
 ];
 
 /**List Pattern data  -- start */
