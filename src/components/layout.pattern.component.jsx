@@ -9,10 +9,10 @@ import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.
 import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
 import Modal from "./modal.component";
 
-/**react-design-patterns-app - version 3.04 - LayoutComponentPattern 
+/**react-design-patterns-app - version 3.05 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Showing 'modalbackground' code
+ *     --> Showing 'ModalContent' code
  * 
  * Note: This is the first topic
  */
@@ -37,6 +37,7 @@ const LayoutComponentPattern = () => {
     const sourcecomponent = CodeData[6].code;
     const modalcode = CodeData[7].code;
     const modalbackground = CodeData[8].code;
+    const modalcontent = CodeData[9].code;
 
     return(
         <div>
@@ -264,6 +265,12 @@ const LayoutComponentPattern = () => {
             </p>
 
             <BashCode code={modalbackground}/>
+
+            <p>
+                the code for <span className="text-white font-semibold">ModalContent </span> as follows:
+            </p>
+
+            <BashCode code={modalcontent}/>
             
             <Modal>
                 <BooksSmallListItems book={books[0]}/>
