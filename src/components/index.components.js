@@ -8,13 +8,14 @@ import RegularList from "./regular.list.component";
 import SharedLayout from "./shared.layout.component";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
+import UserInfo from "./user.info.component";
 
-/**react-design-patterns-app - version 3.11 - components > index  
+/**react-design-patterns-app - version 3.12 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'CurrentUser'
+ *     --> Importing and exporting 'UserInfo'
  * 
  * Note: Pending to make responsive design
  */
 
-export { LayoutComponentPattern, SharedLayout, CustomTitle, IntroComponent, SplitScreen, SplitScreenVariation, BashCode, RegularList, ContainerPattern, CurrentUser}
+export { LayoutComponentPattern, SharedLayout, CustomTitle, IntroComponent, SplitScreen, SplitScreenVariation, BashCode, RegularList, ContainerPattern, CurrentUser, UserInfo}
