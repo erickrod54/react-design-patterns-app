@@ -2,10 +2,12 @@ import React from "react";
 import { CustomTitle } from "./index.components";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 3.09 - ContainerPattern
+/**react-design-patterns-app - version 3.10 - ContainerPattern
  * - Features: 
  * 
  *     --> Developing 'Container Pattern' concept
+ * 
+ *     --> Modifying content
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -31,8 +33,8 @@ const ContainerPattern = () => {
 
             <p>
                 The <span className="text-white font-semibold"> primary goal is to shield child components from the specifics of data management </span> 
-                by extracting data-loading logic into dedicated containers, ensuring components remain unaware 
-                of data sources and management processes. This approach promotes <span className="text-white font-semibold"> reusability, separation of concerns, 
+                by extracting data-loading logic into dedicated containers, ensuring components remain <span className="text-white font-semibold"> unaware 
+                of data sources and management processes.</span> This approach promotes <span className="text-white font-semibold"> reusability, separation of concerns, 
                 and simplifies component logic </span> by handling data retrieval and passing it down to 
                 <span className="text-white font-semibold"> child components via props. </span>
             </p>
