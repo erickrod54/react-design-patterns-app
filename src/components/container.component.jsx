@@ -1,10 +1,13 @@
 import React from "react";
 import { CustomTitle } from "./index.components";
+import { CustomTitleStyle } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 3.07 - ContainerPattern
+/**react-design-patterns-app - version 3.08 - ContainerPattern
  * - Features: 
  * 
- *     --> Building basic 'CustomTitle'
+ *     --> Importing 'CustomTitleStyle'
+ * 
+ *     --> Adding 'container-pattern"' class
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -13,7 +16,9 @@ import { CustomTitle } from "./index.components";
 const ContainerPattern = () => {
 
     return(
-        <CustomTitle  title={<span className="container-pattern">Container Pattern</span>} />
+        <CustomTitleStyle>
+            <CustomTitle  title={<p className="container-pattern"><span >Container Pattern</span></p>} />
+        </CustomTitleStyle>
     )
 }
 
