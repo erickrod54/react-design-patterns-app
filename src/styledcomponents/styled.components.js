@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 3.08 - styled.components
+/**react-design-patterns-app - version 3.13 - styled.components
  * - Features: 
  * 
- *     --> writting 'container-pattern'
+ *     --> writting 'h2' styles for ListWrapper
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -45,6 +45,10 @@ export const ListWrapper = styled.div`
 			span{
 				${tw`text-rose-600`}
 			}
+		}
+
+		h2{
+			${tw`w-36`}
 		}
 
 		span{
