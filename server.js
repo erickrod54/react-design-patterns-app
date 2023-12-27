@@ -1,7 +1,7 @@
-/**react-design-patterns-app - version 3.10 - Express server test
+/**react-design-patterns-app - version 3.13 - Express server test
  * - Features: 
  * 
- *     --> Back end Testing for 'Container Pattern' concept
+ *     --> Adding missing 'id' on the user data set
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -32,18 +32,21 @@ let currentUser = {
 
 let users = [
     {
+      id: "1",
       name: "Margaret Atwood",
       age: 82,
       country: "Canada",
       books: ["The Handmaid's Tale", "Alias Grace"],
     },
     {
+      id: "2",
       name: "Gabriel García Márquez",
       age: 87,
       country: "Colombia",
       books: ["One Hundred Years of Solitude", "Love in the Time of Cholera"],
     },
     {
+      id: "3",  
       name: "Agatha Christie",
       age: 85,
       country: "United Kingdom",
