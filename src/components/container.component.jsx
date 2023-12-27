@@ -1,16 +1,15 @@
 import React from "react";
-import { CustomTitle } from "./index.components";
+import { ContainerLoader, CurrentUser, CustomTitle } from "./index.components";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
+import UserInfo from "./user.info.component";
 
-/**react-design-patterns-app - version 3.10 - ContainerPattern
+/**react-design-patterns-app - version 3.13 - ContainerPattern
  * - Features: 
  * 
- *     --> Developing 'Container Pattern' concept
+ *     --> Implementing custom test using 'ContainerLoader'.
  * 
- *     --> Modifying content
- * 
- * Note: the cards components with the card information
- * will be displayed here
+ * Note: ContainerLoader is a custom pattern and code be 
+ * modified later to make it even more custom
  */
 
 const ContainerPattern = () => {
@@ -38,6 +37,42 @@ const ContainerPattern = () => {
                 and simplifies component logic </span> by handling data retrieval and passing it down to 
                 <span className="text-white font-semibold"> child components via props. </span>
             </p>
+
+            <p>
+                the following list is is <span className="text-white font-semibold"> compose </span> by a container <span className="text-white font-semibold"> {'<CurrentUser>'} </span>
+                that will perform the following data sourcing and handling:
+                
+            </p>
+
+            <ul>
+                <li>
+                    <span className="text-white font-semibold"> will create the state of the user </span>
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> receive the user data from the server </span>
+                </li>
+                <li>
+                <span className="text-white font-semibold"> mutate that data and provide it to the children </span>
+                </li>
+            </ul>
+
+            <p>
+                 that data to the children in this case <span className="text-white font-semibold">{'<UserInfo />'} </span>, 
+                 resulting as follows:
+            </p>
+
+            <CurrentUser>
+                <UserInfo />
+            </CurrentUser>
+
+            <p>
+                this can be a custom test using custom user info from 3 records, being the third one, resulting as follows:
+            </p>
+
+            <ContainerLoader userId={'3'}>
+                <UserInfo/>
+            </ContainerLoader>
+
             </SectionWrapper>
         </div>
     )
