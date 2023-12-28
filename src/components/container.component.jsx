@@ -1,15 +1,17 @@
 import React from "react";
-import { ContainerLoader, CurrentUser, CustomTitle } from "./index.components";
+import { ContainerGeneric, ContainerLoader, CurrentUser, CustomTitle } from "./index.components";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import UserInfo from "./user.info.component";
+import BookInfo from "./books.info.component";
 
-/**react-design-patterns-app - version 3.13 - ContainerPattern
+/**react-design-patterns-app - version 3.14 - ContainerPattern
  * - Features: 
  * 
- *     --> Implementing custom test using 'ContainerLoader'.
+ *     --> Implementing custom test using 'ContainerGeneric'.
  * 
- * Note: ContainerLoader is a custom pattern and code be 
- * modified later to make it even more custom
+ * Note: 'ContainerGeneric' is a more custom version of, 
+ * ContainerLoader due to the props passed, can render different
+ * datasets and from different endpoints
  */
 
 const ContainerPattern = () => {
@@ -72,6 +74,41 @@ const ContainerPattern = () => {
             <ContainerLoader userId={'3'}>
                 <UserInfo/>
             </ContainerLoader>
+
+            <p>
+                the <span className="text-white font-semibold">key is to codify a piece of code </span> 
+                that <span className="text-white font-semibold">can scalate with few modifications </span>, the previous test, with small 
+                modification can become highly scalable as follows for the first user:
+            </p>
+
+            <ContainerGeneric resourceUrl={'/users/1'} resourceName={'user'}>
+                <UserInfo />
+            </ContainerGeneric>
+
+            <p>
+                and for the second user will be as this:
+            </p>
+            
+            <ContainerGeneric resourceUrl={'/users/2'} resourceName={'user'}>
+                <UserInfo />
+            </ContainerGeneric>
+
+            <p>
+                and <span className="text-white font-semibold">rehusing </span> this component for example for books:
+            </p>
+
+            <ContainerGeneric resourceUrl={'/books/1'} resourceName={'book'}>
+                <BookInfo/>
+            </ContainerGeneric>
+
+            <p>
+                can be notice that the pattern for the resourceName follows a 
+                singular notation ( this is because is getting rendered the 
+                single element of each dataset in the end component, that's 
+                why it is not use the plural, and technical reasons are in 
+                consideration by the prop in the end component), the correct
+                use of names on endpoints and props is also very important
+            </p>
 
             </SectionWrapper>
         </div>
