@@ -1,10 +1,10 @@
 import React from "react";
 import { ListWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 3.13 - BookInfo
+/**react-design-patterns-app - version 3.14 - BookInfo
  * - Features: 
  * 
- *     --> Building 'BookInfo' end component
+ *     --> Adding 'book-name' style class.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -15,7 +15,7 @@ const BookInfo = ({ book }) => {
   
     return book ? (
       <ListWrapper>
-          <h3 className="author-name"><span> {name}</span></h3>
+          <h2 className="book-name"><span> {name}</span></h2>
           <p><span>Price: </span>{price}</p>
           <h3><span>Title: </span> {title}</h3>
           <p><span>Number of Pages: </span>{pages}</p>
