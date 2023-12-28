@@ -1,20 +1,12 @@
-/**react-design-patterns-app - version 3.13 - Express server test
+/**react-design-patterns-app - version 3.14 - Express server test
  * - Features: 
  * 
- *     --> Adding missing 'id' on the user data set
+ *     --> Adding missing 'id' on the books data set
  * 
- * Note: the cards components with the card information
- * will be displayed here
+ * Note: after make any changes in the back end side,
+ * the server must be stopped and restart it:
  * 
- * to test the express server js:
- * 
- *      --> node server.js ( type in the terminal )
- * 
- *      --> add the proxy in package.json ' 
- *          ..."private": true,
- *             "proxy": "http://localhost:9090",' ...
- *  
- *      --> some endpoint 'http://localhost:9090/users/'
+ *   typing in the terminal -->  node server.js
  */
 
 const express = require("express");
@@ -56,18 +48,21 @@ let users = [
   
   let books = [
     {
+      id: "1",
       name: "Pride and Prejudice",
       pages: 279,
       title: "Jane Austen",
       price: 8.99,
     },
     {
+      id: "2",
       name: "1984",
       pages: 328,
       title: "George Orwell",
       price: 10.99,
     },
     {
+      id: "3",
       name: "The Picture of Dorian Gray",
       pages: 254,
       title: "Oscar Wilde",
