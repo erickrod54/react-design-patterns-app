@@ -1,20 +1,23 @@
 import React from "react";
-import { ContainerGeneric, ContainerLoader, CurrentUser, CustomTitle } from "./index.components";
+import { ContainerDataSource, ContainerGeneric, ContainerLoader, ContainerRender, CurrentUser, CustomTitle } from "./index.components";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 3.14 - ContainerPattern
+/**react-design-patterns-app - version 3.16 - ContainerPattern
  * - Features: 
  * 
- *     --> Implementing custom test using 'ContainerGeneric'.
+ *     --> Implementing 'ContainerRender'.
  * 
- * Note: 'ContainerGeneric' is a more custom version of, 
- * ContainerLoader due to the props passed, can render different
- * datasets and from different endpoints
+ * Note: 'ContainerRender' is a variation of 
+ * 'ContainerDaraSource' a more flexible version taking in count 
+ * that 'ContainerRender' will be unaware of the data source
  */
 
 const ContainerPattern = () => {
+
+    const { getDataFromServer } = usePatternsAppContext()
 
     return(
         <div>
@@ -109,6 +112,43 @@ const ContainerPattern = () => {
                 consideration by the prop in the end component), the correct
                 use of names on endpoints and props is also very important
             </p>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="container-data-source"><span >Container Data Source</span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                and even more custom container can be , that by handling the data 
+                source makes the end component more independent and efficient by doing 
+                less tasks, and giving the opportunity of relocating resources as follows:  
+            </p>
+
+            <ContainerDataSource getData={ () => getDataFromServer('/books/3')}
+            resourceName={'book'}
+            >
+                <BookInfo />
+            </ContainerDataSource>
+
+            <p>
+                this example above is very much use in situations where bussines logic ( like 
+                handlers or other data related functionalities need to be separated of the 
+                layout ), in order to secure the sources
+            </p>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="container-render-pattern"><span >Container Render Pattern</span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                the container 'ContainerRender' pattern is a variation
+                of the ContainerDataSource, that use the render prop to pass 
+                the end component and his props, this variation has technical 
+                reasons        
+            </p>
+
+            <ContainerRender 
+                getData={ () => getDataFromServer('/books/2')} 
+                render={(resource) => <BookInfo book={resource}/>} />
 
             </SectionWrapper>
         </div>
