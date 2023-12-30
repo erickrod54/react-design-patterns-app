@@ -1,5 +1,6 @@
 import BashCode from "./bash.higlight.component";
 import ContainerPattern from "./container.component";
+import ContainerDataSource from "./container.data.source.component";
 import ContainerGeneric from "./container.generic.component";
 import ContainerLoader from "./container.loader.component";
 import CurrentUser from "./current.user.component";
@@ -12,10 +13,10 @@ import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
 import UserInfo from "./user.info.component";
 
-/**react-design-patterns-app - version 3.14 - components > index  
+/**react-design-patterns-app - version 3.15 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ContainerGeneric'
+ *     --> Importing and exporting 'ContainerDataSource'
  * 
  * Note: Pending to make responsive design
  */
@@ -32,4 +33,6 @@ export { LayoutComponentPattern,
          CurrentUser,
          UserInfo, 
          ContainerLoader,
-         ContainerGeneric }
+         ContainerGeneric,
+         ContainerDataSource
+        }
