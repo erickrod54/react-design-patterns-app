@@ -2,10 +2,12 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 3.14 - styled.components
+/**react-design-patterns-app - version 3.16 - styled.components
  * - Features: 
  * 
- *     --> writting '.book-name' styles for ListWrapper
+ *     --> writting '.container-render-pattern' styles for CustomTitle
+ * 
+ * 	   --> writting '.container-data-source' styles for CustomTitle
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -107,6 +109,19 @@ export const CustomTitleStyle = styled.div`
 .container-pattern{
 	span{
 			${tw`text-amber-300 underline`}
+		}
+}
+
+
+.container-render-pattern{
+		span{
+			${tw`text-fuchsia-500 underline`}
+		}
+}
+
+.container-data-source{
+		span{
+			${tw`text-orange-400 underline`}
 		}
 }
 
