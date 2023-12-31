@@ -1,13 +1,10 @@
 import React from "react";
 import { ListWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 3.11 - UserInfo
+/**react-design-patterns-app - version 3.18 - UserInfo
  * - Features: 
  * 
- *     --> Building 'UserInfo' end component
- * 
- *      --> Importing 'ListWrapper' to style the 
- *          user info
+ *     --> Adding comments to the 'user' destructuring 
  * 
  * Note: the porpuse of this component will be under to verify
  * the 'user' and render the 'data' 
@@ -15,6 +12,8 @@ import { ListWrapper } from "../styledcomponents/styled.components";
 
 const UserInfo = ({ user }) => {
 
+  /**can be destructure as this on user or by implementing spread 
+   * operator in case we want to use more props */  
   const { name, age, country, books } = user || {};
 
   /**here i verify the user in order to set the data */
