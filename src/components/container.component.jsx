@@ -5,7 +5,7 @@ import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 3.20 - ContainerPattern
+/**react-design-patterns-app - version 4.00 - ContainerPattern
  * - Features: 
  * 
  *     --> Placing 'consuminganydata' code.
@@ -30,6 +30,7 @@ const ContainerPattern = () => {
     const containergenwrap = CodeData[16].code;
     const consumingbooks = CodeData[17].code;
     const consuminganydata = CodeData[18].code;
+    const consuminganydatawrap = CodeData[19].code;
 
     return(
         <div>
@@ -214,7 +215,27 @@ const ContainerPattern = () => {
                  </span>  as follows:           
             </p>
 
-            <BashCode code={consuminganydata}/>        
+            <BashCode code={consuminganydata}/>      
+
+            <p>
+                 the <span className="text-white font-semibold"> container </span>,
+                 and <span className="text-white font-semibold"> end component </span> will 
+                 be as follows:
+            </p>  
+
+            <BashCode code={consuminganydatawrap}/> 
+
+            <p>
+                the <span className="text-white font-semibold"> 'getData' </span> get filled with 
+                the <span className="text-white font-semibold"> 'getDataFromServer' </span> logic 
+                and this handler can be placed <span className="text-white font-semibold"> anywhere </span> 
+                ( in the server, in the cloud or locally and be consumed by this component and others )
+            </p>
+
+
+            <p>
+                rendering as follows:
+            </p>           
 
             <ContainerDataSource getData={ () => getDataFromServer('/books/3')}
             resourceName={'book'}
