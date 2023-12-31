@@ -9,10 +9,10 @@ import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.
 import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
 import Modal from "./modal.component";
 
-/**react-design-patterns-app - version 3.05 - LayoutComponentPattern 
+/**react-design-patterns-app - version 3.17 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Showing 'ModalContent' code
+ *     --> Commenting logs
  * 
  * Note: This is the first topic
  */
@@ -22,7 +22,7 @@ const LayoutComponentPattern = () => {
     const { ImagesData, CodeData, authors, books } = usePatternsAppContext();
 
     
-    console.log({ CodeData })
+    //console.log({ CodeData })
 
     const { list } = ImagesData[0]
     
