@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-/**react-design-patterns-app - version 3.11 - CurrentUser 
+/**react-design-patterns-app - version 3.16 - CurrentUser 
  * - Features: 
  * 
- *     --> Building 'CurrentUser' pattern
+ *     --> Adding comments to the 'useEffect' handler
  * 
  * Note: the porpuse iod this component is to be the source
  * of data to multiple 'user' and 'books', and this
@@ -23,6 +23,7 @@ const CurrentUser = ({ children }) => {
     
     const [ user, setUser ] = useState(null)
 
+    /**is handling on mount the data mutation */
     useEffect(() => {
         (async () => {
             const response = await axios.get("/current-user");
