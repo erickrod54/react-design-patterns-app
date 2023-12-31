@@ -1,9 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 3.20 - data js  
+/**react-design-patterns-app - version 4.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'ContainerDataSource' code for CodeData
+ *     --> Adding 'ContainerDataSource wrap' code for 
+ *         CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -663,6 +664,18 @@ export const CodeData = [
   }
   
   export default ContainerDataSource;
+    `
+  },
+  {
+    id: 20,
+    name: 'Container Pattern - ContainerDataSource wrap',
+    code: `  
+    /**the 'getData' get filled with the 'getDataFromServer' logic*/ 
+    <ContainerDataSource getData={ () => getDataFromServer('/books/3')}
+            resourceName={'book'}
+            >
+                <BookInfo />
+    </ContainerDataSource>
     `
   }
 ];
