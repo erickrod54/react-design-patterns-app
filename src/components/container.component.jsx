@@ -5,22 +5,10 @@ import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 3.19 - ContainerPattern
+/**react-design-patterns-app - version 3.20 - ContainerPattern
  * - Features: 
  * 
- *     --> Placing 'containercurrentuser' code.
- * 
- *     --> Placing 'containercurrentuser' code. 
- * 
- *     --> Placing 'loaderuser' code.
- * 
- *     --> Placing 'loaderwrap' code.
- * 
- *     --> Placing 'loadergeneric' code.
- * 
- *     --> Placing 'containergenwrap' code.  
- * 
- *     --> Placing 'consumingbooks' code
+ *     --> Placing 'consuminganydata' code.
  * 
  * Note: 'ContainerRender' is a variation of 
  * 'ContainerDaraSource' a more flexible version taking in count 
@@ -41,6 +29,7 @@ const ContainerPattern = () => {
     const loadergeneric = CodeData[15].code;
     const containergenwrap = CodeData[16].code;
     const consumingbooks = CodeData[17].code;
+    const consuminganydata = CodeData[18].code;
 
     return(
         <div>
@@ -212,10 +201,20 @@ const ContainerPattern = () => {
             </CustomTitleStyle>
 
             <p>
-                and even more custom container can be , that by handling the data 
-                source makes the end component more independent and efficient by doing 
-                less tasks, and giving the opportunity of relocating resources as follows:  
+                and even more custom container can be , that by handling the <span className="text-white font-semibold"> data 
+                source </span> through <span className="text-white font-semibold"> the container </span> makes 
+                the <span className="text-white font-semibold"> end component </span> more independent and efficient 
+                by doing <span className="text-white font-semibold"> less tasks </span>, and giving 
+                the opportunity of relocating resources.  
             </p>
+
+            <p>
+                 basing on <span className="text-white font-semibold"> {`< ContainerGeneric>`} 
+                 </span>, let's build <span className="text-white font-semibold"> {`</ContainerDataSource>`} 
+                 </span>  as follows:           
+            </p>
+
+            <BashCode code={consuminganydata}/>        
 
             <ContainerDataSource getData={ () => getDataFromServer('/books/3')}
             resourceName={'book'}
