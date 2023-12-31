@@ -5,12 +5,22 @@ import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 3.17 - ContainerPattern
+/**react-design-patterns-app - version 3.19 - ContainerPattern
  * - Features: 
  * 
- *     --> Importing and placing 'BashCode' component.
+ *     --> Placing 'containercurrentuser' code.
  * 
- *     --> Placing 'currentusercode'.
+ *     --> Placing 'containercurrentuser' code. 
+ * 
+ *     --> Placing 'loaderuser' code.
+ * 
+ *     --> Placing 'loaderwrap' code.
+ * 
+ *     --> Placing 'loadergeneric' code.
+ * 
+ *     --> Placing 'containergenwrap' code.  
+ * 
+ *     --> Placing 'consumingbooks' code
  * 
  * Note: 'ContainerRender' is a variation of 
  * 'ContainerDaraSource' a more flexible version taking in count 
@@ -24,6 +34,13 @@ const ContainerPattern = () => {
     //console.log({ CodeData })
 
     const currentuser = CodeData[10].code;
+    const userinfoend = CodeData[11].code;
+    const containercurrentuser = CodeData[12].code;
+    const loaderuser = CodeData[13].code;
+    const loaderwrap = CodeData[14].code;
+    const loadergeneric = CodeData[15].code;
+    const containergenwrap = CodeData[16].code;
+    const consumingbooks = CodeData[17].code;
 
     return(
         <div>
@@ -71,7 +88,22 @@ const ContainerPattern = () => {
 
             <p>
                  that data to the children in this case <span className="text-white font-semibold">{'<UserInfo />'} </span>, 
-                 resulting as follows:
+                  ( end component ) resulting as follows:
+            </p>
+
+            <BashCode code={userinfoend}/>
+
+            <p>
+                 the <span className="text-white font-semibold"> container </span>,
+                 and <span className="text-white font-semibold"> end component </span> will 
+                 be as follows:
+            </p>
+
+            <BashCode code={containercurrentuser}/>
+
+            <p>
+                 and rendering <span className="text-white font-semibold"> current user data </span>,
+                 will render in the end component as the list below:
             </p>
 
             <CurrentUser>
@@ -79,7 +111,32 @@ const ContainerPattern = () => {
             </CurrentUser>
 
             <p>
-                this can be a custom test using custom user info from 3 records, being the third one, resulting as follows:
+                this container above for a <span className="text-white font-semibold"> current user data </span> can 
+                be more custom, let's say i have 3 user records and i want to target the third one, 
+                the varation will be applied in the <span className="text-white font-semibold"> {`<CurrentUser>`} 
+                 </span> container, lets called it <span className="text-white font-semibold"> {`<ContainerLoader>`} 
+                 </span>, and will be as follows:
+            </p>
+
+            <BashCode code={loaderuser}/>
+            
+
+            <p>
+                 and rendering <span className="text-white font-semibold"> container loader </span>,
+                 will render in the end component as the list below:
+            </p>
+
+            <p>
+                 the <span className="text-white font-semibold"> container </span>,
+                 and <span className="text-white font-semibold"> end component </span> will 
+                 be as follows:
+            </p>
+
+            <BashCode code={loaderwrap}/>
+
+            <p>
+                 and rendering <span className="text-white font-semibold"> container loader user </span>,
+                 will render in the end component as the list below:
             </p>
 
             <ContainerLoader userId={'3'}>
@@ -87,9 +144,26 @@ const ContainerPattern = () => {
             </ContainerLoader>
 
             <p>
-                the <span className="text-white font-semibold">key is to codify a piece of code </span> 
-                that <span className="text-white font-semibold">can scalate with few modifications </span>, the previous test, with small 
-                modification can become highly scalable as follows for the first user:
+                the <span className="text-white font-semibold">key </span> to master container patterns is to 
+                <span className="text-white font-semibold"> codify a piece of code </span> that <span className="text-white font-semibold">can scalate with few modifications </span>, the previous test, with small 
+                modification can become highly scalable, basing on <span className="text-white font-semibold"> {`< ContainerLoader>`} 
+                 </span>, let's build <span className="text-white font-semibold"> {`</ContainerGeneric>`} 
+                 </span>  as follows for the first user:
+            </p>
+
+            <BashCode code={loadergeneric}/>
+
+            <p>
+                 the <span className="text-white font-semibold"> container </span>,
+                 and <span className="text-white font-semibold"> end component </span> will 
+                 be as follows:
+            </p>
+
+            <BashCode code={containergenwrap}/>
+
+            <p>
+                 and rendering <span className="text-white font-semibold"> generic container user </span>,
+                 will render in the end component as the list below:
             </p>
 
             <ContainerGeneric resourceUrl={'/users/1'} resourceName={'user'}>
@@ -97,7 +171,8 @@ const ContainerPattern = () => {
             </ContainerGeneric>
 
             <p>
-                and for the second user will be as this:
+                and for the second user will change the <span className="text-white font-semibold">{` resourceUrl={'/users/2'} `}</span> 
+                ( of course this path can be totally dynanicly obtained ) and will render as this:
             </p>
             
             <ContainerGeneric resourceUrl={'/users/2'} resourceName={'user'}>
@@ -105,20 +180,31 @@ const ContainerPattern = () => {
             </ContainerGeneric>
 
             <p>
-                and <span className="text-white font-semibold">rehusing </span> this component for example for books:
+                now let's say i want this component to <span className="text-white font-semibold"> consume an end component </span> that 
+                will render only <span className="text-white font-semibold"> data from books </span> 
+                and <span className="text-white font-semibold">rehusing </span> this component for example for books
             </p>
+
+            <p>
+                 the <span className="text-white font-semibold"> container </span>,
+                 and <span className="text-white font-semibold"> end component </span> will 
+                 be as follows:
+            </p>
+
+            <BashCode code={consumingbooks}/>
 
             <ContainerGeneric resourceUrl={'/books/1'} resourceName={'book'}>
                 <BookInfo/>
             </ContainerGeneric>
 
             <p>
-                can be notice that the pattern for the resourceName follows a 
+                can be notice that the pattern for 
+                the <span className="text-white font-semibold"> resourceName </span> follows a 
                 singular notation ( this is because is getting rendered the 
-                single element of each dataset in the end component, that's 
+                single element of the dataset in the <span className="text-white font-semibold"> end component </span>, that's 
                 why it is not use the plural, and technical reasons are in 
-                consideration by the prop in the end component), the correct
-                use of names on endpoints and props is also very important
+                consideration by the prop in the end component), <span className="text-white font-semibold"> the correct
+                use of names on endpoints and props is also very important </span>
             </p>
 
             <CustomTitleStyle>
