@@ -1,14 +1,16 @@
 import React from "react";
-import { ContainerDataSource, ContainerGeneric, ContainerLoader, ContainerRender, CurrentUser, CustomTitle } from "./index.components";
+import { BashCode, ContainerDataSource, ContainerGeneric, ContainerLoader, ContainerRender, CurrentUser, CustomTitle } from "./index.components";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 3.16 - ContainerPattern
+/**react-design-patterns-app - version 3.17 - ContainerPattern
  * - Features: 
  * 
- *     --> Implementing 'ContainerRender'.
+ *     --> Importing and placing 'BashCode' component.
+ * 
+ *     --> Placing 'currentusercode'.
  * 
  * Note: 'ContainerRender' is a variation of 
  * 'ContainerDaraSource' a more flexible version taking in count 
@@ -17,7 +19,11 @@ import { usePatternsAppContext } from "../context";
 
 const ContainerPattern = () => {
 
-    const { getDataFromServer } = usePatternsAppContext()
+    const { getDataFromServer, CodeData } = usePatternsAppContext();
+
+    //console.log({ CodeData })
+
+    const currentuser = CodeData[10].code;
 
     return(
         <div>
@@ -48,6 +54,8 @@ const ContainerPattern = () => {
                 that will perform the following data sourcing and handling:
                 
             </p>
+
+            <BashCode code={currentuser}/>
 
             <ul>
                 <li>
