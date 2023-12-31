@@ -1,9 +1,15 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 3.16 - data js  
+/**react-design-patterns-app - version 3.19 - data js  
  * - Features: 
  *    
- *     --> Adding 'CurrentUse' code for CodeData
+ *     --> Adding 'single current user' code for CodeData
+ * 
+ *     --> Adding 'ContainerLoader'
+ * 
+ *    --> Adding 'ContainerGeneric' code for CodeData
+ * 
+ *    --> Adding 'Consuming components' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -485,6 +491,150 @@ export const CodeData = [
   }
   
   export default CurrentUser;
+    `
+  },
+  {
+    id: 12,
+    name: 'Container Patterns - UserInfo',
+    code: `
+    const UserInfo = ({ user }) => {
+
+      /**can be destructure as this on user or by implementing spread 
+       * operator in case is need it to use more props */  
+      const { name, age, country, books } = user || {};
+    
+      /**here i verify the user in order to set the data */
+      return user ? (
+        <ListWrapper>
+          <h2 className="author-name"><span>{name}</span></h2>
+          <p><span>Age: </span> {age} years</p>
+          <p><span>Country: </span> {country}</p>
+          <h2><span>Books: </span></h2>
+          <ul>
+            {books.map((book) => (
+              <li key={book}> {book} </li>
+            ))}
+          </ul>
+        </ListWrapper>
+      ) : (
+        <h1>Loading...</h1>
+      );
+    }
+    
+    export default UserInfo;
+    `
+  },
+  {
+    id: 13,
+    name: 'Container Pattern - single current user',
+    code: `
+      /**the container component */  
+      <CurrentUser>
+      /**the end component */
+          <UserInfo />
+      </CurrentUser>
+    `
+  },
+  {
+    id: 14,
+    name: 'Container Pattern - ContainerLoader',
+    code: `  
+      /*by passing the id i target the user data**/
+      const ContainerLoader = ({ userId, children }) => {
+    
+        const [ user, setUser ] = useState(null)
+    
+        useEffect(() => {
+            (async () => {
+                const response = await axios.get(\`users/\${userId}\`);
+                setUser(response.data)
+            })();
+        }, [userId])
+    
+        return(
+            <>
+            {/**this logic stays the same as CurrentUser*/}
+            {React.Children.map(children, (child) => {
+              if (React.isValidElement(child)) {
+                return React.cloneElement(child, { user });
+              }
+              return child;
+            })}
+          </>
+        )
+    }
+    
+    export default ContainerLoader;
+    `
+  },
+  {
+    id: 15,
+    name: 'Container Pattern - ContainerLoader Wrap',
+    code: `  
+      /*the container will receive the target**/
+      <ContainerLoader userId={'3'}>
+         <UserInfo/>
+      </ContainerLoader>
+    `
+  },
+  {
+    id: 17,
+    name: 'Container Pattern - ContainerGeneric',
+    code: `  
+      /*the container will target the complete url, resourname and keeping 
+      * the children logic**/
+
+      const ContainerGeneric = ({ resourceUrl, resourceName, children }) => {
+    
+        const [ resource, setResource ] = useState(null)
+    
+        /*here the data is mutated to the url**/
+        useEffect(() => {
+            (async () => {
+                const response = await axios.get(resourceUrl);
+                setResource(response.data)
+            })();
+            /*and will be mount depending on the url (so can be custom and dynamic )**/
+        }, [resourceUrl])
+    
+        return(
+            <>
+            {/**React.Children.map() to iterate over each child passed to the component.
+             * once verified is valid react elemnent provide the 'user' data source
+             */}
+            {React.Children.map(children, (child) => {
+              if (React.isValidElement(child)) {
+                return React.cloneElement(child, { [resourceName]: resource });
+              }
+              return child;
+            })}
+          </>
+        )
+    }
+    
+    export default ContainerGeneric;
+    `
+  },
+  {
+    id: 18,
+    name: 'Container Pattern - ContainerGeneric Wrap',
+    code: `  
+    /**the component handle a full path and a data set name */ 
+      <ContainerGeneric resourceUrl={'/users/1'} resourceName={'user'}>
+            /*the end component**/
+           <UserInfo />
+      </ContainerGeneric>
+    `
+  },
+  {
+    id: 19,
+    name: 'Container Pattern - Consuming components',
+    code: `  
+    /**the same component now is consuming books*/ 
+    <ContainerGeneric resourceUrl={'/books/1'} resourceName={'book'}>
+        /**the end component*/
+        <BookInfo/>
+    </ContainerGeneric>
     `
   }
 ];
