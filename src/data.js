@@ -1,15 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 3.19 - data js  
+/**react-design-patterns-app - version 3.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'single current user' code for CodeData
- * 
- *     --> Adding 'ContainerLoader'
- * 
- *    --> Adding 'ContainerGeneric' code for CodeData
- * 
- *    --> Adding 'Consuming components' code for CodeData
+ *     --> Adding 'ContainerDataSource' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -635,6 +629,40 @@ export const CodeData = [
         /**the end component*/
         <BookInfo/>
     </ContainerGeneric>
+    `
+  },
+  {
+    id: 20,
+    name: 'Container Pattern - ContainerDataSource',
+    code: `  
+    /**the 'getData = () => {}' is empty by default to be filled through the container*/ 
+    const ContainerDataSource = ({ getData = () => {}, resourceName, children }) => {
+    
+      const [ resource, setResource ] = useState(null)
+  
+      /**the data mutation will be done after the invocation*/  
+      useEffect(() => {
+          (async () => {
+              const data = await getData()
+              setResource(data)
+          })();
+      /**the dependency will be the data call*/
+      }, [getData])
+  
+      return(
+          <>
+          {/**and this pattern will persist */}
+          {React.Children.map(children, (child) => {
+            if (React.isValidElement(child)) {
+              return React.cloneElement(child, { [resourceName]: resource });
+            }
+            return child;
+          })}
+        </>
+      )
+  }
+  
+  export default ContainerDataSource;
     `
   }
 ];
