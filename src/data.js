@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 3.05 - data js  
+/**react-design-patterns-app - version 3.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'ModalContent' code for CodeData
+ *     --> Adding 'CurrentUse' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -451,6 +451,40 @@ export const CodeData = [
     export const ModalContent = styled.div\`
     \${tw'p-6 bg-white w-1/2 text-black '}
     \`;
+    `
+  },
+  {
+    id: 11,
+    name: 'Container Patterns - CurrentUser',
+    code: `
+    const CurrentUser = ({ children }) => {
+    
+      const [ user, setUser ] = useState(null)
+  
+      /**is handling on mount the data mutation */
+      useEffect(() => {
+          (async () => {
+              const response = await axios.get("/current-user");
+              setUser(response.data)
+          })();
+      }, [])
+  
+      return(
+          <>
+          {/**React.Children.map() to iterate over each child passed to the component.
+           * once verified is valid react elemnent provide the 'user' data source
+           */}
+          {React.Children.map(children, (child) => {
+            if (React.isValidElement(child)) {
+              return React.cloneElement(child, { user });
+            }
+            return child;
+          })}
+        </>
+      )
+  }
+  
+  export default CurrentUser;
     `
   }
 ];
