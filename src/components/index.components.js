@@ -4,6 +4,7 @@ import ContainerDataSource from "./container.data.source.component";
 import ContainerGeneric from "./container.generic.component";
 import ContainerLoader from "./container.loader.component";
 import ContainerRender from "./container.render.pattern.component";
+import ControlledUnControlledPattern from "./controlled.uncontrolled.pattern.component";
 import CurrentUser from "./current.user.component";
 import CustomTitle from "./custom.title.component";
 import IntroComponent from "./intro.component";
@@ -15,10 +16,10 @@ import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
 import UserInfo from "./user.info.component";
 
-/**react-design-patterns-app - version 4.03 - components > index  
+/**react-design-patterns-app - version 4.04 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'MessageLocalStorage'
+ *     --> Importing and exporting 'ControlledUnControlledPattern'
  * 
  * Note: Pending to make responsive design
  */
@@ -38,5 +39,6 @@ export { LayoutComponentPattern,
          ContainerGeneric,
          ContainerDataSource,
          ContainerRender,
-         MessageLocalStorage
+         MessageLocalStorage,
+         ControlledUnControlledPattern
         }
