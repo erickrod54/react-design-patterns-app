@@ -5,10 +5,10 @@ import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 4.00 - ContainerPattern
+/**react-design-patterns-app - version 4.01 - ContainerPattern
  * - Features: 
  * 
- *     --> Placing 'consuminganydata' code.
+ *     --> Placing 'renderpattern' code.
  * 
  * Note: 'ContainerRender' is a variation of 
  * 'ContainerDaraSource' a more flexible version taking in count 
@@ -31,6 +31,7 @@ const ContainerPattern = () => {
     const consumingbooks = CodeData[17].code;
     const consuminganydata = CodeData[18].code;
     const consuminganydatawrap = CodeData[19].code;
+    const renderpattern = CodeData[20].code;
 
     return(
         <div>
@@ -254,11 +255,17 @@ const ContainerPattern = () => {
             </CustomTitleStyle>
 
             <p>
-                the container 'ContainerRender' pattern is a variation
-                of the ContainerDataSource, that use the render prop to pass 
-                the end component and his props, this variation has technical 
-                reasons        
+                there will be situations where <span className="text-white font-semibold"> clone element </span>
+                has to be avoided for example in order to customize the end component, so in order
+                to providing flexibility and balance in maintainability, readability, and clarity
+                in the codebase, an alternative is the <span className="text-white font-semibold"> Container Render Pattern </span>         
             </p>
+
+            <p>
+                so knowing the goal of this pattern, the code will be modified in the container as follows:
+            </p>
+
+            <BashCode code={renderpattern}/>        
 
             <ContainerRender 
                 getData={ () => getDataFromServer('/books/2')} 
