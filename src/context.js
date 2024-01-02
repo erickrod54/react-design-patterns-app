@@ -2,10 +2,10 @@ import React, { useContext } from "react"
 import { CodeData, ImagesData, IntroComponentData, authors, books, patternCard } from "./data";
 import axios from "axios";
 
-/**react-design-patterns-app - version 3.16 - context js  
+/**react-design-patterns-app - version 4.03 - context js  
  * - Features: 
  * 
- *     --> Importing and exporting 'getDataFromServer'
+ *     --> Importing and exporting 'getDataFromLocalStorage'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -27,6 +27,10 @@ export const PatternsAppProvider = ({ children }) => {
         const response = await axios.get(url);
         return response.data
     }
+
+    const getDataFromLocalStorage = (key) => () => {
+        return localStorage.getItem(key)
+    }
     
     return(
         <PatternsAppContext.Provider
@@ -37,7 +41,8 @@ export const PatternsAppProvider = ({ children }) => {
                 CodeData,
                 authors,
                 books,
-                getDataFromServer
+                getDataFromServer,
+                getDataFromLocalStorage
              }}
         >
             {children}
