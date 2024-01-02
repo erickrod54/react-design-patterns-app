@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.01 - data js  
+/**react-design-patterns-app - version 4.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'ContainerRender' code for 
+ *     --> Adding 'ContainerRender wrap' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -701,6 +701,19 @@ export const CodeData = [
   }
   
   export default ContainerRender;
+    `
+  },
+  {
+    id: 22,
+    name: 'Container Pattern - ContainerRender wrap',
+    code: `  
+    /**the data and the component are more independent of the 
+     * container, so has more mantainability */ 
+      <ContainerRender 
+                getData={ () => getDataFromServer('/books/2')} 
+                render={(resource) => <BookInfo book={resource}/>} />
+
+      </SectionWrapper>
     `
   },
 ];
