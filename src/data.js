@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.00 - data js  
+/**react-design-patterns-app - version 4.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'ContainerDataSource wrap' code for 
+ *     --> Adding 'ContainerRender' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -677,7 +677,32 @@ export const CodeData = [
                 <BookInfo />
     </ContainerDataSource>
     `
+  },
+  {
+    id: 21,
+    name: 'Container Pattern - ContainerRender',
+    code: `  
+    /**the 'getData' get filled with the 'getDataFromServer' logic and
+     * the render method will pass the component to be rendered */ 
+    const ContainerRender = ({ getData = () => {}, render }) => {
+    
+      const [ resource, setResource ] = useState(null)
+      
+      /**here i mutate the data*/
+      useEffect(() => {
+          (async () => {
+              const data = await getData()
+              setResource(data)
+          })();
+      }, [getData])
+  
+      /**instead of cloning i just return the render resource*/
+      return render(resource);
   }
+  
+  export default ContainerRender;
+    `
+  },
 ];
 
 /**List Pattern data  -- start */
