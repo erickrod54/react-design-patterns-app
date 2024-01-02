@@ -5,10 +5,10 @@ import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 4.01 - ContainerPattern
+/**react-design-patterns-app - version 4.02 - ContainerPattern
  * - Features: 
  * 
- *     --> Placing 'renderpattern' code.
+ *     --> Placing 'renderpatternwrap' code.
  * 
  * Note: 'ContainerRender' is a variation of 
  * 'ContainerDaraSource' a more flexible version taking in count 
@@ -32,6 +32,7 @@ const ContainerPattern = () => {
     const consuminganydata = CodeData[18].code;
     const consuminganydatawrap = CodeData[19].code;
     const renderpattern = CodeData[20].code;
+    const renderpatternwrap = CodeData[21].code;
 
     return(
         <div>
@@ -265,7 +266,17 @@ const ContainerPattern = () => {
                 so knowing the goal of this pattern, the code will be modified in the container as follows:
             </p>
 
-            <BashCode code={renderpattern}/>        
+            <BashCode code={renderpattern}/>     
+
+            <p>
+                and the container wrap code is as follows:    
+            </p>   
+
+            <BashCode code={renderpatternwrap}/>
+            
+            <p>
+                and the render resulting of this container will be for a book test data:
+            </p>
 
             <ContainerRender 
                 getData={ () => getDataFromServer('/books/2')} 
