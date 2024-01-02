@@ -2,12 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 3.16 - styled.components
+/**react-design-patterns-app - version 4.03 - styled.components
  * - Features: 
  * 
- *     --> writting '.container-render-pattern' styles for CustomTitle
- * 
- * 	   --> writting '.container-data-source' styles for CustomTitle
+ *     --> writting 'container-local-storage' class.
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -122,6 +120,12 @@ export const CustomTitleStyle = styled.div`
 .container-data-source{
 		span{
 			${tw`text-orange-400 underline`}
+		}
+}
+
+.container-local-storage{
+	span{
+			${tw`text-teal-300`}
 		}
 }
 
