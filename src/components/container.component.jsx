@@ -1,14 +1,16 @@
 import React from "react";
-import { BashCode, ContainerDataSource, ContainerGeneric, ContainerLoader, ContainerRender, CurrentUser, CustomTitle } from "./index.components";
+import { BashCode, ContainerDataSource, ContainerGeneric, ContainerLoader, ContainerRender, CurrentUser, CustomTitle, MessageLocalStorage } from "./index.components";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import UserInfo from "./user.info.component";
 import BookInfo from "./books.info.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 4.02 - ContainerPattern
+/**react-design-patterns-app - version 4.03 - ContainerPattern
  * - Features: 
  * 
- *     --> Placing 'renderpatternwrap' code.
+ *     --> Implementing a variation of ContainerData Source.
+ * 
+ *     --> Importing and Placing 'MessageLocalStorage' component 
  * 
  * Note: 'ContainerRender' is a variation of 
  * 'ContainerDaraSource' a more flexible version taking in count 
@@ -17,7 +19,7 @@ import { usePatternsAppContext } from "../context";
 
 const ContainerPattern = () => {
 
-    const { getDataFromServer, CodeData } = usePatternsAppContext();
+    const { getDataFromServer, CodeData, getDataFromLocalStorage } = usePatternsAppContext();
 
     //console.log({ CodeData })
 
@@ -249,6 +251,20 @@ const ContainerPattern = () => {
                 this example above is very much use in situations where bussines logic ( like 
                 handlers or other data related functionalities need to be separated of the 
                 layout ), in order to secure the sources
+            </p>
+
+            <p>
+                let's see a variation where i can customize the data source ( fior this case i am going to use 
+                Local Data Storage as a data source - Application then LocalStorage and then set key and value-):
+            </p>
+
+            <ContainerDataSource getData={ () =>  getDataFromLocalStorage('test')} resourceName={'msg'} 
+            >
+                <MessageLocalStorage />
+            </ContainerDataSource>
+
+            <p>
+                so here can be shown how flexible can be the data source and how <span className="text-white font-semibold"> rehusable </span> is this component
             </p>
 
             <CustomTitleStyle>
