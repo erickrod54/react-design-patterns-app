@@ -2,10 +2,12 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 4.03 - styled.components
+/**react-design-patterns-app - version 4.05 - styled.components
  * - Features: 
  * 
- *     --> writting 'container-local-storage' class.
+ *     --> Building 'FormWrapper' style component.
+ * 
+ * 	   --> Building 'ButtonGeneral' style component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -32,6 +34,18 @@ export const ModalContent = styled.div`
 export const ModalBackground = styled.div`
     ${tw`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center `}
 `;
+
+export const ButtonGeneral = styled.div`
+	input{
+		${tw`flex justify-center items-center bg-blue-300 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer`}
+	}
+`
+
+export const FormWrapper = styled.div`
+	input{
+		${tw`flex justify-center items-center m-4 p-4 rounded text-black`}
+	}
+`
 
 export const ListWrapper = styled.div`
 
@@ -88,6 +102,10 @@ export const CustomTitleStyle = styled.div`
     ${tw`flex justify-center items-center`}
 }
 
+.sub-title{
+	${tw`text-blue-200 underline first-letter:capitalize text-2xl`}
+}
+
 .split-screen{
     color:orange;
     text-decoration-line: underline;
@@ -126,6 +144,12 @@ export const CustomTitleStyle = styled.div`
 .container-local-storage{
 	span{
 			${tw`text-teal-300`}
+		}
+}
+
+.controlled-uncontrolled-pattern{
+	span{
+			${tw`text-blue-300 underline`}
 		}
 }
 
