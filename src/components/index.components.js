@@ -14,12 +14,13 @@ import RegularList from "./regular.list.component";
 import SharedLayout from "./shared.layout.component";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
+import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 
-/**react-design-patterns-app - version 4.04 - components > index  
+/**react-design-patterns-app - version 4.05 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ControlledUnControlledPattern'
+ *     --> Importing and exporting 'UncontrolledPattern'
  * 
  * Note: Pending to make responsive design
  */
@@ -40,5 +41,6 @@ export { LayoutComponentPattern,
          ContainerDataSource,
          ContainerRender,
          MessageLocalStorage,
-         ControlledUnControlledPattern
+         ControlledUnControlledPattern,
+         UncontrolledPattern
         }
