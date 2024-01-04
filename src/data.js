@@ -1,9 +1,12 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.02 - data js  
+/**react-design-patterns-app - version 4.07 - data js  
  * - Features: 
  *    
- *     --> Adding 'ContainerRender wrap' code for 
+ *     --> Adding 'UncontrolledPattern' code for 
+ *         CodeData
+ * 
+ *      --> Adding 'ControlledModal' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -716,6 +719,67 @@ export const CodeData = [
       </SectionWrapper>
     `
   },
+  {
+    id: 23,
+    name: 'Container Pattern - UncontrolledPattern',
+    code: `  
+    /**As can be seen no hook is used ( for example useState ),
+     * as this is not controlled by the component is an 
+     * uncontrolled component */ 
+      const UncontrolledPattern = () => {
+
+        /**the ref is created in order to access the data*/
+        const nameInputRef = React.createRef();
+        const ageInputRef = React.createRef();
+    
+        const submitHandler = (e) => {
+            e.preventDefault();
+            console.log('the name ==>', nameInputRef.current.value)
+            console.log('the age ==>',ageInputRef.current.value)
+        }   
+    
+        return(
+            <FormWrapper>
+                <form onSubmit={submitHandler}>
+                    <input name="name" type="text" placeholder="Name" ref={nameInputRef}/>
+                    <input age="age" type="number" placeholder="Age" ref={ageInputRef}/>
+                    <ButtonGeneral>
+                        <input type="submit" placeholder="Submit"/>
+                    </ButtonGeneral>
+                </form>
+            </FormWrapper>
+        )
+    }
+    
+    export default UncontrolledPattern;
+    `
+  },
+  {
+    id: 24,
+    name: 'Container Pattern - ControlledModal',
+    code: `  
+    /**now the state can be controlled by the outside of the component */ 
+      const ControlledModal = ({ displayModal, closeModal, stopPropagation, children }) => {
+
+        return (
+            <>
+                {displayModal && (
+                    <ModalBackground onClick={closeModal}>
+                        <ModalContent onClick={stopPropagation}>
+                            <button onClick={closeModal}>
+                            <img src={close} alt="close"/>
+                            </button>
+                            {children}
+                        </ModalContent>
+                    </ModalBackground>
+                )}
+            </>
+        );
+    };
+    
+    export default ControlledModal;
+    `
+  }
 ];
 
 /**List Pattern data  -- start */
