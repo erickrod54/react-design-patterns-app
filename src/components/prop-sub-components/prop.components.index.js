@@ -1,3 +1,6 @@
+import Step1Flow from "./step1.flow.component";
+import Step2Flow from "./step2.flow.component";
+import Step3Flow from "./step3.flow.component";
 import AuthorLargeListItems from "./authors.large.items.component";
 import AuthorSmallListItems from "./autors.small.items.list.component";
 import BookLargeListItems from "./books.large.items.component";
@@ -6,11 +9,14 @@ import LeftSideComponent from "./left.side.prop.component";
 import LeftSideComponentVariation from "./left.side.variation.prop.component";
 import RightSideComponent from "./right.side.prop.component";
 import RightSideComponentVariation from "./right.side.variation.prop.component";
+import Step1FlowCollector from "./step1.flow.collector.component";
+import Step2FlowCollector from "./step2.flow.collector.component";
+import Step3FlowCollector from "./step3.flow.collector.component";
 
-/**react-design-patterns-app - version 2.16 - prop-sub-components > index 
+/**react-design-patterns-app - version 4.08 - prop-sub-components > index 
  * - Features: 
  * 
- *     --> Importing and exporting 'BookLargeListItems', and 'BooksSmallListItems' 
+ *     --> Importing and exporting 'Step' Components to Uncontrolled Flows.
  * 
  * Note: This is the first topic
  */
@@ -21,4 +27,12 @@ export { LeftSideComponent,
          RightSideComponentVariation,
          AuthorSmallListItems,
          AuthorLargeListItems,
-         BookLargeListItems, BooksSmallListItems }
+         BookLargeListItems,
+         BooksSmallListItems,
+         Step1Flow,
+         Step2Flow,
+         Step3Flow,
+         Step1FlowCollector,
+         Step2FlowCollector,
+         Step3FlowCollector,
+        }
