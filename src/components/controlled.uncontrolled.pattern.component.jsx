@@ -1,33 +1,53 @@
 import React, { useState } from "react";
 import { ButtonGeneral, CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
-import UncontrolledPattern from "./uncontrolled.pattern.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
-import ControlledPattern from "./controlled.pattern.component";
-import ControlledModal from "./modal.controlled.component";
+import { Step1Flow,
+         Step1FlowCollector,
+         Step2Flow,
+         Step2FlowCollector, Step3Flow, Step3FlowCollector, Step4Flow } from "./prop-sub-components/prop.components.index";
 
-/**react-design-patterns-app - version 4.07 - ControlledUnControlledPattern
+import { ControlledFlowPatternCollector,
+         ControlledModal,
+         ControlledPattern,
+         UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
+
+/**react-design-patterns-app - version 4.09 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Developing 'uncontrolledcomponent' exercise
+ *     --> Developing 'UncontrolledFlowPatternCollector' and 
+ *        'ControlledFlowPatternCollector' exercise.
  * 
- *     --> Developing 'uncontrolledcomponent' exercise 
+ *     --> Fixing Imports.
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
- */
+*/
 
 const ControlledUnControlledPattern = () => {
-
+    
     const [ displayModal, setDisplayModal ] = useState(false);
+    
+    /**controlled collector flow states */
+    const [data, setData ] = useState({});
+    const [currentStepIndex, setCurrentStepIndex ] = useState(0);
+   
     const { CodeData } = usePatternsAppContext();
 
     const modalcode = CodeData[7].code;
     const uncontrolledcomponent = CodeData[22].code;
     const modalcontrolled = CodeData[23].code;
-    
+
     const closeModal = () => setDisplayModal(false);
+
+    /**controlled collector flow handlers */
+    const goNext = (dataFromStep) => {
+
+        setData({...data, ...dataFromStep})
+        setCurrentStepIndex(currentStepIndex + 1)
+    }
+    
 
     return(
         <div>
@@ -195,7 +215,53 @@ const ControlledUnControlledPattern = () => {
             manipulating values before submission.
         </p>
         
+        <CustomTitleStyle>
+                <CustomTitle  title={<p className="sub-title"><span >uncontrolled flow patterns</span></p>} />
+        </CustomTitleStyle>
     
+        <p>
+            uncontrolled flows is in specific related with onboarding flows ( an onboarding flow is a pattern that is 
+            always present registration apps, or form filling, or an online job application and this flow is compose 
+            of steps that can be from few to several steps on each step asking for specific information, and the 
+            final step will be the finish of the flow ), let's see 
+            an example:
+        </p>
+
+        <UncontrolledFlowPattern>
+            <Step1Flow />
+            <Step2Flow />
+            <Step3Flow />
+        </UncontrolledFlowPattern>
+
+        <p>
+            onboarding flows usually collects data by the flow of every step, let's check this flow collecting 
+            data in every step: 
+        </p>
+
+        <UncontrolledFlowPatternCollector onDone={data => {
+            console.log({data})
+            alert('you made to the final step :)')
+        }}>
+            <Step1FlowCollector />
+            <Step2FlowCollector />
+            <Step3FlowCollector />
+        </UncontrolledFlowPatternCollector>
+
+        <p>
+            so this last uncontrolled data flow collector can be convert in a controlled data flow
+            collector, as follows:
+        </p>
+
+        <ControlledFlowPatternCollector
+            currentIndex={currentStepIndex}
+            onNext={goNext}
+        >
+            <Step1FlowCollector />
+            <Step2FlowCollector />
+            {data.age > 25 ? <Step4Flow /> : <Step3FlowCollector />}
+        </ControlledFlowPatternCollector>
+      
+
         </SectionWrapper>
         </div>
     )
