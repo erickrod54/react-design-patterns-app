@@ -4,6 +4,7 @@ import ContainerDataSource from "./container.data.source.component";
 import ContainerGeneric from "./container.generic.component";
 import ContainerLoader from "./container.loader.component";
 import ContainerRender from "./container.render.pattern.component";
+import ControlledFlowPatternCollector from "./controlled.flow.collector.pattern";
 import ControlledPattern from "./controlled.pattern.component";
 import ControlledUnControlledPattern from "./controlled.uncontrolled.pattern.component";
 import CurrentUser from "./current.user.component";
@@ -16,13 +17,19 @@ import RegularList from "./regular.list.component";
 import SharedLayout from "./shared.layout.component";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
+import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.pattern";
+import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 
-/**react-design-patterns-app - version 4.07 - components > index  
+/**react-design-patterns-app - version 4.09 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ControlledModal'
+ *     --> Importing and exporting 'UncontrolledFlowPattern'
+ * 
+ *     --> Importing and exporting 'UncontrolledFlowPatternCollector'
+ * 
+ *      --> Importing and exporting 'ControlledFlowPatternCollector'
  * 
  * Note: Pending to make responsive design
  */
@@ -47,5 +54,8 @@ export {
          ControlledUnControlledPattern,
          UncontrolledPattern,
          ControlledPattern,
-         ControlledModal
+         ControlledModal,
+         UncontrolledFlowPattern,
+         UncontrolledFlowPatternCollector,
+         ControlledFlowPatternCollector
         }
