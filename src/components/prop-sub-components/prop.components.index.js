@@ -12,11 +12,12 @@ import RightSideComponentVariation from "./right.side.variation.prop.component";
 import Step1FlowCollector from "./step1.flow.collector.component";
 import Step2FlowCollector from "./step2.flow.collector.component";
 import Step3FlowCollector from "./step3.flow.collector.component";
+import Step4Flow from "./step4.flow.collector.component";
 
-/**react-design-patterns-app - version 4.08 - prop-sub-components > index 
+/**react-design-patterns-app - version 4.09 - prop-sub-components > index 
  * - Features: 
  * 
- *     --> Importing and exporting 'Step' Components to Uncontrolled Flows.
+ *     --> Importing and exporting 'Step4Flow' Components to Controlled Flows.
  * 
  * Note: This is the first topic
  */
@@ -35,4 +36,5 @@ export { LeftSideComponent,
          Step1FlowCollector,
          Step2FlowCollector,
          Step3FlowCollector,
+         Step4Flow
         }
