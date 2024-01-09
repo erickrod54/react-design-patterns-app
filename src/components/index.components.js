@@ -9,6 +9,7 @@ import ControlledPattern from "./controlled.pattern.component";
 import ControlledUnControlledPattern from "./controlled.uncontrolled.pattern.component";
 import CurrentUser from "./current.user.component";
 import CustomTitle from "./custom.title.component";
+import HOCPattern from "./hoc.pattern.component";
 import IntroComponent from "./intro.component";
 import LayoutComponentPattern from "./layout.pattern.component";
 import MessageLocalStorage from "./message.local.storage.component";
@@ -22,14 +23,10 @@ import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 
-/**react-design-patterns-app - version 4.09 - components > index  
+/**react-design-patterns-app - version 4.10 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UncontrolledFlowPattern'
- * 
- *     --> Importing and exporting 'UncontrolledFlowPatternCollector'
- * 
- *      --> Importing and exporting 'ControlledFlowPatternCollector'
+ *     --> Importing and exporting 'HOCPattern'
  * 
  * Note: Pending to make responsive design
  */
@@ -57,5 +54,6 @@ export {
          ControlledModal,
          UncontrolledFlowPattern,
          UncontrolledFlowPatternCollector,
-         ControlledFlowPatternCollector
+         ControlledFlowPatternCollector,
+         HOCPattern
         }
