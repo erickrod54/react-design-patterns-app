@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 4.08 - styled.components
+/**react-design-patterns-app - version 4.10 - styled.components
  * - Features: 
  * 
- *     --> BUilding 'StepFlowWrapper' style component.	
+ *     --> BUilding 'ButtonWrapper' style component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -44,6 +44,14 @@ export const FormWrapper = styled.div`
 	input{
 		${tw`flex justify-center items-center m-4 p-4 rounded text-black`}
 	}
+`
+
+export const ButtonWrapper = styled.div`
+		${tw`flex flex-row`}
+
+		button{
+			${tw`m-4 p-4`}
+		}
 `
 
 export const StepFlowWrapper = styled.div`
