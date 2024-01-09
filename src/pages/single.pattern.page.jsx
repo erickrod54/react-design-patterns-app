@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { usePatternsAppContext } from "../context";
-import { ContainerPattern, ControlledUnControlledPattern, LayoutComponentPattern } from "../components/index.components";
+import { ContainerPattern, ControlledUnControlledPattern, HOCPattern, LayoutComponentPattern } from "../components/index.components";
 
-/**react-design-patterns-app - version 4.04 - SinglePatternPage
+/**react-design-patterns-app - version 4.10 - SinglePatternPage
  * - Features: 
  * 
- *     --> Displaying 'ControlledUnControlledPattern' content
+ *     --> Displaying 'HOCPattern' content
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -32,6 +32,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 3 ) {
         return <ControlledUnControlledPattern />
+    }
+
+    if ( Number(patternId) === 4 ) {
+        return <HOCPattern />
     }
 
 }
