@@ -1,12 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.07 - data js  
+/**react-design-patterns-app - version 4.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'UncontrolledPattern' code for 
- *         CodeData
- * 
- *      --> Adding 'ControlledModal' code for 
+ *     --> Adding 'UncontrolledFlowPattern' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -778,6 +775,52 @@ export const CodeData = [
     };
     
     export default ControlledModal;
+    `
+  },
+  {
+    id: 25,
+    name: 'UnControlled Flow - UncontrolledFlowPattern',
+    code: `  
+    /**can be notice by reading the code that this uncontrolled flow
+     * does not collect data because in some cases is only necessary 
+     * to use the flow */ 
+    const UncontrolledFlowPattern = ({ children }) => {
+   
+      /**this state to track the index of the step */
+      const [currentStepIndex, setCurrentStepIndex ] = useState(0);
+  
+      const goNext = () => {
+          setCurrentStepIndex(currentStepIndex + 1)
+      }
+  
+      /** in this line i create an array of children and use the index*/
+      const currentChild = React.Children.toArray(children)[currentStepIndex];
+  
+      if (React.isValidElement(currentChild)) {
+          return React.cloneElement(currentChild, { goNext })
+      }
+  
+      return( 
+          <StepFlowWrapper>
+              <h2>Uncontrolled flow done !! Refresh :) </h2>
+          </StepFlowWrapper>
+      )
+  }
+  
+  export default UncontrolledFlowPattern;
+    `
+  },
+  {
+    id: 26,
+    name: 'UnControlled Flow - UncontrolledFlowPattern wrap',
+    code: `  
+    /**the uncontrolled flow wraps the steps ( that are separate 
+     * components )*/ 
+    <UncontrolledFlowPattern>
+        <Step1Flow />
+        <Step2Flow />
+        <Step3Flow />
+    </UncontrolledFlowPattern>
     `
   }
 ];
