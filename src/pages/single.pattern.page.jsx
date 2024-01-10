@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { usePatternsAppContext } from "../context";
-import { ContainerPattern, ControlledUnControlledPattern, HOCPattern, LayoutComponentPattern } from "../components/index.components";
+import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, HOCPattern, LayoutComponentPattern } from "../components/index.components";
 
-/**react-design-patterns-app - version 4.10 - SinglePatternPage
+/**react-design-patterns-app - version 4.11 - SinglePatternPage
  * - Features: 
  * 
- *     --> Displaying 'HOCPattern' content
+ *     --> Displaying 'CustomHookPattern' content
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -38,6 +38,9 @@ const SinglePatternPage = () => {
         return <HOCPattern />
     }
 
+    if ( Number(patternId) === 5 ) {
+        return <CustomHookPattern />
+    }
 }
 
 export default SinglePatternPage;
