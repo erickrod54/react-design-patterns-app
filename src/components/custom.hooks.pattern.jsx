@@ -2,12 +2,15 @@ import React from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import UserInfoWithHook from "./user.info.with.hook.component";
+import UserInfoWithHookGen from "./user.info.generic.hook.component";
+import UserInfoAnyResource from "./user.info.anyresource.hook.component";
+import BookInfoAnyResource from "./books.info.anyresource.component";
+import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-
-/**react-design-patterns-app - version 4.11 - CustomHookPattern
+/**react-design-patterns-app - version 4.13 - CustomHookPattern
  * - Features: 
  * 
- *     --> Building 'CustomHookPattern'
+ *     --> Developing custom patterns exercises
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -49,6 +52,55 @@ const CustomHookPattern = () => {
 
                 <UserInfoWithHook />  
 
+                <p>
+                    a more generic version of this hook can take an specific id, and render for example two different 
+                    users from a dataset, as follows:
+                </p>
+
+                <p>
+                    for an user with a userId of 2:         
+                </p>
+
+               <UserInfoWithHookGen userId={'2'}/>
+
+                <p>
+                    for an user with a userId of 1:         
+                </p>
+
+                <UserInfoWithHookGen userId={'1'}/>
+
+                <p>
+                    and if want to fetch data from any resource, let's start 
+                    with books for this case the record number 2 by using the 
+                    path will be like as follows:
+                </p>
+
+                <BookInfoAnyResource bookUrl={'/books/2'}/>
+
+                <p>
+                    now the first ( record with the id 1 ) record:
+                </p>
+
+                <BookInfoAnyResource bookUrl={'/books/1'}/>
+
+                <p>
+                    and then by users:
+                </p>
+
+                <UserInfoAnyResource />
+
+                <p>
+                    there is a variation of this custom hook that can be combine
+                    the data source pattern, adding this indepence of the data 
+                    source make in it more flexible:  
+                </p>
+
+                <p>
+                    for an user with a userId of 3:         
+                </p>
+
+                <UserInfoDataSource userId={'3'}/>
+                    
             </SectionWrapper>
         </div>
     )
