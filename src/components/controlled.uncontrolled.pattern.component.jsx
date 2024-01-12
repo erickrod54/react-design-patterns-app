@@ -13,13 +13,10 @@ import { ControlledFlowPatternCollector,
          ControlledPattern,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 4.09 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 4.13 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Developing 'UncontrolledFlowPatternCollector' and 
- *        'ControlledFlowPatternCollector' exercise.
- * 
- *     --> Fixing Imports.
+ *     --> Adding 'uncontrolledflow' code
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -38,6 +35,7 @@ const ControlledUnControlledPattern = () => {
     const modalcode = CodeData[7].code;
     const uncontrolledcomponent = CodeData[22].code;
     const modalcontrolled = CodeData[23].code;
+    const uncontrolledflow = CodeData[24].code;
 
     const closeModal = () => setDisplayModal(false);
 
@@ -232,6 +230,18 @@ const ControlledUnControlledPattern = () => {
             <Step2Flow />
             <Step3Flow />
         </UncontrolledFlowPattern>
+
+        <p>
+            the code for this exersice is as follows:
+        </p>
+
+        <BashCode code={uncontrolledflow}/>
+
+        <p>
+            as in the comments from the code sometimes in some cases it is only necessary the flow to
+            make for example a navigation experience for end users, is leave it open like this one to 
+            connect with another flows or parts of the application
+        </p>
 
         <p>
             onboarding flows usually collects data by the flow of every step, let's check this flow collecting 
