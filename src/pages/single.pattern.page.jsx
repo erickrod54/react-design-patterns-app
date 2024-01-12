@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { usePatternsAppContext } from "../context";
-import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, HOCPattern, LayoutComponentPattern } from "../components/index.components";
+import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, FunctionalProgramming, HOCPattern, LayoutComponentPattern } from "../components/index.components";
 
-/**react-design-patterns-app - version 4.11 - SinglePatternPage
+/**react-design-patterns-app - version 4.13 - SinglePatternPage
  * - Features: 
  * 
  *     --> Displaying 'CustomHookPattern' content
@@ -40,6 +40,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 5 ) {
         return <CustomHookPattern />
+    }
+
+    if ( Number(patternId) === 6 ) {
+        return <FunctionalProgramming />
     }
 }
 
