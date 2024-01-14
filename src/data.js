@@ -1,14 +1,23 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.11 - data js  
+/**react-design-patterns-app - version 4.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'UncontrolledFlowPattern' code for 
+ *     --> Adding 'myNestedObject' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
  */
+
+export const myNestedObject = {
+  key:"value1",
+  key2:{
+    innerInnerKey1:"innerInnerValue1",
+    innerInnerKey2:"innerInnerValue2",
+  },
+  key3:"value3"
+}
 
 export const patternCard = [
     {
