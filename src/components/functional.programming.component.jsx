@@ -1,17 +1,21 @@
 import React from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
+import RecursivePattern from "./recursive.pattern.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 4.13 - FunctionalProgramming
+/**react-design-patterns-app - version 4.14 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Building 'FunctionalProgramming'.
+ *     --> Developing example of recursive component.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
  */
 
 const FunctionalProgramming = () => {
+
+    const { myNestedObject } = usePatternsAppContext();
 
     return(
         <div>
@@ -105,6 +109,14 @@ const FunctionalProgramming = () => {
                     ( Involves combining multiple components into a single component for achieving desired effects. )
                 </li>
             </ul>      
+
+            <p>
+                a recursive component is a component that calls itselft from inside itself ( kind like recursive functions, but this case applied to react components ) 
+                these components are compose of a <span className="text-white font-semibold"> base case </span> a an example of recursive components and a 
+                <span className="text-white font-semibold"> recursive case </span>, as the example as folllows:
+            </p>
+
+            <RecursivePattern data={myNestedObject}/>
 
             <CustomTitleStyle>
                 <CustomTitle  title={<p className="functional-programming"><span >Importance of Component Composition: </span></p>} />
