@@ -5,10 +5,10 @@ import RecursivePattern from "./recursive.pattern.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 4.15 - FunctionalProgramming
+/**react-design-patterns-app - version 4.16 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Showing code for example of recursive component.
+ *     --> Showing code for 'myNestedData'.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -19,6 +19,8 @@ const FunctionalProgramming = () => {
     const { myNestedObject, CodeData } = usePatternsAppContext();
 
     const recursivecode = CodeData[26].code;
+
+    const myNestedData = CodeData[27].code;
 
     return(
         <div>
@@ -111,7 +113,13 @@ const FunctionalProgramming = () => {
                     <span className="text-white font-semibold"> Component composition (HOCs) </span>
                     ( Involves combining multiple components into a single component for achieving desired effects. )
                 </li>
-            </ul>      
+            </ul>
+
+            <p>
+                let's say i have a nested object and i want build a component that render recursively the data: 
+            </p> 
+
+            <BashCode code={myNestedData}/>     
 
             <p>
                 a recursive component is a component that calls itselft from inside itself ( kind like recursive functions, but this case applied to react components ) 
