@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.14 - data js  
+/**react-design-patterns-app - version 4.15 - data js  
  * - Features: 
  *    
- *     --> Adding 'myNestedObject' code for 
+ *     --> Adding 'RecursivePattern' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -830,6 +830,47 @@ export const CodeData = [
         <Step2Flow />
         <Step3Flow />
     </UncontrolledFlowPattern>
+    `
+  },
+  {
+    id: 27,
+    name: 'RecursivePattern',
+    code: `  
+    /**the evaluation for a base condition */
+    const isObject = data => typeof data === 'object' && data !== null;
+    
+    const RecursivePattern = ({ data }) => {
+    
+        
+            /**this is the base case of the recursion */
+            if (!isObject(data)) {
+                return(
+                    <li>
+                        {data}
+                    </li>
+                )
+            }
+    
+            /**this will be the recursive case, calling the component itself
+             * until render all the key pair (unique values) of the object 
+             * data in the component itself */
+            const pairs = Object.entries(data);
+    
+            return(
+                <>
+                    {pairs.map(([key, value]) => {
+                        return(
+                        <li>
+                            {key}
+                            <RecursivePattern data={value}/>
+                        </li>
+                        )
+                    })}
+                </>
+            )
+    }
+    
+    export default RecursivePattern;
     `
   }
 ];
