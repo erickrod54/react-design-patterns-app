@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.15 - data js  
+/**react-design-patterns-app - version 4.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'RecursivePattern' code for 
+ *     --> Adding 'myNestedObject' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -871,6 +871,21 @@ export const CodeData = [
     }
     
     export default RecursivePattern;
+    `
+  },
+  {
+    id: 28,
+    name: 'RecursivePattern - myNestedObject',
+    code: `
+    /*this is the nested object**/  
+    const myNestedObject = {
+      key:"value1",
+      key2:{
+        innerInnerKey1:"innerInnerValue1",
+        innerInnerKey2:"innerInnerValue2",
+      },
+      key3:"value3"
+    }
     `
   }
 ];
