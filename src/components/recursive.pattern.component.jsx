@@ -1,9 +1,9 @@
 import React from "react";
 
-/**react-design-patterns-app - version 4.14 - RecursivePattern 
+/**react-design-patterns-app - version 4.15 - RecursivePattern 
  * - Features: 
  *    
- *     --> Building 'RecursivePattern'
+ *     --> Adding closing comma for the component
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -44,4 +44,4 @@ const RecursivePattern = ({ data }) => {
         )
 }
 
-export default RecursivePattern
+export default RecursivePattern;
