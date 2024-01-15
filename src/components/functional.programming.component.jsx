@@ -3,11 +3,12 @@ import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.com
 import CustomTitle from "./custom.title.component";
 import RecursivePattern from "./recursive.pattern.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 4.14 - FunctionalProgramming
+/**react-design-patterns-app - version 4.15 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Developing example of recursive component.
+ *     --> Showing code for example of recursive component.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -15,7 +16,9 @@ import { usePatternsAppContext } from "../context";
 
 const FunctionalProgramming = () => {
 
-    const { myNestedObject } = usePatternsAppContext();
+    const { myNestedObject, CodeData } = usePatternsAppContext();
+
+    const recursivecode = CodeData[26].code;
 
     return(
         <div>
@@ -114,6 +117,12 @@ const FunctionalProgramming = () => {
                 a recursive component is a component that calls itselft from inside itself ( kind like recursive functions, but this case applied to react components ) 
                 these components are compose of a <span className="text-white font-semibold"> base case </span> a an example of recursive components and a 
                 <span className="text-white font-semibold"> recursive case </span>, as the example as folllows:
+            </p>
+
+            <BashCode code={recursivecode}/>
+
+            <p>
+                rendering as follows: 
             </p>
 
             <RecursivePattern data={myNestedObject}/>
