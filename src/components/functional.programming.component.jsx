@@ -4,12 +4,12 @@ import CustomTitle from "./custom.title.component";
 import RecursivePattern from "./recursive.pattern.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
-import { RedButton } from "./composition.pattern.component";
+import { GreenButton, RedButton } from "./composition.pattern.component";
 
-/**react-design-patterns-app - version 4.17 - FunctionalProgramming
+/**react-design-patterns-app - version 4.18 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'RedButton' for Composition Pattern.
+ *     --> Adding 'GreenButton' for Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -141,7 +141,13 @@ const FunctionalProgramming = () => {
                 create custom versions of a generic component, as follows:
             </p>
             
-           <RedButton text='danger custom'/>             
+           <RedButton text='danger custom'/>   
+
+           <p>
+               and the green version as follows:         
+           </p>          
+
+           <GreenButton text='approve custom'/>
 
             <CustomTitleStyle>
                 <CustomTitle  title={<p className="functional-programming"><span >Importance of Component Composition: </span></p>} />
