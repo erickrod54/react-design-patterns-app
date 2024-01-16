@@ -4,11 +4,12 @@ import CustomTitle from "./custom.title.component";
 import RecursivePattern from "./recursive.pattern.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
+import { RedButton } from "./composition.pattern.component";
 
-/**react-design-patterns-app - version 4.16 - FunctionalProgramming
+/**react-design-patterns-app - version 4.17 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Showing code for 'myNestedData'.
+ *     --> Adding 'RedButton' for Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -134,6 +135,13 @@ const FunctionalProgramming = () => {
             </p>
 
             <RecursivePattern data={myNestedObject}/>
+
+            <p>
+                and when it comes to <span className="text-white font-semibold"> Partially applied components </span>, by passing props i can 
+                create custom versions of a generic component, as follows:
+            </p>
+            
+           <RedButton text='danger custom'/>             
 
             <CustomTitleStyle>
                 <CustomTitle  title={<p className="functional-programming"><span >Importance of Component Composition: </span></p>} />
