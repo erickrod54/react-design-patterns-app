@@ -1,11 +1,7 @@
-/**react-design-patterns-app - version 4.17 - Composition Pattern
+/**react-design-patterns-app - version 4.18 - Composition Pattern
  * - Features: 
  * 
- *     --> Building 'Button' Pattern.
- * 
- *     --> Consuming 'Button' from 'RedButton'.
- * 
- *     --> Consuming 'GreenButton' from 'RedButton'.   
+ *     --> Writting small size as '24px'.   
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -16,7 +12,7 @@ export const Button = ({ size, color, text, ...props }) => {
     return(
         <button
             style={{
-                fontSize: size === "small" ? '8px' : '32px',
+                fontSize: size === "small" ? '24px' : '32px',
                 border: `3px solid ${color}`,
                 color: color,
                 margin:'1rem',
