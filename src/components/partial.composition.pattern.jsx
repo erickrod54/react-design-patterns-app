@@ -1,10 +1,12 @@
 import React from "react";
 
 
-/**react-design-patterns-app - version 4.19 - partialComponent 
+/**react-design-patterns-app - version 5.01 - partialComponent 
  * - Features: 
  * 
  *     --> Developing 'partially composition pattern'
+ * 
+ *     --> Switching 'fucsia' to hex
  * 
  * Note: Pending to make responsive design
  */
@@ -45,4 +47,4 @@ export const Button = ({ size, color, text, ...props }) => {
 /**the partial props are passed as key values ( an object ) */
 export const WarningButton = partialComponent(Button, {color:'yellow'});
 export const SmallWarning = partialComponent(WarningButton, {size:'small'})
-export const Secondary = partialComponent(Button, {color:'fucsia'})
+export const Secondary = partialComponent(Button, {color:'FF00FF'})
