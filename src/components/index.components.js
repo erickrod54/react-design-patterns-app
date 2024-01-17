@@ -18,6 +18,7 @@ import IntroComponent from "./intro.component";
 import LayoutComponentPattern from "./layout.pattern.component";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
+import { WarningButton } from "./partial.composition.pattern";
 import RecursivePattern from "./recursive.pattern.component";
 import RegularList from "./regular.list.component";
 import SharedLayout from "./shared.layout.component";
@@ -29,10 +30,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 4.18 - components > index  
+/**react-design-patterns-app - version 4.19 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'GreenButton'
+ *     --> Importing and exporting 'WarningButton'
  * 
  * Note: Pending to make responsive design
  */
@@ -68,5 +69,6 @@ export {
          FunctionalProgramming,
          RecursivePattern,
          RedButton,
-         GreenButton
+         GreenButton,
+         WarningButton
         }
