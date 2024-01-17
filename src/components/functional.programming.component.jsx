@@ -5,12 +5,12 @@ import RecursivePattern from "./recursive.pattern.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { GreenButton, RedButton } from "./composition.pattern.component";
-import { WarningButton } from "./partial.composition.pattern";
+import { SmallWarning, WarningButton } from "./partial.composition.pattern";
 
-/**react-design-patterns-app - version 4.19 - FunctionalProgramming
+/**react-design-patterns-app - version 5.00 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'WarningButton' for Composition Pattern.
+ *     --> Adding 'SmallWarning' for Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -156,6 +156,12 @@ const FunctionalProgramming = () => {
            </p>
            
            <WarningButton text='Warning Custom'/>
+
+           <p>
+               and a custom variation of this warning will be as follows:
+           </p>
+
+           <SmallWarning text='small warning custom'/>
 
             <CustomTitleStyle>
                 <CustomTitle  title={<p className="functional-programming"><span >Importance of Component Composition: </span></p>} />
