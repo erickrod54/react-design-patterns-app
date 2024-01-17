@@ -5,11 +5,12 @@ import RecursivePattern from "./recursive.pattern.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { GreenButton, RedButton } from "./composition.pattern.component";
+import { WarningButton } from "./partial.composition.pattern";
 
-/**react-design-patterns-app - version 4.18 - FunctionalProgramming
+/**react-design-patterns-app - version 4.19 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'GreenButton' for Composition Pattern.
+ *     --> Adding 'WarningButton' for Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -137,7 +138,7 @@ const FunctionalProgramming = () => {
             <RecursivePattern data={myNestedObject}/>
 
             <p>
-                and when it comes to <span className="text-white font-semibold"> Partially applied components </span>, by passing props i can 
+                and when it comes to <span className="text-white font-semibold"> composition pattern </span>, by passing all the props i can 
                 create custom versions of a generic component, as follows:
             </p>
             
@@ -148,6 +149,13 @@ const FunctionalProgramming = () => {
            </p>          
 
            <GreenButton text='approve custom'/>
+
+           <p>
+                 a variation of <span className="text-white font-semibold"> composition pattern </span> is <span className="text-white font-semibold"> 
+                 partially composition pattern </span> this last one use part of the props of the pattern component to build custom versions:         
+           </p>
+           
+           <WarningButton text='Warning Custom'/>
 
             <CustomTitleStyle>
                 <CustomTitle  title={<p className="functional-programming"><span >Importance of Component Composition: </span></p>} />
