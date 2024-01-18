@@ -18,7 +18,7 @@ import IntroComponent from "./intro.component";
 import LayoutComponentPattern from "./layout.pattern.component";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
-import { SmallWarning, WarningButton } from "./partial.composition.pattern";
+import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pattern";
 import RecursivePattern from "./recursive.pattern.component";
 import RegularList from "./regular.list.component";
 import SharedLayout from "./shared.layout.component";
@@ -30,10 +30,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 5.00 - components > index  
+/**react-design-patterns-app - version 5.01 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'SmallWarning'
+ *     --> Importing and exporting 'Secondary'
  * 
  * Note: Pending to make responsive design
  */
@@ -71,5 +71,6 @@ export {
          RedButton,
          GreenButton,
          WarningButton,
-         SmallWarning
+         SmallWarning,
+         Secondary
         }
