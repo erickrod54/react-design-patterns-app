@@ -1,16 +1,17 @@
 import React from "react";
-import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
+import { ButtonGeneral, ButtonWrapper, CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import RecursivePattern from "./recursive.pattern.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { GreenButton, RedButton } from "./composition.pattern.component";
 import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pattern";
+import { Card } from "./index.components";
 
-/**react-design-patterns-app - version 5.01 - FunctionalProgramming
+/**react-design-patterns-app - version 5.03 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'Secondary' for Composition Pattern.
+ *     --> Adding 'Card' for Compound Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -188,7 +189,78 @@ const FunctionalProgramming = () => {
                     <span className="text-white font-semibold"> Mention of diving into three additional design patterns that showcase the influence of functional programming in React </span>
                     ( recursive components, partially applied components, and component composition. )
                 </li>
-            </ul>            
+            </ul>    
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="functional-programming"><span >Bonus patterns for composition: </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                there two patterns that are really important when it comes to solutions for composition at big scale ( big scale
+                composition can become very complex in order to control and maintain component and subcomponents ):        
+            </p>
+
+              <ul>
+                <li>
+                    <span className="text-white font-semibold"> Compound Composition </span>
+                    ( especially when dealing with nested props and sub-components. ) 
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Observer Pattern </span>
+                 
+                </li>
+            </ul>     
+
+            <p>
+                <span className="text-white font-semibold"> Compound Composition </span> separate sub components that are of main
+                big component. These components are then attached to the instance of the main component, making them accessible outside 
+                the main component.    
+            </p>  
+
+            <p>
+                The key idea is to break down a complex component into smaller sub-components and 
+                compose them together to form the complete component.     
+            </p>
+
+            <p>
+                let's say i have a main component that is going to be a Card, as follows:
+            </p>
+
+            <Card
+                header={<h1 style={{margin:'0'}}>Header</h1>}
+                footer={
+                    <ButtonWrapper>
+                       <ButtonGeneral>
+                            <button>Ok</button>
+                       </ButtonGeneral>
+                       <ButtonGeneral>
+                            <button>cancel</button> 
+                       </ButtonGeneral>
+                    </ButtonWrapper>
+                }
+            >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Maecenas ultricies mi eget mauris 
+                pharetra et ultrices. Curabitur vitae nunc sed velit dignissim sodales. Habitant
+                morbi tristique senectus et netus. Eget sit amet tellus cras adipiscing enim eu 
+                turpis. A lacus vestibulum sed arcu non. Et pharetra pharetra massa massa ultricies 
+                mi quis. Dignissim suspendisse in est ante in. Duis tristique sollicitudin nibh 
+                sit amet commodo nulla facilisi. Sed sed risus pretium quam vulputate dignissim 
+                suspendisse. Turpis nunc eget lorem dolor sed viverra ipsum nunc. 
+            </Card>
+
+            <p>
+                 This Card , and for this i separate components are created for the header,
+                 body, and footer. These components are then attached to the instance of the card 
+                 component, making them accessible 
+                 outside the card.    
+            </p>
+
+            <p>
+                By adopting the compound component pattern, developers can achieve a more straightforward 
+                and flexible design for their React components. 
+            </p>
+
 
         </SectionWrapper>
         </div>
