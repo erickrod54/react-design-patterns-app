@@ -6,12 +6,13 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { GreenButton, RedButton } from "./composition.pattern.component";
 import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pattern";
-import { Card } from "./index.components";
+import { Card, CardCompound } from "./index.components";
 
-/**react-design-patterns-app - version 5.03 - FunctionalProgramming
+
+/**react-design-patterns-app - version 5.04 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'Card' for Compound Composition Pattern.
+ *     --> Adding 'CardCompound' for Compound Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -255,6 +256,34 @@ const FunctionalProgramming = () => {
                  component, making them accessible 
                  outside the card.    
             </p>
+
+            <CardCompound>
+                <CardCompound.Header>
+                    <h1 style={{margin:'0'}}><span className="text-white font-semibold"> Compound Header </span></h1>
+                </CardCompound.Header>
+                <CardCompound.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Maecenas ultricies mi eget mauris 
+                    pharetra et ultrices. Curabitur vitae nunc sed velit dignissim sodales. Habitant
+                    morbi tristique senectus et netus. Eget sit amet tellus cras adipiscing enim eu 
+                    turpis. A lacus vestibulum sed arcu non. Et pharetra pharetra massa massa ultricies 
+                    mi quis. Dignissim suspendisse in est ante in. Duis tristique sollicitudin nibh 
+                    sit amet commodo nulla facilisi. Sed sed risus pretium quam vulputate dignissim 
+                    suspendisse. Turpis nunc eget lorem dolor sed viverra ipsum nunc. <span className="text-white font-semibold"> 
+                    Compound Body </span>
+                </CardCompound.Body>
+                <CardCompound.Footer>
+                <ButtonWrapper>
+                       <ButtonGeneral>
+                            <button>Ok</button>
+                       </ButtonGeneral>
+                       <ButtonGeneral>
+                            <button>cancel</button> 
+                       </ButtonGeneral>
+                       <span className="text-white font-semibold"> Compound Footer </span>
+                    </ButtonWrapper>
+                </CardCompound.Footer>
+            </CardCompound>
 
             <p>
                 By adopting the compound component pattern, developers can achieve a more straightforward 
