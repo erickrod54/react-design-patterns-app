@@ -1,4 +1,5 @@
 import BashCode from "./bash.higlight.component";
+import Card from "./card.component";
 import { GreenButton, RedButton } from "./composition.pattern.component";
 import ContainerPattern from "./container.component";
 import ContainerDataSource from "./container.data.source.component";
@@ -30,10 +31,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 5.01 - components > index  
+/**react-design-patterns-app - version 5.03 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'Secondary'
+ *     --> Importing and exporting 'Card'
  * 
  * Note: Pending to make responsive design
  */
@@ -72,5 +73,6 @@ export {
          GreenButton,
          WarningButton,
          SmallWarning,
-         Secondary
+         Secondary,
+         Card
         }
