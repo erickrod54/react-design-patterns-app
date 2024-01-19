@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 5.03 - data js  
+/**react-design-patterns-app - version 5.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'CardCompound' code for 
+ *     --> Adding 'Card' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -892,8 +892,8 @@ export const CodeData = [
     id: 29,
     name: 'CardCompound - Decomposition',
     code: `
-    /*i decompose the original big component in smaller 
-    sub components**/  
+    /*i will have to decompose the original big component in smaller 
+    sub components in order to apply after the pattern**/  
     const CardCompound = ({ header, footer, children }) => {
 
       return(
@@ -913,8 +913,40 @@ export const CodeData = [
       )
   }
     `
+  },
+  {
+    id: 30,
+    name: 'Card - Component',
+    code: `
+    /*if i remove any part of the code the whole component
+    * will break**/  
+    <Card
+      header={<h1 style={{margin:'0'}}>Header</h1>}
+      footer={
+          /*these are style components**/
+          <ButtonWrapper>
+            <ButtonGeneral>
+                  <button>Ok</button>
+            </ButtonGeneral>
+            <ButtonGeneral>
+                  <button>cancel</button> 
+            </ButtonGeneral>
+          </ButtonWrapper>
+      }
+    /*this is the body of the Card**/
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+      incididunt ut labore et dolore magna aliqua. Maecenas ultricies mi eget mauris 
+      pharetra et ultrices. Curabitur vitae nunc sed velit dignissim sodales. Habitant
+      morbi tristique senectus et netus. Eget sit amet tellus cras adipiscing enim eu 
+      turpis. A lacus vestibulum sed arcu non. Et pharetra pharetra massa massa ultricies 
+      mi quis. Dignissim suspendisse in est ante in. Duis tristique sollicitudin nibh 
+      sit amet commodo nulla facilisi. Sed sed risus pretium quam vulputate dignissim 
+      suspendisse. Turpis nunc eget lorem dolor sed viverra ipsum nunc. 
+    </Card>
+    `
   }
-
+  
 
 ];
 
