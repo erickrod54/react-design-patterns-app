@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 4.16 - data js  
+/**react-design-patterns-app - version 5.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'myNestedObject' code for 
+ *     --> Adding 'CardCompound' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -887,7 +887,35 @@ export const CodeData = [
       key3:"value3"
     }
     `
+  },
+  {
+    id: 29,
+    name: 'CardCompound - Decomposition',
+    code: `
+    /*i decompose the original big component in smaller 
+    sub components**/  
+    const CardCompound = ({ header, footer, children }) => {
+
+      return(
+         <div style={{border: "1px solid white"}}>
+           {header && (
+              <Header>
+                  {header}
+              </Header>
+           )}
+           <div style={{padding: '.5rem'}}>{children}</div>
+           {footer && (
+              <Footer>
+                  {footer}
+              </Footer>
+           )}
+         </div>
+      )
   }
+    `
+  }
+
+
 ];
 
 /**List Pattern data  -- start */
