@@ -9,10 +9,10 @@ import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pa
 import { Card, CardCompound } from "./index.components";
 
 
-/**react-design-patterns-app - version 5.08 - FunctionalProgramming
+/**react-design-patterns-app - version 5.10 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'compoundcomponent' code for Compound Composition Pattern.
+ *     --> Adding 'buttonpattern' code for Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -30,6 +30,7 @@ const FunctionalProgramming = () => {
     const compoundpattern = CodeData[30].code;
     const compoundpatternatt = CodeData[31].code;
     const compoundcomponent = CodeData[32].code;
+    const buttonpattern = CodeData[33].code;
 
     return(
         <div>
@@ -146,9 +147,15 @@ const FunctionalProgramming = () => {
 
             <p>
                 and when it comes to <span className="text-white font-semibold"> composition pattern </span>, by passing all the props i can 
-                create custom versions of a generic component, as follows:
+                create custom versions of a generic component pattern, as follows:
             </p>
-            
+
+            <BashCode code={buttonpattern}/>
+
+            <p>
+                and will render each version as follows:        
+            </p>
+
            <RedButton text='danger custom'/>   
 
            <p>
