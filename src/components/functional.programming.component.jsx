@@ -9,10 +9,10 @@ import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pa
 import { Card, CardCompound } from "./index.components";
 
 
-/**react-design-patterns-app - version 5.07 - FunctionalProgramming
+/**react-design-patterns-app - version 5.08 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'CardCompound' code for Compound Composition Pattern.
+ *     --> Adding 'compoundpatternatt' code for Compound Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -28,6 +28,7 @@ const FunctionalProgramming = () => {
     const cardcomponent = CodeData[29].code;
     const cardpattern = CodeData[28].code;
     const compoundpattern = CodeData[30].code;
+    const compoundpatternatt = CodeData[31].code;
 
     return(
         <div>
@@ -275,8 +276,10 @@ const FunctionalProgramming = () => {
 
             <p>
                  These components will be then attached to the instance of the card component, 
-                 making them accessible outside the card.
+                 making them accessible outside the card. as the way it follows:
             </p>
+
+            <BashCode code={compoundpatternatt}/>
 
             <CardCompound>
                 <CardCompound.Header>
