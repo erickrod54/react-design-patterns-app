@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 5.04 - data js  
+/**react-design-patterns-app - version 5.07 - data js  
  * - Features: 
  *    
- *     --> Adding 'Card' code for 
+ *     --> Adding 'CardCompound' code for 
  *         CodeData
  * 
  * Note: This component will have later the main menu
@@ -945,9 +945,67 @@ export const CodeData = [
       suspendisse. Turpis nunc eget lorem dolor sed viverra ipsum nunc. 
     </Card>
     `
+  },
+  {
+    id: 31,
+    name: 'CardCompound - Pattern',
+    code: `
+    /*breaking down each subcomponent of the 
+    * CardCompound ( previously the Card pattern )
+    **/  
+    const Header = ({children}) => {
+        return(
+            <div
+                style={{
+                    borderBottom:"1px solid white",
+                    padding:".5rem",
+                    marginBottom:".5rem"
+                }}   
+                >
+                {children}   
+                </div>
+        )
+    }
+    
+    const Footer = ({children}) => {
+        return(
+            <div
+                style={{
+                    borderTop:'1px solid white',
+                    padding:'.5rem',
+                    marginTop:'.5rem',
+                    }}
+                >
+                {children}
+            </div>
+        )
+    }
+    
+    const Body = ({children}) => {
+        return <div style={{padding: '.5rem'}}>{children}</div>;
+    }
+    
+    /**here i clear the decomposition so the code in the 
+     * main component is clean */
+    const CardCompound = ({ children }) => {
+    
+        return(
+          <div style={{border: "1px solid white"}}>
+            {children}
+          </div>
+        )
+    }
+    
+    export default CardCompound;
+    
+    /**here i attach them to the CardCompound so can be accesible
+    * from outside of the component ( even is a benefit for rehusability, 
+    * readability and clean code practice )*/
+    CardCompound.Header = Header;
+    CardCompound.Footer = Footer;
+    CardCompound.Body = Body;
+    `
   }
-  
-
 ];
 
 /**List Pattern data  -- start */
