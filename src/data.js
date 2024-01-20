@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 5.08 - data js  
+/**react-design-patterns-app - version 5.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'CardCompound - Pattern attach' 
+ *     --> Adding 'CardCompound - Component attach' 
  *         code for CodeData
  * 
  * Note: This component will have later the main menu
@@ -1017,7 +1017,49 @@ export const CodeData = [
     CardCompound.Footer = Footer;
     CardCompound.Body = Body;
     `
+  },
+  {
+    id: 33,
+    name: 'CardCompound - Component',
+    code: `
+    /**here is the main 'CardCompound' component */
+      
+      <CardCompound>
+
+      /**here is the main 'CardCompound' with the attachment of the 'Header'*/
+      <CardCompound.Header>
+          <h1 style={{margin:'0'}}><span className="text-white font-semibold"> Compound Header </span></h1>
+      </CardCompound.Header>
+      /**here is the main 'CardCompound' with the attachment of the 'Body'*/
+      <CardCompound.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua. Maecenas ultricies mi eget mauris 
+          pharetra et ultrices. Curabitur vitae nunc sed velit dignissim sodales. Habitant
+          morbi tristique senectus et netus. Eget sit amet tellus cras adipiscing enim eu 
+          turpis. A lacus vestibulum sed arcu non. Et pharetra pharetra massa massa ultricies 
+          mi quis. Dignissim suspendisse in est ante in. Duis tristique sollicitudin nibh 
+          sit amet commodo nulla facilisi. Sed sed risus pretium quam vulputate dignissim 
+          suspendisse. Turpis nunc eget lorem dolor sed viverra ipsum nunc. <span className="text-white font-semibold"> 
+          Compound Body </span>
+      </CardCompound.Body>
+
+      /**here is the main 'CardCompound' with the attachment of the 'Footer'*/
+      <CardCompound.Footer>
+      <ButtonWrapper>
+            <ButtonGeneral>
+                  <button>Ok</button>
+            </ButtonGeneral>
+            <ButtonGeneral>
+                  <button>cancel</button> 
+            </ButtonGeneral>
+            <span className="text-white font-semibold"> Compound Footer </span>
+          </ButtonWrapper>
+      </CardCompound.Footer>
+    </CardCompound>
+    `
   }
+
+
 ];
 
 /**List Pattern data  -- start */
