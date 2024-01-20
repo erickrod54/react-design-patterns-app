@@ -9,10 +9,10 @@ import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pa
 import { Card, CardCompound } from "./index.components";
 
 
-/**react-design-patterns-app - version 5.10 - FunctionalProgramming
+/**react-design-patterns-app - version 5.11 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'buttonpattern' code for Composition Pattern.
+ *     --> Adding 'buttonpartial' code for Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -31,6 +31,7 @@ const FunctionalProgramming = () => {
     const compoundpatternatt = CodeData[31].code;
     const compoundcomponent = CodeData[32].code;
     const buttonpattern = CodeData[33].code;
+    const buttonpartial = CodeData[34].code;
 
     return(
         <div>
@@ -168,6 +169,15 @@ const FunctionalProgramming = () => {
                  a variation of <span className="text-white font-semibold"> composition pattern </span> is <span className="text-white font-semibold"> 
                  partially composition pattern </span> this last one use part of the props of the pattern component to build custom versions:         
            </p>
+
+            <BashCode code={buttonpartial}/>
+
+            <p>
+                here are the versions as follows of <span className="text-white font-semibold"> Warning Custom </span>, 
+                <span className="text-white font-semibold"> small warning custom </span>, and
+                <span className="text-white font-semibold"> secondary custom </span> using partial props from the 
+                <span className="text-white font-semibold"> button </span> pattern:         
+            </p>                     
            
            <WarningButton text='Warning Custom'/>
 
