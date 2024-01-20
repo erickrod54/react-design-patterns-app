@@ -1,10 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 5.09 - data js  
+/**react-design-patterns-app - version 5.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'CardCompound - Component attach' 
- *         code for CodeData
+ *     --> Adding 'Button' Pattern code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1057,8 +1056,44 @@ export const CodeData = [
       </CardCompound.Footer>
     </CardCompound>
     `
-  }
+  },
+  {
+    id: 34,
+    name: 'Button - Composition pattern',
+    code: `
+    /**here is the pattern with all the props*/
+    export const Button = ({ size, color, text, ...props }) => {
 
+      return(
+          <button
+              style={{
+                  fontSize: size === "small" ? '24px' : '32px',
+                  border: \`3px solid \${color}}\`,
+                  color: color,
+                  margin:'1rem',
+                  padding:'1rem',
+                  borderRadius: '0.5rem', 
+              }}
+          >
+              {text}
+          </button>
+      )
+  }
+  
+  /*here will each custom component consuming the pattern**/
+  export const RedButton = props => {
+      return(
+          <Button {...props} color={'crimson'}/>
+      )
+  }
+  
+  export const GreenButton = props => {
+      return(
+          <Button {...props} color={'green'} size={'small'}/>
+      )
+  }
+    `
+  }
 
 ];
 
