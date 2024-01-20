@@ -9,10 +9,10 @@ import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pa
 import { Card, CardCompound } from "./index.components";
 
 
-/**react-design-patterns-app - version 5.04 - FunctionalProgramming
+/**react-design-patterns-app - version 5.05 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'CardCompound' for Compound Composition Pattern.
+ *     --> Adding 'cardcomponent' code for Compound Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -25,6 +25,7 @@ const FunctionalProgramming = () => {
     const recursivecode = CodeData[26].code;
 
     const myNestedData = CodeData[27].code;
+    const cardcomponent = CodeData[29].code;
 
     return(
         <div>
@@ -201,7 +202,7 @@ const FunctionalProgramming = () => {
                 composition can become very complex in order to control and maintain component and subcomponents ):        
             </p>
 
-              <ul>
+            <ul>
                 <li>
                     <span className="text-white font-semibold"> Compound Composition </span>
                     ( especially when dealing with nested props and sub-components. ) 
@@ -224,8 +225,11 @@ const FunctionalProgramming = () => {
             </p>
 
             <p>
-                let's say i have a main component that is going to be a Card, as follows:
+                let's say i have a main component that is going to be a Card Component will be
+                as follows:
             </p>
+
+            <BashCode code={cardcomponent}/>
 
             <Card
                 header={<h1 style={{margin:'0'}}>Header</h1>}
@@ -249,6 +253,11 @@ const FunctionalProgramming = () => {
                 sit amet commodo nulla facilisi. Sed sed risus pretium quam vulputate dignissim 
                 suspendisse. Turpis nunc eget lorem dolor sed viverra ipsum nunc. 
             </Card>
+
+            <p>
+                and the pattern will be as follows:
+            </p>    
+
 
             <p>
                  This Card , and for this i separate components are created for the header,
