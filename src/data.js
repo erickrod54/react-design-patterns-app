@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 5.07 - data js  
+/**react-design-patterns-app - version 5.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'CardCompound' code for 
- *         CodeData
+ *     --> Adding 'CardCompound - Pattern attach' 
+ *         code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1001,6 +1001,18 @@ export const CodeData = [
     /**here i attach them to the CardCompound so can be accesible
     * from outside of the component ( even is a benefit for rehusability, 
     * readability and clean code practice )*/
+    CardCompound.Header = Header;
+    CardCompound.Footer = Footer;
+    CardCompound.Body = Body;
+    `
+  },
+  {
+    id: 32,
+    name: 'CardCompound - Pattern attach',
+    code: `
+    /**here i attach them to the CardCompound 
+     * ( i highlighted cause at this point the 
+     * pattern is applied ) */
     CardCompound.Header = Header;
     CardCompound.Footer = Footer;
     CardCompound.Body = Body;
