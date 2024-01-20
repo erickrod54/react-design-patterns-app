@@ -12,7 +12,7 @@ import { Card, CardCompound } from "./index.components";
 /**react-design-patterns-app - version 5.08 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'compoundpatternatt' code for Compound Composition Pattern.
+ *     --> Adding 'compoundcomponent' code for Compound Composition Pattern.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -29,6 +29,7 @@ const FunctionalProgramming = () => {
     const cardpattern = CodeData[28].code;
     const compoundpattern = CodeData[30].code;
     const compoundpatternatt = CodeData[31].code;
+    const compoundcomponent = CodeData[32].code;
 
     return(
         <div>
@@ -275,11 +276,22 @@ const FunctionalProgramming = () => {
             <BashCode code={compoundpattern}/>
 
             <p>
-                 These components will be then attached to the instance of the card component, 
-                 making them accessible outside the card. as the way it follows:
+                 These components will be then <span className="text-white font-semibold"> attached </span>:
             </p>
 
             <BashCode code={compoundpatternatt}/>
+
+            <p>
+                and the component tags will be able to <span className="text-white font-semibold"> access </span> to their subcomponents 
+                from <span className="text-white font-semibold"> outside </span>, as follows:
+            </p>
+
+            <BashCode code={compoundcomponent}/>   
+
+            <p>
+                and the component will render as follows:
+            </p>
+            
 
             <CardCompound>
                 <CardCompound.Header>
@@ -311,7 +323,9 @@ const FunctionalProgramming = () => {
 
             <p>
                 By adopting the compound component pattern, developers can achieve a more straightforward 
-                and flexible design for their React components. 
+                and flexible design for their React components, <span className="text-white font-semibold"> 
+                rehusability, readability and clean code </span> 
+                practice. 
             </p>
 
 
