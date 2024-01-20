@@ -1,9 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 5.10 - data js  
+/**react-design-patterns-app - version 5.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'Button' Pattern code for CodeData
+ *     --> Adding 'Button - Partially Composition 
+ *         pattern' Pattern code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1093,8 +1094,51 @@ export const CodeData = [
       )
   }
     `
+  },
+  {
+    id: 35,
+    name: 'Button - Partially Composition pattern',
+    code: `
+    /**i receive a 'Component' as a prop and the 'partialProps'*/
+    export const partialComponent = (Component, partialProps) => {
+      return props => {
+          /**and i return the 'Component' with the 'partialProps' 
+           * and the rest of the 'props'*/
+          return <Component {...partialProps} {...props}/>
+      }
+    }
+    
+    /*here i have the same previous button pattern**/
+    export const Button = ({ size, color, text, ...props }) => {
+    
+      return(
+          <button
+              style={{
+                  fontSize: size === "small" ? '24px' : '32px',
+                  border: \`3px solid \${color}}\`,
+                  color: color,
+                  margin:'1rem',
+                  padding:'1rem',
+                  borderRadius: '0.5rem', 
+              }}
+          >
+              {text}
+          </button>
+      )
+    }
+    
+    /**i am rehusing the components with part of the props an not all of them
+    * 'color' and 'size' and creating custom three versions of the button
+    * ( 'partialComponent' pattern helps to breakdown the props for those
+    * cases where i need to use certain props )
+    */
+    
+    /**the partial props are passed as key values ( an object ) */
+    export const WarningButton = partialComponent(Button, {color:'yellow'});
+    export const SmallWarning = partialComponent(WarningButton, {size:'small'})
+    export const Secondary = partialComponent(Button, {color:'#FF00FF'})
+    `
   }
-
 ];
 
 /**List Pattern data  -- start */
