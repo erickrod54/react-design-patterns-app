@@ -1,10 +1,11 @@
 import React from "react"
-import Buttons from "./prop-sub-components/prop.components.index"
+import Buttons from "./prop-sub-components/buttons.observer.pattern.component";
 
-/**react-design-patterns-app - version 5.13 - ParentComponent  
+
+/**react-design-patterns-app - version 5.14 - ParentComponent  
  * - Features: 
  * 
- *     --> Building 'ParentComponent'
+ *     --> Fixing 'Buttons'
  * 
  * Note: Pending to make responsive design
  */
