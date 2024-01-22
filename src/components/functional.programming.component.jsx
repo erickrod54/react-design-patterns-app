@@ -9,10 +9,10 @@ import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pa
 import { Card, CardCompound } from "./index.components";
 
 
-/**react-design-patterns-app - version 5.11 - FunctionalProgramming
+/**react-design-patterns-app - version 5.12 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Adding 'buttonpartial' code for Composition Pattern.
+ *     --> Developing 'Observer Pattern'.
  * 
  * Note: this end component will handle the props destructuring and 
  * rendering
@@ -230,7 +230,7 @@ const FunctionalProgramming = () => {
                 </li>
                 <li>
                     <span className="text-white font-semibold"> Observer Pattern </span>
-                 
+                    ( it is also known as the <span className="text-white font-semibold"> subscriber pattern </span>)
                 </li>
             </ul>     
 
@@ -345,7 +345,20 @@ const FunctionalProgramming = () => {
                 practice. 
             </p>
 
+            <p>
+                when it comes to <span className="text-white font-semibold"> Observer Pattern </span> that is also 
+                known as the <span className="text-white font-semibold"> subscriber pattern </span>, it a component
+                that subscirbes to the <span className="text-white font-semibold"> events </span> of other components 
+                ( this event subscription impplies that two components are communicating at the <span className="text-white font-semibold"> 
+                same level of the react three </span> - without including the parent component in other words will be siblings components -) 
+                in order to share states and behaviors
+            </p>    
 
+            <h4>
+                Note: for this example i am going to use a popular library called mitt ( highly maintained ), also the subscriber 
+                can be created from scratch, but by using this package will be a time saver
+            </h4>
+            
         </SectionWrapper>
         </div>
     )
