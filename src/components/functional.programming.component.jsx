@@ -6,17 +6,21 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { GreenButton, RedButton } from "./composition.pattern.component";
 import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pattern";
-import { Card, CardCompound } from "./index.components";
+import { Card, CardCompound, ParentComponent } from "./index.components";
+import mitt from "mitt";
 
-
-/**react-design-patterns-app - version 5.12 - FunctionalProgramming
+/**react-design-patterns-app - version 5.15 - FunctionalProgramming
  * - Features: 
  * 
- *     --> Developing 'Observer Pattern'.
+ *     --> Developing 'Observer Pattern' exercise.
  * 
- * Note: this end component will handle the props destructuring and 
- * rendering
+ *     --> Invoking 'mitt()'
+ * 
+ * Note: mitter is the tool that is going to be use to apply
+ * the obeserver pattern
  */
+
+export const emitter = mitt();
 
 const FunctionalProgramming = () => {
 
@@ -358,6 +362,8 @@ const FunctionalProgramming = () => {
                 Note: for this example i am going to use a popular library called mitt ( highly maintained ), also the subscriber 
                 can be created from scratch, but by using this package will be a time saver
             </h4>
+
+            <ParentComponent />
             
         </SectionWrapper>
         </div>
