@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { usePatternsAppContext } from "../context";
-import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, FunctionalProgramming, HOCPattern, LayoutComponentPattern } from "../components/index.components";
+import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
 
-/**react-design-patterns-app - version 4.13 - SinglePatternPage
+/**react-design-patterns-app - version 5.16 - SinglePatternPage
  * - Features: 
  * 
- *     --> Displaying 'CustomHookPattern' content
+ *     --> Displaying 'PortalsAdvHooks' content
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -44,6 +44,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 6 ) {
         return <FunctionalProgramming />
+    }
+
+    if ( Number(patternId) === 7 ) {
+        return <PortalsAdvHooks />
     }
 }
 
