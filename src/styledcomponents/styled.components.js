@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 4.11 - styled.components
+/**react-design-patterns-app - version 5.16 - styled.components
  * - Features: 
  * 
- *     --> writting 'custom-hook-pattern' style class.	
+ *     --> writting 'AlertWrapper' style component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -44,6 +44,10 @@ export const FormWrapper = styled.div`
 	input{
 		${tw`flex justify-center items-center m-4 p-4 rounded text-black`}
 	}
+`
+
+export const AlertWrapper = styled.div`
+		${tw`left-2/4 translate-y-2/4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded p-2.5 cursor-pointer`}
 `
 
 export const ButtonWrapper = styled.div`
@@ -176,6 +180,12 @@ export const CustomTitleStyle = styled.div`
 			${tw`text-blue-300 underline`}
 		}
 }
+
+ .advanced-hooks-portals{
+	span{
+			${tw`text-blue-500 underline`}
+		}
+ }
 
 `
 
