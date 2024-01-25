@@ -1,3 +1,4 @@
+
 import BashCode from "./bash.higlight.component";
 import Card from "./card.component";
 import CardCompound from "./card.compound.pattern.component";
@@ -22,6 +23,8 @@ import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
 import ParentComponent from "./parent.observer.pattern.component";
 import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pattern";
+import PortalsAdvHooks from "./portals.advanced.hooks";
+
 import RecursivePattern from "./recursive.pattern.component";
 import RegularList from "./regular.list.component";
 import SharedLayout from "./shared.layout.component";
@@ -33,10 +36,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 5.15 - components > index  
+/**react-design-patterns-app - version 5.17 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ParentComponent'
+ *     --> Importing and exporting 'ParentComponent' and 'PortalsAdvHooks' 
  * 
  * Note: Pending to make responsive design
  */
@@ -78,5 +81,6 @@ export {
          Secondary,
          Card,
          CardCompound,
-         ParentComponent
+         ParentComponent,
+         PortalsAdvHooks
         }
