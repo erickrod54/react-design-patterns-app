@@ -1,13 +1,12 @@
 import React from "react";
 import CustomTitle from "./custom.title.component";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
+//import AlertMessage from "./alert.message.component";
 
-/**react-design-patterns-app - version 5.17 - PortalsAdvHooks
+/**react-design-patterns-app - version 5.18 - PortalsAdvHooks
  * - Features: 
  * 
- *     --> Developing 'Portals' main concepts 
- * 
- *     --> Adding 'Portals use cases'  
+ *     --> Developing 'Portals' exersice
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -88,8 +87,16 @@ const PortalsAdvHooks = () => {
                         </p>
                     </li>
                 </ul>
- 
-            
+
+                <CustomTitleStyle>
+                    <CustomTitle  title={<p className="advanced-hooks-portals-cases"><span >Portals exersice:</span></p>} />
+                </CustomTitleStyle>
+
+                <p>
+                    this exercise is going to mix some essensial <span className="text-white font-semibold"> DOM manipulation </span>
+                    with a <span className="text-white font-semibold"> Modal Dialogs </span>, as follows:
+                </p>
+
             </SectionWrapper>
         </div>
     )
