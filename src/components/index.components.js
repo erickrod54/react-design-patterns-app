@@ -31,16 +31,17 @@ import RegularList from "./regular.list.component";
 import SharedLayout from "./shared.layout.component";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
+import TheOutSideControlled from "./theoutside.controlled.component";
 import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.pattern";
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 5.18 - components > index  
+/**react-design-patterns-app - version 5.19 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'AlertMessage' 
+ *     --> Importing and exporting 'TheOutSideControlled' 
  * 
  * Note: Pending to make responsive design
  */
@@ -84,5 +85,6 @@ export {
          CardCompound,
          ParentComponent,
          PortalsAdvHooks,
-         AlertMessage
+         AlertMessage,
+         TheOutSideControlled
         }
