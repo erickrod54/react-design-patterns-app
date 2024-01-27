@@ -13,18 +13,17 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 5.19 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.00 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Adding 'TheOutSideControlled'
+ *     --> Clearing 'displayModal' state  
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
 */
 
 const ControlledUnControlledPattern = () => {
-    
-    const [ displayModal, setDisplayModal ] = useState(false);
+
     
     /**controlled collector flow states */
     const [data, setData ] = useState({});
