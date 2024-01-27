@@ -9,14 +9,14 @@ import { Step1Flow,
          Step2FlowCollector, Step3Flow, Step3FlowCollector, Step4Flow } from "./prop-sub-components/prop.components.index";
 
 import { ControlledFlowPatternCollector,
-         ControlledModal,
          ControlledPattern,
+         TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 4.13 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 5.19 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Adding 'uncontrolledflow' code
+ *     --> Adding 'TheOutSideControlled'
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -37,7 +37,6 @@ const ControlledUnControlledPattern = () => {
     const modalcontrolled = CodeData[23].code;
     const uncontrolledflow = CodeData[24].code;
 
-    const closeModal = () => setDisplayModal(false);
 
     /**controlled collector flow handlers */
     const goNext = (dataFromStep) => {
@@ -193,13 +192,7 @@ const ControlledUnControlledPattern = () => {
 
         <BashCode code={modalcontrolled}/>
 
-        <ButtonGeneral>
-                <button onClick={() => setDisplayModal(!displayModal)}>{displayModal ? 'Hide Modal' : 'Display modal'}</button>
-        </ButtonGeneral>   
-
-        <ControlledModal displayModal={displayModal} closeModal={closeModal}>
-                <h2>the modal content</h2>
-        </ControlledModal>
+        <TheOutSideControlled />
 
         <p>
            so the button that is outside of the component ControlledModal, is controlling the closing and opening 
