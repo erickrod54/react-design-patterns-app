@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { close, openmodal } from "../assets/index.assets";
 import { ModalBackground, ModalContent, OpenModalWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 4.07 - ControlledModal - 
+/**react-design-patterns-app - version 5.19 - ControlledModal - 
  * - Features: 
  * 
- *     --> Building 'ControlledModal' button content 
+ *     --> Renaming 'displayModal' to 'showModal'
  * 
  * Note: This is the first topic
  */
 
-const ControlledModal = ({ displayModal, closeModal, stopPropagation, children }) => {
+const ControlledModal = ({ showModal, closeModal, stopPropagation, children }) => {
 
     return (
         <>
-            {displayModal && (
+            {showModal && (
                 <ModalBackground onClick={closeModal}>
                     <ModalContent onClick={stopPropagation}>
                         <button onClick={closeModal}>
