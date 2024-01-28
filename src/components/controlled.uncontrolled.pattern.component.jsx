@@ -13,10 +13,10 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 6.00 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.01 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Clearing 'displayModal' state  
+ *     --> Developing 'ControlledUnControlled'  exercise  
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -181,12 +181,14 @@ const ControlledUnControlledPattern = () => {
         <BashCode code={modalcode}/>
 
         <p>
-            so following this code if i want to control this component for example to close and open from outside of it,
-            it wont be possible unless i convert this uncontrolled pattern to a controlled pattern as follows:
+            so following this code if i want to control this component for example to close and open from 
+            <span className="text-white font-semibold"> outside of it </span>,
+            it wont be possible unless i convert this <span className="text-white font-semibold"> uncontrolled pattern
+            </span> into a <span className="text-white font-semibold"> controlled pattern </span> as follows:
         </p>
 
         <p>
-            by modifying the state handling will be like this:
+            by modifying the <span className="text-white font-semibold"> state handling </span> will be like this:
         </p>
 
         <BashCode code={modalcontrolled}/>
@@ -194,9 +196,11 @@ const ControlledUnControlledPattern = () => {
         <TheOutSideControlled />
 
         <p>
-           so the button that is outside of the component ControlledModal, is controlling the closing and opening 
-           behavior making it a controlled component
-        </p>        
+            so the complete functionality of the component will live somewhere 
+            <span className="text-white font-semibold"> outside of ControlledModal </span> 
+            ( depending on the use case that is needed ) as it follows:
+        </p>
+        
 
         <p>
             the <span className="text-white font-semibold"> predictability </span> provides of this pattern
