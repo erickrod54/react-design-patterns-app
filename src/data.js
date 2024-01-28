@@ -1,10 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 5.11 - data js  
+/**react-design-patterns-app - version 6.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'Button - Partially Composition 
- *         pattern' Pattern code for CodeData
+ *     --> Adding 'TheOutSideControlled' code for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1137,6 +1136,35 @@ export const CodeData = [
     export const WarningButton = partialComponent(Button, {color:'yellow'});
     export const SmallWarning = partialComponent(WarningButton, {size:'small'})
     export const Secondary = partialComponent(Button, {color:'#FF00FF'})
+    `
+  },
+  {
+    id: 36,
+    name: 'TheOutSideControlled - ControlledUncontrolled pattern',
+    code: `
+    /**the 'TheOutSideControlled' will control the 'ControlledModal', 
+     * because is tied by the logic'*/
+    const TheOutSideControlled = () => {
+
+      const [ showModal, setShowModal ] = useState(false);
+      const closeModal = () => setShowModal(false);
+  
+      return(
+          <>
+          /**'ControlledModal' is consuming from 'TheOutSideControlled'*/
+          <ControlledModal showModal={showModal} closeModal={closeModal}>
+              <h2>the modal content -The OutSide Controlled Component-</h2>
+          </ControlledModal>
+  
+          /** 'ButtonGeneral' only set styles and is the 'showModal' button*/
+          <ButtonGeneral>
+              <button onClick={() => setShowModal(!showModal)}>{showModal ? 'Hide Modal' : 'Show modal'}</button>
+          </ButtonGeneral>   
+          </>
+      )
+  }
+  
+  export default TheOutSideControlled;
     `
   }
 ];
