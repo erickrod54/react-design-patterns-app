@@ -13,10 +13,10 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 6.01 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.02 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Developing 'ControlledUnControlled'  exercise  
+ *     --> Adding 'outsidecomponent' code 
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -35,6 +35,7 @@ const ControlledUnControlledPattern = () => {
     const uncontrolledcomponent = CodeData[22].code;
     const modalcontrolled = CodeData[23].code;
     const uncontrolledflow = CodeData[24].code;
+    const outsidecomponent = CodeData[35].code;
 
 
     /**controlled collector flow handlers */
@@ -201,6 +202,7 @@ const ControlledUnControlledPattern = () => {
             ( depending on the use case that is needed ) as it follows:
         </p>
         
+        <BashCode code={outsidecomponent}/>
 
         <p>
             the <span className="text-white font-semibold"> predictability </span> provides of this pattern
