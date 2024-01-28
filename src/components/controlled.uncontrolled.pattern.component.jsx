@@ -13,10 +13,10 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 6.02 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.03 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Adding 'outsidecomponent' code 
+ *     --> Adding 'Controlled Flow Chart' 
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -204,6 +204,7 @@ const ControlledUnControlledPattern = () => {
         
         <BashCode code={outsidecomponent}/>
 
+
         <p>
             the <span className="text-white font-semibold"> predictability </span> provides of this pattern
             <span className="text-white font-semibold"> explicit control over form data </span>, making it easier 
@@ -211,6 +212,8 @@ const ControlledUnControlledPattern = () => {
             manipulating values before submission.
         </p>
         
+        <a href="https://whimsical.com/react-design-patterns-Cujb8SpzYCZJay6VbMPCkb" target="_blank"> Controlled Flow Chart </a>
+
         <CustomTitleStyle>
                 <CustomTitle  title={<p className="sub-title"><span >uncontrolled flow patterns</span></p>} />
         </CustomTitleStyle>
