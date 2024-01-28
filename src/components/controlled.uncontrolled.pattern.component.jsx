@@ -13,10 +13,10 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 6.03 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.04 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Adding 'Controlled Flow Chart' 
+ *     --> Highligting important topicsss 
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -215,15 +215,16 @@ const ControlledUnControlledPattern = () => {
         <a href="https://whimsical.com/react-design-patterns-Cujb8SpzYCZJay6VbMPCkb" target="_blank"> Controlled Flow Chart </a>
 
         <CustomTitleStyle>
-                <CustomTitle  title={<p className="sub-title"><span >uncontrolled flow patterns</span></p>} />
+                <CustomTitle  title={<p className="sub-title"><span >uncontrolled flow patterns: ( <span className="text-white font-semibold"> for each check the flow in the Chrome Java Console </span>)</span></p>} />
         </CustomTitleStyle>
     
         <p>
-            uncontrolled flows is in specific related with onboarding flows ( an onboarding flow is a pattern that is 
-            always present registration apps, or form filling, or an online job application and this flow is compose 
-            of steps that can be from few to several steps on each step asking for specific information, and the 
-            final step will be the finish of the flow ), let's see 
-            an example:
+            uncontrolled flows is in specific related with <span className="text-white font-semibold"> onboarding flows </span>
+            ( an onboarding flow is a pattern that is always present <span className="text-white font-semibold"> registration apps, 
+            or form filling, or an online job application </span> and this flow is compose 
+            of steps that can be from few to several steps on <span className="text-white font-semibold"> each step asking for specific 
+            information </span>, and the final step will be the finish of the flow ), let's see an example: 
+            (<span className="text-white font-semibold"> anonymous uncontrolled flow - does not collect data- </span>)
         </p>
 
         <UncontrolledFlowPattern>
@@ -245,8 +246,9 @@ const ControlledUnControlledPattern = () => {
         </p>
 
         <p>
-            onboarding flows usually collects data by the flow of every step, let's check this flow collecting 
-            data in every step: 
+            onboarding flows usually <span className="text-white font-semibold"> collects data </span> by 
+            the flow of every step, let's check this flow collecting  data in every step: ( <span className="text-white font-semibold"> 
+            uncontrolled flow - does collect data </span>) 
         </p>
 
         <UncontrolledFlowPatternCollector onDone={data => {
@@ -260,7 +262,7 @@ const ControlledUnControlledPattern = () => {
 
         <p>
             so this last uncontrolled data flow collector can be convert in a controlled data flow
-            collector, as follows:
+            collector, as follows: (<span className="text-white font-semibold"> controlled flow </span>)
         </p>
 
         <ControlledFlowPatternCollector
