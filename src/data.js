@@ -1,9 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.01 - data js  
+/**react-design-patterns-app - version 6.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'TheOutSideControlled' code for CodeData
+ *     --> Adding 'UncontrolledFlowPatternCollector' code
+ *         for CodeData
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1166,7 +1167,75 @@ export const CodeData = [
   
   export default TheOutSideControlled;
     `
+  },
+  {
+    id: 36,
+    name: 'UncontrolledFlowPatternCollector - Uncontrolled Flow pattern',
+    code: `
+    /**This flow will create a step by step user experience, and will
+     * collect data in the way until the flow is 'onDone'*/
+    const UncontrolledFlowPatternCollector = ({ children, onDone }) => {
+   
+      /*state hook to mutate the data*/  
+      const [data, setData ] = useState({});
+     
+      /**this state to track the index of the step */
+      const [currentStepIndex, setCurrentStepIndex ] = useState(0);
+  
+      /*this handler will go from the previous step to the next step**/
+      const goNext = (dataFromStep) => {
+  
+          /*this line increments the index**/
+          const nextStepIndex = currentStepIndex + 1;
+  
+          /*in this object i spread the 'data' that will 
+          * be the previous data, and 'dataFromStep' that 
+          *is the data from the current step*/
+          const newData = {
+              ...data,
+              ...dataFromStep
+          }
+          
+          /**here i log it, but the data can be send to any destination
+           * as can be required by the use case*/
+          console.log('the new data is being collected ==>', newData);
+  
+          /*in this flow i control the flow duration -will be the children length-*/
+          if (nextStepIndex < children.length) {
+
+              /**i mutate the index to update the value*/
+              setCurrentStepIndex(nextStepIndex)
+          }else{
+              /**once the condition is done i trigger 'onDone()' 
+               * to terminate the flow*/
+              onDone()
+          }
+  
+          setData(newData)
+  
+          /**i mutate the index to keep current index the value*/
+          setCurrentStepIndex(currentStepIndex + 1)
+      }
+  
+      /** in this line i create an array of children and use the index*/
+      const currentChild = React.Children.toArray(children)[currentStepIndex];
+  
+      if (React.isValidElement(currentChild)) {
+          return React.cloneElement(currentChild, { goNext })
+      }
+  
+      return( 
+          /**here i render the final step to finish the flow*/
+          <StepFlowWrapper>
+              <h2>Uncontrolled flow done !! Refresh :) </h2>
+          </StepFlowWrapper>
+      )
   }
+  
+  export default UncontrolledFlowPatternCollector;
+    `
+  }
+
 ];
 
 /**List Pattern data  -- start */
