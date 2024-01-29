@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.06 - data js  
+/**react-design-patterns-app - version 6.07 - data js  
  * - Features: 
  *    
- *     --> Adding 'UncontrolledFlowPatternCollector' 
- *        component render
+ *     --> Adding 'Step1FlowCollector' 
+ *        component code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1249,6 +1249,28 @@ export const CodeData = [
       <Step2FlowCollector />
       <Step3FlowCollector />
   </UncontrolledFlowPatternCollector>
+    `
+  },
+  {
+    id: 38,
+    name: 'Step1FlowCollector - UncontrolledFlowPatternCollector',
+    code: `
+    /**'goNext' sending the data to the 'UncontrolledFlowPatternCollector'*/
+      const Step1FlowCollector = ({ goNext }) => {
+
+        return(
+            /***this 'StepFlowWrapper' is a style component*/
+            <StepFlowWrapper>
+                <h2>the Step #1: Enter Your name:</h2>
+                /***this 'ButtonGeneral' is a style component*/
+                <ButtonGeneral>
+                    <button onClick={() => goNext({ name: 'MyName' })}>Next</button>
+                </ButtonGeneral>
+            </StepFlowWrapper>
+        )
+    }
+    
+    export default Step1FlowCollector;
     `
   }
 ];
