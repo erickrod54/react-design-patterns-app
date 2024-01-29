@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.05 - data js  
+/**react-design-patterns-app - version 6.06 - data js  
  * - Features: 
  *    
- *     --> Adding 'UncontrolledFlowPatternCollector' code
- *         for CodeData
+ *     --> Adding 'UncontrolledFlowPatternCollector' 
+ *        component render
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1234,8 +1234,23 @@ export const CodeData = [
   
   export default UncontrolledFlowPatternCollector;
     `
+  },
+  {
+    id: 37,
+    name: 'UncontrolledFlowPatternCollector - Component Render',
+    code: `
+    /**in every step i will collect the data from the 
+     * children component, and once finish send the alert*/
+    <UncontrolledFlowPatternCollector onDone={data => {
+      console.log({data})
+      alert('you made to the final step :)')
+  }}>
+      <Step1FlowCollector />
+      <Step2FlowCollector />
+      <Step3FlowCollector />
+  </UncontrolledFlowPatternCollector>
+    `
   }
-
 ];
 
 /**List Pattern data  -- start */
