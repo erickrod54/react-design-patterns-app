@@ -13,10 +13,10 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 6.04 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.05 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Highligting important topicsss 
+ *     --> Adding 'uncontrolledflowcollector' code
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -36,6 +36,7 @@ const ControlledUnControlledPattern = () => {
     const modalcontrolled = CodeData[23].code;
     const uncontrolledflow = CodeData[24].code;
     const outsidecomponent = CodeData[35].code;
+    const uncontrolledflowcollector = CodeData[36].code;
 
 
     /**controlled collector flow handlers */
@@ -249,6 +250,17 @@ const ControlledUnControlledPattern = () => {
             onboarding flows usually <span className="text-white font-semibold"> collects data </span> by 
             the flow of every step, let's check this flow collecting  data in every step: ( <span className="text-white font-semibold"> 
             uncontrolled flow - does collect data </span>) 
+        </p>
+
+        <p>
+            the conde for the <span className="text-white font-semibold"> {`<UncontrolledFlowPatternCollector>`} </span>, will be as 
+            follows:
+        </p>
+
+        <BashCode code={uncontrolledflowcollector}/>
+
+        <p>
+            rendering as follows: (<span className="text-white font-semibold"> check the JavaConsole to see the data collection </span>)
         </p>
 
         <UncontrolledFlowPatternCollector onDone={data => {
