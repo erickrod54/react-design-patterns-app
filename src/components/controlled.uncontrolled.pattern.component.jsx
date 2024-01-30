@@ -13,10 +13,10 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 6.07 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.08 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Adding 'step1flowcomponent' code
+ *     --> Adding 'controlledflowpattern' code
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -39,6 +39,7 @@ const ControlledUnControlledPattern = () => {
     const uncontrolledflowcollector = CodeData[36].code;
     const uncontrolledflowcollectorrender = CodeData[37].code;
     const step1flowcomponent = CodeData[38].code;
+    const controlledflowpattern = CodeData[39].code;
 
 
     /**controlled collector flow handlers */
@@ -277,6 +278,7 @@ const ControlledUnControlledPattern = () => {
         <p>
             resulting in: (<span className="text-white font-semibold"> check the JavaConsole to see the data collection </span>)    
         </p>            
+
         <UncontrolledFlowPatternCollector onDone={data => {
             console.log({data})
             alert('you made to the final step :)')
@@ -290,6 +292,8 @@ const ControlledUnControlledPattern = () => {
             so this last uncontrolled data flow collector can be convert in a controlled data flow
             collector, as follows: (<span className="text-white font-semibold"> controlled flow </span>)
         </p>
+
+        <BashCode code={controlledflowpattern}/> 
 
         <ControlledFlowPatternCollector
             currentIndex={currentStepIndex}
