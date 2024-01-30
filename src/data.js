@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.08 - data js  
+/**react-design-patterns-app - version 6.09 - data js  
  * - Features: 
  *    
  *     --> Adding 'ControlledFlowPatternCollector' 
- *        pattern code
+ *        component code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1297,6 +1297,23 @@ export const CodeData = [
   }
   
   export default ControlledFlowPatternCollector;
+    `
+  },
+  {
+    id: 40,
+    name: 'ControlledFlowPatternCollector - Component',
+    code: `
+    /**'currentIndex' and 'goNext' flowing outside of the component */
+    <ControlledFlowPatternCollector
+      currentIndex={currentStepIndex}
+      onNext={goNext}
+    >
+      <Step1FlowCollector />
+      <Step2FlowCollector />
+      /**this a data tha comes from the steps components and is 
+       * being collected and used to control the component flow*/
+      {data.age > 25 ? <Step4Flow /> : <Step3FlowCollector />}
+    </ControlledFlowPatternCollector>
     `
   }
 ];
