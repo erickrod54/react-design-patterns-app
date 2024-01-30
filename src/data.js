@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.07 - data js  
+/**react-design-patterns-app - version 6.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'Step1FlowCollector' 
- *        component code
+ *     --> Adding 'ControlledFlowPatternCollector' 
+ *        pattern code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1271,6 +1271,32 @@ export const CodeData = [
     }
     
     export default Step1FlowCollector;
+    `
+  },
+  {
+    id: 39,
+    name: 'ControlledFlowPatternCollector - Pattern',
+    code: `
+    /**it is controlled because the logic for the 'step' flow is outside of this
+     * component*/
+    const ControlledFlowPatternCollector = ({ children, currentIndex, onNext }) => {
+   
+      /**'goNext' will handle the data collection*/
+      const goNext = (dataFromStep) => {
+          onNext(dataFromStep)
+      }
+  
+      /** in this line i create an array of children and use the index*/
+      const currentChild = React.Children.toArray(children)[currentIndex];
+  
+      if (React.isValidElement(currentChild)) {
+          return React.cloneElement(currentChild, { goNext })
+      }
+  
+      return currentChild;
+  }
+  
+  export default ControlledFlowPatternCollector;
     `
   }
 ];
