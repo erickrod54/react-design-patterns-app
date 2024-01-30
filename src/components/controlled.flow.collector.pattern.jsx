@@ -1,16 +1,16 @@
 import React from "react";
 
-/**react-design-patterns-app - version 4.09 - ControlledFlowPatternCollector
+/**react-design-patterns-app - version 6.08 - ControlledFlowPatternCollector
  * - Features: 
  * 
- *     --> Building 'ControlledFlowPatternCollector' 
+ *     --> Removving 'onDone' method 
  * 
  * Note: This variation 'ControlledFlowPatternCollector' is used more 
  * frequently than 'UncontrolledFlowPatternCollector' because is more
  * flexible and gives more control over the data flow.
  */
 
-const ControlledFlowPatternCollector = ({ children, onDone, currentIndex, onNext }) => {
+const ControlledFlowPatternCollector = ({ children, currentIndex, onNext }) => {
    
     const goNext = (dataFromStep) => {
         onNext(dataFromStep)
