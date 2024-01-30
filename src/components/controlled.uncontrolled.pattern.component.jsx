@@ -13,10 +13,10 @@ import { ControlledFlowPatternCollector,
          TheOutSideControlled,
          UncontrolledFlowPattern, UncontrolledFlowPatternCollector, UncontrolledPattern, } from './index.components'
 
-/**react-design-patterns-app - version 6.08 - ControlledUnControlledPattern
+/**react-design-patterns-app - version 6.09 - ControlledUnControlledPattern
  * - Features: 
  * 
- *     --> Adding 'controlledflowpattern' code
+ *     --> Adding 'controlledflowrender' code
  * 
  * Note: this component will explain concepts of controlled and 
  * uncontrolled pattern
@@ -40,6 +40,7 @@ const ControlledUnControlledPattern = () => {
     const uncontrolledflowcollectorrender = CodeData[37].code;
     const step1flowcomponent = CodeData[38].code;
     const controlledflowpattern = CodeData[39].code;
+    const controlledflowrender = CodeData[40].code;
 
 
     /**controlled collector flow handlers */
@@ -294,6 +295,15 @@ const ControlledUnControlledPattern = () => {
         </p>
 
         <BashCode code={controlledflowpattern}/> 
+
+        <p>
+            and in order to <span className="text-white font-semibold"> control flow </span>, 
+            i use a an external data to alternate the code between steps 
+            <span className="text-white font-semibold">{` <Step4Flow /> `}</span> and 
+            <span className="text-white font-semibold">{` <Step3FlowCollector /> `}</span> 
+        </p>
+
+        <BashCode code={controlledflowrender}/>
 
         <ControlledFlowPatternCollector
             currentIndex={currentStepIndex}
