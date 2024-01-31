@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.10 - data js  
+/**react-design-patterns-app - version 6.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'Step2FlowCollector' 
+ *     --> Adding 'LeftSideComponent' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1337,8 +1337,22 @@ export const CodeData = [
 
     export default Step2FlowCollector;
     `
+  },
+  {
+    id: 42,
+    name: 'LeftSideComponent - Component',
+    code: `
+    /**this is the end component after the styles are extracted and scoped 
+     * in 'Panel' */   
+      const LeftSideComponent = () => {
+        return(
+            <h2>I am Left</h2>
+          )
+      }
+      
+      export default LeftSideComponent;
+    `
   }
-
 ];
 
 /**List Pattern data  -- start */
