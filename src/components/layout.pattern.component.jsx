@@ -9,10 +9,10 @@ import AuthorSmallListItems from "./prop-sub-components/autors.small.items.list.
 import AuthorLargeListItems from "./prop-sub-components/authors.large.items.component";
 import Modal from "./modal.component";
 
-/**react-design-patterns-app - version 3.17 - LayoutComponentPattern 
+/**react-design-patterns-app - version 6.11 - LayoutComponentPattern 
  * - Features: 
  * 
- *     --> Commenting logs
+ *     --> Adding 'Panel' style component code
  * 
  * Note: This is the first topic
  */
@@ -38,6 +38,8 @@ const LayoutComponentPattern = () => {
     const modalcode = CodeData[7].code;
     const modalbackground = CodeData[8].code;
     const modalcontent = CodeData[9].code;
+    const leftcomponent = CodeData[42].code;
+    const panelcode = CodeData[43].code;
 
     return(
         <div>
@@ -106,6 +108,7 @@ const LayoutComponentPattern = () => {
 
             <SplitScreen Left={LeftSideComponent} Right={RightSideComponent} leftWidth={1} rightWidth={3}/>
 
+            
             <p>
                 where the left side has a <span className="text-white font-semibold"> flex value of 1 </span> and the right side has a 
                 <span className="text-white font-semibold"> flex value of 3</span> 
@@ -118,6 +121,27 @@ const LayoutComponentPattern = () => {
 
             <BashCode code={codelayout} />
 
+            <p>
+                and the Panel is a style component, as follows:
+            </p>
+
+            <BashCode code={panelcode} />
+
+            <p>
+                the Panel styled component ( for this case <a href="https://styled-components.com/">styled-components</a> library is used to scope styles, 
+                and there are also a wide libraries options to a variaty os use cases as <a href="https://emotion.sh/docs/introduction" alt='emotion'>emotion</a>) 
+                plays an important role by scoping the styles outside of the component make in it flexible and rehusable:
+            </p>
+
+            
+
+            <p>
+                and the <span className="text-white font-semibold"> end component </span> in this case <span className="text-white font-semibold"> LeftSideComponent </span>
+                will be as a basic component:
+            </p>
+
+            <BashCode code={leftcomponent} />
+            
             <p>
                 also there is another <span className="text-white font-semibold"> alternative </span>, that can result in a 
                 <span className="text-white font-semibold"> more reusable way the code </span>, this variation make use 
