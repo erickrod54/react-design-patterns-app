@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.09 - data js  
+/**react-design-patterns-app - version 6.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'ControlledFlowPatternCollector' 
+ *     --> Adding 'Step2FlowCollector' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1315,7 +1315,30 @@ export const CodeData = [
       {data.age > 25 ? <Step4Flow /> : <Step3FlowCollector />}
     </ControlledFlowPatternCollector>
     `
+  },
+  {
+    id: 41,
+    name: 'Step2FlowCollector - Component',
+    code: `
+    /**'currentIndex' and 'goNext' flowing outside of the component */   
+    const Step2FlowCollector = ({ goNext }) => {
+
+      return(
+          <StepFlowWrapper>
+              <h2>the Step #2: Enter your age: </h2>
+              <ButtonGeneral>
+                   /** the data is collected and accessed from outside 
+                    * of the component 'data.age'*/
+                  <button onClick={() => goNext({ age: 39 })}>Next</button>
+              </ButtonGeneral>
+          </StepFlowWrapper>
+      )
+    }
+
+    export default Step2FlowCollector;
+    `
   }
+
 ];
 
 /**List Pattern data  -- start */
