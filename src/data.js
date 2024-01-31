@@ -3,7 +3,7 @@ import { layoutexamples, sidebarexample } from "./assets/index.assets"
 /**react-design-patterns-app - version 6.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'LeftSideComponent' 
+ *     --> Adding 'Panel' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1352,7 +1352,25 @@ export const CodeData = [
       
       export default LeftSideComponent;
     `
-  }
+  },
+  {
+    id: 43,
+    name: 'Panel - Component',
+    code:   
+    `
+    /**this is a style component ( styled is a method 
+     * that can mimic multiple jsx tags, in this case a div)*/
+    export const Panel = styled.div\`
+    /**this syntax is a helper function that gets the value of the prop dynamicly from the component*/
+    flex: \${(p) => p.flex};
+
+    /**the ampersand applies css directly in the component 'Panel'*/
+    &\{
+        \${tw\`m-8 p-8\`}
+      \}
+    \`
+  `
+  },
 ];
 
 /**List Pattern data  -- start */
