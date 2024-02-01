@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.12 - data js  
+/**react-design-patterns-app - version 6.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'UserInfo' 
+ *     --> Adding 'UserInfoExtended' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1404,6 +1404,16 @@ export const CodeData = [
       }
       
       export default UserInfo;
+  `
+  },
+  {
+    id: 45,
+    name: 'UserInfoExtended - Component',
+    code:   
+    `
+    /**here create the  'UserInfoExtended' being UserInfo 
+     * the 'end component' to extend*/
+   const UserInfoExtended = hocLogProps(UserInfo);
   `
   },
 ];
