@@ -6,13 +6,13 @@ import UserInfo from "./user.info.component";
 import includeUser from "./hoc.include.user.component";
 import UserInfoForm from "./hoc.user.updateable.form";
 import UserInfoFormAnyResource from "./hoc.resource.updatable.form";
+import ControlledWrapper from "./controlled.wrapper.component";
 
-/**react-design-patterns-app - version 4.10 - HOCPattern 
+/**react-design-patterns-app - version 6.12 - HOCPattern 
  * - Features: 
  * 
- *     --> Building 'HOCPattern'.
- *  
- *     --> Developing 'HOCPattern' exercises.
+ *     --> Wrapping 'ControlledWrapper' to control the 
+ *         component showed in the console.
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -35,22 +35,26 @@ const HOCPattern = () => {
 
             <SectionWrapper>
                 <p>
-                    HOC is an essential pattern in React, HOC are components that instead 
-                    of returning a JSX as another common Component, it returns another 
-                    component when is called, think of it as a component factory
+                    <span className="text-white font-semibold"> HOC is an essential pattern 
+                    in React </span>, HOC are components that instead 
+                    of returning a JSX as another common Component, it <span className="text-white font-semibold"> 
+                    returns another Component </span> when is called, 
+                    think of it as a <span className="text-white font-semibold"> Component factory </span>
                 </p>
 
                 <p>
-                    so in detail a common component will go from Component to JSX directly,
-                    but in HOC pattern will go from HOC ( that is the component that will 
-                    return components ) to the Component ( an end component to return ) and
-                    then will go to the JSX code
+                    so in detail a <span className="text-white font-semibold"> common component </span>
+                    will go from <span className="text-white font-semibold"> Component to JSX directly </span>
+                    , but in <span className="text-white font-semibold"> HOC pattern </span> will go 
+                    from <span className="text-white font-semibold"> HOC ( that is the component that will return components ) 
+                    </span> to the <span className="text-white font-semibold"> Component ( an end component to return ) </span> 
+                    and then will go to the JSX code
                 </p>
 
                 <p>
-                    the HOC will be a functional ( all the logic ) Component to return an end 
-                    component, there are several reasons for the implementation of this pattern
-                    some of them can be:
+                    the HOC will be a functional <span className="text-white font-semibold"> ( all the logic ) </span> Component 
+                    to return an <span className="text-white font-semibold"> end component </span>, there are several reasons 
+                    for the implementation of this pattern some of them can be:
                 </p>
 
                 <ul>
@@ -67,11 +71,11 @@ const HOCPattern = () => {
 
             <p>
                 an use case of HOC's applied when <span className="text-white font-semibold"> allows to add extra functionality to 
-                existing component </span> can be when i come across a legacy component made by someone else, by applying the HOC pattern 
-                and wrapping this legacy component not only i can rehuse the legacy component, i can extend his capabilities and 
-                functionalities, let's say i want to rehuse the legacy component <span className="text-white font-semibold"> UserInfo </span>
-                and i want to add some props and log them in the console without messing directly with the  
-                <span className="text-white font-semibold"> UserInfo </span>
+                existing component ( likely a maintainance or upgrade od existing components ) </span> can be when i come across a legacy 
+                component made by someone else, by applying the HOC pattern and wrapping this legacy component not only i can rehuse the 
+                legacy component, i can extend his capabilities and functionalities, let's say i want to rehuse the legacy 
+                component <span className="text-white font-semibold"> UserInfo </span> and i want to add some props and log them in 
+                the console without messing directly with the  <span className="text-white font-semibold"> UserInfo </span>
                 component, then to acomplish this goal i can create a HOC as follows:
             </p>
 
@@ -82,8 +86,10 @@ const HOCPattern = () => {
             <p>
                 resulting in:
             </p>
-                
-            <UserInfoWrapper hobbies={'listen music'} phonenumber={5618068181} message={'aditional props for UserInfo'}/>
+             
+             <ControlledWrapper name='user info'>
+                <UserInfoWrapper hobbies={'listen music'} phonenumber={5618068181} message={'aditional props for UserInfo'}/>
+            </ControlledWrapper>   
 
             <p>
                  when it comes to <span className="text-white font-semibold"> share behavior among multiple components </span>
