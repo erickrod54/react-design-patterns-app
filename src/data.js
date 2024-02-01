@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.11 - data js  
+/**react-design-patterns-app - version 6.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'Panel' 
+ *     --> Adding 'UserInfo' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1369,6 +1369,41 @@ export const CodeData = [
         \${tw\`m-8 p-8\`}
       \}
     \`
+  `
+  },
+  {
+    id: 44,
+    name: 'Panel - Component',
+    code:   
+    `
+    /**this is the UserInfo component i want to extend data or 
+     * functionality*/
+      const UserInfo = ({ user }) => {
+
+        /**these are existing props, but let'say i wan to add a 
+         * 'phone number' and a 'message' ( later i will use a HOC 
+         * to do it)*/  
+        const { name, age, country, books } = user || {};
+      
+        /**here i verify the user in order to set the data */
+        return user ? (
+          <ListWrapper>
+            <h2 className="author-name"><span>{name}</span></h2>
+            <p><span>Age: </span> {age} years</p>
+            <p><span>Country: </span> {country}</p>
+            <h2><span>Books: </span></h2>
+            <ul>
+              {books.map((book) => (
+                <li key={book}> {book} </li>
+              ))}
+            </ul>
+          </ListWrapper>
+        ) : (
+          <h1>Loading...</h1>
+        );
+      }
+      
+      export default UserInfo;
   `
   },
 ];
