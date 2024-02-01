@@ -7,12 +7,15 @@ import includeUser from "./hoc.include.user.component";
 import UserInfoForm from "./hoc.user.updateable.form";
 import UserInfoFormAnyResource from "./hoc.resource.updatable.form";
 import ControlledWrapper from "./controlled.wrapper.component";
+import BashCode from "./bash.higlight.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 6.12 - HOCPattern 
+/**react-design-patterns-app - version 6.13 - HOCPattern 
  * - Features: 
  * 
- *     --> Wrapping 'ControlledWrapper' to control the 
- *         component showed in the console.
+ *     --> Adding 'userinfocode' code.
+ * 
+ *     --> Destructuring 'CodeData' from the context  
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -22,10 +25,13 @@ import ControlledWrapper from "./controlled.wrapper.component";
 
 const HOCPattern = () => {
 
-    const UserInfoWrapper = hocLogProps(UserInfo);
+    const { CodeData } = usePatternsAppContext();
 
+    const UserInfoWrapper = hocLogProps(UserInfo);
+    
     const UserInfoWithLoader = includeUser(UserInfo, "3");
     
+    const userinfocode = CodeData[44].code;
 
     return(
         <div>
@@ -79,9 +85,12 @@ const HOCPattern = () => {
                 component, then to acomplish this goal i can create a HOC as follows:
             </p>
 
+            <BashCode code={userinfocode}/>
+
             <p>
                 and wrapped <span className="text-white font-semibold"> UserInfo </span> as follows:
             </p>
+
 
             <p>
                 resulting in:
