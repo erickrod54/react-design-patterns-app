@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { usePatternsAppContext } from "../context";
+//import { usePatternsAppContext } from "../context";
 import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
 
-/**react-design-patterns-app - version 5.16 - SinglePatternPage
+/**react-design-patterns-app - version 6.12 - SinglePatternPage
  * - Features: 
  * 
- *     --> Displaying 'PortalsAdvHooks' content
+ *     --> Commenting logs
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -14,13 +14,13 @@ import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, Fun
 
 const SinglePatternPage = () => {
 
-    const { patternCard } = usePatternsAppContext()
+    //const { patternCard } = usePatternsAppContext()
 
     const { patternId } = useParams();
 
-    console.log('the pattern id==>', useParams())
+    //console.log('the pattern id==>', useParams())
 
-    console.log('patternCard from SinglePatternPage ==> ', patternCard)
+    //console.log('patternCard from SinglePatternPage ==> ', patternCard)
     
     if ( Number(patternId) === 1 ) {
         return <LayoutComponentPattern />
