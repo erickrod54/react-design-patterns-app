@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 6.03 - styled.components
+/**react-design-patterns-app - version 6.12 - styled.components
  * - Features: 
  * 
- *     --> writting 'a' style class.	
+ *     --> writting 'ControlledStyled' style component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -216,6 +216,12 @@ export const Panel = styled.div`
         &{
             ${tw`m-8 p-8`}
         }
+`
+
+export const ControlledStyled = styled.div`
+	&{
+		${tw`flex border-4 border-white m-5 p-5`}
+	}
 `
 
 export const AtomOneLight = styled.div`
