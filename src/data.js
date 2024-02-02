@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.15 - data js  
+/**react-design-patterns-app - version 6.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'hocLogProps' 
+ *     --> Adding 'includeUser' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1433,6 +1433,33 @@ export const CodeData = [
     }
     
     export default hocLogProps;
+  `
+  },
+  {
+    id: 47,
+    name: 'hocLogProps - HOCPattern',
+    code:   
+    `
+    /**first i build 'hocLogProps' that is going to 
+     * receive a component to fabric it*/
+    const includeUser = (Component, UserId ) => {
+
+      return props => {
+          const [user, setUser ] = useState(null);
+  
+          useEffect(() => {
+              (async () => {
+                  const response = await axios.get(\`/users/\${UserId}\)
+                  setUser(response.data)
+              })()
+          }, [])
+          
+          return <Component {...props} user={user}/>
+      };
+  
+  };
+  
+  export default includeUser;
   `
   },
 ];
