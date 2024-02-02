@@ -10,12 +10,10 @@ import ControlledWrapper from "./controlled.wrapper.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 6.13 - HOCPattern 
+/**react-design-patterns-app - version 6.14 - HOCPattern 
  * - Features: 
  * 
- *     --> Adding 'userinfocode' code.
- * 
- *     --> Destructuring 'CodeData' from the context  
+ *     --> Adding 'userinfofactory' code. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -27,11 +25,13 @@ const HOCPattern = () => {
 
     const { CodeData } = usePatternsAppContext();
 
-    const UserInfoWrapper = hocLogProps(UserInfo);
+    /**here create the  UserInfoExtended*/
+    const UserInfoExtended = hocLogProps(UserInfo);
     
     const UserInfoWithLoader = includeUser(UserInfo, "3");
     
     const userinfocode = CodeData[44].code;
+    const userinfofactory = CodeData[45].code;
 
     return(
         <div>
@@ -91,13 +91,20 @@ const HOCPattern = () => {
                 and wrapped <span className="text-white font-semibold"> UserInfo </span> as follows:
             </p>
 
+            <BashCode code={userinfofactory}/>
+
 
             <p>
                 resulting in:
             </p>
              
+             {/**if i want to render the component i have to wrapped in a container and then render the extra props
+              * 
+              *   --> container example '<ContainerLoader userId={'1'}>'
+              * 
+              */}
              <ControlledWrapper name='user info'>
-                <UserInfoWrapper hobbies={'listen music'} phonenumber={5618068181} message={'aditional props for UserInfo'}/>
+                    <UserInfoExtended hobbies={'listen music'} phonenumber={5618068181} message={'aditional props for UserInfo'}/>
             </ControlledWrapper>   
 
             <p>
