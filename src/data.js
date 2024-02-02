@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.16 - data js  
+/**react-design-patterns-app - version 6.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'includeUser' 
+ *     --> Adding 'UserInfoWithLoader' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1460,6 +1460,16 @@ export const CodeData = [
   };
   
   export default includeUser;
+  `
+  },
+  {
+    id: 48,
+    name: 'UserInfoWithLoader - HOCPattern',
+    code:   
+    `
+    /**here create the  'UserInfoWithLoader' that will create 
+     * components that share the fetch data behavior*/
+      const UserInfoWithLoader = includeUser(UserInfo, "3");
   `
   },
 ];
