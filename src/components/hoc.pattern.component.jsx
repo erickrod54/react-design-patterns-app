@@ -10,10 +10,10 @@ import ControlledWrapper from "./controlled.wrapper.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 6.15 - HOCPattern 
+/**react-design-patterns-app - version 6.16 - HOCPattern 
  * - Features: 
  * 
- *     --> Adding 'hoclogpropscode' code. 
+ *     --> Adding 'includeUser' code. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -33,6 +33,7 @@ const HOCPattern = () => {
     const userinfocode = CodeData[44].code;
     const userinfofactory = CodeData[45].code;
     const hoclogpropscode = CodeData[46].code;
+    const includeUsercode = CodeData[47].code;
 
     return(
         <div>
@@ -116,8 +117,21 @@ const HOCPattern = () => {
 
             <p>
                  when it comes to <span className="text-white font-semibold"> share behavior among multiple components </span>
-                 an use case of HOC's is when it is fetching data from a server, in this case i'll make an HOC that fetch and 
-                 renders the data from an user given, as follows:         
+                 an use case of <span className="text-white font-semibold"> HOC's </span> is when it 
+                 is <span className="text-white font-semibold"> fetching data from a server </span>, in this case i'll make an HOC that fetch and 
+                 renders the data from an <span className="text-white font-semibold"> user </span> given.         
+            </p>
+
+            <p>
+                let's make first the <span className="text-white font-semibold"> HOC </span> that is going to fabric that component that will
+                <span className="text-white font-semibold"> share behavior among multiple components </span> ( for this case i am going to use 
+                a user component )
+            </p>
+
+            <BashCode code={includeUsercode}/>
+
+            <p>
+                resulting in:
             </p>
 
             <UserInfoWithLoader />
