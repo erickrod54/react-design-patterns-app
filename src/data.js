@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.14 - data js  
+/**react-design-patterns-app - version 6.15 - data js  
  * - Features: 
  *    
- *     --> Adding 'UserInfoExtended' 
+ *     --> Adding 'hocLogProps' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1408,12 +1408,31 @@ export const CodeData = [
   },
   {
     id: 45,
-    name: 'UserInfoExtended - Component',
+    name: 'UserInfoExtended - HOCPattern',
     code:   
     `
     /**here create the  'UserInfoExtended' being UserInfo 
      * the 'end component' to extend*/
    const UserInfoExtended = hocLogProps(UserInfo);
+  `
+  },
+  {
+    id: 46,
+    name: 'hocLogProps - HOCPattern',
+    code:   
+    `
+    /**first i build 'hocLogProps' that is going to 
+     * receive a component to fabric it*/
+      const hocLogProps = (Component) => {
+        return (props) => {
+            /**here i log the props to validate they being add it*/          
+            console.log({props})
+            /**then i will add this props to the existing component*/
+            return <Component {...props}/>
+        }
+    }
+    
+    export default hocLogProps;
   `
   },
 ];
