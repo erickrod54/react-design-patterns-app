@@ -10,10 +10,10 @@ import ControlledWrapper from "./controlled.wrapper.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 6.14 - HOCPattern 
+/**react-design-patterns-app - version 6.15 - HOCPattern 
  * - Features: 
  * 
- *     --> Adding 'userinfofactory' code. 
+ *     --> Adding 'hoclogpropscode' code. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -32,6 +32,7 @@ const HOCPattern = () => {
     
     const userinfocode = CodeData[44].code;
     const userinfofactory = CodeData[45].code;
+    const hoclogpropscode = CodeData[46].code;
 
     return(
         <div>
@@ -86,6 +87,12 @@ const HOCPattern = () => {
             </p>
 
             <BashCode code={userinfocode}/>
+
+            <p>
+                i have to create the HOC ( let's call it hocLogProps) that is going to fabric this new extended component:
+            </p>
+
+            <BashCode code={hoclogpropscode}/>
 
             <p>
                 and wrapped <span className="text-white font-semibold"> UserInfo </span> as follows:
