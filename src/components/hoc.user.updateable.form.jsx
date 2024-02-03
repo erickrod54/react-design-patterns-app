@@ -1,10 +1,10 @@
 import { ButtonGeneral, ButtonWrapper, FormWrapper } from "../styledcomponents/styled.components";
 import includeUpdatableUser from "./hoc.include.updateable.user.component";
 
-/**react-design-patterns-app - version 4.10 - UserInfoForm 
+/**react-design-patterns-app - version 6.18 - UserInfoForm 
  * - Features: 
  * 
- *     --> Building 'UserInfoForm'
+ *     --> Switching 'UserInfoForm' data
  * 
  * Note: 'UserInfoForm' is a component created by the HOC
  * 'includeUpdatableUser', is going to render an 'user' 
@@ -45,7 +45,7 @@ const UserInfoForm = includeUpdatableUser(
       <h3>Loading...</h3>
     );
   },
-  "3"
+  "2"
 );
 
 export default UserInfoForm;
