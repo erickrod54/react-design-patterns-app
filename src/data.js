@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.17 - data js  
+/**react-design-patterns-app - version 6.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'UserInfoWithLoader' 
+ *     --> Adding 'UserInfoForm' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1472,6 +1472,53 @@ export const CodeData = [
       const UserInfoWithLoader = includeUser(UserInfo, "3");
   `
   },
+  {
+    id: 48,
+    name: 'UserInfoForm - Component',
+    code:   
+    `
+    /**'UserInfoForm' targets an user data set and by using 'includeUpdatableUser HOC'
+     * will change the data of the user*/
+    const UserInfoForm = includeUpdatableUser(
+      ({ updatableUser, changeHandler, userPostHandler, resetUserHandler }) => {
+        const { name, age } = updatableUser || {};
+    
+        return updatableUser ? (
+          <FormWrapper>
+              <label>
+                Name:
+                <input
+                  value={name}
+                  onChange={(e) => changeHandler({ name: e.target.value })}
+                />
+              </label>
+              <label>
+                Age:
+                <input
+                  value={age}
+                  onChange={(e) => changeHandler({ age: Number(e.target.value) })}
+                />
+              </label>
+              
+              <ButtonWrapper>
+                <ButtonGeneral>
+                    <button onClick={resetUserHandler}>Reset</button>
+                </ButtonGeneral>
+                <ButtonGeneral>
+                    <button onClick={userPostHandler}>Save</button>
+                </ButtonGeneral>
+              </ButtonWrapper>
+          </FormWrapper>
+        ) : (
+          <h3>Loading...</h3>
+        );
+      },
+      "2"
+    );
+    
+    export default UserInfoForm;
+  `
+  }
 ];
 
 /**List Pattern data  -- start */
