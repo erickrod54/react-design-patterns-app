@@ -9,11 +9,12 @@ import UserInfoFormAnyResource from "./hoc.resource.updatable.form";
 import ControlledWrapper from "./controlled.wrapper.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
+import ContainerLoader from "./container.loader.component";
 
-/**react-design-patterns-app - version 6.17 - HOCPattern 
+/**react-design-patterns-app - version 6.18 - HOCPattern 
  * - Features: 
  * 
- *     --> Adding 'includeUserwrapcode' code. 
+ *     --> Developing 'share and design behavior' concept. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -146,10 +147,23 @@ const HOCPattern = () => {
             <UserInfoWithLoader />
 
             <p>
-                and with the updating feature will be as follows:
+                and when it comes to components that <span className="text-white font-semibold"> share design and behavior </span>, for 
+                example an <span className="text-white font-semibold"> updating feature ( behavior )</span> under components of the same 
+                <span className="text-white font-semibold"> design ( common arquitecthing and composition )</span> will be as follows:
             </p>
 
+            {/**with the 'UserInfoForm' i am fetching and 
+            * updating the data*/}        
             <UserInfoForm />
+
+            <p>
+                Resulting in:
+            </p>
+
+            {/**with the 'container' i am providing 'UserInfo' with data */}       
+            <ContainerLoader userId={'2'}>
+                    <UserInfo />
+            </ContainerLoader>
 
             <p>
                 let's say i want to use this pattern in order to make it even more custom and generic, in a way that can works with 
