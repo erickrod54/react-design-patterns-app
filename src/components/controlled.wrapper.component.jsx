@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { ButtonGeneral, ControlledStyled } from "../styledcomponents/styled.components";
  
-/**react-design-patterns-app - version 6.12 - ControlledWrapper
+/**react-design-patterns-app - version 6.18 - ControlledWrapper
  * - Features: 
  * 
- *     --> Building 'ControlledWrapper'
+ *     --> Renaming button content
  * 
  * Note: this is a generic component to control other components 
  * display
@@ -19,7 +19,7 @@ const ControlledWrapper = ({ children, name }) => {
     return(
         <>
         <ButtonGeneral>
-            <button onClick={() => setShow(!show)}>{show ? `Hide ${name}` : `Show modal ${name}`}</button>
+            <button onClick={() => setShow(!show)}>{show ? `Hide ${name}` : `Show ${name} ( check java console)`}</button>
         </ButtonGeneral>   
 
         {show &&
