@@ -11,10 +11,10 @@ import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import ContainerLoader from "./container.loader.component";
 
-/**react-design-patterns-app - version 6.18 - HOCPattern 
+/**react-design-patterns-app - version 6.19 - HOCPattern 
  * - Features: 
  * 
- *     --> Developing 'share and design behavior' concept. 
+ *     --> Developing 'userinfoformcode' concept. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -38,6 +38,7 @@ const HOCPattern = () => {
     const hoclogpropscode = CodeData[46].code;
     const includeUsercode = CodeData[47].code;
     const includeUserwrapcode = CodeData[48].code;
+    const userinfoformcode = CodeData[49].code;    
 
     return(
         <div>
@@ -150,6 +151,12 @@ const HOCPattern = () => {
                 and when it comes to components that <span className="text-white font-semibold"> share design and behavior </span>, for 
                 example an <span className="text-white font-semibold"> updating feature ( behavior )</span> under components of the same 
                 <span className="text-white font-semibold"> design ( common arquitecthing and composition )</span> will be as follows:
+            </p>
+
+            <BashCode code={userinfoformcode}/>
+
+            <p>
+                resulting in:
             </p>
 
             {/**with the 'UserInfoForm' i am fetching and 
