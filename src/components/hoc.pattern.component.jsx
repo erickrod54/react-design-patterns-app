@@ -10,10 +10,10 @@ import ControlledWrapper from "./controlled.wrapper.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 6.16 - HOCPattern 
+/**react-design-patterns-app - version 6.17 - HOCPattern 
  * - Features: 
  * 
- *     --> Adding 'includeUser' code. 
+ *     --> Adding 'includeUserwrapcode' code. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -28,12 +28,15 @@ const HOCPattern = () => {
     /**here create the  UserInfoExtended*/
     const UserInfoExtended = hocLogProps(UserInfo);
     
+    /**here create the  'UserInfoWithLoader' that will create 
+     * components that share the fetch data behavior*/
     const UserInfoWithLoader = includeUser(UserInfo, "3");
     
     const userinfocode = CodeData[44].code;
     const userinfofactory = CodeData[45].code;
     const hoclogpropscode = CodeData[46].code;
     const includeUsercode = CodeData[47].code;
+    const includeUserwrapcode = CodeData[48].code;
 
     return(
         <div>
@@ -129,6 +132,12 @@ const HOCPattern = () => {
             </p>
 
             <BashCode code={includeUsercode}/>
+
+            <p>
+                And wrapped the same previous component <span className="text-white font-semibold"> UserInfo </span> as follows:
+            </p>
+
+            <BashCode code={includeUserwrapcode}/>       
 
             <p>
                 resulting in:
