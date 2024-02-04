@@ -10,11 +10,13 @@ import ControlledWrapper from "./controlled.wrapper.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import ContainerLoader from "./container.loader.component";
+import BookInfoAnyResource from "./books.info.anyresource.component";
 
-/**react-design-patterns-app - version 6.20 - HOCPattern 
+
+/**react-design-patterns-app - version 7.00 - HOCPattern 
  * - Features: 
  * 
- *     --> Adding 'includeupdatablehoc' code. 
+ *     --> Adding 'BookInfoAnyResource' compoenent. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -186,11 +188,15 @@ const HOCPattern = () => {
             </ContainerLoader>
 
             <p>
-                let's say i want to use this pattern in order to make it even more custom and generic, in a way that can works with 
-                users or books or any other data set i have with few modifications:
+                let's say i want to make a <span className="text-white font-semibold"> variation  of this pattern </span> in 
+                order to make it even more generic, in a way that can works with 
+                <span className="text-white font-semibold"> users or books or any other data set or component </span> with 
+                few modifications at the previous pattern, as follows:
             </p>
 
             <UserInfoFormAnyResource />
+
+            <BookInfoAnyResource bookUrl={'/books/1'}/>
                             
             </SectionWrapper>
         </div>
