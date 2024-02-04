@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.00 - data js  
+/**react-design-patterns-app - version 7.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'includeUpdatableResource' 
+ *     --> Adding 'useCurrentUser' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1634,6 +1634,32 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
 
     export default includeUpdatableResource;
+  `
+  },
+  {
+    id: 52,
+    name: 'useCurrentUser - CustomHooks',
+    code:   
+    `
+    /**'useCurrent' user follows the convention for a hook starting 
+     * by the word 'use' following of the hook name with camel case*/
+    const useCurrentUser = () => {
+
+      const [user, setUser ] = useState()
+
+      /**the goal of this hook is to encapsulate he logic of a 
+       * 'current-user' or any other data source*/
+      useEffect(() => {
+          (async () => {
+              const response = await axios.get("/current-user")
+              setUser(response.data)
+          })()
+      },[])
+
+      return user;
+    }
+
+    export default useCurrentUser;
   `
   }
 ];
