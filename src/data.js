@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 6.18 - data js  
+/**react-design-patterns-app - version 6.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'UserInfoForm' 
+ *     --> Adding 'includeUpdatableUser' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1473,7 +1473,7 @@ export const CodeData = [
   `
   },
   {
-    id: 48,
+    id: 49,
     name: 'UserInfoForm - Component',
     code:   
     `
@@ -1517,6 +1517,65 @@ export const CodeData = [
     );
     
     export default UserInfoForm;
+  `
+  },
+  {
+    id: 50,
+    name: 'includeUpdatableUser - HOCPattern',
+    code:   
+    `
+    /**'includeUpdatableUser' HOC is going to receive a 'Compoenent' 
+     * and an 'userId' and will make multiple user End Components, that share
+     * similar arquitecture and composition*/
+    const includeUpdatableUser = (Component, userId) => {
+      return (props) => {
+        /**the state to mutate the users*/
+        const [user, setUser] = useState(null);
+        const [updatableUser, setUpdatableUser] = useState(null);
+    
+        /**the HOC is receiving here the data*/
+        useEffect(() => {
+          (async () => {
+            const response = await axios.get(\`/users/\${userId}\`);
+            setUser(response.data);
+            setUpdatableUser(response.data);
+          })();
+        }, []);
+    
+        /** here i am mutating the changes*/
+        const userChangeHandler = (updates) => {
+          setUpdatableUser({ ...updatableUser, ...updates });
+        };
+    
+        /**handle to post data*/
+        const userPostHandler = async () => {
+          const response = await axios.post(\`/users/\${userId}\`, {
+            user: updatableUser,
+          });
+          setUser(response.data);
+          setUpdatableUser(response.data);
+        };
+    
+        /**reset to default values*/
+        const resetUserHandler = () => {
+          setUpdatableUser(user);
+        };
+    
+        /**returing the component with all the props
+         * an handlers*/
+        return (
+          <Component
+            {...props}
+            updatableUser={updatableUser}
+            changeHandler={userChangeHandler}
+            userPostHandler={userPostHandler}
+            resetUserHandler={resetUserHandler}
+          />
+        );
+      };
+    };
+    
+    export default includeUpdatableUser;
   `
   }
 ];
