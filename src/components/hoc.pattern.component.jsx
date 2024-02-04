@@ -13,10 +13,10 @@ import ContainerLoader from "./container.loader.component";
 import BookInfoAnyResource from "./books.info.anyresource.component";
 
 
-/**react-design-patterns-app - version 7.00 - HOCPattern 
+/**react-design-patterns-app - version 7.01 - HOCPattern 
  * - Features: 
  * 
- *     --> Adding 'BookInfoAnyResource' compoenent. 
+ *     --> Adding 'includeupdatableanyresource' code. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -42,6 +42,7 @@ const HOCPattern = () => {
     const includeUserwrapcode = CodeData[48].code;
     const userinfoformcode = CodeData[49].code;    
     const includeupdatablehoc = CodeData[50].code;
+    const includeupdatableanyresource = CodeData[51].code;
 
     return(
         <div>
@@ -191,8 +192,15 @@ const HOCPattern = () => {
                 let's say i want to make a <span className="text-white font-semibold"> variation  of this pattern </span> in 
                 order to make it even more generic, in a way that can works with 
                 <span className="text-white font-semibold"> users or books or any other data set or component </span> with 
-                few modifications at the previous pattern, as follows:
+                few modifications at the previous pattern
             </p>
+
+            <p>
+                these modifications will be in the previous <span className="text-white font-semibold"> includeUpdatableUser HOC </span> to create this
+                new version <span className="text-white font-semibold"> includeUpdatableResource HOC </span>:
+            </p>
+
+            <BashCode code={includeupdatableanyresource}/>
 
             <UserInfoFormAnyResource />
 
