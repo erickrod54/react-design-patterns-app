@@ -6,17 +6,25 @@ import UserInfoWithHookGen from "./user.info.generic.hook.component";
 import UserInfoAnyResource from "./user.info.anyresource.hook.component";
 import BookInfoAnyResource from "./books.info.anyresource.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
+import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 4.13 - CustomHookPattern
+/**react-design-patterns-app - version 7.03 - CustomHookPattern
  * - Features: 
  * 
- *     --> Developing custom patterns exercises
+ *     --> Destructuring 'includeupdatableanyresource'
+ * 
+ *     --> Adding 'useCurrentUser' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
  */
 
 const CustomHookPattern = () => {
+
+    const { CodeData } = usePatternsAppContext();
+
+    const includeupdatableanyresource = CodeData[52].code;
 
     return(
         <div>
@@ -43,8 +51,10 @@ const CustomHookPattern = () => {
 
                 <p>
                     a custom hooks must start with the word <span className="text-white font-semibold"> 'use' </span> 
-                    following of the hook name with camel case
+                    following of the hook name with camel case, as follows:
                 </p> 
+
+                <BashCode code={includeupdatableanyresource}/>
 
                 <p>
                     let's see an example of a fetch data hook:
