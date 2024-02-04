@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.03 - data js  
+/**react-design-patterns-app - version 7.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'UserInfoWithHook' 
+ *     --> Adding 'UserInfoWithHookGen' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1695,6 +1695,17 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default UserInfoWithHook;
+  `
+  },
+  {
+    id: 54,
+    name: 'UserInfoWithHookGen - Render',
+    code:   
+    `
+    /**the previous 'UserInfo' refactor to 'UserInfoWithHookGen', and 
+     * will receive a 'userId' prop that is going to be use by the
+     * 'useUser' hook through the component*/
+      <UserInfoWithHookGen userId={'2'}/>
   `
   }
 ];
