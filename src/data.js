@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.05 - data js  
+/**react-design-patterns-app - version 7.06 - data js  
  * - Features: 
  *    
- *     --> Adding 'UserInfoWithHookGen' 
+ *     --> Adding 'useUser' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1706,6 +1706,31 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
      * will receive a 'userId' prop that is going to be use by the
      * 'useUser' hook through the component*/
       <UserInfoWithHookGen userId={'2'}/>
+  `
+  },
+  {
+    id: 55,
+    name: 'useUser - Custom Hook',
+    code:   
+    `
+    /**the previous 'UserInfo' refactor to 'UserInfoWithHookGen', and 
+     * will receive a 'userId' prop that is going to be use by the
+     * 'useUser' hook through the component*/
+      const useUser = (userId) => {
+
+        const [user, setUser ] = useState()
+    
+        useEffect(() => {
+            (async () => {
+                const response = await axios.get(\`/users/\${userId}\`)
+                setUser(response.data)
+            })()
+        },[userId])
+    
+        return user;
+    }
+    
+    export default useUser;
   `
   }
 ];
