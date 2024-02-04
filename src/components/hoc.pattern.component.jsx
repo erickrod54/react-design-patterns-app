@@ -11,10 +11,10 @@ import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import ContainerLoader from "./container.loader.component";
 
-/**react-design-patterns-app - version 6.19 - HOCPattern 
+/**react-design-patterns-app - version 6.20 - HOCPattern 
  * - Features: 
  * 
- *     --> Developing 'userinfoformcode' concept. 
+ *     --> Adding 'includeupdatablehoc' code. 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -39,6 +39,7 @@ const HOCPattern = () => {
     const includeUsercode = CodeData[47].code;
     const includeUserwrapcode = CodeData[48].code;
     const userinfoformcode = CodeData[49].code;    
+    const includeupdatablehoc = CodeData[50].code;
 
     return(
         <div>
@@ -151,6 +152,18 @@ const HOCPattern = () => {
                 and when it comes to components that <span className="text-white font-semibold"> share design and behavior </span>, for 
                 example an <span className="text-white font-semibold"> updating feature ( behavior )</span> under components of the same 
                 <span className="text-white font-semibold"> design ( common arquitecthing and composition )</span> will be as follows:
+            </p>
+
+            <p>
+                first i create the <span className="text-white font-semibold"> includeUpdatableUser HOC </span> that is going to add the 
+                update behavior:
+            </p>
+
+            <BashCode code={includeupdatablehoc}/>
+
+            <p>
+                and then i wrap the <span className="text-white font-semibold"> UserInfoForm </span> with the functionality and arguments for  
+                <span className="text-white font-semibold"> includeUpdatableUser </span> 
             </p>
 
             <BashCode code={userinfoformcode}/>
