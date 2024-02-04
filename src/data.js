@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.02 - data js  
+/**react-design-patterns-app - version 7.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'useCurrentUser' 
+ *     --> Adding 'UserInfoWithHook' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1660,6 +1660,41 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
 
     export default useCurrentUser;
+  `
+  },
+  {
+    id: 53,
+    name: 'UserInfoWithHook - CustomHooks',
+    code:   
+    `
+    /**the previous 'UserInfo' refactor to 'UserInfoWithHook'*/
+    const UserInfoWithHook = () => {
+
+      /**only by invoking the hook in a variable will fetch the 
+       * user data*/  
+      const user = useCurrentUser();
+    
+      const { name, age, country, books } = user || {};
+    
+      /**here i verify the user in order to set the data */
+      return user ? (
+        <ListWrapper>
+          <h2 className="author-name"><span>{name}</span></h2>
+          <p><span>Age: </span> {age} years</p>
+          <p><span>Country: </span> {country}</p>
+          <h2><span>Books: </span></h2>
+          <ul>
+            {books.map((book) => (
+              <li key={book}> {book} </li>
+            ))}
+          </ul>
+        </ListWrapper>
+      ) : (
+        <h1>Loading...</h1>
+      );
+    }
+    
+    export default UserInfoWithHook;
   `
   }
 ];
