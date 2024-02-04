@@ -9,10 +9,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 7.04 - CustomHookPattern
+/**react-design-patterns-app - version 7.05 - CustomHookPattern
  * - Features: 
  * 
- *     --> Adding 'userinfowithhookcode' code 
+ *     --> Adding 'userinfowithhookgenrender' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -24,6 +24,7 @@ const CustomHookPattern = () => {
 
     const includeupdatableanyresource = CodeData[52].code;
     const userinfowithhookcode = CodeData[53].code;
+    const userinfowithhookgenrender = CodeData[54].code;
 
     return(
         <div>
@@ -69,18 +70,24 @@ const CustomHookPattern = () => {
                 <UserInfoWithHook />  
 
                 <p>
-                    a more generic version of this hook can take an specific id, and render for example two different 
-                    users from a dataset, as follows:
+                    a more generic version of this hook can take an specific <span className="text-white font-semibold"> userId </span> , 
+                    giving the flexibility that i can use the same component to render multiple user data:
+                </p>
+
+                <BashCode code={userinfowithhookgenrender}/>
+
+                <p>
+                    and render for example <span className="text-white font-semibold"> two different users </span> from a dataset, as follows:
                 </p>
 
                 <p>
-                    for an user with a userId of 2:         
+                    for an user with a <span className="text-white font-semibold"> userId of 2 </span>:         
                 </p>
 
                <UserInfoWithHookGen userId={'2'}/>
 
                 <p>
-                    for an user with a userId of 1:         
+                    for an user with a <span className="text-white font-semibold"> userId of 1 </span> :         
                 </p>
 
                 <UserInfoWithHookGen userId={'1'}/>
