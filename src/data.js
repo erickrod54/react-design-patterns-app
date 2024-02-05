@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.08 - data js  
+/**react-design-patterns-app - version 7.09 - data js  
  * - Features: 
  *    
  *     --> Adding 'BookInfoAnyResource' 
- *        render to code
+ *        component code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1738,11 +1738,38 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   },
   {
     id: 56,
-    name: 'c - Render',
+    name: 'BookInfoAnyResource - Render',
     code:   
     `
     /**the component will take the path of the resource*/
       <BookInfoAnyResource bookUrl={'/books/2'}/>
+  `
+  },
+  {
+    id: 57,
+    name: 'BookInfoAnyResource - Component',
+    code:   
+    `
+    /**the 'BookInfo' component will be refactored to 'BookInfoAnyResource' 
+     * taking the resource path*/
+    const BookInfoAnyResource = ({ bookUrl }) => {
+
+      const book = useResource( bookUrl)
+      const { name, price, title, pages } = book || {};
+    
+      return book ? (
+        <ListWrapper>
+            <h2 className="book-name"><span> {name}</span></h2>
+            <p><span>Price: </span>{price}</p>
+            <h3><span>Title: </span> {title}</h3>
+            <p><span>Number of Pages: </span>{pages}</p>
+        </ListWrapper>
+      ) : (
+        <h1>Loading</h1>
+      );
+    };
+    
+    export default BookInfoAnyResource;
   `
   }
 ];
