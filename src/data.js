@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.07 - data js  
+/**react-design-patterns-app - version 7.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'useUser' 
- *        hook comments to code
+ *     --> Adding 'BookInfoAnyResource' 
+ *        render to code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1734,6 +1734,15 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default useUser;
+  `
+  },
+  {
+    id: 56,
+    name: 'c - Render',
+    code:   
+    `
+    /**the component will take the path of the resource*/
+      <BookInfoAnyResource bookUrl={'/books/2'}/>
   `
   }
 ];
