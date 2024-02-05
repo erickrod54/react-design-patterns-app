@@ -9,10 +9,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 7.07 - CustomHookPattern
+/**react-design-patterns-app - version 7.08 - CustomHookPattern
  * - Features: 
  * 
- *     --> Adding 'useuserhookcode' code 
+ *     --> Adding 'bookinfoAnyresourcerender' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -26,6 +26,7 @@ const CustomHookPattern = () => {
     const userinfowithhookcode = CodeData[53].code;
     const userinfowithhookgenrender = CodeData[54].code;
     const useuserhookcode = CodeData[55].code;
+    const bookinfoAnyresourcerender = CodeData[56].code;
 
     return(
         <div>
@@ -100,9 +101,16 @@ const CustomHookPattern = () => {
                 <UserInfoWithHookGen userId={'1'}/>
 
                 <p>
-                    and if want to fetch data from any resource, let's start 
-                    with books for this case the record number 2 by using the 
-                    path will be like as follows:
+                    and if want to fetch <span className="text-white font-semibold"> data from any 
+                    resource </span>, let's start with <span className="text-white font-semibold"> 
+                    books </span> for this case the record <span className="text-white font-semibold"> number 2 </span> 
+                    by using the path the component will render as follows:
+                </p>
+
+                <BashCode code={bookinfoAnyresourcerender}/>
+
+                <p>
+                    resulting in:
                 </p>
 
                 <BookInfoAnyResource bookUrl={'/books/2'}/>
