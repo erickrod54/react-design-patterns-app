@@ -9,10 +9,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 7.08 - CustomHookPattern
+/**react-design-patterns-app - version 7.09 - CustomHookPattern
  * - Features: 
  * 
- *     --> Adding 'bookinfoAnyresourcerender' code 
+ *     --> Adding 'bookinfoAnyresourcecode' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -27,6 +27,7 @@ const CustomHookPattern = () => {
     const userinfowithhookgenrender = CodeData[54].code;
     const useuserhookcode = CodeData[55].code;
     const bookinfoAnyresourcerender = CodeData[56].code;
+    const bookinfoAnyresourcecode = CodeData[57].code;
 
     return(
         <div>
@@ -108,6 +109,16 @@ const CustomHookPattern = () => {
                 </p>
 
                 <BashCode code={bookinfoAnyresourcerender}/>
+                
+                <p>
+                    Also the <span className="text-white font-semibold"> 'BookInfo' </span> component 
+                    will be refactored to <span className="text-white font-semibold"> 'BookInfoAnyResource' </span> 
+                    taking the <span className="text-white font-semibold"> full path </span> of 
+                    the resource as a <span className="text-white font-semibold"> prop </span>
+                    and <span className="text-white font-semibold"> invoking the hook </span> as follows:
+                </p>
+
+                <BashCode code={bookinfoAnyresourcecode}/>
 
                 <p>
                     resulting in:
