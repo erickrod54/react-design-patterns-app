@@ -9,10 +9,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 7.05 - CustomHookPattern
+/**react-design-patterns-app - version 7.07 - CustomHookPattern
  * - Features: 
  * 
- *     --> Adding 'userinfowithhookgenrender' code 
+ *     --> Adding 'useuserhookcode' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -25,6 +25,7 @@ const CustomHookPattern = () => {
     const includeupdatableanyresource = CodeData[52].code;
     const userinfowithhookcode = CodeData[53].code;
     const userinfowithhookgenrender = CodeData[54].code;
+    const useuserhookcode = CodeData[55].code;
 
     return(
         <div>
@@ -79,6 +80,12 @@ const CustomHookPattern = () => {
                 <p>
                     and render for example <span className="text-white font-semibold"> two different users </span> from a dataset, as follows:
                 </p>
+
+                <p>
+                    so the hook will be as follows:
+                </p>
+                
+                <BashCode code={useuserhookcode}/>
 
                 <p>
                     for an user with a <span className="text-white font-semibold"> userId of 2 </span>:         
