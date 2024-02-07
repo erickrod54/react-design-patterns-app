@@ -1,12 +1,12 @@
 import React from "react";
 import CustomTitle from "./custom.title.component";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
-//import AlertMessage from "./alert.message.component";
+import { AlertMessage } from './index.components'
 
-/**react-design-patterns-app - version 5.18 - PortalsAdvHooks
+/**react-design-patterns-app - version 7.10 - PortalsAdvHooks
  * - Features: 
  * 
- *     --> Developing 'Portals' exersice
+ *     --> Adding 'AlertMessage' Component
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -94,8 +94,15 @@ const PortalsAdvHooks = () => {
 
                 <p>
                     this exercise is going to mix some essensial <span className="text-white font-semibold"> DOM manipulation </span>
-                    with a <span className="text-white font-semibold"> Modal Dialogs </span>, as follows:
+                    with a <span className="text-white font-semibold"> Modal Dialogs </span>. 
                 </p>
+
+                <p>
+                    so the modal dialog code <span className="text-white font-semibold"> before </span> applying 
+                    the <span className="text-white font-semibold"> Portal pattern </span> will be as follows:
+                </p>
+
+                <AlertMessage />
 
             </SectionWrapper>
         </div>
