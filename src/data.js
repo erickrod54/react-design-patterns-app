@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.11 - data js  
+/**react-design-patterns-app - version 7.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'Alert' 
+ *     --> Adding 'AlertMessage' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1794,6 +1794,36 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       };
     
       export default Alert;
+  `
+  },
+  {
+    id: 59,
+    name: 'AlertMessage - Component',
+    code:   
+    `
+    /**'AlertMessage' is the component that controls 'Alert' behavior*/
+      const AlertMessage = () => {
+      
+        const [show, setShow] = useState(false);
+        
+        return (
+          <AlertWrapper>
+            <h1>Other Content</h1>
+            <ButtonGeneral>
+              <button 
+                onClick={() => setShow(!show)}
+                >{show ?  'Click it to close.' : 'Show Message'}
+              </button>
+            </ButtonGeneral>
+            <Alert show={show} onClose={() => setShow(false)}>
+              A sample message to show. <span className="dissapear"> ( Click me to dissappear ) </span>
+            </Alert>
+          </AlertWrapper>
+        );
+    
+    }
+    
+    export default AlertMessage;
   `
   }
 ];
