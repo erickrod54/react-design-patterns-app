@@ -4,10 +4,10 @@ import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.com
 import { AlertMessage, BashCode } from './index.components'
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 7.11 - PortalsAdvHooks
+/**react-design-patterns-app - version 7.12 - PortalsAdvHooks
  * - Features: 
  * 
- *     --> Adding 'alertcode' code
+ *     --> Adding 'alertmessagecode' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -18,6 +18,7 @@ const PortalsAdvHooks = () => {
     const { CodeData } = usePatternsAppContext();
 
     const alertcode = CodeData[58].code;
+    const alertmessagecode = CodeData[59].code;
     
 
     return(
@@ -117,6 +118,13 @@ const PortalsAdvHooks = () => {
                 </p>
 
                 <BashCode code={alertcode}/>
+
+                <p>
+                    And the component that controls <span className="text-white font-semibold"> Alert </span> 
+                    behavior will be <span className="text-white font-semibold"> AlertMeesage </span> as follows:
+                </p>
+
+                <BashCode code={alertmessagecode}/>
 
             </SectionWrapper>
         </div>
