@@ -4,10 +4,10 @@ import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.com
 import { AlertMessage, BashCode } from './index.components'
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 7.12 - PortalsAdvHooks
+/**react-design-patterns-app - version 7.13 - PortalsAdvHooks
  * - Features: 
  * 
- *     --> Adding 'alertmessagecode' code
+ *     --> Adding 'alertcodeinner' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -19,6 +19,7 @@ const PortalsAdvHooks = () => {
 
     const alertcode = CodeData[58].code;
     const alertmessagecode = CodeData[59].code;
+    const alertcodeinner = CodeData[60].code;
     
 
     return(
@@ -125,6 +126,13 @@ const PortalsAdvHooks = () => {
                 </p>
 
                 <BashCode code={alertmessagecode}/>
+
+                <p>
+                    so let's say i need the functionality of Alert working in another place of the App without 
+                    affecting the original AlertMessage behavior and avoiding to make also a major refactor
+                </p>
+
+                <BashCode code={alertcodeinner}/>
 
             </SectionWrapper>
         </div>
