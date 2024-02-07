@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.09 - data js  
+/**react-design-patterns-app - version 7.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'BookInfoAnyResource' 
+ *     --> Adding 'Alert' 
  *        component code
  * 
  * Note: This component will have later the main menu
@@ -1770,6 +1770,30 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
     
     export default BookInfoAnyResource;
+  `
+  },
+  {
+    id: 58,
+    name: 'Alert - Component',
+    code:   
+    `
+    /**essentially 'Alert' will be a 'controlled component' that 
+     * will display a children as a message*/
+      const Alert = ({ children, onClose, show }) => {
+        if (!show) return;
+      
+        return (
+            <ModalBackground>
+              <ModalContent>
+                <div className="alert" onClick={onClose}>
+                  {children}
+                </div>
+              </ModalContent>
+            </ModalBackground>
+        );
+      };
+    
+      export default Alert;
   `
   }
 ];
