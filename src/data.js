@@ -1,10 +1,12 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.12 - data js  
+/**react-design-patterns-app - version 7.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'AlertMessage' 
+ *     --> Adding 'Alert - Inner logic' 
  *        component code
+ * 
+ *     --> Fixing escaping literals
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -449,7 +451,7 @@ export const CodeData = [
     name: 'layout modal - ModalBackground code',
     code: `
     export const ModalBackground = styled.div\`
-    \${tw('fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center')}
+    \${tw(\`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center\`)}
     \`;
     `
   },
@@ -459,7 +461,7 @@ export const CodeData = [
     code: `
     /**this will be the children of the modal component, for this case a samll list*/
     export const ModalContent = styled.div\`
-    \${tw'p-6 bg-white w-1/2 text-black '}
+    \${tw\`p-6 bg-white w-1/2 text-black\`}
     \`;
     `
   },
@@ -1824,6 +1826,23 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default AlertMessage;
+  `
+  },
+  {
+    id: 60,
+    name: 'Alert - Inner logic',
+    code:   
+    `
+    /**inner logic of 'Alert'*/
+    ...
+    <ModalBackground>
+      <ModalContent>
+        <div className="alert" onClick={onClose}>
+          {children}
+        </div>
+      </ModalContent>
+    </ModalBackground>
+    ....
   `
   }
 ];
