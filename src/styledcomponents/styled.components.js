@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 6.12 - styled.components
+/**react-design-patterns-app - version 7.11 - styled.components
  * - Features: 
  * 
- *     --> writting 'ControlledStyled' style component.	
+ *     --> writting 'dissapear' style component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -27,6 +27,14 @@ export const OpenModalWrapper = styled.div`
 
 export const ModalContent = styled.div`
     ${tw`p-6 bg-white w-1/2 text-black `}
+
+	.alert{
+		${tw`text-blue-500`}
+	}
+
+	.dissapear{
+		${tw`bg-gradient-to-r from-emerald-500 to-emerald-900 text-transparent bg-clip-text`}
+	}
 `;
 
 export const ModalBackground = styled.div`
