@@ -1,9 +1,10 @@
 import React from "react";
+import { ModalBackground, ModalContent } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 5.16 - Alert
+/**react-design-patterns-app - version 7.10 - Alert
  * - Features: 
  * 
- *     --> Developing 'Alert' exersice 
+ *     --> Refactoring 'Alert' and rehusing Modal Component
  * 
  * Note: This is a modal pattern to show the 
  * portal functionality
@@ -13,9 +14,13 @@ const Alert = ({ children, onClose, show }) => {
     if (!show) return;
   
     return (
-      <div className="alert" onClick={onClose}>
-        {children}
-      </div>
+        <ModalBackground>
+          <ModalContent>
+            <div className="alert" onClick={onClose}>
+              {children}
+            </div>
+          </ModalContent>
+        </ModalBackground>
     );
   };
 
