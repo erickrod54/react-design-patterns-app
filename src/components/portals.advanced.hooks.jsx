@@ -1,18 +1,24 @@
 import React from "react";
 import CustomTitle from "./custom.title.component";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
-import { AlertMessage } from './index.components'
+import { AlertMessage, BashCode } from './index.components'
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 7.10 - PortalsAdvHooks
+/**react-design-patterns-app - version 7.11 - PortalsAdvHooks
  * - Features: 
  * 
- *     --> Adding 'AlertMessage' Component
+ *     --> Adding 'alertcode' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
  */
 
 const PortalsAdvHooks = () => {
+
+    const { CodeData } = usePatternsAppContext();
+
+    const alertcode = CodeData[58].code;
+    
 
     return(
         <div>
@@ -103,6 +109,14 @@ const PortalsAdvHooks = () => {
                 </p>
 
                 <AlertMessage />
+
+                <br/>
+                <br/>
+                <p>
+                    the code for the <span className="text-white font-semibold"> Modal Dialog </span> ( rehusing some code of the Modal component )
+                </p>
+
+                <BashCode code={alertcode}/>
 
             </SectionWrapper>
         </div>
