@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Alert from "./alert.component";
 import { AlertWrapper, ButtonGeneral } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 7.10 - AlertMessage
+/**react-design-patterns-app - version 7.11 - AlertMessage
  * - Features: 
  * 
  *     --> Writting a new children message 
@@ -25,7 +25,7 @@ const AlertMessage = () => {
           </button>
         </ButtonGeneral>
         <Alert show={show} onClose={() => setShow(false)}>
-          A sample message to show. ( Click me to dissappear )
+          A sample message to show. <span className="dissapear"> ( Click me to dissappear ) </span>
         </Alert>
       </AlertWrapper>
     );
