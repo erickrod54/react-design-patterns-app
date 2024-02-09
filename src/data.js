@@ -1,12 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.13 - data js  
+/**react-design-patterns-app - version 7.15 - data js  
  * - Features: 
  *    
- *     --> Adding 'Alert - Inner logic' 
+ *     --> Adding 'AlertPortal' 
  *        component code
- * 
- *     --> Fixing escaping literals
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1843,6 +1841,30 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       </ModalContent>
     </ModalBackground>
     ....
+  `
+  },
+  {
+    id: 61,
+    name: 'Previously Alert and now AlertPortal- Component',
+    code:   
+    `
+    /**inner logic of 'Alert'*/
+    const AlertPortal = ({ children, onClose, show }) => {
+      if (!show) return;
+    
+      return createPortal(
+          <ModalBackground>
+            <ModalContent>
+              <div className="alert" onClick={onClose}>
+                {children}
+              </div>
+            </ModalContent>
+          </ModalBackground>,
+          document.body
+      );
+    };
+
+    export default AlertPortal;
   `
   }
 ];
