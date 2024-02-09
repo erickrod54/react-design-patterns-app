@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.15 - data js  
+/**react-design-patterns-app - version 7.16 - data js  
  * - Features: 
  *    
  *     --> Adding 'AlertPortal' 
- *        component code
+ *        comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1848,10 +1848,14 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'Previously Alert and now AlertPortal- Component',
     code:   
     `
-    /**inner logic of 'Alert'*/
+    /**Previously 'Alert' and now refactored to 'AlertPortal''*/
     const AlertPortal = ({ children, onClose, show }) => {
       if (!show) return;
     
+      /**'createPortal' is imported from react, first argument 
+       * will be the functionality ( logic and styles in this 
+       * case ) that i want to send through the portal, and the second 
+       * argument is the 'target' location ( - document.body -)*/
       return createPortal(
           <ModalBackground>
             <ModalContent>
