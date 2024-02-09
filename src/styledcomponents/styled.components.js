@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 7.11 - styled.components
+/**react-design-patterns-app - version 7.17 - styled.components
  * - Features: 
  * 
- *     --> writting 'dissapear' style component.	
+ *     --> writting 'portal-end' style class.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -34,6 +34,10 @@ export const ModalContent = styled.div`
 
 	.dissapear{
 		${tw`bg-gradient-to-r from-emerald-500 to-emerald-900 text-transparent bg-clip-text`}
+	}
+
+	.portal-end{
+		${tw`font-extrabold	text-lg bg-gradient-to-r from-rose-600 to-emerald-900 text-transparent bg-clip-text`}
 	}
 `;
 
