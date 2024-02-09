@@ -4,10 +4,10 @@ import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.com
 import { AlertMessage, BashCode } from './index.components'
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 7.13 - PortalsAdvHooks
+/**react-design-patterns-app - version 7.15 - PortalsAdvHooks
  * - Features: 
  * 
- *     --> Adding 'alertcodeinner' code
+ *     --> Adding 'alertportalcode' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -20,6 +20,7 @@ const PortalsAdvHooks = () => {
     const alertcode = CodeData[58].code;
     const alertmessagecode = CodeData[59].code;
     const alertcodeinner = CodeData[60].code;
+    const alertportalcode = CodeData[61].code;
     
 
     return(
@@ -128,11 +129,21 @@ const PortalsAdvHooks = () => {
                 <BashCode code={alertmessagecode}/>
 
                 <p>
-                    so let's say i need the functionality of Alert working in another place of the App without 
-                    affecting the original AlertMessage behavior and avoiding to make also a major refactor
+                    so let's say i need the <span className="text-white font-semibold"> functionality </span> of 
+                    <span className="text-white font-semibold"> Alert </span> working in <span className="text-white font-semibold"> 
+                    another place of the App </span>  without affecting the original AlertMessage behavior and avoiding 
+                    to make also a major refactor
                 </p>
 
                 <BashCode code={alertcodeinner}/>
+
+                <p>
+                    so this <span className="text-white font-semibold"> logic and styles </span> can be completely pass throuhgt 
+                    a portal without <span className="text-white font-semibold"> affectting the original component </span> 
+                    ( here i create a different version, but can be done also in the original component code as well ):
+                </p>
+
+                <BashCode code={alertportalcode}/>
 
             </SectionWrapper>
         </div>
