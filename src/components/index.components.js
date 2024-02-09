@@ -1,5 +1,6 @@
 
 import AlertMessage from "./alert.message.component";
+import AlertMessageWithPortal from "./alert.message.portal.component";
 import AlertPortal from "./alert.portal.component";
 import BashCode from "./bash.higlight.component";
 import Card from "./card.component";
@@ -39,10 +40,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 7.14 - components > index  
+/**react-design-patterns-app - version 7.17 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'AlertPortal' 
+ *     --> Importing and exporting 'AlertMessageWithPortal' 
  * 
  * Note: Pending to make responsive design
  */
@@ -88,5 +89,6 @@ export {
          PortalsAdvHooks,
          AlertMessage,
          TheOutSideControlled,
-         AlertPortal
+         AlertPortal,
+         AlertMessageWithPortal
         }
