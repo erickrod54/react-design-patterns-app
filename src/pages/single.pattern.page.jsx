@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 //import { usePatternsAppContext } from "../context";
-import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
+import { ContainerPattern, ControlledUnControlledPattern, CustomHookPattern, ForwardingRefs, FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
 
-/**react-design-patterns-app - version 6.12 - SinglePatternPage
+/**react-design-patterns-app - version 7.18 - SinglePatternPage
  * - Features: 
  * 
- *     --> Commenting logs
+ *     --> Adding 'ForwardingRefs'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -48,6 +48,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 7 ) {
         return <PortalsAdvHooks />
+    }
+
+    if ( Number(patternId) === 8 ) {
+        return <ForwardingRefs />
     }
 }
 
