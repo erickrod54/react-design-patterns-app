@@ -3,11 +3,12 @@ import CustomTitle from "./custom.title.component";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
+import { ForwardingRefForm } from "./index.components";
 
-/**react-design-patterns-app - version 7.19 - ForwardingRefs 
+/**react-design-patterns-app - version 7.20 - ForwardingRefs 
  * - Features: 
  * 
- *     --> Developing 'ForwardingRefs' example. 
+ *     --> Rendering 'ForwardingRefForm' example 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -50,6 +51,12 @@ const ForwardingRefs = () => {
             </p>
 
             <BashCode  code={forwardingrefformcode} />
+
+            <p>
+                resulting in: <span className="text-white font-semibold"> ( values will be accesed in the console ) </span>
+            </p>
+
+            <ForwardingRefForm />
 
         </SectionWrapper>
         
