@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.16 - data js  
+/**react-design-patterns-app - version 7.19 - data js  
  * - Features: 
  *    
- *     --> Adding 'AlertPortal' 
+ *     --> Adding 'ForwardingRefForm' 
  *        comments
  * 
  * Note: This component will have later the main menu
@@ -1869,6 +1869,45 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
 
     export default AlertPortal;
+  `
+  },
+  {
+    id: 62,
+    name: 'ForwardingRefForm - Forwarding Refs',
+    code:   
+    `
+    const ForwardingRefForm = () => {
+
+      /**here i create a ref that is giving me acces to the data */
+      const  inputRef = useRef();
+  
+      /**here i create a handler to access that user data */
+      const  submitHandler = (e) => {
+          e.preventDefault();
+  
+          console.log(inputRef.current.value)
+      }
+  
+      return(
+          /**this a style component */
+          <FormWrapper>
+          <form onSubmit={submitHandler}>
+              <span className="text-white font-semibold">
+                  user data ( to be access with a useRef )
+              </span>
+              {/**here using the reference i get access to the user data */}
+              <input ref={inputRef}/>
+              <ButtonGeneral>
+              <button>
+                  Submit
+              </button>
+              </ButtonGeneral>
+          </form>    
+          </FormWrapper>
+      )
+  }
+  
+  export default ForwardingRefForm;
   `
   }
 ];
