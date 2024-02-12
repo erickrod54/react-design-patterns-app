@@ -18,6 +18,7 @@ import CurrentUser from "./current.user.component";
 import useUser from "./custom.hook.generic.pattern.current.user";
 import CustomHookPattern from "./custom.hooks.pattern";
 import CustomTitle from "./custom.title.component";
+import ErrorBoundaries from "./error.boundaries.component";
 import ForwardingRefForm from "./forwarding.ref.form.component";
 import ForwardingRefs from "./forwarding.refs.component";
 import FunctionalProgramming from "./functional.programming.component";
@@ -43,10 +44,10 @@ import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
 
-/**react-design-patterns-app - version 7.19 - components > index  
+/**react-design-patterns-app - version 8.01 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ForwardingRefForm' 
+ *     --> Importing and exporting 'ErrorBoundaries' 
  * 
  * Note: Pending to make responsive design
  */
@@ -95,5 +96,6 @@ export {
          AlertPortal,
          AlertMessageWithPortal,
          ForwardingRefs,
-         ForwardingRefForm
+         ForwardingRefForm,
+         ErrorBoundaries
         }
