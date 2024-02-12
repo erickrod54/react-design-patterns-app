@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 7.19 - data js  
+/**react-design-patterns-app - version 8.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingRefForm' 
- *        comments
+ *     --> Adding 'ForwardingRefInput' 
+ *        code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -1908,6 +1908,18 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   }
   
   export default ForwardingRefForm;
+  `
+  },
+  {
+    id: 63,
+    name: 'ForwardingRefInput - Forwarding Refs',
+    code:   
+    `
+    ....
+      /**this is going to be te logic i am 
+       * going to extract to make 'ForwardingRefInput' */
+      <input ref={inputRef}/>
+    ....   
   `
   }
 ];
