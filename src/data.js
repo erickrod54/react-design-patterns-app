@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 8.01 - data js  
+/**react-design-patterns-app - version 8.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingRefInput' 
+ *     --> Adding 'IngRefInput' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -1919,6 +1919,20 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       /**this is going to be te logic i am 
        * going to extract to make 'ForwardingRefInput' */
       <input ref={inputRef}/>
+    ....   
+  `
+  },
+  {
+    id: 64,
+    name: 'IngRefInput - Forwarding Refs',
+    code:   
+    `
+    ....
+      /**i pass the ref as a prop and spread the rest of the props */
+      const IngRefInput = (props, ref) => {
+
+          return <input ref={ref} {...props}/>
+      }
     ....   
   `
   }
