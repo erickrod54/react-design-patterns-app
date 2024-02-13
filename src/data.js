@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 8.02 - data js  
+/**react-design-patterns-app - version 8.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngRefInput' 
+ *     --> Adding 'IngRefInput and ForwardingRefInput' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -1934,6 +1934,29 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
           return <input ref={ref} {...props}/>
       }
     ....   
+  `
+  },
+  {
+    id: 65,
+    name: 'IngRefInput and ForwardingRefInput - Forwarding Refs',
+    code:   
+    `     
+      /** i create this two components  */
+
+      /**the first component is to extract the logic */
+      
+      /**I pass the reference and the props in order  to keep functionality 
+       *  
+       *   -- very important the 'props', and 'ref' are two parameters 
+       *      need it by 'forwardRef'
+      */
+      const IngRefInput = (props, ref) => {
+      
+        return <input ref={ref} {...props}/>
+      }
+      
+      /**the second component use the 'forwardRef' hook to pass the reference (this hook comes from react library ) */
+      export const ForwardingRefInput = forwardRef(IngRefInput);   
   `
   }
 ];
