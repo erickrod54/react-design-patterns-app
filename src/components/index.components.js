@@ -21,6 +21,7 @@ import CustomTitle from "./custom.title.component";
 import ErrorBoundaries from "./error.boundaries.component";
 import ForwardingRefForm from "./forwarding.ref.form.component";
 import ForwardingRefs from "./forwarding.refs.component";
+import ForwardingHookRefForm from "./forwarding.useforwardref.form.component";
 import FunctionalProgramming from "./functional.programming.component";
 import HOCPattern from "./hoc.pattern.component";
 import IntroComponent from "./intro.component";
@@ -43,11 +44,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-
-/**react-design-patterns-app - version 8.01 - components > index  
+/**react-design-patterns-app - version 8.04 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ErrorBoundaries' 
+ *     --> Importing and exporting 'ForwardingHookRefForm' 
  * 
  * Note: Pending to make responsive design
  */
@@ -97,5 +97,6 @@ export {
          AlertMessageWithPortal,
          ForwardingRefs,
          ForwardingRefForm,
-         ErrorBoundaries
+         ErrorBoundaries,
+         ForwardingHookRefForm
         }
