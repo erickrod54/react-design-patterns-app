@@ -5,10 +5,10 @@ import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import { ForwardingRefForm } from "./index.components";
 
-/**react-design-patterns-app - version 8.02 - ForwardingRefs 
+/**react-design-patterns-app - version 8.03 - ForwardingRefs 
  * - Features: 
  * 
- *     --> Adding 'ingrefinputcode' code 
+ *     --> Adding 'useforwardrefs' code 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -23,6 +23,7 @@ const ForwardingRefs = () => {
     const forwardingrefformcode = CodeData[62].code;
     const forwardingrefinputcode = CodeData[63].code;
     const ingrefinputcode = CodeData[64].code;
+    const useforwardrefs = CodeData[65].code;
 
     return(
         <div>
@@ -74,9 +75,10 @@ const ForwardingRefs = () => {
 
             <p>
                 so in order to use the <span className="text-white font-semibold"> Refs </span> in this custom component
-                <span className="text-white font-semibold"> IngRefInput </span>, i use the hook: 
+                <span className="text-white font-semibold"> IngRefInput </span>, i use the hook, as follows: 
             </p>
 
+            <BashCode  code={useforwardrefs} />
         </SectionWrapper>
         
         </div>
