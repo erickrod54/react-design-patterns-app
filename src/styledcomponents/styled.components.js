@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 8.01 - styled.components
+/**react-design-patterns-app - version 8.07 - styled.components
  * - Features: 
  * 
- *     --> writting 'error-boundaries' style class.	
+ *     --> writting 'MasterWrapper' style class.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,9 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+export const MasterWrapper = styled.div`
+	${tw`border border-white`}
+`
 
 export const OpenModalWrapper = styled.div`
 	${tw`hover:bg-sky-500`}
