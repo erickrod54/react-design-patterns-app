@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 8.03 - data js  
+/**react-design-patterns-app - version 8.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngRefInput and ForwardingRefInput' 
+ *     --> Adding 'ForwardingHookRefForm' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -1957,6 +1957,48 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       
       /**the second component use the 'forwardRef' hook to pass the reference (this hook comes from react library ) */
       export const ForwardingRefInput = forwardRef(IngRefInput);   
+  `
+  },
+  {
+    id: 66,
+    name: 'ForwardingHookRefForm - Forwarding Refs',
+    code:   
+    `     
+      /** this form instead of an input tag will use the custom 
+       * component*/
+      const ForwardingHookRefForm = () => {
+
+        /**here i create a ref that is giving me acces to the data */
+        const  inputRef = useRef();
+    
+        /**here i create a handler to access that user data */
+        const  submitHandler = (e) => {
+            e.preventDefault();
+    
+            console.log(inputRef.current.value)
+        }
+    
+        return(
+            /**this a style component */
+            <FormWrapper>
+            <form onSubmit={submitHandler}>
+                <span className="text-white font-semibold">
+                    user data ( to be access with a useRef )
+                </span>
+                {/**here using the reference i get access to the user data, and 
+                 *  this time will be access by the custom component*/}
+                <ForwardingRefInput ref={inputRef}/>
+                <ButtonGeneral>
+                <button>
+                    Submit
+                </button>
+                </ButtonGeneral>
+            </form>    
+            </FormWrapper>
+        )
+    }
+    
+    export default ForwardingHookRefForm;   
   `
   }
 ];
