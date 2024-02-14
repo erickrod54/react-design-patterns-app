@@ -3,12 +3,12 @@ import CustomTitle from "./custom.title.component";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
-import { ForwardingRefForm } from "./index.components";
+import { ForwardingHookRefForm, ForwardingRefForm } from "./index.components";
 
-/**react-design-patterns-app - version 8.05 - ForwardingRefs 
+/**react-design-patterns-app - version 8.06 - ForwardingRefs 
  * - Features: 
  * 
- *     --> Adding 'forwardinghookrefformcode' code 
+ *     --> Rendering 'ForwardingHookRefForm' code 
  * 
  * Note: 'UserInfoFormAnyResource' taking as base code the
  * 'UserInfoForm', with few modifications can render any 
@@ -89,6 +89,24 @@ const ForwardingRefs = () => {
             </p>
 
             <BashCode  code={forwardinghookrefformcode} />
+
+            <p>
+                and rendering this form <span className="text-white font-semibold"> ForwardingHookRefForm </span> will result 
+                as follows:
+            </p>
+
+            <ForwardingHookRefForm />
+
+            <p>
+                so by <span className="text-white font-semibold"> accessing for values directly simplifying form handling logic </span> 
+                it open a lot of opportinuties to handle inside of <span className="text-white font-semibold"> IngRefInput </span> for 
+                example <span className="text-white font-semibold"> adding validations easily, or concerns separations, or managing data 
+                </span> that is being accessed and all of these opportunities <span className="text-white font-semibold"> once implemented 
+                won't affect the innner logic of the original component </span>, because the <span className="text-white font-semibold"> 
+                form </span> is in a <span className="text-white font-semibold"> scope </span>, and the <span className="text-white font-semibold"> 
+                input </span> is receiving the <span className="text-white font-semibold"> ref </span> in a <span className="text-white font-semibold"> 
+                different scope </span> 
+            </p>
 
         </SectionWrapper>
         
