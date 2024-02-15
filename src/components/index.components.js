@@ -18,6 +18,7 @@ import CurrentUser from "./current.user.component";
 import useUser from "./custom.hook.generic.pattern.current.user";
 import CustomHookPattern from "./custom.hooks.pattern";
 import CustomTitle from "./custom.title.component";
+import ChildComponent from "./error.boundaries.child.component";
 import ErrorBoundaries from "./error.boundaries.component";
 import ForwardingRefForm from "./forwarding.ref.form.component";
 import ForwardingRefs from "./forwarding.refs.component";
@@ -44,10 +45,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 8.04 - components > index  
+/**react-design-patterns-app - version 8.08 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ForwardingHookRefForm' 
+ *     --> Importing and exporting 'ChildComponent' 
  * 
  * Note: Pending to make responsive design
  */
@@ -98,5 +99,6 @@ export {
          ForwardingRefs,
          ForwardingRefForm,
          ErrorBoundaries,
-         ForwardingHookRefForm
+         ForwardingHookRefForm,
+         ChildComponent
         }
