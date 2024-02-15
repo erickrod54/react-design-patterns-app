@@ -1,9 +1,9 @@
 import React from "react";
 
-/**react-design-patterns-app - version 4.15 - RecursivePattern 
+/**react-design-patterns-app - version 8.08 - RecursivePattern 
  * - Features: 
  *    
- *     --> Adding closing comma for the component
+ *     --> Fixing a key error.
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -33,12 +33,14 @@ const RecursivePattern = ({ data }) => {
         return(
             <>
                 {pairs.map(([key, value]) => {
-                    return(
-                    <li>
-                        {key}
-                        <RecursivePattern data={value}/>
-                    </li>
-                    )
+                    <div key={key}>
+                        return(
+                        <li >
+                            {key}
+                            <RecursivePattern data={value}/>
+                        </li>
+                        )
+                    </div>
                 })}
             </>
         )
