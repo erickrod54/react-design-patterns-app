@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 8.05 - data js  
+/**react-design-patterns-app - version 8.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingHookRefForm' 
+ *     --> Adding 'MasterComponent' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -1999,6 +1999,28 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default ForwardingHookRefForm;   
+  `
+  },
+  {
+    id: 67,
+    name: 'MasterComponent - Error Boundaries',
+    code:   
+    `     
+      /** the 'MasterComponent' is scoping 'ChildWrapper'*/
+      const MasterComponent = () => {
+    
+        return (
+            <MasterWrapper>
+                <h1>Master Component</h1>
+                <ChildWrapper>
+                    <ChildComponent />
+                </ChildWrapper>
+            </MasterWrapper>
+          );
+    
+    }
+    
+    export default MasterComponent   
   `
   }
 ];
