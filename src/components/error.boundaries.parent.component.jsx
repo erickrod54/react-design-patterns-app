@@ -1,11 +1,11 @@
 import React from "react";
 import ChildComponent from "./error.boundaries.child.component";
-import { MasterWrapper } from "../styledcomponents/styled.components";
+import { ChildWrapper, MasterWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 8.07 - MasterComponent
+/**react-design-patterns-app - version 8.09 - MasterComponent
  * - Features: 
  * 
- *     --> Building 'MasterComponent'
+ *     --> Adding 'ChildWrapper' style component
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -16,7 +16,9 @@ const MasterComponent = () => {
     return (
         <MasterWrapper>
             <h1>Parent Component</h1>
+            <ChildWrapper>
                 <ChildComponent />
+            </ChildWrapper>
         </MasterWrapper>
       );
 
