@@ -3,10 +3,10 @@ import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.com
 import { CustomTitle } from "./index.components";
 import MasterComponent from "./error.boundaries.parent.component";
 
-/**react-design-patterns-app - version 8.09 - ErrorBoundaries
+/**react-design-patterns-app - version 8.10 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Developing 'ErrorBoundaries' exersise
+ *     --> Developing 'MasterComponent' exersise
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -51,8 +51,10 @@ const ErrorBoundaries = () => {
                 </span>in order to make use of the <span className="text-white font-semibold"> 
                 react component tree hierarchy </span> to set boundaries by the <span className="text-white font-semibold"> parent scope over the children </span>, 
                 so let's say i have a parent component named <span className="text-white font-semibold"> MasterWrapper </span> and its child component named 
-                as <span className="text-white font-semibold"> ChildComponent </span> 
+                as <span className="text-white font-semibold"> ChildComponent </span>, as follows:
             </p>
+
+            <MasterComponent />
 
             </SectionWrapper>
         </div>
