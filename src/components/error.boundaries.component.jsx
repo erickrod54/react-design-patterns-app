@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import { BashCode, CustomTitle } from "./index.components";
 import MasterComponent from "./error.boundaries.parent.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 8.12 - ErrorBoundaries
+/**react-design-patterns-app - version 8.13 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Adding 'childcomponentcode' code
+ *     --> Building 'displayMaster' state
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -16,6 +16,9 @@ import { usePatternsAppContext } from "../context";
 const ErrorBoundaries = () => {
 
     const { CodeData } = usePatternsAppContext();
+
+    const [ displayMaster, setDisplayMaster ] = useState(false);
+    
 
     const mastercomponentcode = CodeData[67].code;
     const childcomponentcode = CodeData[68].code;
@@ -74,6 +77,16 @@ const ErrorBoundaries = () => {
             </p>
 
             <MasterComponent />
+
+            <p>
+                so the behavior expected <span className="text-white font-semibold"> Child component </span> crash by an error
+                in the scope of this component will make crash the <span className="text-white font-semibold"> master component 
+                </span> ( because one <span className="text-white font-semibold"> scope - </span> child - is being scopped 
+                by the parent <span className="text-white font-semibold"> - master component - </span>), uncomment the error
+                will be: 
+            </p>
+
+            
 
             </SectionWrapper>
         </div>
