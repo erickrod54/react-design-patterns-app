@@ -4,10 +4,10 @@ import { BashCode, CustomTitle } from "./index.components";
 import MasterComponent from "./error.boundaries.parent.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 8.11 - ErrorBoundaries
+/**react-design-patterns-app - version 8.12 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Adding 'mastercomponentcode' code
+ *     --> Adding 'childcomponentcode' code
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -18,6 +18,7 @@ const ErrorBoundaries = () => {
     const { CodeData } = usePatternsAppContext();
 
     const mastercomponentcode = CodeData[67].code;
+    const childcomponentcode = CodeData[68].code;
     
 
     return(
@@ -56,7 +57,7 @@ const ErrorBoundaries = () => {
                 <span className="text-white font-semibold"> child component </span> or <span className="text-white font-semibold"> children component  
                 </span>in order to make use of the <span className="text-white font-semibold"> 
                 react component tree hierarchy </span> to set boundaries by the <span className="text-white font-semibold"> parent scope over the children </span>, 
-                so let's say i have a parent component named <span className="text-white font-semibold"> MasterWrapper </span> and its child component named 
+                so let's say i have a parent component named <span className="text-white font-semibold"> MasterComponent </span> and its child component named 
                 as <span className="text-white font-semibold"> ChildComponent </span>, as follows:
             </p>
 
@@ -64,6 +65,12 @@ const ErrorBoundaries = () => {
 
             <p>
                 and the <span className="text-white font-semibold"> Child component </span> as follows:
+            </p>
+
+            <BashCode code={childcomponentcode}/>
+
+            <p>
+                rendering in the <span className="text-white font-semibold"> MasterComponent </span> component as follows:
             </p>
 
             <MasterComponent />
