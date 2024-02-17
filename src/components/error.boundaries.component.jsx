@@ -1,18 +1,24 @@
 import React from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
-import { CustomTitle } from "./index.components";
+import { BashCode, CustomTitle } from "./index.components";
 import MasterComponent from "./error.boundaries.parent.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 8.10 - ErrorBoundaries
+/**react-design-patterns-app - version 8.11 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Developing 'MasterComponent' exersise
+ *     --> Adding 'mastercomponentcode' code
  * 
  * Note: the cards components with the card information
  * will be displayed here
  */
 
 const ErrorBoundaries = () => {
+
+    const { CodeData } = usePatternsAppContext();
+
+    const mastercomponentcode = CodeData[67].code;
+    
 
     return(
         <div>
@@ -52,6 +58,12 @@ const ErrorBoundaries = () => {
                 react component tree hierarchy </span> to set boundaries by the <span className="text-white font-semibold"> parent scope over the children </span>, 
                 so let's say i have a parent component named <span className="text-white font-semibold"> MasterWrapper </span> and its child component named 
                 as <span className="text-white font-semibold"> ChildComponent </span>, as follows:
+            </p>
+
+            <BashCode code={mastercomponentcode}/>
+
+            <p>
+                and the <span className="text-white font-semibold"> Child component </span> as follows:
             </p>
 
             <MasterComponent />
