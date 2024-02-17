@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 8.11 - data js  
+/**react-design-patterns-app - version 8.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'MasterComponent' 
+ *     --> Adding 'ChildComponent' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2021,6 +2021,24 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default MasterComponent   
+  `
+  },
+  {
+    id: 68,
+    name: 'MasterComponent - Error Boundaries',
+    code:   
+    `     
+    /** the 'ChildComponent' is scoping a simple 'message' and 
+     * an error ( that will uncomment later )*/
+    const ChildComponent = () => {
+
+        //throw new Error("Error in component")
+        return(
+            <h2>Child Component</h2>
+        )
+    }
+    
+    export default ChildComponent;   
   `
   }
 ];
