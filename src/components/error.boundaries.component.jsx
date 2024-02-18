@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
+import { ButtonGeneral, CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import { BashCode, CustomTitle } from "./index.components";
 import MasterComponent from "./error.boundaries.parent.component";
 import { usePatternsAppContext } from "../context";
+import MasterWithErrorComponent from "./error.boundaries.parentwerror.component";
 
-/**react-design-patterns-app - version 8.14 - ErrorBoundaries
+/**react-design-patterns-app - version 8.15 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Building 'handleMaster' handler
+ *     --> Rendering 'MasterWithErrorComponent' handler
  * 
- * Note: the cards components with the card information
- * will be displayed here
+ * Note: by rendering 'MasterWithErrorComponent' i can see 
+ * the cascade error resulting on the child component and 
+ * the master component
  */
 
 const ErrorBoundaries = () => {
@@ -85,11 +87,21 @@ const ErrorBoundaries = () => {
                 so the behavior expected <span className="text-white font-semibold"> Child component </span> crash by an error
                 in the scope of this component will make crash the <span className="text-white font-semibold"> master component 
                 </span> ( because one <span className="text-white font-semibold"> scope - </span> child - is being scopped 
-                by the parent <span className="text-white font-semibold"> - master component - </span>), uncomment the error
-                will be: 
+                by the parent <span className="text-white font-semibold"> - master component - </span>), by uncommenting the error
+                line the result will be: 
             </p>
 
-            
+            <ButtonGeneral>
+                <button onClick={handleMaster}> display master component ( this error will crash the application, refresh the page )</button>
+            </ButtonGeneral>
+        
+
+            {displayMaster ?
+                <MasterWithErrorComponent /> 
+            :   
+            <>
+            </>
+            }
 
             </SectionWrapper>
         </div>
