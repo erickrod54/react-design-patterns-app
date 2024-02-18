@@ -4,10 +4,10 @@ import { BashCode, CustomTitle } from "./index.components";
 import MasterComponent from "./error.boundaries.parent.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 8.13 - ErrorBoundaries
+/**react-design-patterns-app - version 8.14 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Building 'displayMaster' state
+ *     --> Building 'handleMaster' handler
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -19,6 +19,9 @@ const ErrorBoundaries = () => {
 
     const [ displayMaster, setDisplayMaster ] = useState(false);
     
+    const handleMaster = () => {
+        setDisplayMaster(!displayMaster)
+    }
 
     const mastercomponentcode = CodeData[67].code;
     const childcomponentcode = CodeData[68].code;
