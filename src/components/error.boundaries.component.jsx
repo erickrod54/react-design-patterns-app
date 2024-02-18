@@ -6,10 +6,10 @@ import { usePatternsAppContext } from "../context";
 import MasterWithErrorComponent from "./error.boundaries.parentwerror.component";
 import { ErrorBoundary } from './error.boundary.class.component'
 
-/**react-design-patterns-app - version 8.16 - ErrorBoundaries
+/**react-design-patterns-app - version 8.17 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Rendering 'displayMasterFallback' state
+ *     --> Rendering 'handleMasterFallback' handler
  * 
  * Note: by rendering 'MasterWithErrorComponent' i can see 
  * the cascade error resulting on the child component and 
@@ -22,6 +22,10 @@ const ErrorBoundaries = () => {
 
     const [ displayMaster, setDisplayMaster ] = useState(false);
     const [ displayMasterFallback, setDisplayMasterFallback ] = useState(false);
+
+    const handleMasterFallback = () => {
+        setDisplayMasterFallback(!displayMasterFallback)
+    }
     
     const handleMaster = () => {
         setDisplayMaster(!displayMaster)
