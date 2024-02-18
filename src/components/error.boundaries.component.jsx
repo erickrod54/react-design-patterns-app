@@ -4,11 +4,12 @@ import { BashCode, CustomTitle } from "./index.components";
 import MasterComponent from "./error.boundaries.parent.component";
 import { usePatternsAppContext } from "../context";
 import MasterWithErrorComponent from "./error.boundaries.parentwerror.component";
+import { ErrorBoundary } from './error.boundary.class.component'
 
-/**react-design-patterns-app - version 8.15 - ErrorBoundaries
+/**react-design-patterns-app - version 8.16 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Rendering 'MasterWithErrorComponent' handler
+ *     --> Rendering 'displayMasterFallback' state
  * 
  * Note: by rendering 'MasterWithErrorComponent' i can see 
  * the cascade error resulting on the child component and 
@@ -20,6 +21,7 @@ const ErrorBoundaries = () => {
     const { CodeData } = usePatternsAppContext();
 
     const [ displayMaster, setDisplayMaster ] = useState(false);
+    const [ displayMasterFallback, setDisplayMasterFallback ] = useState(false);
     
     const handleMaster = () => {
         setDisplayMaster(!displayMaster)
@@ -102,6 +104,23 @@ const ErrorBoundaries = () => {
             <>
             </>
             }
+
+            <p>
+                this time by applying the <span className="text-white font-semibold"> error boundary </span> i can get 
+                <span className="text-white font-semibold"> one of two results </span> or <span className="text-white font-semibold"> 
+                a warning and eventually render the boundary fallback </span> or <span className="text-white font-semibold"> directly render 
+                the error boundary fallback </span>, so what ever is the result expected the app won't crash make in it posible to debbug 
+                and resolve in a better way the error
+            </p>
+            
+            <p>
+                now let's try it with the error boundary:
+            </p>
+
+            <p>
+                so the way that this <span className="text-white font-semibold"> cascade error </span> is handled is by using 
+                <span className="text-white font-semibold"> error boundaries </span>
+            </p>
 
             </SectionWrapper>
         </div>
