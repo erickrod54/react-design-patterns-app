@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 8.20 - data js  
+/**react-design-patterns-app - version 9.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'ErrorBoundary' 
+ *     --> Adding 'ErrorBoundary class component' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2057,6 +2057,37 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       :   
       <>
       </>
+      }   
+  `
+  },
+  {
+    id: 70,
+    name: 'ErrorBoundary class component - Error Boundaries',
+    code:   
+    ` 
+    {displayMasterFallback ?
+      /**this error boundary class interact at react tree level*/
+      export class ErrorBoundary extends React.Component {
+        state = { hasError: false };
+      
+        static getDerivedStateFromError(error) {
+          return { hasError: true };
+        }
+      
+        componentDidCatch(error, errorInfo) {
+          console.log("Error: ", error);
+          // Prevent the error from being displayed
+          // Set the state to trigger a re-render without the error
+          this.setState({ hasError: true });
+        }
+      
+        render() {
+          if (this.state.hasError) {
+            return this.props.fallback;
+          }
+      
+          return this.props.children;
+        }
       }   
   `
   }
