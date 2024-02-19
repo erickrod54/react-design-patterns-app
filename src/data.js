@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 8.12 - data js  
+/**react-design-patterns-app - version 8.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'ChildComponent' 
+ *     --> Adding 'ErrorBoundary' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2039,6 +2039,25 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default ChildComponent;   
+  `
+  },
+  {
+    id: 69,
+    name: 'ErrorBoundary - Error Boundaries',
+    code:   
+    ` 
+    {displayMasterFallback ?
+      /**here i am setting an error boundary to scope the error 
+       * and render a fallback message*/
+      <ErrorBoundary fallback={<h1>Error at App Level</h1>}>
+          /**this is the master version with an error that is being 
+           * handled by a error boundary*/
+          <MasterWithErrorComponent /> 
+      </ErrorBoundary>
+      :   
+      <>
+      </>
+      }   
   `
   }
 ];
