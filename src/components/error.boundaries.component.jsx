@@ -6,10 +6,10 @@ import { usePatternsAppContext } from "../context";
 import MasterWithErrorComponent from "./error.boundaries.parentwerror.component";
 import { ErrorBoundary } from './error.boundary.class.component'
 
-/**react-design-patterns-app - version 8.18 - ErrorBoundaries
+/**react-design-patterns-app - version 8.19 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Implementing 'handleMasterFallback' handler
+ *     --> Implementing 'ErrorBoundary' 
  * 
  * Note: by rendering 'MasterWithErrorComponent' i can see 
  * the cascade error resulting on the child component and 
@@ -124,6 +124,15 @@ const ErrorBoundaries = () => {
             <ButtonGeneral>
                 <button onClick={handleMasterFallback}> display master component ( will be a warning or a fallback directly render )</button>
             </ButtonGeneral>
+
+            {displayMasterFallback ?
+            <ErrorBoundary fallback={<h1>Error at App Level</h1>}>
+                <MasterWithErrorComponent /> 
+            </ErrorBoundary>
+            :   
+            <>
+            </>
+            }
 
             <p>
                 so the way that this <span className="text-white font-semibold"> cascade error </span> is handled is by using 
