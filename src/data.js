@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 9.00 - data js  
+/**react-design-patterns-app - version 9.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'ErrorBoundary class component' 
+ *     --> Adding 'componentDidCatch' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2089,6 +2089,22 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
           return this.props.children;
         }
       }   
+  `
+  },
+  {
+    id: 71,
+    name: 'componentDidCatch lifecycle method - Error Boundaries',
+    code:   
+    ` 
+    /**this lifecycle catch the error, giving an opportunity to record 
+     * this error in an API, or simply separating this error of sync and 
+     * async errors*/
+    componentDidCatch(error, errorInfo) {
+      console.log("Error: ", error);
+      // Prevent the error from being displayed
+      // Set the state to trigger a re-render without the error
+      this.setState({ hasError: true });
+    }   
   `
   }
 ];
