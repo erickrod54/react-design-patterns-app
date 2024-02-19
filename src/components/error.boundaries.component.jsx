@@ -6,10 +6,10 @@ import { usePatternsAppContext } from "../context";
 import MasterWithErrorComponent from "./error.boundaries.parentwerror.component";
 import { ErrorBoundary } from './error.boundary.class.component'
 
-/**react-design-patterns-app - version 8.19 - ErrorBoundaries
+/**react-design-patterns-app - version 8.20 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Implementing 'ErrorBoundary' 
+ *     --> Adiing 'errorboundarycode' code 
  * 
  * Note: by rendering 'MasterWithErrorComponent' i can see 
  * the cascade error resulting on the child component and 
@@ -33,6 +33,8 @@ const ErrorBoundaries = () => {
 
     const mastercomponentcode = CodeData[67].code;
     const childcomponentcode = CodeData[68].code;
+    const errorboundarycode = CodeData[69].code;
+
     
 
     return(
@@ -114,8 +116,10 @@ const ErrorBoundaries = () => {
                 <span className="text-white font-semibold"> one of two results </span> or <span className="text-white font-semibold"> 
                 a warning and eventually render the boundary fallback </span> or <span className="text-white font-semibold"> directly render 
                 the error boundary fallback </span>, so what ever is the result expected the app won't crash make in it posible to debbug 
-                and resolve in a better way the error
+                and resolve in a better way the error, resulting the code as follows:
             </p>
+
+            <BashCode code={errorboundarycode}/>
             
             <p>
                 now let's try it with the error boundary:
