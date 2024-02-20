@@ -6,10 +6,10 @@ import { usePatternsAppContext } from "../context";
 import MasterWithErrorComponent from "./error.boundaries.parentwerror.component";
 import { ErrorBoundary } from './error.boundary.class.component'
 
-/**react-design-patterns-app - version 9.00 - ErrorBoundaries
+/**react-design-patterns-app - version 9.01 - ErrorBoundaries
  * - Features: 
  * 
- *     --> Adiing 'errorboundaryclasscode' code 
+ *     --> Adiing 'componentdidcatch' code 
  * 
  * Note: by rendering 'MasterWithErrorComponent' i can see 
  * the cascade error resulting on the child component and 
@@ -35,6 +35,7 @@ const ErrorBoundaries = () => {
     const childcomponentcode = CodeData[68].code;
     const errorboundarycode = CodeData[69].code;
     const errorboundaryclasscode = CodeData[70].code;
+    const componentdidcatch = CodeData[71].code;
 
     return(
         <div>
@@ -126,7 +127,17 @@ const ErrorBoundaries = () => {
             </p>
             
             <BashCode code={errorboundaryclasscode}/>
+
+            <p>
+                let's also check the <span className="text-white font-semibold"> lifecycle </span> implemented to catch the error giving 
+                an opportunity to <span className="text-white font-semibold"> record this error in an API or send it to other multiple 
+                sources </span>, or <span className="text-white font-semibold"> simply separating this error of sync and async errors </span>, 
+                because this error that is being handled using the ErrorBoundary and <span className="text-white font-semibold"> it is strictly 
+                related with the react tree rendering </span>
+            </p>
             
+            <BashCode code={componentdidcatch}/>
+
             <p>
                 now let's try it with the error boundary:
             </p>
