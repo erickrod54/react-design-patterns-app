@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 //import { usePatternsAppContext } from "../context";
-import { ContainerPattern,
+import { AdvancedHooks, ContainerPattern,
          ControlledUnControlledPattern,
          CustomHookPattern,
          ErrorBoundaries,
@@ -9,10 +9,10 @@ import { ContainerPattern,
          FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 8.01 - SinglePatternPage
+/**react-design-patterns-app - version 9.02 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'ErrorBoundaries'
+ *     --> Adding 'AdvancedHooks'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -62,7 +62,11 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 9 ) {
         return <ErrorBoundaries />
-    }    
+    }
+    
+    if ( Number(patternId) === 10 ) {
+        return <AdvancedHooks />
+    }
 }
 
 export default SinglePatternPage;
