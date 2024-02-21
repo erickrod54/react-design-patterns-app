@@ -1,15 +1,8 @@
 import React from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
-import UserInfoWithHook from "./user.info.with.hook.component";
-import UserInfoWithHookGen from "./user.info.generic.hook.component";
-import UserInfoAnyResource from "./user.info.anyresource.hook.component";
-import BookInfoAnyResource from "./books.info.anyresource.component";
-import UserInfoDataSource from "./user.info.hook.dsource.component";
-import { usePatternsAppContext } from "../context";
-import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 9.04 - AdvancedHooks
+/**react-design-patterns-app - version 9.05 - AdvancedHooks
  * - Features: 
  * 
  *     --> Developing 'Keys 'concepts  
@@ -71,6 +64,13 @@ const AdvancedHooks = () => {
                 The <span className="text-white font-semibold"> implementation of keys </span> in <span className="text-white font-semibold"> React Components </span> 
                 is highly important for the context of <span className="text-white font-semibold"> managing state preservation </span> and preventing unexpected 
                 behavior when rendering components
+            </p>
+
+            <p>
+                in React, keys are used to <span className="text-white font-semibold"> uniquely identify components </span>, especially when <span className="text-white font-semibold">
+                rendering lists </span> or <span className="text-white font-semibold"> dynamically changing components. </span> They <span className="text-white font-semibold"> 
+                allow </span> React to <span className="text-white font-semibold"> efficientlly update and manage the component tree </span> by distinguishing between 
+                <span className="text-white font-semibold">  different instances of the same component </span>
             </p>
 
             </SectionWrapper>
