@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 9.02 - styled.components
+/**react-design-patterns-app - version 9.04 - styled.components
  * - Features: 
  * 
- *     --> writting 'advanced-hooks-patterns' style class.	
+ *     --> writting 'list-white-space' style class.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -143,6 +143,12 @@ export const SectionWrapper = styled.section`
 	
 	a:hover{
 		${tw`text-blue-400`}
+	}
+
+	.list-white-space{
+		li{
+			${tw`mt-4 `}
+		}
 	}
 
     `
