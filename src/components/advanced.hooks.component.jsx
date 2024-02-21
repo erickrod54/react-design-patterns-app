@@ -9,10 +9,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 9.03 - AdvancedHooks
+/**react-design-patterns-app - version 9.04 - AdvancedHooks
  * - Features: 
  * 
- *     --> listing advanced hooks and small description  
+ *     --> Developing 'Keys 'concepts  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -33,7 +33,7 @@ const AdvancedHooks = () => {
                     used to solve a variaty of problems:
                 </p>
 
-            <ul>
+            <ul className="list-white-space">
                 <li>
                     <span className="text-white font-semibold"> keys </span> ( Unique identifiers used by React to efficiently update and manage lists of elements )
                 </li>
@@ -62,6 +62,16 @@ const AdvancedHooks = () => {
                     <span className="text-white font-semibold"> Async React Router </span> ( Feature of React Router that allows for lazy loading and code splitting of route components, enhancing performance by loading components asynchronously. )
                 </li>
             </ul>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="advanced-hooks-keys"><span > keys </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                The <span className="text-white font-semibold"> implementation of keys </span> in <span className="text-white font-semibold"> React Components </span> 
+                is highly important for the context of <span className="text-white font-semibold"> managing state preservation </span> and preventing unexpected 
+                behavior when rendering components
+            </p>
 
             </SectionWrapper>
         </div>)
