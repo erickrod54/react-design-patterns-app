@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Counter } from "./index.components";
+import { PrimaryButton } from "../styledcomponents/styled.components.index";
 
 
-/**react-design-patterns-app - version 9.06 - KeysExercise 
+/**react-design-patterns-app - version 9.09 - KeysExercise 
  * - Features: 
  * 
- *     --> Building 'KeysExercise'
+ *     --> Importing 'PrimaryButton'
  * 
  * Note: This is the first topic
  */
@@ -15,7 +16,7 @@ const KeysExercise = () => {
   const [changeShirts, setChangeShirts] = useState(false);
 
   return (
-    <div>
+    <div> 
       {changeShirts ? (
         <>
           <span>Shirts counts: </span> <Counter />{" "}
@@ -26,7 +27,9 @@ const KeysExercise = () => {
         </>
       )}
       <br />
-      <button onClick={() => setChangeShirts((s) => !s)}>Switch</button>
+        <PrimaryButton>
+            <button onClick={() => setChangeShirts((s) => !s)}>Switch</button>
+        </PrimaryButton>
     </div>
   );
 }
