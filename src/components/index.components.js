@@ -28,6 +28,7 @@ import ForwardingHookRefForm from "./forwarding.useforwardref.form.component";
 import FunctionalProgramming from "./functional.programming.component";
 import HOCPattern from "./hoc.pattern.component";
 import IntroComponent from "./intro.component";
+import Counter from "./keys.counter.component";
 import LayoutComponentPattern from "./layout.pattern.component";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
@@ -47,10 +48,11 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-/**react-design-patterns-app - version 9.02 - components > index  
+
+/**react-design-patterns-app - version 9.06 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'AdvancedHooks' 
+ *     --> Importing and exporting 'Counter' 
  * 
  * Note: Pending to make responsive design
  */
@@ -104,5 +106,6 @@ export {
          ForwardingHookRefForm,
          ChildComponent,
          MasterComponent,
-         AdvancedHooks
+         AdvancedHooks,
+         Counter
         }
