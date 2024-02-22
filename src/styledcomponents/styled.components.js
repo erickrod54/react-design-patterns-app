@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 9.07 - styled.components
+/**react-design-patterns-app - version 9.09 - styled.components
  * - Features: 
  * 
- *     --> writting 'PrimaryButton' extended Component.	
+ *     --> writting 'number-center' style class.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -77,7 +77,11 @@ export const AlertWrapper = styled.div`
 `
 
 export const ButtonWrapper = styled.div`
-		${tw`flex flex-row`}
+		${tw`flex flex-row align-top`}
+
+		.number-center{
+			${tw`justify-center items-center mr-4 ml-4 mt-2 text-6xl`}
+		}
 
 		button{
 			${tw`m-4 p-4`}
