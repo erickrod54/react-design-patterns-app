@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { ButtonGeneral, ButtonWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 9.06 - Counter 
+/**react-design-patterns-app - version 9.09 - Counter 
  * - Features: 
  * 
- *     --> Building 'Counter'
+ *     --> Refactoring component styles for 'Counter'
  * 
  * Note: This is the first topic
  */
@@ -12,11 +13,17 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <button onClick={() => setCount((c) => c - 1)}>-</button>
-      {count}
-      <button onClick={() => setCount((c) => c + 1)}>+</button>
-    </>
+    <ButtonWrapper>
+        <ButtonGeneral>
+            <button onClick={() => setCount((c) => c - 1)}>-</button>
+        </ButtonGeneral>
+        <div className="number-center">
+            {count}
+        </div>
+        <ButtonGeneral>
+            <button onClick={() => setCount((c) => c + 1)}>+</button>
+        </ButtonGeneral>
+    </ButtonWrapper>
   );
 };
 
