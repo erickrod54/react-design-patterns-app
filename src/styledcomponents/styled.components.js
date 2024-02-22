@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 9.05 - styled.components
+/**react-design-patterns-app - version 9.07 - styled.components
  * - Features: 
  * 
- *     --> writting 'advanced-hooks-keys' style class.	
+ *     --> writting 'PrimaryButton' extended Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -56,6 +56,13 @@ export const ButtonGeneral = styled.div`
 	input,
 	button{
 		${tw`flex justify-center items-center bg-blue-300 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer`}
+	}
+`
+
+export const PrimaryButton = styled(ButtonGeneral)`
+	input,
+	button{
+		${tw`flex justify-center items-center bg-violet-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer`}
 	}
 `
 
