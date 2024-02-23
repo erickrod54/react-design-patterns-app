@@ -29,6 +29,7 @@ import FunctionalProgramming from "./functional.programming.component";
 import HOCPattern from "./hoc.pattern.component";
 import IntroComponent from "./intro.component";
 import Counter from "./keys.counter.component";
+import KeysExercise from "./keys.exersice.component";
 import LayoutComponentPattern from "./layout.pattern.component";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
@@ -48,11 +49,10 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 
-
-/**react-design-patterns-app - version 9.06 - components > index  
+/**react-design-patterns-app - version 9.09 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'Counter' 
+ *     --> Importing and exporting 'KeysExercise' 
  * 
  * Note: Pending to make responsive design
  */
@@ -107,5 +107,6 @@ export {
          ChildComponent,
          MasterComponent,
          AdvancedHooks,
-         Counter
+         Counter,
+         KeysExercise
         }
