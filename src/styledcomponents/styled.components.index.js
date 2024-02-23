@@ -5,14 +5,15 @@ import { AlertWrapper,
          Container,
          CustomTitleStyle,
          FormWrapper,
+         KeyExerciseWrapper,
          ListWrapper,
          MasterWrapper,
          ModalBackground, ModalContent, OpenModalWrapper, Panel, PrimaryButton, SectionWrapper, StepFlowWrapper } from "./styled.components";
 
-/**react-design-patterns-app - version 9.09 - styledcomponents > index
+/**react-design-patterns-app - version 9.10 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'PrimaryButton' 
+ *     --> Importing and exporting 'KeyExerciseWrapper' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -28,4 +29,4 @@ export { SectionWrapper,
          Container,
          Panel, ListWrapper,
          ModalBackground,
-         ModalContent, OpenModalWrapper, ButtonGeneral, FormWrapper, StepFlowWrapper, ButtonWrapper, AlertWrapper, MasterWrapper, ChildWrapper, PrimaryButton }
+         ModalContent, OpenModalWrapper, ButtonGeneral, FormWrapper, StepFlowWrapper, ButtonWrapper, AlertWrapper, MasterWrapper, ChildWrapper, PrimaryButton, KeyExerciseWrapper }
