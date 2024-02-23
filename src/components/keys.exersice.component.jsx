@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Counter } from "./index.components";
-import { PrimaryButton } from "../styledcomponents/styled.components.index";
+import { KeyExerciseWrapper, PrimaryButton } from "../styledcomponents/styled.components.index";
 
-
-/**react-design-patterns-app - version 9.09 - KeysExercise 
+/**react-design-patterns-app - version 9.10 - KeysExercise 
  * - Features: 
  * 
- *     --> Importing 'PrimaryButton'
+ *     --> Importing 'KeyExerciseWrapper'
  * 
  * Note: This is the first topic
  */
@@ -16,7 +15,7 @@ const KeysExercise = () => {
   const [changeShirts, setChangeShirts] = useState(false);
 
   return (
-    <div> 
+    <KeyExerciseWrapper>
       {changeShirts ? (
         <>
           <span>Shirts counts: </span> <Counter />{" "}
@@ -30,7 +29,7 @@ const KeysExercise = () => {
         <PrimaryButton>
             <button onClick={() => setChangeShirts((s) => !s)}>Switch</button>
         </PrimaryButton>
-    </div>
+    </KeyExerciseWrapper>
   );
 }
 
