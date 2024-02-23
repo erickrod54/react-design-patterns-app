@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Counter } from "./index.components";
 import { KeyExerciseWrapper, PrimaryButton } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 9.10 - KeysExercise 
+/**react-design-patterns-app - version 9.11 - KeysExercise 
  * - Features: 
  * 
- *     --> Importing 'KeyExerciseWrapper'
+ *     --> Refactoring 'KeyExerciseWrapper' styles
  * 
  * Note: This is the first topic
  */
@@ -18,11 +18,11 @@ const KeysExercise = () => {
     <KeyExerciseWrapper>
       {changeShirts ? (
         <>
-          <span>Shirts counts: </span> <Counter />{" "}
+          <span >Shirts counts: </span> <Counter />{" "}
         </>
       ) : (
         <>
-          <span>Shoes counts: </span> <Counter />{" "}
+          <span >Shoes counts: </span> <Counter />{" "}
         </>
       )}
       <br />
