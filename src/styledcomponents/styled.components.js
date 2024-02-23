@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 9.10 - styled.components
+/**react-design-patterns-app - version 9.11 - styled.components
  * - Features: 
  * 
- *     --> writting 'KeyExerciseWrapper' style component.	
+ *     --> writting 'KeyExerciseWrapper' text styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -67,7 +67,7 @@ export const PrimaryButton = styled(ButtonGeneral)`
 `
 
 export const KeyExerciseWrapper = styled.div`
-	${tw`flex flex-col m-4 p-4 justify-center items-center text-white`}
+	${tw`flex flex-col m-4 p-4 justify-center items-center text-white text-2xl `}
 `
 
 
