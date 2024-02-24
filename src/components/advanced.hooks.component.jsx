@@ -5,10 +5,10 @@ import KeysExercise from "./keys.exersice.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 9.12 - AdvancedHooks
+/**react-design-patterns-app - version 9.13 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'keyexercisecode ' code  
+ *     --> Adding 'countercode ' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -20,6 +20,7 @@ const AdvancedHooks = () => {
     const { CodeData } = usePatternsAppContext();
 
     const keyexercisecode = CodeData[72].code;
+    const countercode = CodeData[73].code;
 
     return(
         <div>
@@ -87,6 +88,16 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={keyexercisecode}/>
+
+            <p>
+                and the <span className="text-white font-semibold"> {`<Counter />`} </span> code as follows:
+            </p>
+
+            <BashCode code={countercode}/>
+
+            <p>
+                resulting in:
+            </p>
 
             <KeysExercise />
 
