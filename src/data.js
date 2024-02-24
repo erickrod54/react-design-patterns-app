@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 9.12 - data js  
+/**react-design-patterns-app - version 9.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'KeysExercise' 
+ *     --> Adding 'Counter' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2109,7 +2109,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   },
   {
     id: 72,
-    name: 'componentDidCatch lifecycle method - Error Boundaries',
+    name: 'KeysExercise - KeysExercise',
     code:   
     ` 
     /**this exercise has no keys implemented*/
@@ -2138,7 +2138,36 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export default KeysExercise;   
   `
+  },
+  {
+    id: 73,
+    name: 'Counter - KeyExercise',
+    code:   
+    ` 
+    /**the counter is use to set a number for shirts and shoes*/
+    const Counter = () => {
+      const [count, setCount] = useState(0);
+    
+      return (
+        <ButtonWrapper>
+            <ButtonGeneral>
+                <button onClick={() => setCount((c) => c - 1)}>-</button>
+            </ButtonGeneral>
+            <div className="number-center">
+                {count}
+            </div>
+            <ButtonGeneral>
+                <button onClick={() => setCount((c) => c + 1)}>+</button>
+            </ButtonGeneral>
+        </ButtonWrapper>
+      );
+    };
+    
+    export default Counter;   
+  `
   }
+
+  
 ];
 
 /**List Pattern data  -- start */
