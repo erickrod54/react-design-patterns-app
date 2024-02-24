@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 9.01 - data js  
+/**react-design-patterns-app - version 9.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'componentDidCatch' 
+ *     --> Adding 'KeysExercise' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2105,6 +2105,38 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       // Set the state to trigger a re-render without the error
       this.setState({ hasError: true });
     }   
+  `
+  },
+  {
+    id: 72,
+    name: 'componentDidCatch lifecycle method - Error Boundaries',
+    code:   
+    ` 
+    /**this exercise has no keys implemented*/
+    const KeysExercise = () => {
+
+      const [changeShirts, setChangeShirts] = useState(false);
+    
+      return (
+        <KeyExerciseWrapper>
+          {changeShirts ? (
+            <>
+              <span >Shirts counts: </span> <Counter />{" "}
+            </>
+          ) : (
+            <>
+              <span >Shoes counts: </span> <Counter />{" "}
+            </>
+          )}
+          <br />
+            <PrimaryButton>
+                <button onClick={() => setChangeShirts((s) => !s)}>Switch</button>
+            </PrimaryButton>
+        </KeyExerciseWrapper>
+      );
+    }
+    
+    export default KeysExercise;   
   `
   }
 ];
