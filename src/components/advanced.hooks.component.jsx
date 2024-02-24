@@ -2,17 +2,24 @@ import React from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import KeysExercise from "./keys.exersice.component";
+import BashCode from "./bash.higlight.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 9.11 - AdvancedHooks
+/**react-design-patterns-app - version 9.12 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'KeysExercise 'exercise  
+ *     --> Adding 'keyexercisecode ' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
  */
 
 const AdvancedHooks = () => {
+
+    
+    const { CodeData } = usePatternsAppContext();
+
+    const keyexercisecode = CodeData[72].code;
 
     return(
         <div>
@@ -73,6 +80,13 @@ const AdvancedHooks = () => {
                 allow </span> React to <span className="text-white font-semibold"> efficientlly update and manage the component tree </span> by distinguishing between 
                 <span className="text-white font-semibold">  different instances of the same component </span>
             </p>
+
+            <p>
+                so i have the an exercise that <span className="text-white font-semibold"> counts items </span> as <span className="text-white font-semibold"> shirts and shoes 
+                </span> you can imagine as a shopping cart as follows:
+            </p>
+
+            <BashCode code={keyexercisecode}/>
 
             <KeysExercise />
 
