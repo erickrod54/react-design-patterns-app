@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 9.13 - data js  
+/**react-design-patterns-app - version 9.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'Counter' 
+ *     --> Adding comment to 'KeysExercise' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2120,6 +2120,9 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       return (
         <KeyExerciseWrapper>
           {changeShirts ? (
+            /**the fragments act as parent of the spans elements.
+             * when it switch even when they're not thwe same ( one for shirt and 
+             * one for shoes) the react tree detetcs them as the same */
             <>
               <span >Shirts counts: </span> <Counter />{" "}
             </>
