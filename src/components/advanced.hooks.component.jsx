@@ -1,11 +1,12 @@
 import React from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
+import KeysExercise from "./keys.exersice.component";
 
-/**react-design-patterns-app - version 9.05 - AdvancedHooks
+/**react-design-patterns-app - version 9.11 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'Keys 'concepts  
+ *     --> Developing 'KeysExercise 'exercise  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -72,6 +73,8 @@ const AdvancedHooks = () => {
                 allow </span> React to <span className="text-white font-semibold"> efficientlly update and manage the component tree </span> by distinguishing between 
                 <span className="text-white font-semibold">  different instances of the same component </span>
             </p>
+
+            <KeysExercise />
 
             </SectionWrapper>
         </div>)
