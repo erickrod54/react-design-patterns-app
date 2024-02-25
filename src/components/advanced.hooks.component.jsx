@@ -5,10 +5,10 @@ import KeysExercise from "./keys.exersice.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 9.13 - AdvancedHooks
+/**react-design-patterns-app - version 9.15 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'countercode ' code  
+ *     --> Adding 'withoutkeysexercisecode' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -21,6 +21,7 @@ const AdvancedHooks = () => {
 
     const keyexercisecode = CodeData[72].code;
     const countercode = CodeData[73].code;
+    const withoutkeysexercisecode = CodeData[74].code;
 
     return(
         <div>
@@ -90,6 +91,17 @@ const AdvancedHooks = () => {
             <BashCode code={keyexercisecode}/>
 
             <p>
+                so what happens if i set different parent elements for each span for example a <span className="text-white font-semibold"> {`<div >`} </span> and a 
+                <span className="text-white font-semibold"> {`<setion >`} </span> as follows:  
+            </p>
+
+            <BashCode code={withoutkeysexercisecode}/>
+
+            <p>
+                and this way the react tree will detect them as different affecting the state of the counter consequentlly
+            </p>
+
+            <p>
                 and the <span className="text-white font-semibold"> {`<Counter />`} </span> code as follows:
             </p>
 
@@ -100,6 +112,20 @@ const AdvancedHooks = () => {
             </p>
 
             <KeysExercise />
+
+            <p>
+                and by the resulting code i can notice in the behavior that as i switch between shirts and shoes keeps the
+                count is currenly the same for both <span className="text-white font-semibold"> ( should not be as this ),
+                </span> because as i can increase the counter for shirts i cannot 
+                assume that shoes are the same count, so here comes the question <span className="text-white font-semibold"> "how can i fix the count for each ?" </span>, 
+                and the answer is by using <span className="text-white font-semibold"> keys </span> for 
+                <span className="text-white font-semibold"> shirts and shoes. </span>
+            </p>
+
+            <p>
+                so refactoring the code the goal is to <span className="text-white font-semibold"> manage state preservation </span> will be to get will 
+                be as follows:
+            </p>
 
             </SectionWrapper>
         </div>)
