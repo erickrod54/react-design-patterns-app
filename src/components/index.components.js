@@ -48,11 +48,12 @@ import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
+import WithoutKeysExercise from "./withoutkeys.exersice.component";
 
-/**react-design-patterns-app - version 9.09 - components > index  
+/**react-design-patterns-app - version 9.15 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'KeysExercise' 
+ *     --> Importing and exporting 'WithKeysExercise' 
  * 
  * Note: Pending to make responsive design
  */
@@ -108,5 +109,6 @@ export {
          MasterComponent,
          AdvancedHooks,
          Counter,
-         KeysExercise
+         KeysExercise,
+         WithoutKeysExercise
         }
