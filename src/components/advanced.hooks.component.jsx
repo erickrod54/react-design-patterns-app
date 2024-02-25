@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 
-/**react-design-patterns-app - version 9.16 - AdvancedHooks
+/**react-design-patterns-app - version 9.17 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'WithoutKeysExercise' Component  
+ *     --> Developing 'KeysExercise' concepts  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -117,7 +117,8 @@ const AdvancedHooks = () => {
             <BashCode code={countercode}/>
 
             <p>
-                resulting in:
+                getting stick with <span className="text-white font-semibold"> KeysExercise </span>, it <span className="text-white font-semibold"> preserves the 
+                same state </span> for both elements, cause they are detected as the same span, resulting in:
             </p>
 
             <KeysExercise />
