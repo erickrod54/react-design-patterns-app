@@ -4,11 +4,12 @@ import CustomTitle from "./custom.title.component";
 import KeysExercise from "./keys.exersice.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
+import WithoutKeysExercise from "./withoutkeys.exersice.component";
 
-/**react-design-patterns-app - version 9.15 - AdvancedHooks
+/**react-design-patterns-app - version 9.16 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'withoutkeysexercisecode' code  
+ *     --> Adding 'WithoutKeysExercise' Component  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -98,7 +99,15 @@ const AdvancedHooks = () => {
             <BashCode code={withoutkeysexercisecode}/>
 
             <p>
-                and this way the react tree will detect them as different affecting the state of the counter consequentlly
+                resulting as follows:
+            </p>
+
+            <WithoutKeysExercise />
+
+            <p>
+                and this way the <span className="text-white font-semibold"> react tree </span> will <span className="text-white font-semibold"> detect them as 
+                different element in the tree </span>, affecting the state of the counter consequentlly, and even with this modification get's affected but 
+                <span className="text-white font-semibold"> not preserved </span> as can be noticed
             </p>
 
             <p>
