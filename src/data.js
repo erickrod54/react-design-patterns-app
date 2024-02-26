@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 9.18 - data js  
+/**react-design-patterns-app - version 10.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'WithtKeysExercise' 
+ *     --> Adding 'AlertMessageWithEventListener' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2200,9 +2200,38 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export default WithtKeysExercise;
   `
+  },
+  {
+    id: 75,
+    name: 'AlertMessageWithEventListener - EventListeners',
+    code:   
+    ` 
+    /**here i add 'onClick' event to listen when i click an element ( - check the java console- )*/
+    const AlertMessageWithEventListener = () => {
+    
+      const [show, setShow] = useState(false);
+      
+      return (
+        /** here i add the 'onclick' event listener to detect the 'outer div'*/
+        <AlertWrapper onClick={() => console.log("Outter div")}>
+          <h1>Other Content for the Portal</h1>
+          <ButtonGeneral>
+            <button 
+              onClick={() => setShow(!show)}
+              >{show ?  'Click it to close.' : 'Show Message'}
+            </button>
+          </ButtonGeneral>
+          <AlertPortalEventListener show={show} onClose={() => setShow(false)}>
+            A sample message to show from portal to <span className="portal-end"> document.body </span>. <span className="dissapear"> ( Click me to dissappear ) </span>
+          </AlertPortalEventListener>
+        </AlertWrapper>
+      );
+  
   }
-
-
+  
+  export default AlertMessageWithEventListener;
+  `
+  }
 ];
 
 /**List Pattern data  -- start */
