@@ -7,10 +7,10 @@ import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 9.18 - AdvancedHooks
+/**react-design-patterns-app - version 9.19 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'withkeysexercisecode' concepts  
+ *     --> Adding 'WithtKeysExercise' Component  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -146,6 +146,8 @@ const AdvancedHooks = () => {
                 being this way <span className="text-white font-semibold"> most accurate </span> in order to <span className="text-white font-semibold"> detect them as 
                 different elements </span> from each other and clearing its state to <span className="text-white font-semibold"> the default </span> as follows:
             </p>
+
+            <WithtKeysExercise />
 
             <p>
                 In summary,<span className="text-white font-semibold"> while the key prop itself doesn't directly affect the state </span> of the Counter component, it 
