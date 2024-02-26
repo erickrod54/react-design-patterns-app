@@ -7,10 +7,10 @@ import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 9.19 - AdvancedHooks
+/**react-design-patterns-app - version 9.20 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'WithtKeysExercise' Component  
+ *     --> Developing 'Event listeners' Component  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -154,6 +154,16 @@ const AdvancedHooks = () => {
                 <span className="text-white font-semibold"> plays a crucial role in React's rendering </span> and 
                 <span className="text-white font-semibold"> reconciliation process </span>, ensuring efficient 
                 <span className="text-white font-semibold"> updates and maintaining component stability. </span>
+            </p>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="event-listeners-hooks"><span > event listeners </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                it's important to use event listeners in React components to handle user interactions and respond to events effectively. Event 
+                handlers like onClick typically follow the bubbling phase, where events propagate from the target element up through its 
+                ancestors. This means that event handlers attached to parent elements will be triggered after those attached to child elements.
             </p>
 
             </SectionWrapper>
