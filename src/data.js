@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 9.15 - data js  
+/**react-design-patterns-app - version 9.18 - data js  
  * - Features: 
  *    
- *     --> Adding comment to 'WithoutKeysExercise' 
+ *     --> Adding 'WithtKeysExercise' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2171,40 +2171,38 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   },
   {
     id: 74,
-    name: 'WithoutKeysExercise - KeyExercise',
+    name: 'WithtKeysExercise - KeyExercise',
     code:   
     ` 
-    /**here i change the parents elements for each*/
-    const Counter = () => {
-      const WithoutKeysExercise = () => {
+    /**here i add the keys "shirts" and key="shoes" for each element*/
+    const WithtKeysExercise = () => {
 
-        const [changeShirts, setChangeShirts] = useState(false);
-      
-        return (
-          <KeyExerciseWrapper>
-            {changeShirts ? (
-              /** a 'div' here */
-              <div>
-                <span >Shirts counts: </span> <Counter />{" "}
-              </div>
-            ) : (
-              /** a 'section' here */
-              <section>
-                <span >Shoes counts: </span> <Counter />{" "}
-              </section>
-            )}
-            <br />
-              <PrimaryButton>
-                  <button onClick={() => setChangeShirts((s) => !s)}>Switch</button>
-              </PrimaryButton>
-          </KeyExerciseWrapper>
-        );
-      }
-      
-      export default WithoutKeysExercise;   
+      const [changeShirts, setChangeShirts] = useState(false);
+    
+      return (
+        <KeyExerciseWrapper>
+          {changeShirts ? (
+            <>
+              <span >Shirts counts: </span> <Counter key="shirts"/>{" "}
+            </>
+          ) : (
+            <>
+              <span >Shoes counts: </span> <Counter  key="shoes"/>{" "}
+            </>
+          )}
+          <br />
+            <PrimaryButton>
+                <button onClick={() => setChangeShirts((s) => !s)}>Switch</button>
+            </PrimaryButton>
+        </KeyExerciseWrapper>
+      );
+    }
+    
+    export default WithtKeysExercise;
   `
   }
-  
+
+
 ];
 
 /**List Pattern data  -- start */
