@@ -5,11 +5,12 @@ import KeysExercise from "./keys.exersice.component";
 import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
+import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 9.17 - AdvancedHooks
+/**react-design-patterns-app - version 9.18 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'KeysExercise' concepts  
+ *     --> Adding 'withkeysexercisecode' concepts  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -22,7 +23,8 @@ const AdvancedHooks = () => {
 
     const keyexercisecode = CodeData[72].code;
     const countercode = CodeData[73].code;
-    const withoutkeysexercisecode = CodeData[74].code;
+    const withoutkeysexercisecode = CodeData[73].code;
+    const withkeysexercisecode = CodeData[74].code;
 
     return(
         <div>
@@ -73,7 +75,7 @@ const AdvancedHooks = () => {
 
             <p>
                 The <span className="text-white font-semibold"> implementation of keys </span> in <span className="text-white font-semibold"> React Components </span> 
-                is highly important for the context of <span className="text-white font-semibold"> managing state preservation </span> and preventing unexpected 
+                is highly important for the context of <span className="text-white font-semibold"> managing render updating </span> and preventing unexpected 
                 behavior when rendering components
             </p>
 
@@ -106,8 +108,7 @@ const AdvancedHooks = () => {
 
             <p>
                 and this way the <span className="text-white font-semibold"> react tree </span> will <span className="text-white font-semibold"> detect them as 
-                different element in the tree </span>, affecting the state of the counter consequentlly, and even with this modification get's affected but 
-                <span className="text-white font-semibold"> not preserved </span> as can be noticed
+                different element in the tree </span>, affecting the render of the counter consequentlly, as can be noticed
             </p>
 
             <p>
@@ -118,7 +119,8 @@ const AdvancedHooks = () => {
 
             <p>
                 getting stick with <span className="text-white font-semibold"> KeysExercise </span>, it <span className="text-white font-semibold"> preserves the 
-                same state </span> for both elements, cause they are detected as the same span, resulting in:
+                same state </span> for both elements ( the react element does not get updated, unnecessary rendering ), cause they are detected as the same span, 
+                resulting in:
             </p>
 
             <KeysExercise />
@@ -133,8 +135,23 @@ const AdvancedHooks = () => {
             </p>
 
             <p>
-                so refactoring the code the goal is to <span className="text-white font-semibold"> manage state preservation </span> will be to get will 
+                so refactoring the code the goal is to <span className="text-white font-semibold"> manage update render of the component </span> will be to get will 
                 be as follows:
+            </p>
+
+            <BashCode code={withkeysexercisecode}/>
+
+
+            <p>
+                being this way <span className="text-white font-semibold"> most accurate </span> in order to <span className="text-white font-semibold"> detect them as 
+                different elements </span> from each other and clearing its state to <span className="text-white font-semibold"> the default </span> as follows:
+            </p>
+
+            <p>
+                In summary,<span className="text-white font-semibold"> while the key prop itself doesn't directly affect the state </span> of the Counter component, it 
+                <span className="text-white font-semibold"> plays a crucial role in React's rendering </span> and 
+                <span className="text-white font-semibold"> reconciliation process </span>, ensuring efficient 
+                <span className="text-white font-semibold"> updates and maintaining component stability. </span>
             </p>
 
             </SectionWrapper>
