@@ -49,11 +49,13 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
+import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 9.15 - components > index  
+
+/**react-design-patterns-app - version 9.18 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'WithKeysExercise' 
+ *     --> Importing and exporting 'WithtKeysExercise' 
  * 
  * Note: Pending to make responsive design
  */
@@ -110,5 +112,6 @@ export {
          AdvancedHooks,
          Counter,
          KeysExercise,
-         WithoutKeysExercise
+         WithoutKeysExercise,
+         WithtKeysExercise
         }
