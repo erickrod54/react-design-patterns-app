@@ -3,10 +3,10 @@ import { AlertWrapper, ButtonGeneral } from "../styledcomponents/styled.componen
 import { AlertPortal } from "./index.components";
 import AlertPortalEventListener from "./alert.event.listener.portal.component";
 
-/**react-design-patterns-app - version 10.00 - AlertMessageWithEventListener
+/**react-design-patterns-app - version 10.02 - AlertMessageWithEventListener
  * - Features: 
  * 
- *     --> Building 'AlertMessageWithEventListener' 
+ *     --> Adding "Outter div"  message
  * 
  * Note: This is the portal subcomponent call
  */
@@ -17,7 +17,7 @@ const AlertMessageWithEventListener = () => {
     
     return (
       <AlertWrapper onClick={() => console.log("Outter div")}>
-        <h1>Other Content for the Portal</h1>
+        <h1>Other Content for the Portal ( Check the Java Console for the "Outter div")</h1>
         <ButtonGeneral>
           <button 
             onClick={() => setShow(!show)}
