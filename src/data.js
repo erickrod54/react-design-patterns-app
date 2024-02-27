@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.00 - data js  
+/**react-design-patterns-app - version 10.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'AlertMessageWithEventListener' 
+ *     --> Adding 'AlertPortalEventListener' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2230,6 +2230,29 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   }
   
   export default AlertMessageWithEventListener;
+  `
+  },
+  {
+    id: 76,
+    name: 'AlertPortalEventListener - EventListeners',
+    code:   
+    ` 
+    const AlertPortalEventListener = ({ children, onClose, show }) => {
+      if (!show) return;
+      return createPortal(
+        /**here i add 'onClick' event to listen when i click an element ( - check the java console- )*/
+          <ModalBackground onClick={() => console.log("Inner div")}>
+            <ModalContent>
+              <div className="alert" onClick={onClose}>
+                {children}
+              </div>
+            </ModalContent>
+          </ModalBackground>,
+          document.body
+      );
+    };
+  
+    export default AlertPortalEventListener;
   `
   }
 ];
