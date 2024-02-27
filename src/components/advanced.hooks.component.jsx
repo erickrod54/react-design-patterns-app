@@ -6,11 +6,12 @@ import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
+import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 
-/**react-design-patterns-app - version 10.02 - AdvancedHooks
+/**react-design-patterns-app - version 10.03 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'alertportaleventListenercode' code  
+ *     --> Rendering 'AlertMessageWithEventListener' Component  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -182,6 +183,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={alertportaleventListenercode}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <AlertMessageWithEventListener />
 
             </SectionWrapper>
         </div>)
