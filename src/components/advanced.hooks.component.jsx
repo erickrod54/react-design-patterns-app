@@ -6,12 +6,11 @@ import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
-import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 
-/**react-design-patterns-app - version 10.01 - AdvancedHooks
+/**react-design-patterns-app - version 10.02 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'alertMessagewitheventListener' code  
+ *     --> Adding 'alertportaleventListenercode' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -27,6 +26,7 @@ const AdvancedHooks = () => {
     const withoutkeysexercisecode = CodeData[73].code;
     const withkeysexercisecode = CodeData[74].code;
     const alertMessagewitheventListener = CodeData[75].code;
+    const alertportaleventListenercode = CodeData[76].code;
 
     return(
         <div>
@@ -163,9 +163,12 @@ const AdvancedHooks = () => {
             </CustomTitleStyle>
 
             <p>
-                it's important to use event listeners in React components to handle user interactions and respond to events effectively. Event 
-                handlers like onClick typically follow the bubbling phase, where events propagate from the target element up through its 
-                ancestors. This means that event handlers attached to parent elements will be triggered after those attached to child elements.
+                it's important to use event listeners in React components to <span className="text-white font-semibold"> handle user interactions 
+                </span> and <span className="text-white font-semibold"> respond to events effectively. </span> Event 
+                handlers like <span className="text-white font-semibold"> onClick typically follow the bubbling phase, </span> where 
+                <span className="text-white font-semibold"> events propagate </span> from the <span className="text-white font-semibold"> target 
+                element up through its ancestors. </span> This means <span className="text-white font-semibold"> that event handlers attached to parent </span> 
+                elements <span className="text-white font-semibold"> will be triggered after those attached to child elements. </span>
             </p>
 
             <p>
@@ -173,6 +176,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={alertMessagewitheventListener}/>
+
+            <p>
+                and the AlertPortalEventListener code with the inner div will be as follows:
+            </p>
+
+            <BashCode code={alertportaleventListenercode}/>
 
             </SectionWrapper>
         </div>)
