@@ -3,10 +3,10 @@ import { AlertWrapper, ButtonGeneral } from "../styledcomponents/styled.componen
 import { AlertPortal } from "./index.components";
 import AlertPortalEventListener from "./alert.event.listener.portal.component";
 
-/**react-design-patterns-app - version 10.02 - AlertMessageWithEventListener
+/**react-design-patterns-app - version 10.03 - AlertMessageWithEventListener
  * - Features: 
  * 
- *     --> Adding "Outter div"  message
+ *     --> Changing 'AlertPortalEventListener' children
  * 
  * Note: This is the portal subcomponent call
  */
@@ -25,7 +25,7 @@ const AlertMessageWithEventListener = () => {
           </button>
         </ButtonGeneral>
         <AlertPortalEventListener show={show} onClose={() => setShow(false)}>
-          A sample message to show from portal to <span className="portal-end"> document.body </span>. <span className="dissapear"> ( Click me to dissappear ) </span>
+            A sample message <span className="portal-end"> ( Click me to dissappear - Check the Java Console for "Inner div" ) </span>
         </AlertPortalEventListener>
       </AlertWrapper>
     );
