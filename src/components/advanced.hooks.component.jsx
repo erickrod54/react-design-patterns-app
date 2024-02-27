@@ -6,11 +6,12 @@ import BashCode from "./bash.higlight.component";
 import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
+import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 
-/**react-design-patterns-app - version 9.20 - AdvancedHooks
+/**react-design-patterns-app - version 10.01 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'Event listeners' Component  
+ *     --> Adding 'alertMessagewitheventListener' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -25,6 +26,7 @@ const AdvancedHooks = () => {
     const countercode = CodeData[73].code;
     const withoutkeysexercisecode = CodeData[73].code;
     const withkeysexercisecode = CodeData[74].code;
+    const alertMessagewitheventListener = CodeData[75].code;
 
     return(
         <div>
@@ -165,6 +167,12 @@ const AdvancedHooks = () => {
                 handlers like onClick typically follow the bubbling phase, where events propagate from the target element up through its 
                 ancestors. This means that event handlers attached to parent elements will be triggered after those attached to child elements.
             </p>
+
+            <p>
+                so refactoring the alert message portal to use an onclick event listener, resulting as follows:
+            </p>
+
+            <BashCode code={alertMessagewitheventListener}/>
 
             </SectionWrapper>
         </div>)
