@@ -8,10 +8,10 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 
-/**react-design-patterns-app - version 10.03 - AdvancedHooks
+/**react-design-patterns-app - version 10.04 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'AlertMessageWithEventListener' Component  
+ *     --> Developing 'onClickCapture' Event  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -189,6 +189,27 @@ const AdvancedHooks = () => {
             </p>
 
             <AlertMessageWithEventListener />
+
+            <br />
+            <br />
+
+            <p>
+                However, sometimes <span className="text-white font-semibold"> it will be necessary 
+                to handle events during the capturing phase </span>, where <span className="text-white font-semibold">
+                events propagate from the root element down to the target element.</span> This can be useful 
+                <span className="text-white font-semibold"> for scenarios where i need to intercept events before they 
+                reach their target, or if i want to ensure that certain event handlers are executed before others </span>
+            </p>
+
+            <p>
+                in order to reach this goal the event listener instead of <span className="text-white font-semibold"> 
+                onClick </span> will be <span className="text-white font-semibold"> onClickCapture </span>
+                so by using <span className="text-white font-semibold"> onClickCapture ensures </span> that the event 
+                handler <span className="text-white font-semibold"> attached to the outer div is triggered before the one 
+                attached to the inner div.</span> This can be important if the order of event handling is significant for your 
+                the application logic, an also to <span className="text-white font-semibold"> determine the elements have 
+                the right order trigger  ( for logic bugs ). </span>
+            </p>
 
             </SectionWrapper>
         </div>)
