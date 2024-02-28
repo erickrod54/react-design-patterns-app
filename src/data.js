@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.02 - data js  
+/**react-design-patterns-app - version 10.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'AlertPortalEventListener' 
+ *     --> Adding 'AlertMessageWithEventCapture' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2253,6 +2253,38 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
   
     export default AlertPortalEventListener;
+  `
+  },
+  {
+    id: 77,
+    name: 'AlertMessageWithEventCapture - EventListeners',
+    code:   
+    ` 
+    const AlertMessageWithEventCapture = () => {
+    
+      const [show, setShow] = useState(false);
+      
+      return (
+        /**the refactor by replacing 'onClick' by 'onClickCapture' will attach 
+         * the 'Outter div' with the 'Inner div' giving control in every phase that 
+         * events get triggered*/
+        <AlertWrapper onClickCapture={() => console.log("Outter div")}>
+          <h1>Other Content for the Portal ( Check the Java Console for the "Outter div")</h1>
+          <ButtonGeneral>
+            <button 
+              onClick={() => setShow(!show)}
+              >{show ?  'Click it to close.' : 'Show Message'}
+            </button>
+          </ButtonGeneral>
+          <AlertPortalEventCapture show={show} onClose={() => setShow(false)}>
+              A sample message <span className="portal-end"> ( Click me to dissappear - Check the Java Console for "Inner div" ) </span>
+          </AlertPortalEventCapture>
+        </AlertWrapper>
+      );
+  
+  }
+  
+  export default AlertMessageWithEventCapture;
   `
   }
 ];
