@@ -8,10 +8,10 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 
-/**react-design-patterns-app - version 10.04 - AdvancedHooks
+/**react-design-patterns-app - version 10.05 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'onClickCapture' Event  
+ *     --> Adding 'alertmessagewitheventcapture' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -28,6 +28,7 @@ const AdvancedHooks = () => {
     const withkeysexercisecode = CodeData[74].code;
     const alertMessagewitheventListener = CodeData[75].code;
     const alertportaleventListenercode = CodeData[76].code;
+    const alertmessagewitheventcapture = CodeData[77].code;
 
     return(
         <div>
@@ -210,6 +211,13 @@ const AdvancedHooks = () => {
                 the application logic, an also to <span className="text-white font-semibold"> determine the elements have 
                 the right order trigger  ( for logic bugs ). </span>
             </p>
+
+            <p>
+                so refactoring to <span className="text-white font-semibold"> capture </span> every phase using 
+                <span className="text-white font-semibold"> onClickCapture: </span>
+            </p>
+
+            <BashCode code={alertmessagewitheventcapture}/>
 
             </SectionWrapper>
         </div>)
