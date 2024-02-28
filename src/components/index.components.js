@@ -1,5 +1,6 @@
 
 import AdvancedHooks from "./advanced.hooks.component";
+import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
 import AlertMessage from "./alert.message.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 import AlertMessageWithPortal from "./alert.message.portal.component";
@@ -53,10 +54,10 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
 
-/**react-design-patterns-app - version 10.00 - components > index  
+/**react-design-patterns-app - version 10.04 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'AlertMessageWithEventListener' 
+ *     --> Importing and exporting 'AlertMessageWithEventCapture' 
  * 
  * Note: Pending to make responsive design
  */
@@ -115,5 +116,6 @@ export {
          KeysExercise,
          WithoutKeysExercise,
          WithtKeysExercise,
-         AlertMessageWithEventListener
+         AlertMessageWithEventListener,
+         AlertMessageWithEventCapture
         }
