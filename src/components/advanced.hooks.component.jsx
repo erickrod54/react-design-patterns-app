@@ -8,10 +8,10 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 
-/**react-design-patterns-app - version 10.05 - AdvancedHooks
+/**react-design-patterns-app - version 10.06 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'alertmessagewitheventcapture' code  
+ *     --> Adding 'alertportalcode' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -29,6 +29,7 @@ const AdvancedHooks = () => {
     const alertMessagewitheventListener = CodeData[75].code;
     const alertportaleventListenercode = CodeData[76].code;
     const alertmessagewitheventcapture = CodeData[77].code;
+    const alertportalcode = CodeData[78].code;
 
     return(
         <div>
@@ -218,6 +219,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={alertmessagewitheventcapture}/>
+
+            <p>
+                and the <span className="text-white font-semibold"> AlertPortalEventCapture </span> as follows:
+            </p>
+
+            <BashCode code={alertportalcode}/>
 
             </SectionWrapper>
         </div>)
