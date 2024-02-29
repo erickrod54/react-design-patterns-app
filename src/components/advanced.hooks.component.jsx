@@ -7,11 +7,12 @@ import { usePatternsAppContext } from "../context";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
+import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
 
-/**react-design-patterns-app - version 10.06 - AdvancedHooks
+/**react-design-patterns-app - version 10.07 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'alertportalcode' code  
+ *     --> Rendereing 'AlertMessageWithEventCapture'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -225,6 +226,13 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={alertportalcode}/>
+
+            <p>
+                resulting in the <span className="text-white font-semibold"> inner div </span> attached to the 
+                <span className="text-white font-semibold"> outer div </span> as follows: <span className="text-white font-semibold"> ( check the java console ) </span>
+            </p>
+
+            <AlertMessageWithEventCapture />
 
             </SectionWrapper>
         </div>)
