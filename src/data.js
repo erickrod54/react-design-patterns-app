@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.04 - data js  
+/**react-design-patterns-app - version 10.06 - data js  
  * - Features: 
  *    
- *     --> Adding 'AlertMessageWithEventCapture' 
+ *     --> Adding 'AlertPortalEventCapture' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2285,6 +2285,35 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   }
   
   export default AlertMessageWithEventCapture;
+  `
+  },
+  {
+    id: 78,
+    name: 'AlertPortalEventCapture - EventListeners',
+    code:   
+    ` 
+    const AlertPortalEventCapture = ({ children, onClose, show }) => {
+      if (!show) return;
+    
+      return createPortal(
+          <ModalBackground 
+              /** here i use the event listener to capture 
+               * this phase*/
+              onClickCapture={() => {
+                  onClose();
+                  console.log("Inner div")
+              }}>
+            <ModalContent>
+              <div className="alert" onClick={onClose}>
+                {children}
+              </div>
+            </ModalContent>
+          </ModalBackground>,
+          document.body
+      );
+    };
+  
+    export default AlertPortalEventCapture;
   `
   }
 ];
