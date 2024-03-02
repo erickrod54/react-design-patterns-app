@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.06 - data js  
+/**react-design-patterns-app - version 10.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'AlertPortalEventCapture' 
+ *     --> Adding 'TopUseLayoutEffect' 
  *        code
  * 
  * Note: This component will have later the main menu
@@ -2314,6 +2314,46 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
   
     export default AlertPortalEventCapture;
+  `
+  },
+  {
+    id: 79,
+    name: 'TopUseLayoutEffect - useLayoutEffect Pattern',
+    code:   
+    ` 
+    /**This component has an issue with delay rendering */
+      const TopUseLayoutEffect = () => {
+
+      const [show, setShow] = useState(false);
+      const [top, setTop] = useState(0);
+      const buttonRef = useRef(null);
+
+      useEffect(() => {
+        if (buttonRef.current === null || !show) return setTop(0);
+        const { bottom } = buttonRef.current.getBoundingClientRect();
+        setTop(bottom + 30);
+      }, [show]);
+
+      const now = performance.now();
+      while (now > performance.now() - 200) {
+        //Do something
+      }
+
+      return (
+        <>
+          <button ref={buttonRef} onClick={() => setShow((s) => !s)}>
+            Show
+          </button>
+          {show && (
+            <ToolTipWrapper top={top}>
+                Some text ...    
+            </ToolTipWrapper>
+          )}
+        </>
+      );
+    }
+
+    export default TopUseLayoutEffect;
   `
   }
 ];
