@@ -8,11 +8,12 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
+import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 10.07 - AdvancedHooks
+/**react-design-patterns-app - version 10.09 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendereing 'AlertMessageWithEventCapture'   
+ *     --> Developing 'useLayout pattern' advantages   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -232,7 +233,58 @@ const AdvancedHooks = () => {
                 <span className="text-white font-semibold"> outer div </span> as follows: <span className="text-white font-semibold"> ( check the java console ) </span>
             </p>
 
+
             <AlertMessageWithEventCapture />
+
+            <br />
+            <br />
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="use-layout-pattern"><span > useLayout pattern </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                <span className="text-white font-semibold"> useLayoutEffect </span> hook in React  <span className="text-white font-semibold"> 
+                address issues </span> related to <span className="text-white font-semibold"> UI rendering and responsiveness. </span> 
+                and achieving <span className="text-white font-semibold"> smooth user experience. </span>
+            </p>
+
+            <p>
+                this pattern is for specefic use cases where i have <span className="text-white font-semibold"> UI components that are not 
+                highly complex </span> and are <span className="text-white font-semibold"> synchronous </span>
+            </p>
+
+            <p>
+                for example here i have an <span className="text-white font-semibold"> UI component  </span> that has an issue related with a 
+                <span className="text-white font-semibold"> lag rendering </span> due to a <span className="text-white font-semibold"> 
+                calculation  </span> that is required in order to render this component: 
+            </p>
+
+            <p>
+                Some <span className="text-white font-semibold"> advantages </span> of this pattern are: 
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Solving Rendering Lag </span> ( addresses rendering delays caused by asynchronous behavior in useEffect )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Synchronous Execution </span> ( executes synchronously, allowing for immediate updates to the DOM based on calculations performed within the hook )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Improved User Experience </span> ( By synchronizing calculations and rendering, useLayoutEffect enhances the user experience by eliminating UI inconsistencies and delays )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Precise UI Updates</span> ( UI updates accurately reflect changes in state or calculations, resulting in a smoother and more responsive interface. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Specific Use Cases </span> ( While useEffect is suitable for most scenarios, useLayoutEffect is particularly useful when precise UI rendering based on calculations is required )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Complementary to useEffect </span> ( opting for useLayoutEffect when synchronous rendering is critical and it's not meant to replace useEffect entirely. )
+                </li>
+            </ul>
+            
 
             </SectionWrapper>
         </div>)
