@@ -10,10 +10,10 @@ import AlertMessageWithEventListener from "./alert.message.event.listener.portal
 import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 10.09 - AdvancedHooks
+/**react-design-patterns-app - version 10.10 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'useLayout pattern' advantages   
+ *     --> Showing 'topuselayouteffectcode' code   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -32,6 +32,7 @@ const AdvancedHooks = () => {
     const alertportaleventListenercode = CodeData[76].code;
     const alertmessagewitheventcapture = CodeData[77].code;
     const alertportalcode = CodeData[78].code;
+    const topuselayouteffectcode = CodeData[79].code;
 
     return(
         <div>
@@ -259,6 +260,8 @@ const AdvancedHooks = () => {
                 <span className="text-white font-semibold"> lag rendering </span> due to a <span className="text-white font-semibold"> 
                 calculation  </span> that is required in order to render this component: 
             </p>
+
+            <BashCode code={topuselayouteffectcode}/>
 
             <p>
                 Some <span className="text-white font-semibold"> advantages </span> of this pattern are: 
