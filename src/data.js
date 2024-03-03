@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.12 - data js  
+/**react-design-patterns-app - version 10.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'TopUseLayoutEffect' comments
+ *     --> Adding 'ToolTipWrapper' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2365,6 +2365,21 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
 
     export default TopUseLayoutEffect;
+  `
+  },
+  {
+    id: 80,
+    name: 'ToolTipWrapper - useLayoutEffect Pattern',
+    code:   
+    ` 
+    /**This is the style component*/
+    export const ToolTipWrapper = styled.div\`
+
+    /*the 'top' prop was drilled, and this way is dynamiclly added*/
+    top: \${(top) => top}
+    
+    \${tw(\`absolute border-2 border-black m-4 p-4\`)}
+    \`;
   `
   }
 ];
