@@ -1,10 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.11 - data js  
+/**react-design-patterns-app - version 10.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonGeneral' 
- *        code line to 'TopUseLayoutEffect '
+ *     --> Adding 'TopUseLayoutEffect' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2323,17 +2322,26 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     ` 
     /**This component has an issue with delay rendering */
       const TopUseLayoutEffect = () => {
-
+  
       const [show, setShow] = useState(false);
+      
+      /*this states is a 'top' prop for css porpuses **/  
       const [top, setTop] = useState(0);
+
+      /** by using ref i am interacting directly with the DOM affecting
+       *  painting phases of the component render */
       const buttonRef = useRef(null);
 
+      /**This useEffect adds dynamicly the top prop in order to be absolute 
+       * to the button*/
       useEffect(() => {
         if (buttonRef.current === null || !show) return setTop(0);
         const { bottom } = buttonRef.current.getBoundingClientRect();
         setTop(bottom + 30);
       }, [show]);
 
+      /** this block of code adds the delay issue because the component  rendering will 
+       * depend on the calculation in order to render */
       const now = performance.now();
       while (now > performance.now() - 200) {
         //Do something
@@ -2347,6 +2355,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
           </button>
         </ButtonGeneral> 
           {show && (
+            /**here i drill the prop to use it in the component dynamicly*/
             <ToolTipWrapper top={top}>
                 Some text ...    
             </ToolTipWrapper>
