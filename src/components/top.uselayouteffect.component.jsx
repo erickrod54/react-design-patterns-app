@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ToolTipWrapper } from "../styledcomponents/styled.components";
+import { ButtonGeneral, ToolTipWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 10.09 - TopUseLayoutEffect
+/**react-design-patterns-app - version 10.11 - TopUseLayoutEffect
  * - Features: 
  * 
- *     --> Building 'TopUseLayoutEffect' Component.	
+ *     --> Wrapping buttonn using 'ButtonWrapper'.	
  * 
  * Note: this component has an issue related with the lag rendering
  */
@@ -28,9 +28,11 @@ const TopUseLayoutEffect = () => {
 
   return (
     <>
+    <ButtonGeneral>
       <button ref={buttonRef} onClick={() => setShow((s) => !s)}>
         Show
       </button>
+    </ButtonGeneral>
       {show && (
         <ToolTipWrapper top={top}>
             Some text ...    
