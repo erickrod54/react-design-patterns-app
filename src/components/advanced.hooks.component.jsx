@@ -10,10 +10,10 @@ import AlertMessageWithEventListener from "./alert.message.event.listener.portal
 import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 10.10 - AdvancedHooks
+/**react-design-patterns-app - version 10.12 - AdvancedHooks
  * - Features: 
  * 
- *     --> Showing 'topuselayouteffectcode' code   
+ *     --> Adding 'useLayoutEffect pattern' disadvantages   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -241,7 +241,7 @@ const AdvancedHooks = () => {
             <br />
 
             <CustomTitleStyle>
-                <CustomTitle  title={<p className="use-layout-pattern"><span > useLayout pattern </span></p>} />
+                <CustomTitle  title={<p className="use-layout-pattern"><span > useLayoutEffect pattern </span></p>} />
             </CustomTitleStyle>
 
             <p>
@@ -288,6 +288,30 @@ const AdvancedHooks = () => {
                 </li>
             </ul>
             
+            <p>
+                Some <span className="text-white font-semibold"> disadvantages: </span> of this pattern are: 
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Performance Impact </span> ( Since useLayoutEffect runs synchronously and blocks painting, it can potentially degrade performance, especially if used excessively or unnecessarily.  )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Potential for Blocking User Interaction </span> (  Due to its synchronous nature, useLayoutEffect might delay user interactions or animations, causing a perceived slowdown in the application's responsiveness. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Potential for Flickering or Jank </span> ( n some cases, using useLayoutEffect to make synchronous updates to the DOM can introduce flickering or jank, especially if the updates result in significant layout changes or reflows. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Limited Browser Compatibility </span> (  useLayoutEffect is closely tied to the browser's layout and painting phases, which may not be fully supported or consistent across all browsers. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Increased Complexity </span> (  Introducing useLayoutEffect into a codebase adds complexity. This can lead to code that is harder to maintain and debug. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Potential for Overuse </span> ( Developers may be tempted to use useLayoutEffect more frequently than necessary, assuming that synchronous updates are always preferable. )
+                </li>
+            </ul>
 
             </SectionWrapper>
         </div>)
