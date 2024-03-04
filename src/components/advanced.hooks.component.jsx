@@ -10,10 +10,10 @@ import AlertMessageWithEventListener from "./alert.message.event.listener.portal
 import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
 import TopUseLayoutEffect from "./top.use.effect.component";
 
-/**react-design-patterns-app - version 10.13 - AdvancedHooks
+/**react-design-patterns-app - version 10.14 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding note 'useLayoutEffect pattern'   
+ *     --> Showing 'tooltipWrappercode' code   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -263,6 +263,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={topuselayouteffectcode}/>
+
+            <p>
+                and the way the top prop is being modifyied in the style component is as follows:
+            </p>
+
+            <BashCode code={tooltipWrappercode}/>
 
             <p>
                 Some <span className="text-white font-semibold"> advantages </span> of this pattern are: 
