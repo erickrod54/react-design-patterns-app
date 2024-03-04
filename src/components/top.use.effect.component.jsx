@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ButtonGeneral, ToolTipWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 10.13 - TopUseLayoutEffect
+/**react-design-patterns-app - version 10.15 - TopUseLayoutEffect
  * - Features: 
  * 
- *     --> Renaming component to 'TopUseEffect'.	
+ *     --> Adding 'text-color' class.	
  * 
  * Note: this component has an issue related with the lag rendering
  */
@@ -34,8 +34,10 @@ const TopUseEffect = () => {
       </button>
     </ButtonGeneral>
       {show && (
-        <ToolTipWrapper top={top}>
+        <ToolTipWrapper top={top} >
+          <div className="text-color">
             Some text ...    
+          </div>
         </ToolTipWrapper>
       )}
     </>
