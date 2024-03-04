@@ -8,12 +8,12 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
-import TopUseLayoutEffect from "./top.uselayouteffect.component";
+import TopUseLayoutEffect from "./top.use.effect.component";
 
-/**react-design-patterns-app - version 10.12 - AdvancedHooks
+/**react-design-patterns-app - version 10.13 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useLayoutEffect pattern' disadvantages   
+ *     --> Adding note 'useLayoutEffect pattern'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -33,6 +33,7 @@ const AdvancedHooks = () => {
     const alertmessagewitheventcapture = CodeData[77].code;
     const alertportalcode = CodeData[78].code;
     const topuselayouteffectcode = CodeData[79].code;
+    const tooltipWrappercode = CodeData[80].code;
 
     return(
         <div>
@@ -312,6 +313,8 @@ const AdvancedHooks = () => {
                     <span className="text-white font-semibold"> Potential for Overuse </span> ( Developers may be tempted to use useLayoutEffect more frequently than necessary, assuming that synchronous updates are always preferable. )
                 </li>
             </ul>
+
+            <h4>Note: trade-offs between synchronous updates and performance implications to ensure a balanced and optimized user experience.</h4>
 
             </SectionWrapper>
         </div>)
