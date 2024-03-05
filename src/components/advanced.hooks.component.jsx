@@ -8,12 +8,12 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
-import TopUseLayoutEffect from "./top.use.effect.component";
+import TopUseEffect from "./top.use.effect.component";
 
-/**react-design-patterns-app - version 10.17 - AdvancedHooks
+/**react-design-patterns-app - version 10.18 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'TopUseLayoutEffect'   
+ *     --> Rendering 'TopUseEffect'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -274,7 +274,7 @@ const AdvancedHooks = () => {
                 resulting in the following component:
             </p>
 
-            <TopUseLayoutEffect />
+            <TopUseEffect />
 
             
             <br />
