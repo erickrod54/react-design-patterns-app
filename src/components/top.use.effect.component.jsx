@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ButtonGeneral, ToolTipWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 10.15 - TopUseLayoutEffect
+/**react-design-patterns-app - version 10.17 - TopUseLayoutEffect
  * - Features: 
  * 
- *     --> Adding 'text-color' class.	
+ *     --> Editing delay timing to '700'.	
  * 
  * Note: this component has an issue related with the lag rendering
  */
@@ -22,7 +22,7 @@ const TopUseEffect = () => {
   }, [show]);
 
   const now = performance.now();
-  while (now > performance.now() - 200) {
+  while (now > performance.now() - 700) {
     //Do something
   }
 
