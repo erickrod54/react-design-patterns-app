@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.13 - data js  
+/**react-design-patterns-app - version 10.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'ToolTipWrapper' comments
+ *     --> Editing 'TopUseLayoutEffect' delay timing
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2343,7 +2343,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       /** this block of code adds the delay issue because the component  rendering will 
        * depend on the calculation in order to render */
       const now = performance.now();
-      while (now > performance.now() - 200) {
+      while (now > performance.now() - 700) {
         //Do something
       }
 
