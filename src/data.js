@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.17 - data js  
+/**react-design-patterns-app - version 10.18 - data js  
  * - Features: 
  *    
- *     --> Editing 'TopUseLayoutEffect' delay timing
+ *     --> Adding 'TopUseEffect' comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2335,6 +2335,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       /**This useEffect adds dynamicly the top prop in order to be absolute 
        * to the button*/
       useEffect(() => {
+        /**by using useEffect, the component mount and render and the
+         * calculation its going to be done later*/
         if (buttonRef.current === null || !show) return setTop(0);
         const { bottom } = buttonRef.current.getBoundingClientRect();
         setTop(bottom + 30);
