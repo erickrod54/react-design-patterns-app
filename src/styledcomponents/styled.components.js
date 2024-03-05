@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 10.15 - styled.components
+/**react-design-patterns-app - version 10.16 - styled.components
  * - Features: 
  * 
- *     --> writting styles for the button background.	
+ *     --> writting 'text-color' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -37,6 +37,10 @@ export const ToolTipWrapper = styled.div`
 	top: ${(top) => top};
 	
 	${tw`absolute border-2 border-black m-4 p-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white text-2xl rounded-xl cursor-pointer`}
+	
+	.text-color{
+		${tw`text-4xl bg-gradient-to-r from-amber-700 to-red-800 text-transparent bg-clip-text`}
+	}
 
 `
 export const ModalContent = styled.div`
