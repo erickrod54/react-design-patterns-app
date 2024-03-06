@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.19 - data js  
+/**react-design-patterns-app - version 10.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'TopUseLayoutEffect' code
+ *     --> Adding 'TopUseLayoutEffect' comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2391,11 +2391,14 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     ` 
     const TopUseLayoutEffect = () => {
 
-      const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
     const [top, setTop] = useState(0);
     const buttonRef = useRef(null);
   
     useLayoutEffect(() => {
+      /**by using  'useLayoutEffect' hook, it make first the claculation 
+       * and then will mount and render the component ( by priority 
+       * executes the code block inside of the useLayoutEffect )*/
       if (buttonRef.current === null || !show) return setTop(0);
       const { bottom } = buttonRef.current.getBoundingClientRect();
       setTop(bottom + 30);
