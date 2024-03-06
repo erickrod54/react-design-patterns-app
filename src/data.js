@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 10.18 - data js  
+/**react-design-patterns-app - version 10.19 - data js  
  * - Features: 
  *    
- *     --> Adding 'TopUseEffect' comment
+ *     --> Adding 'TopUseLayoutEffect' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2383,7 +2383,50 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     \${tw(\`absolute border-2 border-black m-4 p-4\`)}
     \`;
   `
+  },
+  {
+    id: 81,
+    name: 'TopUseLayoutEffect - useLayoutEffect Pattern',
+    code:   
+    ` 
+    const TopUseLayoutEffect = () => {
+
+      const [show, setShow] = useState(false);
+    const [top, setTop] = useState(0);
+    const buttonRef = useRef(null);
+  
+    useLayoutEffect(() => {
+      if (buttonRef.current === null || !show) return setTop(0);
+      const { bottom } = buttonRef.current.getBoundingClientRect();
+      setTop(bottom + 30);
+    }, [show]);
+  
+    const now = performance.now();
+    while (now > performance.now() - 100) {
+      //Do something
+    }
+  
+    return (
+      <>
+      <ButtonGeneral>
+        <button ref={buttonRef} onClick={() => setShow((s) => !s)}>
+          Show
+        </button>
+      </ButtonGeneral>
+        {show && (
+          <ToolTipWrapper top={top} >
+            <div className="text-color">
+              Some text ...    
+            </div>
+          </ToolTipWrapper>
+        )}
+      </>
+    );
   }
+  
+  export default TopUseLayoutEffect;
+  `
+  }   
 ];
 
 /**List Pattern data  -- start */
