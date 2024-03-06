@@ -47,6 +47,7 @@ import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
 import TheOutSideControlled from "./theoutside.controlled.component";
 import TopUseEffect from "./top.use.effect.component";
+import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.pattern";
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
@@ -55,10 +56,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 10.13 - components > index  
+/**react-design-patterns-app - version 10.19 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'TopUseLayoutEffect' as 'TopUseEffect'
+ *     --> Importing and exporting 'TopUseLayoutEffect'
  * 
  * Note: Pending to make responsive design
  */
@@ -120,5 +121,6 @@ export {
          AlertMessageWithEventListener,
          AlertMessageWithEventCapture,
          AlertPortalEventCapture,
-         TopUseEffect
+         TopUseEffect,
+         TopUseLayoutEffect
         }
