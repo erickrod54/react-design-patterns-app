@@ -11,10 +11,10 @@ import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.c
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 11.00 - AdvancedHooks
+/**react-design-patterns-app - version 11.01 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'uselayouteffectcode' code
+ *     --> Rendering 'TopUseLayoutEffect' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -298,6 +298,17 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={uselayouteffectcode}/>
+
+            <p>
+                ressulting in a component wihtout the <span className="text-white font-semibold"> lag render issue </span> as follows:
+            </p>
+
+            <TopUseLayoutEffect />
+
+            <br />
+            <br />
+            <br />
+            <br />
             
             <p>
                 Some <span className="text-white font-semibold"> advantages </span> of this pattern are: 
