@@ -11,10 +11,10 @@ import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.c
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 10.19 - AdvancedHooks
+/**react-design-patterns-app - version 11.00 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'topuselayoutEffectcode'   
+ *     --> Adding 'uselayouteffectcode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -36,6 +36,7 @@ const AdvancedHooks = () => {
     const topuselayouteffectcode = CodeData[79].code;
     const tooltipWrappercode = CodeData[80].code;
     const topuselayoutEffectcode = CodeData[81].code;
+    const uselayouteffectcode = CodeData[82].code;
 
     return(
         <div>
@@ -293,9 +294,11 @@ const AdvancedHooks = () => {
             <p>
                 so what essentially <span className="text-white font-semibold"> useLayoutEffect </span> does it is to <span className="text-white font-semibold"> 
                 prevent </span> the component from mounting and render in order to give priority to the block of code inside of 
-                the <span className="text-white font-semibold"> useLayoutEffect </span>, that is in this case the calculation.
+                the <span className="text-white font-semibold"> useLayoutEffect </span>, that is in this case the calculation as follows:
             </p>
 
+            <BashCode code={uselayouteffectcode}/>
+            
             <p>
                 Some <span className="text-white font-semibold"> advantages </span> of this pattern are: 
             </p>
