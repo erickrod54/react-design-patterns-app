@@ -11,10 +11,10 @@ import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.c
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 11.01 - AdvancedHooks
+/**react-design-patterns-app - version 11.03 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'TopUseLayoutEffect' 
+ *     --> Developing 'useId hook pattern' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -362,8 +362,21 @@ const AdvancedHooks = () => {
 
             <h4>Note: trade-offs between synchronous updates and performance implications to ensure a balanced and optimized user experience.</h4>
 
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="useId-hook-pattern"><span > useId hook pattern </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                the <span className="text-white font-semibold"> userId hook pattern </span> presents a simple way to 
+                generate <span className="text-white font-semibold"> unique identifiers for HTML elements </span> and 
+                it is a <span className="text-white font-semibold"> solution to  address issues with duplicated 
+                IDs in components </span>( the unique id / ids are generated  at the <span className="text-white font-semibold"> 
+                component scope </span> )
+            </p>
+
             </SectionWrapper>
-        </div>)
+        </div>
+        )
 
 }
 
