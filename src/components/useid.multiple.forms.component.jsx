@@ -1,11 +1,11 @@
 import React from "react";
-import UseIdBeforeForm from "./useid.form.before.component";
+import { UseIdBeforeForm } from "./index.components";
 
 
-/**react-design-patterns-app - version 11.04 - UseIdMultipleFormBefore
+/**react-design-patterns-app - version 11.05 - UseIdMultipleFormBefore
  * - Features: 
  * 
- *     --> Building 'UseIdMultipleFormBefore'  
+ *     --> Switching import  
  * 
  * Note: the 'UseIdMultipleFormBefore' will hold multiple
  * forms in the same component scope
