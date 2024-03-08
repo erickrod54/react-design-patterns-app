@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { FormWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 11.04 - UseIdBeforeForm
+/**react-design-patterns-app - version 11.06 - UseIdBeforeForm
  * - Features: 
  * 
- *     --> Building 'UseIdBeforeForm'  
+ *     --> Wrapping using 'FormWrapper'  
  * 
  * Note: this component 'UseIdBeforeForm' will be the form 
  * before the refactoring to implement a 'useId' hook 
@@ -14,6 +15,7 @@ const UseIdBeforeForm = () => {
     
   const [email, setEmail] = useState("");
   return (
+    <FormWrapper>
     <div>
       <label htmlFor="email">Email</label>
       <input
@@ -23,6 +25,7 @@ const UseIdBeforeForm = () => {
         onChange={(e) => setEmail(e.target.value)}
       />
     </div>
+    </FormWrapper>
   );
 };
 
