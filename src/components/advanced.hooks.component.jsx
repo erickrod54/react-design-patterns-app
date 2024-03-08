@@ -11,10 +11,10 @@ import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.c
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 11.03 - AdvancedHooks
+/**react-design-patterns-app - version 11.04 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'useId hook pattern' 
+ *     --> Adding 'useIdbeforeformcode' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -37,6 +37,7 @@ const AdvancedHooks = () => {
     const tooltipWrappercode = CodeData[80].code;
     const topuselayoutEffectcode = CodeData[81].code;
     const uselayouteffectcode = CodeData[82].code;
+    const useIdbeforeformcode = CodeData[83].code;
 
     return(
         <div>
@@ -373,6 +374,14 @@ const AdvancedHooks = () => {
                 IDs in components </span>( the unique id / ids are generated  at the <span className="text-white font-semibold"> 
                 component scope </span> )
             </p>
+
+            <p>
+                this hook pattern can be use in a wide diverse use cases, one of the most common is on forms in order to 
+                handle unique id's for inputs, let's say i have a form as follows:
+            </p>
+
+            <BashCode code={useIdbeforeformcode}/>
+            
 
             </SectionWrapper>
         </div>
