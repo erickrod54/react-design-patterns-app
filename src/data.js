@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.00 - data js  
+/**react-design-patterns-app - version 11.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'useLayoutEffect' extract code
+ *     --> Adding 'UseIdBeforeForm' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2448,7 +2448,31 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   
     ...
   `
-  }   
+  },
+  {
+    id: 83,
+    name: 'UseIdBeforeForm - useId hook Pattern',
+    code:   
+    ` 
+     const UseIdBeforeForm = () => {
+    
+      const [email, setEmail] = useState("");
+      return (
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+      );
+    };
+    
+    export default UseIdBeforeForm;
+  `
+  } 
 ];
 
 /**List Pattern data  -- start */
