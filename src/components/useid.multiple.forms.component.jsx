@@ -1,11 +1,12 @@
 import React from "react";
 import { UseIdBeforeForm } from "./index.components";
+import { MultipleFormWrapper } from "../styledcomponents/styled.components";
 
 
-/**react-design-patterns-app - version 11.05 - UseIdMultipleFormBefore
+/**react-design-patterns-app - version 11.08 - UseIdMultipleFormBefore
  * - Features: 
  * 
- *     --> Switching import  
+ *     --> Wrapping using 'MultipleFormWrapper'  
  * 
  * Note: the 'UseIdMultipleFormBefore' will hold multiple
  * forms in the same component scope
@@ -14,14 +15,14 @@ import { UseIdBeforeForm } from "./index.components";
 const UseIdMultipleFormBefore = () => {
 
     return (
-        <>
-          <UseIdBeforeForm />
-          <p>
-            It is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout.
-          </p>
-          <UseIdBeforeForm />
-        </>
+        <MultipleFormWrapper>
+            <UseIdBeforeForm />
+            <p>
+              It is a long established fact that a reader will be distracted by the
+              readable content of a page when looking at its layout.
+            </p>
+            <UseIdBeforeForm />
+        </MultipleFormWrapper>
       );
 }
 
