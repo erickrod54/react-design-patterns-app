@@ -52,15 +52,16 @@ import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.patt
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UseIdBeforeForm from "./useid.form.before.component";
+import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 11.04 - components > index  
+/**react-design-patterns-app - version 11.08 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseIdBeforeForm'
+ *     --> Importing and exporting 'UseIdMultipleFormBefore'
  * 
  * Note: Pending to make responsive design
  */
@@ -124,5 +125,6 @@ export {
          AlertPortalEventCapture,
          TopUseEffect,
          TopUseLayoutEffect,
-         UseIdBeforeForm
+         UseIdBeforeForm,
+         UseIdMultipleFormBefore
         }
