@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 11.07 - styled.components
+/**react-design-patterns-app - version 11.08 - styled.components
  * - Features: 
  * 
- *     --> writting 'label' styles for 'FormWrapper'.	
+ *     --> Building 'MultipleFormWrapper' style Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -93,6 +93,10 @@ export const FormWrapper = styled.div`
 		${tw`text-2xl cursor-pointer font-bold`}
 	}
 
+`
+
+export const MultipleFormWrapper = styled.div`
+	${tw`bg-slate-400 m-4 p-4 text-black text-xl `}
 `
 
 export const AlertWrapper = styled.div`
