@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.04 - data js  
+/**react-design-patterns-app - version 11.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdBeforeForm' code
+ *     --> Adding 'UseIdMultipleFormBefore' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2471,6 +2471,28 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
     
     export default UseIdBeforeForm;
+  `
+  } ,
+  {
+    id: 84,
+    name: 'UseIdMultipleFormBefore - App with multiple Forms',
+    code:   
+    ` 
+    const UseIdMultipleFormBefore = () => {
+
+      return (
+          <MultipleFormWrapper>
+              <UseIdBeforeForm />
+              <p>
+                It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking at its layout.
+              </p>
+              <UseIdBeforeForm />
+          </MultipleFormWrapper>
+        );
+  }
+  
+  export default UseIdMultipleFormBefore;
   `
   } 
 ];
