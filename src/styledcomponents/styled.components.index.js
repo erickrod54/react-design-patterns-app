@@ -8,12 +8,12 @@ import { AlertWrapper,
          KeyExerciseWrapper,
          ListWrapper,
          MasterWrapper,
-         ModalBackground, ModalContent, OpenModalWrapper, Panel, PrimaryButton, SectionWrapper, StepFlowWrapper, ToolTipWrapper } from "./styled.components";
+         ModalBackground, ModalContent, MultipleFormWrapper, OpenModalWrapper, Panel, PrimaryButton, SectionWrapper, StepFlowWrapper, ToolTipWrapper } from "./styled.components";
 
-/**react-design-patterns-app - version 10.09 - styledcomponents > index
+/**react-design-patterns-app - version 11.08 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ToolTipWrapper' 
+ *     --> Importing and exporting 'MultipleFormWrapper' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -33,4 +33,8 @@ export { SectionWrapper,
          ModalContent,
          OpenModalWrapper,
          ButtonGeneral,
-         FormWrapper, StepFlowWrapper, ButtonWrapper, AlertWrapper, MasterWrapper, ChildWrapper, PrimaryButton, KeyExerciseWrapper, ToolTipWrapper }
+         FormWrapper,
+         StepFlowWrapper,
+         ButtonWrapper,
+         AlertWrapper,
+         MasterWrapper, ChildWrapper, PrimaryButton, KeyExerciseWrapper, ToolTipWrapper, MultipleFormWrapper }
