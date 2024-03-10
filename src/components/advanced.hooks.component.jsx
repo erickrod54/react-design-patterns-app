@@ -11,10 +11,10 @@ import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.c
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 
-/**react-design-patterns-app - version 11.04 - AdvancedHooks
+/**react-design-patterns-app - version 11.08 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useIdbeforeformcode' code 
+ *     --> Adding 'useIdmultipleformBeforecode' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -38,6 +38,7 @@ const AdvancedHooks = () => {
     const topuselayoutEffectcode = CodeData[81].code;
     const uselayouteffectcode = CodeData[82].code;
     const useIdbeforeformcode = CodeData[83].code;
+    const useIdmultipleformBeforecode = CodeData[84].code;
 
     return(
         <div>
@@ -381,7 +382,17 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useIdbeforeformcode}/>
+
+            <p>
+                and let's say <span className="text-white font-semibold"> i have an app </span> where this form is 
+                <span className="text-white font-semibold"> rendering multiple times </span>, as follows:
+            </p>
             
+            <BashCode code={useIdmultipleformBeforecode}/>
+
+            <p>
+                resulting in:
+            </p>
 
             </SectionWrapper>
         </div>
