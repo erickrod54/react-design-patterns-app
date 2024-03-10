@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.08 - data js  
+/**react-design-patterns-app - version 11.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdMultipleFormBefore' code
+ *     --> Adding 'UseIdAfterMathForm' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2493,6 +2493,35 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   }
   
   export default UseIdMultipleFormBefore;
+  `
+  },
+  {
+    id: 85,
+    name: 'UseIdAfterMathForm - useId hook Pattern',
+    code:   
+    ` 
+    const UseIdAfterMathForm = () => {
+    
+      const [email, setEmail] = useState("");
+    
+      const id = Math.random();
+    
+      return (
+        <FormWrapper>
+        <div>
+          <label htmlFor={id}>Email</label>
+          <input
+            id={id}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        </FormWrapper>
+      );
+    };
+    
+    export default UseIdAfterMathForm;
   `
   } 
 ];
