@@ -12,10 +12,10 @@ import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 
-/**react-design-patterns-app - version 11.10 - AdvancedHooks
+/**react-design-patterns-app - version 11.11 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'useId hook pattern' 
+ *     --> Adding 'UseIdAfterMathForm'  code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -40,6 +40,7 @@ const AdvancedHooks = () => {
     const uselayouteffectcode = CodeData[82].code;
     const useIdbeforeformcode = CodeData[83].code;
     const useIdmultipleformBeforecode = CodeData[84].code;
+    const useidAftermathform = CodeData[85].code;
 
     return(
         <div>
@@ -411,6 +412,8 @@ const AdvancedHooks = () => {
                 hook exists </span> the solution was as follows: 
             </p>
 
+            <BashCode code={useidAftermathform}/>
+            
             </SectionWrapper>
         </div>
         )
