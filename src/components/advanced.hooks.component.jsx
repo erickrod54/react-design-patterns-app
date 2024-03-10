@@ -10,11 +10,12 @@ import AlertMessageWithEventListener from "./alert.message.event.listener.portal
 import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.component";
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
+import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 
-/**react-design-patterns-app - version 11.08 - AdvancedHooks
+/**react-design-patterns-app - version 11.09 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useIdmultipleformBeforecode' code 
+ *     --> Rendering 'UseIdMultipleFormBefore' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -393,6 +394,9 @@ const AdvancedHooks = () => {
             <p>
                 resulting in:
             </p>
+
+            <UseIdMultipleFormBefore />
+            
 
             </SectionWrapper>
         </div>
