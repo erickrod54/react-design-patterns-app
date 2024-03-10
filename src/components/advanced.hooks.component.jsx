@@ -12,10 +12,10 @@ import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 
-/**react-design-patterns-app - version 11.09 - AdvancedHooks
+/**react-design-patterns-app - version 11.10 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseIdMultipleFormBefore' 
+ *     --> Developing 'useId hook pattern' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -397,6 +397,19 @@ const AdvancedHooks = () => {
 
             <UseIdMultipleFormBefore />
             
+            <p>
+                as can be seen the <span className="text-white font-semibold"> expected behavior is that 
+                when the label of each input is being clicked should get the user to input </span>, but it 
+                does not happen, because by the code as it is they <span className="text-white font-semibold"> 
+                both inputs are the same </span> so no matter where is being clicked <span className="text-white font-semibold"> 
+                it will always take to the first because the app they are the same input </span> 
+            </p>
+
+            <p>
+                so the question is <span className="text-white font-semibold"> how do i solve this ? </span>, the answer
+                is by making every input unique in render time, before <span className="text-white font-semibold"> userId 
+                hook exists </span> the solution was as follows: 
+            </p>
 
             </SectionWrapper>
         </div>
