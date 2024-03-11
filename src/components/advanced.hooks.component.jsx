@@ -12,10 +12,10 @@ import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 
-/**react-design-patterns-app - version 11.11 - AdvancedHooks
+/**react-design-patterns-app - version 11.14 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'UseIdAfterMathForm'  code
+ *     --> Adding 'useidMultipleFormaaftermathcode'  code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -41,6 +41,7 @@ const AdvancedHooks = () => {
     const useIdbeforeformcode = CodeData[83].code;
     const useIdmultipleformBeforecode = CodeData[84].code;
     const useidAftermathform = CodeData[85].code;
+    const useidMultipleFormaaftermathcode = CodeData[86].code;
 
     return(
         <div>
@@ -413,6 +414,17 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useidAftermathform}/>
+
+            <p>
+                and it will be rendered multiple times in an app, as follows:
+            </p>
+
+            <BashCode code={useidMultipleFormaaftermathcode}/>
+
+            <p>
+                so the 'id' for both label an input, and this will create an unique id every time the component get mount,
+                and it will work as follows:
+            </p>
             
             </SectionWrapper>
         </div>
