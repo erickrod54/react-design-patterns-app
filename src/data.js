@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.13 - data js  
+/**react-design-patterns-app - version 11.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdMultipleFormAfterMath' code
+ *     --> Adding 'UseIdMultipleFormAfterMath' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2536,6 +2536,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
 
       return (
           <MultipleFormWrapper>
+              {/**here i mount the component with the Math 'id'*/}
               <UseIdAfterMathForm />
               <p>
                 It is a long established fact that a reader will be distracted by the
