@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.10 - data js  
+/**react-design-patterns-app - version 11.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdAfterMathForm' code
+ *     --> Adding 'UseIdAfterMathForm' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2503,9 +2503,12 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     const UseIdAfterMathForm = () => {
     
       const [email, setEmail] = useState("");
-    
+      
+      /**here i create a random id*/
       const id = Math.random();
-    
+      
+      /**i set the 'id' for both label an input, and this will 
+       * create an unique id every time the component get mount*/
       return (
         <FormWrapper>
         <div>
