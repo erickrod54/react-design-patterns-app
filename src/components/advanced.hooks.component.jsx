@@ -13,10 +13,10 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 
-/**react-design-patterns-app - version 11.15 - AdvancedHooks
+/**react-design-patterns-app - version 11.16 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseIdMultipleFormAfterMath'
+ *     --> Developing 'UseIdMultipleFormAfterMath' concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -436,6 +436,13 @@ const AdvancedHooks = () => {
                 This means <span className="text-white font-semibold"> that any dynamically generated content,
                  including IDs,</span> is created during the server-side rendering 
                 process.
+            </p>
+
+            <p>
+                The problem arises when the <span className="text-white font-semibold"> server generates IDs, but these IDs are not 
+                retained or matched on the client side </span> when the page is hydrated (i.e., when the client-side JavaScript takes over). 
+                Since the client and server generate IDs independently, they <span className="text-white font-semibold"> may end up using 
+                different ID values for the same elements. </span>
             </p>
             
             </SectionWrapper>
