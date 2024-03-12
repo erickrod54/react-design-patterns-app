@@ -13,10 +13,10 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 
-/**react-design-patterns-app - version 11.16 - AdvancedHooks
+/**react-design-patterns-app - version 11.17 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'UseIdMultipleFormAfterMath' concepts
+ *     --> Developing 'UseIdMultipleFormAfterMath' issues list
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -444,6 +444,25 @@ const AdvancedHooks = () => {
                 Since the client and server generate IDs independently, they <span className="text-white font-semibold"> may end up using 
                 different ID values for the same elements. </span>
             </p>
+
+            <p>
+                This inconsistency in ID values between server and client renders can lead to various issues:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Breakage of Application Logic </span> ( The application logic might depend on specific IDs to target and manipulate elements. When IDs differ between server and client, the logic based on those IDs may fail, leading to unexpected behavior or errors. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Maintenance Complexity </span> (  Having different IDs on the server and client adds complexity to maintenance tasks. Developers must ensure that the logic and functionality reliant on these IDs are consistent across server and client environments. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Debugging Challenges </span> ( When issues arise due to mismatched IDs, debugging becomes more difficult. Developers must trace the flow of data and understand when and where the ID values diverge between server and client renders. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Potential for Errors </span> ( Inconsistencies in IDs can lead to errors in functionality, user experience, or even security vulnerabilities if certain actions are inadvertently performed on the wrong elements. )
+                </li>
+            </ul>
             
             </SectionWrapper>
         </div>
