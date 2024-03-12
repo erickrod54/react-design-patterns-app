@@ -11,11 +11,12 @@ import AlertMessageWithEventCapture from "./alert.message.capture.event.portal.c
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
+import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 
-/**react-design-patterns-app - version 11.14 - AdvancedHooks
+/**react-design-patterns-app - version 11.15 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useidMultipleFormaaftermathcode'  code
+ *     --> Rendering 'UseIdMultipleFormAfterMath'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -424,6 +425,17 @@ const AdvancedHooks = () => {
             <p>
                 so the 'id' for both label an input, and this will create an unique id every time the component get mount,
                 and it will work as follows:
+            </p>
+
+            <UseIdMultipleFormAfterMath />
+
+            <p>
+                In <span className="text-white font-semibold"> SSR </span>, the initial rendering of the 
+                <span className="text-white font-semibold"> webpage occurs on the server </span> before 
+                <span className="text-white font-semibold"> being sent to the client's browser. </span> 
+                This means <span className="text-white font-semibold"> that any dynamically generated content,
+                 including IDs,</span> is created during the server-side rendering 
+                process.
             </p>
             
             </SectionWrapper>
