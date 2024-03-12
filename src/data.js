@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.14 - data js  
+/**react-design-patterns-app - version 11.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdMultipleFormAfterMath' comments
+ *     --> Adding 'UseIdAfterForm' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2549,7 +2549,35 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export default UseIdMultipleFormAfterMath;
   `
-  } 
+  },
+  {
+    id: 87,
+    name: 'UseIdAfterForm - useId hook Pattern',
+    code:   
+    ` 
+    const UseIdAfterForm = () => {
+
+      const id = useId();  
+        
+      const [email, setEmail] = useState("");
+      return (
+        <FormWrapper>
+        <div>
+          <label htmlFor={id}>Email</label>
+          <input
+            id={id}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        </FormWrapper>
+      );
+    };
+    
+    export default UseIdAfterForm;
+  `
+  }  
 ];
 
 /**List Pattern data  -- start */
