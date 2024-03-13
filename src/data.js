@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.18 - data js  
+/**react-design-patterns-app - version 11.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdAfterForm' comments
+ *     --> Adding 'UseIdMultipleFormAfter' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2578,6 +2578,28 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
     
     export default UseIdAfterForm;
+  `
+  },
+  {
+    id: 88,
+    name: 'UseIdMultipleFormAfter - useId hook Pattern',
+    code:   
+    ` 
+    const UseIdMultipleFormAfter = () => {
+
+      return (
+          <MultipleFormWrapper>
+              <UseIdAfterForm />
+              <p>
+                It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking at its layout.
+              </p>
+              <UseIdAfterForm />
+          </MultipleFormWrapper>
+        );
+  }
+  
+  export default UseIdMultipleFormAfter;
   `
   }  
 ];
