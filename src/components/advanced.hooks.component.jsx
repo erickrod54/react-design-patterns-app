@@ -13,10 +13,10 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 
-/**react-design-patterns-app - version 11.17 - AdvancedHooks
+/**react-design-patterns-app - version 11.19 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'UseIdMultipleFormAfterMath' issues list
+ *     --> Adding 'useidafterform' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -43,6 +43,7 @@ const AdvancedHooks = () => {
     const useIdmultipleformBeforecode = CodeData[84].code;
     const useidAftermathform = CodeData[85].code;
     const useidMultipleFormaaftermathcode = CodeData[86].code;
+    const useidafterform = CodeData[87].code;
 
     return(
         <div>
@@ -463,11 +464,20 @@ const AdvancedHooks = () => {
                     <span className="text-white font-semibold"> Potential for Errors </span> ( Inconsistencies in IDs can lead to errors in functionality, user experience, or even security vulnerabilities if certain actions are inadvertently performed on the wrong elements. )
                 </li>
             </ul>
+
+            <p>
+                so in order to solve these issues and <span className="text-white font-semibold"> generate a different id </span>  for each 
+                <span className="text-white font-semibold"> component render and an id that effectivelly preserves constant </span>
+                ( and will generate an alphanumeric id - difference with Math that is a float number ) after re render the app i will implement 
+                userId as follows:
+            </p>
+
+            <BashCode code={useidafterform}/>
             
             </SectionWrapper>
         </div>
         )
 
-}
-
-export default AdvancedHooks;
+    }
+    
+    export default AdvancedHooks;
