@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 11.20 - data js  
+/**react-design-patterns-app - version 12.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdMultipleFormAfter' code
+ *     --> Adding 'UseIdAfterTwoOrMoreInputs' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2600,6 +2600,45 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   }
   
   export default UseIdMultipleFormAfter;
+  `
+  },
+  {
+    id: 89,
+    name: 'UseIdAfterTwoOrMoreInputs - useId hook Pattern',
+    code:   
+    ` 
+    const UseIdAfterTwoOrMoreInputs = () => {
+
+    
+      const id = useId();  
+      const id2 = useId();  
+        
+      const [email, setEmail] = useState("");
+
+     
+      return (
+        <FormWrapper>
+        <div>
+          <label htmlFor={id}>Email</label>
+          <input
+            id={id}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+    
+        <label htmlFor={id}>Name</label>
+        <input
+            id={id2}
+            type="text"
+          />
+    
+        </div>
+        </FormWrapper>
+      );
+    };
+    
+    export default UseIdAfterTwoOrMoreInputs;
   `
   }  
 ];
