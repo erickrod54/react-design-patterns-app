@@ -51,6 +51,7 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.pattern";
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
+import UseIdAfterForm from "./useid.form.after.component";
 import UseIdAfterMathForm from "./useid.form.after.math.component";
 import UseIdBeforeForm from "./useid.form.before.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
@@ -59,10 +60,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 11.14 - components > index  
+/**react-design-patterns-app - version 11.18 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseIdAfterMathForm'
+ *     --> Importing and exporting 'UseIdAfterForm'
  * 
  * Note: Pending to make responsive design
  */
@@ -128,5 +129,6 @@ export {
          TopUseLayoutEffect,
          UseIdBeforeForm,
          UseIdMultipleFormBefore,
-         UseIdAfterMathForm
+         UseIdAfterMathForm,
+         UseIdAfterForm
         }
