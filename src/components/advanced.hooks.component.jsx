@@ -13,10 +13,10 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 
-/**react-design-patterns-app - version 11.19 - AdvancedHooks
+/**react-design-patterns-app - version 11.20 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useidafterform' code
+ *     --> Adding 'useidmultipleFormafter' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -44,6 +44,7 @@ const AdvancedHooks = () => {
     const useidAftermathform = CodeData[85].code;
     const useidMultipleFormaaftermathcode = CodeData[86].code;
     const useidafterform = CodeData[87].code;
+    const useidmultipleFormafter = CodeData[88].code;
 
     return(
         <div>
@@ -473,11 +474,17 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useidafterform}/>
+
+            <p>
+                And it will be rendered multiple times in an app, as follows:
+            </p>
+
+            <BashCode code={useidmultipleFormafter}/>
             
             </SectionWrapper>
         </div>
         )
-
+        
     }
     
     export default AdvancedHooks;
