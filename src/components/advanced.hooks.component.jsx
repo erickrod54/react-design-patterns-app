@@ -12,11 +12,12 @@ import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
+import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 
-/**react-design-patterns-app - version 11.20 - AdvancedHooks
+/**react-design-patterns-app - version 12.00 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useidmultipleFormafter' code
+ *     --> Rendering 'UseIdMultipleFormAfter'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -480,6 +481,14 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useidmultipleFormafter}/>
+
+            <p>
+                this will be a much <span className="text-white font-semibold"> better solution </span> and well 
+                <span className="text-white font-semibold"> adaptable with SSR </span> due to how is generated the 
+                id's resulting in:
+            </p>
+            
+            <UseIdMultipleFormAfter />
             
             </SectionWrapper>
         </div>
