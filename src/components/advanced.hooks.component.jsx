@@ -14,10 +14,10 @@ import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 
-/**react-design-patterns-app - version 12.00 - AdvancedHooks
+/**react-design-patterns-app - version 12.01 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseIdMultipleFormAfter'
+ *     --> Adding 'UseIdAfterTwoOrMoreInputs' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -46,6 +46,7 @@ const AdvancedHooks = () => {
     const useidMultipleFormaaftermathcode = CodeData[86].code;
     const useidafterform = CodeData[87].code;
     const useidmultipleFormafter = CodeData[88].code;
+    const useidAftertwoorMoreinputs = CodeData[89].code;
 
     return(
         <div>
@@ -489,6 +490,16 @@ const AdvancedHooks = () => {
             </p>
             
             <UseIdMultipleFormAfter />
+
+            <p>
+                so what if i have multiple, let's say i have <span className="text-white font-semibold"> email </span> 
+                and <span className="text-white font-semibold"> name </span>, how do i make 
+                <span className="text-white font-semibold"> them unique ? </span>, a first 
+                and <span className="text-white font-semibold"> not than cleaner version </span> will be as 
+                follows:
+            </p>
+
+            <BashCode code={useidAftertwoorMoreinputs}/>
             
             </SectionWrapper>
         </div>
