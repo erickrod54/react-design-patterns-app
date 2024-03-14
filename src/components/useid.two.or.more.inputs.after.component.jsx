@@ -1,10 +1,10 @@
 import { useId, useState } from "react";
 import { FormWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 12.01 - UseIdAfterTwoOrMoreInputs
+/**react-design-patterns-app - version 12.05 - UseIdAfterTwoOrMoreInputs
  * - Features: 
  * 
- *     --> Building 'UseIdAfterTwoOrMoreInputs'  
+ *     --> Adding 'id2' for 'Name' label  
  * 
  * Note: this component 'UseIdAfterTwoOrMoreInputs' is
  * a first version not than cleaner, in order to set 
@@ -28,7 +28,7 @@ const UseIdAfterTwoOrMoreInputs = () => {
         onChange={(e) => setEmail(e.target.value)}
       />
 
-    <label htmlFor={id}>Name</label>
+    <label htmlFor={id2}>Name</label>
     <input
         id={id2}
         type="text"
