@@ -1,9 +1,9 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 12.01 - data js  
+/**react-design-patterns-app - version 12.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdAfterTwoOrMoreInputs' code
+ *     --> Adding 'UseIdAfterTwoOrMoreInputs' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2609,13 +2609,13 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     ` 
     const UseIdAfterTwoOrMoreInputs = () => {
 
-    
+      /**this solution is made by creating 2 different id's*/
       const id = useId();  
       const id2 = useId();  
         
       const [email, setEmail] = useState("");
 
-     
+      /**this id's are set on each 'label' and 'input'*/
       return (
         <FormWrapper>
         <div>
