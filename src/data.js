@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.03 - data js  
+/**react-design-patterns-app - version 12.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdAfterMultipleInputs' code
+ *     --> Adding 'UseIdAfterMultipleInputs' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2651,6 +2651,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
 
       return (
           <MultipleFormWrapper>
+              {/**here i render the component with multiple inputs*/}
               <UseIdAfterTwoOrMoreInputs />
               <p>
                 It is a long established fact that a reader will be distracted by the
