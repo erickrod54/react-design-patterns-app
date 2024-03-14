@@ -14,10 +14,10 @@ import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 
-/**react-design-patterns-app - version 12.01 - AdvancedHooks
+/**react-design-patterns-app - version 12.03 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'UseIdAfterTwoOrMoreInputs' code
+ *     --> Adding 'UseIdAfterMultipleInputs' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -47,6 +47,7 @@ const AdvancedHooks = () => {
     const useidafterform = CodeData[87].code;
     const useidmultipleFormafter = CodeData[88].code;
     const useidAftertwoorMoreinputs = CodeData[89].code;
+    const useidaftermultipleinputs = CodeData[90].code;
 
     return(
         <div>
@@ -500,6 +501,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useidAftertwoorMoreinputs}/>
+
+            <p>
+                and the wrap for the multiple entries will be as follows: 
+            </p>
+
+            <BashCode code={useidaftermultipleinputs}/>
             
             </SectionWrapper>
         </div>
