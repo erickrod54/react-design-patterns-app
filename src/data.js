@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.04 - data js  
+/**react-design-patterns-app - version 12.07 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdAfterMultipleInputs' comments
+ *     --> Adding 'UseIdCleanAfterTwoOrMoreInputs' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2664,7 +2664,44 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export default UseIdAfterMultipleInputs;
   `
-  }  
+  },
+  {
+    id: 91,
+    name: 'UseIdCleanAfterTwoOrMoreInputs - useId hook Pattern',
+    code:   
+    ` 
+    const UseIdCleanAfterTwoOrMoreInputs = () => {
+
+      const id = useId();  
+      
+      const [email, setEmail] = useState("");
+
+     
+      return (
+        <FormWrapper>
+        <div>
+        <label htmlFor={\`\${id}-email\`}>Email</label>
+          <input
+            id={\`\${id}-email\`}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+    
+        <label htmlFor={\`\${id}-name\`}>Name</label>
+          <input
+            id={\`\${id}-name\`}
+            type="text"
+          />
+    
+        </div>
+        </FormWrapper>
+      );
+    };
+    
+    export default UseIdCleanAfterTwoOrMoreInputs;
+  `
+  }
 ];
 
 /**List Pattern data  -- start */
