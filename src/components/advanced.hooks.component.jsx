@@ -15,10 +15,11 @@ import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.componen
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 
-/**react-design-patterns-app - version 12.05 - AdvancedHooks
+/**react-design-patterns-app - version 12.06 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseIdAfterMultipleInputs' code
+ *     --> Stating reasons for 'UseIdAfterMultipleInputs' not a clean 
+ *         code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -514,7 +515,27 @@ const AdvancedHooks = () => {
             </p>
 
             <UseIdAfterMultipleInputs />
-            
+
+            <p>
+                and essentially it works, but it is <span className="text-white font-semibold"> not a 
+                clean solution </span> for the following reasons: 
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Variable Naming </span> ( The variable names id and id2 are not very descriptive - naming by context will best practice -. Choosing more meaningful names lead to code maintainability )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Component Structure </span> (  The component could be organized more clearly. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Consistency </span> ( Ensuring consistency in coding style, formatting, and commenting throughout the codebase contributes to maintainability and readability. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Accessibility Considerations </span> ( While the code assigns unique IDs to elements, it's essential to ensure that these IDs are meaningful and contribute to the accessibility of the application. )
+                </li>
+            </ul>
+          
             </SectionWrapper>
         </div>
         )
