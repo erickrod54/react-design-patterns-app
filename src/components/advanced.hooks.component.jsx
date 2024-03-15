@@ -13,11 +13,12 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
+import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 
-/**react-design-patterns-app - version 12.03 - AdvancedHooks
+/**react-design-patterns-app - version 12.05 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'UseIdAfterMultipleInputs' code
+ *     --> Rendering 'UseIdAfterMultipleInputs' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -507,6 +508,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useidaftermultipleinputs}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseIdAfterMultipleInputs />
             
             </SectionWrapper>
         </div>
