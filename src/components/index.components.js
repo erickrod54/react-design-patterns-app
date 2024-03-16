@@ -56,6 +56,7 @@ import UseIdAfterMathForm from "./useid.form.after.math.component";
 import UseIdBeforeForm from "./useid.form.before.component";
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
+import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdCleanAfterTwoOrMoreInputs from "./useid.two.or.more.clean.code.inputs.after.component";
 import UseIdAfterTwoOrMoreInputs from "./useid.two.or.more.inputs.after.component";
@@ -64,10 +65,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 12.07 - components > index  
+/**react-design-patterns-app - version 12.10 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseIdCleanAfterTwoOrMoreInputs'
+ *     --> Importing and exporting 'UseIdAfterCleanMultipleInputs'
  * 
  * Note: Pending to make responsive design
  */
@@ -138,5 +139,6 @@ export {
          UseIdMultipleFormAfter,
          UseIdAfterTwoOrMoreInputs,
          UseIdAfterMultipleInputs,
-         UseIdCleanAfterTwoOrMoreInputs
+         UseIdCleanAfterTwoOrMoreInputs,
+         UseIdAfterCleanMultipleInputs
         }
