@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.07 - data js  
+/**react-design-patterns-app - version 12.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdCleanAfterTwoOrMoreInputs' code
+ *     --> Adding 'UseIdAfterCleanMultipleInputs' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2700,6 +2700,28 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
     
     export default UseIdCleanAfterTwoOrMoreInputs;
+  `
+  },
+  {
+    id: 92,
+    name: 'UseIdAfterCleanMultipleInputs - useId hook Pattern',
+    code:   
+    ` 
+    const UseIdAfterCleanMultipleInputs = () => {
+
+      return (
+          <MultipleFormWrapper>
+              <UseIdCleanAfterTwoOrMoreInputs />
+              <p>
+                It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking at its layout.
+              </p>
+              <UseIdCleanAfterTwoOrMoreInputs />
+          </MultipleFormWrapper>
+        );
+  }
+  
+  export default UseIdAfterCleanMultipleInputs;
   `
   }
 ];
