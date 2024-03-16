@@ -15,11 +15,10 @@ import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.componen
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 
-/**react-design-patterns-app - version 12.08 - AdvancedHooks
+/**react-design-patterns-app - version 12.09 - AdvancedHooks
  * - Features: 
  * 
- *     --> Stating reasons for 'useidcleanaftertwoorMoreinputs' not a clean 
- *         code
+ *     --> Adding 'useidaftercleanmultipleinputs' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -51,6 +50,7 @@ const AdvancedHooks = () => {
     const useidAftertwoorMoreinputs = CodeData[89].code;
     const useidaftermultipleinputs = CodeData[90].code;
     const useidcleanaftertwoorMoreinputs = CodeData[91].code;
+    const useidaftercleanmultipleinputs = CodeData[92].code;
 
     return(
         <div>
@@ -543,6 +543,13 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useidcleanaftertwoorMoreinputs}/>
+
+            <p>
+                and will be <span className="text-white font-semibold"> render multiple times </span> as follows, giving an 
+                <span className="text-white font-semibold"> unique id </span> for each input:
+            </p>
+
+            <BashCode code={useidaftercleanmultipleinputs}/>
           
             </SectionWrapper>
         </div>
