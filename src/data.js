@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.09 - data js  
+/**react-design-patterns-app - version 12.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdCleanAfterTwoOrMoreInputs' comments
+ *     --> Adding 'UseIdAfterCleanMultipleInputs' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2715,11 +2715,13 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
 
       return (
           <MultipleFormWrapper>
+            {/**here i render the component with the unique id*/}
               <UseIdCleanAfterTwoOrMoreInputs />
               <p>
                 It is a long established fact that a reader will be distracted by the
                 readable content of a page when looking at its layout.
               </p>
+              {/**here i render the component with the unique id*/}
               <UseIdCleanAfterTwoOrMoreInputs />
           </MultipleFormWrapper>
         );
