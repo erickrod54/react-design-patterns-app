@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.08 - data js  
+/**react-design-patterns-app - version 12.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdAfterCleanMultipleInputs' code
+ *     --> Adding 'UseIdCleanAfterTwoOrMoreInputs' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2672,6 +2672,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     ` 
     const UseIdCleanAfterTwoOrMoreInputs = () => {
 
+      /**the 'id' will be unique once the combination with the template literal 
+       * is done*/
       const id = useId();  
       
       const [email, setEmail] = useState("");
@@ -2679,7 +2681,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
      
       return (
         <FormWrapper>
-        <div>
+        <div> 
+        {/**here i am adding a template literal for 'email'*/}
         <label htmlFor={\`\${id}-email\`}>Email</label>
           <input
             id={\`\${id}-email\`}
@@ -2687,7 +2690,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-    
+        
+          {/**here i am adding a template literal for 'name'*/}
         <label htmlFor={\`\${id}-name\`}>Name</label>
           <input
             id={\`\${id}-name\`}
