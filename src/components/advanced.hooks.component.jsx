@@ -15,10 +15,10 @@ import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.componen
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 
-/**react-design-patterns-app - version 12.06 - AdvancedHooks
+/**react-design-patterns-app - version 12.08 - AdvancedHooks
  * - Features: 
  * 
- *     --> Stating reasons for 'UseIdAfterMultipleInputs' not a clean 
+ *     --> Stating reasons for 'useidcleanaftertwoorMoreinputs' not a clean 
  *         code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -50,6 +50,7 @@ const AdvancedHooks = () => {
     const useidmultipleFormafter = CodeData[88].code;
     const useidAftertwoorMoreinputs = CodeData[89].code;
     const useidaftermultipleinputs = CodeData[90].code;
+    const useidcleanaftertwoorMoreinputs = CodeData[91].code;
 
     return(
         <div>
@@ -535,6 +536,13 @@ const AdvancedHooks = () => {
                     <span className="text-white font-semibold"> Accessibility Considerations </span> ( While the code assigns unique IDs to elements, it's essential to ensure that these IDs are meaningful and contribute to the accessibility of the application. )
                 </li>
             </ul>
+
+            <p>
+                a clean solution, the unique id is an <span className="text-white font-semibold"> alphanumeric combination with template literals, </span>  
+                as follows:
+            </p>
+
+            <BashCode code={useidcleanaftertwoorMoreinputs}/>
           
             </SectionWrapper>
         </div>
