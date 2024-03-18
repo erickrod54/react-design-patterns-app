@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { ButtonGeneral, FormWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 12.13 - CallbackAsRefBefore 
+/**react-design-patterns-app - version 12.15 - CallbackAsRefBefore 
  * - Features: 
  * 
- *     --> Building 'CallbackAsRefBefore'
+ *     --> Wrapping with 'FormWrapper' and
+ *         'ButtonGeneral' style components
  * 
  * Note: Pending to make responsive design
  */
@@ -19,8 +21,12 @@ const CallbackAsRefBefore = () => {
 
     return(
         <>
-            <button onClick={() => setShowInput((s) => !s)}> Switch </button>
-            {showInput && <input type="text" ref={inputRef} />}
+        <FormWrapper>
+            <ButtonGeneral>
+                <button onClick={() => setShowInput((s) => !s)}> Switch </button>
+            </ButtonGeneral>
+            {showInput && <input type="text" ref={inputRef} />} 
+        </FormWrapper>
         </>
     )
     }
