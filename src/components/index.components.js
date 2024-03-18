@@ -51,6 +51,7 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.pattern";
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
+import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import UseIdAfterForm from "./useid.form.after.component";
 import UseIdAfterMathForm from "./useid.form.after.math.component";
 import UseIdBeforeForm from "./useid.form.before.component";
@@ -65,10 +66,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 12.10 - components > index  
+/**react-design-patterns-app - version 12.15 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseIdAfterCleanMultipleInputs'
+ *     --> Importing and exporting 'CallbackAsRefBefore'
  * 
  * Note: Pending to make responsive design
  */
@@ -140,5 +141,6 @@ export {
          UseIdAfterTwoOrMoreInputs,
          UseIdAfterMultipleInputs,
          UseIdCleanAfterTwoOrMoreInputs,
-         UseIdAfterCleanMultipleInputs
+         UseIdAfterCleanMultipleInputs,
+         CallbackAsRefBefore
         }
