@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import KeysExercise from "./keys.exersice.component";
@@ -16,10 +16,10 @@ import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 
-/**react-design-patterns-app - version 12.12 - AdvancedHooks
+/**react-design-patterns-app - version 12.15 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'useCallback as Refs' component
+ *     --> Adding 'CallbackAsRefBefore' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -52,6 +52,7 @@ const AdvancedHooks = () => {
     const useidaftermultipleinputs = CodeData[90].code;
     const useidcleanaftertwoorMoreinputs = CodeData[91].code;
     const useidaftercleanmultipleinputs = CodeData[92].code;
+    const callbackasrefbefore = CodeData[93].code;
 
     return(
         <div>
@@ -575,7 +576,13 @@ const AdvancedHooks = () => {
                 a component behavior
             </p>
 
-            
+            <p>
+                let's say i have a <span className="text-white font-semibold"> focus </span> behavior on an 
+                <span className="text-white font-semibold"> input </span>, and this is conditionally render 
+                but has a <span className="text-white font-semibold"> no consistent focus </span> as follows:
+            </p>
+
+            <BashCode code={callbackasrefbefore}/>
 
             </SectionWrapper>
         </div>
