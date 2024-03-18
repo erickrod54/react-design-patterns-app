@@ -16,10 +16,10 @@ import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 
-/**react-design-patterns-app - version 12.11 - AdvancedHooks
+/**react-design-patterns-app - version 12.12 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseIdAfterCleanMultipleInputs' component
+ *     --> Developing 'useCallback as Refs' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -562,7 +562,21 @@ const AdvancedHooks = () => {
                 so the <span className="text-white font-semibold"> template literals </span> give a context that 
                 <span className="text-white font-semibold"> makes these id's unique. </span>
             </p>
-          
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="use-callback-hook-as-refs"><span > useCallback as Refs </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                <span className="text-white font-semibold"> useCallback hook </span> is used to memoize callback functions, 
+                and also is use with <span className="text-white font-semibold"> `useRef` </span> to maintain 
+                <span className="text-white font-semibold"> consistent references between renders </span>, this 
+                consistency in the references is very important to solve use cases where is needed to maintain 
+                a component behavior
+            </p>
+
+            
+
             </SectionWrapper>
         </div>
         )
