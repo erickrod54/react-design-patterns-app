@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.10 - data js  
+/**react-design-patterns-app - version 12.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseIdAfterCleanMultipleInputs' comments
+ *     --> Adding 'CallbackAsRefBefore' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2728,6 +2728,32 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   }
   
   export default UseIdAfterCleanMultipleInputs;
+  `
+  },
+  {
+    id: 93,
+    name: 'CallbackAsRefBefore - Callback as Ref',
+    code:   
+    ` 
+    const CallbackAsRefBefore = () => {
+
+        const [ showInput, setShowInput ] = useState(false)
+        const inputRef = useRef(null);
+
+        useEffect(() => {
+            inputRef.current.focus();
+        }, []);
+
+        return(
+            <>
+                <button onClick={() => setShowInput((s) => !s)}> Switch </button>
+                {showInput && <input type="text" ref={inputRef} />}
+            </>
+        )
+        }
+
+
+    export default CallbackAsRefBefore
   `
   }
 ];
