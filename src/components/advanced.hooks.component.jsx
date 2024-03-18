@@ -14,11 +14,12 @@ import UseIdMultipleFormBefore from "./useid.multiple.forms.component";
 import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.component";
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
+import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 
-/**react-design-patterns-app - version 12.09 - AdvancedHooks
+/**react-design-patterns-app - version 12.11 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useidaftercleanmultipleinputs' code
+ *     --> Rendering 'UseIdAfterCleanMultipleInputs' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -550,6 +551,17 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useidaftercleanmultipleinputs}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseIdAfterCleanMultipleInputs />
+
+            <p>
+                so the <span className="text-white font-semibold"> template literals </span> give a context that 
+                <span className="text-white font-semibold"> makes these id's unique. </span>
+            </p>
           
             </SectionWrapper>
         </div>
