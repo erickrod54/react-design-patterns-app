@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.14 - data js  
+/**react-design-patterns-app - version 12.15 - data js  
  * - Features: 
  *    
- *     --> Adding 'CallbackAsRefBefore' comments
+ *     --> Adding 'CallbackAsRefBefore' styles to code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2737,27 +2737,30 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     ` 
     const CallbackAsRefBefore = () => {
 
-        /**once the component is mount the states get evaluated */
-        const [ showInput, setShowInput ] = useState(false)
-        const inputRef = useRef(null);
-
-        /**the problem will come to get the value of the 'inputRef',
-         * that will be 'null' at the moment when the component renders*/
-        useEffect(() => {
-            inputRef.current.focus();
-        }, []);
-
-        /**once the component is mount will try to render the component */
-        return(
-            <>
-                <button onClick={() => setShowInput((s) => !s)}> Switch </button>
-                {showInput && <input type="text" ref={inputRef} />}
-            </>
-        )
-        }
-
-
-    export default CallbackAsRefBefore
+      /**once the component is mount the states get evaluated */
+      const [ showInput, setShowInput ] = useState(false)
+      const inputRef = useRef(null);
+  
+      /**the problem will come to get the value of the 'inputRef',
+           * that will be 'null' at the moment when the component renders*/
+      useEffect(() => {
+          inputRef.current.focus();
+      }, []);
+  
+      /**once the component is mount will try to render the component */
+      return(
+          <>
+          <FormWrapper>
+              <ButtonGeneral>
+                  <button onClick={() => setShowInput((s) => !s)}> Switch </button>
+              </ButtonGeneral>
+              {showInput && <input type="text" ref={inputRef} />} 
+          </FormWrapper>
+          </>
+      )
+      }
+  
+  export default CallbackAsRefBefore;
   `
   }
 ];
