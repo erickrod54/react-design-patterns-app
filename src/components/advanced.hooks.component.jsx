@@ -16,10 +16,10 @@ import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 
-/**react-design-patterns-app - version 12.15 - AdvancedHooks
+/**react-design-patterns-app - version 12.16 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'CallbackAsRefBefore' code
+ *     --> Adding 'showCallback' state
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -29,6 +29,8 @@ const AdvancedHooks = () => {
 
     
     const { CodeData } = usePatternsAppContext();
+
+    const [ showCallback, setShowCallback ] = useState(false);
 
     const keyexercisecode = CodeData[72].code;
     const countercode = CodeData[73].code;
