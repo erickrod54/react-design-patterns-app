@@ -52,6 +52,7 @@ import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.patt
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
+import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 import UseIdAfterForm from "./useid.form.after.component";
 import UseIdAfterMathForm from "./useid.form.after.math.component";
 import UseIdBeforeForm from "./useid.form.before.component";
@@ -66,10 +67,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 12.15 - components > index  
+/**react-design-patterns-app - version 13.02 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'CallbackAsRefBefore'
+ *     --> Importing and exporting 'CallbackAsRefCommentedBefore'
  * 
  * Note: Pending to make responsive design
  */
@@ -142,5 +143,6 @@ export {
          UseIdAfterMultipleInputs,
          UseIdCleanAfterTwoOrMoreInputs,
          UseIdAfterCleanMultipleInputs,
-         CallbackAsRefBefore
+         CallbackAsRefBefore,
+         CallbackAsRefCommentedBefore
         }
