@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.02 - data js  
+/**react-design-patterns-app - version 13.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'CallbackAsRefCommentedBefore' code
+ *     --> Adding 'CallbackAsRefBefore' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2773,6 +2773,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       const [ showInput, setShowInput ] = useState(false)
       const inputRef = useRef(null);
     
+      /**by commenting this line, the ref will not longer 'undefined'
+       * ( and the component will render )*/
         useEffect(() => {
             //inputRef.current.focus();
         }, []);
