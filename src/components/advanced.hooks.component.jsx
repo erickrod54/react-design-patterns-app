@@ -17,10 +17,10 @@ import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 
-/**react-design-patterns-app - version 12.19 - AdvancedHooks
+/**react-design-patterns-app - version 12.20 - AdvancedHooks
  * - Features: 
  * 
- *     --> Wrapping using 'ButtonGeneral' to style button
+ *     --> Migrating 'showCallback' states
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -29,9 +29,9 @@ import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 const AdvancedHooks = () => {
 
     
-    const { CodeData } = usePatternsAppContext();
+    const { CodeData, showCallback, setShowCallback } = usePatternsAppContext();
 
-    const [ showCallback, setShowCallback ] = useState(false);
+    
 
     const CallbackHandler = () => {
 
