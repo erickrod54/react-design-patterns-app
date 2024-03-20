@@ -1,11 +1,11 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { CodeData, ImagesData, IntroComponentData, authors, books, myNestedObject, patternCard } from "./data";
 import axios from "axios";
 
-/**react-design-patterns-app - version 4.14 - context js  
+/**react-design-patterns-app - version 12.20 - context js  
  * - Features: 
  * 
- *     --> Importing and exporting 'myNestedObject'
+ *     --> Importing and exporting 'showCallback' states
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -15,6 +15,11 @@ const PatternsAppContext = React.createContext();
 
 
 export const PatternsAppProvider = ({ children }) => {
+
+
+    /**Callback states and handlers - AdvancedHooks */
+
+    const [ showCallback, setShowCallback ] = useState(false);
     
     //const test = 'testing pattern context'
 
@@ -41,6 +46,8 @@ export const PatternsAppProvider = ({ children }) => {
                 CodeData,
                 authors,
                 books,
+                showCallback, 
+                setShowCallback,
                 myNestedObject,
                 getDataFromServer,
                 getDataFromLocalStorage
