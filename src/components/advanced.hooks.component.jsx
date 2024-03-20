@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
+import { ButtonGeneral, CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import KeysExercise from "./keys.exersice.component";
 import BashCode from "./bash.higlight.component";
@@ -17,10 +17,10 @@ import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 
-/**react-design-patterns-app - version 12.18 - AdvancedHooks
+/**react-design-patterns-app - version 12.19 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'CallbackAsRefBefore' Component
+ *     --> Wrapping using 'ButtonGeneral' to style button
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -599,7 +599,9 @@ const AdvancedHooks = () => {
                 due to the useEffect natural behavior, and makes the component crash
             </p>
 
-            <button onClick={CallbackHandler}>Render Callback Component ( Before using refs - refresh page )</button>
+            <ButtonGeneral>
+                <button onClick={CallbackHandler}>Render Callback Component ( Before using refs - refresh page )</button>
+            </ButtonGeneral>
             
             {showCallback ? 
             
