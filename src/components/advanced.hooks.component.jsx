@@ -17,10 +17,10 @@ import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 
-/**react-design-patterns-app - version 12.20 - AdvancedHooks
+/**react-design-patterns-app - version 13.00 - AdvancedHooks
  * - Features: 
  * 
- *     --> Migrating 'showCallback' states
+ *     --> Migrating 'CallbackHandler' handler
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -29,14 +29,7 @@ import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 const AdvancedHooks = () => {
 
     
-    const { CodeData, showCallback, setShowCallback } = usePatternsAppContext();
-
-    
-
-    const CallbackHandler = () => {
-
-        return setShowCallback(!showCallback)
-    }
+    const { CodeData, showCallback, setShowCallback, CallbackHandler } = usePatternsAppContext();
 
     const keyexercisecode = CodeData[72].code;
     const countercode = CodeData[73].code;
