@@ -15,11 +15,12 @@ import UseIdMultipleFormAfterMath from "./useid.multiple.formsaftermath.componen
 import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
+import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 
-/**react-design-patterns-app - version 12.17 - AdvancedHooks
+/**react-design-patterns-app - version 12.18 - AdvancedHooks
  * - Features: 
  * 
- *     --> Building 'CallbackHandler' handler
+ *     --> Rendering 'CallbackAsRefBefore' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -590,6 +591,24 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={callbackasrefbefore}/>
+
+            <p>
+                the issue as can be seen with <span className="text-white font-semibold"> CallbackAsRefBefore </span>
+                before the <span className="text-white font-semibold"> foucus </span> applied on the 
+                <span className="text-white font-semibold"> inputRef </span> is defined ( having an undefined value )
+                due to the useEffect natural behavior, and makes the component crash
+            </p>
+
+            <button onClick={CallbackHandler}>Render Callback Component ( Before using refs - refresh page )</button>
+            
+            {showCallback ? 
+            
+            <CallbackAsRefBefore />
+
+            :
+
+            null
+            }
 
             </SectionWrapper>
         </div>
