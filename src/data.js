@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 12.15 - data js  
+/**react-design-patterns-app - version 13.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'CallbackAsRefBefore' styles to code
+ *     --> Adding 'CallbackAsRefCommentedBefore' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2761,6 +2761,36 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       }
   
   export default CallbackAsRefBefore;
+  `
+  },
+  {
+    id: 94,
+    name: 'CallbackAsRefBefore - Callback as Ref',
+    code:   
+    ` 
+    const CallbackAsRefCommentedBefore = () => {
+
+      const [ showInput, setShowInput ] = useState(false)
+      const inputRef = useRef(null);
+    
+        useEffect(() => {
+            //inputRef.current.focus();
+        }, []);
+    
+        return(
+            <>
+            <FormWrapper>
+                <ButtonGeneral>
+                    <button onClick={() => setShowInput((s) => !s)}> Switch </button>
+                </ButtonGeneral>
+                {showInput && <input type="text" ref={inputRef} />} 
+            </FormWrapper>
+            </>
+        )
+        }
+    
+    
+    export default CallbackAsRefCommentedBefore;
   `
   }
 ];
