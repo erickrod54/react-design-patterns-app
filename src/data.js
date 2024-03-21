@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.03 - data js  
+/**react-design-patterns-app - version 13.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'CallbackAsRefBefore' code comments
+ *     --> Adding 'CallbackAsRefAfter' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2765,7 +2765,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   },
   {
     id: 94,
-    name: 'CallbackAsRefBefore - Callback as Ref',
+    name: 'CallbackAsRefCommentedBefore - Callback as Ref',
     code:   
     ` 
     const CallbackAsRefCommentedBefore = () => {
@@ -2793,6 +2793,39 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     
     export default CallbackAsRefCommentedBefore;
+  `
+  },
+  {
+    id: 95,
+    name: 'CallbackAsRefAfter - Callback as Ref',
+    code:   
+    ` 
+    const CallbackAsRefAfter = () => {
+
+      const [ showInput, setShowInput ] = useState(false)
+  
+  
+      const inputRef = useCallback(( input ) => {
+          /**once switch is being hit it will destroy the input, and return to the callback, 
+           * and this conditional is to avoid the error*/
+          if (input === null) return;
+          input.focus();
+      }, [])
+  
+      return(
+          <>
+          <FormWrapper>
+              <ButtonGeneral>
+                  <button onClick={() => setShowInput((s) => !s)}> Switch </button>
+              </ButtonGeneral>
+              {showInput && <input type="text" ref={inputRef} />} 
+          </FormWrapper>
+          </>
+      )
+      }
+  
+  
+  export default CallbackAsRefAfter;
   `
   }
 ];
