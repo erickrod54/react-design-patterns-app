@@ -16,11 +16,12 @@ import UseIdMultipleFormAfter from "./useid.multiple.forms.after.component";
 import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
+import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 
-/**react-design-patterns-app - version 13.04 - AdvancedHooks
+/**react-design-patterns-app - version 13.05 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'callbackasrefcommentedbefore' code
+ *     --> Rendering 'CallbackAsRefCommentedBefore' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -613,6 +614,21 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={callbackasrefcommentedbefore}/>
+            
+            <p>
+                and then rendering the component as follows:
+            </p>
+
+            <CallbackAsRefCommentedBefore />
+
+            <p>
+                but essentially this does solve the error of the <span className="text-white font-semibold"> undefined ref </span>, but still 
+                <span className="text-white font-semibold"> not getting focus on the input </span> that is the primary goal
+            </p>
+
+            <p>
+                so in order to solve this we have to apply a callback by the <span className="text-white font-semibold"> useCallback react hook </span>
+            </p>
             
 
             </SectionWrapper>
