@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.04 - data js  
+/**react-design-patterns-app - version 13.06 - data js  
  * - Features: 
  *    
- *     --> Adding 'CallbackAsRefAfter' code
+ *     --> Adding 'CallbackAsRefAfter' code comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2818,6 +2818,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
               <ButtonGeneral>
                   <button onClick={() => setShowInput((s) => !s)}> Switch </button>
               </ButtonGeneral>
+              {/**this is the conditional that will detroy the input once in the callback*/}
               {showInput && <input type="text" ref={inputRef} />} 
           </FormWrapper>
           </>
