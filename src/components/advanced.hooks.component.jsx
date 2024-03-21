@@ -17,10 +17,10 @@ import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 
-/**react-design-patterns-app - version 13.01 - AdvancedHooks
+/**react-design-patterns-app - version 13.04 - AdvancedHooks
  * - Features: 
  * 
- *     --> Clearing 'setShowCallback'
+ *     --> Adding 'callbackasrefcommentedbefore' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -54,6 +54,7 @@ const AdvancedHooks = () => {
     const useidcleanaftertwoorMoreinputs = CodeData[91].code;
     const useidaftercleanmultipleinputs = CodeData[92].code;
     const callbackasrefbefore = CodeData[93].code;
+    const callbackasrefcommentedbefore = CodeData[94].code;
 
     return(
         <div>
@@ -599,11 +600,20 @@ const AdvancedHooks = () => {
             {showCallback ? 
             
             <CallbackAsRefBefore />
-
+            
             :
-
+            
             null
             }
+
+            <p>
+                then by comment the <span className="text-white font-semibold"> inputRef </span> that is been made at the 
+                <span className="text-white font-semibold"> useEffect </span>, i can see how the value is not longer 
+                <span className="text-white font-semibold"> undefined </span>, as follows:
+            </p>
+
+            <BashCode code={callbackasrefcommentedbefore}/>
+            
 
             </SectionWrapper>
         </div>
