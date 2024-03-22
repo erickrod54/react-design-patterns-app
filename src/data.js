@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.06 - data js  
+/**react-design-patterns-app - version 13.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'CallbackAsRefAfter' code comment
+ *     --> Adding 'UseImperativeHookPattern' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2827,6 +2827,34 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   
   
   export default CallbackAsRefAfter;
+  `
+  },
+  {
+    id: 96,
+    name: 'UseImperativeHookPattern - Use Imperative Hook Pattern',
+    code:   
+    ` 
+    const UseImperativeHookPattern = () => {
+
+      const inputRef = useRef();
+  
+      const submitHandler = (e) => {
+          e.preventDefault();
+  
+          console.log(inputRef.current.value);
+      }
+  
+      return (
+          <form onSubmit={submitHandler}>
+          <ForwardingRefInput ref={inputRef} />
+          <button type="submit" className="button">
+              Submit
+          </button>
+          </form>
+      );
+     }
+  
+    export default UseImperativeHookPattern;
   `
   }
 ];
