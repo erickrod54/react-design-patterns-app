@@ -19,10 +19,10 @@ import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 
-/**react-design-patterns-app - version 13.07 - AdvancedHooks
+/**react-design-patterns-app - version 13.08 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'CallbackAsRefAfter' Component
+ *     --> developing 'useImperativeHandle hook pattern' concept
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -642,6 +642,24 @@ const AdvancedHooks = () => {
             </p>
 
             <CallbackAsRefAfter />
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="use-imperative-handle-hook"><span > useImperativeHandle hook pattern </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                this pattern is really important for <span className="text-white font-semibold"> use cases </span> when refs are implemented but 
+                it is necessary to <span className="text-white font-semibold"> limit access to certain features of the component </span>
+            </p>
+
+            <p>
+                so expading more the concept of <span className="text-white font-semibold"> limiting the access </span> of a 
+                <span className="text-white font-semibold"> ref </span> to specific <span className="text-white font-semibold"> 
+                properties or functions </span> of a component in React. This is made by using the <span className="text-white font-semibold"> 
+                imperative nature of certain actions, </span> such as <span className="text-white font-semibold"> focusing on an input element,
+                </span>  and how they sometimes require using refs. In React limiting the access of a ref is made by using the 
+                <span className="text-white font-semibold"> useImperativeHandle hook. </span>
+            </p>
 
             </SectionWrapper>
         </div>
