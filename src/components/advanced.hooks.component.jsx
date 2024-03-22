@@ -18,10 +18,10 @@ import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.c
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 
-/**react-design-patterns-app - version 13.05 - AdvancedHooks
+/**react-design-patterns-app - version 13.06 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'CallbackAsRefCommentedBefore' Component
+ *     --> Adding 'callbackasrefaftercode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -56,6 +56,9 @@ const AdvancedHooks = () => {
     const useidaftercleanmultipleinputs = CodeData[92].code;
     const callbackasrefbefore = CodeData[93].code;
     const callbackasrefcommentedbefore = CodeData[94].code;
+    const callbackasrefaftercode = CodeData[95].code;
+
+    
 
     return(
         <div>
@@ -628,8 +631,10 @@ const AdvancedHooks = () => {
 
             <p>
                 so in order to solve this we have to apply a callback by the <span className="text-white font-semibold"> useCallback react hook </span>
+                refactoring the code as follows:
             </p>
             
+            <BashCode code={callbackasrefaftercode}/>
 
             </SectionWrapper>
         </div>
