@@ -17,11 +17,12 @@ import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
+import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 
-/**react-design-patterns-app - version 13.06 - AdvancedHooks
+/**react-design-patterns-app - version 13.07 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'callbackasrefaftercode' code
+ *     --> Rendering 'CallbackAsRefAfter' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -635,6 +636,12 @@ const AdvancedHooks = () => {
             </p>
             
             <BashCode code={callbackasrefaftercode}/>
+
+            <p>
+                and rendering the component will have the <span className="text-white font-semibold"> focus behavior as expected </span>:
+            </p>
+
+            <CallbackAsRefAfter />
 
             </SectionWrapper>
         </div>
