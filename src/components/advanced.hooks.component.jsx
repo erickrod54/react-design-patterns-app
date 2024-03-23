@@ -19,10 +19,10 @@ import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 
-/**react-design-patterns-app - version 13.08 - AdvancedHooks
+/**react-design-patterns-app - version 13.09 - AdvancedHooks
  * - Features: 
  * 
- *     --> developing 'useImperativeHandle hook pattern' concept
+ *     --> Adding 'useImperativeHandle hook pattern' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -58,6 +58,7 @@ const AdvancedHooks = () => {
     const callbackasrefbefore = CodeData[93].code;
     const callbackasrefcommentedbefore = CodeData[94].code;
     const callbackasrefaftercode = CodeData[95].code;
+    const useimperativehookpattern = CodeData[96].code;
 
     
 
@@ -660,6 +661,13 @@ const AdvancedHooks = () => {
                 </span>  and how they sometimes require using refs. In React limiting the access of a ref is made by using the 
                 <span className="text-white font-semibold"> useImperativeHandle hook. </span>
             </p>
+
+            <p>
+                so let's say i have a component where i got multiple refs, and at the scope of the component and another one at the scope of
+                a subcomponent, as follows:
+            </p>
+
+            <BashCode code={useimperativehookpattern}/>
 
             </SectionWrapper>
         </div>
