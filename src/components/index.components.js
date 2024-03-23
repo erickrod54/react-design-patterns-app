@@ -26,6 +26,7 @@ import ChildComponent from "./error.boundaries.child.component";
 import ErrorBoundaries from "./error.boundaries.component";
 import MasterComponent from "./error.boundaries.parent.component";
 import ForwardingRefForm from "./forwarding.ref.form.component";
+import { ForwardingRefInput } from "./forwarding.ref.input.component";
 import ForwardingRefs from "./forwarding.refs.component";
 import ForwardingHookRefForm from "./forwarding.useforwardref.form.component";
 import FunctionalProgramming from "./functional.programming.component";
@@ -68,10 +69,11 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 13.04 - components > index  
+
+/**react-design-patterns-app - version 13.09 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'CallbackAsRefAfter'
+ *     --> Importing and exporting 'ForwardingRefInput'
  * 
  * Note: Pending to make responsive design
  */
@@ -146,5 +148,6 @@ export {
          UseIdAfterCleanMultipleInputs,
          CallbackAsRefBefore,
          CallbackAsRefCommentedBefore,
-         CallbackAsRefAfter
+         CallbackAsRefAfter,
+         ForwardingRefInput
         }
