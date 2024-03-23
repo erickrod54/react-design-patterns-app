@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.09 - data js  
+/**react-design-patterns-app - version 13.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseImperativeHookPattern' code
+ *     --> Refactoring 'UseImperativeHookPattern' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2833,28 +2833,33 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     id: 96,
     name: 'UseImperativeHookPattern - Use Imperative Hook Pattern',
     code:   
-    ` 
-    const UseImperativeHookPattern = () => {
+    `     
+      const UseImperativeHookPattern = () => {
 
-      const inputRef = useRef();
-  
-      const submitHandler = (e) => {
-          e.preventDefault();
-  
-          console.log(inputRef.current.value);
+          
+        const inputRef = useRef();
+
+        const submitHandler = (e) => {
+            e.preventDefault();
+            /**once submit i will catch this value at the console*/
+            console.log(inputRef.current.value);
+        }
+
+        return (
+            <FormWrapper>
+                <form onSubmit={submitHandler}>
+                <ForwardingRefInput ref={inputRef} />
+                <ButtonGeneral>
+                    <button type="submit" onClick={submitHandler} className="button">
+                        Submit
+                    </button>
+                </ButtonGeneral>
+                </form>
+            </FormWrapper>
+        );
       }
-  
-      return (
-          <form onSubmit={submitHandler}>
-          <ForwardingRefInput ref={inputRef} />
-          <button type="submit" className="button">
-              Submit
-          </button>
-          </form>
-      );
-     }
-  
-    export default UseImperativeHookPattern;
+
+      export default UseImperativeHookPattern;
   `
   }
 ];
