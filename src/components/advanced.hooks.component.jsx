@@ -19,10 +19,10 @@ import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 
-/**react-design-patterns-app - version 13.09 - AdvancedHooks
+/**react-design-patterns-app - version 13.10 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useImperativeHandle hook pattern' code
+ *     --> Adding 'useforwardrefs' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -33,6 +33,7 @@ const AdvancedHooks = () => {
     
     const { CodeData, showCallback, CallbackHandler } = usePatternsAppContext();
 
+    const useforwardrefs = CodeData[65].code;
     const keyexercisecode = CodeData[72].code;
     const countercode = CodeData[73].code;
     const withoutkeysexercisecode = CodeData[73].code;
@@ -668,6 +669,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useimperativehookpattern}/>
+
+            <p>
+                and the <span className="text-white font-semibold"> ForwardingRefInput </span> code as follows: 
+            </p>
+
+            <BashCode code={useforwardrefs}/>
 
             </SectionWrapper>
         </div>
