@@ -19,11 +19,12 @@ import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
+import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
 
-/**react-design-patterns-app - version 13.13 - AdvancedHooks
+/**react-design-patterns-app - version 13.14 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'useimperativefocusHookpatterncode'
+ *     --> Rendering 'UseImperativeFocusHookPattern' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -686,12 +687,17 @@ const AdvancedHooks = () => {
 
 
             <p>
-                or refactoring in order to get the reference but this time in order to focus the user entry with 
-                the same approach by <span className="text-white font-semibold"> useImperativeHandle hook. </span>
-                and limiting the access only for a <span className="text-white font-semibold"> focus </span> method:
+                or refactoring in order to get the reference but this time in order to apply to the user entry the 
+                <span className="text-white font-semibold"> focus </span> method:
             </p>
 
             <BashCode code={useimperativefocusHookpatterncode}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseImperativeFocusHookPattern />
 
             </SectionWrapper>
         </div>
