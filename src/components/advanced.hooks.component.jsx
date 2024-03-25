@@ -18,11 +18,12 @@ import UseIdAfterCleanMultipleInputs from "./useid.multiple.inputs.after.clean.c
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
+import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 
-/**react-design-patterns-app - version 13.10 - AdvancedHooks
+/**react-design-patterns-app - version 13.12 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useforwardrefs' code
+ *     --> Rendering 'UseImperativeHookPattern'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -675,6 +676,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useforwardrefs}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseImperativeHookPattern />
 
             </SectionWrapper>
         </div>
