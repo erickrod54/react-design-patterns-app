@@ -21,10 +21,10 @@ import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
 
-/**react-design-patterns-app - version 13.14 - AdvancedHooks
+/**react-design-patterns-app - version 13.16 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseImperativeFocusHookPattern' Component
+ *     --> Adding 'forwardingImperativerefinputcode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -63,6 +63,7 @@ const AdvancedHooks = () => {
     const callbackasrefaftercode = CodeData[95].code;
     const useimperativehookpattern = CodeData[96].code;
     const useimperativefocusHookpatterncode = CodeData[97].code;
+    const forwardingImperativerefinputcode = CodeData[98].code;
 
     
 
@@ -698,6 +699,16 @@ const AdvancedHooks = () => {
             </p>
 
             <UseImperativeFocusHookPattern />
+
+            <p>
+                so i will refactor the reference scope using <span className="text-white font-semibold"> useImperativeHandle hook </span> 
+                in order to give access to <span className="text-white font-semibold"> two objects, </span> first 
+                the <span className="text-white font-semibold"> ref, </span> and second will be a made up method for pop an alert 
+                <span className="text-white font-semibold"> sayType </span> and this will be by the 
+                <span className="text-white font-semibold"> ForwardingImperativeRefInput </span> sub component 
+            </p>
+
+            <BashCode code={forwardingImperativerefinputcode}/>
 
             </SectionWrapper>
         </div>
