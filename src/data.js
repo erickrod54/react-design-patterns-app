@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.15 - data js  
+/**react-design-patterns-app - version 13.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingImperativeRefInput' code
+ *     --> Adding 'ForwardingImperativeRefInput' code coment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2902,6 +2902,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     `     
     const IngRefInput = (props, ref) => {
 
+      /**by using the hook i specified acces only to two objects 'ref',
+       * and sayType*/
       useImperativeHandle(ref, () => {
           return{ sayType: () => alert("Type your name") }
       })
