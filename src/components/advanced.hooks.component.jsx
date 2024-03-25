@@ -20,10 +20,10 @@ import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.befor
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 
-/**react-design-patterns-app - version 13.12 - AdvancedHooks
+/**react-design-patterns-app - version 13.13 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseImperativeHookPattern'
+ *     --> Rendering 'useimperativefocusHookpatterncode'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -61,6 +61,7 @@ const AdvancedHooks = () => {
     const callbackasrefcommentedbefore = CodeData[94].code;
     const callbackasrefaftercode = CodeData[95].code;
     const useimperativehookpattern = CodeData[96].code;
+    const useimperativefocusHookpatterncode = CodeData[97].code;
 
     
 
@@ -678,10 +679,19 @@ const AdvancedHooks = () => {
             <BashCode code={useforwardrefs}/>
 
             <p>
-                resulting in:
+                resulting in: ( captures the user entry in the Chrome Java console )
             </p>
 
             <UseImperativeHookPattern />
+
+
+            <p>
+                or refactoring in order to get the reference but this time in order to focus the user entry with 
+                the same approach by <span className="text-white font-semibold"> useImperativeHandle hook. </span>
+                and limiting the access only for a <span className="text-white font-semibold"> focus </span> method:
+            </p>
+
+            <BashCode code={useimperativefocusHookpatterncode}/>
 
             </SectionWrapper>
         </div>
