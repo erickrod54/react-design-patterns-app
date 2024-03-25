@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.11 - data js  
+/**react-design-patterns-app - version 13.12 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'UseImperativeHookPattern' code
+ *     --> Adding 'UseImperativeFocusHookPattern' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2860,6 +2860,39 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       }
 
       export default UseImperativeHookPattern;
+  `
+  },
+  {
+    id: 97,
+    name: 'UseImperativeFocusHookPattern - Use Imperative Hook Pattern',
+    code:   
+    `     
+    const UseImperativeFocusHookPattern = () => {
+
+      
+        const inputRef = useRef();
+    
+        const submitHandler = (e) => {
+            e.preventDefault();
+    
+            return inputRef.current.focus()
+        }
+    
+        return (
+            <FormWrapper>
+                <form onSubmit={submitHandler}>
+                <ForwardingRefInput ref={inputRef} />
+                <ButtonGeneral>
+                    <button type="submit" onClick={submitHandler} className="button">
+                        Submit
+                    </button>
+                </ButtonGeneral>
+                </form>
+            </FormWrapper>
+        );
+    }
+    
+    export default UseImperativeFocusHookPattern;
   `
   }
 ];
