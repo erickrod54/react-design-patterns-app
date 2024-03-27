@@ -57,6 +57,7 @@ import UncontrolledPattern from "./uncontrolled.pattern.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
+import UseWithImperativeFocusMethodHookPattern from "./use.imperative.hook.focus.method.component";
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
@@ -74,10 +75,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 13.19 - components > index  
+/**react-design-patterns-app - version 13.20 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ForwardingImperativeFocusRefInput'
+ *     --> Importing and exporting 'UseWithImperativeFocusMethodHookPattern'
  * 
  * Note: Pending to make responsive design
  */
@@ -158,5 +159,6 @@ export {
          UseImperativeFocusHookPattern,
          ForwardingImperativeRefInput,
          UseWithImperativeFocusHookPattern,
-         ForwardingImperativeFocusRefInput
+         ForwardingImperativeFocusRefInput,
+         UseWithImperativeFocusMethodHookPattern
         }
