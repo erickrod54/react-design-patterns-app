@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.16 - data js  
+/**react-design-patterns-app - version 13.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingImperativeRefInput' code coment
+ *     --> Adding 'UseWithImperativeFocusMethodHookPattern' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2913,6 +2913,40 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   
   /**the second component use the 'forwardRef' hook to pass the reference */
   export const ForwardingImperativeRefInput = forwardRef(IngRefInput);
+  `
+  },
+  {
+    id: 99,
+    name: 'UseWithImperativeFocusMethodHookPattern - Use Imperative Hook Pattern',
+    code:   
+    `     
+    const UseWithImperativeFocusMethodHookPattern = () => {
+
+      
+        const inputRef = useRef();
+    
+        const submitHandler = (e) => {
+            e.preventDefault();
+            
+    
+            return inputRef.current.stayFocus()
+        }
+    
+        return (
+            <FormWrapper>
+                <form onSubmit={submitHandler}>
+                <ForwardingImperativeFocusRefInput ref={inputRef} />
+                <ButtonGeneral>
+                    <button type="submit" onClick={submitHandler} className="button">
+                        Submit
+                    </button>
+                </ButtonGeneral>
+                </form>
+            </FormWrapper>
+        );
+    }
+    
+    export default UseWithImperativeFocusMethodHookPattern;
   `
   }
 ];
