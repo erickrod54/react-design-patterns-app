@@ -20,11 +20,13 @@ import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.befor
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
+import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 
-/**react-design-patterns-app - version 13.16 - AdvancedHooks
+
+/**react-design-patterns-app - version 13.17 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'forwardingImperativerefinputcode' code
+ *     --> Rendering 'UseWithImperativeFocusHookPattern' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -709,6 +711,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={forwardingImperativerefinputcode}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseWithImperativeFocusHookPattern />
 
             </SectionWrapper>
         </div>
