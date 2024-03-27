@@ -26,6 +26,7 @@ import ChildComponent from "./error.boundaries.child.component";
 import ErrorBoundaries from "./error.boundaries.component";
 import MasterComponent from "./error.boundaries.parent.component";
 import ForwardingRefForm from "./forwarding.ref.form.component";
+import { ForwardingImperativeFocusRefInput } from "./forwarding.ref.imperative.focus.input.component";
 import { ForwardingImperativeRefInput } from "./forwarding.ref.imperative.input.component";
 import { ForwardingRefInput } from "./forwarding.ref.input.component";
 import ForwardingRefs from "./forwarding.refs.component";
@@ -73,10 +74,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 13.17 - components > index  
+/**react-design-patterns-app - version 13.19 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseWithImperativeFocusHookPattern'
+ *     --> Importing and exporting 'ForwardingImperativeFocusRefInput'
  * 
  * Note: Pending to make responsive design
  */
@@ -156,5 +157,6 @@ export {
          UseImperativeHookPattern,
          UseImperativeFocusHookPattern,
          ForwardingImperativeRefInput,
-         UseWithImperativeFocusHookPattern
+         UseWithImperativeFocusHookPattern,
+         ForwardingImperativeFocusRefInput
         }
