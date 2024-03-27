@@ -23,10 +23,10 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 
 
-/**react-design-patterns-app - version 14.00 - AdvancedHooks
+/**react-design-patterns-app - version 14.01 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'usewithimperativeFocusmethodhookcode' Component
+ *     --> Rendering 'forwardingimperativefocusrefinputcode' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -67,6 +67,7 @@ const AdvancedHooks = () => {
     const useimperativefocusHookpatterncode = CodeData[97].code;
     const forwardingImperativerefinputcode = CodeData[98].code;
     const usewithimperativeFocusmethodhookcode = CodeData[99].code;
+    const forwardingimperativefocusrefinputcode = CodeData[100].code;
     
 
     return(
@@ -724,6 +725,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={usewithimperativeFocusmethodhookcode}/>    
+
+            <p>
+                and the sub component will be as follows:
+            </p>
+            
+            <BashCode code={forwardingimperativefocusrefinputcode}/>    
 
             </SectionWrapper>
         </div>
