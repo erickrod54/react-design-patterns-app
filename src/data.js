@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 13.19 - data js  
+/**react-design-patterns-app - version 14.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingImperativeFocusRefInput' code
+ *     --> Adding 'UseWithImperativeFocusMethodHookPattern'  comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2928,13 +2928,14 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         const submitHandler = (e) => {
             e.preventDefault();
             
-    
+            /**now i invoke the 'stayFocus' method */  
             return inputRef.current.stayFocus()
         }
     
         return (
             <FormWrapper>
                 <form onSubmit={submitHandler}>
+                {/**i add the new subcomponent modified*/}
                 <ForwardingImperativeFocusRefInput ref={inputRef} />
                 <ButtonGeneral>
                     <button type="submit" onClick={submitHandler} className="button">
