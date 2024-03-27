@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.00 - data js  
+/**react-design-patterns-app - version 14.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseWithImperativeFocusMethodHookPattern'  comments
+ *     --> Adding 'ForwardingImperativeFocusRefInput'  comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2961,7 +2961,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       const inputRef = useRef()
       
       /**here is the hook and i give access to the ref, and the 
-       * function 'focus'*/
+       * function 'stayFocus'*/
       useImperativeHandle(ref, () => {
           return{ 
               stayFocus: () => inputRef.current.focus() 
