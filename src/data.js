@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.01 - data js  
+/**react-design-patterns-app - version 14.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingImperativeFocusRefInput'  comments
+ *     --> Adding 'UseImperativeMultipleFocus'  code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2974,7 +2974,52 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
   /**the second component use the 'forwardRef' hook to pass the reference */
   export const ForwardingImperativeFocusRefInput = forwardRef(IngRefInput);
     `
+  },
+  {
+    id: 101,
+    name: 'UseImperativeMultipleFocus - Use Imperative Hook Pattern',
+    code:   
+    `
+    const UseImperativeMultipleFocus = () => {
+
+      
+        const inputRef = useRef();
+    
+        const submitFocus = (e) => {
+            e.preventDefault();
+            
+    
+            return inputRef.current.input1.focus()
+        }
+    
+        const submitFocus2 = (e) => {
+            e.preventDefault();
+            
+    
+            return inputRef.current.input2.focus()
+        }
+    
+        return (
+            <FormWrapper>
+                <form >
+                <ForwardingImperativeMultipleFocus ref={inputRef} />
+                <ButtonGeneral>
+                    <button type="submit" onClick={submitFocus} className="button">
+                        Focus to 1
+                    </button>
+                    <button type="submit" onClick={submitFocus2} className="button">
+                        Focus to 2 
+                    </button>
+                </ButtonGeneral>
+                </form>
+            </FormWrapper>
+        );
+    }
+    
+    export default UseImperativeMultipleFocus;
+    `
   }
+  
 ];
 
 /**List Pattern data  -- start */
