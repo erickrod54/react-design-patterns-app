@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.02 - data js  
+/**react-design-patterns-app - version 14.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseImperativeMultipleFocus'  code
+ *     --> Adding 'UseImperativeMultipleFocus'  code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -2985,6 +2985,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       
         const inputRef = useRef();
     
+        /**each handler will return a different reference*/
         const submitFocus = (e) => {
             e.preventDefault();
             
@@ -3004,6 +3005,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
                 <form >
                 <ForwardingImperativeMultipleFocus ref={inputRef} />
                 <ButtonGeneral>
+                    {/**each reference from each button will access focus on the sub component*/}
                     <button type="submit" onClick={submitFocus} className="button">
                         Focus to 1
                     </button>
