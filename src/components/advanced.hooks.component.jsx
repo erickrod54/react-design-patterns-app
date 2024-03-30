@@ -23,10 +23,10 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.04 - AdvancedHooks
+/**react-design-patterns-app - version 14.06 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseImperativeMultipleFocus' Component
+ *     --> Developing 'useImperativeHandle' Alternative
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -746,6 +746,12 @@ const AdvancedHooks = () => {
             </p>
 
             <UseImperativeMultipleFocus />
+
+            <p>
+                so another approach using <span className="text-white font-semibold"> useImperativeHandle hook </span> implementing 
+                <span className="text-white font-semibold"> states </span> and a dependency array ( as it is use on useEffect to 
+                avoid the side effect to be return it every time ) 
+            </p>
 
             </SectionWrapper>
         </div>
