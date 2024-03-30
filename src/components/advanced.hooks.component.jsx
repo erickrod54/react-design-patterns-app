@@ -21,11 +21,12 @@ import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
+import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.03 - AdvancedHooks
+/**react-design-patterns-app - version 14.04 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useimperativemultiplefocus' code
+ *     --> Rendering 'UseImperativeMultipleFocus' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -739,6 +740,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useimperativemultiplefocus}/>
+
+            <p>
+                resulting in the following:
+            </p>
+
+            <UseImperativeMultipleFocus />
 
             </SectionWrapper>
         </div>
