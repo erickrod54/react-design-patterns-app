@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 13.08 - styled.components
+/**react-design-patterns-app - version 14.04 - styled.components
  * - Features: 
  * 
- *     --> Writting '.use-imperative-handle-hook' styles.	
+ *     --> Writting 'button' styles for 'FormWrapper'.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -87,6 +87,10 @@ export const FormWrapper = styled.div`
 
 	input{
 		${tw`flex justify-center items-center m-4 p-4 rounded text-black border-4 border-amber-600`}
+	}
+
+	button{
+		${tw`m-4 p-4`}
 	}
 
 	label{
