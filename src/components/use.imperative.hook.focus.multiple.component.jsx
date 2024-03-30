@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import { ButtonGeneral, ButtonWrapper, FormWrapper } from "../styledcomponents/styled.components";
 import { ForwardingImperativeMultipleFocus } from "./forwarding.ref.imperative.multiple.input.component";
 
-/**react-design-patterns-app - version 14.05 - UseImperativeMultipleFocus
+/**react-design-patterns-app - version 14.06 - UseImperativeMultipleFocus
  * - Features: 
  * 
- *     --> Wrapping using 'ButtonWrapper' 
+ *     --> Wrapping using multiple 'ButtonGeneral' 
  * 
  * Note: 'UseImperativeMultipleFocus' is the refactor that 
  * will use 'useImperativeHandle' in the 'ForwardingImperativeRefInput'
@@ -41,6 +41,8 @@ const UseImperativeMultipleFocus = () => {
                     <button type="submit" onClick={submitFocus} className="button">
                         Focus to 1
                     </button>
+                </ButtonGeneral>
+                <ButtonGeneral>
                     <button type="submit" onClick={submitFocus2} className="button">
                         Focus to 2 
                     </button>
