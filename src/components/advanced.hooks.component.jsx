@@ -22,11 +22,10 @@ import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 
-
-/**react-design-patterns-app - version 14.01 - AdvancedHooks
+/**react-design-patterns-app - version 14.03 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'forwardingimperativefocusrefinputcode' Component
+ *     --> Adding 'useimperativemultiplefocus' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -68,6 +67,7 @@ const AdvancedHooks = () => {
     const forwardingImperativerefinputcode = CodeData[98].code;
     const usewithimperativeFocusmethodhookcode = CodeData[99].code;
     const forwardingimperativefocusrefinputcode = CodeData[100].code;
+    const useimperativemultiplefocus = CodeData[101].code;
     
 
     return(
@@ -720,17 +720,25 @@ const AdvancedHooks = () => {
             <UseWithImperativeFocusHookPattern />
 
             <p>
-                and refactoring the code in order to implement the focus method combined with the imperative 
-                hook in order to make it accesible as a reference will be as follows for the main component:
+                and refactoring the code in order to implement the <span className="text-white font-semibold"> 
+                 focus method </span> combined with the imperative hook in order to make it 
+                 <span className="text-white font-semibold"> accesible </span> as a 
+                <span className="text-white font-semibold"> reference </span> will be as follows for the main component:
             </p>
 
             <BashCode code={usewithimperativeFocusmethodhookcode}/>    
 
             <p>
-                and the sub component will be as follows:
+                and the <span className="text-white font-semibold"> sub component </span> will be as follows:
             </p>
             
             <BashCode code={forwardingimperativefocusrefinputcode}/>    
+
+            <p>
+                and refactoring for multiple entries will be as follows:
+            </p>
+
+            <BashCode code={useimperativemultiplefocus}/>
 
             </SectionWrapper>
         </div>
