@@ -29,6 +29,7 @@ import ForwardingRefForm from "./forwarding.ref.form.component";
 import { ForwardingImperativeFocusRefInput } from "./forwarding.ref.imperative.focus.input.component";
 import { ForwardingImperativeRefInput } from "./forwarding.ref.imperative.input.component";
 import { ForwardingImperativeMultipleFocus } from "./forwarding.ref.imperative.multiple.input.component";
+import { ForwardingImperativeRefState } from "./forwarding.ref.imperative.state.component";
 import { ForwardingRefInput } from "./forwarding.ref.input.component";
 import ForwardingRefs from "./forwarding.refs.component";
 import ForwardingHookRefForm from "./forwarding.useforwardref.form.component";
@@ -77,10 +78,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 14.03 - components > index  
+/**react-design-patterns-app - version 14.08 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseImperativeMultipleFocus'
+ *     --> Importing and exporting 'ForwardingImperativeRefState'
  * 
  * Note: Pending to make responsive design
  */
@@ -164,5 +165,6 @@ export {
          ForwardingImperativeFocusRefInput,
          UseWithImperativeFocusMethodHookPattern,
          ForwardingImperativeMultipleFocus,
-         UseImperativeMultipleFocus
+         UseImperativeMultipleFocus,
+         ForwardingImperativeRefState
         }
