@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.07 - data js  
+/**react-design-patterns-app - version 14.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingImperativeRefState'  code
+ *     --> Adding 'ForwardingImperativeRefState'  code comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3029,7 +3029,11 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     const IngRefInput = (props, ref) => {
 
       const [ value, setValue ] = useState("");
- 
+    
+      /** 'Enhanced Performance' by adding dependency array This optimization can 
+       * improve performance by avoiding unnecessary recalculations or re-renders 
+       * when the value remains unchanged.*/
+
       useImperativeHandle(ref, () => {
           return{ value }
       }, [value])
