@@ -23,10 +23,11 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.06 - AdvancedHooks
+/**react-design-patterns-app - version 14.08 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'useImperativeHandle' Alternative
+ *     --> Developing 'ForwardingImperativeRefState ' Alternative 
+ *         advantages and disadvantages
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -752,6 +753,50 @@ const AdvancedHooks = () => {
                 <span className="text-white font-semibold"> states </span> and a dependency array ( as it is use on useEffect to 
                 avoid the side effect to be return it every time ) 
             </p>
+
+            <p>
+                refactoring the custom sub component as <span className="text-white font-semibold"> ForwardingImperativeRefState </span> 
+                in order to use a dependency array and capture the user entry can come in some advantages and some disadvantages as follows:
+            </p>
+
+
+             <p>
+                Some <span className="text-white font-semibold"> advantages </span> of this pattern are: 
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Controlled Access </span> ( control what functionalities or properties of a component are exposed externally through the ref. By limiting access to only the value )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Encapsulation </span> ( Limiting access to the value through the ref promotes encapsulation by hiding internal implementation details of the component. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Improved Security </span> ( Limiting access to sensitive information or critical functionalities reduces the potential attack surface and mitigates security risks. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Enhanced Performance </span> ( Dependency array [value] to the useImperativeHandle hook,  is only re-executed when the value prop changes. )
+                </li>
+            </ul>
+
+            <p>
+                Some <span className="text-white font-semibold"> disadvantages </span> of this pattern are: 
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Complexity </span> ( understanding how the hook works and ensure proper dependency management to avoid unexpected behavior or bugs. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Potential Overhead </span> ( because need to carefully consider the dependencies passed to useImperativeHandle to avoid performance bottlenecks. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Limited Flexibility </span> ( Limiting access to only the value property may restrict the flexibility of the component's API. If external components require access to additional properties or functionalities, they may need to be exposed through alternative means, potentially complicating the component's design. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Learning Curve </span>  ( useImperativeHandle or similar hooks may face a learning curve when implementing or maintaining components that utilize this feature. )
+                </li>
+            </ul>
 
             </SectionWrapper>
         </div>
