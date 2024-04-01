@@ -61,6 +61,7 @@ import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
 import UseWithImperativeFocusMethodHookPattern from "./use.imperative.hook.focus.method.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
+import UseWithImperativeFocusStatePattern from "./use.imperative.hook.focus.state.component";
 import CallbackAsRefAfter from "./usecallback.as.a.ref.after.component";
 import CallbackAsRefBefore from "./usecallback.as.a.ref.before.component";
 import CallbackAsRefCommentedBefore from "./usecallback.as.a.ref.commented.before.component";
@@ -78,10 +79,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 14.08 - components > index  
+/**react-design-patterns-app - version 14.10 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ForwardingImperativeRefState'
+ *     --> Importing and exporting 'UseWithImperativeFocusStatePattern'
  * 
  * Note: Pending to make responsive design
  */
@@ -166,5 +167,6 @@ export {
          UseWithImperativeFocusMethodHookPattern,
          ForwardingImperativeMultipleFocus,
          UseImperativeMultipleFocus,
-         ForwardingImperativeRefState
+         ForwardingImperativeRefState,
+         UseWithImperativeFocusStatePattern
         }
