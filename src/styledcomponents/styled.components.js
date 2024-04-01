@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 14.04 - styled.components
+/**react-design-patterns-app - version 14.11 - styled.components
  * - Features: 
  * 
- *     --> Writting 'button' styles for 'FormWrapper'.	
+ *     --> Writting 'use-deferred-value-hook-pattern' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -320,6 +320,12 @@ export const CustomTitleStyle = styled.div`
 .use-imperative-handle-hook{
 	span{
 			${tw`text-amber-300 underline`}
+		}
+}
+
+.use-deferred-value-hook-pattern{
+	span{
+			${tw`text-red-400 underline`}
 		}
 }
 
