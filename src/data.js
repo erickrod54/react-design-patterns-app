@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.08 - data js  
+/**react-design-patterns-app - version 14.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'ForwardingImperativeRefState'  code comment
+ *     --> Adding 'UseWithImperativeFocusStatePattern'  code comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3053,6 +3053,40 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     /**the second component use the 'ForwardingImperativeRefState' hook to pass the reference */
     export const ForwardingImperativeRefState = forwardRef(IngRefInput);
+    `
+  },
+  {
+    id: 103,
+    name: 'UseWithImperativeFocusStatePattern - Use Imperative Hook Pattern',
+    code:   
+    `
+    const UseWithImperativeFocusStatePattern = () => {
+      
+      
+      const inputRef = useRef();
+      
+      /**the 'inputRef.current.value' gets the user entry and the 'inputRef' reference*/
+      const submitHandler = (e) => {
+          e.preventDefault();
+          
+          return console.log(" this is the imperative user entry ==>", inputRef.current.value) 
+      }
+    
+      return (
+          <FormWrapper>
+              <form>
+              <ForwardingImperativeRefState type="text" ref={inputRef}/>
+              <ButtonGeneral>
+                  <button type="submit" onClick={submitHandler} className="button">
+                      Focus on user Entry
+                  </button>
+              </ButtonGeneral>
+              </form>
+          </FormWrapper>
+      );
+    }
+    
+    export default UseWithImperativeFocusStatePattern;
     `
   }
   
