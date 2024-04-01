@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.10 - data js  
+/**react-design-patterns-app - version 14.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseWithImperativeFocusStatePattern'  code comment
+ *     --> Adding 'ForwardingImperativeRefState'  code comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3028,6 +3028,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     `
     const IngRefInput = (props, ref) => {
 
+      /**an initial value is needed ( if it is not added will be 'undefined' value ) */
       const [ value, setValue ] = useState("");
     
       /** 'Enhanced Performance' by adding dependency array This optimization can 
