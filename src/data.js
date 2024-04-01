@@ -3065,7 +3065,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       
       const inputRef = useRef();
       
-      /**the 'inputRef.current.value' gets the user entry and the 'inputRef' reference*/
+      /**the 'inputRef.current.value' gets the user entry and the 'inputRef' reference to be handle*/
       const submitHandler = (e) => {
           e.preventDefault();
           
