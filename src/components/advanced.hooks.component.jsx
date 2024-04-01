@@ -23,11 +23,10 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.08 - AdvancedHooks
+/**react-design-patterns-app - version 14.10 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'ForwardingImperativeRefState ' Alternative 
- *         advantages and disadvantages
+ *     --> Adding 'useimperativefocusstatepattern' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -70,6 +69,8 @@ const AdvancedHooks = () => {
     const usewithimperativeFocusmethodhookcode = CodeData[99].code;
     const forwardingimperativefocusrefinputcode = CodeData[100].code;
     const useimperativemultiplefocus = CodeData[101].code;
+    const forwardingimperativerefstate = CodeData[102].code;
+    const useimperativefocusstatepattern = CodeData[103].code;
     
 
     return(
@@ -759,6 +760,7 @@ const AdvancedHooks = () => {
                 in order to use a dependency array and capture the user entry can come in some advantages and some disadvantages as follows:
             </p>
 
+            <BashCode code={forwardingimperativerefstate}/>
 
              <p>
                 Some <span className="text-white font-semibold"> advantages </span> of this pattern are: 
@@ -797,6 +799,14 @@ const AdvancedHooks = () => {
                     <span className="text-white font-semibold"> Learning Curve </span>  ( useImperativeHandle or similar hooks may face a learning curve when implementing or maintaining components that utilize this feature. )
                 </li>
             </ul>
+
+            <p>
+                and implementing in the main component  <span className="text-white font-semibold"> UseWithImperativeFocusStatePattern </span>  will have  a small refactor 
+                in the handler in order to get the user entry, as follows:
+            </p>
+
+            <BashCode code={useimperativefocusstatepattern}/>
+            
 
             </SectionWrapper>
         </div>
