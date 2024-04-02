@@ -23,10 +23,10 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.10 - AdvancedHooks
+/**react-design-patterns-app - version 14.11 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'useimperativefocusstatepattern' code
+ *     --> Developing 'UseDeferredValue Hook Pattern' concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -806,7 +806,16 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={useimperativefocusstatepattern}/>
-            
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="use-deferred-value-hook-pattern"><span > UseDeferredValue Hook Pattern </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                this is a very handy hook in order to <span className="text-white font-semibold"> defers the update of a value </span>  to 
+                <span className="text-white font-semibold"> avoid blocking the UI, </span> useful for optimizing performance of non-critical 
+                updates and enhance <span className="text-white font-semibold"> user experience </span>   
+            </p>
 
             </SectionWrapper>
         </div>
