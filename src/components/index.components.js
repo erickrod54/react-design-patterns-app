@@ -57,6 +57,7 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.pattern";
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
+import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
@@ -80,10 +81,10 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 14.11 - components > index  
+/**react-design-patterns-app - version 14.12 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'HeavyComponentBefore'
+ *     --> Importing and exporting 'UseDeferredBeforeValueHookPattern'
  * 
  * Note: Pending to make responsive design
  */
@@ -170,5 +171,6 @@ export {
          UseImperativeMultipleFocus,
          ForwardingImperativeRefState,
          UseWithImperativeFocusStatePattern,
-         HeavyComponentBefore
+         HeavyComponentBefore,
+         UseDeferredBeforeValueHookPattern
         }
