@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 14.13 - styled.components
+/**react-design-patterns-app - version 14.14 - styled.components
  * - Features: 
  * 
- *     --> Building 'FormWrapperDeferred' style Component.	
+ *     --> Building 'HeavyComponentWrapper' style Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -100,8 +100,18 @@ export const FormWrapper = styled.div`
 `
 
 export const FormWrapperDeferred = styled(FormWrapper)`
-	${tw`bg-violet-500 m-4 p-4 rounded-2xl h-60 w-fit`}
+	${tw`bg-violet-500 m-4 p-4 rounded-2xl h-fit w-fit`}
 
+`
+
+export const HeavyComponentWrapper = styled.div`
+	h2{
+		${tw`text-2xl text-black italic leading-tight border-l-4 bg-yellow-400 pl-2 py-1 m-2 p-2 rounded-xl`}
+	}
+	
+	span{
+		${tw`text-4xl text-pink-600`}
+	}
 `
 
 export const MultipleFormWrapper = styled.div`
