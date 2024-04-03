@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 14.11 - styled.components
+/**react-design-patterns-app - version 14.13 - styled.components
  * - Features: 
  * 
- *     --> Writting 'use-deferred-value-hook-pattern' styles.	
+ *     --> Building 'FormWrapperDeferred' style Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -94,8 +94,13 @@ export const FormWrapper = styled.div`
 	}
 
 	label{
-		${tw`text-2xl cursor-pointer font-bold`}
+		${tw`text-2xl cursor-pointer font-bold text-black`}
 	}
+
+`
+
+export const FormWrapperDeferred = styled(FormWrapper)`
+	${tw`bg-violet-500 m-4 p-4 rounded-2xl h-60 w-fit`}
 
 `
 
