@@ -23,10 +23,10 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.11 - AdvancedHooks
+/**react-design-patterns-app - version 14.12 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'UseDeferredValue Hook Pattern' concepts
+ *     --> Adding 'usedeferredbeforevalueHookpatterncode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -71,7 +71,7 @@ const AdvancedHooks = () => {
     const useimperativemultiplefocus = CodeData[101].code;
     const forwardingimperativerefstate = CodeData[102].code;
     const useimperativefocusstatepattern = CodeData[103].code;
-    
+    const usedeferredbeforevalueHookpatterncode = CodeData[104].code;
 
     return(
         <div>
@@ -816,6 +816,14 @@ const AdvancedHooks = () => {
                 <span className="text-white font-semibold"> avoid blocking the UI, </span> useful for optimizing performance of non-critical 
                 updates and enhance <span className="text-white font-semibold"> user experience </span>   
             </p>
+
+            <p>
+                let's say i have a component <span className="text-white font-semibold"> UseDeferredBeforeValueHookPattern </span>  that is 
+                rendering an user entry by using a sub component <span className="text-white font-semibold"> HeavyComponentBefore </span>, 
+                as follows:
+            </p>
+
+            <BashCode code={usedeferredbeforevalueHookpatterncode}/>
 
             </SectionWrapper>
         </div>
