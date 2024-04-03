@@ -6,15 +6,16 @@ import { AlertWrapper,
          CustomTitleStyle,
          FormWrapper,
          FormWrapperDeferred,
+         HeavyComponentWrapper,
          KeyExerciseWrapper,
          ListWrapper,
          MasterWrapper,
          ModalBackground, ModalContent, MultipleFormWrapper, OpenModalWrapper, Panel, PrimaryButton, SectionWrapper, StepFlowWrapper, ToolTipWrapper } from "./styled.components";
 
-/**react-design-patterns-app - version 14.13 - styledcomponents > index
+/**react-design-patterns-app - version 14.14 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'FormWrapperDeferred' 
+ *     --> Importing and exporting 'HeavyComponentWrapper' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -41,4 +42,6 @@ export { SectionWrapper,
          MasterWrapper,
          ChildWrapper,
          PrimaryButton,
-         KeyExerciseWrapper, FormWrapperDeferred, ToolTipWrapper, MultipleFormWrapper }
+         KeyExerciseWrapper,
+         FormWrapperDeferred,
+         HeavyComponentWrapper, ToolTipWrapper, MultipleFormWrapper }
