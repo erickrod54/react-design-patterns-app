@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.12 - data js  
+/**react-design-patterns-app - version 14.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseDeferredBeforeValueHookPattern'  code
+ *     --> Refactoring 'UseDeferredBeforeValueHookPattern'  code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3097,22 +3097,26 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     `
     const UseDeferredBeforeValueHookPattern = () => {
 
+      const id = useId();
+  
       const [ keyword, setKeyword ] = useState("")
   
       const handleChange = (e) => {
-            e.preventDefault();
-    
-            setKeyword(e.target.value)
-        }
-    
+          e.preventDefault();
+  
+          setKeyword(e.target.value)
+      }
+  
         return(
-            <>
+            <FormWrapperDeferred>
+                <label htmlFor={\`\${id}-type\`}>Type here your entry</label>
                 <input 
+                    id={\`\${id}-type\`}
                     value={keyword}
                     onChange={handleChange}
                 />
                 <HeavyComponentBefore keyword={keyword}/>
-            </>
+            </FormWrapperDeferred>
         )
     }
     
