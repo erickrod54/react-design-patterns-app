@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { HeavyComponentWrapper } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 14.11 - UseDeferredBeforeValueHookPattern  
+/**react-design-patterns-app - version 14.14 - UseDeferredBeforeValueHookPattern  
  * - Features: 
  * 
- *     --> Building 'HeavyComponentBefore'
+ *     --> Wrapping using 'HeavyComponentWrapper'
  * 
  * Note: the 'HeavyComponentBefore' will simulate a heavy performance
  * component that needs to be improve
@@ -18,10 +19,20 @@ const HeavyComponentBefore = ({ keyword }) => {
     }
 
     return(
-        <>
-          <h2>I am a slow component</h2>
-          { keyword } 
-        </>
+        <HeavyComponentWrapper>
+            <h2>
+                <span>
+                "
+                </span>
+                I am a slow  Component ( check your slow entry bellow )
+                <span>
+                "
+                </span>
+            </h2>
+            <p>
+                { keyword }
+            </p>
+        </HeavyComponentWrapper>
     )
 }
 
