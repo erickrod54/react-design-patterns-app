@@ -23,10 +23,10 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.12 - AdvancedHooks
+/**react-design-patterns-app - version 14.15 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'usedeferredbeforevalueHookpatterncode' code
+ *     --> Refactoring 'usedeferredbeforevalueHookpatterncode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
