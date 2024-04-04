@@ -22,11 +22,12 @@ import UseImperativeHookPattern from "./use.imperative.hook.before.component";
 import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.component";
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
+import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 
-/**react-design-patterns-app - version 14.16 - AdvancedHooks
+/**react-design-patterns-app - version 14.17 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'heavycomponentbeforecode' code
+ *     --> Rendering 'UseDeferredBeforeValueHookPattern' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -832,6 +833,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={heavycomponentbeforecode}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseDeferredBeforeValueHookPattern />
 
             </SectionWrapper>
         </div>
