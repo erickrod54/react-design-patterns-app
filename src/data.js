@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.13 - data js  
+/**react-design-patterns-app - version 14.16 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'UseDeferredBeforeValueHookPattern'  code
+ *     --> Adding 'HeavyComponentBefore'  code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3122,7 +3122,41 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export default UseDeferredBeforeValueHookPattern;
     `
-  }  
+  },
+  {
+    id: 105,
+    name: 'HeavyComponentBefore - Use Deferred Value Hook Pattern',
+    code:   
+    `
+    const HeavyComponentBefore = ({ keyword }) => {
+
+      const init = performance.now();
+  
+      while ( init > performance.now() - 200){
+  
+      }
+  
+        return(
+            <HeavyComponentWrapper>
+                <h2>
+                    <span>
+                    "
+                    </span>
+                    I am a slow  Component ( check your slow entry bellow )
+                    <span>
+                    "
+                    </span>
+                </h2>
+                <p>
+                    { keyword }
+                </p>
+            </HeavyComponentWrapper>
+        )
+    }
+    
+    export default HeavyComponentBefore;
+    `
+  } 
 ];
 
 /**List Pattern data  -- start */
