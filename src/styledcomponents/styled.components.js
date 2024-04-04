@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 14.14 - styled.components
+/**react-design-patterns-app - version 14.15 - styled.components
  * - Features: 
  * 
- *     --> Building 'HeavyComponentWrapper' style Component.	
+ *     --> Writting 'p' styles for 'HeavyComponentWrapper' Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -111,6 +111,10 @@ export const HeavyComponentWrapper = styled.div`
 	
 	span{
 		${tw`text-4xl text-pink-600`}
+	}
+
+	p{
+		${tw`text-4xl text-violet-600 italic leading-tight border-l-4 bg-rose-400 pl-2 py-1 m-2 p-2 rounded-xl h-12 w-fit`}
 	}
 `
 
