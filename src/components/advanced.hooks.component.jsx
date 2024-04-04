@@ -23,10 +23,10 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 
-/**react-design-patterns-app - version 14.15 - AdvancedHooks
+/**react-design-patterns-app - version 14.16 - AdvancedHooks
  * - Features: 
  * 
- *     --> Refactoring 'usedeferredbeforevalueHookpatterncode' code
+ *     --> Adding 'heavycomponentbeforecode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -72,6 +72,7 @@ const AdvancedHooks = () => {
     const forwardingimperativerefstate = CodeData[102].code;
     const useimperativefocusstatepattern = CodeData[103].code;
     const usedeferredbeforevalueHookpatterncode = CodeData[104].code;
+    const heavycomponentbeforecode = CodeData[105].code;
 
     return(
         <div>
@@ -824,6 +825,13 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={usedeferredbeforevalueHookpatterncode}/>
+
+            <p>
+                and the sub component <span className="text-white font-semibold"> HeavyComponentBefore </span>  that renders the user 
+                entry code will be as follows:
+            </p>
+
+            <BashCode code={heavycomponentbeforecode}/>
 
             </SectionWrapper>
         </div>
