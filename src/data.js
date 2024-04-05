@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.20 - data js  
+/**react-design-patterns-app - version 15.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'HeavyComponentAfterMemo'  code comments
+ *     --> Adding 'UseDeferredAfterMemo'  code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3192,46 +3192,47 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       /**here i just pass it throuhg 'memo' and export it */
       export const HeavyComponentAfterFirst = memo(HeavyComponentAfterMemo);
       `
-  },
-  {
-    id: 107,
+    },
+    {
+      id: 107,
     name: 'UseDeferredAfterMemo - Use Deferred Value Hook Pattern',
     code:   
     `
     const UseDeferredAfterMemo = () => {
-
+      
       const id = useId();
-  
+      
       const [ keyword, setKeyword ] = useState("")
-  
+      
       const handleChange = (e) => {
-          e.preventDefault();
-  
-          setKeyword(e.target.value)
+        e.preventDefault();
+        
+        setKeyword(e.target.value)
       }
-  
-        return(
-            <FormWrapperDeferred>
-                <label htmlFor={\`\${id}-type\`}>Type here your entry</label>
-                <input 
-                    id={\`\${id}-type\`}
-                    value={keyword}
-                    onChange={handleChange}
-                />
-                <HeavyComponentAfterFirst keyword={keyword}/>
-            </FormWrapperDeferred>
+      
+      return(
+        <FormWrapperDeferred>
+        <label htmlFor={\`\${id}-type\`}>Type here your entry</label>
+        <input 
+        id={\`\${id}-type\`}
+        value={keyword}
+        onChange={handleChange}
+        />
+        /**here i just add the sub component */
+        <HeavyComponentAfterFirst keyword={keyword}/>
+        </FormWrapperDeferred>
         )
-    }
-    
-    export default UseDeferredAfterMemo;
-    `
-  } 
-];
-
-/**List Pattern data  -- start */
-
-export const authors = [
-  {
+      }
+      
+      export default UseDeferredAfterMemo;
+      `
+    } 
+  ];
+  
+  /**List Pattern data  -- start */
+  
+  export const authors = [
+    {
     id:1,
     name:'Sarah Waters',
     age:55,
