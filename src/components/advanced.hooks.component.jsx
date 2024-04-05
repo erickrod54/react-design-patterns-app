@@ -24,10 +24,10 @@ import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 
-/**react-design-patterns-app - version 14.17 - AdvancedHooks
+/**react-design-patterns-app - version 14.18 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseDeferredBeforeValueHookPattern' Component
+ *     --> Developing 'UseDeferredAfterMemo' exercise
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -839,6 +839,13 @@ const AdvancedHooks = () => {
             </p>
 
             <UseDeferredBeforeValueHookPattern />
+
+            <p>
+                something that can be think as an inmmediate solution is applying useMemo hook in order 
+                to solve this issue ( that useMemo does not solve it by itself ), anyways will be applied
+                in the sub component as follows:
+            </p>
+            
 
             </SectionWrapper>
         </div>
