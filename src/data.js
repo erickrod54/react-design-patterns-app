@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.19 - data js  
+/**react-design-patterns-app - version 14.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseDeferredAfterMemo'  code
+ *     --> Adding 'HeavyComponentAfterMemo'  code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3068,128 +3068,130 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       
       /**the 'inputRef.current.value' gets the user entry and the 'inputRef' reference to be handle*/
       const submitHandler = (e) => {
+        e.preventDefault();
+        
+        return console.log(" this is the imperative user entry ==>", inputRef.current.value) 
+      }
+      
+      return (
+        <FormWrapper>
+        <form>
+        <ForwardingImperativeRefState type="text" ref={inputRef}/>
+        <ButtonGeneral>
+        <button type="submit" onClick={submitHandler} className="button">
+        Focus on user Entry
+        </button>
+        </ButtonGeneral>
+        </form>
+        </FormWrapper>
+        );
+      }
+      
+      export default UseWithImperativeFocusStatePattern;
+      `
+    },
+    {
+      id: 104,
+      name: 'UseDeferredBeforeValueHookPattern - Use Deferred Value Hook Pattern',
+      code:   
+      `
+      const UseDeferredBeforeValueHookPattern = () => {
+        
+        const id = useId();
+        
+        const [ keyword, setKeyword ] = useState("")
+        
+        const handleChange = (e) => {
           e.preventDefault();
           
-          return console.log(" this is the imperative user entry ==>", inputRef.current.value) 
-      }
-    
-      return (
-          <FormWrapper>
-              <form>
-              <ForwardingImperativeRefState type="text" ref={inputRef}/>
-              <ButtonGeneral>
-                  <button type="submit" onClick={submitHandler} className="button">
-                      Focus on user Entry
-                  </button>
-              </ButtonGeneral>
-              </form>
-          </FormWrapper>
-      );
-    }
-    
-    export default UseWithImperativeFocusStatePattern;
-    `
-  },
-  {
-    id: 104,
-    name: 'UseDeferredBeforeValueHookPattern - Use Deferred Value Hook Pattern',
-    code:   
-    `
-    const UseDeferredBeforeValueHookPattern = () => {
-
-      const id = useId();
-  
-      const [ keyword, setKeyword ] = useState("")
-  
-      const handleChange = (e) => {
-          e.preventDefault();
-  
           setKeyword(e.target.value)
-      }
-  
+        }
+        
         return(
-            <FormWrapperDeferred>
-                <label htmlFor={\`\${id}-type\`}>Type here your entry</label>
+          <FormWrapperDeferred>
+          <label htmlFor={\`\${id}-type\`}>Type here your entry</label>
                 <input 
                     id={\`\${id}-type\`}
                     value={keyword}
                     onChange={handleChange}
-                />
-                <HeavyComponentBefore keyword={keyword}/>
-            </FormWrapperDeferred>
-        )
-    }
-    
-    export default UseDeferredBeforeValueHookPattern;
-    `
-  },
-  {
-    id: 105,
-    name: 'HeavyComponentBefore - Use Deferred Value Hook Pattern',
-    code:   
-    `
-    const HeavyComponentBefore = ({ keyword }) => {
+                    />
+                    <HeavyComponentBefore keyword={keyword}/>
+                    </FormWrapperDeferred>
+                    )
+                  }
+                  
+                  export default UseDeferredBeforeValueHookPattern;
+                  `
+                },
+                {
+                  id: 105,
+                  name: 'HeavyComponentBefore - Use Deferred Value Hook Pattern',
+                  code:   
+                  `
+                  const HeavyComponentBefore = ({ keyword }) => {
 
-      const init = performance.now();
-  
-      while ( init > performance.now() - 200){
-  
-      }
-  
-        return(
-            <HeavyComponentWrapper>
-                <h2>
-                    <span>
-                    "
-                    </span>
-                    I am a slow  Component ( check your slow entry bellow )
-                    <span>
-                    "
-                    </span>
-                </h2>
-                <p>
-                    { keyword }
-                </p>
-            </HeavyComponentWrapper>
-        )
-    }
+                    const init = performance.now();
+                    
+                    while ( init > performance.now() - 200){
+                      
+                    }
+                    
+                    return(
+                      <HeavyComponentWrapper>
+                      <h2>
+                      <span>
+                      "
+                      </span>
+                      I am a slow  Component ( check your slow entry bellow )
+                      <span>
+                      "
+                      </span>
+                      </h2>
+                      <p>
+                      { keyword }
+                      </p>
+                      </HeavyComponentWrapper>
+                      )
+                    }
     
-    export default HeavyComponentBefore;
-    `
-  },
+                    export default HeavyComponentBefore;
+                    `
+                  },
   {
     id: 106,
     name: 'HeavyComponentAfterMemo - Use Deferred Value Hook Pattern',
     code:   
     `
+    /**i change the name of the component to pass it through 'memo' hook*/
     const HeavyComponentAfterMemo = ({ keyword }) => {
-
+      
       const init = performance.now();
-  
+      
       while ( init > performance.now() - 200){
-  
+        
       }
-  
+      
       return(
-          <HeavyComponentWrapper>
-              <h2>
-                  <span>
-                  "
-                  </span>
-                  I am a slow  Component ( check your slow entry bellow )
-                  <span>
-                  "
-                  </span>
-              </h2>
-              <p>
-                  { keyword }
-              </p>
-          </HeavyComponentWrapper>
+        <HeavyComponentWrapper>
+        <h2>
+        <span>
+        "
+        </span>
+        I am a slow  Component ( check your slow entry bellow )
+        <span>
+        "
+        </span>
+        </h2>
+        <p>
+        { keyword }
+        </p>
+        </HeavyComponentWrapper>
         )
-    }
-    
-    export const HeavyComponentAfterFirst = memo(HeavyComponentAfterMemo);
-    `
+      }
+      
+      /**here i just pass it throuhg 'memo' and export it */
+      export const HeavyComponentAfterFirst = memo(HeavyComponentAfterMemo);
+      `
   },
   {
     id: 107,
