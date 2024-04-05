@@ -24,10 +24,10 @@ import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 
-/**react-design-patterns-app - version 14.18 - AdvancedHooks
+/**react-design-patterns-app - version 14.19 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'UseDeferredAfterMemo' exercise
+ *     --> Adding 'heavycomponentafterfirst' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -74,6 +74,7 @@ const AdvancedHooks = () => {
     const useimperativefocusstatepattern = CodeData[103].code;
     const usedeferredbeforevalueHookpatterncode = CodeData[104].code;
     const heavycomponentbeforecode = CodeData[105].code;
+    const heavycomponentafterfirst = CodeData[106].code;
 
     return(
         <div>
@@ -841,11 +842,19 @@ const AdvancedHooks = () => {
             <UseDeferredBeforeValueHookPattern />
 
             <p>
-                something that can be think as an inmmediate solution is applying useMemo hook in order 
-                to solve this issue ( that useMemo does not solve it by itself ), anyways will be applied
-                in the sub component as follows:
+                something that can be think as an inmmediate solution is applying <span className="text-white font-semibold"> memo </span> hook in order 
+                to solve this issue ( that useMemo <span className="text-white font-semibold"> does not solve it by itself </span>), anyways will be 
+                applied in the sub component as follows:
             </p>
-            
+
+            <BashCode code={heavycomponentafterfirst}/>
+
+            <p>
+                so the refactor is made on <span className="text-white font-semibold"> HeavyComponentAfterMemo </span> and just pass this 
+                component througth  <span className="text-white font-semibold"> memo </span> as
+                <span className="text-white font-semibold"> HeavyComponentAfterFirst </span>. The component placed in the main component
+                will be as follows
+            </p>
 
             </SectionWrapper>
         </div>
