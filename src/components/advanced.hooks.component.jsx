@@ -24,10 +24,10 @@ import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 
-/**react-design-patterns-app - version 14.19 - AdvancedHooks
+/**react-design-patterns-app - version 14.20 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'heavycomponentafterfirst' code
+ *     --> Adding 'usedeferredaftermemocode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -75,6 +75,7 @@ const AdvancedHooks = () => {
     const usedeferredbeforevalueHookpatterncode = CodeData[104].code;
     const heavycomponentbeforecode = CodeData[105].code;
     const heavycomponentafterfirst = CodeData[106].code;
+    const usedeferredaftermemocode = CodeData[107].code;
 
     return(
         <div>
@@ -853,8 +854,10 @@ const AdvancedHooks = () => {
                 so the refactor is made on <span className="text-white font-semibold"> HeavyComponentAfterMemo </span> and just pass this 
                 component througth  <span className="text-white font-semibold"> memo </span> as
                 <span className="text-white font-semibold"> HeavyComponentAfterFirst </span>. The component placed in the main component
-                will be as follows
+                will be as follows:
             </p>
+
+            <BashCode code={usedeferredaftermemocode}/>
 
             </SectionWrapper>
         </div>
