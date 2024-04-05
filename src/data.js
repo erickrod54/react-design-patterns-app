@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 14.16 - data js  
+/**react-design-patterns-app - version 14.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'HeavyComponentBefore'  code
+ *     --> Adding 'HeavyComponentAfterMemo'  code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3155,6 +3155,40 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default HeavyComponentBefore;
+    `
+  },
+  {
+    id: 106,
+    name: 'HeavyComponentAfterMemo - Use Deferred Value Hook Pattern',
+    code:   
+    `
+    const HeavyComponentAfterMemo = ({ keyword }) => {
+
+      const init = performance.now();
+  
+      while ( init > performance.now() - 200){
+  
+      }
+  
+      return(
+          <HeavyComponentWrapper>
+              <h2>
+                  <span>
+                  "
+                  </span>
+                  I am a slow  Component ( check your slow entry bellow )
+                  <span>
+                  "
+                  </span>
+              </h2>
+              <p>
+                  { keyword }
+              </p>
+          </HeavyComponentWrapper>
+        )
+    }
+    
+    export const HeavyComponentAfterFirst = memo(HeavyComponentAfterMemo);
     `
   } 
 ];
