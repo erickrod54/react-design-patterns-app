@@ -24,11 +24,12 @@ import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
+import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 
-/**react-design-patterns-app - version 15.01 - AdvancedHooks
+/**react-design-patterns-app - version 15.02 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseDeferredAfterMemo' component
+ *     --> Rendering 'usedeferredafterhookcode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -77,6 +78,7 @@ const AdvancedHooks = () => {
     const heavycomponentbeforecode = CodeData[105].code;
     const heavycomponentafterfirst = CodeData[106].code;
     const usedeferredaftermemocode = CodeData[107].code;
+    const usedeferredafterhookcode = CodeData[108].code;
 
     return(
         <div>
@@ -868,8 +870,11 @@ const AdvancedHooks = () => {
 
             <p>
                 so <span className="text-white font-semibold"> memo does not solve it by itself </span>, here is when
-                it comes <span className="text-white font-semibold"> useDeferredValue </span> hook at scene:
+                it comes <span className="text-white font-semibold"> useDeferredValue </span> hook at scene 
+                (<span className="text-white font-semibold"> the refactor will made in the main component </span>):
             </p>
+
+            <BashCode code={usedeferredafterhookcode}/>
 
             </SectionWrapper>
         </div>
