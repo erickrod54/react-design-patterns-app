@@ -58,6 +58,7 @@ import TopUseLayoutEffect from "./top.uselayouteffect.component";
 import UncontrolledFlowPatternCollector from "./uncontrolled.flow.collector.pattern";
 import UncontrolledFlowPattern from "./uncontrolled.flow.pattern";
 import UncontrolledPattern from "./uncontrolled.pattern.component";
+import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 import UseImperativeHookPattern from "./use.imperative.hook.before.component";
@@ -83,10 +84,11 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
-/**react-design-patterns-app - version 14.19 - components > index  
+
+/**react-design-patterns-app - version 15.02 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseDeferredAfterMemo'
+ *     --> Importing and exporting 'UseDeferredAfterHook'
  * 
  * Note: Pending to make responsive design
  */
@@ -176,5 +178,6 @@ export {
          HeavyComponentBefore,
          UseDeferredBeforeValueHookPattern,
          HeavyComponentAfterFirst,
-         UseDeferredAfterMemo
+         UseDeferredAfterMemo,
+         UseDeferredAfterHook
         }
