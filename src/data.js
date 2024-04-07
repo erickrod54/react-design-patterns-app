@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.02 - data js  
+/**react-design-patterns-app - version 15.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseDeferredAfterHook'  code
+ *     --> Adding 'UseDeferredAfterHook'  code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3237,7 +3237,9 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       const id = useId();
   
       const [ keyword, setKeyword ] = useState("")
-  
+
+      /**here the 'useDeferredValue' is implemented, and has a 'keyword'
+       * as a parameter solving the delay issue*/
       const deferredKeyword = useDeferredValue(keyword)
   
       const handleChange = (e) => {
@@ -3254,6 +3256,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
                       value={keyword}
                       onChange={handleChange}
                   />
+                  /**here i drill down the 'keyword' to the component*/
                   <HeavyComponentAfterFirst keyword={deferredKeyword}/>
               </FormWrapperDeferred>
           )
