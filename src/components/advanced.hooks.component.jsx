@@ -23,11 +23,12 @@ import UseImperativeFocusHookPattern from "./use.imperative.hook.focus.before.co
 import UseWithImperativeFocusHookPattern from "./use.imperative.hook.focus.after.component";
 import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.component";
 import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
+import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 
-/**react-design-patterns-app - version 14.20 - AdvancedHooks
+/**react-design-patterns-app - version 15.01 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'usedeferredaftermemocode' code
+ *     --> Rendering 'UseDeferredAfterMemo' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -858,6 +859,17 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={usedeferredaftermemocode}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseDeferredAfterMemo />
+
+            <p>
+                so <span className="text-white font-semibold"> memo does not solve it by itself </span>, here is when
+                it comes <span className="text-white font-semibold"> useDeferredValue </span> hook at scene:
+            </p>
 
             </SectionWrapper>
         </div>
