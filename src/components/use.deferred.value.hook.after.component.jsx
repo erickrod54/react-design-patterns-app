@@ -1,11 +1,11 @@
 import React, { useDeferredValue, useId, useState } from "react";
 import { FormWrapperDeferred } from "../styledcomponents/styled.components";
-import { HeavyComponentAfterFirst } from "./heavy.deferred.after.memo.component";
+import { HeavyComponentAfterHook } from "./heavy.deferred.after.hook.component";
 
-/**react-design-patterns-app - version 15.02 - UseDeferredAfterHook  
+/**react-design-patterns-app - version 15.03 - UseDeferredAfterHook  
  * - Features: 
  * 
- *     --> Building 'UseDeferredAfterHook' Component
+ *     --> Adding 'HeavyComponentAfterHook' sub component
  * 
  * Note: Pending to make responsive design
  */
@@ -32,7 +32,7 @@ const UseDeferredAfterHook = () => {
                 value={keyword}
                 onChange={handleChange}
             />
-            <HeavyComponentAfterFirst keyword={deferredKeyword}/>
+            <HeavyComponentAfterHook keyword={deferredKeyword}/>
         </FormWrapperDeferred>
     )
 }
