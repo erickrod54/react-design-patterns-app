@@ -26,10 +26,10 @@ import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 
-/**react-design-patterns-app - version 15.03 - AdvancedHooks
+/**react-design-patterns-app - version 15.04 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'UseDeferredAfterHook' component
+ *     --> Developing 'UseDeferredAfterHook' comcepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -881,6 +881,14 @@ const AdvancedHooks = () => {
             </p>
 
             <UseDeferredAfterHook />
+
+            <p>
+                so what <span className="text-white font-semibold"> useDeferredValue </span> will do is to wait
+                until the user entry (<span className="text-white font-semibold"> keyword </span> ) is fully
+                typed in order to pass it to <span className="text-white font-semibold"> HeavyComponentAfterHook </span>
+                so the delay is not noticed <span className="text-white font-semibold"> 
+                ( because the main component is not re rendered ) </span>
+            </p>
 
             </SectionWrapper>
         </div>
