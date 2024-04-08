@@ -34,6 +34,7 @@ import { ForwardingRefInput } from "./forwarding.ref.input.component";
 import ForwardingRefs from "./forwarding.refs.component";
 import ForwardingHookRefForm from "./forwarding.useforwardref.form.component";
 import FunctionalProgramming from "./functional.programming.component";
+import { HeavyComponentAfterHook } from "./heavy.deferred.after.hook.component";
 import { HeavyComponentAfterFirst } from "./heavy.deferred.after.memo.component";
 import HeavyComponentBefore from "./heavy.deferred.before.component";
 import HOCPattern from "./hoc.pattern.component";
@@ -85,10 +86,10 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
 
-/**react-design-patterns-app - version 15.02 - components > index  
+/**react-design-patterns-app - version 15.03 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseDeferredAfterHook'
+ *     --> Importing and exporting 'HeavyComponentAfterHook'
  * 
  * Note: Pending to make responsive design
  */
@@ -179,5 +180,6 @@ export {
          UseDeferredBeforeValueHookPattern,
          HeavyComponentAfterFirst,
          UseDeferredAfterMemo,
-         UseDeferredAfterHook
+         UseDeferredAfterHook,
+         HeavyComponentAfterHook
         }
