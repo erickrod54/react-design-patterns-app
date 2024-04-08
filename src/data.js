@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.03 - data js  
+/**react-design-patterns-app - version 15.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'UseDeferredAfterHook'  code comments
+ *     --> Adding 'HeavyComponentAfterHook' to 'UseDeferredAfterHook'  code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3256,8 +3256,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
                       value={keyword}
                       onChange={handleChange}
                   />
-                  /**here i drill down the 'keyword' to the component*/
-                  <HeavyComponentAfterFirst keyword={deferredKeyword}/>
+                  /**here i drill down the 'keyword' to the sub component*/
+                  <HeavyComponentAfterHook keyword={deferredKeyword}/>
               </FormWrapperDeferred>
           )
       }
