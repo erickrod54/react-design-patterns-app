@@ -26,10 +26,10 @@ import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 
-/**react-design-patterns-app - version 15.02 - AdvancedHooks
+/**react-design-patterns-app - version 15.03 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'usedeferredafterhookcode' code
+ *     --> Rendering 'UseDeferredAfterHook' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -875,6 +875,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={usedeferredafterhookcode}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <UseDeferredAfterHook />
 
             </SectionWrapper>
         </div>
