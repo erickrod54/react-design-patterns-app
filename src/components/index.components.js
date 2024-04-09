@@ -18,6 +18,7 @@ import ContainerRender from "./container.render.pattern.component";
 import ControlledFlowPatternCollector from "./controlled.flow.collector.pattern";
 import ControlledPattern from "./controlled.pattern.component";
 import ControlledUnControlledPattern from "./controlled.uncontrolled.pattern.component";
+import Cover from "./cover.use.transition.before.hook.component";
 import CurrentUser from "./current.user.component";
 import useUser from "./custom.hook.generic.pattern.current.user";
 import CustomHookPattern from "./custom.hooks.pattern";
@@ -86,10 +87,10 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
 
-/**react-design-patterns-app - version 15.03 - components > index  
+/**react-design-patterns-app - version 15.05 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'HeavyComponentAfterHook'
+ *     --> Importing and exporting 'Cover'
  * 
  * Note: Pending to make responsive design
  */
@@ -181,5 +182,6 @@ export {
          HeavyComponentAfterFirst,
          UseDeferredAfterMemo,
          UseDeferredAfterHook,
-         HeavyComponentAfterHook
+         HeavyComponentAfterHook,
+         Cover
         }
