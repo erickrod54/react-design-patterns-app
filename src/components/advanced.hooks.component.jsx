@@ -26,10 +26,10 @@ import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 
-/**react-design-patterns-app - version 15.04 - AdvancedHooks
+/**react-design-patterns-app - version 15.07 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'UseDeferredAfterHook' comcepts
+ *     --> Developing 'useTransition Hook Pattern' comcepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -888,6 +888,18 @@ const AdvancedHooks = () => {
                 typed in order to pass it to <span className="text-white font-semibold"> HeavyComponentAfterHook </span>
                 so the delay is not noticed <span className="text-white font-semibold"> 
                 ( because the main component is not re rendered ) </span>
+            </p>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="use-transition-hook-pattern"><span > useTransition Hook Pattern </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                the <span className="text-white font-semibold"> useTransition Hook </span> solve specific use cases 
+                where the application is <span className="text-white font-semibold"> multi rendering </span> causing 
+                a delay or freeze overall the application, and the use of this pattern allows to  
+                <span className="text-white font-semibold"> delays updating the state itself </span> ( so in some 
+                way can be considered a different form os state - as a different useState behavior )
             </p>
 
             </SectionWrapper>
