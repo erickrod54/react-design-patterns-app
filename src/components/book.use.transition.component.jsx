@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Cover, Reviews, Writer } from "./index.components";
 
-/**react-design-patterns-app - version 15.05 - Writer
+/**react-design-patterns-app - version 15.08 - Writer
  * - Features: 
  * 
- *     --> Building 'BooksUseTransitionBefore' component
+ *     --> Adding transition for 'BooksUseTransitionBefore' component
  * 
  * Note: the BooksUseTransitionBefore component that
  * is going to hold book cover, reviews, and writter 
@@ -28,7 +29,14 @@ const  BooksUseTransitionBefore = () => {
         Book's Writer
       </button>
 
-
+      {section === "Cover" ? (
+        <Cover />
+      ) : section === "Reviews" ? (
+        <Reviews />
+      ) : (
+        <Writer />
+      )}
+        
     </>
   );
 }
