@@ -51,6 +51,7 @@ import PortalsAdvHooks from "./portals.advanced.hooks";
 
 import RecursivePattern from "./recursive.pattern.component";
 import RegularList from "./regular.list.component";
+import Reviews from "./reviews.use.transition.before.hook.component";
 import SharedLayout from "./shared.layout.component";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
@@ -87,10 +88,10 @@ import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 
 
-/**react-design-patterns-app - version 15.05 - components > index  
+/**react-design-patterns-app - version 15.06 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'Cover'
+ *     --> Importing and exporting 'Reviews'
  * 
  * Note: Pending to make responsive design
  */
@@ -183,5 +184,6 @@ export {
          UseDeferredAfterMemo,
          UseDeferredAfterHook,
          HeavyComponentAfterHook,
-         Cover
+         Cover,
+         Reviews
         }
