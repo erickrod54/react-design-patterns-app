@@ -86,12 +86,13 @@ import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
+import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 15.06 - components > index  
+/**react-design-patterns-app - version 15.07 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'Reviews'
+ *     --> Importing and exporting 'Writer'
  * 
  * Note: Pending to make responsive design
  */
@@ -185,5 +186,6 @@ export {
          UseDeferredAfterHook,
          HeavyComponentAfterHook,
          Cover,
-         Reviews
+         Reviews,
+         Writer
         }
