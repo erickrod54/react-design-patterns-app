@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.04 - data js  
+/**react-design-patterns-app - version 15.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'HeavyComponentAfterHook' to 'UseDeferredAfterHook'  code
+ *     --> Adding 'BooksUseTransitionBefore' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3263,6 +3263,44 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       }
       
       export default UseDeferredAfterHook;
+      `
+    },
+    {
+    id: 109,
+    name: 'BooksUseTransitionBefore - useTransition hook pattern',
+    code:   
+    `
+      const  BooksUseTransitionBefore = () => {
+        const [section, setSection] = useState("Cover");
+      
+        const sectionHandler = (sec) => {
+          setSection(sec);
+        };
+        return (
+          <>
+            <button onClick={() => sectionHandler("Cover")}>
+              Book Cover
+            </button>
+            <button onClick={() => sectionHandler("Reviews")}>
+              Book Reviews
+            </button>
+            <button onClick={() => sectionHandler("Writer")}>
+              Book's Writer
+            </button>
+      
+            {section === "Cover" ? (
+              <Cover />
+            ) : section === "Reviews" ? (
+              <Reviews />
+            ) : (
+              <Writer />
+            )}
+              
+          </>
+        );
+      }
+      
+      export default BooksUseTransitionBefore;
       `
     } 
   ];
