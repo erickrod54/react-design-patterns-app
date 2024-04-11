@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 15.05 - styled.components
+/**react-design-patterns-app - version 15.10 - styled.components
  * - Features: 
  * 
- *     --> Writting 'use-transition-hook-pattern' styles.	
+ *     --> Building 'ButtonUseTransition' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,26 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const ButtonUseTransition = styled.button`
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ddd;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+`;
 
 export const MasterWrapper = styled.div`
 	${tw`border border-white`}
