@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Cover, Reviews, Writer } from "./index.components";
+import { ButtonUseTransition } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 15.08 - Writer
+/**react-design-patterns-app - version 15.10 - BooksUseTransitionBefore
  * - Features: 
  * 
- *     --> Adding transition for 'BooksUseTransitionBefore' component
+ *     --> Adding 'ButtonUseTransition' button
  * 
  * Note: the BooksUseTransitionBefore component that
  * is going to hold book cover, reviews, and writter 
@@ -19,15 +20,15 @@ const  BooksUseTransitionBefore = () => {
   };
   return (
     <>
-      <button onClick={() => sectionHandler("Cover")}>
+      <ButtonUseTransition onClick={() => sectionHandler("Cover")}>
         Book Cover
-      </button>
-      <button onClick={() => sectionHandler("Reviews")}>
+      </ButtonUseTransition>
+      <ButtonUseTransition onClick={() => sectionHandler("Reviews")}>
         Book Reviews
-      </button>
-      <button onClick={() => sectionHandler("Writer")}>
+      </ButtonUseTransition>
+      <ButtonUseTransition onClick={() => sectionHandler("Writer")}>
         Book's Writer
-      </button>
+      </ButtonUseTransition>
 
       {section === "Cover" ? (
         <Cover />
