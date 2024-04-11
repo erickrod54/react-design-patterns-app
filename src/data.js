@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.09 - data js  
+/**react-design-patterns-app - version 15.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'BooksUseTransitionBefore' code comments
+ *     --> Refactoring 'BooksUseTransitionBefore' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3270,38 +3270,36 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'BooksUseTransitionBefore - useTransition hook pattern',
     code:   
     `
-      const  BooksUseTransitionBefore = () => {
-        const [section, setSection] = useState("Cover");
-      
-        const sectionHandler = (sec) => {
-          setSection(sec);
-        };
-        return (
-          <>
-            <button onClick={() => sectionHandler("Cover")}>
-              Book Cover
-            </button>
-            <button onClick={() => sectionHandler("Reviews")}>
-              Book Reviews
-            </button>
-            <button onClick={() => sectionHandler("Writer")}>
-              Book's Writer
-            </button>
+    const  BooksUseTransitionBefore = () => {
+      const [section, setSection] = useState("Cover");
+    
+      const sectionHandler = (sec) => {
+        setSection(sec);
+      };
+      return (
+        <>
+          <ButtonUseTransition onClick={() => sectionHandler("Cover")}>
+            Book Cover
+          </ButtonUseTransition>
+          <ButtonUseTransition onClick={() => sectionHandler("Reviews")}>
+            Book Reviews
+          </ButtonUseTransition>
+          <ButtonUseTransition onClick={() => sectionHandler("Writer")}>
+            Book's Writer
+          </ButtonUseTransition>
 
-            /**here the transition between every sub component will happen*/
-            {section === "Cover" ? (
-              <Cover />
-            ) : section === "Reviews" ? (
-              <Reviews />
-            ) : (
-              <Writer />
-            )}
-              
-          </>
-        );
-      }
-      
-      export default BooksUseTransitionBefore;
+          /**here the transition between every sub component will happen*/
+          {section === "Cover" ? (
+            <Cover />
+          ) : section === "Reviews" ? (
+            <Reviews />
+          ) : (
+            <Writer />
+          )}
+            
+        </>
+      );
+    }
       `
     } 
   ];
