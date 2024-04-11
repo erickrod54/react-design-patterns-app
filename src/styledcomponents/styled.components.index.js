@@ -1,5 +1,6 @@
 import { AlertWrapper,
          ButtonGeneral,
+         ButtonUseTransition,
          ButtonWrapper,
          ChildWrapper,
          Container,
@@ -12,10 +13,10 @@ import { AlertWrapper,
          MasterWrapper,
          ModalBackground, ModalContent, MultipleFormWrapper, OpenModalWrapper, Panel, PrimaryButton, SectionWrapper, StepFlowWrapper, ToolTipWrapper } from "./styled.components";
 
-/**react-design-patterns-app - version 14.14 - styledcomponents > index
+/**react-design-patterns-app - version 15.10 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'HeavyComponentWrapper' 
+ *     --> Importing and exporting 'ButtonUseTransition' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -44,4 +45,5 @@ export { SectionWrapper,
          PrimaryButton,
          KeyExerciseWrapper,
          FormWrapperDeferred,
+         ButtonUseTransition,
          HeavyComponentWrapper, ToolTipWrapper, MultipleFormWrapper }
