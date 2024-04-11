@@ -26,10 +26,10 @@ import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 
-/**react-design-patterns-app - version 15.07 - AdvancedHooks
+/**react-design-patterns-app - version 15.08 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'useTransition Hook Pattern' comcepts
+ *     --> Adding 'booksusetransitionbeforecode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -79,6 +79,7 @@ const AdvancedHooks = () => {
     const heavycomponentafterfirst = CodeData[106].code;
     const usedeferredaftermemocode = CodeData[107].code;
     const usedeferredafterhookcode = CodeData[108].code;
+    const booksusetransitionbeforecode = CodeData[109].code;
 
     return(
         <div>
@@ -901,6 +902,13 @@ const AdvancedHooks = () => {
                 <span className="text-white font-semibold"> delays updating the state itself </span> ( so in some 
                 way can be considered a different form os state - as a different useState behavior )
             </p>
+
+            <p>
+                the <span className="text-white font-semibold"> BooksUseTransitionBefore  </span> component 
+                in order to get book reviews, and will be as follows:
+            </p>
+
+            <BashCode code={booksusetransitionbeforecode}/>
 
             </SectionWrapper>
         </div>
