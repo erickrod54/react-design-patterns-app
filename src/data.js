@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.08 - data js  
+/**react-design-patterns-app - version 15.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'BooksUseTransitionBefore' code
+ *     --> Adding 'BooksUseTransitionBefore' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3287,7 +3287,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
             <button onClick={() => sectionHandler("Writer")}>
               Book's Writer
             </button>
-      
+
+            /**here the transition between every sub component will happen*/
             {section === "Cover" ? (
               <Cover />
             ) : section === "Reviews" ? (
