@@ -4,6 +4,7 @@ import { AlertWrapper,
          ButtonWrapper,
          ChildWrapper,
          Container,
+         CoverContainer,
          CustomTitleStyle,
          FormWrapper,
          FormWrapperDeferred,
@@ -16,10 +17,10 @@ import { AlertWrapper,
          MultipleFormWrapper,
          OpenModalWrapper, Panel, PrimaryButton, ReviewsContainer, SectionWrapper, StepFlowWrapper, ToolTipWrapper } from "./styled.components";
 
-/**react-design-patterns-app - version 15.11 - styledcomponents > index
+/**react-design-patterns-app - version 15.12 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ReviewsContainer' 
+ *     --> Importing and exporting 'CoverContainer' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -50,4 +51,5 @@ export { SectionWrapper,
          FormWrapperDeferred,
          ButtonUseTransition,
          ReviewsContainer,
+         CoverContainer,
          HeavyComponentWrapper, ToolTipWrapper, MultipleFormWrapper }
