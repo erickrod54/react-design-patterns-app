@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.10 - data js  
+/**react-design-patterns-app - version 15.11 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'BooksUseTransitionBefore' code
+ *     --> Adding 'Cover' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3300,6 +3300,24 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         </>
       );
     }
+      `
+    },
+    {
+    id: 110,
+    name: 'Cover - useTransition hook pattern',
+    code:   
+    `
+      const Cover = () => {
+        return (
+          <>
+            <>
+              📚
+            </>
+          </>
+        );
+      };
+      
+      export default Cover;
       `
     } 
   ];
