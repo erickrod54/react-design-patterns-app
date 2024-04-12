@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 15.10 - styled.components
+/**react-design-patterns-app - version 15.11 - styled.components
  * - Features: 
  * 
- *     --> Building 'ButtonUseTransition' styles.	
+ *     --> Building 'ReviewsContainer' style Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -35,6 +35,28 @@ export const ButtonUseTransition = styled.button`
     outline: none;
     border-color: #007bff;
   }
+`;
+
+export const ReviewsContainer = styled.div`
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+`;
+
+export const WriterContainer = styled.div`
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
 `;
 
 export const MasterWrapper = styled.div`
