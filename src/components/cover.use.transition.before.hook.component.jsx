@@ -1,9 +1,10 @@
 import React from "react";
+import { CoverContainer } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 15.05 - Cover
+/**react-design-patterns-app - version 15.14 - Cover
  * - Features: 
  * 
- *     --> Building 'Cover' component
+ *     --> Adding 'CoverContainer' styles
  * 
  * Note: the Cover component for the useTransition 
  * pattern  
@@ -11,11 +12,11 @@ import React from "react";
 
 const Cover = () => {
   return (
-    <>
+    <CoverContainer>
       <>
         📚
       </>
-    </>
+    </CoverContainer>
   );
 };
 
