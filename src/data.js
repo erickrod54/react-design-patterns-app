@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.11 - data js  
+/**react-design-patterns-app - version 15.15 - data js  
  * - Features: 
  *    
- *     --> Adding 'Cover' code
+ *     --> Refactoring 'Cover' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3309,11 +3309,11 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     `
       const Cover = () => {
         return (
-          <>
-            <>
+          <CoverContainer>
+            <Emoji role="img" aria-label="Book Cover Emoji">
               📚
-            </>
-          </>
+            </Emoji>
+          </CoverContainer>
         );
       };
       
