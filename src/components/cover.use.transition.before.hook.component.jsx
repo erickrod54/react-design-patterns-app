@@ -1,10 +1,10 @@
 import React from "react";
-import { CoverContainer } from "../styledcomponents/styled.components.index";
+import { CoverContainer, Emoji } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 15.14 - Cover
+/**react-design-patterns-app - version 15.15 - Cover
  * - Features: 
  * 
- *     --> Adding 'CoverContainer' styles
+ *     --> Adding 'Emoji' styles
  * 
  * Note: the Cover component for the useTransition 
  * pattern  
@@ -13,9 +13,9 @@ import { CoverContainer } from "../styledcomponents/styled.components.index";
 const Cover = () => {
   return (
     <CoverContainer>
-      <>
+      <Emoji role="img" aria-label="Book Cover Emoji">
         📚
-      </>
+      </Emoji>
     </CoverContainer>
   );
 };
