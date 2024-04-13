@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.15 - data js  
+/**react-design-patterns-app - version 15.16 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'Cover' code
+ *     --> Refactoring 'Reviews' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3318,6 +3318,36 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       };
       
       export default Cover;
+      `
+    },
+    {
+    id: 111,
+    name: 'Reviews - useTransition hook pattern',
+    code:   
+    `
+      const Reviews = () => {
+        return (
+          <>
+            <ul>
+              {Array(300)
+                .fill("")
+                .map((_, i) => (
+                  <Review key={i} index={i} />
+                ))}
+            </ul>
+          </>
+        );
+      };
+      
+      const Review = ({ index }) => {
+        const init = performance.now();
+        while (init > performance.now() - 3) {
+          // Fake slow down.
+        }
+        return <li>Review #{index}</li>;
+      };
+      
+      export default Reviews;
       `
     } 
   ];
