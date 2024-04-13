@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 15.12 - styled.components
+/**react-design-patterns-app - version 15.13 - styled.components
  * - Features: 
  * 
- *     --> Building 'CoverContainer' style Component.	
+ *     --> Building 'Emoji' style Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,10 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const Emoji = styled.span`
+  font-size: 50px;
+`;
 
 export const CoverContainer = styled.div`
   display: flex;
