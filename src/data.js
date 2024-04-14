@@ -1,7 +1,7 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.16 - data js  
+/**react-design-patterns-app - version 15.17 - data js  
  * - Features: 
  *    
  *     --> Refactoring 'Reviews' code
@@ -3327,7 +3327,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     `
       const Reviews = () => {
         return (
-          <>
+          <ReviewsContainer>
             <ul>
               {Array(300)
                 .fill("")
@@ -3335,7 +3335,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
                   <Review key={i} index={i} />
                 ))}
             </ul>
-          </>
+          </ReviewsContainer>
         );
       };
       
