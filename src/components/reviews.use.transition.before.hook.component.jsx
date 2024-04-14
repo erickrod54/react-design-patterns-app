@@ -1,9 +1,10 @@
 import React from "react";
+import { ReviewsContainer } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 15.05 - Reviews
+/**react-design-patterns-app - version 15.17 - Reviews
  * - Features: 
  * 
- *     --> Building 'Reviews' component
+ *     --> Adding 'ReviewsContainer' component
  * 
 Note: the Reviews component for the useTransition 
  * pattern  
@@ -11,7 +12,7 @@ Note: the Reviews component for the useTransition
 
 const Reviews = () => {
   return (
-    <>
+    <ReviewsContainer>
       <ul>
         {Array(300)
           .fill("")
@@ -19,7 +20,7 @@ const Reviews = () => {
             <Review key={i} index={i} />
           ))}
       </ul>
-    </>
+    </ReviewsContainer>
   );
 };
 
