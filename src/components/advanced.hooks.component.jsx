@@ -26,10 +26,10 @@ import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 
-/**react-design-patterns-app - version 15.11 - AdvancedHooks
+/**react-design-patterns-app - version 15.16 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'covercode' code
+ *     --> Adding 'reviewscode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -81,6 +81,7 @@ const AdvancedHooks = () => {
     const usedeferredafterhookcode = CodeData[108].code;
     const booksusetransitionbeforecode = CodeData[109].code;
     const covercode = CodeData[110].code;
+    const reviewscode = CodeData[111].code;
 
     return(
         <div>
@@ -916,6 +917,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={covercode}/>
+
+            <p>
+                and the <span className="text-white font-semibold"> Reviews </span> code sub component as follows: 
+            </p>            
+
+            <BashCode code={reviewscode}/>
 
             </SectionWrapper>
         </div>
