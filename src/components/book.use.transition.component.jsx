@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Cover, Reviews, Writer } from "./index.components";
-import { ButtonUseTransition } from "../styledcomponents/styled.components";
+import { BooksUseTransitionContainer, ButtonUseTransition } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 15.10 - BooksUseTransitionBefore
+/**react-design-patterns-app - version 15.20 - BooksUseTransitionBefore
  * - Features: 
  * 
- *     --> Adding 'ButtonUseTransition' button
+ *     --> Adding 'BooksUseTransitionContainer' button
  * 
  * Note: the BooksUseTransitionBefore component that
  * is going to hold book cover, reviews, and writter 
@@ -19,7 +19,7 @@ const  BooksUseTransitionBefore = () => {
     setSection(sec);
   };
   return (
-    <>
+    <BooksUseTransitionContainer>
       <ButtonUseTransition onClick={() => sectionHandler("Cover")}>
         Book Cover
       </ButtonUseTransition>
@@ -38,7 +38,7 @@ const  BooksUseTransitionBefore = () => {
         <Writer />
       )}
         
-    </>
+    </BooksUseTransitionContainer>
   );
 }
 
