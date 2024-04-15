@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 15.18 - data js  
+/**react-design-patterns-app - version 15.19 - data js  
  * - Features: 
  *    
- *     --> Adding 'Writer' code
+ *     --> Refacoting 'Writer' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3358,9 +3358,9 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       const Writer = () => {
         return (
           <>
-              <p>
+              <WriterContainer>
                   Codelicks Academy
-              </p>
+              </WriterContainer>
           </>
         )
       };
