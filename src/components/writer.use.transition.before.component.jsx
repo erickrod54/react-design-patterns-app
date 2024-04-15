@@ -1,9 +1,10 @@
 import React from "react";
+import { WriterContainer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 15.05 - Writer
+/**react-design-patterns-app - version 15.19 - Writer
  * - Features: 
  * 
- *     --> Building 'Writer' component
+ *     --> Adding 'WriterContainer' styles
  * 
  * Note: the writter component for the useTransition 
  * pattern  
@@ -12,9 +13,9 @@ import React from "react";
 const Writer = () => {
   return (
     <>
-        <p>
+        <WriterContainer>
             Codelicks Academy
-        </p>
+        </WriterContainer>
     </>
   )
 };
