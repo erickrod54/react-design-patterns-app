@@ -1,7 +1,7 @@
 import React from "react";
 import { WriterContainer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 15.19 - Writer
+/**react-design-patterns-app - version 15.20 - Writer
  * - Features: 
  * 
  *     --> Adding 'WriterContainer' styles
@@ -14,7 +14,7 @@ const Writer = () => {
   return (
     <>
         <WriterContainer>
-            Codelicks Academy
+            The Open Code
         </WriterContainer>
     </>
   )
