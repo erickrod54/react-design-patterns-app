@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 15.13 - styled.components
+/**react-design-patterns-app - version 15.20 - styled.components
  * - Features: 
  * 
- *     --> Building 'Emoji' style Component.	
+ *     --> Building 'BooksUseTransitionContainer' style Component.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -73,6 +73,10 @@ export const WriterContainer = styled.div`
 
 export const MasterWrapper = styled.div`
 	${tw`border border-white`}
+`
+
+export const BooksUseTransitionContainer = styled.div`
+	${tw`flex flex-row text-black bg-violet-500 m-4 p-4 rounded-2xl h-fit w-fit`}
 `
 
 export const ChildWrapper = styled.div`
