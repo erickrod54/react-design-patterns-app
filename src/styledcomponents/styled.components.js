@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 16.04 - styled.components
+/**react-design-patterns-app - version 16.05 - styled.components
  * - Features: 
  * 
- *     --> Writing 'ButtonUseTransition' second tailwind styles.	
+ *     --> Writing 'ButtonUseTransition' third tailwind styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -37,8 +37,7 @@ export const ButtonUseTransition = styled.button`
   }
 
   &:focus {
-    outline: none;
-    border-color: #007bff;
+    ${tw`outline-none border-blue-500`}
   }
 `;
 
