@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 16.01 - styled.components
+/**react-design-patterns-app - version 16.02 - styled.components
  * - Features: 
  * 
- *     --> Writing 'ReviewsContainer' first tailwind styles.	
+ *     --> Writing 'ReviewsContainer' second tailwind styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -55,10 +55,7 @@ export const ReviewsContainer = styled.div`
   }
 
   li {
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
-    font-size: 1.2em;
-    color: #333;
+    ${tw`border-b border-gray-300 py-2 px-4 text-lg text-gray-700`}
   }
 `;
 
