@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 15.20 - styled.components
+/**react-design-patterns-app - version 16.00 - styled.components
  * - Features: 
  * 
- *     --> Building 'BooksUseTransitionContainer' style Component.	
+ *     --> Writing 'WriterContainer' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -64,11 +64,7 @@ export const ReviewsContainer = styled.div`
 `;
 
 export const WriterContainer = styled.div`
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  margin: 20px 0;
+	${tw`text-2xl font-bold text-gray-700 text-center my-5`}
 `;
 
 export const MasterWrapper = styled.div`
