@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 16.05 - styled.components
+/**react-design-patterns-app - version 16.06 - styled.components
  * - Features: 
  * 
- *     --> Writing 'ButtonUseTransition' third tailwind styles.	
+ *     --> Writing 'CoverContainer' tailwind styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -22,11 +22,7 @@ export const Emoji = styled.span`
 `;
 
 export const CoverContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 3em;
+  ${tw`flex items-center justify-center h-full text-3xl`}
 `;
 
 export const ButtonUseTransition = styled.button`
