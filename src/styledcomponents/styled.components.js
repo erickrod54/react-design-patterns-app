@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 16.08 - styled.components
+/**react-design-patterns-app - version 16.09 - styled.components
  * - Features: 
  * 
- *     --> Writing 'BooksUseTransitionContainer' div tailwind styles.	
+ *     --> Writing 'perfect center' for sections in the 'BooksUseTransitionContainer'.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -18,7 +18,7 @@ import tw from 'twin.macro';
  */
 
 export const Emoji = styled.span`
-  	${tw`text-5xl`}
+  	${tw`text-5xl flex`}
 `;
 
 export const CoverContainer = styled.div`
@@ -38,17 +38,19 @@ export const ButtonUseTransition = styled.button`
 `;
 
 export const ReviewsContainer = styled.div`
-  ul {
+ ${tw`flex justify-center items-center`}
+  
+ ul {
     ${tw`list-none p-0`}
   }
 
   li {
-    ${tw`border-b border-gray-300 py-2 px-4 text-lg text-gray-700`}
+    ${tw`border-b border-gray-300 py-2 px-4 text-2xl text-gray-800 `}
   }
 `;
 
 export const WriterContainer = styled.div`
-	${tw`text-2xl font-bold text-gray-700 text-center my-5`}
+	${tw`text-4xl font-bold text-gray-700 text-center my-5 flex justify-center items-center`}
 `;
 
 export const MasterWrapper = styled.div`
@@ -61,6 +63,7 @@ export const BooksUseTransitionContainer = styled.div`
 	div{
 		${tw`flex flex-row m-4 p-4`}
 	}
+	
 `
 
 export const ChildWrapper = styled.div`
