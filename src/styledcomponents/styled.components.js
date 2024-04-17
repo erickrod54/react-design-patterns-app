@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 16.06 - styled.components
+/**react-design-patterns-app - version 16.07 - styled.components
  * - Features: 
  * 
- *     --> Writing 'CoverContainer' tailwind styles.	
+ *     --> Writing 'Emoji' tailwind styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -18,7 +18,7 @@ import tw from 'twin.macro';
  */
 
 export const Emoji = styled.span`
-  font-size: 50px;
+  	${tw`text-5xl`}
 `;
 
 export const CoverContainer = styled.div`
