@@ -27,10 +27,10 @@ import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
 
-/**react-design-patterns-app - version 16.10 - AdvancedHooks
+/**react-design-patterns-app - version 16.11 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'BooksUseTransitionBefore' Component
+ *     --> Developing 'useTransition' concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -938,6 +938,13 @@ const AdvancedHooks = () => {
             </p>
 
            <BooksUseTransitionBefore />
+
+           <p>
+                so in the transtion between each <span className="text-white font-semibold"> sub component </span> 
+                can be notice a freeze or delay ( the sub component that is dalying its render also interrup for 
+                a period of time other sub components renders),  in this cas is the <span className="text-white font-semibold">
+                Reviews </span> component and this makes freeze the rest of the buttons
+            </p>
 
             </SectionWrapper>
         </div>
