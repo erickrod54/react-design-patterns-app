@@ -7,6 +7,7 @@ import AlertMessageWithEventListener from "./alert.message.event.listener.portal
 import AlertMessageWithPortal from "./alert.message.portal.component";
 import AlertPortal from "./alert.portal.component";
 import BashCode from "./bash.higlight.component";
+import BooksUseTransitionAfter from "./book.use.transition.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
 import Card from "./card.component";
 import CardCompound from "./card.compound.pattern.component";
@@ -90,10 +91,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 15.08 - components > index  
+/**react-design-patterns-app - version 16.12 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'BooksUseTransitionBefore'
+ *     --> Importing and exporting 'BooksUseTransitionAfter'
  * 
  * Note: Pending to make responsive design
  */
@@ -189,5 +190,6 @@ export {
          Cover,
          Reviews,
          Writer,
-         BooksUseTransitionBefore
+         BooksUseTransitionBefore,
+         BooksUseTransitionAfter
         }
