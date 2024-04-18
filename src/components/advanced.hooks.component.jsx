@@ -25,11 +25,12 @@ import UseImperativeMultipleFocus from "./use.imperative.hook.focus.multiple.com
 import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.component";
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
+import BooksUseTransitionBefore from "./book.use.transition.component";
 
-/**react-design-patterns-app - version 15.18 - AdvancedHooks
+/**react-design-patterns-app - version 16.10 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'writercode' code
+ *     --> Rendering 'BooksUseTransitionBefore' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -930,6 +931,13 @@ const AdvancedHooks = () => {
             </p>            
 
             <BashCode code={writercode}/>
+
+            <p>
+                the <span className="text-white font-semibold"> BooksUseTransitionBefore </span> 
+                main component will result as follows: 
+            </p>
+
+           <BooksUseTransitionBefore />
 
             </SectionWrapper>
         </div>
