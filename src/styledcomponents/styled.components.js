@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 16.09 - styled.components
+/**react-design-patterns-app - version 16.10 - styled.components
  * - Features: 
  * 
- *     --> Writing 'perfect center' for sections in the 'BooksUseTransitionContainer'.	
+ *     --> Writing 'button' styles for 'BooksUseTransitionContainer'.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -62,6 +62,10 @@ export const BooksUseTransitionContainer = styled.div`
 
 	div{
 		${tw`flex flex-row m-4 p-4`}
+	}
+
+	button{
+		${tw`text-2xl`}
 	}
 	
 `
