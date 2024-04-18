@@ -2,16 +2,13 @@ import { useState, useTransition } from "react";
 import { Cover, Reviews, Writer } from "./index.components";
 import { BooksUseTransitionContainer, ButtonUseTransition } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 16.11 - BooksUseTransitionAfter
+/**react-design-patterns-app - version 16.12 - BooksUseTransitionAfter
  * - Features: 
  * 
- *     --> Building 'BooksUseTransitionAfter'
+ *     --> Implementing 'startTransition'
  * 
- *     --> Adding 'useTransition' hook 
- * 
- * Note: the BooksUseTransitionBefore component that
- * is going to hold book cover, reviews, and writter 
- * components
+ * Note: allows me to avoid the button freeze , so i can click in 
+ * another section
  */
 
 const  BooksUseTransitionAfter = () => {
@@ -20,7 +17,10 @@ const  BooksUseTransitionAfter = () => {
   const [isPending, startTransition] = useTransition();
 
   const sectionHandler = (sec) => {
-    setSection(sec);
+    /**allows me to avoid the button freeze , so i can click in another section*/
+    startTransition(() => {
+        setSection(sec);
+    })
   };
   return (
     <BooksUseTransitionContainer>
