@@ -26,11 +26,12 @@ import UseDeferredBeforeValueHookPattern from "./use.deferred.value.hook.before.
 import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component";
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
+import BooksUseTransitionAfter from "./book.use.transition.after.component";
 
-/**react-design-patterns-app - version 16.13 - AdvancedHooks
+/**react-design-patterns-app - version 16.14 - AdvancedHooks
  * - Features: 
  * 
- *     --> Adding 'booksusetransitionaftercode' code
+ *     --> Rendering 'BooksUseTransitionAfter' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -953,6 +954,12 @@ const AdvancedHooks = () => {
             </p>
 
             <BashCode code={booksusetransitionaftercode}/>
+
+            <p>
+                resulting in:
+            </p>
+
+            <BooksUseTransitionAfter />
 
             </SectionWrapper>
         </div>
