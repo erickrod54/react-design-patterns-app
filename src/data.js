@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 16.08 - data js  
+/**react-design-patterns-app - version 16.13 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'BooksUseTransitionBefore' code
+ *     --> Adding 'BooksUseTransitionAfter' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3367,6 +3367,55 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       };
       
       export default Writer;
+      `
+    },
+    {
+    id: 113,
+    name: 'BooksUseTransitionAfter - useTransition hook pattern',
+    code:   
+    `
+    const  BooksUseTransitionAfter = () => {
+
+      const [section, setSection] = useState("Cover");
+      const [isPending, startTransition] = useTransition();
+    
+      const sectionHandler = (sec) => {
+        /**allows me to over write the render so the app wont 
+         * freeze , so i can click in another section*/
+        startTransition(() => {
+            setSection(sec);
+        })
+      };
+      return (
+        <BooksUseTransitionContainer>
+          <div>
+            <ButtonUseTransition onClick={() => sectionHandler("Cover")}>
+                Book Cover
+            </ButtonUseTransition>
+            <ButtonUseTransition onClick={() => sectionHandler("Reviews")}>
+                Book Reviews
+            </ButtonUseTransition>
+            <ButtonUseTransition onClick={() => sectionHandler("Writer")}>
+                Book's Writer
+            </ButtonUseTransition>
+          </div>  
+    
+          <section>
+            {isPending && "Loading ..."}
+            {section === "Cover" ? (
+                <Cover />
+            ) : section === "Reviews" ? (
+                <Reviews />
+            ) : (
+                <Writer />
+            )}
+          </section>
+            
+        </BooksUseTransitionContainer>
+      );
+    }
+    
+    export default BooksUseTransitionAfter;
       `
     } 
   ];
