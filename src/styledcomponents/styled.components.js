@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 16.10 - styled.components
+/**react-design-patterns-app - version 16.15 - styled.components
  * - Features: 
  * 
- *     --> Writing 'button' styles for 'BooksUseTransitionContainer'.	
+ *     --> Writing 'async-react-router-pattern' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -400,6 +400,12 @@ export const CustomTitleStyle = styled.div`
 .use-transition-hook-pattern{
 	span{
 			${tw`text-orange-300 underline`}
+		}
+}
+
+.async-react-router-pattern{
+	span{
+			${tw`text-red-500 underline`}
 		}
 }
 
