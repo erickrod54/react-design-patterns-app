@@ -28,10 +28,10 @@ import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
 import BooksUseTransitionAfter from "./book.use.transition.after.component";
 
-/**react-design-patterns-app - version 16.14 - AdvancedHooks
+/**react-design-patterns-app - version 16.15 - AdvancedHooks
  * - Features: 
  * 
- *     --> Rendering 'BooksUseTransitionAfter' component
+ *     --> Developing 'Async React Router Pattern' concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -960,6 +960,20 @@ const AdvancedHooks = () => {
             </p>
 
             <BooksUseTransitionAfter />
+
+            <br />
+            <br />
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="async-react-router-pattern"><span > async react router pattern </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                the async react router pattern is related concepts and techniques to React Router as 
+                <span className="text-white font-semibold"> Suspense, lazy loading, and data fetching </span> 
+                in order to handle and solve speceific use cases to <span className="text-white font-semibold"> asynchronous </span>
+                behavior 
+            </p>
 
             </SectionWrapper>
         </div>
