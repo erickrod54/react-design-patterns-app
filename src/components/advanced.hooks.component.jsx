@@ -27,10 +27,10 @@ import UseDeferredAfterMemo from "./use.deferred.value.hook.after.memo.component
 import UseDeferredAfterHook from "./use.deferred.value.hook.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
 
-/**react-design-patterns-app - version 16.11 - AdvancedHooks
+/**react-design-patterns-app - version 16.13 - AdvancedHooks
  * - Features: 
  * 
- *     --> Developing 'useTransition' concepts
+ *     --> Adding 'booksusetransitionaftercode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -84,6 +84,7 @@ const AdvancedHooks = () => {
     const covercode = CodeData[110].code;
     const reviewscode = CodeData[111].code;
     const writercode = CodeData[112].code;
+    const booksusetransitionaftercode = CodeData[113].code;
 
     return(
         <div>
@@ -945,6 +946,13 @@ const AdvancedHooks = () => {
                 a period of time other sub components renders),  in this cas is the <span className="text-white font-semibold">
                 Reviews </span> component and this makes freeze the rest of the buttons
             </p>
+
+            <p>
+                in order to solve this issue the <span className="text-white font-semibold"> useTransition </span> is implemented 
+                as follows:
+            </p>
+
+            <BashCode code={booksusetransitionaftercode}/>
 
             </SectionWrapper>
         </div>
