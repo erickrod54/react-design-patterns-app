@@ -2,13 +2,12 @@ import { useState, useTransition } from "react";
 import { Cover, Reviews, Writer } from "./index.components";
 import { BooksUseTransitionContainer, ButtonUseTransition } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 16.12 - BooksUseTransitionAfter
+/**react-design-patterns-app - version 16.13 - BooksUseTransitionAfter
  * - Features: 
  * 
- *     --> Implementing 'startTransition'
+ *     --> Implementing 'isPending'
  * 
- * Note: allows me to avoid the button freeze , so i can click in 
- * another section
+ * Note: 'isPending' is a loader
  */
 
 const  BooksUseTransitionAfter = () => {
@@ -17,7 +16,8 @@ const  BooksUseTransitionAfter = () => {
   const [isPending, startTransition] = useTransition();
 
   const sectionHandler = (sec) => {
-    /**allows me to avoid the button freeze , so i can click in another section*/
+    /**allows me to over write the render so the app wont 
+     * freeze , so i can click in another section*/
     startTransition(() => {
         setSection(sec);
     })
@@ -36,13 +36,16 @@ const  BooksUseTransitionAfter = () => {
         </ButtonUseTransition>
       </div>  
 
-      {section === "Cover" ? (
-        <Cover />
-      ) : section === "Reviews" ? (
-        <Reviews />
-      ) : (
-        <Writer />
-      )}
+      <section>
+        {isPending && "Loading ..."}
+        {section === "Cover" ? (
+            <Cover />
+        ) : section === "Reviews" ? (
+            <Reviews />
+        ) : (
+            <Writer />
+        )}
+      </section>
         
     </BooksUseTransitionContainer>
   );
