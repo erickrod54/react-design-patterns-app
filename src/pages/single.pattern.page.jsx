@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 //import { usePatternsAppContext } from "../context";
-import { AdvancedHooks, ContainerPattern,
+import { AdvancedHooks, CleanCodeTips, ContainerPattern,
          ControlledUnControlledPattern,
          CustomHookPattern,
          ErrorBoundaries,
@@ -9,10 +9,10 @@ import { AdvancedHooks, ContainerPattern,
          FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 9.02 - SinglePatternPage
+/**react-design-patterns-app - version 16.16 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'AdvancedHooks'
+ *     --> Adding 'CleanCodeTips'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -66,6 +66,10 @@ const SinglePatternPage = () => {
     
     if ( Number(patternId) === 10 ) {
         return <AdvancedHooks />
+    }
+
+    if ( Number(patternId) === 21 ) {
+        return <CleanCodeTips />
     }
 }
 
