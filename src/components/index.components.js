@@ -11,6 +11,7 @@ import BooksUseTransitionAfter from "./book.use.transition.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
 import Card from "./card.component";
 import CardCompound from "./card.compound.pattern.component";
+import CleanCodeTips from "./clean.code.tips.component";
 import { GreenButton, RedButton } from "./composition.pattern.component";
 import ContainerPattern from "./container.component";
 import ContainerDataSource from "./container.data.source.component";
@@ -91,10 +92,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 16.12 - components > index  
+/**react-design-patterns-app - version 16.16 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'BooksUseTransitionAfter'
+ *     --> Importing and exporting 'CleanCodeTips'
  * 
  * Note: Pending to make responsive design
  */
@@ -191,5 +192,6 @@ export {
          Reviews,
          Writer,
          BooksUseTransitionBefore,
-         BooksUseTransitionAfter
+         BooksUseTransitionAfter,
+         CleanCodeTips
         }
