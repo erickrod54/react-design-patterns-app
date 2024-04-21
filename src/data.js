@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 16.13 - data js  
+/**react-design-patterns-app - version 16.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'BooksUseTransitionAfter' code
+ *     --> Adding 'ButtonAsCleanCode' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3417,7 +3417,26 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export default BooksUseTransitionAfter;
       `
-    } 
+    },
+    {
+    id: 114,
+    name: 'ButtonAsCleanCode - Clean code Tips',
+    code:   
+    `
+    const ButtonAsCleanCode = ({ size = "m", className = "", ...otherProps }) => {
+        return (
+          <button
+            {...otherProps}
+            className={\`\${styles.button} \${styles[size]} \${className}\`}
+          />
+        );
+      };
+      
+      export default ButtonAsCleanCode;
+    `
+    }  
+
+    
   ];
   
   /**List Pattern data  -- start */
