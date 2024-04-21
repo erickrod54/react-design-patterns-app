@@ -2,10 +2,10 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 
-/**react-design-patterns-app - version 16.16 - CleanCodeTips
+/**react-design-patterns-app - version 16.17 - CleanCodeTips
  * - Features: 
  * 
- *     --> Building 'CleanCodeTips' Component
+ *     --> Developing 'As' Prop concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -37,6 +37,16 @@ const CleanCodeTips = () => {
                         <span className="text-white font-semibold"> useEffect </span> ( a look into useEffect use cases and posible problems due to overuse )
                     </li>
                 </ul>
+
+                <CustomTitleStyle>
+                    <CustomTitle  title={<p className="as-prop-clean-code-tip"><span > 'As' Prop </span></p>} />
+                </CustomTitleStyle>
+
+                <p>
+                    let's say i have a component with different kinds of buttons, as follows:
+                </p>
+
+               
 
             </SectionWrapper>
 
