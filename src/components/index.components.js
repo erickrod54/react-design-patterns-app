@@ -9,6 +9,7 @@ import AlertPortal from "./alert.portal.component";
 import BashCode from "./bash.higlight.component";
 import BooksUseTransitionAfter from "./book.use.transition.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
+import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 import Card from "./card.component";
 import CardCompound from "./card.compound.pattern.component";
 import CleanCodeTips from "./clean.code.tips.component";
@@ -92,10 +93,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 16.16 - components > index  
+/**react-design-patterns-app - version 16.17 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'CleanCodeTips'
+ *     --> Importing and exporting 'ButtonAsCleanCode'
  * 
  * Note: Pending to make responsive design
  */
@@ -193,5 +194,6 @@ export {
          Writer,
          BooksUseTransitionBefore,
          BooksUseTransitionAfter,
-         CleanCodeTips
+         CleanCodeTips,
+         ButtonAsCleanCode
         }
