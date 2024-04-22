@@ -2,20 +2,23 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 16.18 - CleanCodeTips
+/**react-design-patterns-app - version 16.19 - CleanCodeTips
  * - Features: 
  * 
- *     --> Pulling 'CodeData' od the context
+ *     --> Adding 'buttonascleancodepatterncode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
- */
+*/
 
 const CleanCodeTips = () => {
-
+    
     const { CodeData } = usePatternsAppContext();
-
+    
+    const buttonascleancodepatterncode = CodeData[114].code;
+    
     return(
         <div>
             <CustomTitleStyle>
@@ -45,8 +48,11 @@ const CleanCodeTips = () => {
                 </CustomTitleStyle>
 
                 <p>
-                    let's say i have a component with different kinds of buttons, as follows:
+                    let's say i have a component with different kinds of buttons, and i use a pattern <span className="text-white font-semibold"> ButtonAsCleanCode </span>
+                    as follows:
                 </p>
+
+                <BashCode code={buttonascleancodepatterncode}/>
 
                
 
