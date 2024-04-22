@@ -1,11 +1,12 @@
 import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 16.17 - CleanCodeTips
+/**react-design-patterns-app - version 16.18 - CleanCodeTips
  * - Features: 
  * 
- *     --> Developing 'As' Prop concepts
+ *     --> Pulling 'CodeData' od the context
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -13,6 +14,7 @@ import CustomTitle from "./custom.title.component";
 
 const CleanCodeTips = () => {
 
+    const { CodeData } = usePatternsAppContext();
 
     return(
         <div>
