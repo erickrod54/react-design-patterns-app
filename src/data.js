@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 16.19 - data js  
+/**react-design-patterns-app - version 16.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonAsCleanCode' code comments
+ *     --> Adding 'module css styles' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3435,9 +3435,44 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       
       export default ButtonAsCleanCode;
     `
-    }  
-
+    },
+    {
+    id: 115,
+    name: 'module css styles - Clean code Tips',
+    code:   
+    `
+    ...
+    /**extract from module css styles*/
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+    }
     
+    .s {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    
+    .m {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    
+    .l {
+      padding: 15px 30px;
+      font-size: 24px;
+    }
+    ...
+    `
+    }  
   ];
   
   /**List Pattern data  -- start */
