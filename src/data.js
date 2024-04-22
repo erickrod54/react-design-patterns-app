@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 16.20 - data js  
+/**react-design-patterns-app - version 17.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'module css styles' code
+ *     --> Adding 'ButtonAsCleanCode' code comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3428,6 +3428,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         return (
           <button
             {...otherProps}
+            /**this is how the module css is accessed, an the rest of the props comes from the end-component (styles[size] and 'classname' )*/
             className={\`\${styles.button} \${styles[size]} \${className}\`}
           />
         );
