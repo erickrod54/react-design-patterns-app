@@ -3,11 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
+import ButtonAsCleanCodeApp from "./buttons.as.clean.code.tip.app.component";
 
-/**react-design-patterns-app - version 17.01 - CleanCodeTips
+/**react-design-patterns-app - version 17.02 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'buttonascleancodeappcode' code
+ *     --> Rendering 'ButtonAsCleanCodeApp' Compoennt
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -70,6 +71,12 @@ const CleanCodeTips = () => {
 
                 
                 <BashCode code={buttonascleancodeappcode}/>
+
+                <p>
+                    the  <span className="text-white font-semibold"> ButtonAsCleanCodeApp  </span> will result in:
+                </p>
+
+                <ButtonAsCleanCodeApp />
                
 
             </SectionWrapper>
