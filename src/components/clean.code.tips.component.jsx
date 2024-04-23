@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 16.20 - CleanCodeTips
+/**react-design-patterns-app - version 17.01 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'modulecsscode' code
+ *     --> Adding 'buttonascleancodeappcode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -19,6 +19,7 @@ const CleanCodeTips = () => {
     
     const buttonascleancodepatterncode = CodeData[114].code;
     const modulecsscode = CodeData[115].code;
+    const buttonascleancodeappcode = CodeData[116].code;
     
     return(
         <div>
@@ -61,6 +62,14 @@ const CleanCodeTips = () => {
                 </p>
 
                 <BashCode code={modulecsscode}/>
+
+                <p>
+                    an the  <span className="text-white font-semibold"> pattern will mount </span> in the 
+                    <span className="text-white font-semibold"> end component </span> as follows:
+                </p>
+
+                
+                <BashCode code={buttonascleancodeappcode}/>
                
 
             </SectionWrapper>
