@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 17.03 - data js  
+/**react-design-patterns-app - version 17.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonAsCleanCodeAppAfter' code
+ *     --> Refactoring 'ButtonAsCleanCodeAppAfter' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3522,7 +3522,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
             <ButtonAsCleanCode size="m">Medium</ButtonAsCleanCode>
             <ButtonAsCleanCode size="l">Large</ButtonAsCleanCode>
             <ButtonAsCleanCode size="xl">xLarge</ButtonAsCleanCode>
-            <a href="/">Link</a>
+            <a href="/21">Link</a>
           </div>
         );
       }
