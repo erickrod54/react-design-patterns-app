@@ -5,12 +5,13 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import ButtonAsCleanCodeApp from "./buttons.as.clean.code.tip.app.component";
 import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.component";
+import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap.component";
 
 
-/**react-design-patterns-app - version 17.06 - CleanCodeTips
+/**react-design-patterns-app - version 17.07 - CleanCodeTips
  * - Features: 
  * 
- *     --> Rendering 'buttonascleancodeappafterwrapcode' Compoennt
+ *     --> Rendering 'ButtonAsCleanCodeAppAfterWrap' Compoennt
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -101,6 +102,12 @@ const CleanCodeTips = () => {
                 </p>
 
                 <BashCode code={buttonascleancodeappafterwrapcode}/>
+
+                <p>
+                    the  <span className="text-white font-semibold"> ButtonAsCleanCodeAppAfterWrap   </span> will result in:
+                </p>
+
+                <ButtonAsCleanCodeAppAfterWrap />
 
             </SectionWrapper>
 
