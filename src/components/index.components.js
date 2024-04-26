@@ -9,6 +9,7 @@ import AlertPortal from "./alert.portal.component";
 import BashCode from "./bash.higlight.component";
 import BooksUseTransitionAfter from "./book.use.transition.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
+import ButtonAsCleanCodeAs from "./button.as.clean.code.tip.after.as.component";
 import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap.component";
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.component";
@@ -96,10 +97,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 17.06 - components > index  
+/**react-design-patterns-app - version 17.08 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ButtonAsCleanCodeAppAfterWrap'
+ *     --> Importing and exporting 'ButtonAsCleanCodeAs'
  * 
  * Note: Pending to make responsive design
  */
@@ -201,5 +202,6 @@ export {
          ButtonAsCleanCode,
          ButtonAsCleanCodeApp,
          ButtonAsCleanCodeAppAfter,
-         ButtonAsCleanCodeAppAfterWrap
+         ButtonAsCleanCodeAppAfterWrap,
+         ButtonAsCleanCodeAs
         }
