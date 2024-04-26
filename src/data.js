@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 17.09 - data js  
+/**react-design-patterns-app - version 17.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonAsCleanCodeAs' code first comment
+ *     --> Adding 'ButtonAsCleanCodeAs' code second comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3572,6 +3572,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     /**here i add 'As' prop and a default 'button' */
     const ButtonAsCleanCodeAs = ({ As = "button", size = "m", className = "", ...otherProps }) => {
         return (
+          {/*by adding the tag it will combine styles + funtionality **/}
           <As
             {...otherProps}
             className={\`\${styles.button} \${styles[size]} \${className}\`}
