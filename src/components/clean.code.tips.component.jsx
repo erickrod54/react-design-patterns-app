@@ -8,10 +8,10 @@ import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.com
 import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap.component";
 
 
-/**react-design-patterns-app - version 17.07 - CleanCodeTips
+/**react-design-patterns-app - version 17.08 - CleanCodeTips
  * - Features: 
  * 
- *     --> Rendering 'ButtonAsCleanCodeAppAfterWrap' Compoennt
+ *     --> Adding 'buttonascleancodeascode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -26,6 +26,7 @@ const CleanCodeTips = () => {
     const buttonascleancodeappcode = CodeData[116].code;
     const buttonascleanCodeappaftercode = CodeData[117].code;
     const buttonascleancodeappafterwrapcode = CodeData[118].code;
+    const buttonascleancodeascode = CodeData[119].code;
     
     return(
         <div>
@@ -108,6 +109,13 @@ const CleanCodeTips = () => {
                 </p>
 
                 <ButtonAsCleanCodeAppAfterWrap />
+
+                <p>
+                    the main goal of this pattern is to have full <span className="text-white font-semibold"> styles + functionality </span>,
+                    so i will start by refactoring the pattern as follows:
+                </p>
+
+                <BashCode code={buttonascleancodeascode}/>
 
             </SectionWrapper>
 
