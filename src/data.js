@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 17.07 - data js  
+/**react-design-patterns-app - version 17.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonAsCleanCodeAppAfterWrap' code comment
+ *     --> Adding 'ButtonAsCleanCodeAs' code comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3563,7 +3563,24 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export default ButtonAsCleanCodeAppAfterWrap;
     `
-    }  
+    },
+    {
+    id: 119,
+    name: 'ButtonAsCleanCodeAs - Clean code Tips',
+    code:   
+    `
+    const ButtonAsCleanCodeAs = ({ As = "button", size = "m", className = "", ...otherProps }) => {
+        return (
+          <As
+            {...otherProps}
+            className={\`\${styles.button} \${styles[size]} \${className}\`}
+          />
+        );
+      };
+      
+      export default ButtonAsCleanCodeAs;
+    `
+    } 
   ];
   
   /**List Pattern data  -- start */
