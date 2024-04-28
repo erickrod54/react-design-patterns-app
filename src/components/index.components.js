@@ -32,6 +32,7 @@ import CurrentUser from "./current.user.component";
 import useUser from "./custom.hook.generic.pattern.current.user";
 import CustomHookPattern from "./custom.hooks.pattern";
 import CustomTitle from "./custom.title.component";
+import Display from "./display.cart.app.optimize.context.api.component.tsx";
 import ChildComponent from "./error.boundaries.child.component";
 import ErrorBoundaries from "./error.boundaries.component";
 import MasterComponent from "./error.boundaries.parent.component";
@@ -99,10 +100,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 17.13 - components > index  
+/**react-design-patterns-app - version 17.14 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ShoppingCounter'
+ *     --> Importing and exporting 'Display'
  * 
  * Note: Pending to make responsive design
  */
@@ -206,5 +207,6 @@ export {
          ButtonAsCleanCodeAppAfter,
          ButtonAsCleanCodeAppAfterWrap,
          ButtonAsCleanCodeAs,
-         ShoppingCounter
+         ShoppingCounter,
+         Display
         }
