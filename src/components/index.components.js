@@ -62,6 +62,7 @@ import RecursivePattern from "./recursive.pattern.component";
 import RegularList from "./regular.list.component";
 import Reviews from "./reviews.use.transition.before.hook.component";
 import SharedLayout from "./shared.layout.component";
+import ShoppingCounter from "./shopping.cart.app.optimize.context.api.component.tsx";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
 import TheOutSideControlled from "./theoutside.controlled.component";
@@ -98,10 +99,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 17.11 - components > index  
+/**react-design-patterns-app - version 17.13 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ButtonAsCleanCodeAppAfterPattern'
+ *     --> Importing and exporting 'ShoppingCounter'
  * 
  * Note: Pending to make responsive design
  */
@@ -205,5 +206,5 @@ export {
          ButtonAsCleanCodeAppAfter,
          ButtonAsCleanCodeAppAfterWrap,
          ButtonAsCleanCodeAs,
-         ButtonAsCleanCodeAppAfterPattern
+         ShoppingCounter
         }
