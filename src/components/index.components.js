@@ -15,6 +15,7 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.component";
 import ButtonAsCleanCodeApp from "./buttons.as.clean.code.tip.app.component";
+import Buttons from "./buttons.cart.app.optimize.context.api.component.tsx";
 import Card from "./card.component";
 import CardCompound from "./card.compound.pattern.component";
 import CleanCodeTips from "./clean.code.tips.component";
@@ -100,10 +101,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 17.14 - components > index  
+/**react-design-patterns-app - version 17.15 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'Display'
+ *     --> Importing and exporting 'Buttons'
  * 
  * Note: Pending to make responsive design
  */
@@ -208,5 +209,6 @@ export {
          ButtonAsCleanCodeAppAfterWrap,
          ButtonAsCleanCodeAs,
          ShoppingCounter,
-         Display
+         Display,
+         Buttons
         }
