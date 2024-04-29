@@ -3,6 +3,7 @@ import { AlertWrapper,
          ButtonGeneral,
          ButtonUseTransition,
          ButtonWrapper,
+         ButtonsOptContextStyle,
          ChildWrapper,
          Container,
          CoverContainer,
@@ -19,10 +20,10 @@ import { AlertWrapper,
          MultipleFormWrapper,
          OpenModalWrapper, Panel, PrimaryButton, ReviewsContainer, SectionWrapper, StepFlowWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 15.20 - styledcomponents > index
+/**react-design-patterns-app - version 17.17 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'BooksUseTransitionContainer' 
+ *     --> Importing and exporting 'ButtonsOptContextStyle' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -57,4 +58,5 @@ export { SectionWrapper,
          Emoji,
          WriterContainer,
          BooksUseTransitionContainer,
+         ButtonsOptContextStyle,
          HeavyComponentWrapper, ToolTipWrapper, MultipleFormWrapper }
