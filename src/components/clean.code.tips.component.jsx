@@ -9,10 +9,10 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 
 
-/**react-design-patterns-app - version 17.12 - CleanCodeTips
+/**react-design-patterns-app - version 17.17 - CleanCodeTips
  * - Features: 
  * 
- *     --> Rendering 'ButtonAsCleanCodeAppAfterPattern' Component
+ *     --> Developing 'Context API Optimization' concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -132,6 +132,21 @@ const CleanCodeTips = () => {
                 </p>
 
                 <ButtonAsCleanCodeAppAfterPattern />
+
+                <br />
+                <br />
+
+                <CustomTitleStyle>
+                    <CustomTitle  title={<p className="context-api-optimization"><span > Context API Optimization </span></p>} />
+                </CustomTitleStyle>        
+
+                <p>
+                    the  context api is use to provide resources in a centralized way to the application that is going to be build, 
+                    and this pattern is focous to the problem that comes when is the need to <span className="text-white font-semibold"> 
+                    ensure that components accessing the context are wrapped within the context </span> provider to <span className="text-white font-semibold"> 
+                    avoid null values </span> 
+                </p>
+
 
             </SectionWrapper>
 
