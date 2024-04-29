@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 17.12 - data js  
+/**react-design-patterns-app - version 17.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonAsCleanCodeAppAfterPattern' code comments
+ *     --> Adding 'ShoppingCounter' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3613,6 +3613,60 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       }
       
       export default ButtonAsCleanCodeAppAfterPattern;
+    `
+    },
+    {
+    id: 121,
+    name: 'ShoppingCounter - Clean code Tips',
+    code:   
+    `
+      type State = {
+        count: number;
+      };
+      
+      type Action = {
+        type: "INCREMENT" | "DECREMENT";
+      };
+      
+      function reducer(state: State, action: Action) {
+        switch (action.type) {
+          case "INCREMENT":
+            return { count: state.count + 1 };
+          case "DECREMENT":
+            return { count: state.count - 1 };
+          default:
+            throw new Error("Provide a valid action.");
+        }
+      }
+      
+      type CartContext = {
+        state: { count: number };
+        dispatch: Dispatch<Action>;
+      };
+      
+      export const Context = createContext<CartContext | null>(null);
+      
+      const ShoppingCounter = () => {
+        const [state, dispatch] = useReducer(reducer, { count: 0 });
+        return (
+          <Context.Provider value={{ state, dispatch }}>
+            <Display />
+            <Buttons />
+          </Context.Provider>
+        );
+      }
+      
+      export function useCartContext() {
+        const value = useContext(Context);
+      
+        if (value === null) {
+          throw new Error("Must be wrapped inside Context.Provider");
+        }
+      
+        return value;
+      }
+      
+      export default ShoppingCounter;
     `
     }
   ];
