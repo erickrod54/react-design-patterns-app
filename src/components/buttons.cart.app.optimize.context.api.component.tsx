@@ -1,8 +1,8 @@
 import React from "react";
 import { useCartContext } from "./shopping.cart.app.optimize.context.api.component.tsx";
-import { SingleButtonWrapper } from "../styledcomponents/styled.components.js";
+import { ButtonsOptContextStyle, SingleButtonWrapper } from "../styledcomponents/styled.components.js";
 
-/**react-design-patterns-app - version 17.19 - Buttons
+/**react-design-patterns-app - version 17.20 - Buttons
  * - Features: 
  * 
  *     --> Wrraping using 'SingleButtonWrapper' Styles 
@@ -14,7 +14,7 @@ import { SingleButtonWrapper } from "../styledcomponents/styled.components.js";
 const Buttons = () => {
   const { dispatch } = useCartContext();
   return (
-    <div className="buttons">
+    <ButtonsOptContextStyle >
       <SingleButtonWrapper
         className="button"
         onClick={() => dispatch({ type: "DECREMENT" })}
@@ -22,12 +22,11 @@ const Buttons = () => {
         ➖
       </SingleButtonWrapper>
       <SingleButtonWrapper
-        className="button"
         onClick={() => dispatch({ type: "INCREMENT" })}
       >
         ➕
       </SingleButtonWrapper>
-    </div>
+    </ButtonsOptContextStyle>
   );
 };
 
