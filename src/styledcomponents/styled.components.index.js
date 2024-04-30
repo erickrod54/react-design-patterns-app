@@ -18,12 +18,15 @@ import { AlertWrapper,
          ModalBackground,
          ModalContent,
          MultipleFormWrapper,
-         OpenModalWrapper, Panel, PrimaryButton, ReviewsContainer, SectionWrapper, StepFlowWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
+         OpenModalWrapper, Panel,
+         PrimaryButton,
+         ReviewsContainer,
+         SectionWrapper, SingleButtonWrapper, StepFlowWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 17.17 - styledcomponents > index
+/**react-design-patterns-app - version 17.19 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ButtonsOptContextStyle' 
+ *     --> Importing and exporting 'SingleButtonWrapper' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -59,4 +62,5 @@ export { SectionWrapper,
          WriterContainer,
          BooksUseTransitionContainer,
          ButtonsOptContextStyle,
+         SingleButtonWrapper,
          HeavyComponentWrapper, ToolTipWrapper, MultipleFormWrapper }
