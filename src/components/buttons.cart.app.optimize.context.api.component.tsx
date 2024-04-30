@@ -1,10 +1,11 @@
 import React from "react";
 import { useCartContext } from "./shopping.cart.app.optimize.context.api.component.tsx";
+import { SingleButtonWrapper } from "../styledcomponents/styled.components.js";
 
-/**react-design-patterns-app - version 17.13 - Buttons
+/**react-design-patterns-app - version 17.19 - Buttons
  * - Features: 
  * 
- *     --> Building 'Buttons' Component 
+ *     --> Wrraping using 'SingleButtonWrapper' Styles 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -14,18 +15,18 @@ const Buttons = () => {
   const { dispatch } = useCartContext();
   return (
     <div className="buttons">
-      <button
+      <SingleButtonWrapper
         className="button"
         onClick={() => dispatch({ type: "DECREMENT" })}
       >
         ➖
-      </button>
-      <button
+      </SingleButtonWrapper>
+      <SingleButtonWrapper
         className="button"
         onClick={() => dispatch({ type: "INCREMENT" })}
       >
         ➕
-      </button>
+      </SingleButtonWrapper>
     </div>
   );
 };
