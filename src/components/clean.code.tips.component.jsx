@@ -9,7 +9,7 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 
 
-/**react-design-patterns-app - version 17.17 - CleanCodeTips
+/**react-design-patterns-app - version 17.19 - CleanCodeTips
  * - Features: 
  * 
  *     --> Developing 'Context API Optimization' concepts
@@ -145,6 +145,30 @@ const CleanCodeTips = () => {
                     and this pattern is focous to the problem that comes when is the need to <span className="text-white font-semibold"> 
                     ensure that components accessing the context are wrapped within the context </span> provider to <span className="text-white font-semibold"> 
                     avoid null values </span> 
+                </p>
+
+                <p>
+                    this pattern will combine the following technologies and techniques:
+                </p>
+
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> Separation of logic </span> ( startpoint of migration to <span className="text-white font-semibold"> Redux </span>)
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Context API Encapsulation </span> (this technique will help to make a rehusable context code without repeating the context setup )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Improving Performance by Context Splitting </span> ( this technique will make context usage efficient )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> TypeScript Implementation </span> ( by using strong typing can help to validate numerous features of a context )
+                    </li>
+                </ul>
+
+                <p>
+                    let's say a have a main component that ha some soert of functionality as a shopping Cart with the name of
+                     <span className="text-white font-semibold"> ShoppingCounter </span>, as follows: 
                 </p>
 
 
