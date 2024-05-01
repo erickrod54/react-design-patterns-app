@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.00 - data js  
+/**react-design-patterns-app - version 18.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'Buttons' code
+ *     --> Adding 'Display' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3694,6 +3694,21 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       };
       
       export default Buttons;
+    `
+    },
+    {
+    id: 123,
+    name: 'Display - Clean code Tips',
+    code:   
+    `
+      const Display = () => {
+        const {
+          state: { count },
+        } = useCartContext();
+        return <span className="span">{count}</span>;
+      };
+      
+      export default Display;
     `
     }
   ];
