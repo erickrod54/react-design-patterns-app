@@ -8,10 +8,10 @@ import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.com
 import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap.component";
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 
-/**react-design-patterns-app - version 17.20 - CleanCodeTips
+/**react-design-patterns-app - version 18.00 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'shoppingcountercode' code
+ *     --> Adding 'buttonscountercode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -29,6 +29,7 @@ const CleanCodeTips = () => {
     const buttonascleancodeascode = CodeData[119].code;
     const ascleanCodeappafterpattern = CodeData[120].code;
     const shoppingcountercode = CodeData[121].code;
+    const buttonscountercode = CodeData[122].code;
     
     return(
         <div>
@@ -167,11 +168,17 @@ const CleanCodeTips = () => {
                 </ul>
 
                 <p>
-                    let's say a have a main component that ha some soert of functionality as a shopping Cart with the name of
-                     <span className="text-white font-semibold"> ShoppingCounter </span>, as follows: 
+                    let's say a have an <span className="text-white font-semibold"> initial main component </span> that ha some sort of functionality 
+                    as a shopping Cart with the name of <span className="text-white font-semibold"> ShoppingCounter </span>, as follows: 
                 </p>
 
-                <BashCode code={shoppingcountercode}/>        
+                <BashCode code={shoppingcountercode}/> 
+
+                 <p>
+                    so this main component will be compose for <span className="text-white font-semibold"> Buttons </span>, that will be as follows: 
+                 </p>      
+
+                <BashCode code={buttonscountercode}/> 
 
             </SectionWrapper>
 
