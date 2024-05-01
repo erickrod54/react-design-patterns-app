@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 17.17 - data js  
+/**react-design-patterns-app - version 18.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingCounter' code
+ *     --> Adding 'Buttons' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3667,6 +3667,33 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       }
       
       export default ShoppingCounter;
+    `
+    },
+    {
+    id: 122,
+    name: 'Buttons - Clean code Tips',
+    code:   
+    `
+    const Buttons = () => {
+        const { dispatch } = useCartContext();
+        return (
+          <ButtonsOptContextStyle >
+            <SingleButtonWrapper
+              className="button"
+              onClick={() => dispatch({ type: "DECREMENT" })}
+            >
+              ➖
+            </SingleButtonWrapper>
+            <SingleButtonWrapper
+              onClick={() => dispatch({ type: "INCREMENT" })}
+            >
+              ➕
+            </SingleButtonWrapper>
+          </ButtonsOptContextStyle>
+        );
+      };
+      
+      export default Buttons;
     `
     }
   ];
