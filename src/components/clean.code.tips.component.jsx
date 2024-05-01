@@ -8,11 +8,10 @@ import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.com
 import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap.component";
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 
-
-/**react-design-patterns-app - version 17.19 - CleanCodeTips
+/**react-design-patterns-app - version 17.20 - CleanCodeTips
  * - Features: 
  * 
- *     --> Developing 'Context API Optimization' concepts
+ *     --> Adding 'shoppingcountercode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -29,6 +28,7 @@ const CleanCodeTips = () => {
     const buttonascleancodeappafterwrapcode = CodeData[118].code;
     const buttonascleancodeascode = CodeData[119].code;
     const ascleanCodeappafterpattern = CodeData[120].code;
+    const shoppingcountercode = CodeData[121].code;
     
     return(
         <div>
@@ -171,6 +171,7 @@ const CleanCodeTips = () => {
                      <span className="text-white font-semibold"> ShoppingCounter </span>, as follows: 
                 </p>
 
+                <BashCode code={shoppingcountercode}/>        
 
             </SectionWrapper>
 
