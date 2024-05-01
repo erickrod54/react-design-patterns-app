@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 17.20 - styled.components
+/**react-design-patterns-app - version 18.01 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'SingleButtonWrapper' styles.	
+ *     --> Refactoring 'DisplayWrapper' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,10 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const DisplayWrapper = styled.span`
+  ${tw`block text-center text-3xl`}
+`;  
 
 export const SingleButtonWrapper = styled.button`
   ${tw`bg-white min-w-fit min-h-fit text-center p-3 border border-solid border-gray-300 shadow cursor-pointer`}
