@@ -8,7 +8,7 @@ import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.com
 import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap.component";
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 
-/**react-design-patterns-app - version 18.00 - CleanCodeTips
+/**react-design-patterns-app - version 18.01 - CleanCodeTips
  * - Features: 
  * 
  *     --> Adding 'buttonscountercode' code
@@ -175,10 +175,14 @@ const CleanCodeTips = () => {
                 <BashCode code={shoppingcountercode}/> 
 
                  <p>
-                    so this main component will be compose for <span className="text-white font-semibold"> Buttons </span>, that will be as follows: 
+                    so this main component will be compose for <span className="text-white font-semibold"> Buttons </span>, sub component that will be as follows: 
                  </p>      
 
                 <BashCode code={buttonscountercode}/> 
+
+                <p>
+                    and a <span className="text-white font-semibold"> Display </span> sub component, that will be as follows: 
+                 </p>
 
             </SectionWrapper>
 
