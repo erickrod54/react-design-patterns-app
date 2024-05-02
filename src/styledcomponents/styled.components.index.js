@@ -22,12 +22,15 @@ import { AlertWrapper,
          OpenModalWrapper, Panel,
          PrimaryButton,
          ReviewsContainer,
-         SectionWrapper, SingleButtonWrapper, StepFlowWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
+         SectionWrapper,
+         ShoppingCounterWrapper,
+         SingleButtonWrapper,
+         StepFlowWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 18.01 - styledcomponents > index
+/**react-design-patterns-app - version 18.02 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'DisplayWrapper' 
+ *     --> Importing and exporting 'ShoppingCounterWrapper' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -66,4 +69,5 @@ export { SectionWrapper,
          SingleButtonWrapper,
          HeavyComponentWrapper,
          DisplayWrapper,
-         ToolTipWrapper, MultipleFormWrapper }
+         ToolTipWrapper,
+         ShoppingCounterWrapper, MultipleFormWrapper }
