@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 18.01 - styled.components
+/**react-design-patterns-app - version 18.02 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'DisplayWrapper' styles.	
+ *     --> Refactoring 'ShoppingCounterWrapper' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,10 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const ShoppingCounterWrapper = styled.div`
+  ${tw`flex flex-col justify-center items-center m-4 p-4 bg-slate-200 w-fit h-fit`}
+`;
 
 export const DisplayWrapper = styled.span`
   ${tw`block text-center text-3xl`}
