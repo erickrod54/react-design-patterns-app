@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 18.02 - styled.components
+/**react-design-patterns-app - version 18.03 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'ShoppingCounterWrapper' styles.	
+ *     --> Refactoring 'DisplayWrapper' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -22,7 +22,7 @@ export const ShoppingCounterWrapper = styled.div`
 `;
 
 export const DisplayWrapper = styled.span`
-  ${tw`block text-center text-3xl`}
+  ${tw`text-8xl text-violet-900 font-extrabold`}
 `;  
 
 export const SingleButtonWrapper = styled.button`
