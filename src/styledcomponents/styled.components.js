@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 18.03 - styled.components
+/**react-design-patterns-app - version 18.05 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'DisplayWrapper' styles.	
+ *     --> Refactoring 'SectionWrapper' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -248,7 +248,7 @@ export const ListWrapper = styled.div`
 `
 
 export const SectionWrapper = styled.section`
-    ${tw`m-12 p-12 mt-12 first-letter:capitalize text-lg`}
+    ${tw`m-12 p-12 mt-12 first-letter:capitalize text-lg flex flex-col w-screen`}
 
     ul{
         ${tw`m-4 p-4 list-decimal`} 
