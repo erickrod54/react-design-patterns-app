@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 18.05 - styled.components
+/**react-design-patterns-app - version 18.06 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'SectionWrapper' styles.	
+ *     --> Building 'SectionItemCenterWrapper' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -245,6 +245,10 @@ export const ListWrapper = styled.div`
 		span{
 			${tw`text-stone-100`}
 		}
+`
+export const SectionItemCenterWrapper = styled.div`
+	${tw`flex flex-col justify-center items-center`}
+
 `
 
 export const SectionWrapper = styled.section`
