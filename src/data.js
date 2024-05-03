@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.01 - data js  
+/**react-design-patterns-app - version 18.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'Display' code
+ *     --> Refactoring 'Display' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3705,7 +3705,11 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         const {
           state: { count },
         } = useCartContext();
-        return <span className="span">{count}</span>;
+        return (
+          <DisplayWrapper>
+              {count}
+          </DisplayWrapper>
+        );
       };
       
       export default Display;
