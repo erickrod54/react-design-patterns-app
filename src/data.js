@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.07 - data js  
+/**react-design-patterns-app - version 18.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingCounter' code comments
+ *     --> Adding 'Display' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3711,9 +3711,13 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     code:   
     `
       const Display = () => {
+
+        /**here i destructure the 'count' from the 'state' and pull 
+         * from the context*/
         const {
           state: { count },
         } = useCartContext();
+
         return (
           <DisplayWrapper>
               {count}
