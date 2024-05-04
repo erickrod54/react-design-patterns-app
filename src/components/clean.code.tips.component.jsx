@@ -7,11 +7,12 @@ import ButtonAsCleanCodeApp from "./buttons.as.clean.code.tip.app.component";
 import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.component";
 import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap.component";
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
+import { ShoppingCounter } from "./index.components";
 
-/**react-design-patterns-app - version 18.02 - CleanCodeTips
+/**react-design-patterns-app - version 18.07 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'displaycode' code
+ *     --> Rendering 'ShoppingCounter' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -186,6 +187,12 @@ const CleanCodeTips = () => {
                  </p>
 
                 <BashCode code={displaycode}/> 
+
+                <p>
+                    resulting <span className="text-white font-semibold"> ShoppingCounter  </span> as follows:
+                </p>
+
+                <ShoppingCounter />
 
             </SectionWrapper>
 
