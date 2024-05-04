@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.04 - data js  
+/**react-design-patterns-app - version 18.07 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'ShoppingCounter' code
+ *     --> Adding 'ShoppingCounter' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3620,14 +3620,17 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'ShoppingCounter - Clean code Tips',
     code:   
     `
+    /**the state that will hold the counter*/
     type State = {
       count: number;
     };
     
+    /**the action that will be performed*/
     type Action = {
       type: "INCREMENT" | "DECREMENT";
     };
     
+    /**this reducer will define the action for the given state*/
     function reducer(state: State, action: Action) {
       switch (action.type) {
         case "INCREMENT":
@@ -3644,9 +3647,12 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       dispatch: Dispatch<Action>;
     };
     
+    /**this validates that the context exists*/
     export const Context = createContext<CartContext | null>(null);
     
     const ShoppingCounter = () => {
+
+      /**the state is consumed using the useReducer*/
       const [state, dispatch] = useReducer(reducer, { count: 0 });
       return (
         <Context.Provider value={{ state, dispatch }}>
@@ -3660,7 +3666,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export function useCartContext() {
       const value = useContext(Context);
-    
+
+      /**this validates that the components are inside of the context*/
       if (value === null) {
         throw new Error("Must be wrapped inside Context.Provider");
       }
