@@ -1,12 +1,12 @@
 import React, { Dispatch, createContext, useContext, useReducer } from "react";
 import Buttons from "./buttons.cart.app.optimize.context.api.component.tsx";
 import Display from "./display.cart.app.optimize.context.api.component.tsx";
-import { ShoppingCounterWrapper } from "../styledcomponents/styled.components.js";
+import { SectionItemCenterWrapper, ShoppingCounterWrapper } from "../styledcomponents/styled.components.js";
 
-/**react-design-patterns-app - version 18.02 - ShoppingCounter
+/**react-design-patterns-app - version 18.07 - ShoppingCounter
  * - Features: 
  * 
- *     --> Styling using ShoppingCounterWrapper
+ *     --> Styling using 'ShoppingCounterWrapper'
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -44,10 +44,12 @@ const ShoppingCounter = () => {
   const [state, dispatch] = useReducer(reducer, { count: 0 });
   return (
     <Context.Provider value={{ state, dispatch }}>
-        <ShoppingCounterWrapper>
-            <Display />
-            <Buttons />
-        </ShoppingCounterWrapper>
+        <SectionItemCenterWrapper>
+            <ShoppingCounterWrapper>
+                <Display />
+                <Buttons />
+            </ShoppingCounterWrapper>
+        </SectionItemCenterWrapper>
     </Context.Provider>
   );
 }
