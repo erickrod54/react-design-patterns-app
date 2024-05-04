@@ -2,10 +2,10 @@ import React from "react";
 import { useCartContext } from "./shopping.cart.app.optimize.context.api.component.tsx";
 import { DisplayWrapper } from "../styledcomponents/styled.components.js";
 
-/**react-design-patterns-app - version 18.03 - Display
+/**react-design-patterns-app - version 18.07 - Display
  * - Features: 
  * 
- *     --> Adding 'DisplayWrapper' Component 
+ *     --> Validating 'count' to avoid negative values
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -17,7 +17,7 @@ const Display = () => {
   } = useCartContext();
   return (
     <DisplayWrapper>
-        {count}
+        {count < 0 ? 0 : count}
     </DisplayWrapper>
   );
 };
