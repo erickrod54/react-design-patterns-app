@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.08 - data js  
+/**react-design-patterns-app - version 18.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'Display' code comments
+ *     --> Adding 'CartProvider' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3726,6 +3726,64 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       };
       
       export default Display;
+    `
+    },
+    {
+    id: 124,
+    name: 'CartProvider - Clean code Tips',
+    code:   
+    `
+    type State = {
+      count: number;
+    };
+    
+    type Action = {
+      type: "INCREMENT" | "DECREMENT";
+    };
+    
+    function reducer(state: State, action: Action) {
+      switch (action.type) {
+        case "INCREMENT":
+          return { count: state.count + 1 };
+        case "DECREMENT":
+          return { count: state.count - 1 };
+        default:
+          throw new Error("Provide a valid action.");
+      }
+    }
+    
+    type CartContext = {
+      state: { count: number };
+      dispatch: Dispatch<Action>;
+    };
+    
+    export const Context = createContext<CartContext | null>(null);
+    
+    type CartProviderProps = {
+        children: ReactNode
+      };
+    
+    export const CartProvider = ({ children }: CartProviderProps) => {
+    
+        const [state, dispatch] = useReducer(reducer, { count: 0 });
+        return (
+            <Context.Provider value={{ state, dispatch }}>
+                {children}
+            </Context.Provider>
+          );
+    }
+    
+    
+    
+    export function useCartContext() {
+      const value = useContext(Context);
+    
+      if (value === null) {
+        throw new Error("Must be wrapped inside Context.Provider");
+      }
+    
+      return value;
+    }
     `
     }
   ];
