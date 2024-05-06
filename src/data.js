@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.12 - data js  
+/**react-design-patterns-app - version 18.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProvider' code third comment
+ *     --> Adding 'ButtonsAfter' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3790,7 +3790,41 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       return value;
     }
     `
+    },
+    {
+    id: 124,
+    name: 'ButtonsAfter - Clean code Tips',
+    code:   
+    `
+    import React from "react";
+    /**this is the line that changes, the rest of the code is exactly the same'*/
+    import { useCartContext } from "./optimize.context.api.after.tsx";
+    import { ButtonsOptContextStyle, SingleButtonWrapper } from "../styledcomponents/styled.components.js";
+
+
+    const ButtonsAfter = () => {
+      const { dispatch } = useCartContext();
+      return (
+        <ButtonsOptContextStyle >
+          <SingleButtonWrapper
+            className="button"
+            onClick={() => dispatch({ type: "DECREMENT" })}
+          >
+            ➖
+          </SingleButtonWrapper>
+          <SingleButtonWrapper
+            onClick={() => dispatch({ type: "INCREMENT" })}
+          >
+            ➕
+          </SingleButtonWrapper>
+        </ButtonsOptContextStyle>
+      );
+    };
+
+    export default ButtonsAfter;
+    `
     }
+
   ];
   
   /**List Pattern data  -- start */
