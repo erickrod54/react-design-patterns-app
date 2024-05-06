@@ -9,10 +9,10 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 import { ShoppingCounter } from "./index.components";
 
-/**react-design-patterns-app - version 18.07 - CleanCodeTips
+/**react-design-patterns-app - version 18.10 - CleanCodeTips
  * - Features: 
  * 
- *     --> Rendering 'ShoppingCounter' Component
+ *     --> Adding 'optimizecontextapicode'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -32,6 +32,7 @@ const CleanCodeTips = () => {
     const shoppingcountercode = CodeData[121].code;
     const buttonscountercode = CodeData[122].code;
     const displaycode = CodeData[123].code;
+    const optimizecontextapicode = CodeData[124].code;
     
     return(
         <div>
@@ -193,6 +194,14 @@ const CleanCodeTips = () => {
                 </p>
 
                 <ShoppingCounter />
+
+                <p>
+                    this context can be even more optimized, let's start by the <span className="text-white font-semibold"> Separation of logic </span> 
+                    and in this case i am taking some <span className="text-white font-semibold"> context API code </span> in:
+                </p>
+
+                <BashCode code={optimizecontextapicode}/> 
+
 
             </SectionWrapper>
 
