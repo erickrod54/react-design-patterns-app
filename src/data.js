@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.09 - data js  
+/**react-design-patterns-app - version 18.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProvider' code
+ *     --> Adding 'CartProvider' code first comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3733,6 +3733,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'CartProvider - Clean code Tips',
     code:   
     `
+    /**this logic will be in a separate file named 'optimize context api'*/
     type State = {
       count: number;
     };
