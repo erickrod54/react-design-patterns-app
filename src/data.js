@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.10 - data js  
+/**react-design-patterns-app - version 18.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProvider' code first comment
+ *     --> Adding 'CartProvider' code second comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3760,6 +3760,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
     export const Context = createContext<CartContext | null>(null);
     
+    /**this new type of data will be 'ReactNode' this way i can have
+     * properly validated 'React components' as children*/
     type CartProviderProps = {
         children: ReactNode
       };
