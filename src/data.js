@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.11 - data js  
+/**react-design-patterns-app - version 18.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProvider' code second comment
+ *     --> Adding 'CartProvider' code third comment
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3766,6 +3766,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         children: ReactNode
       };
     
+    /**this is the new code for the Provider, will have state and dispatch actions 
+     * to any node as a children*/  
     export const CartProvider = ({ children }: CartProviderProps) => {
     
         const [state, dispatch] = useReducer(reducer, { count: 0 });
