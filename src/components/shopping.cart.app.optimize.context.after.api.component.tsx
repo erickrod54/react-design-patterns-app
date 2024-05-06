@@ -1,13 +1,13 @@
 import React from "react";
 import { SectionItemCenterWrapper, ShoppingCounterWrapper } from "../styledcomponents/styled.components.js";
 import { CartProvider } from "./optimize.context.api.after.tsx";
-import { DisplayAfter } from "./index.components.js";
+import { ButtonsAfter, DisplayAfter } from "./index.components.js";
 
 
-/**react-design-patterns-app - version 18.09 - ShoppingCounterAfter
+/**react-design-patterns-app - version 18.10 - ShoppingCounterAfter
  * - Features: 
  * 
- *     --> Building 'ShoppingCounterAfter'
+ *     --> Adding 'ButtonsAfter'
  *
  * 
  * Note: this component hide the context api logic make in 
@@ -21,7 +21,7 @@ const ShoppingCounterAfter = () => {
         <SectionItemCenterWrapper>
             <ShoppingCounterWrapper>
                 <DisplayAfter />
-                
+                <ButtonsAfter />
             </ShoppingCounterWrapper>
         </SectionItemCenterWrapper>
     </CartProvider>
