@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.13 - data js  
+/**react-design-patterns-app - version 18.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonsAfter' code
+ *     --> Adding 'DisplayAfter' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3792,7 +3792,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     `
     },
     {
-    id: 124,
+    id: 125,
     name: 'ButtonsAfter - Clean code Tips',
     code:   
     `
@@ -3823,8 +3823,31 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
 
     export default ButtonsAfter;
     `
-    }
+    },
+    {
+    id: 126,
+    name: 'DisplayAfter - Clean code Tips',
+    code:   
+    `
+    import React from "react";
+    /**this is the line that changes, the rest of the code is exactly the same'*/
+    import { useCartContext } from "./optimize.context.api.after.tsx";
+    import { DisplayWrapper } from "../styledcomponents/styled.components.js";
 
+    const DisplayAfter = () => {
+      const {
+        state: { count },
+      } = useCartContext();
+      return (
+        <DisplayWrapper>
+            {count < 0 ? 0 : count}
+        </DisplayWrapper>
+      );
+    };
+
+    export default DisplayAfter;
+    `
+    }
   ];
   
   /**List Pattern data  -- start */
