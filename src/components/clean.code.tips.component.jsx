@@ -9,10 +9,10 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 import { ShoppingCounter } from "./index.components";
 
-/**react-design-patterns-app - version 18.14 - CleanCodeTips
+/**react-design-patterns-app - version 18.15 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'buttonsaftercode' code
+ *     --> Adding 'displayaftercode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -34,6 +34,7 @@ const CleanCodeTips = () => {
     const displaycode = CodeData[123].code;
     const optimizecontextapicode = CodeData[124].code;
     const buttonsaftercode = CodeData[125].code;
+    const displayaftercode = CodeData[126].code;
     
     return(
         <div>
@@ -204,12 +205,19 @@ const CleanCodeTips = () => {
                 <BashCode code={optimizecontextapicode}/> 
 
                 <p>
-                    so this main component will be compose for <span className="text-white font-semibold"> Buttons </span>, sub component
+                    so this main component will be compose for <span className="text-white font-semibold"> ButtonsAfter  </span>, sub component
                     with small re factor in the imports (<span className="text-white font-semibold"> this components can be rehuse, - i create a new one because 
                     i want to show them both cases in the same codebase -</span>), and will be as follows: 
                 </p>
 
                 <BashCode code={buttonsaftercode}/> 
+
+                <p>
+                    and with <span className="text-white font-semibold"> DisplayAfter  </span>, sub component
+                    the same refactor, and will be as follows: 
+                </p>
+
+                <BashCode code={displayaftercode}/> 
 
             </SectionWrapper>
 
