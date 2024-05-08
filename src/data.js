@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.14 - data js  
+/**react-design-patterns-app - version 18.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'DisplayAfter' code
+ *     --> Adding 'CartProviderPerformance' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3846,6 +3846,76 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
 
     export default DisplayAfter;
+    `
+    },
+    {
+    id: 127,
+    name: 'CartProviderPerformance - Clean code Tips',
+    code:   
+    `
+    
+    type State = {
+      count: number;
+    };
+    
+    type Action = {
+      type: "INCREMENT" | "DECREMENT";
+    };
+    
+    function reducer(state: State, action: Action) {
+      switch (action.type) {
+        case "INCREMENT":
+          return { count: state.count + 1 };
+        case "DECREMENT":
+          return { count: state.count - 1 };
+        default:
+          throw new Error("Provide a valid action.");
+      }
+    }
+    
+    type StateContext =  { count: number };
+    type DispatchContext =  Dispatch<Action>;
+    
+    export const StateContext = createContext<StateContext | null>(null);
+    export const DispatchContext = createContext<DispatchContext | null>(null);
+    
+    type CartProviderProps = {
+        children: ReactNode
+      };
+    
+    export const CartProviderPerformance = ({ children }: CartProviderProps) => {
+    
+        const [state, dispatch] = useReducer(reducer, { count: 0 });
+        return (
+            <DispatchContext.Provider value={dispatch}>
+                <StateContext.Provider value={state}>
+                    {children}
+                </StateContext.Provider>
+            </DispatchContext.Provider>
+          );
+    }
+    
+    
+    
+    export function useValueContext() {
+      const value = useContext(StateContext);
+    
+      if (value === null) {
+        throw new Error("Must be wrapped inside Context.Provider");
+      }
+    
+      return value;
+    }
+    
+    export function useDispatchContext() {
+        const value = useContext(DispatchContext);
+      
+        if (value === null) {
+          throw new Error("Must be wrapped inside Context.Provider");
+        }
+      
+        return value;
+      }
     `
     }
   ];
