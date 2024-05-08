@@ -36,6 +36,7 @@ import CustomHookPattern from "./custom.hooks.pattern";
 import CustomTitle from "./custom.title.component";
 import DisplayAfter from "./display.cart.app.optimize.context.api.after.component.tsx";
 import Display from "./display.cart.app.optimize.context.api.component.tsx";
+import DisplayPerformance from "./display.cart.app.optimize.context.api.performance.component.tsx";
 import ChildComponent from "./error.boundaries.child.component";
 import ErrorBoundaries from "./error.boundaries.component";
 import MasterComponent from "./error.boundaries.parent.component";
@@ -104,10 +105,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 18.16 - components > index  
+/**react-design-patterns-app - version 18.17 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ShoppingCounterAfter'
+ *     --> Importing and exporting 'DisplayPerformance'
  * 
  * Note: Pending to make responsive design
  */
@@ -216,5 +217,6 @@ export {
          Buttons,
          DisplayAfter,
          ButtonsAfter,
-         ShoppingCounterAfter
+         ShoppingCounterAfter,
+         DisplayPerformance
         }
