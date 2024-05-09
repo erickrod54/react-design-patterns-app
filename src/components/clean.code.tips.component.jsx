@@ -9,10 +9,10 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 import { ShoppingCounter, ShoppingCounterAfter } from "./index.components";
 
-/**react-design-patterns-app - version 18.17 - CleanCodeTips
+/**react-design-patterns-app - version 18.18 - CleanCodeTips
  * - Features: 
  * 
- *     --> Developing 'Improving Performance by Context Splitting' concepts
+ *     --> Adding 'cartproviderperformancecode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -35,6 +35,7 @@ const CleanCodeTips = () => {
     const optimizecontextapicode = CodeData[124].code;
     const buttonsaftercode = CodeData[125].code;
     const displayaftercode = CodeData[126].code;
+    const cartproviderperformancecode = CodeData[127].code;
     
     return(
         <div>
@@ -232,8 +233,13 @@ const CleanCodeTips = () => {
 
                 <p>
                     so by <span className="text-white font-semibold"> Improving Performance by Context Splitting </span> this technique will make context usage efficient,
-                    and very convinient to separate concern when <span className="text-white font-semibold"> scaling becomes imperative </span>, and will be as follows:     
+                    and very convinient to separate concern when <span className="text-white font-semibold"> scaling becomes imperative </span>, and will be done 
+                    by refactoring the Context focusing in performance adding a <span className="text-white font-semibold"> StateContext ( for the value/s )</span>, 
+                    <span className="text-white font-semibold"> DispatchContext ( for the action/s )</span>, and a 
+                    <span className="text-white font-semibold"> CartProviderPerformance </span> as follows:     
                 </p>
+
+                <BashCode code={cartproviderperformancecode}/> 
 
             </SectionWrapper>
 
