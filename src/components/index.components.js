@@ -17,6 +17,7 @@ import ButtonAsCleanCodeAppAfter from "./buttons.as.clean.code.tip.after.app.com
 import ButtonAsCleanCodeApp from "./buttons.as.clean.code.tip.app.component";
 import ButtonsAfter from "./buttons.cart.app.optimize.context.api.aftercomponent.tsx";
 import Buttons from "./buttons.cart.app.optimize.context.api.component.tsx";
+import ButtonsPerformance from "./buttons.cart.app.optimize.context.api.performance.component.tsx";
 import Card from "./card.component";
 import CardCompound from "./card.compound.pattern.component";
 import CleanCodeTips from "./clean.code.tips.component";
@@ -105,10 +106,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 18.17 - components > index  
+/**react-design-patterns-app - version 18.18 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'DisplayPerformance'
+ *     --> Importing and exporting 'ButtonsPerformance'
  * 
  * Note: Pending to make responsive design
  */
@@ -218,5 +219,6 @@ export {
          DisplayAfter,
          ButtonsAfter,
          ShoppingCounterAfter,
-         DisplayPerformance
+         DisplayPerformance,
+         ButtonsPerformance
         }
