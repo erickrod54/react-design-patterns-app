@@ -9,10 +9,10 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 import { ShoppingCounter, ShoppingCounterAfter } from "./index.components";
 
-/**react-design-patterns-app - version 18.16 - CleanCodeTips
+/**react-design-patterns-app - version 18.17 - CleanCodeTips
  * - Features: 
  * 
- *     --> Rendering 'ShoppingCounterAfter' Component
+ *     --> Developing 'Improving Performance by Context Splitting' concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -224,6 +224,16 @@ const CleanCodeTips = () => {
                 </p>
 
                 <ShoppingCounterAfter />
+
+                <p>
+                    and this is a good approach when it is a small application because  <span className="text-white font-semibold"> actions ( dispatch)  </span>, 
+                    and <span className="text-white font-semibold"> states ( values )</span> can be together without implications in performance
+                </p>
+
+                <p>
+                    so by <span className="text-white font-semibold"> Improving Performance by Context Splitting </span> this technique will make context usage efficient,
+                    and very convinient to separate concern when <span className="text-white font-semibold"> scaling becomes imperative </span>, and will be as follows:     
+                </p>
 
             </SectionWrapper>
 
