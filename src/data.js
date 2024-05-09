@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.17 - data js  
+/**react-design-patterns-app - version 18.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProviderPerformance' code
+ *     --> Adding 'DisplayPerformance' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3916,6 +3916,24 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       
         return value;
       }
+    `
+    },
+    {
+    id: 127,
+    name: 'CartProviderPerformance - Clean code Tips',
+    code:   
+    `
+    const DisplayPerformance = () => {
+      const  { count } = useValueContext();
+    
+      return (
+        <DisplayWrapper>
+            {count < 0 ? 0 : count}
+        </DisplayWrapper>
+      );
+    };
+    
+    export default DisplayPerformance;
     `
     }
   ];
