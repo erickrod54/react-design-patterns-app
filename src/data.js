@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 18.20 - data js  
+/**react-design-patterns-app - version 19.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProviderPerformance' second code comments
+ *     --> Adding 'CartProviderPerformance' third code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3879,6 +3879,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     /**this type of data will handle only dispatch (actions)*/
     type DispatchContext =  Dispatch<Action>;
     
+    /**context creation and verification ( for state context )*/
     export const StateContext = createContext<StateContext | null>(null);
     export const DispatchContext = createContext<DispatchContext | null>(null);
     
