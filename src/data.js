@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.03 - data js  
+/**react-design-patterns-app - version 19.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProviderPerformance' sixth code comments
+ *     --> Adding 'CartProviderPerformance' seventh code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3915,6 +3915,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       return value;
     }
     
+    /**this will be the hook that validate sub nodes and will be use for dispatch ( actions )*/
     export function useDispatchContext() {
         const value = useContext(DispatchContext);
       
