@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.01 - data js  
+/**react-design-patterns-app - version 19.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProviderPerformance' fourth code comments
+ *     --> Adding 'CartProviderPerformance' fifth code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3893,6 +3893,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
         const [state, dispatch] = useReducer(reducer, { count: 0 });
         return (
+            {/**one context will wrap the other context/s and both will wrap the 
+              children react Nodes*/}
             <DispatchContext.Provider value={dispatch}>
                 <StateContext.Provider value={state}>
                     {children}
