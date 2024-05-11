@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.05 - data js  
+/**react-design-patterns-app - version 19.06 - data js  
  * - Features: 
  *    
- *     --> Editing 'CartProviderPerformance' index
+ *     --> Editing 'DisplayPerformance' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3933,6 +3933,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     code:   
     `
     const DisplayPerformance = () => {
+
+      /**here is the refactor to pull state ( value/s ) from the context that handle it*/
       const  { count } = useValueContext();
     
       return (
