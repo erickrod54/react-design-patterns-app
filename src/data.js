@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.07 - data js  
+/**react-design-patterns-app - version 19.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonsPerformance' code 
+ *     --> Adding 'ButtonsPerformance' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3953,6 +3953,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     code:   
     `
     const ButtonsPerformance = () => {
+
+      /**here is the refactor to pull dispatch ( action/s ) from the context that handle it*/
       const dispatch = useDispatchContext();
     
       return (
