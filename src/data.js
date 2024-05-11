@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.04 - data js  
+/**react-design-patterns-app - version 19.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'CartProviderPerformance' seventh code comments
+ *     --> Editing 'CartProviderPerformance' index
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3928,7 +3928,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     `
     },
     {
-    id: 127,
+    id: 128,
     name: 'CartProviderPerformance - Clean code Tips',
     code:   
     `
