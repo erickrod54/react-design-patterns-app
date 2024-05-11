@@ -9,10 +9,10 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 import { ShoppingCounter, ShoppingCounterAfter } from "./index.components";
 
-/**react-design-patterns-app - version 19.05 - CleanCodeTips
+/**react-design-patterns-app - version 19.07 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'displayperformancecode' code
+ *     --> Adding 'ButtonsPerformance' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -37,6 +37,7 @@ const CleanCodeTips = () => {
     const displayaftercode = CodeData[126].code;
     const cartproviderperformancecode = CodeData[127].code;
     const displayperformancecode = CodeData[128].code;
+    const buttonsperformancecode = CodeData[129].code;
     
     return(
         <div>
@@ -248,6 +249,13 @@ const CleanCodeTips = () => {
                 </p>
 
                 <BashCode code={displayperformancecode}/> 
+
+                <p>
+                    and refactoring <span className="text-white font-semibold"> ButtonsPerformance  </span> to pull from the context only 
+                    <span className="text-white font-semibold"> DispatchContext  ( for the action/s ) </span>, as follows:     
+                </p>
+
+                <BashCode code={buttonsperformancecode}/> 
 
             </SectionWrapper>
 
