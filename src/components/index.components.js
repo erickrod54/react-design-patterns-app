@@ -70,6 +70,7 @@ import Reviews from "./reviews.use.transition.before.hook.component";
 import SharedLayout from "./shared.layout.component";
 import ShoppingCounterAfter from "./shopping.cart.app.optimize.context.after.api.component.tsx";
 import ShoppingCounter from "./shopping.cart.app.optimize.context.api.component.tsx";
+import ShoppingCounterPerformance from "./shopping.cart.app.optimize.context.performance.api.component.tsx";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
 import TheOutSideControlled from "./theoutside.controlled.component";
@@ -106,10 +107,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 18.18 - components > index  
+/**react-design-patterns-app - version 19.11 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ButtonsPerformance'
+ *     --> Importing and exporting 'ShoppingCounterPerformance'
  * 
  * Note: Pending to make responsive design
  */
@@ -220,5 +221,6 @@ export {
          ButtonsAfter,
          ShoppingCounterAfter,
          DisplayPerformance,
-         ButtonsPerformance
+         ButtonsPerformance,
+         ShoppingCounterPerformance
         }
