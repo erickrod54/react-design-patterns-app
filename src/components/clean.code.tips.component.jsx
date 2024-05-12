@@ -9,10 +9,10 @@ import ButtonAsCleanCodeAppAfterWrap from "./button.as.clean.code.tip.after.wrap
 import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.new.pattern.component";
 import { ShoppingCounter, ShoppingCounterAfter } from "./index.components";
 
-/**react-design-patterns-app - version 19.07 - CleanCodeTips
+/**react-design-patterns-app - version 19.09 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'ButtonsPerformance' code
+ *     --> Adding 'ShoppingCounterPerformance ' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -38,6 +38,7 @@ const CleanCodeTips = () => {
     const cartproviderperformancecode = CodeData[127].code;
     const displayperformancecode = CodeData[128].code;
     const buttonsperformancecode = CodeData[129].code;
+    const shoppingcounterperformance = CodeData[130].code;
     
     return(
         <div>
@@ -256,6 +257,14 @@ const CleanCodeTips = () => {
                 </p>
 
                 <BashCode code={buttonsperformancecode}/> 
+
+                <p>
+                    and refactoring the main component <span className="text-white font-semibold"> ButtonsPerformance  </span> to mount the 
+                    two sub components <span className="text-white font-semibold">  DisplayPerformance  </span> and 
+                    <span className="text-white font-semibold">  ButtonsPerformance   </span> , will be as follows:     
+                </p>
+
+                <BashCode code={shoppingcounterperformance}/> 
 
             </SectionWrapper>
 
