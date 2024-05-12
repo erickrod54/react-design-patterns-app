@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.09 - data js  
+/**react-design-patterns-app - version 19.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingCounterPerformance' code 
+ *     --> Adding 'ShoppingCounterPerformance' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3988,6 +3988,9 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         <CartProviderPerformance>
             <SectionItemCenterWrapper>
                 <ShoppingCounterWrapper>
+
+                {/**here is the refactor to mount the two sub 
+                  components that previously pull state and actions from their contexts*/}
                     <DisplayPerformance />
                     <ButtonsPerformance />
                 </ShoppingCounterWrapper>
