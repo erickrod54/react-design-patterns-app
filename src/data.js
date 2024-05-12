@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.08 - data js  
+/**react-design-patterns-app - version 19.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'ButtonsPerformance' code comments
+ *     --> Adding 'ShoppingCounterPerformance' code 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -3975,6 +3975,28 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     };
     
     export default ButtonsPerformance;
+    `
+    },
+    {
+    id: 130,
+    name: 'ShoppingCounterPerformance - Clean code Tips',
+    code:   
+    `
+    const ShoppingCounterPerformance = () => {
+
+      return (
+        <CartProviderPerformance>
+            <SectionItemCenterWrapper>
+                <ShoppingCounterWrapper>
+                    <DisplayPerformance />
+                    <ButtonsPerformance />
+                </ShoppingCounterWrapper>
+            </SectionItemCenterWrapper>
+        </CartProviderPerformance>
+      );
+    }
+    
+    export default ShoppingCounterPerformance;
     `
     }
   ];
