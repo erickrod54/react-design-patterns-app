@@ -10,10 +10,10 @@ import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.n
 import { ShoppingCounter, ShoppingCounterAfter, ShoppingCounterPerformance } from "./index.components";
 
 
-/**react-design-patterns-app - version 19.11 - CleanCodeTips
+/**react-design-patterns-app - version 19.13 - CleanCodeTips
  * - Features: 
  * 
- *     --> Rendering 'ShoppingCounterPerformance ' component
+ *     --> Wrapping 'ShoppingCounterPerformance' cconcepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -273,6 +273,13 @@ const CleanCodeTips = () => {
                 </p>
 
                 <ShoppingCounterPerformance />
+
+                <p>
+                    this way the main component <span className="text-white font-semibold"> ShoppingCounterPerformance   </span> 
+                     will be more performant, by inspecting in <span className="text-white font-semibold"> Chrome ${`>`} Profiler   </span>
+                     the component will re-render only the sub-components that are interacting with the user, improving highly the user
+                     experience and the app performance while it scales     
+                </p>
 
             </SectionWrapper>
 
