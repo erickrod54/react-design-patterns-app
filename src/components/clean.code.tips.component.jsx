@@ -10,10 +10,10 @@ import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.n
 import { ShoppingCounter, ShoppingCounterAfter, ShoppingCounterPerformance } from "./index.components";
 
 
-/**react-design-patterns-app - version 19.16 - CleanCodeTips
+/**react-design-patterns-app - version 19.17 - CleanCodeTips
  * - Features: 
  * 
- *     --> Developing 'Folder Arquitecture' concepts 
+ *     --> Adding 'folderstructurecode' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -40,6 +40,7 @@ const CleanCodeTips = () => {
     const displayperformancecode = CodeData[128].code;
     const buttonsperformancecode = CodeData[129].code;
     const shoppingcounterperformance = CodeData[130].code;
+    const folderstructurecode = CodeData[131].code;
     
     return(
         <div>
@@ -355,6 +356,8 @@ const CleanCodeTips = () => {
                      <span className="text-white font-semibold"> project features </span> and example 
                      can be as follows:     
                 </p>
+
+                <BashCode code={folderstructurecode}/>             
                             
             </SectionWrapper>
 
