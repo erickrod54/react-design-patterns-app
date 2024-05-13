@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.10 - data js  
+/**react-design-patterns-app - version 19.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingCounterPerformance' code comments
+ *     --> Adding 'Folder Structure' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4000,6 +4000,33 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     export default ShoppingCounterPerformance;
+    `
+    },
+    {
+    id: 131,
+    name: 'Folder Structure - Clean code Tips',
+    code:   
+    `
+    src/
+      ├── api
+      ├── assets
+      │   ├── fonts
+      │   └── images
+      ├── components
+      │   ├── common
+      │   └── transitions
+      ├── config
+      ├── constants
+      ├── context
+      ├── views
+      ├── helpers
+      ├── hooks
+      ├── intl
+      ├── layout
+      ├── services
+      ├── store
+      ├── styles
+      └── types
     `
     }
   ];
