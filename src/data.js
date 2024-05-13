@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.16 - data js  
+/**react-design-patterns-app - version 19.19 - data js  
  * - Features: 
  *    
- *     --> Adding 'Folder Structure' code
+ *     --> Adding 'API Layer and Async Operations' to 'patternCard'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -216,6 +216,12 @@ export const patternCard = [
       id:33,
       category:'React Router',
       pattern:'Advanced Routing',
+      description:''
+    },
+    {
+      id:34,
+      category:'API Layer and Async Operations',
+      pattern:'Intro',
       description:''
     },
 ]
