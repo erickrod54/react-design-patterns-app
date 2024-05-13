@@ -10,10 +10,10 @@ import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.n
 import { ShoppingCounter, ShoppingCounterAfter, ShoppingCounterPerformance } from "./index.components";
 
 
-/**react-design-patterns-app - version 19.17 - CleanCodeTips
+/**react-design-patterns-app - version 19.18 - CleanCodeTips
  * - Features: 
  * 
- *     --> Adding 'folderstructurecode' code 
+ *     --> Wrapping 'folderstructurecode' concepts 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -357,7 +357,60 @@ const CleanCodeTips = () => {
                      can be as follows:     
                 </p>
 
-                <BashCode code={folderstructurecode}/>             
+                <BashCode code={folderstructurecode}/>      
+
+                <p>
+                     explained as follows:     
+                </p>
+
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold">api:</span> Contains API layer (for handling server communication).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">assets:</span> Stores fonts and images (for styling and media).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">components:</span> Houses reusable components (for modular UI elements).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">config:</span> Stores runtime configurations (for application settings).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">constants:</span> Holds constant variables (for fixed values used across the app).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">context:</span> Manages global context state (for sharing data across components).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">views:</span> Contains root components (for rendering main views).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">helpers:</span> Holds utility functions (for reusable helper methods).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">hooks:</span> Stores custom hooks (for reusable logic).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">intl:</span> Handles internationalization (for supporting multiple languages).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">layout:</span> Provides different layouts (for structuring page views).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">services:</span> Contains business logic (for handling complex operations).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">store:</span> Manages global state (for application-wide data).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">styles:</span> Stores global styles (for defining CSS styles).
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">types:</span> Contains shared types (for defining TypeScript types).
+                    </li>
+                </ul>
+       
                             
             </SectionWrapper>
 
