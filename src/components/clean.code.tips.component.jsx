@@ -10,10 +10,10 @@ import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.n
 import { ShoppingCounter, ShoppingCounterAfter, ShoppingCounterPerformance } from "./index.components";
 
 
-/**react-design-patterns-app - version 19.15 - CleanCodeTips
+/**react-design-patterns-app - version 19.16 - CleanCodeTips
  * - Features: 
  * 
- *     --> Developing 'useEffect hook ( use cases and non-use cases)' 
+ *     --> Developing 'Folder Arquitecture' concepts 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -345,6 +345,17 @@ const CleanCodeTips = () => {
                     </li>
                 </ul>
 
+                <CustomTitleStyle>
+                    <CustomTitle  title={<p className="folder-arquitecture"><span > Folder Arquitecture  </span></p>} />
+                </CustomTitleStyle>    
+
+                <p>
+                     the <span className="text-white font-semibold"> Folder Arquitecture </span> outlines 
+                     the general structure of the application and it changes depending on the 
+                     <span className="text-white font-semibold"> project features </span> and example 
+                     can be as follows:     
+                </p>
+                            
             </SectionWrapper>
 
 
