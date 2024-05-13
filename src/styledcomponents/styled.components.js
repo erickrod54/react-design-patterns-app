@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 19.14 - styled.components
+/**react-design-patterns-app - version 19.16 - styled.components
  * - Features: 
  * 
- *     --> writting 'use-effect-use-cases' styles.	
+ *     --> writting 'folder-arquitecture' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -450,6 +450,13 @@ export const CustomTitleStyle = styled.div`
 .use-effect-use-cases{
 	span{
 			${tw`text-sky-300 underline`}
+		}
+}
+
+
+.folder-arquitecture{
+	span{
+			${tw`text-amber-200 underline`}
 		}
 }
 
