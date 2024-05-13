@@ -3,10 +3,10 @@ import { usePatternsAppContext } from "../context";
 import { Link } from "react-router-dom";
 import { IntroComponent } from "../components/index.components";
 
-/**react-design-patterns-app - version 1.14 - HomePage 
+/**react-design-patterns-app - version 19.19 - HomePage 
  * - Features: 
  * 
- *     --> Changing 'IntroComponent' import
+ *     --> Adding 'category_8' 
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -25,6 +25,7 @@ const HomePage = () =>  {
     const category_5 = patternCard[22].category;
     const category_6 = patternCard[30].category;
     const category_7 = patternCard[7].category;
+    const category_8 = patternCard[33].category;
     
     return(
         <>
@@ -179,6 +180,30 @@ const HomePage = () =>  {
             <p className="text-3xl">{category_6}</p>
             <div className="m-8 p-8 grid grid-cols-8 gap-2 max-2xl:grid-cols-4 max-sm:grid-cols-1 ">
                 {patternCard.filter((patternString) => patternString.category.includes('React Router')).map((Card) => {
+
+                    const { id, pattern } = Card
+                    return(
+                        <ul key={id}>
+                            <li className="m-2">
+                            <Link to={`${id}`}>
+                            <div className="bg-gray-400 p-4 flex
+                                     m-4
+                                     justify-center items-center
+                                     shadow-md border
+                                     border-green-500 border-6 cursor-pointer hover:scale-110 hover:rounded-lg duration-75">{pattern}</div>
+                            </Link>
+                            </li>
+                        </ul>
+                    )
+                })}
+                
+            </div>
+        </div>
+
+        <div className="m-8 p-8">
+        <p className="text-3xl">{category_8}</p>  
+            <div className="m-8 p-8 grid grid-cols-8 gap-2 max-2xl:grid-cols-4 max-sm:grid-cols-1 ">
+                {patternCard.filter((patternString) => patternString.category.includes('API Layer and Async Operations')).map((Card) => {
 
                     const { id, pattern } = Card
                     return(
