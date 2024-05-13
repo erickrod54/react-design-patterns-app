@@ -10,10 +10,10 @@ import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.n
 import { ShoppingCounter, ShoppingCounterAfter, ShoppingCounterPerformance } from "./index.components";
 
 
-/**react-design-patterns-app - version 19.14 - CleanCodeTips
+/**react-design-patterns-app - version 19.15 - CleanCodeTips
  * - Features: 
  * 
- *     --> Developing 'useEffect hook ( use cases )' concepts
+ *     --> Developing 'useEffect hook ( use cases and non-use cases)' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -293,6 +293,57 @@ const CleanCodeTips = () => {
                       that consequently comes in an unexpected behavior ( du to the side effects ), bugs and degrade of 
                       performance in the application     
                 </p>
+
+                <p>
+                    some of the <span className="text-white font-semibold"> use cases </span> can be:    
+                </p>
+
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> Dependency on External Data </span> (
+                            When the effect is <span className="text-white font-semibold"> dependent on data fetched from an external source </span>, such as 
+                            an API request. For example, triggering a <span className="text-white font-semibold"> post request when data changes. </span>)
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Managing Side Effects </span> (
+                            When the effect involves performing side effects in 
+                            <span className="text-white font-semibold"> response to changes in the application state or other events </span>
+                            This includes scenarios like displaying notifications, and <span className="text-white font-semibold"> 
+                            managing DOM manipulations. </span>
+                        )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Optimizing Performance </span> ( 
+                            In situations where using useEffect leads to optimized performance by 
+                            <span className="text-white font-semibold"> preventing unnecessary re-renders.
+                            </span> For instance, splitting actions and values into separate useEffect contexts 
+                            for <span className="text-white font-semibold"> state and dispatch, </span> ensuring 
+                            that only components dependent on <span className="text-white font-semibold"> 
+                            specific context values are re-rendered when those values change. </span>
+                         )
+                    </li>
+                </ul>
+
+                <p>
+                    some of the <span className="text-white font-semibold"> non-use cases </span> can be:    
+                </p>
+
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> User Interaction Events </span> (
+                            When the effect is solely dependent on user <span className="text-white font-semibold"> 
+                            interaction events </span> like <span className="text-white font-semibold"> clicking </span> or 
+                            <span className="text-white font-semibold"> typing. </span> It's recommended not to put such 
+                            side effects inside a useEffect.
+                         )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Overuse and Misuse</span> (
+                            multiple useEffect <span className="text-white font-semibold"> chain in depedant events </span> 
+                            can lead to over re-render and degrade of tyhe application performance 
+                         )
+                    </li>
+                </ul>
 
             </SectionWrapper>
 
