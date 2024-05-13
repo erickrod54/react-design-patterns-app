@@ -10,10 +10,10 @@ import ButtonAsCleanCodeAppAfterPattern from "./button.as.clean.code.tip.after.n
 import { ShoppingCounter, ShoppingCounterAfter, ShoppingCounterPerformance } from "./index.components";
 
 
-/**react-design-patterns-app - version 19.13 - CleanCodeTips
+/**react-design-patterns-app - version 19.14 - CleanCodeTips
  * - Features: 
  * 
- *     --> Wrapping 'ShoppingCounterPerformance' cconcepts
+ *     --> Developing 'useEffect hook ( use cases )' concepts
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -279,6 +279,19 @@ const CleanCodeTips = () => {
                      will be more performant, by inspecting in <span className="text-white font-semibold"> Chrome ${`>`} Profiler   </span>
                      the component will re-render only the sub-components that are interacting with the user, improving highly the user
                      experience and the app performance while it scales     
+                </p>
+
+                <CustomTitleStyle>
+                    <CustomTitle  title={<p className="use-effect-use-cases"><span > useEffect hook ( use cases ) </span></p>} />
+                </CustomTitleStyle>
+
+                <p>
+                     the <span className="text-white font-semibold"> useEffect hook </span> is a widely use hook, and it is
+                     important to use it in the <span className="text-white font-semibold"> right use cases </span>, this 
+                     can be the difference between a <span className="text-white font-semibold"> good pattern </span> 
+                     ( to provides performance and clean code ) and a <span className="text-white font-semibold"> bad pattern </span>
+                      that consequently comes in an unexpected behavior ( du to the side effects ), bugs and degrade of 
+                      performance in the application     
                 </p>
 
             </SectionWrapper>
