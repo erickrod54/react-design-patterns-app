@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 //import { usePatternsAppContext } from "../context";
-import { AdvancedHooks, CleanCodeTips, ContainerPattern,
+import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          ControlledUnControlledPattern,
          CustomHookPattern,
          ErrorBoundaries,
@@ -9,10 +9,10 @@ import { AdvancedHooks, CleanCodeTips, ContainerPattern,
          FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 16.16 - SinglePatternPage
+/**react-design-patterns-app - version 19.20 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'CleanCodeTips'
+ *     --> Adding 'ApiLayerAndAsync'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -70,6 +70,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 21 ) {
         return <CleanCodeTips />
+    }
+
+    if ( Number(patternId) === 34 ) {
+        return <ApiLayerAndAsync />
     }
 }
 
