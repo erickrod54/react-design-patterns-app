@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.19 - data js  
+/**react-design-patterns-app - version 19.21 - data js  
  * - Features: 
  *    
- *     --> Adding 'API Layer and Async Operations' to 'patternCard'
+ *     --> Adding 'api' code 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4033,6 +4033,34 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       ├── store
       ├── styles
       └── types
+    `
+    },
+    {
+    id: 132,
+    name: 'api - api layer and async operations',
+    code:   
+    `
+    const axiosParams = {
+      // Base URL should be set via enviroment
+  
+        baseURL:
+            process.env.NODE_ENV === "development" ? "http://localhost:3000/" : "/"
+    }
+    
+    const axiosInstance = axios.create(axiosParams);
+    
+    const api = (axios) => {
+    
+        return{
+            get: (url, config = {}) => axios.get(url,config),
+            delete: (url, config = {}) => axios.delete(url,config),
+            post: (url, config = {}) => axios.post(url,config),
+            patch: (url, config = {}) => axios.patch(url,config),
+            put: (url, config = {}) => axios.put(url,config),
+        }
+    }
+    
+    export default api(axiosInstance);
     `
     }
   ];
