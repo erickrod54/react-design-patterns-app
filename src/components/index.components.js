@@ -6,6 +6,7 @@ import AlertMessage from "./alert.message.component";
 import AlertMessageWithEventListener from "./alert.message.event.listener.portal.component";
 import AlertMessageWithPortal from "./alert.message.portal.component";
 import AlertPortal from "./alert.portal.component";
+import ApiLayerAndAsync from "./api.layer.and.async.operations.component.jsx";
 import BashCode from "./bash.higlight.component";
 import BooksUseTransitionAfter from "./book.use.transition.after.component";
 import BooksUseTransitionBefore from "./book.use.transition.component";
@@ -107,10 +108,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 19.11 - components > index  
+/**react-design-patterns-app - version 19.20 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ShoppingCounterPerformance'
+ *     --> Importing and exporting 'ApiLayerAndAsync'
  * 
  * Note: Pending to make responsive design
  */
@@ -222,5 +223,6 @@ export {
          ShoppingCounterAfter,
          DisplayPerformance,
          ButtonsPerformance,
-         ShoppingCounterPerformance
+         ShoppingCounterPerformance,
+         ApiLayerAndAsync
         }
