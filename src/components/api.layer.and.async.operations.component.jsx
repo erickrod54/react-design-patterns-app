@@ -2,11 +2,12 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 20.00 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.01 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Pulling 'apioperationslayercode' from the context 
+ *     --> Rendering 'apioperationslayercode' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -80,6 +81,13 @@ const ApiLayerAndAsync = () => {
                         <span className="text-white font-semibold"> put </span> ( Fully updates data at the specified endpoint )
                     </li>
                 </ul>
+
+                <p>
+                    so the api operations layer will be as follows ( crud operations ):
+                </p>
+
+                <BashCode code={apioperationslayercode}/>
+
             </SectionWrapper>
         </div>
 
