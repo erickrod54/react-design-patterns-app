@@ -1,17 +1,22 @@
 import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 19.23 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.00 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Developing 'Operations Layer' Layer 
+ *     --> Pulling 'apioperationslayercode' from the context 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
 const ApiLayerAndAsync = () => {
+
+    const { CodeData } = usePatternsAppContext();
+    
+    const apioperationslayercode = CodeData[132].code;
     
     return(
         <div>
