@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 20.01 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.02 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Rendering 'apioperationslayercode' code 
+ *     --> Developing 'Fetching Layer' concepts 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -87,6 +87,16 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <BashCode code={apioperationslayercode}/>
+
+                <CustomTitleStyle>
+                   <CustomTitle  title={<p className="api-fetching-layer"><span > Fetching Layer </span></p>} />
+               </CustomTitleStyle>
+
+               <p>
+                    the <span className="text-white font-semibold"> Fetching Layer </span> is going to be use for 
+                    build the urls/s and adapting them to custom cases ( this case will be base on typicode api's ), 
+                    as follows
+               </p>
 
             </SectionWrapper>
         </div>
