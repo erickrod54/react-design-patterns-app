@@ -2,10 +2,10 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 
-/**react-design-patterns-app - version 19.22 - ApiLayerAndAsync
+/**react-design-patterns-app - version 19.23 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Developing 'Steps for the API' Layer 
+ *     --> Developing 'Operations Layer' Layer 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -49,6 +49,32 @@ const ApiLayerAndAsync = () => {
                     </li>
                 </ul>
 
+               <CustomTitleStyle>
+                   <CustomTitle  title={<p className="api-operations-layer"><span > Operations Layer </span></p>} />
+               </CustomTitleStyle>
+
+               <p>
+                   this is the first layer, and will hold crud operations as <span className="text-white font-semibold"> get, delete, post, patch, put </span>.
+                   These operations correspond to the common CRUD (Create, Read, Update, Delete) actions in a RESTful API:
+               </p>
+
+               <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> get </span> ( Retrieves data from the specified endpoint )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> delete </span> ( Removes data from the specified endpoint )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> post </span> ( Sends new data to the specified endpoint )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> patch </span> ( Partially updates data at the specified endpoint. )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> put </span> ( Fully updates data at the specified endpoint )
+                    </li>
+                </ul>
             </SectionWrapper>
         </div>
 
