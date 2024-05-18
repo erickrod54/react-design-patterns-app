@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 20.03 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.04 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'fetchuserscode' code 
+ *     --> Pulling 'usersapicode' from the context 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -19,7 +19,8 @@ const ApiLayerAndAsync = () => {
     
     const apioperationslayercode = CodeData[132].code;
     const fetchuserscode = CodeData[133].code;
-    
+    const usersapicode = CodeData[134].code;
+
     return(
         <div>
             <CustomTitleStyle>
@@ -100,6 +101,7 @@ const ApiLayerAndAsync = () => {
                </p>
 
                 <BashCode code={fetchuserscode}/>
+        
 
             </SectionWrapper>
         </div>
