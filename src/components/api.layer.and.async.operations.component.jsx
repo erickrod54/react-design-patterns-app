@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 20.04 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.05 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Pulling 'usersapicode' from the context 
+ *     --> Developing 'API Render Layer' from the context 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -101,6 +101,15 @@ const ApiLayerAndAsync = () => {
                </p>
 
                 <BashCode code={fetchuserscode}/>
+
+                <CustomTitleStyle>
+                   <CustomTitle  title={<p className="api-fetching-layer"><span > API Render Layer </span></p>} />
+               </CustomTitleStyle>
+
+               <p>
+                  the render layer will be the <span className="text-white font-semibold"> Component </span> that 
+                  will receive the <span className="text-white font-semibold">fetch data </span> and render the data 
+               </p>
         
 
             </SectionWrapper>
