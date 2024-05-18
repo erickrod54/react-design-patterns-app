@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 20.02 - styled.components
+/**react-design-patterns-app - version 20.07 - styled.components
  * - Features: 
  * 
- *     --> writting 'api-fetching-layer' styles.	
+ *     --> writting 'OutsideTable' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -180,6 +180,20 @@ export const HeavyComponentWrapper = styled.div`
 
 	p{
 		${tw`text-4xl text-violet-600 italic leading-tight border-l-4 bg-rose-400 pl-2 py-1 m-2 p-2 rounded-xl h-12 w-fit`}
+	}
+`
+
+export const OutsideTable = styled.div`
+	h2{
+		${tw`text-2xl text-white italic leading-tight border-l-4 bg-yellow-400 pl-2 py-1 m-2 p-2 rounded-xl`}
+	}
+	
+	ul{
+		${tw`flex flex-row justify-center items-center m-4 p-4`}
+	}
+
+	li{
+		${tw`m-4 p-4 list-none text-white `}
 	}
 `
 
