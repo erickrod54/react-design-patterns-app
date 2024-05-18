@@ -19,7 +19,7 @@ import { AlertWrapper,
          ModalBackground,
          ModalContent,
          MultipleFormWrapper,
-         OpenModalWrapper, Panel,
+         OpenModalWrapper, OutsideTable, Panel,
          PrimaryButton,
          ReviewsContainer,
          SectionItemCenterWrapper,
@@ -28,10 +28,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 18.06 - styledcomponents > index
+/**react-design-patterns-app - version 20.07 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'SectionItemCenterWrapper' 
+ *     --> Importing and exporting 'OutsideTable' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -72,4 +72,5 @@ export { SectionWrapper,
          DisplayWrapper,
          ToolTipWrapper,
          SectionItemCenterWrapper,
+         OutsideTable,
          ShoppingCounterWrapper, MultipleFormWrapper }
