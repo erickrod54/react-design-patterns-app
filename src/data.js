@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 19.22 - data js  
+/**react-design-patterns-app - version 20.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'fetchUsers' code 
+ *     --> Adding 'UsersApi' code 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4080,6 +4080,51 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         )
     }
     `
+    },
+    {
+    id: 134,
+    name: 'UsersApi - api layer and async operations',
+    code:   
+    `
+    const useFecthUsers = () => {
+        const [ users, setUsers ] = useState([])
+    
+        const initFetchUsers = async () => {
+            const response = await fetchUsers()
+            setUsers(response.data)
+        };
+    
+        return {
+            users,
+            initFetchUsers
+        }
+    }
+    
+      const UsersApi = () => {
+          const { users, initFetchUsers } = useFecthUsers();
+      
+          useEffect(() => {
+              initFetchUsers();
+          }, []);
+      
+          return(
+              <section>
+              <button onClick={() => initFetchUsers()}>Fetch Users</button>    
+              {users.map((user) => {
+                  const { name, id, email } = user;
+                  return(
+                      <div key={id}>
+                          <p>{name}</p>
+                          <p>{email}</p>
+                      </div>
+                  )
+              })}
+              </section>
+          )
+      }
+      
+      export default UsersApi;
+      `
     }
   ];
   
