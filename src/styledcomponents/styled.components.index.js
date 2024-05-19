@@ -26,12 +26,12 @@ import { AlertWrapper,
          SectionWrapper,
          ShoppingCounterWrapper,
          SingleButtonWrapper,
-         StepFlowWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
+         StepFlowWrapper, TableTitleWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 20.07 - styledcomponents > index
+/**react-design-patterns-app - version 20.09 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'OutsideTable' 
+ *     --> Importing and exporting 'TableTitleWrapper' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -73,4 +73,5 @@ export { SectionWrapper,
          ToolTipWrapper,
          SectionItemCenterWrapper,
          OutsideTable,
+         TableTitleWrapper,
          ShoppingCounterWrapper, MultipleFormWrapper }
