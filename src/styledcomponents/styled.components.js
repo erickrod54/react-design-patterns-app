@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 20.07 - styled.components
+/**react-design-patterns-app - version 20.09 - styled.components
  * - Features: 
  * 
- *     --> writting 'OutsideTable' styles.	
+ *     --> writting 'TableTitleWrapper' first styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -184,17 +184,23 @@ export const HeavyComponentWrapper = styled.div`
 `
 
 export const OutsideTable = styled.div`
-	h2{
-		${tw`text-2xl text-white italic leading-tight border-l-4 bg-yellow-400 pl-2 py-1 m-2 p-2 rounded-xl`}
-	}
 	
 	ul{
-		${tw`flex flex-row justify-center items-center m-4 p-4`}
+		${tw`flex flex-row justify-center items-center m-4 p-4 border-4 border-slate-400`}
 	}
 
 	li{
-		${tw`m-4 p-4 list-none text-white `}
+		${tw`m-4 p-4 list-none text-white border-2`}
 	}
+`
+
+export const TableTitleWrapper = styled.div`
+	${tw`flex flex-row items-center justify-evenly`}
+
+	label{
+		${tw`text-2xl text-black italic leading-tight border-l-4 bg-yellow-400 pl-2 py-1 m-2 p-2 rounded-xl`}
+	}
+	
 `
 
 export const MultipleFormWrapper = styled.div`
