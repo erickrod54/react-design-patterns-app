@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react"
 import { fetchUsers } from "../api/api.users.before"
+import { OutsideTable } from "../styledcomponents/styled.components"
 
-/**react-design-patterns-app - version 19.22 - UsersApi
+/**react-design-patterns-app - version 20.07 - UsersApi
  * - Features: 
  * 
- *     --> Building 'UsersApi' Component 
+ *     --> Wrapping using 'OutsideTable' 
  * 
  * Note: 'UsersApi' will render the users information
  * from an API  
@@ -32,18 +33,22 @@ const UsersApi = () => {
     }, []);
 
     return(
-        <section>
+        <OutsideTable>
         <button onClick={() => initFetchUsers()}>Fetch Users</button>    
         {users.map((user) => {
             const { name, id, email } = user;
-            return(
-                <div key={id}>
-                    <p>{name}</p>
-                    <p>{email}</p>
-                </div>
+            return( 
+                <ul key={id}>
+                    <li>
+                        {name}  
+                    </li>
+                    <li>
+                        {email} 
+                    </li>
+                 </ul>
             )
         })}
-        </section>
+        </OutsideTable>
     )
 }
 
