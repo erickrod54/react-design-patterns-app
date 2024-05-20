@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react"
 import { fetchUsers } from "../api/api.users.before"
 import { ButtonGeneral, ButtonWrapper, OutsideTable, TableTitleWrapper } from "../styledcomponents/styled.components"
 
-/**react-design-patterns-app - version 20.11 - UsersApi
+/**react-design-patterns-app - version 20.12 - UsersApi
  * - Features: 
  * 
- *     --> Wrapping using 'ButtonGeneral' 
+ *     --> Building using 'CleanUpUsers' 
  * 
  * Note: 'UsersApi' will render the users information
  * from an API  
@@ -19,9 +19,14 @@ const useFecthUsers = () => {
         setUsers(response.data)
     };
 
+    const CleanUpUsers = () => {
+        return setUsers([])
+    }
+
     return {
         users,
-        initFetchUsers
+        initFetchUsers,
+        CleanUpUsers
     }
 }
 
