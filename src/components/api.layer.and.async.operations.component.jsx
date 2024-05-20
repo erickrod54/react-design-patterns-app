@@ -3,11 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
+import UsersApi from "./user.api.before.component";
 
-/**react-design-patterns-app - version 20.06 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.13 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'usersapicode' code 
+ *     --> Rendering 'UsersApi' Component 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -113,6 +114,12 @@ const ApiLayerAndAsync = () => {
                </p>
 
                 <BashCode code={usersapicode}/>
+
+                <p>
+                    after this three layers will result in:
+                </p>
+
+                <UsersApi />
 
             </SectionWrapper>
         </div>
