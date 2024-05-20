@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 20.12 - styled.components
+/**react-design-patterns-app - version 20.14 - styled.components
  * - Features: 
  * 
- *     --> re writting 'ButtonGeneral' second styles.	
+ *     --> writting 'api-states' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -496,6 +496,12 @@ export const CustomTitleStyle = styled.div`
 .api-fetching-layer{
 	span{
 			${tw`text-indigo-400 underline`}
+		}
+}
+
+.api-states{
+	span{
+			${tw`text-indigo-300 underline`}
 		}
 }
 
