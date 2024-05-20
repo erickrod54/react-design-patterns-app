@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import UsersApi from "./user.api.before.component";
 
-/**react-design-patterns-app - version 20.13 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.14 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Rendering 'UsersApi' Component 
+ *     --> Rendering 'API States' concepts 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -120,6 +120,30 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <UsersApi />
+
+                <CustomTitleStyle>
+                   <CustomTitle  title={<p className="api-states"><span > API States </span></p>} />
+               </CustomTitleStyle>
+
+                <p>
+                    now that the <span className="text-white font-semibold"> three layers </span> are built let's 
+                    handle <span className="text-white font-semibold"> API states </span>, and they can be:
+                </p>
+
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> IDDLE </span> ( waiting for action )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> PENDING </span> ( action in progress )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> SUCCESS </span> ( action completed successfully )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> ERROR </span> ( action failed )
+                    </li>
+                </ul>
 
             </SectionWrapper>
         </div>
