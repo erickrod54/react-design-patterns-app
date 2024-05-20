@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 20.09 - styled.components
+/**react-design-patterns-app - version 20.11 - styled.components
  * - Features: 
  * 
- *     --> writting 'TableTitleWrapper' first styles.	
+ *     --> re writting 'ButtonGeneral' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -131,7 +131,7 @@ export const ModalBackground = styled.div`
 export const ButtonGeneral = styled.div`
 	input,
 	button{
-		${tw`flex justify-center items-center bg-blue-300 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer`}
+		${tw`flex justify-center items-center bg-blue-300 hover:bg-blue-500 text-black font-bold py-2 px-4 rounded cursor-pointer`}
 	}
 `
 
