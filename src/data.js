@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 20.15 - data js  
+/**react-design-patterns-app - version 20.16 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'UsersApiStates - try and catch version' code 
+ *     --> Refactoring 'UsersApiStates - try and catch version' first code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4160,13 +4160,16 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'UsersApiStates - try and catch version',
     code:   
     `
+    /**these are the 'API states' */
     const ApiStatus = "IDLE" | "PENDING" | "SUCESS" | "ERROR";
 
     const useFecthUsers = () => {
         const [ users, setUsers ] = useState([])
+        /**this state will hold the API states that will mutate*/
         const [ fetchUsersStatus, setFetchUsersStatus ] = useState("IDLE")
 
         const initFetchUsers = async () => {
+          /**here the try and catch is implemented to handle the API states*/
             try {
                 setFetchUsersStatus("PENDING");
               const response = await fetchUsers();
