@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 20.16 - data js  
+/**react-design-patterns-app - version 20.17 - data js  
  * - Features: 
  *    
- *     --> Refactoring 'UsersApiStates - try and catch version' first code comments
+ *     --> Refactoring 'UsersApiStates - try and catch version' second code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4171,11 +4171,14 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         const initFetchUsers = async () => {
           /**here the try and catch is implemented to handle the API states*/
             try {
-                setFetchUsersStatus("PENDING");
+              /*"PENDING" until the response is get*/
+              setFetchUsersStatus("PENDING");
               const response = await fetchUsers();
+              /*"SUCESS" once the response is get*/
               setFetchUsersStatus("SUCESS");
               setUsers(response.data); 
             } catch (err) {
+              /*"ERROR" if the response is not received*/
                 setFetchUsersStatus("ERROR")
             }
         };
@@ -4205,6 +4208,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
               <ButtonWrapper>
                     <ButtonGeneral>
                         <button onClick={() => initFetchUsers()}
+                            {/*'fetchUsersStatus' switch on "PENDING"*/}
                             >{fetchUsersStatus === "PENDING" ? "Loading..." : "Fetch Users"}
                         </button>    
                     </ButtonGeneral>
