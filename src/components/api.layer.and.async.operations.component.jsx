@@ -4,11 +4,12 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import UsersApi from "./user.api.before.component";
+import UsersApiStates from "./user.api.handling.states.component";
 
-/**react-design-patterns-app - version 20.14 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.17 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Rendering 'API States' concepts 
+ *     --> Adding 'UsersApiStates - try and catch version' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -21,6 +22,7 @@ const ApiLayerAndAsync = () => {
     const apioperationslayercode = CodeData[132].code;
     const fetchuserscode = CodeData[133].code;
     const usersapicode = CodeData[134].code;
+    const usersapistatescode = CodeData[135].code;
 
     return(
         <div>
@@ -144,6 +146,13 @@ const ApiLayerAndAsync = () => {
                         <span className="text-white font-semibold"> ERROR </span> ( action failed )
                     </li>
                 </ul>
+
+                <p>
+                    the first approach can be by defining this <span className="text-white font-semibold"> API states </span>
+                    and handling by using <span className="text-white font-semibold"> try-catch </span> statements, as follows: 
+                </p>
+
+                <BashCode code={usersapistatescode}/>
 
             </SectionWrapper>
         </div>
