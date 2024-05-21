@@ -102,6 +102,7 @@ import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdCleanAfterTwoOrMoreInputs from "./useid.two.or.more.clean.code.inputs.after.component";
 import UseIdAfterTwoOrMoreInputs from "./useid.two.or.more.inputs.after.component";
 import UsersApi from "./user.api.before.component.jsx";
+import UsersApiStates from "./user.api.handling.states.component.jsx";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
@@ -109,10 +110,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 19.22 - components > index  
+/**react-design-patterns-app - version 20.17 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UsersApi'
+ *     --> Importing and exporting 'UsersApiStates'
  * 
  * Note: Pending to make responsive design
  */
@@ -226,5 +227,6 @@ export {
          ButtonsPerformance,
          ShoppingCounterPerformance,
          ApiLayerAndAsync,
-         UsersApi
+         UsersApi,
+         UsersApiStates
         }
