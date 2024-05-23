@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react"
 import { fetchUsers } from "../api/api.users.before"
 import { ButtonGeneral, ButtonWrapper, OutsideTable, TableTitleWrapper } from "../styledcomponents/styled.components"
 
-/**react-design-patterns-app - version 20.15 - UsersApiStates
+/**react-design-patterns-app - version 20.18 - UsersApiStates
  * - Features: 
  * 
- *     --> Building 'UsersApiStates' 
+ *     --> Adding logs at fetch-users 'try-catch' flow 
  * 
  * Note: 'UsersApi' will render the users information
  * from an API  
@@ -19,12 +19,15 @@ const useFecthUsers = () => {
 
     const initFetchUsers = async () => {
         try {
-            setFetchUsersStatus("PENDING");
+           setFetchUsersStatus("PENDING");
+           console.log("resulting state => PENDING")
            const response = await fetchUsers();
            setFetchUsersStatus("SUCESS");
+           console.log("resulting state => SUCESS")
            setUsers(response.data); 
         } catch (err) {
             setFetchUsersStatus("ERROR")
+            console.log("resulting state => ERROR")
         }
     };
 
