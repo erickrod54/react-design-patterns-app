@@ -5,11 +5,12 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
+import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 
-/**react-design-patterns-app - version 20.17 - ApiLayerAndAsync
+/**react-design-patterns-app - version 20.18 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'UsersApiStates - try and catch version' code
+ *     --> Adding 'usersapistateshelperscode'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -23,6 +24,7 @@ const ApiLayerAndAsync = () => {
     const fetchuserscode = CodeData[133].code;
     const usersapicode = CodeData[134].code;
     const usersapistatescode = CodeData[135].code;
+    const usersapistateshelperscode = CodeData[136].code;
 
     return(
         <div>
@@ -153,6 +155,24 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <BashCode code={usersapistatescode}/>
+
+                <p>
+                    resulting in:
+                </p>
+
+                <UsersApiStates />
+
+                <p>
+                    by inspecting the java console can be seen how the states are being displayed.
+                </p>
+
+                <p>
+                    the second approach can be by using a <span className="text-white font-semibold"> helper function </span>
+                    to handle the states change, response and the <span className="text-white font-semibold"> try-catch </span> 
+                    statements, as follows: 
+                </p>
+                
+                <BashCode code={usersapistateshelperscode}/>
 
             </SectionWrapper>
         </div>
