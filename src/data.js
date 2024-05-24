@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 20.18 - data js  
+/**react-design-patterns-app - version 20.19 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiStatesHelper' code
+ *     --> Adding 'UsersApiStatesHelper' first comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4254,8 +4254,12 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         const initFetchUsers = async () => {
             setFetchUsersStatus("PENDING");
             console.log("resulting state => PENDING")
+
+            /** here the 'withAsync' helper function is implemented */
             const { response, error } = await withAsync(() => fetchUsers())
 
+            /** try and catch is substituted by if statements, because outputs
+             * comes from 'withAsync'*/
             if (error) {
 
                 setFetchUsersStatus("ERROR")
