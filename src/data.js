@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 20.19 - data js  
+/**react-design-patterns-app - version 20.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiStatesHelper' first comments
+ *     --> Adding 'withAsync(fn)' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4328,6 +4328,33 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     }
 
     export default UsersApiStatesHelper;
+      `
+    },
+    {
+    id: 137,
+    name: 'withAsync(fn) - helper function version',
+    code:   
+    `
+    export async function withAsync(fn) {
+
+          try {
+              if (typeof fn !== "function") {
+                  throw new Error("The arg. must be a function")
+              }
+      
+              const { data } = await fn()
+      
+              return{
+                  response: data,
+                  error: null,
+              }
+          } catch (error) {
+              return{
+                  error,
+                  response: null,
+              }
+          }
+      }
       `
     }
   ];
