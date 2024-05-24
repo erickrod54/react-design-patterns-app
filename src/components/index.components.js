@@ -102,6 +102,7 @@ import UseIdAfterMultipleInputs from "./useid.multiple.inputs.after.component";
 import UseIdCleanAfterTwoOrMoreInputs from "./useid.two.or.more.clean.code.inputs.after.component";
 import UseIdAfterTwoOrMoreInputs from "./useid.two.or.more.inputs.after.component";
 import UsersApi from "./user.api.before.component.jsx";
+import UsersApiStatesConstants from "./user.api.handling.constant.states.component.jsx";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component.jsx";
 import UsersApiStates from "./user.api.handling.states.component.jsx";
 import UserInfo from "./user.info.component";
@@ -111,10 +112,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 20.18 - components > index  
+/**react-design-patterns-app - version 20.20 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UsersApiStatesHelper'
+ *     --> Importing and exporting 'UsersApiStatesConstants'
  * 
  * Note: Pending to make responsive design
  */
@@ -230,5 +231,6 @@ export {
          ApiLayerAndAsync,
          UsersApi,
          UsersApiStates,
-         UsersApiStatesHelper
+         UsersApiStatesHelper,
+         UsersApiStatesConstants
         }
