@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.00 - data js  
+/**react-design-patterns-app - version 21.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'withAsync(fn)' code comments
+ *     --> Adding 'constants' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4338,7 +4338,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     /** 'withAsync(fn)' will verify that a function is received, will handle
      * with a try and catch the 'response' or the 'error' serving the 
      * outputs to be used in the 'fetchUsers()'*/
-    
+
     export async function withAsync(fn) {
 
           try {
@@ -4359,6 +4359,20 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
               }
           }
       }
+      `
+    },
+    {
+    id: 138,
+    name: 'constants - helper function version',
+    code:   
+    `
+    /** the constants are define and can be easily change and modify 
+     * to the use cases*/
+
+      export const IDLE = "IDLE";
+      export const PENDING = "PENDING";
+      export const SUCESS = "SUCESS";
+      export const ERROR = "ERROR";
       `
     }
   ];
