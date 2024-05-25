@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 20.20 - data js  
+/**react-design-patterns-app - version 21.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'withAsync(fn)' code
+ *     --> Adding 'withAsync(fn)' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4335,6 +4335,10 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'withAsync(fn) - helper function version',
     code:   
     `
+    /** 'withAsync(fn)' will verify that a function is received, will handle
+     * with a try and catch the 'response' or the 'error' serving the 
+     * outputs to be used in the 'fetchUsers()'*/
+    
     export async function withAsync(fn) {
 
           try {
