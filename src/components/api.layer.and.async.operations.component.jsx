@@ -7,10 +7,10 @@ import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 
-/**react-design-patterns-app - version 21.00 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.01 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Rendering 'UsersApiStatesHelper' code
+ *     --> Adding 'constantscode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -26,6 +26,7 @@ const ApiLayerAndAsync = () => {
     const usersapistatescode = CodeData[135].code;
     const usersapistateshelperscode = CodeData[136].code;
     const withasynccode = CodeData[137].code;
+    const constantscode = CodeData[138].code;
 
     return(
         <div>
@@ -188,6 +189,14 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <UsersApiStatesHelper />
+
+                <p>
+                    And the <span className="text-white font-semibold"> status </span> handling can be done in 
+                    a more efficient manner by making a different file and defining the constants, as follows: 
+                </p>
+
+                <BashCode code={constantscode}/>
+
 
             </SectionWrapper>
         </div>
