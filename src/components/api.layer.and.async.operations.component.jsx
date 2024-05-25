@@ -7,10 +7,10 @@ import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 
-/**react-design-patterns-app - version 20.20 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.00 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'withasynccode' code
+ *     --> Rendering 'UsersApiStatesHelper' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -181,6 +181,13 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <BashCode code={withasynccode}/>
+
+                <p>
+                    And the <span className="text-white font-semibold"> UsersApiStatesHelper </span> will be as 
+                    follows: 
+                </p>
+
+                <UsersApiStatesHelper />
 
             </SectionWrapper>
         </div>
