@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.01 - data js  
+/**react-design-patterns-app - version 21.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'constants' code
+ *     --> Adding 'UsersApiStatesConstants' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4373,6 +4373,93 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       export const PENDING = "PENDING";
       export const SUCESS = "SUCESS";
       export const ERROR = "ERROR";
+      `
+    },
+    {
+    id: 139,
+    name: 'UsersApiStatesConstants - helper function version',
+    code:   
+    `
+    /** the constants will be imported as follows */
+    import { ERROR, PENDING, SUCESS } from "../constants/api.status";
+
+      const useFecthUsers = () => {
+          const [ users, setUsers ] = useState([])
+          const [ fetchUsersStatus, setFetchUsersStatus ] = useState("IDLE")
+      
+          const initFetchUsers = async () => {
+              setFetchUsersStatus(PENDING);
+              console.log("resulting state ==> ", PENDING)
+              const { response, error } = await withAsync(() => fetchUsers())
+      
+              if (error) {
+      
+                  setFetchUsersStatus(ERROR)
+                  console.log("resulting state => ", ERROR)
+      
+              }else if (response) {
+      
+                  setFetchUsersStatus(SUCESS);
+                  console.log("resulting state => ", SUCESS)
+                  setUsers(response); 
+                  
+              }
+          };
+      
+          const CleanUpUsers = () => {
+              return setUsers([])
+          }
+      
+          return {
+              users,
+              fetchUsersStatus,
+              initFetchUsers,
+              CleanUpUsers
+          }
+      }
+      
+      
+      const UsersApiStatesConstants = () => {
+          const { users, fetchUsersStatus, initFetchUsers, CleanUpUsers } = useFecthUsers();
+      
+          useEffect(() => {
+              initFetchUsers();
+          }, []);
+      
+          return(
+              <OutsideTable>
+                <ButtonWrapper>
+                      <ButtonGeneral>
+                          <button onClick={() => initFetchUsers()}
+                              >{fetchUsersStatus === PENDING ? "Loading..." : "Fetch Users"}
+                          </button>    
+                      </ButtonGeneral>
+                      <ButtonGeneral>
+                          <button onClick={() => CleanUpUsers()}>Clean Up Users</button>    
+                      </ButtonGeneral>
+                  </ButtonWrapper> 
+              <TableTitleWrapper>
+                  <label>name:</label>
+                  <label>email:</label>
+              </TableTitleWrapper>
+              {users.map((user) => {
+                  const { name, id, email } = user;
+                  return( 
+                      <ul key={id}>
+                          <li>
+                              {name}  
+                          </li>
+                          <li>
+                              {email} 
+                          </li>
+                      </ul>
+                  )
+              })}
+              </OutsideTable>
+          )
+      }
+      
+      export default UsersApiStatesConstants;
       `
     }
   ];
