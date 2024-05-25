@@ -7,10 +7,10 @@ import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 
-/**react-design-patterns-app - version 21.01 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.02 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'constantscode' code
+ *     --> Adding 'usersapistatesconstantscode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -27,6 +27,8 @@ const ApiLayerAndAsync = () => {
     const usersapistateshelperscode = CodeData[136].code;
     const withasynccode = CodeData[137].code;
     const constantscode = CodeData[138].code;
+    const usersapistatesconstantscode = CodeData[139].code;
+
 
     return(
         <div>
@@ -196,6 +198,14 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <BashCode code={constantscode}/>
+                
+                <p>
+                    And the refactoring in the main component will be by 
+                    <span className="text-white font-semibold"> importing and replacing </span> the
+                    strings for the constants in each place: 
+                </p>
+
+                <BashCode code={usersapistatesconstantscode}/>
 
 
             </SectionWrapper>
