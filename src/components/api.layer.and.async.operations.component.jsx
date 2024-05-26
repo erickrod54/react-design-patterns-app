@@ -6,11 +6,12 @@ import BashCode from "./bash.higlight.component";
 import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
+import UsersApiStatesConstants from "./user.api.handling.constant.states.component";
 
-/**react-design-patterns-app - version 21.02 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.03 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'usersapistatesconstantscode' code
+ *     --> Rendering 'UsersApiStatesConstants'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -206,6 +207,12 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <BashCode code={usersapistatesconstantscode}/>
+
+                <p>
+                    resulting in:
+                </p>
+
+                <UsersApiStatesConstants />
 
 
             </SectionWrapper>
