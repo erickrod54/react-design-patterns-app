@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.03 - data js  
+/**react-design-patterns-app - version 21.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiStatesConstants' comments
+ *     --> Adding 'apiStatus' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4462,6 +4462,26 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
       }
       
       export default UsersApiStatesConstants;
+      `
+    },
+    {
+    id: 140,
+    name: 'apiStatus - helper function version',
+    code:   
+    `
+    /** the constants will be imported as follows */
+    export const IDLE = "IDLE";
+    export const PENDING = "PENDING";
+    export const SUCESS = "SUCESS";
+    export const ERROR = "ERROR";
+
+    /**from the previous individual states to  'apiStatus' */
+    export const apiStatus = {
+        IDLE,
+        PENDING,
+        SUCESS,
+        ERROR
+    }
       `
     }
   ];
