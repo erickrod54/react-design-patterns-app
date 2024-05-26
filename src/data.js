@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.02 - data js  
+/**react-design-patterns-app - version 21.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiStatesConstants' code
+ *     --> Adding 'UsersApiStatesConstants' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4388,6 +4388,8 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
           const [ fetchUsersStatus, setFetchUsersStatus ] = useState("IDLE")
       
           const initFetchUsers = async () => {
+              
+              /** the constants will replace each string in the flow */
               setFetchUsersStatus(PENDING);
               console.log("resulting state ==> ", PENDING)
               const { response, error } = await withAsync(() => fetchUsers())
