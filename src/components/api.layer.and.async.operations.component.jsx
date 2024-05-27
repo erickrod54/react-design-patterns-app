@@ -7,11 +7,13 @@ import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 import UsersApiStatesConstants from "./user.api.handling.constant.states.component";
+import { UsersApiStatesObject } from "./index.components";
 
-/**react-design-patterns-app - version 21.05 - ApiLayerAndAsync
+
+/**react-design-patterns-app - version 21.06 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'apistatusobjectcode'
+ *     --> Adding 'UsersApiStatesObject'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -230,6 +232,19 @@ const ApiLayerAndAsync = () => {
 
                 <BashCode code={apistatusobjectcode}/>
 
+                <p>
+                    resulting <span className="text-white font-semibold"> UsersApiStatesObject </span> 
+                    as follows:
+                </p>
+
+                <UsersApiStatesObject />
+
+                <p>
+                    and this component gets now optimized by <span className="text-white font-semibold"> apiStatus </span> 
+                    object that will be in a <span className="text-white font-semibold">  constants directory </span>,
+                    and the Component <span className="text-white font-semibold"> UsersApiStatesObject </span> will 
+                    consume data from that directory
+                </p>
 
             </SectionWrapper>
         </div>
