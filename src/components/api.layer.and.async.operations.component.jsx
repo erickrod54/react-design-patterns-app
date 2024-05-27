@@ -7,13 +7,14 @@ import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 import UsersApiStatesConstants from "./user.api.handling.constant.states.component";
-import { UsersApiStatesObject } from "./index.components";
+import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.components";
 
 
-/**react-design-patterns-app - version 21.06 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.07 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'UsersApiStatesObject'
+ *     --> Adding 'apiStatus' variation with verification 
+ *         using hook
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -244,6 +245,11 @@ const ApiLayerAndAsync = () => {
                     object that will be in a <span className="text-white font-semibold">  constants directory </span>,
                     and the Component <span className="text-white font-semibold"> UsersApiStatesObject </span> will 
                     consume data from that directory
+                </p>
+
+                <p>
+                    A variation of the verification status <span className="text-white font-semibold"> apiStatus </span> can
+                    br done as follows:
                 </p>
 
             </SectionWrapper>
