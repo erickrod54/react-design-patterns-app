@@ -10,11 +10,10 @@ import UsersApiStatesConstants from "./user.api.handling.constant.states.compone
 import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.components";
 
 
-/**react-design-patterns-app - version 21.07 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.08 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'apiStatus' variation with verification 
- *         using hook
+ *     --> Adding 'apistatushookAndobjectcode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -34,6 +33,7 @@ const ApiLayerAndAsync = () => {
     const usersapistatesconstantscode = CodeData[139].code;
     const defaultapistatuscode = CodeData[140].code;
     const apistatusobjectcode = CodeData[141].code;
+    const apistatushookAndobjectcode = CodeData[142].code;
 
     return(
         <div>
@@ -249,8 +249,10 @@ const ApiLayerAndAsync = () => {
 
                 <p>
                     A variation of the verification status <span className="text-white font-semibold"> apiStatus </span> can
-                    br done as follows:
+                    be done by using a <span className="text-white font-semibold"> hook </span> that will be in as follows:
                 </p>
+
+                <BashCode code={apistatushookAndobjectcode}/>
 
             </SectionWrapper>
         </div>
