@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.08 - UsersApiStatesHooksAndObject  
+/**react-design-patterns-app - version 21.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'apistatushookAndobjectcode' code
+ *     --> Adding 'apistatushookAndobjectcode' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4574,18 +4574,27 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'UsersApiStatesHooksAndObject - constant object version',
     code:   
     `
+  /**Error => error  will be Error => isError*/  
   const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
   
+  /**here will be calculated the current status */
   const prepareStatuses =  ( currentStatus ) => {
       const statuses = {};
       for ( const status of defaultApiStatuses ) {
+          /**this line creates the state as this shape Error */
           const normalizedStatus = capitalize(status.toLowerCase());
+           /**the line below creates the state as this shape isError */
           const normalizedStatusKey = \`is\${normalizedStatus}\`;
+          /**this line compares to get the resulting status */
           statuses[normalizedStatusKey] = status === currentStatus;
       }
       return statuses;
   }
   
+  /**then the calculation get memoized, so the calculation does not 
+ * afect the app performance */
+
+/**i define 'IDLE'  as a constant initial param*/
   export const useApiStatus = (currentStatus = IDLE ) => {
       const [ status, setStatus ] = useState(currentStatus);
       const statuses = useMemo(() => prepareStatuses(status), [status])
