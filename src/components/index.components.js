@@ -59,6 +59,7 @@ import IntroComponent from "./intro.component";
 import Counter from "./keys.counter.component";
 import KeysExercise from "./keys.exersice.component";
 import LayoutComponentPattern from "./layout.pattern.component";
+import LazyLoader from "./lazy.loader.component.jsx";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
 import ParentComponent from "./parent.observer.pattern.component";
@@ -114,10 +115,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 21.07 - components > index  
+/**react-design-patterns-app - version 21.12 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UsersApiStatesHookAndObject'
+ *     --> Importing and exporting 'LazyLoader'
  * 
  * Note: Pending to make responsive design
  */
@@ -236,5 +237,6 @@ export {
          UsersApiStatesHelper,
          UsersApiStatesConstants,
          UsersApiStatesObject,
-         UsersApiStatesHookAndObject
+         UsersApiStatesHookAndObject,
+         LazyLoader
         }
