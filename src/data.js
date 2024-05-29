@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.10 - data js  
+/**react-design-patterns-app - version 21.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiStatesHookAndObject' code 
+ *     --> Adding 'UsersApiStatesHookAndObject' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4615,6 +4615,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     const useFetchUsers = () => {
         const [ users, setUsers ] = useState([])
         
+        /**here the 'useApiStatus' is implemented */
         const {
             status: fetchUsersStatus,
             setStatus: setFetchUsersStatus,
@@ -4646,7 +4647,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         const CleanUpUsers = () => {
             return setUsers([])
         }
-    
+        /** the statuses once consumed they are used whereever is needed*/
         return {
             users,
             isFetchUsersStatusIdle,
@@ -4658,7 +4659,7 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
         }
     }
     
-    
+
     const UsersApiStatesHookAndObject = () => {
         const { users,
                 initFetchUsers,
