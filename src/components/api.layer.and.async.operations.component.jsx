@@ -10,10 +10,10 @@ import UsersApiStatesConstants from "./user.api.handling.constant.states.compone
 import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.components";
 
 
-/**react-design-patterns-app - version 21.10 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.11 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adding 'statushookAndobjectcomponentcode' code
+ *     --> Rendering 'UsersApiStatesHookAndObject' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -262,6 +262,12 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <BashCode code={statushookAndobjectcomponentcode}/>
+
+                <p>
+                    resulting in:
+                </p>
+
+                <UsersApiStatesHookAndObject />
 
             </SectionWrapper>
         </div>
