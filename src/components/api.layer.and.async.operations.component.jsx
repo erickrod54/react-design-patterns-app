@@ -11,11 +11,10 @@ import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.compo
 import UsersApiLazyLoaderHookAndObject from "./user.api.lazyloader.hook.and.object.component";
 
 
-/**react-design-patterns-app - version 21.12 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.14 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Starting 'UsersApiStatesHookAndObject' with LazyLoader 
- *         variant 
+ *     --> Adding 'lazyLoaderhookAndobjectcomponentcode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -37,6 +36,7 @@ const ApiLayerAndAsync = () => {
     const apistatusobjectcode = CodeData[141].code;
     const apistatushookAndobjectcode = CodeData[142].code;
     const statushookAndobjectcomponentcode = CodeData[143].code;
+    const lazyLoaderhookAndobjectcomponentcode = CodeData[144].code;
 
     return(
         <div>
@@ -275,6 +275,8 @@ const ApiLayerAndAsync = () => {
                     with a custom <span className="text-white font-semibold"> LazyLoader Component </span> that will
                     improve the Component performance will be as follows first with the loader:
                 </p>
+
+                <BashCode code={lazyLoaderhookAndobjectcomponentcode}/>
 
             </SectionWrapper>
         </div>
