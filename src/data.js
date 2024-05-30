@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.15 - data js  
+/**react-design-patterns-app - version 21.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiLazyLoaderHookAndObject' code
+ *     --> Adding 'UsersApiLazyLoaderHookAndObject' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4755,7 +4755,7 @@ const LazyLoader = (props) => {
       `
     },
     {
-    id: 144,
+    id: 145,
     name: 'UsersApiLazyLoaderHookAndObject - constant object version',
     code:   
     `
