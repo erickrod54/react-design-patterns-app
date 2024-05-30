@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.13 - data js  
+/**react-design-patterns-app - version 21.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyLoader' code 
+ *     --> Adding 'LazyLoader' code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4714,34 +4714,43 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     name: 'LazyLoader - constant object version',
     code:   
     `
-    const LazyLoader = ( props ) => {  
-      const { show = false, delay = 0 } = props;
-      const [ showLoader, setShowLoader ] = useState(false);
-  
-      useEffect(() => {
-          let timeout;
-  
-          if (!show) {
-              setShowLoader(false);
-              return;
-          }
-  
-          if (delay === 0) {
-              setShowLoader(true);
-              return;   
-          }else{
-              timeout = setTimeout(() => setShowLoader(true), delay)
-          }
-  
-          return () => {
-              clearInterval(timeout)
-          }
-      }, [show, delay])
-  
-      return showLoader ? "Loading..." : props.default;
-  
+    // LazyLoader component definition
+const LazyLoader = (props) => {  
+    // Destructure show and delay from props, with default values
+    const { show = false, delay = 0 } = props;
+    // State to manage whether the loader should be shown
+    const [showLoader, setShowLoader] = useState(false);
+
+    // useEffect to handle the show and delay logic
+    useEffect(() => {
+        let timeout;
+
+        // If show is false, hide the loader immediately
+        if (!show) {
+            setShowLoader(false);
+            return;
+        }
+
+        // If delay is 0, show the loader immediately
+        if (delay === 0) {
+            setShowLoader(true);
+            return;   
+        } else {
+            // Otherwise, set a timeout to show the loader after the specified delay
+            timeout = setTimeout(() => setShowLoader(true), delay);
+        }
+
+        // Cleanup function to clear the timeout
+        return () => {
+            clearInterval(timeout);
+        }
+    }, [show, delay]); // Dependencies for useEffect
+
+    // Return "Loading..." if showLoader is true, otherwise return the default content
+    return showLoader ? "Loading..." : props.default;
     }
-    
+
+    // Export the LazyLoader component as the default export
     export default LazyLoader;
       `
     }
