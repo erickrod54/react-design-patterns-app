@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.11 - data js  
+/**react-design-patterns-app - version 21.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiStatesHookAndObject' code comments
+ *     --> Adding 'LazyLoader' code 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4708,8 +4708,45 @@ const toCapital = str => str.charAt(0).toUpperCase() + str.slice(1);
     
      export default UsersApiStatesHookAndObject;
       `
+    },
+    {
+    id: 144,
+    name: 'LazyLoader - constant object version',
+    code:   
+    `
+    const LazyLoader = ( props ) => {  
+      const { show = false, delay = 0 } = props;
+      const [ showLoader, setShowLoader ] = useState(false);
+  
+      useEffect(() => {
+          let timeout;
+  
+          if (!show) {
+              setShowLoader(false);
+              return;
+          }
+  
+          if (delay === 0) {
+              setShowLoader(true);
+              return;   
+          }else{
+              timeout = setTimeout(() => setShowLoader(true), delay)
+          }
+  
+          return () => {
+              clearInterval(timeout)
+          }
+      }, [show, delay])
+  
+      return showLoader ? "Loading..." : props.default;
+  
+    }
+    
+    export default LazyLoader;
+      `
     }
   ];
+
 
   /**List Pattern data  -- start */
   
