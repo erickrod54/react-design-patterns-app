@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react"
 import { fetchUsers } from "../api/api.users.before"
 import { ButtonGeneral, ButtonWrapper, OutsideTable, TableTitleWrapper } from "../styledcomponents/styled.components"
 import { withAsync } from "../helpers/with.async";
-import { ERROR, PENDING, SUCESS } from "../constants/api.status";
+import { ERROR, PENDING, SUCCESS } from "../constants/api.status";
 
-/**react-design-patterns-app - version 20.19 - UsersApiStatesConstants
+/**react-design-patterns-app - version 21.19 - UsersApiStatesConstants
  * - Features: 
  * 
- *     --> Building 'UsersApiStatesConstants' 
+ *     --> Fixing 'SUCCESS' typo in 'useFetchUsers' hook 
  * 
  * Note: this component will use a helper function
 */
@@ -28,8 +28,8 @@ const useFecthUsers = () => {
 
         }else if (response) {
 
-            setFetchUsersStatus(SUCESS);
-            console.log("resulting state => ", SUCESS)
+            setFetchUsersStatus(SUCCESS);
+            console.log("resulting state => ", SUCCESS)
             setUsers(response); 
             
         }
