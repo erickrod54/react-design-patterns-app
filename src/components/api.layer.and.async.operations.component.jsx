@@ -11,10 +11,10 @@ import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.compo
 import { UsersApiLazyLoaderHookAndObject } from "./index.components";
 
 
-/**react-design-patterns-app - version 21.16 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.18 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Rendring 'UsersApiLazyLoaderHookAndObject' code
+ *     --> Developing 'Api Layer Logic Abstraction' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -293,6 +293,39 @@ const ApiLayerAndAsync = () => {
                 </p>
                 
                 <UsersApiLazyLoaderHookAndObject />
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="api-abstraction-logic"><span > Api Layer Logic Abstraction </span></p>} />
+            </CustomTitleStyle>
+
+                <p>
+                    the main idea of having an <span className="text-white font-semibold"> API Layer </span>,
+                    between <span className="text-white font-semibold"> back-end server </span> and 
+                    <span className="text-white font-semibold"> front-end components </span> is in order 
+                    to provide <span className="text-white font-semibold"> separation of concerns, 
+                    flexible, scalable and readable app arquitecture </span> that will show how components 
+                    <span className="text-white font-semibold"> consume </span> and are being 
+                    <span className="text-white font-semibold"> provide </span> of resources
+                </p>
+
+                <p>
+                    there are <span className="text-white font-semibold"> three main goals </span> that will
+                    be reach by this implementation, as follows:
+                </p>
+
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> Cleaner and more maintainable code </span> 
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Improved reusability across components by providing a 
+                        consistent interface for API interactions </span>
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Base code for future enhancements </span> ( such as caching, 
+                        infinite scrolling, or pagination with minimal changes )
+                    </li>
+                </ul>
 
             </SectionWrapper>
         </div>
