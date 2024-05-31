@@ -11,10 +11,10 @@ import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.compo
 import { UsersApiLazyLoaderHookAndObject } from "./index.components";
 
 
-/**react-design-patterns-app - version 21.18 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.19 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Developing 'Api Layer Logic Abstraction' 
+ *     --> Adiing constantscode to 'Api Layer Logic Abstraction' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -326,6 +326,13 @@ const ApiLayerAndAsync = () => {
                         infinite scrolling, or pagination with minimal changes )
                     </li>
                 </ul>
+
+                <p>
+                    the first step is to <span className="text-white font-semibold"> abstract the API logic </span>
+                    will be by using a data structure and logic previously built to handle data, and will the following:
+                </p>
+
+                <BashCode code={constantscode}/>
 
             </SectionWrapper>
         </div>
