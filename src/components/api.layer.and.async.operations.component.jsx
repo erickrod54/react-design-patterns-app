@@ -8,13 +8,15 @@ import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 import UsersApiStatesConstants from "./user.api.handling.constant.states.component";
 import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.components";
-import UsersApiLazyLoaderHookAndObject from "./user.api.lazyloader.hook.and.object.component";
+import UsersApiLazyLoaderHookAndObject from "./index.components";
 
 
-/**react-design-patterns-app - version 21.14 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.15 - ApiLayerAndAsync
  * - Features: 
  * 
  *     --> Adding 'lazyLoaderhookAndobjectcomponentcode' code
+ * 
+ *    --> Adding 'lazyLoadercode' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -36,7 +38,8 @@ const ApiLayerAndAsync = () => {
     const apistatusobjectcode = CodeData[141].code;
     const apistatushookAndobjectcode = CodeData[142].code;
     const statushookAndobjectcomponentcode = CodeData[143].code;
-    const lazyLoaderhookAndobjectcomponentcode = CodeData[144].code;
+    const lazyLoadercode = CodeData[144].code;
+    const lazyLoaderhookAndobjectcomponentcode = CodeData[145].code;
 
     return(
         <div>
@@ -276,7 +279,15 @@ const ApiLayerAndAsync = () => {
                     improve the Component performance will be as follows first with the loader:
                 </p>
 
+                <BashCode code={lazyLoadercode}/>
+
+                <p>
+                    and the variant will be implemented in the <span className="text-white font-semibold"> UsersApiLazyLoaderHookAndObject </span>
+                    as follows:
+                </p>
+
                 <BashCode code={lazyLoaderhookAndobjectcomponentcode}/>
+                
 
             </SectionWrapper>
         </div>
