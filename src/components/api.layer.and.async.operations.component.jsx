@@ -11,7 +11,7 @@ import { UsersApiHookLogicAndDataAbs, UsersApiStatesHookAndObject, UsersApiState
 import { UsersApiLazyLoaderHookAndObject } from "./index.components";
 
 
-/**react-design-patterns-app - version 21.20 - ApiLayerAndAsync
+/**react-design-patterns-app - version 22.00 - ApiLayerAndAsync
  * - Features: 
  * 
  *     --> Adiing 'useApitohandledataandlogic' code 
@@ -39,6 +39,7 @@ const ApiLayerAndAsync = () => {
     const lazyLoadercode = CodeData[144].code;
     const lazyLoaderhookAndobjectcomponentcode = CodeData[145].code;
     const useApitohandledataandlogic = CodeData[146].code;
+    const UsersapiHooklogicnddataAbs = CodeData[147].code;
 
     return(
         <div>
@@ -342,6 +343,16 @@ const ApiLayerAndAsync = () => {
 
                 <BashCode code={useApitohandledataandlogic}/>
 
+                <p>
+                    and the <span className="text-white font-semibold"> UsersApiHookLogicAndDataAbs </span> 
+                    that will consume data from the hook as follows:
+                </p>
+
+                <BashCode code={UsersapiHooklogicnddataAbs}/>
+
+                <p>
+                    resulting in ( check the console for the data ):
+                </p>
 
                 <UsersApiHookLogicAndDataAbs /> 
 
