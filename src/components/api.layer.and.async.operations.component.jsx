@@ -7,14 +7,14 @@ import UsersApi from "./user.api.before.component";
 import UsersApiStates from "./user.api.handling.states.component";
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component";
 import UsersApiStatesConstants from "./user.api.handling.constant.states.component";
-import { UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.components";
+import { UsersApiHookLogicAndDataAbs, UsersApiStatesHookAndObject, UsersApiStatesObject } from "./index.components";
 import { UsersApiLazyLoaderHookAndObject } from "./index.components";
 
 
-/**react-design-patterns-app - version 21.19 - ApiLayerAndAsync
+/**react-design-patterns-app - version 21.20 - ApiLayerAndAsync
  * - Features: 
  * 
- *     --> Adiing constantscode to 'Api Layer Logic Abstraction' 
+ *     --> Adiing 'useApitohandledataandlogic' code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -38,6 +38,7 @@ const ApiLayerAndAsync = () => {
     const statushookAndobjectcomponentcode = CodeData[143].code;
     const lazyLoadercode = CodeData[144].code;
     const lazyLoaderhookAndobjectcomponentcode = CodeData[145].code;
+    const useApitohandledataandlogic = CodeData[146].code;
 
     return(
         <div>
@@ -333,6 +334,16 @@ const ApiLayerAndAsync = () => {
                 </p>
 
                 <BashCode code={constantscode}/>
+
+                <p>
+                    and as second step will be to <span className="text-white font-semibold"> build the hook </span>
+                    to handle data and logic, and will be as follows:
+                </p>
+
+                <BashCode code={useApitohandledataandlogic}/>
+
+
+                <UsersApiHookLogicAndDataAbs /> 
 
             </SectionWrapper>
         </div>
