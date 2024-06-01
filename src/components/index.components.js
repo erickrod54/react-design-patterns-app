@@ -108,6 +108,7 @@ import UsersApiStatesConstants from "./user.api.handling.constant.states.compone
 import UsersApiStatesHelper from "./user.api.handling.helper.states.component.jsx";
 import UsersApiStatesHookAndObject from "./user.api.handling.hook.and.object.component.jsx";
 import UsersApiStates from "./user.api.handling.states.component.jsx";
+import UsersApiHookLogicAndDataAbs from "./user.api.hook.logic.data.abstraction.component.jsx";
 import UsersApiLazyLoaderHookAndObject from "./user.api.lazyloader.hook.and.object.component.jsx";
 import UserInfo from "./user.info.component";
 import UserInfoDataSource from "./user.info.hook.dsource.component";
@@ -116,10 +117,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 21.13 - components > index  
+/**react-design-patterns-app - version 21.20 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UsersApiLazyLoaderHookAndObject'
+ *     --> Importing and exporting 'UsersApiHookLogicAndDataAbs'
  * 
  * Note: Pending to make responsive design
  */
@@ -240,5 +241,6 @@ export {
          UsersApiStatesObject,
          UsersApiStatesHookAndObject,
          LazyLoader,
-         UsersApiLazyLoaderHookAndObject
+         UsersApiLazyLoaderHookAndObject,
+         UsersApiHookLogicAndDataAbs
         }
