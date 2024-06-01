@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 21.16 - data js  
+/**react-design-patterns-app - version 21.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiLazyLoaderHookAndObject' id
+ *     --> Adding 'useApi for data and logic abstraction' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4856,6 +4856,48 @@ const UsersApiLazyLoaderHookAndObject = () => {
 
     export default UsersApiLazyLoaderHookAndObject;
       `
+    },
+    {
+    id: 146,
+    name: 'useApi - data and logic abstraction',
+    code:   
+    `
+    export function useApi(fn, config = {}) {
+
+    const {initialData} = config;
+    const [data, setData] = useState();
+    const [error, setError] = useState();
+    const {status, setStatus, ...normalizedStatuses} = useApiStatus();
+
+    const exec = async (...args) => {
+        try {
+            setStatus(PENDING);
+            const data = await fn(...args);
+            setData(data);
+            setStatus(SUCCESS);
+            return{
+                data,
+                error:null
+            }
+        } catch (error) {
+            setError(error);
+            setStatus(ERROR);
+            return{
+                error,
+                data:null
+            }
+        }
+    }
+        return{
+            data,
+            setData,
+            status,
+            setStatus,
+            exec,
+            ...normalizedStatuses,
+        }
+    }
+    `
     }
   ];
 
