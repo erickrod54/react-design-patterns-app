@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 22.00 - data js  
+/**react-design-patterns-app - version 22.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'UsersApiHookLogicAndDataAbs' code
+ *     --> Adding 'Use Case Meal Search API' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -222,6 +222,12 @@ export const patternCard = [
       id:34,
       category:'API Layer and Async Operations',
       pattern:'Intro',
+      description:''
+    },
+    {
+      id:35,
+      category:'API Layer and Async Operations',
+      pattern:'Use Case Meal Search API',
       description:''
     },
 ]
