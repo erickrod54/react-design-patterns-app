@@ -6,13 +6,17 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          CustomHookPattern,
          ErrorBoundaries,
          ForwardingRefs,
-         FunctionalProgramming, HOCPattern, LayoutComponentPattern, PortalsAdvHooks, } from "../components/index.components";
+         FunctionalProgramming,
+        HOCPattern,
+        LayoutComponentPattern,
+        PortalsAdvHooks,
+         UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 19.20 - SinglePatternPage
+/**react-design-patterns-app - version 22.01 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'ApiLayerAndAsync'
+ *     --> Adding 'UseCasesMealApiSearch'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -74,6 +78,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 34 ) {
         return <ApiLayerAndAsync />
+    }
+
+    if ( Number(patternId) === 35 ) {
+        return <UseCasesMealApiSearch />
     }
 }
 
