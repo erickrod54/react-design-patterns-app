@@ -1,10 +1,9 @@
-import apiMealSearch from "./api.layer.use.case.meal.search"
+import api from "./api.layer.use.case.meal.search";
 
-
-/**react-design-patterns-app - version 22.01 - searchMeals
+/**react-design-patterns-app - version 22.02 - searchMeals
  * - Features: 
  * 
- *     --> Building 'searchMeals" Api request 
+ *     --> Refactoring 'searchMeals" Api request 
  * 
  * Note: 'URLS' will hold the name of the resource 
  * i want to get for this case will be 'users'
@@ -14,18 +13,17 @@ import apiMealSearch from "./api.layer.use.case.meal.search"
 */
 
 const URLS = {
-    fetchMeal: "search.php"
-}
+  getMeal: "search.php",
+};
 
-export const searchMeals = () => {
-    return apiMealSearch.get(
-        URLS.fetchMeal, {
-            baseURL:"https://www.themealdb.com/api/json/v1/1/",
-            params:{
-                s: query
-            },
-            ...config
-        }
-    )
-    .then((res) => res.data.meals)
-}
+export const searchMeals = (query, config) => {
+  return api
+    .get(URLS.getMeal, {
+      baseURL: "https://www.themealdb.com/api/json/v1/1/",
+      params: {
+        s: query,
+      },
+      ...config,
+    })
+    .then((res) => res.data.meals);
+};
