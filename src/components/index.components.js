@@ -7,6 +7,7 @@ import AlertMessageWithEventListener from "./alert.message.event.listener.portal
 import AlertMessageWithPortal from "./alert.message.portal.component";
 import AlertPortal from "./alert.portal.component";
 import ApiLayerAndAsync from "./api.layer.and.async.operations.component.jsx";
+import SearchMealsComponent from "./api.layer.use.cases.meal.search.component.jsx";
 import UseCasesMealApiSearch from "./api.layer.use.cases.meal.search.jsx";
 import BashCode from "./bash.higlight.component";
 import BooksUseTransitionAfter from "./book.use.transition.after.component";
@@ -118,10 +119,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 22.01 - components > index  
+/**react-design-patterns-app - version 22.02 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UseCasesMealApiSearch'
+ *     --> Importing and exporting 'SearchMealsComponent'
  * 
  * Note: Pending to make responsive design
  */
@@ -244,5 +245,6 @@ export {
          LazyLoader,
          UsersApiLazyLoaderHookAndObject,
          UsersApiHookLogicAndDataAbs,
-         UseCasesMealApiSearch
+         UseCasesMealApiSearch,
+         SearchMealsComponent
         }
