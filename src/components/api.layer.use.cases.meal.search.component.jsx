@@ -3,12 +3,12 @@ import { toast, ToastContainer } from "react-toastify"
 import { searchMeals } from "../api/api.meal.main"
 import { didAbort } from "../api/api.layer.use.case.meal.search"
 import styled from "styled-components"
+import { MainMealContainer } from "../styledcomponents/styled.components.index"
 
-
-/**react-design-patterns-app - version 22.02 - searchMeals
+/**react-design-patterns-app - version 22.03 - searchMeals
  * - Features: 
  * 
- *     --> Building 'SearchMealComponent"  
+ *     --> Building 'MainMealContainer"  
  * 
  * Note: Nesxt will be built the Component  
 */
@@ -58,8 +58,8 @@ const SearchMealComponent = () => {
     }, [query]);
   
     return (
-      <Container>
-        <ToastContainer />
+      <MainMealContainer>
+        {/**<ToastContainer /> */}
         <Form>
           <Fieldset>
             <Label htmlFor="meal">Find your lovely meal</Label>
@@ -82,7 +82,7 @@ const SearchMealComponent = () => {
             ))}
           </MealContainer>
         </div>
-      </Container>
+      </MainMealContainer>
     );
   };
   
