@@ -3,12 +3,13 @@ import { toast, ToastContainer } from "react-toastify"
 import { searchMeals } from "../api/api.meal.main"
 import { didAbort } from "../api/api.layer.use.case.meal.search"
 import styled from "styled-components"
-import { MainMealContainer } from "../styledcomponents/styled.components.index"
+import { Form, MainMealContainer } from "../styledcomponents/styled.components.index"
 
-/**react-design-patterns-app - version 22.03 - searchMeals
+
+/**react-design-patterns-app - version 22.04 - searchMeals
  * - Features: 
  * 
- *     --> Building 'MainMealContainer"  
+ *     --> Importing 'Form" Styled Component 
  * 
  * Note: Nesxt will be built the Component  
 */
@@ -59,7 +60,7 @@ const SearchMealComponent = () => {
   
     return (
       <MainMealContainer>
-        {/**<ToastContainer /> */}
+        <ToastContainer />
         <Form>
           <Fieldset>
             <Label htmlFor="meal">Find your lovely meal</Label>
