@@ -10,6 +10,7 @@ import { AlertWrapper,
          CustomTitleStyle,
          DisplayWrapper,
          Emoji,
+         Form,
          FormWrapper,
          FormWrapperDeferred,
          HeavyComponentWrapper,
@@ -29,10 +30,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 22.03 - styledcomponents > index
+/**react-design-patterns-app - version 22.04 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'MainMealContainer' 
+ *     --> Importing and exporting 'Form' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -77,4 +78,5 @@ export { SectionWrapper,
          TableTitleWrapper,
          ShoppingCounterWrapper,
          MainMealContainer,
-         MultipleFormWrapper }
+         MultipleFormWrapper,
+         Form }
