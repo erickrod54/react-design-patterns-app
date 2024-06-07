@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 22.07 - styled.components
+/**react-design-patterns-app - version 22.08 - styled.components
  * - Features: 
  * 
- *     --> writting 'Input' styles.	
+ *     --> writting 'Title' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -44,6 +44,12 @@ export const Input = styled.input`
   padding: 4px;
   border: 1px solid orange;
   border-radius: 8px;
+`;
+
+export const Title = styled.h1`
+  font-weight: bold;
+  font-size: 2xl;
+  margin-bottom: 4px;
 `;
 
 export const ShoppingCounterWrapper = styled.div`
