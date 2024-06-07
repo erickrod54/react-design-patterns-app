@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 22.08 - styled.components
+/**react-design-patterns-app - version 22.09 - styled.components
  * - Features: 
  * 
- *     --> writting 'Title' styles.	
+ *     --> writting 'MealListContainer' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -50,6 +50,11 @@ export const Title = styled.h1`
   font-weight: bold;
   font-size: 2xl;
   margin-bottom: 4px;
+`;
+
+export const MealListContainer = styled.div`
+  max-height: 60;
+  overflow-y: auto;
 `;
 
 export const ShoppingCounterWrapper = styled.div`
