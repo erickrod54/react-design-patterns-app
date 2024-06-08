@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from "react"
 import { toast, ToastContainer } from "react-toastify"
 import { searchMeals } from "../api/api.meal.main"
 import { didAbort } from "../api/api.layer.use.case.meal.search"
-import { Fieldset, Form, Input, MainMealContainer, MealLabel, Title } from "../styledcomponents/styled.components.index"
+import { Fieldset, Form, Input, MainMealContainer, MealLabel, MealListContainer, Title } from "../styledcomponents/styled.components.index"
 
 
-/**react-design-patterns-app - version 22.08 - searchMeals
+/**react-design-patterns-app - version 22.09 - searchMeals
  * - Features: 
  * 
- *     --> Importing 'Title" Styled Component 
+ *     --> Importing 'MealListContainer" Styled Component 
  * 
  * Note: Nesxt will be built the Component  
 */
@@ -74,13 +74,13 @@ const SearchMealComponent = () => {
         </Form>
         <div>
           <Title>Meals</Title>
-          <MealContainer>
+          <MealListContainer>
             {meals.map((meal, index) => (
               <MealItem odd={index % 2 !== 0} key={meal.idMeal}>
                 <p>{meal.strMeal}</p>
               </MealItem>
             ))}
-          </MealContainer>
+          </MealListContainer>
         </div>
       </MainMealContainer>
     );
