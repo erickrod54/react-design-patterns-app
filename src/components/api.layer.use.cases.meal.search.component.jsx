@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from "react"
 import { toast, ToastContainer } from "react-toastify"
 import { searchMeals } from "../api/api.meal.main"
 import { didAbort } from "../api/api.layer.use.case.meal.search"
-import { Fieldset, Form, Input, MainMealContainer, MealLabel, MealListContainer, Title } from "../styledcomponents/styled.components.index"
+import { Fieldset, Form, Input, MainMealContainer, MealItem, MealLabel, MealListContainer, Title } from "../styledcomponents/styled.components.index"
 
 
-/**react-design-patterns-app - version 22.09 - searchMeals
+/**react-design-patterns-app - version 22.10 - searchMeals
  * - Features: 
  * 
- *     --> Importing 'MealListContainer" Styled Component 
+ *     --> Importing 'MealItem" Styled Component 
  * 
  * Note: Nesxt will be built the Component  
 */
