@@ -21,6 +21,7 @@ import { AlertWrapper,
          MainMealContainer,
          MasterWrapper,
          MealLabel,
+         MealListContainer,
          ModalBackground,
          ModalContent,
          MultipleFormWrapper,
@@ -33,10 +34,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 22.08 - styledcomponents > index
+/**react-design-patterns-app - version 22.09 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'Title' 
+ *     --> Importing and exporting 'MealListContainer' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -82,4 +83,4 @@ export { SectionWrapper,
          ShoppingCounterWrapper,
          MainMealContainer,
          MultipleFormWrapper,
-         Form, Fieldset, MealLabel, Input, Title }
+         Form, Fieldset, MealLabel, Input, Title, MealListContainer }
