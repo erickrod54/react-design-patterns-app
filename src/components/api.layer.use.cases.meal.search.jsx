@@ -2,6 +2,7 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
 
 
 /**react-design-patterns-app - version 22.01 - UseCasesMealApiSearch
@@ -25,7 +26,7 @@ const UseCasesMealApiSearch = () => {
             </CustomTitleStyle>
 
             <SectionWrapper>
-
+                <SearchMealComponent />
             </SectionWrapper>
         </div>
     )
