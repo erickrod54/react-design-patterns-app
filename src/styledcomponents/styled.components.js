@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 22.10 - styled.components
+/**react-design-patterns-app - version 22.12 - styled.components
  * - Features: 
  * 
- *     --> writting 'MealItem' styles.	
+ *     --> updating writting 'SearchMealComponent' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -18,43 +18,33 @@ import tw from 'twin.macro';
  */
 
 export const MainMealContainer = styled.div`
-  padding-top: 8px;
-  max-width: 2xl;
-  margin: auto;
-  background-color: yellow;
-  color: black;
+  ${tw`pt-2 max-w-2xl mx-auto bg-yellow-500 text-black`}
   
 `;
 
+
 export const Form = styled.form`
-  margin-bottom: 9px;
+  ${tw`mb-[9px]`}
 `;
 
 export const Fieldset = styled.fieldset`
-  display: flex;
-  flex-direction: column;
+   ${tw`flex flex-col`}
 `;
 
 export const MealLabel = styled.label`
-  margin-bottom: 4px;
-  font-weight: bold;
+  ${tw`mb-1 font-bold`}
 `;
 
 export const Input = styled.input`
-  padding: 4px;
-  border: 1px solid orange;
-  border-radius: 8px;
+  ${tw`p-1 border border-orange-500 rounded-lg`}
 `;
 
 export const Title = styled.h1`
-  font-weight: bold;
-  font-size: 2xl;
-  margin-bottom: 4px;
+  ${tw`font-bold text-2xl mb-1`}
 `;
 
 export const MealListContainer = styled.div`
-  max-height: 60;
-  overflow-y: auto;
+  ${tw`overflow-y-auto`}
 `;
 
 export const MealItem = styled.div`
