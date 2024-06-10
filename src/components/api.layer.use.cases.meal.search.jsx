@@ -2,14 +2,14 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 /**this component is testing */
 //import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
 
-
-/**react-design-patterns-app - version 22.12 - UseCasesMealApiSearch
+/**react-design-patterns-app - version 22.13 - UseCasesMealApiSearch
  * - Features: 
  * 
- *     --> Developing 'Use Cases Meal Api Search' 
+ *     --> Adding 'apirequestcancellation' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -18,7 +18,8 @@ import { usePatternsAppContext } from "../context";
 const UseCasesMealApiSearch = () => {
 
     const { CodeData } = usePatternsAppContext();
-    
+
+    const apirequestcancellation = CodeData[148].code;
 
     return(
         <div>
@@ -40,6 +41,13 @@ const UseCasesMealApiSearch = () => {
                     this ensures that outdated  API requests are cancelled when a new request is initiated. Avoiding redundant precessing
                     and enhancing the user experience.
                 </p>
+
+                <p>
+                    so the code below will demonstrate how to implement <span className="text-white font-semibold"> API request cancellation </span>
+                    by using axios in a React application as follows:
+                </p>
+
+                <BashCode code={apirequestcancellation}/>
 
                 <p>
                     By integrating request cancellation at the API layer <span className="text-white font-semibold"> (using axios in this case) </span> 
