@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 22.12 - data js  
+/**react-design-patterns-app - version 22.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'API layer - SearchMeals - axios cancellation' 
+ *     --> Adding 'API layer - SearchMeals - axios cancellation' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4983,7 +4983,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 147,
+    id: 148,
     name: 'API layer - SearchMeals - axios cancellation',
     code:   
     `
