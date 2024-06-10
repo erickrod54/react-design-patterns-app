@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 22.13 - data js  
+/**react-design-patterns-app - version 22.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'API layer - SearchMeals - axios cancellation' id
+ *     --> Adding 'API layer - SearchMeals - axios cancellation' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -4996,12 +4996,20 @@ const UsersApiHookLogicAndDataAbs = () => {
     // Create axios instance with default params
     const axiosInstance = axios.create(axiosParams);
     
+    /**cancellation can be due different reasons*/
+
+    /**an abort by an error*/
     export const didAbort = (error) => axios.isCancel(error) && { aborted: true };
     
+    /**a cancelation by invalid token ( tokens validate the app in order to let it conseme data)
+     * sometimes they expired and can motivate a cancellation*/
     const getCancelSource = () => axios.CancelToken.source();
     
+    /**cancellation by an error from axios library*/
     export const isApiError = (error) => axios.isAxiosError(error);
     
+    /**'withAbort will take the axios methods and will
+     * wrap the app operations so errors can be handled'*/
     const withAbort = (fn) => {
       const executor = async (...args) => {
         const originalConfig = args[args.length - 1];
@@ -5035,6 +5043,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       return executor;
     };
     
+    /** will wrap methods as this*/
     const api = (axios) => {
       return {
         get: (url, config = {}) => withAbort(axios.get)(url, config),
