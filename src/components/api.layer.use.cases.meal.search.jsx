@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 /**this component is testing */
 //import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
 
-/**react-design-patterns-app - version 22.13 - UseCasesMealApiSearch
+/**react-design-patterns-app - version 22.15 - UseCasesMealApiSearch
  * - Features: 
  * 
- *     --> Adding 'apirequestcancellation' code
+ *     --> Starting 'apirequest' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -51,7 +51,8 @@ const UseCasesMealApiSearch = () => {
 
                 <p>
                     By integrating request cancellation at the API layer <span className="text-white font-semibold"> (using axios in this case) </span> 
-                    the implementation becomes rehusable and and easily maintainable, even if the underlying HTTP client is replaced.
+                    the implementation becomes rehusable and and easily maintainable, even if the underlying HTTP client is replaced. And for the 
+                    <span className="text=white-font-semibold"> API request </span> in the app side will be as follows:
                 </p>
                 
             </SectionWrapper>
