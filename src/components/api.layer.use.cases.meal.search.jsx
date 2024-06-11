@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 /**this component is testing */
 //import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
 
-/**react-design-patterns-app - version 22.15 - UseCasesMealApiSearch
+/**react-design-patterns-app - version 22.16 - UseCasesMealApiSearch
  * - Features: 
  * 
- *     --> Starting 'apirequest' 
+ *     --> Adding 'apirequest' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -20,6 +20,7 @@ const UseCasesMealApiSearch = () => {
     const { CodeData } = usePatternsAppContext();
 
     const apirequestcancellation = CodeData[148].code;
+    const apirequest = CodeData[149].code;
 
     return(
         <div>
@@ -54,6 +55,8 @@ const UseCasesMealApiSearch = () => {
                     the implementation becomes rehusable and and easily maintainable, even if the underlying HTTP client is replaced. And for the 
                     <span className="text=white-font-semibold"> API request </span> in the app side will be as follows:
                 </p>
+
+                <BashCode code={apirequest}/>
                 
             </SectionWrapper>
         </div>
