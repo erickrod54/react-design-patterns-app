@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 /**this component is testing */
 //import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
 
-/**react-design-patterns-app - version 22.16 - UseCasesMealApiSearch
+/**react-design-patterns-app - version 22.18 - UseCasesMealApiSearch
  * - Features: 
  * 
- *     --> Adding 'apirequest' code
+ *     --> Starting 'Adding useFetchMeals hook and SearchMealComponent' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -57,6 +57,10 @@ const UseCasesMealApiSearch = () => {
                 </p>
 
                 <BashCode code={apirequest}/>
+
+                <p>
+                    having this, let's build the hook to fetch the data from the API and the component that will render the App functionality: 
+                </p>
                 
             </SectionWrapper>
         </div>
