@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 22.18 - data js  
+/**react-design-patterns-app - version 22.19 - data js  
  * - Features: 
  *    
- *     --> Adding useFetchMeals hook and SearchMealComponent
+ *     --> Adding useFetchMeals hook and SearchMealComponent id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5083,7 +5083,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 149,
+    id: 150,
     name: 'Adding useFetchMeals hook and SearchMealComponent',
     code:   
     `
