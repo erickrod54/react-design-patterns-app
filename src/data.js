@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 22.19 - data js  
+/**react-design-patterns-app - version 22.20 - data js  
  * - Features: 
  *    
- *     --> Adding useFetchMeals hook and SearchMealComponent id
+ *     --> Adding useFetchMeal comments for hook
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5087,6 +5087,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: 'Adding useFetchMeals hook and SearchMealComponent',
     code:   
     `
+     /**this hook will receive and handle requests*/
       export const useFetchMeals = () => {
 
       const [ meals, setMeals ] = useState([])
@@ -5102,21 +5103,24 @@ const UsersApiHookLogicAndDataAbs = () => {
           }
       }
 
+      /**here i will receive the api request*/
       const fetchMeals = async (query) => {
 
+          /**a try-catch, in order to receive data or handle possible errors or aborts*/
           try {
               abortRef.current.abort?.(); 
-
               const newMeals = await searchMeals(query, {
                   abort: (abort) => (abortRef.current.abort = abort)
               })
               setMeals(newMeals)
           } catch (error) {
+              /**here the error is been handled*/
               handleQuoteError(error);
           }
       }
 
-
+      /**here i return the meals ( data value ) and the 
+       * fetchMeals ( in order to mount data when app mounts)*/
       return{
           meals,
           fetchMeals,
