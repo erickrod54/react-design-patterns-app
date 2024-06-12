@@ -3,13 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
-/**this component is testing */
-//import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
+import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
 
-/**react-design-patterns-app - version 22.19 - UseCasesMealApiSearch
+/**react-design-patterns-app - version 23.02 - UseCasesMealApiSearch
  * - Features: 
  * 
- *     --> Adding 'Adding useFetchMeals hook and SearchMealComponent' 
+ *     --> Adding 'SearchMealComponent' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -64,6 +63,12 @@ const UseCasesMealApiSearch = () => {
                 </p>
 
                 <BashCode code={searchmealcomponentandhook}/>
+
+                <p>
+                    Resulting <span className="text-white font-semibold"> SearchMealComponent </span> in the following
+                </p>
+
+                <SearchMealComponent />
                 
             </SectionWrapper>
         </div>
