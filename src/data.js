@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 22.20 - data js  
+/**react-design-patterns-app - version 23.01 - data js  
  * - Features: 
  *    
- *     --> Adding useFetchMeal comments for hook
+ *     --> Adding SearchMealComponent comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5126,11 +5126,16 @@ const UsersApiHookLogicAndDataAbs = () => {
           fetchMeals,
       }
   }
-
+  /**this component will handle all functionality
+   * related to the render */
   const SearchMealComponent = () => {
+
+      /**this is the states and the data that comes from the 
+       * 'useFetchMeals' hook */
       const [query, setQuery] = useState("");
       const { meals, fetchMeals } = useFetchMeals();
     
+      /**it will mount the set that is been received from the 'fetchMeals'*/
       useEffect(() => {
         fetchMeals(query);
       }, [query]);
@@ -5152,6 +5157,7 @@ const UsersApiHookLogicAndDataAbs = () => {
           </Form>
           <div>
             <Title>Meals</Title>
+            {/** this conditional styling can be improved*/}
             <MealListContainer>
               {meals.map((meal, index) => (
                 <MealItem odd={index % 2 !== 0} key={meal.idMeal}>
