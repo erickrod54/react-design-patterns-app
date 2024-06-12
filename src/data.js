@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.03 - data js  
+/**react-design-patterns-app - version 23.04 - data js  
  * - Features: 
  *    
- *     --> Adding withLogger to API layer Meal Search code
+ *     --> Adding withLogger to API layer Meal Search id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5174,7 +5174,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 150,
+    id: 151,
     name: 'Adding withLogger to API layer Meal Search',
     code:   
     `
