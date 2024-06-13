@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.05 - data js  
+/**react-design-patterns-app - version 23.06 - data js  
  * - Features: 
  *    
- *     --> Adding withLogger to API layer Meal Search commments
+ *     --> Adding searchMealsErrorLogin API request
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5257,6 +5257,28 @@ const UsersApiHookLogicAndDataAbs = () => {
     };
     
     export default api(axiosInstance);
+    `
+    },
+    {
+    id: 151,
+    name: 'Adding searchMealsErrorLogin API request',
+    code:   
+    `
+      const URLS = {
+      getMeal: "search.php",
+    };
+    
+    export const searchMealsErrorLogin = (query, config) => {
+      return api
+        .get(URLS.getMeal, {
+          baseURL: "https://www.themealdb.com/api/json/v1/1/",
+          params: {
+            s: query,
+          },
+          ...config,
+        })
+        .then((res) => res.data.meals);
+    };  
     `
     }
   ];
