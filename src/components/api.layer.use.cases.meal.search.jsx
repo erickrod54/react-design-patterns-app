@@ -4,11 +4,12 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
+import SearchMealComponentErrorLogger from "./api.layer.use.cases.meal.search.error.logger.component";
 
-/**react-design-patterns-app - version 23.02 - UseCasesMealApiSearch
+/**react-design-patterns-app - version 23.05 - UseCasesMealApiSearch
  * - Features: 
  * 
- *     --> Adding 'SearchMealComponent' 
+ *     --> Adding 'withlogger'  code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -21,6 +22,7 @@ const UseCasesMealApiSearch = () => {
     const apirequestcancellation = CodeData[148].code;
     const apirequest = CodeData[149].code;
     const searchmealcomponentandhook = CodeData[150].code;
+    const withlogger = CodeData[151].code;
 
     return(
         <div>
@@ -69,6 +71,13 @@ const UseCasesMealApiSearch = () => {
                 </p>
 
                 <SearchMealComponent />
+
+                <p>
+                    a variation to handle errors from the <span className="text-white font-semibold"> API Layer </span> can start as
+                    follows:
+                </p>
+
+                <BashCode code={withlogger}/>
                 
             </SectionWrapper>
         </div>
