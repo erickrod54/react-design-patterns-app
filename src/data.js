@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.04 - data js  
+/**react-design-patterns-app - version 23.05 - data js  
  * - Features: 
  *    
- *     --> Adding withLogger to API layer Meal Search id
+ *     --> Adding withLogger to API layer Meal Search commments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5226,6 +5226,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       return executor;
     };
   
+    /**here multiple logs will be displayed depending of the kind of error*/
     const withLogger = async (promise) => 
         promise.catch((error) => {
             if (!process.env.REACT_APP_DEBUG_API) throw error;
