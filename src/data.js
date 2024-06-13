@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.07 - data js  
+/**react-design-patterns-app - version 23.08 - data js  
  * - Features: 
  *    
- *     --> Adding searchMealsErrorLogin API request id
+ *     --> Adding searchMealsErrorLogin API request comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5268,6 +5268,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       getMeal: "search.php",
     };
     
+    /**esentially the name changes so can be add to the new component*/
     export const searchMealsErrorLogin = (query, config) => {
       return api
         .get(URLS.getMeal, {
