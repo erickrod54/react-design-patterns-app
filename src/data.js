@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.06 - data js  
+/**react-design-patterns-app - version 23.07 - data js  
  * - Features: 
  *    
- *     --> Adding searchMealsErrorLogin API request
+ *     --> Adding searchMealsErrorLogin API request id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5260,7 +5260,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 151,
+    id: 152,
     name: 'Adding searchMealsErrorLogin API request',
     code:   
     `
