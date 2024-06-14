@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.09 - data js  
+/**react-design-patterns-app - version 23.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'SearchMealComponentErrorLogger' code
+ *     --> Adding 'SearchMealComponentErrorLogger' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5283,7 +5283,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 152,
+    id: 153,
     name: 'Adding SearchMealComponentErrorLogger',
     code:   
     `
