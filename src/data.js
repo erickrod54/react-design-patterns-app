@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.10 - data js  
+/**react-design-patterns-app - version 23.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'SearchMealComponentErrorLogger' id
+ *     --> Adding 'SearchMealComponentErrorLogger' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5296,7 +5296,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     
             try {
                 abortRef.current.abort?.(); 
-    
+                /** essentially will wrap the query*/  
                 const newMeals = await searchMealsErrorLogin(query)
                 setMeals(newMeals)
             } catch (error) {
@@ -5312,6 +5312,7 @@ const UsersApiHookLogicAndDataAbs = () => {
         }
     }
     
+    /**and the name convention for the Component*/
     const SearchMealComponentErrorLogger = () => {
         const [query, setQuery] = useState("");
         const { meals, fetchMeals } = useFetchMeals();
