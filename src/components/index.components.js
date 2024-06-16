@@ -45,6 +45,7 @@ import DisplayPerformance from "./display.cart.app.optimize.context.api.performa
 import ChildComponent from "./error.boundaries.child.component";
 import ErrorBoundaries from "./error.boundaries.component";
 import MasterComponent from "./error.boundaries.parent.component";
+import FetchingDataWitReactQuery from "./fetching.data.with.data.query.jsx";
 import ForwardingRefForm from "./forwarding.ref.form.component";
 import { ForwardingImperativeFocusRefInput } from "./forwarding.ref.imperative.focus.input.component";
 import { ForwardingImperativeRefInput } from "./forwarding.ref.imperative.input.component";
@@ -120,10 +121,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 23.04 - components > index  
+/**react-design-patterns-app - version 23.13 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'SearchMealComponentErrorLogger'
+ *     --> Importing and exporting 'FetchingDataWitReactQuery'
  * 
  * Note: Pending to make responsive design
  */
@@ -248,5 +249,6 @@ export {
          UsersApiHookLogicAndDataAbs,
          UseCasesMealApiSearch,
          SearchMealsComponent,
-         SearchMealComponentErrorLogger
+         SearchMealComponentErrorLogger,
+         FetchingDataWitReactQuery
         }
