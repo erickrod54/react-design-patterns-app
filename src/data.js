@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.11 - data js  
+/**react-design-patterns-app - version 23.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'SearchMealComponentErrorLogger' comments
+ *     --> Adding 'Fetching Data with React Query' category
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -228,6 +228,12 @@ export const patternCard = [
       id:35,
       category:'API Layer and Async Operations',
       pattern:'Use Case Meal Search API',
+      description:''
+    },
+    {
+      id:36,
+      category:'API Layer and Async Operations',
+      pattern:'Fetching Data with React Query',
       description:''
     },
 ]
