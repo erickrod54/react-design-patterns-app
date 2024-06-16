@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import SearchMealComponent from "./api.layer.use.cases.meal.search.component";
 import SearchMealComponentErrorLogger from "./api.layer.use.cases.meal.search.error.logger.component";
 
-/**react-design-patterns-app - version 23.11 - UseCasesMealApiSearch
+/**react-design-patterns-app - version 23.13 - UseCasesMealApiSearch
  * - Features: 
  * 
- *     --> Adding 'searchmealserrorlogincomponent'  code
+ *     --> Rendering 'SearchMealComponentErrorLogger'  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -94,7 +94,12 @@ const UseCasesMealApiSearch = () => {
                  
                 <BashCode code={searchmealserrorlogincomponent}/>
                 
-                
+                <p>
+                    resulting the component <span className="text-white font-semibold"> SearchMealComponentErrorLogger </span> as follows
+                    <span className="text-white font-semibold"> (check the console for error handling ) </span>:
+                </p>
+
+                <SearchMealComponentErrorLogger />
                 
             </SectionWrapper>
         </div>
