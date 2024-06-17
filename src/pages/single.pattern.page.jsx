@@ -5,6 +5,7 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          ControlledUnControlledPattern,
          CustomHookPattern,
          ErrorBoundaries,
+         FetchingDataWitReactQuery,
          ForwardingRefs,
          FunctionalProgramming,
         HOCPattern,
@@ -13,10 +14,10 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 22.01 - SinglePatternPage
+/**react-design-patterns-app - version 22.13 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'UseCasesMealApiSearch'
+ *     --> Adding 'FetchingDataWitReactQuery'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -83,6 +84,12 @@ const SinglePatternPage = () => {
     if ( Number(patternId) === 35 ) {
         return <UseCasesMealApiSearch />
     }
+
+    if ( Number(patternId) === 36 ) {
+        return <FetchingDataWitReactQuery />
+    }
+
+    
 }
 
 export default SinglePatternPage;
