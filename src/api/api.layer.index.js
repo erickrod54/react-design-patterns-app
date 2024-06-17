@@ -1,11 +1,12 @@
-import { searchMealsErrorLogin } from './api.layer.use.case.meal.search.error.loging';
+import { fetchTopQuotes } from './api.layer.quotes.request';
 
-/**react-design-patterns-app - version 23.03 - Api Layer index
+
+/**react-design-patterns-app - version 23.14 - Api Layer index
  * - Features: 
  * 
- *     --> Importing and exporting 'searchMealsErrorLogin'
+ *     --> Importing and exporting 'fetchTopQuotes'
  * 
  * Note: pending to import and export the rest of the API's 
  */
 
-export { searchMealsErrorLogin }
+export {  fetchTopQuotes }
