@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.16 - data js  
+/**react-design-patterns-app - version 23.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'server.quotes.js' code
+ *     --> Adding 'server.quotes.js' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5364,10 +5364,13 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: 'Adding express js server.quotes.js',
     code:   
     `
+    /**First import the express library*/
     const express = require("express");
+    /**next the local files where the data sets live*/
     const { quotes } = require("./quotes");
     const { quotesOriginal } = require("./quotesOriginal");
     const nanoid = require("nanoid");
+    /**requires cors, so the library has be installed*/
     const cors = require("cors");
     const app = express();
     const port = 9000;
@@ -5410,6 +5413,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       };
     };
 
+    /**this is a request that can be done - data received can be verified in the browser -*/
     app.get("/top_quotes", async (request, response) => {
       try {
         await sleep();
@@ -5463,6 +5467,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       }
     });
 
+    /**this will take the api request to the original state*/
     app.post("/reset", async (request, response) => {
       try {
         await sleep();
