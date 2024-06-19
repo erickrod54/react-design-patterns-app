@@ -7,10 +7,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import BashCode from "./bash.higlight.component";
 
 
-/**react-design-patterns-app - version 23.20 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 24.00 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'topquotesapirequest' code
+ *     --> Starting 'API layer' for top_quotes
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -24,6 +24,7 @@ const FetchingDataWitReactQuery = () => {
 
     const serverquotesjs = CodeData[154].code;
     const topquotesapirequest = CodeData[155].code;
+    const withlogger = CodeData[151].code;
 
 
     return(
@@ -52,6 +53,12 @@ const FetchingDataWitReactQuery = () => {
                 </p>
 
                 <BashCode code={topquotesapirequest}/>
+
+                <p>
+                    As the <span className="text-white font-semibold"> API layer </span> it will be used 
+                    the same that was use in <span className="text-white font-semibold"> SearchMeal </span>
+                    use case, with the <span className="text-white font-semibold"> withlogger </span> variation
+                </p>
 
 
             </SectionWrapper>
