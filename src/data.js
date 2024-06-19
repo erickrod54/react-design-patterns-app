@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.17 - data js  
+/**react-design-patterns-app - version 23.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'server.quotes.js' comments
+ *     --> Adding API request for top_quotes
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5483,6 +5483,17 @@ const UsersApiHookLogicAndDataAbs = () => {
       app.listen(port, () => {
         console.log(\`Server is running at http://localhost:\${port}\`);
       });  
+    `
+    },
+    {
+    id: 154,
+    name: 'Adding API request for top_quotes',
+    code:   
+    `
+      import api from './api.layer.use.case.quotes.with.fn'
+  
+      export const fetchTopQuotes = () => 
+          api.get("top_quotes").then((res) => res.data.quotes)  
     `
     }
   ];
