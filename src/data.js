@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.19 - data js  
+/**react-design-patterns-app - version 23.20 - data js  
  * - Features: 
  *    
- *     --> Adding API request for top_quotes id
+ *     --> Changing API request for top_quotes id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5360,7 +5360,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 155,
+    id: 154,
     name: 'Adding express js server.quotes.js',
     code:   
     `
@@ -5486,7 +5486,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 154,
+    id: 155,
     name: 'Adding API request for top_quotes',
     code:   
     `
