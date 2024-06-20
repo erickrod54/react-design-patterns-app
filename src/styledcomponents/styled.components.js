@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 22.13 - styled.components
+/**react-design-patterns-app - version 24.02 - styled.components
  * - Features: 
  * 
- *     -->  writting 'fetching-data-withj-react-query' styles.	
+ *     -->  writting 'OutQuotContainer' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,12 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const OutQuotContainer = styled.div`
+  padding-top: 8px;
+  max-width: 2xl;
+  margin: auto;
+`;
 
 export const MainMealContainer = styled.div`
   ${tw`pt-2 max-w-2xl mx-auto bg-yellow-500 text-black`}
