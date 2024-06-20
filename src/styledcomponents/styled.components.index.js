@@ -33,12 +33,12 @@ import { AlertWrapper,
          SectionWrapper,
          ShoppingCounterWrapper,
          SingleButtonWrapper,
-         StepFlowWrapper, TableTitleWrapper, Title, ToolTipWrapper, WriterContainer } from "./styled.components";
+         StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 24.02 - styledcomponents > index
+/**react-design-patterns-app - version 24.04 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'OutQuotContainer' 
+ *     --> Importing and exporting 'TitleForQuote' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -84,4 +84,4 @@ export { SectionWrapper,
          ShoppingCounterWrapper,
          MainMealContainer,
          MultipleFormWrapper,
-         Form, Fieldset, OutQuotContainer, MealLabel, Input, Title, MealListContainer, MealItem }
+         Form, Fieldset, TitleForQuote, OutQuotContainer, MealLabel, Input, Title, MealListContainer, MealItem }
