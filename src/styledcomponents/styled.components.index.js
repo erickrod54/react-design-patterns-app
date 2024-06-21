@@ -10,6 +10,7 @@ import { AlertWrapper,
          CustomTitleStyle,
          DisplayWrapper,
          Emoji,
+         ErrorMessage,
          Fieldset,
          Form,
          FormWrapper,
@@ -35,10 +36,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 24.04 - styledcomponents > index
+/**react-design-patterns-app - version 24.05 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'TitleForQuote' 
+ *     --> Importing and exporting 'ErrorMessage' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -84,4 +85,4 @@ export { SectionWrapper,
          ShoppingCounterWrapper,
          MainMealContainer,
          MultipleFormWrapper,
-         Form, Fieldset, TitleForQuote, OutQuotContainer, MealLabel, Input, Title, MealListContainer, MealItem }
+         Form, Fieldset, ErrorMessage, TitleForQuote, OutQuotContainer, MealLabel, Input, Title, MealListContainer, MealItem }
