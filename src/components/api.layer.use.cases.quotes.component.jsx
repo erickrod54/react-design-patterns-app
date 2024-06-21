@@ -1,25 +1,16 @@
 import { useQuery } from "react-query";
 import { fetchTopQuotes } from '../api/api.layer.index';
-import { OutQuotContainer } from '../styledcomponents/styled.components.index'
+import { OutQuotContainer, TitleForQuote } from '../styledcomponents/styled.components.index'
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 24.03 - FetchTopQuotes
+/**react-design-patterns-app - version 24.04 - FetchTopQuotes
  * - Features: 
  * 
- *     --> Building 'FetchTopQuotes'
- * 
- *     --> Migrating styles 'OutQuotContainer'
+ *     --> Migrating styles 'TitleForQuote'
  *
  * 
  * Note: pending to migrate styles 
 */
-
-
-const Title = styled.h2`
-  font-weight: bold;
-  font-size: 2xl;
-  margin-bottom: 4px;
-`;
 
 const ErrorMessage = styled.p`
   color: #e53e3e; /* Tailwind: text-red-900 */
@@ -80,7 +71,7 @@ const FetchTopQuotes = () => {
     return(
         <OutQuotContainer>
         <div>
-          <Title>Top Quotes</Title>
+          <TitleForQuote>Top Quotes</TitleForQuote>
           {isError ? (
             <ErrorMessage>There was a problem with fetching quotes</ErrorMessage>
           ) : null}
