@@ -1,31 +1,19 @@
 import { useQuery } from "react-query";
 import { fetchTopQuotes } from '../api/api.layer.index';
-import { ErrorMessage, LoadingMessage, OutQuotContainer, QuotesContainer, TitleForQuote } from '../styledcomponents/styled.components.index'
+import { ErrorMessage,
+         LoadingMessage,
+         OutQuotContainer, QuoteBlock, QuotesContainer, TitleForQuote } from '../styledcomponents/styled.components.index'
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 24.07 - FetchTopQuotes
+/**react-design-patterns-app - version 24.08 - FetchTopQuotes
  * - Features: 
  * 
- *     --> Migrating styles 'QuotesContainer
+ *     --> Migrating styles 'QuoteBlock
 '
  *
  * 
  * Note: pending to migrate styles 
 */
-
-const QuoteBlock = styled.blockquote`
-  position: relative;
-  padding: 4px;
-  font-size: xl;
-  font-style: italic;
-  border-left: 4px solid #d1d5db; /* Tailwind: border-neutral-500 */
-  background-color: #f3f4f6; /* Tailwind: bg-neutral-100 */
-  color: #6b7280; /* Tailwind: text-neutral-600 */
-
-  &:not(:last-child) {
-    border-bottom: 1px solid #d1d5db; /* Tailwind: divide-y */
-  }
-`;
 
 const QuoteText = styled.p`
   margin-bottom: 4px;
