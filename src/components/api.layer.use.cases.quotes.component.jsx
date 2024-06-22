@@ -1,25 +1,17 @@
 import { useQuery } from "react-query";
 import { fetchTopQuotes } from '../api/api.layer.index';
-import { ErrorMessage, OutQuotContainer, TitleForQuote } from '../styledcomponents/styled.components.index'
+import { ErrorMessage, LoadingMessage, OutQuotContainer, QuotesContainer, TitleForQuote } from '../styledcomponents/styled.components.index'
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 24.05 - FetchTopQuotes
+/**react-design-patterns-app - version 24.07 - FetchTopQuotes
  * - Features: 
  * 
- *     --> Migrating styles 'ErrorMessage'
+ *     --> Migrating styles 'QuotesContainer
+'
  *
  * 
  * Note: pending to migrate styles 
 */
-
-
-const LoadingMessage = styled.p``;
-
-const QuotesContainer = styled.div`
-  max-height: 96;
-  overflow-y: auto;
-  border-spacing: 1px;
-`;
 
 const QuoteBlock = styled.blockquote`
   position: relative;
