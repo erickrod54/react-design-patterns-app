@@ -31,6 +31,7 @@ import { AlertWrapper,
          OpenModalWrapper, OutQuotContainer, OutsideTable, Panel,
          PrimaryButton,
          QuoteBlock,
+         QuoteText,
          QuotesContainer,
          ReviewsContainer,
          SectionItemCenterWrapper,
@@ -39,10 +40,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 24.08 - styledcomponents > index
+/**react-design-patterns-app - version 24.09 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'QuoteBlock' 
+ *     --> Importing and exporting 'QuoteText' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -94,4 +95,5 @@ export { SectionWrapper,
          LoadingMessage,
          OutQuotContainer,
          MealLabel, Input,
-         QuoteBlock, Title, MealListContainer, MealItem }
+         QuoteBlock,
+         QuoteText, Title, MealListContainer, MealItem }
