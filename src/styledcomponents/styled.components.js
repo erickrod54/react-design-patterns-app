@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 24.08 - styled.components
+/**react-design-patterns-app - version 24.09 - styled.components
  * - Features: 
  * 
- *     -->  writting 'QuoteBlock' styles.	
+ *     -->  writting 'QuoteText' styles.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -17,17 +17,21 @@ import tw from 'twin.macro';
  * to use them in the custom titles
  */
 
-export const QuoteBlock = styled.blockquote`
-position: relative;
-padding: 4px;
-font-size: xl;
-font-style: italic;
-border-left: 4px solid #d1d5db; /* Tailwind: border-neutral-500 */
-background-color: #f3f4f6; /* Tailwind: bg-neutral-100 */
-color: #6b7280; /* Tailwind: text-neutral-600 */
+export const QuoteText = styled.p`
+	margin-bottom: 4px;
+`;
 
-&:not(:last-child) {
-  border-bottom: 1px solid #d1d5db; /* Tailwind: divide-y */
+export const QuoteBlock = styled.blockquote`
+	position: relative;
+	padding: 4px;
+	font-size: xl;
+	font-style: italic;
+	border-left: 4px solid #d1d5db; /* Tailwind: border-neutral-500 */
+	background-color: #f3f4f6; /* Tailwind: bg-neutral-100 */
+	color: #6b7280; /* Tailwind: text-neutral-600 */
+
+	&:not(:last-child) {
+	border-bottom: 1px solid #d1d5db; /* Tailwind: divide-y */
 }
 `;
 
