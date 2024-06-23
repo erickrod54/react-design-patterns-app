@@ -1,14 +1,15 @@
 import { useQuery } from "react-query";
 import { fetchTopQuotes } from '../api/api.layer.index';
-import { ErrorMessage,
+import { AuthorCite, 
+         ErrorMessage,
          LoadingMessage,
          OutQuotContainer, QuoteBlock, QuotesContainer, QuoteText, TitleForQuote } from '../styledcomponents/styled.components.index'
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 24.09 - FetchTopQuotes
+/**react-design-patterns-app - version 24.10 - FetchTopQuotes
  * - Features: 
  * 
- *     --> Migrating styles 'QuoteText'
+ *     --> Migrating styles 'AuthorCite'
 '
  *
  * 
@@ -17,11 +18,6 @@ import styled from "styled-components";
 
 
 
-const AuthorCite = styled.cite`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 const AuthorInfo = styled.div`
   display: flex;
