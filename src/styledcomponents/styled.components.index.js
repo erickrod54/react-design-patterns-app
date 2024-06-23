@@ -1,4 +1,5 @@
 import { AlertWrapper,
+         AuthorCite,
          BooksUseTransitionContainer,
          ButtonGeneral,
          ButtonUseTransition,
@@ -40,10 +41,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 24.09 - styledcomponents > index
+/**react-design-patterns-app - version 24.10 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'QuoteText' 
+ *     --> Importing and exporting 'AuthorCite' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -96,4 +97,5 @@ export { SectionWrapper,
          OutQuotContainer,
          MealLabel, Input,
          QuoteBlock,
-         QuoteText, Title, MealListContainer, MealItem }
+         QuoteText,
+         AuthorCite, Title, MealListContainer, MealItem }
