@@ -2,22 +2,20 @@ import { useQuery } from "react-query";
 import { fetchTopQuotes } from '../api/api.layer.index';
 import { ErrorMessage,
          LoadingMessage,
-         OutQuotContainer, QuoteBlock, QuotesContainer, TitleForQuote } from '../styledcomponents/styled.components.index'
+         OutQuotContainer, QuoteBlock, QuotesContainer, QuoteText, TitleForQuote } from '../styledcomponents/styled.components.index'
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 24.08 - FetchTopQuotes
+/**react-design-patterns-app - version 24.09 - FetchTopQuotes
  * - Features: 
  * 
- *     --> Migrating styles 'QuoteBlock
+ *     --> Migrating styles 'QuoteText'
 '
  *
  * 
  * Note: pending to migrate styles 
 */
 
-const QuoteText = styled.p`
-  margin-bottom: 4px;
-`;
+
 
 const AuthorCite = styled.cite`
   display: flex;
