@@ -2,28 +2,22 @@ import { useQuery } from "react-query";
 import { fetchTopQuotes } from '../api/api.layer.index';
 import { AuthorCite, 
          AuthorInfo, 
+         AuthorName, 
          ErrorMessage,
          LoadingMessage,
          OutQuotContainer, QuoteBlock, QuotesContainer, QuoteText, TitleForQuote } from '../styledcomponents/styled.components.index'
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 24.11 - FetchTopQuotes
+/**react-design-patterns-app - version 24.12 - FetchTopQuotes
  * - Features: 
  * 
- *     --> Migrating styles 'AuthorInfo'
+ *     --> Migrating styles 'AuthorName'
 '
  *
  * 
  * Note: pending to migrate styles 
 */
 
-
-const AuthorName = styled.span`
-  margin-bottom: 1px;
-  font-size: sm;
-  font-style: italic;
-  font-weight: bold;
-`;
 
 const FetchTopQuotes = () => {
 
