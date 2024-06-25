@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 24.16 - styled.components
+/**react-design-patterns-app - version 24.17 - styled.components
  * - Features: 
  * 
- *     -->  writting 'QuotesContainer' styles to tailwind.	
+ *     -->  writting 'QuoteBlock' styles to tailwind.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -41,17 +41,7 @@ export const QuoteText = styled.p`
 `;
 
 export const QuoteBlock = styled.blockquote`
-	position: relative;
-	padding: 4px;
-	font-size: xl;
-	font-style: italic;
-	border-left: 4px solid #d1d5db; /* Tailwind: border-neutral-500 */
-	background-color: #f3f4f6; /* Tailwind: bg-neutral-100 */
-	color: #6b7280; /* Tailwind: text-neutral-600 */
-
-	&:not(:last-child) {
-	border-bottom: 1px solid #d1d5db; /* Tailwind: divide-y */
-}
+	${tw`relative p-1 text-xl italic border-l-4 border-neutral-500 bg-neutral-100 text-neutral-600 not-last:mb-0 not-last:border-b border-neutral-500`}
 `;
 
 export const QuotesContainer = styled.div`
