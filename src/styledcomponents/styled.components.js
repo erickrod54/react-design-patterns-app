@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 24.12 - styled.components
+/**react-design-patterns-app - version 24.13 - styled.components
  * - Features: 
  * 
- *     -->  writting 'AuthorName' styles.	
+ *     -->  writting 'OutQuotContainer' styles to tailwind.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -73,10 +73,9 @@ export const TitleForQuote = styled.h2`
 `;
 
 export const OutQuotContainer = styled.div`
-  padding-top: 8px;
-  max-width: 2xl;
-  margin: auto;
+  ${tw`pt-2 max-w-2xl mx-auto`}
 `;
+
 
 export const MainMealContainer = styled.div`
   ${tw`pt-2 max-w-2xl mx-auto bg-yellow-500 text-black`}
