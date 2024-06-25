@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 24.17 - styled.components
+/**react-design-patterns-app - version 24.18 - styled.components
  * - Features: 
  * 
- *     -->  writting 'QuoteBlock' styles to tailwind.	
+ *     -->  writting 'QuoteText' styles to tailwind.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -37,7 +37,7 @@ export const AuthorCite = styled.cite`
 `;
 
 export const QuoteText = styled.p`
-	margin-bottom: 4px;
+	${tw`mb-1`}
 `;
 
 export const QuoteBlock = styled.blockquote`
