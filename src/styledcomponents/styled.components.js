@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 24.15 - styled.components
+/**react-design-patterns-app - version 24.16 - styled.components
  * - Features: 
  * 
- *     -->  writting 'ErrorMessage' styles to tailwind.	
+ *     -->  writting 'QuotesContainer' styles to tailwind.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -55,9 +55,7 @@ export const QuoteBlock = styled.blockquote`
 `;
 
 export const QuotesContainer = styled.div`
-	max-height: 96;
-	overflow-y: auto;
-	border-spacing: 1px;
+	${tw`max-h-96 border-spacing-1`}
 `;
 
 export const LoadingMessage = styled.p``;
