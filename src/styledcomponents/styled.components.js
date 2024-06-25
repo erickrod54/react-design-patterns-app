@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 24.13 - styled.components
+/**react-design-patterns-app - version 24.14 - styled.components
  * - Features: 
  * 
- *     -->  writting 'OutQuotContainer' styles to tailwind.	
+ *     -->  writting 'TitleForQuote' styles to tailwind.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -67,10 +67,9 @@ export const ErrorMessage = styled.p`
 `;
 
 export const TitleForQuote = styled.h2`
-  font-weight: bold;
-  font-size: 2xl;
-  margin-bottom: 4px;
+  ${tw`font-bold text-2xl mb-1`}
 `;
+
 
 export const OutQuotContainer = styled.div`
   ${tw`pt-2 max-w-2xl mx-auto`}
