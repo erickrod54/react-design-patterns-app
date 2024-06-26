@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 24.20 - styled.components
+/**react-design-patterns-app - version 25.00 - styled.components
  * - Features: 
  * 
- *     -->  writting 'AuthorInfo' styles to tailwind.	
+ *     -->  writting 'AuthorName' styles to tailwind.	
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -18,11 +18,10 @@ import tw from 'twin.macro';
  */
 
 export const AuthorName = styled.span`
-	margin-bottom: 1px;
-	font-size: sm;
-	font-style: italic;
-	font-weight: bold;
+	${tw`mb-px text-sm italic font-bold`}
+
 `;
+
 
 export const AuthorInfo = styled.div`
 	${tw`flex flex-col items-start`}
