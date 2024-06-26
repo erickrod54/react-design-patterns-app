@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 23.20 - data js  
+/**react-design-patterns-app - version 25.02 - data js  
  * - Features: 
  *    
- *     --> Changing API request for top_quotes id
+ *     --> Adding FetchTopQuotes code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5494,6 +5494,16 @@ const UsersApiHookLogicAndDataAbs = () => {
   
       export const fetchTopQuotes = () => 
           api.get("top_quotes").then((res) => res.data.quotes)  
+    `
+    },
+    {
+    id: 155,
+    name: 'Adding FetchTopQuotes',
+    code:   
+    `
+      <QueryClientProvider client={queryClient}>
+                    <FetchTopQuotes />
+       </QueryClientProvider>  
     `
     }
   ];
