@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.02 - data js  
+/**react-design-patterns-app - version 25.03 - data js  
  * - Features: 
  *    
- *     --> Adding FetchTopQuotes code
+ *     --> Adding FetchTopQuotes code id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5497,7 +5497,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 155,
+    id: 156,
     name: 'Adding FetchTopQuotes',
     code:   
     `
