@@ -5,12 +5,13 @@ import { usePatternsAppContext } from "../context";
 import FetchTopQuotes from "./api.layer.use.cases.quotes.component";
 import { QueryClient, QueryClientProvider } from "react-query";
 import BashCode from "./bash.higlight.component";
+import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.05 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.06 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'FetchTopQuotes' Component
+ *     --> Starting 'ToastContainer' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -79,6 +80,11 @@ const FetchingDataWitReactQuery = () => {
                 <QueryClientProvider client={queryClient}>
                     <FetchTopQuotes />
                 </QueryClientProvider>
+
+                <p>
+                    also can be a variant by adding a <span className="text-white font-semibold"> ToastContainer </span>
+                    that will add an error handling: 
+                </p>
                 
             </SectionWrapper>
         
