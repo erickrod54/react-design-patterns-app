@@ -7,10 +7,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import BashCode from "./bash.higlight.component";
 
 
-/**react-design-patterns-app - version 25.02 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.04 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'FetchTopQuotes'
+ *     --> Adding 'fetchtopquotes' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -25,6 +25,7 @@ const FetchingDataWitReactQuery = () => {
     const serverquotesjs = CodeData[154].code;
     const topquotesapirequest = CodeData[155].code;
     const withlogger = CodeData[151].code;
+    const fetchtopquotes = CodeData[156].code;
 
 
     return(
@@ -66,8 +67,11 @@ const FetchingDataWitReactQuery = () => {
                     In order to render <span className="text-white font-semibold"> FetchTopQuotes </span>
                     and manage the API i have to provide a <span className="text-white font-semibold"> client </span>  
                     prop and wrap the component using <span className="text-white font-semibold"> QueryClientProvider </span>
+                    as follows:
                 </p>
 
+                <BashCode code={fetchtopquotes}/>
+                
             </SectionWrapper>
         
         </div>
