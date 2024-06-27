@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.03 - data js  
+/**react-design-patterns-app - version 25.05 - data js  
  * - Features: 
  *    
- *     --> Adding FetchTopQuotes code id
+ *     --> Adding FetchTopQuotes code comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5501,6 +5501,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: 'Adding FetchTopQuotes',
     code:   
     `
+      /**this is 'QueryClientProvider' from react-query library*/
       <QueryClientProvider client={queryClient}>
                     <FetchTopQuotes />
        </QueryClientProvider>  
