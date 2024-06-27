@@ -7,10 +7,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import BashCode from "./bash.higlight.component";
 
 
-/**react-design-patterns-app - version 25.04 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.05 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'fetchtopquotes' code
+ *     --> Adding 'FetchTopQuotes' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -71,6 +71,14 @@ const FetchingDataWitReactQuery = () => {
                 </p>
 
                 <BashCode code={fetchtopquotes}/>
+
+                <p>
+                    Resulting in:
+                </p>
+
+                <QueryClientProvider client={queryClient}>
+                    <FetchTopQuotes />
+                </QueryClientProvider>
                 
             </SectionWrapper>
         
