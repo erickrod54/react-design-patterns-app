@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.06 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.07 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'ToastContainer' Component
+ *     --> Rendering 'ToastContainer' Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -81,10 +81,21 @@ const FetchingDataWitReactQuery = () => {
                     <FetchTopQuotes />
                 </QueryClientProvider>
 
+                <br/>
+                
+                <br />
+
+                <br />
+
                 <p>
                     also can be a variant by adding a <span className="text-white font-semibold"> ToastContainer </span>
-                    that will add an error handling: 
+                    that will add an error handling, resulting the component in: 
                 </p>
+
+                <QueryClientProvider client={queryClient}>
+                    <ToastContainer />
+                    <FetchTopQuotes />
+                </QueryClientProvider>
                 
             </SectionWrapper>
         
