@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.09 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.10 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding Updating and Reseting Advantages with useMutation
+ *     --> Adding Updating and Reseting Disadvantages with useMutation
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -136,6 +136,28 @@ const FetchingDataWitReactQuery = () => {
                 </li>
                 <li>
                     <span className="text-white font-semibold"> Scalable Structure </span> ( eparates API logic from UI components, making it easier to maintain and expand )
+                </li>
+            </ul>
+
+            <p>
+                  And some <span className="text-white font-semibold"> disadvantages </span> can be:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Verbose Code </span> ( The implementation is relatively verbose, which might make it harder for beginners to follow )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Error Handling Could Be Improved </span> ( Only basic error feedback - e.g., alerts - is provided. More robust error handling - e.g., error boundaries or detailed logging - could enhance resilience )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Potential Over-Reliance on invalidateQueries </span> (Frequent invalidations can cause unnecessary re-fetching and potential performance bottlenecks if the dataset is large or the API is slow )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Basic Styling </span> ( Uses styled components with minimal explanation, which might not align with a broader UI/UX framework )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Limited Focus on React Query Features </span> ( not fully explore other features like onError, retry, or optimistic updates, which could enhance functionality )
                 </li>
             </ul>
                 
