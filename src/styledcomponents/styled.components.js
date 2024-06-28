@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 25.00 - styled.components
+/**react-design-patterns-app - version 25.08 - styled.components
  * - Features: 
  * 
- *     -->  writting 'AuthorName' styles to tailwind.	
+ *     -->  writting 'fetching-data-withj-react-query-updating' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -601,6 +601,12 @@ export const CustomTitleStyle = styled.div`
 .fetching-data-withj-react-query{
 	span{
 			${tw`text-amber-200 underline`}
+		}	
+}
+
+.fetching-data-withj-react-query-updating{
+	span{
+			${tw`text-amber-400 underline`}
 		}	
 }
 
