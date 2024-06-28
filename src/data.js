@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.05 - data js  
+/**react-design-patterns-app - version 25.07 - data js  
  * - Features: 
  *    
- *     --> Adding FetchTopQuotes code comments
+ *     --> Adding FetchTopQuotes with ToastContainer
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5505,6 +5505,18 @@ const UsersApiHookLogicAndDataAbs = () => {
       <QueryClientProvider client={queryClient}>
                     <FetchTopQuotes />
        </QueryClientProvider>  
+    `
+    },
+    {
+    id: 157,
+    name: 'Adding FetchTopQuotes with ToastContainer',
+    code:   
+    `
+      /**i can add also the toast container*/
+        <QueryClientProvider client={queryClient}>
+          <ToastContainer />
+          <FetchTopQuotes />
+        </QueryClientProvider> 
     `
     }
   ];
