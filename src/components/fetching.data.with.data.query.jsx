@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.07 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.08 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Rendering 'ToastContainer' Component
+ *     --> Starting Updating and Reseting Data for FetchTopQuotes
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -96,6 +96,26 @@ const FetchingDataWitReactQuery = () => {
                     <ToastContainer />
                     <FetchTopQuotes />
                 </QueryClientProvider>
+
+                <br/>
+                
+                <br />
+
+                <br />
+
+                <br />
+
+                <CustomTitleStyle>
+                    <CustomTitle  title={<p className="fetching-data-withj-react-query-updating"><span > Fetching Data with ReactQuery with Creating and Reseting Data</span></p>} />
+                </CustomTitleStyle>
+
+                <p>
+                    A variant that can include operations as <span className="text-white font-semibold"> creating, and resting quotes </span> can be done 
+                    by first implementing an <span className="text-white font-semibold"> useMutation hook </span> and the main 
+                    focus will be on creating a functional React component that <span className="text-white font-semibold"> 
+                    interacts with an API to post new data </span>, plus <span className="text-white font-semibold"> reset existing data, and handle optimistic 
+                    updates </span> in a React Query workflow
+                </p>
                 
             </SectionWrapper>
         
