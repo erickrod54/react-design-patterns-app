@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.08 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.09 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting Updating and Reseting Data for FetchTopQuotes
+ *     --> Adding Updating and Reseting Advantages with useMutation
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -116,6 +116,28 @@ const FetchingDataWitReactQuery = () => {
                     interacts with an API to post new data </span>, plus <span className="text-white font-semibold"> reset existing data, and handle optimistic 
                     updates </span> in a React Query workflow
                 </p>
+
+                <p>
+                    Some important <span className="text-white font-semibold"> advantages </span> can be:
+                </p>
+
+                <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Leverages React Query's Features </span> ( Simplifies server state management by using useMutation and queryClient for caching and invalidation and automatically handles background fetching and cache updates. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Encapsulated State Management </span> ( Keeps form and mutation logic self-contained, promoting modularity and code reuse )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Error Handling and Feedback </span> (Includes client-side validation and feedback mechanisms - e.g., alerts and toasts- for a better user experience.)
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Optimistic Updates </span> ( Uses queryClient.invalidateQueries to refresh the UI and show updated data immediately after successful mutations. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Scalable Structure </span> ( eparates API logic from UI components, making it easier to maintain and expand )
+                </li>
+            </ul>
                 
             </SectionWrapper>
         
