@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.10 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.11 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding Updating and Reseting Disadvantages with useMutation
+ *     --> Starting 'API endpoints for post and reset'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -160,6 +160,10 @@ const FetchingDataWitReactQuery = () => {
                     <span className="text-white font-semibold"> Limited Focus on React Query Features </span> ( not fully explore other features like onError, retry, or optimistic updates, which could enhance functionality )
                 </li>
             </ul>
+
+            <p>
+                first starting by creating the <span className="text-white font-semibold"> API endpoints for post and reset </span> quotes
+            </p>
                 
             </SectionWrapper>
         
