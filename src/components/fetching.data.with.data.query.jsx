@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.11 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.12 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'API endpoints for post and reset'
+ *     --> Adding 'API endpoints for post and reset' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -27,7 +27,7 @@ const FetchingDataWitReactQuery = () => {
     const topquotesapirequest = CodeData[155].code;
     const withlogger = CodeData[151].code;
     const fetchtopquotes = CodeData[156].code;
-
+    const postresetquotes = CodeData[158].code;
 
     return(
         <div>
@@ -162,8 +162,10 @@ const FetchingDataWitReactQuery = () => {
             </ul>
 
             <p>
-                first starting by creating the <span className="text-white font-semibold"> API endpoints for post and reset </span> quotes
+                first starting by creating the <span className="text-white font-semibold"> API endpoints for post and reset </span> quotes as follows:
             </p>
+
+            <BashCode code={postresetquotes}/>
                 
             </SectionWrapper>
         
