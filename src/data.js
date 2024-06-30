@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.12 - data js  
+/**react-design-patterns-app - version 25.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'API request, post and reset API endpoints'
+ *     --> Adding 'UpdateQuotesForm' code
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5531,6 +5531,106 @@ const UsersApiHookLogicAndDataAbs = () => {
           /**here i add the postQuote and resetQuotes operations*/
           export const postQuote = (quote) => api.post("", quote);
           export const resetQuotes = () => api.post("reset", {});
+    `
+    },
+    {
+    id: 158,
+    name: 'UpdateQuotesForm',
+    code:   
+    `
+      const UpdateQuotesForm = () => {
+      // Get access to the QueryClient instance
+      const queryClient = useQueryClient();
+      // Quotes mutations
+      const createQuoteMutation = useMutation(postQuote);
+      const resetQuotesMutation = useMutation((e) => resetQuotes());
+      // Form state
+      const [form, setForm] = useState({
+        author: "",
+        quote: "",
+      });
+      // Update the form state on change
+      const onChange = (e) => {
+        setForm((_form) => ({
+          ..._form,
+          [e.target.name]: e.target.value,
+        }));
+      };
+      // Validate the form and start create quote mutation
+      const onSubmit = async (e) => {
+        e.preventDefault();
+        const { author, quote } = form;
+        if (!author || !quote) {
+          alert("Please provide quote and author text.");
+          return;
+        }
+        await createQuoteMutation.mutate(form, {
+          onSuccess: () => {
+            setForm({
+              quote: "",
+              author: "",
+            });
+            // Tell React-Query to refetch 'top-quotes' and 'quotes' queries
+            queryClient.invalidateQueries("top-quotes");
+            toast.success("Quote created");
+          },
+        });
+      };
+      // Reset the quotes to their original state on the server
+      const onReset = (e) => {
+        resetQuotesMutation.mutate(e, {
+          onSuccess: () => {
+            queryClient.invalidateQueries("top-quotes");
+            toast.success("Quote resetted.");
+          },
+        });
+      };
+      return (
+        <Container>
+          <Title>Create quote</Title>
+          <Form onSubmit={onSubmit}>
+            <FormGroup>
+              <Label>Author</Label>
+              <Input
+                type="text"
+                name="author"
+                value={form.author}
+                onChange={onChange}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>Quote</Label>
+              <Input
+                type="text"
+                name="quote"
+                value={form.quote}
+                onChange={onChange}
+              />
+            </FormGroup>
+            <div style={{ textAlign: "center" }}>
+              <Button
+                type="submit"
+                isLoading={createQuoteMutation.isLoading}
+                disabled={createQuoteMutation.isLoading}
+              >
+                {createQuoteMutation.isLoading
+                  ? "Creating quote..."
+                  : "Create quote"}
+              </Button>
+              <Button
+                type="button"
+                onClick={onReset}
+                isLoading={resetQuotesMutation.isLoading}
+                disabled={resetQuotesMutation.isLoading}
+              >
+                {resetQuotesMutation.isLoading ? "Resetting..." : "Reset quotes"}
+              </Button>
+            </div>
+          </Form>
+        </Container>
+      );
+    };
+    export default UpdateQuotesForm;
     `
     }
   ];
