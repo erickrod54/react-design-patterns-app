@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.13 - data js  
+/**react-design-patterns-app - version 25.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'UpdateQuotesForm' code
+ *     --> Adding 'UpdateQuotesForm' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5534,7 +5534,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 158,
+    id: 159,
     name: 'UpdateQuotesForm',
     code:   
     `
