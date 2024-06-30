@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.12 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.13 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'API endpoints for post and reset' code
+ *     --> Starting 'UpdateQuotesForm' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -166,6 +166,11 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={postresetquotes}/>
+
+            <p>
+                following a component <span className="text-white font-semibold"> UpdateQuotesForm </span> will be created in order
+                to handle these new requests:
+            </p>
                 
             </SectionWrapper>
         
