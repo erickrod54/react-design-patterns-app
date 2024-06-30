@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.07 - data js  
+/**react-design-patterns-app - version 25.12 - data js  
  * - Features: 
  *    
- *     --> Adding FetchTopQuotes with ToastContainer
+ *     --> Adding 'API request, post and reset API endpoints'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5517,6 +5517,20 @@ const UsersApiHookLogicAndDataAbs = () => {
           <ToastContainer />
           <FetchTopQuotes />
         </QueryClientProvider> 
+    `
+    },
+    {
+    id: 158,
+    name: 'API request, post and reset API endpoints',
+    code:   
+    `
+      
+        export const fetchTopQuotes = () =>
+        api.get("top_quotes").then((res) => res.data.quotes);
+
+          /**here i add the postQuote and resetQuotes operations*/
+          export const postQuote = (quote) => api.post("", quote);
+          export const resetQuotes = () => api.post("reset", {});
     `
     }
   ];
