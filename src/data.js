@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.16 - data js  
+/**react-design-patterns-app - version 25.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'server.quotes.post.update.js' id
+ *     --> Adding 'server.quotes.post.update.js' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5649,12 +5649,14 @@ const UsersApiHookLogicAndDataAbs = () => {
     app.use(cors());
     app.use(express.json());
 
+    // Dynamically import nanoid and assign it  
     let nanoid;
     (async () => {
       const { nanoid: importedNanoid } = await import("nanoid");
       nanoid = importedNanoid;
     })();
 
+    // Helper functions
     const sleep = (time = 1000) =>
       new Promise((resolve) => setTimeout(resolve, time));
 
@@ -5687,7 +5689,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       };
     };
 
-  
+    // Routes
     app.get("/top_quotes", async (req, res) => {
       try {
         await sleep();
@@ -5751,7 +5753,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       }
     });
 
-   
+   // Start the server
     app.listen(port, () => {
       console.log(\`Server is running at http://localhost:$\`{port}\`);
     });
