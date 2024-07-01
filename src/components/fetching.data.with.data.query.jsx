@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.14 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.15 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'updateformcode' 
+ *     --> Starting 'backend variant' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -174,6 +174,11 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={updateformcode}/>
+
+            <p>
+                the <span className="text-white font-semibold"> server in the backend </span>  will have some 
+                changes in order to perform properly the quote addition for <span className="text-white font-semibold"> reset and create </span>:
+            </p>
 
             </SectionWrapper>
         
