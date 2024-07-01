@@ -8,10 +8,10 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 
 
-/**react-design-patterns-app - version 25.15 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.17 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'backend variant' 
+ *     --> Adding 'backend variant' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -29,6 +29,7 @@ const FetchingDataWitReactQuery = () => {
     const fetchtopquotes = CodeData[156].code;
     const postresetquotes = CodeData[158].code;
     const updateformcode = CodeData[159].code;
+    const serverside = CodeData[160].code;
 
     return(
         <div>
@@ -179,6 +180,8 @@ const FetchingDataWitReactQuery = () => {
                 the <span className="text-white font-semibold"> server in the backend </span>  will have some 
                 changes in order to perform properly the quote addition for <span className="text-white font-semibold"> reset and create </span>:
             </p>
+
+            <BashCode code={serverside}/>
 
             </SectionWrapper>
         
