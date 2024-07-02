@@ -6,12 +6,13 @@ import FetchTopQuotes from "./api.layer.use.cases.quotes.component";
 import { QueryClient, QueryClientProvider } from "react-query";
 import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
+import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component";
 
 
-/**react-design-patterns-app - version 25.17 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.18 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'backend variant' code
+ *     --> Starting 'UpdateQuotesForm' implementation
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -182,6 +183,11 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={serverside}/>
+
+            <p>
+                then the <span className="text-white font-semibold"> UpdateQuotesForm </span> get scoped, even if they are same multiple applictions 
+                running at the same time, this implementation won't affect others apps:
+            </p>
 
             </SectionWrapper>
         
