@@ -9,10 +9,10 @@ import { ToastContainer } from "react-toastify";
 import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component";
 
 
-/**react-design-patterns-app - version 25.18 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 25.19 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'UpdateQuotesForm' implementation
+ *     --> Adding 'updateformscoped' implementation code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -31,6 +31,7 @@ const FetchingDataWitReactQuery = () => {
     const postresetquotes = CodeData[158].code;
     const updateformcode = CodeData[159].code;
     const serverside = CodeData[160].code;
+    const updateformscoped = CodeData[161].code;
 
     return(
         <div>
@@ -186,8 +187,10 @@ const FetchingDataWitReactQuery = () => {
 
             <p>
                 then the <span className="text-white font-semibold"> UpdateQuotesForm </span> get scoped, even if they are same multiple applictions 
-                running at the same time, this implementation won't affect others apps:
+                running at the same time, this implementation won't affect others apps, and the implementation as follows:
             </p>
+
+            <BashCode code={updateformscoped}/>
 
             </SectionWrapper>
         
