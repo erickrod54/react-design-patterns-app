@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 25.17 - data js  
+/**react-design-patterns-app - version 25.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'server.quotes.post.update.js' comments
+ *     --> Adding 'UpdateQuotesForm implementation' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5757,6 +5757,19 @@ const UsersApiHookLogicAndDataAbs = () => {
     app.listen(port, () => {
       console.log(\`Server is running at http://localhost:$\`{port}\`);
     });
+    `
+    },
+    {
+    id: 160,
+    name: 'UpdateQuotesForm implementation',
+    code:   
+    `
+    <QueryClientProvider client={queryClient}>
+        <ToastContainer />
+        {/*here its placed UpdateQuotesForm **/}
+        <UpdateQuotesForm />
+        <FetchTopQuotes />
+    </QueryClientProvider>
     `
     }
   ];
