@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 25.08 - styled.components
+/**react-design-patterns-app - version 26.00 - styled.components
  * - Features: 
  * 
- *     -->  writting 'fetching-data-withj-react-query-updating' styles 
+ *     -->  writting 'ContainerPostForm' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,14 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const ContainerPostForm = styled.div`
+  padding: 32px;
+  max-width: 2xl;
+  margin: auto;
+  background-color: gray;
+  border-radius: 1rem;
+`;
 
 export const AuthorName = styled.span`
 	${tw`mb-px text-sm italic font-bold`}
