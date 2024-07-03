@@ -5,10 +5,10 @@ import { toast } from "react-toastify";
 import styled from "styled-components";
 import { postQuote, resetQuotes } from "../api/api.layer.index";
 
-/**react-design-patterns-app - version 25.19- UpdateQuotesForm
+/**react-design-patterns-app - version 25.20- UpdateQuotesForm
  * - Features: 
  * 
- *     --> Building 'UpdateQuotesForm' s
+ *     --> Updating styles values
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -16,9 +16,11 @@ import { postQuote, resetQuotes } from "../api/api.layer.index";
 */
 
 const Container = styled.div`
-  padding: 8px;
+  padding: 32px;
   max-width: 2xl;
   margin: auto;
+  background-color: gray;
+  border-radius: 1rem;
 `;
 
 const Title = styled.h2`
@@ -42,9 +44,14 @@ const FormGroup = styled.div`
   gap: 16px;
 `;
 
-const Label = styled.label``;
+const Label = styled.label`
+    color: darkviolet;
+`;
 
-const Input = styled.input``;
+const Input = styled.input`
+    font-size: x-large;
+    color: black;
+`;
 
 const Button = styled.button`
   type: ${(props) => props.type};
