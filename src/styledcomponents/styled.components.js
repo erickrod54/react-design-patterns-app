@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 26.00 - styled.components
+/**react-design-patterns-app - version 26.01 - styled.components
  * - Features: 
  * 
- *     -->  writting 'ContainerPostForm' styles 
+ *     -->  writting 'TitlePostForm' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,12 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const TitlePostForm = styled.h2`
+  font-weight: bold;
+  font-size: 2xl;
+  margin-bottom: 4px;
+`;
 
 export const ContainerPostForm = styled.div`
   padding: 32px;
