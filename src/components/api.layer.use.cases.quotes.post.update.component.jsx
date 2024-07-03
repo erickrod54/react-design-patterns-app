@@ -4,24 +4,17 @@ import { useMutation, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { postQuote, resetQuotes } from "../api/api.layer.index";
+import { ContainerPostForm } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 25.20- UpdateQuotesForm
+/**react-design-patterns-app - version 26.00- UpdateQuotesForm
  * - Features: 
  * 
- *     --> Updating styles values
+ *     --> Migrating 'ContainerPostForm' styles 
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
-
-const Container = styled.div`
-  padding: 32px;
-  max-width: 2xl;
-  margin: auto;
-  background-color: gray;
-  border-radius: 1rem;
-`;
 
 const Title = styled.h2`
   font-weight: bold;
@@ -110,7 +103,7 @@ const UpdateQuotesForm = () => {
     });
   };
   return (
-    <Container>
+    <ContainerPostForm>
       <Title>Create quote</Title>
       <Form onSubmit={onSubmit}>
         <FormGroup>
@@ -151,7 +144,7 @@ const UpdateQuotesForm = () => {
           </Button>
         </div>
       </Form>
-    </Container>
+    </ContainerPostForm>
   );
 };
 export default UpdateQuotesForm;
