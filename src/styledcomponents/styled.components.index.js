@@ -9,6 +9,7 @@ import { AlertWrapper,
          ButtonsOptContextStyle,
          ChildWrapper,
          Container,
+         ContainerPostForm,
          CoverContainer,
          CustomTitleStyle,
          DisplayWrapper,
@@ -43,10 +44,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 24.12 - styledcomponents > index
+/**react-design-patterns-app - version 26.00 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'AuthorName' 
+ *     --> Importing and exporting 'ContainerPostForm' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -102,4 +103,5 @@ export { SectionWrapper,
          QuoteText,
          AuthorCite,
          AuthorInfo,
+         ContainerPostForm,
          AuthorName, Title, MealListContainer, MealItem }
