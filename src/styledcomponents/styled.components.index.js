@@ -17,6 +17,7 @@ import { AlertWrapper,
          ErrorMessage,
          Fieldset,
          Form,
+         FormPost,
          FormWrapper,
          FormWrapperDeferred,
          HeavyComponentWrapper,
@@ -44,10 +45,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 26.01 - styledcomponents > index
+/**react-design-patterns-app - version 26.02 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'TitlePostForm' 
+ *     --> Importing and exporting 'FormPost' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -105,4 +106,5 @@ export { SectionWrapper,
          AuthorInfo,
          ContainerPostForm,
          AuthorName, Title,
-         TitlePostForm, MealListContainer, MealItem }
+         TitlePostForm,
+         FormPost, MealListContainer, MealItem }
