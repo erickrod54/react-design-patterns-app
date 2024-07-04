@@ -4,23 +4,19 @@ import { useMutation, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { postQuote, resetQuotes } from "../api/api.layer.index";
-import { ContainerPostForm } from "../styledcomponents/styled.components.index";
+import { ContainerPostForm, TitlePostForm } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 26.00- UpdateQuotesForm
+/**react-design-patterns-app - version 26.01- UpdateQuotesForm
  * - Features: 
  * 
- *     --> Migrating 'ContainerPostForm' styles 
+ *     --> Migrating 'TitlePostForm' styles 
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-const Title = styled.h2`
-  font-weight: bold;
-  font-size: 2xl;
-  margin-bottom: 4px;
-`;
+
 
 const Form = styled.form`
   display: flex;
@@ -104,7 +100,7 @@ const UpdateQuotesForm = () => {
   };
   return (
     <ContainerPostForm>
-      <Title>Create quote</Title>
+      <TitlePostForm>Create quote</TitlePostForm>
       <Form onSubmit={onSubmit}>
         <FormGroup>
           <Label>Author</Label>
