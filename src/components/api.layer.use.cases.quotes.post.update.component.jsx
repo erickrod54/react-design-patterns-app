@@ -4,12 +4,12 @@ import { useMutation, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { postQuote, resetQuotes } from "../api/api.layer.index";
-import { ContainerPostForm, TitlePostForm } from "../styledcomponents/styled.components.index";
+import { ContainerPostForm, FormPost, TitlePostForm } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 26.01- UpdateQuotesForm
+/**react-design-patterns-app - version 26.02- UpdateQuotesForm
  * - Features: 
  * 
- *     --> Migrating 'TitlePostForm' styles 
+ *     --> Migrating 'FormPost' styles 
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -17,15 +17,6 @@ import { ContainerPostForm, TitlePostForm } from "../styledcomponents/styled.com
 */
 
 
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: lg;
-  margin: auto;
-  text-align: left;
-`;
 
 const FormGroup = styled.div`
   display: flex;
@@ -101,7 +92,7 @@ const UpdateQuotesForm = () => {
   return (
     <ContainerPostForm>
       <TitlePostForm>Create quote</TitlePostForm>
-      <Form onSubmit={onSubmit}>
+      <FormPost onSubmit={onSubmit}>
         <FormGroup>
           <Label>Author</Label>
           <Input
@@ -139,7 +130,7 @@ const UpdateQuotesForm = () => {
             {resetQuotesMutation.isLoading ? "Resetting..." : "Reset quotes"}
           </Button>
         </div>
-      </Form>
+      </FormPost>
     </ContainerPostForm>
   );
 };
