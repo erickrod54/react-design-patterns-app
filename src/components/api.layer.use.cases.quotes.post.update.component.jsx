@@ -4,25 +4,18 @@ import { useMutation, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { postQuote, resetQuotes } from "../api/api.layer.index";
-import { ContainerPostForm, FormPost, TitlePostForm } from "../styledcomponents/styled.components.index";
+import { ContainerPostForm, FormGroup, FormPost, TitlePostForm } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 26.02- UpdateQuotesForm
+/**react-design-patterns-app - version 26.03- UpdateQuotesForm
  * - Features: 
  * 
- *     --> Migrating 'FormPost' styles 
+ *     --> Migrating 'FormGroup' styles 
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-
-const FormGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
 
 const Label = styled.label`
     color: darkviolet;
