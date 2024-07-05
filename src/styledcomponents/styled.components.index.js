@@ -24,6 +24,7 @@ import { AlertWrapper,
          HeavyComponentWrapper,
          Input,
          KeyExerciseWrapper,
+         Label,
          ListWrapper,
          LoadingMessage,
          MainMealContainer,
@@ -46,10 +47,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 26.03 - styledcomponents > index
+/**react-design-patterns-app - version 26.04 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'FormGroup' 
+ *     --> Importing and exporting 'Label' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -108,4 +109,5 @@ export { SectionWrapper,
          ContainerPostForm,
          AuthorName, Title,
          TitlePostForm,
-         FormPost, FormGroup, MealListContainer, MealItem }
+         FormPost,
+         Label, FormGroup, MealListContainer, MealItem }
