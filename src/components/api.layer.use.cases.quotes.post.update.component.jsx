@@ -4,26 +4,18 @@ import { useMutation, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { postQuote, resetQuotes } from "../api/api.layer.index";
-import { ContainerPostForm, FormGroup, FormPost, InputPost, Label, TitlePostForm } from "../styledcomponents/styled.components.index";
+import { ButtonPostForm, ContainerPostForm, FormGroup, FormPost, InputPost, Label, TitlePostForm } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 26.05- UpdateQuotesForm
+/**react-design-patterns-app - version 26.06- UpdateQuotesForm
  * - Features: 
  * 
- *     --> Migrating 'InputPost' styles 
+ *     --> Migrating 'ButtonPostForm' styles 
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-const Button = styled.button`
-  type: ${(props) => props.type};
-  background-color: ${(props) => (props.isLoading ? "#CBD5E0" : "#4299E1")};
-  color: ${(props) => (props.isLoading ? "#A0AEC0" : "#fff")};
-  padding: 12px 16px;
-  border: none;
-  cursor: ${(props) => (props.isLoading ? "not-allowed" : "pointer")};
-`;
 
 const UpdateQuotesForm = () => {
   // Get access to the QueryClient instance
@@ -95,7 +87,7 @@ const UpdateQuotesForm = () => {
           />
         </FormGroup>
         <div style={{ textAlign: "center" }}>
-          <Button
+          <ButtonPostForm
             type="submit"
             isLoading={createQuoteMutation.isLoading}
             disabled={createQuoteMutation.isLoading}
@@ -103,15 +95,15 @@ const UpdateQuotesForm = () => {
             {createQuoteMutation.isLoading
               ? "Creating quote..."
               : "Create quote"}
-          </Button>
-          <Button
+          </ButtonPostForm>
+          <ButtonPostForm
             type="button"
             onClick={onReset}
             isLoading={resetQuotesMutation.isLoading}
             disabled={resetQuotesMutation.isLoading}
           >
             {resetQuotesMutation.isLoading ? "Resetting..." : "Reset quotes"}
-          </Button>
+          </ButtonPostForm>
         </div>
       </FormPost>
     </ContainerPostForm>
