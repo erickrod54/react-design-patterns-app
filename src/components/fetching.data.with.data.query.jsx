@@ -9,10 +9,10 @@ import { ToastContainer } from "react-toastify";
 import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component";
 
 
-/**react-design-patterns-app - version 25.19 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 26.06 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'updateformscoped' implementation code
+ *     --> Rendering 'UpdateQuotesForm' implementation code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -191,6 +191,17 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={updateformscoped}/>
+
+            <p>
+                resulting in the following:
+            </p>
+        
+            <QueryClientProvider client={queryClient}>
+                <ToastContainer />
+                <UpdateQuotesForm />
+                <FetchTopQuotes />
+            </QueryClientProvider>
+            
 
             </SectionWrapper>
         
