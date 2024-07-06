@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 26.05 - styled.components
+/**react-design-patterns-app - version 26.06 - styled.components
  * - Features: 
  * 
- *     -->  writting 'InputPost' styles 
+ *     -->  writting 'ButtonPostForm' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,16 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const ButtonPostForm = styled.button`
+  type: ${(props) => props.type};
+  background-color: ${(props) => (props.isLoading ? "#CBD5E0" : "#4299E1")};
+  color: ${(props) => (props.isLoading ? "#A0AEC0" : "#fff")};
+  padding: 12px 16px;
+  border: none;
+  cursor: ${(props) => (props.isLoading ? "not-allowed" : "pointer")};
+`;
+
 export const InputPost = styled.input`
 	font-size: x-large;
 	color: black;
