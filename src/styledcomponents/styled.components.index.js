@@ -4,6 +4,7 @@ import { AlertWrapper,
          AuthorName,
          BooksUseTransitionContainer,
          ButtonGeneral,
+         ButtonPostForm,
          ButtonUseTransition,
          ButtonWrapper,
          ButtonsOptContextStyle,
@@ -48,10 +49,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 26.05 - styledcomponents > index
+/**react-design-patterns-app - version 26.06 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'InputPost' 
+ *     --> Importing and exporting 'ButtonPostForm' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -112,4 +113,4 @@ export { SectionWrapper,
          TitlePostForm,
          FormPost,
          Label,
-         InputPost, FormGroup, MealListContainer, MealItem }
+         InputPost, ButtonPostForm, FormGroup, MealListContainer, MealItem }
