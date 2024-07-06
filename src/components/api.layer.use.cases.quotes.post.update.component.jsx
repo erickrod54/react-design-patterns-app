@@ -4,22 +4,17 @@ import { useMutation, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { postQuote, resetQuotes } from "../api/api.layer.index";
-import { ContainerPostForm, FormGroup, FormPost, Label, TitlePostForm } from "../styledcomponents/styled.components.index";
+import { ContainerPostForm, FormGroup, FormPost, InputPost, Label, TitlePostForm } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 26.04- UpdateQuotesForm
+/**react-design-patterns-app - version 26.05- UpdateQuotesForm
  * - Features: 
  * 
- *     --> Migrating 'Label' styles 
+ *     --> Migrating 'InputPost' styles 
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
-
-const Input = styled.input`
-    font-size: x-large;
-    color: black;
-`;
 
 const Button = styled.button`
   type: ${(props) => props.type};
@@ -83,7 +78,7 @@ const UpdateQuotesForm = () => {
       <FormPost onSubmit={onSubmit}>
         <FormGroup>
           <Label>Author</Label>
-          <Input
+          <InputPost
             type="text"
             name="author"
             value={form.author}
@@ -92,7 +87,7 @@ const UpdateQuotesForm = () => {
         </FormGroup>
         <FormGroup>
           <Label>Quote</Label>
-          <Input
+          <InputPost
             type="text"
             name="quote"
             value={form.quote}
