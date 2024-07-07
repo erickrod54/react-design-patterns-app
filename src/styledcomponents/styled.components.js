@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 26.09 - styled.components
+/**react-design-patterns-app - version 26.10 - styled.components
  * - Features: 
  * 
- *     -->  writting 'TitlePostForm' styles to tailwind
+ *     -->  writting 'FormPost' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -41,12 +41,8 @@ export const FormGroup = styled.div`
 	gap: 16px;
 `;
 export const FormPost = styled.form`
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-	max-width: lg;
-	margin: auto;
-	text-align: left;
+	${tw`flex flex-col gap-6 max-w-lg mx-auto text-left`}
+
 `;
 
 export const TitlePostForm = styled.h2`
