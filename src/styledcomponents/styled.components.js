@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 26.10 - styled.components
+/**react-design-patterns-app - version 26.12 - styled.components
  * - Features: 
  * 
- *     -->  writting 'FormPost' styles to tailwind
+ *     -->  writting 'Label' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -32,14 +32,15 @@ export const InputPost = styled.input`
 `;
 
 export const Label = styled.label`
-	color: darkviolet;
+	${tw`text-purple-800`}
+
 `;
 
 export const FormGroup = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
+	${tw`flex flex-col gap-4`}
+
 `;
+
 export const FormPost = styled.form`
 	${tw`flex flex-col gap-6 max-w-lg mx-auto text-left`}
 
