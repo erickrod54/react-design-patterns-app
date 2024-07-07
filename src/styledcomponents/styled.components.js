@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 26.07 - styled.components
+/**react-design-patterns-app - version 26.08 - styled.components
  * - Features: 
  * 
- *     -->  writting 'fetching-data-withj-react-query-paginated-quotes' styles 
+ *     -->  writting 'ContainerPostForm' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -56,11 +56,8 @@ export const TitlePostForm = styled.h2`
 `;
 
 export const ContainerPostForm = styled.div`
-  padding: 32px;
-  max-width: 2xl;
-  margin: auto;
-  background-color: gray;
-  border-radius: 1rem;
+  	${tw`p-8 max-w-2xl mx-auto bg-gray-500 rounded-lg`}
+
 `;
 
 export const AuthorName = styled.span`
