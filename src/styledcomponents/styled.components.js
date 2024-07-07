@@ -5,7 +5,7 @@ import tw from 'twin.macro';
 /**react-design-patterns-app - version 26.12 - styled.components
  * - Features: 
  * 
- *     -->  writting 'Label' styles to tailwind
+ *     -->  writting 'InputPost' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -27,8 +27,8 @@ export const ButtonPostForm = styled.button`
 `;
 
 export const InputPost = styled.input`
-	font-size: x-large;
-	color: black;
+	${tw`text-xl text-black`}
+
 `;
 
 export const Label = styled.label`
