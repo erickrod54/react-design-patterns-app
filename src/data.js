@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 26.15 - data js  
+/**react-design-patterns-app - version 26.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'fetchQuotesByPage'  code
+ *     --> Adding 'fetchQuotesByPage'  id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5772,7 +5772,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 161,
+    id: 162,
     name: 'fetchQuotesByPage API request',
     code:   
     `
