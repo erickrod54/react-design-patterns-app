@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 26.16 - data js  
+/**react-design-patterns-app - version 26.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'fetchQuotesByPage'  id
+ *     --> Adding 'fetchQuotesByPage'  comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5781,7 +5781,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     
       export const postQuote = (quote) => api.post("", quote);
       export const resetQuotes = () => api.post("reset", {});
-    
+
+      /**fetchQuotesByPage will take params from the server.quotes */
       export const fetchQuotesByPage = (page) => 
       api.get("",{params: {page}}).then((res) => res.data);
     `
