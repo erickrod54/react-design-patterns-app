@@ -7,12 +7,13 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component";
+import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 
 
-/**react-design-patterns-app - version 26.06 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 26.15 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Rendering 'UpdateQuotesForm' implementation code
+ *     --> Starting 'Pagineted quotes'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -32,6 +33,7 @@ const FetchingDataWitReactQuery = () => {
     const updateformcode = CodeData[159].code;
     const serverside = CodeData[160].code;
     const updateformscoped = CodeData[161].code;
+    //const apiquotepagination = CodeData[162].code;
 
     return(
         <div>
@@ -201,7 +203,24 @@ const FetchingDataWitReactQuery = () => {
                 <UpdateQuotesForm />
                 <FetchTopQuotes />
             </QueryClientProvider>
+
+                <br/>
+                
+                <br />
+
+                <br />
+
+                <br />
+
             
+            <CustomTitleStyle>
+                    <CustomTitle  title={<p className="fetching-data-withj-react-query-paginated-quotes"><span > Paginated Quotes </span></p>} />
+            </CustomTitleStyle>
+            
+            <p>
+                another variant can be an <span className="text-white font-semibold"> API to paginate quotes </span>, first step will be 
+                at the API, creating the endpoint
+            </p>
 
             </SectionWrapper>
         
