@@ -10,10 +10,10 @@ import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component
 import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 
 
-/**react-design-patterns-app - version 26.16 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 26.17 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'apiquotepagination' code
+ *     --> Adding 'serverside' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -223,6 +223,13 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={apiquotepagination}/>
+
+            <p>
+                the <span className="text-white font-semibold"> server in the backend </span>  will be the same 
+                as the prevoius app:
+            </p>
+
+            <BashCode code={serverside}/>
 
             
             </SectionWrapper>
