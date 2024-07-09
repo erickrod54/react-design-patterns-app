@@ -10,10 +10,10 @@ import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component
 import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 
 
-/**react-design-patterns-app - version 26.17 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 26.19 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'serverside' code
+ *     --> Adding 'paginatedquotescomponent' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -34,6 +34,9 @@ const FetchingDataWitReactQuery = () => {
     const serverside = CodeData[160].code;
     const updateformscoped = CodeData[161].code;
     const apiquotepagination = CodeData[162].code;
+    const paginatedquotescomponent = CodeData[163].code;
+
+    
 
     return(
         <div>
@@ -230,6 +233,13 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={serverside}/>
+
+            <p>
+                then the component that will handle the pagination <span className="text-white font-semibold"> PaginatedQuotes  </span>  
+                will be as follows:
+            </p>
+
+            <BashCode code={paginatedquotescomponent}/>
 
             
             </SectionWrapper>
