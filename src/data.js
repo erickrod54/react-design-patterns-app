@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 26.17 - data js  
+/**react-design-patterns-app - version 26.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'fetchQuotesByPage'  comments
+ *     --> Adding 'PaginatedQuotes'  Component
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5785,6 +5785,82 @@ const UsersApiHookLogicAndDataAbs = () => {
       /**fetchQuotesByPage will take params from the server.quotes */
       export const fetchQuotesByPage = (page) => 
       api.get("",{params: {page}}).then((res) => res.data);
+    `
+    },
+    {
+    id: 162,
+    name: 'PaginatedQuotes Component',
+    code:   
+    `
+      const PaginatedQuotes = () => {
+
+      const [page, setPage] = useState(1);
+      const {
+          data: quotes,
+          isLoading,
+          isFetching,
+          isSuccess,
+          isError,
+          isPreviousData,
+        } = useQuery(["quotes", page], () => fetchQuotesByPage(page), {
+          keepPreviousData: true,
+        });
+    
+        return(
+            <Container>
+          <div>
+            <Title>Paginated Quotes</Title>
+            {isError ? (
+              <ErrorMessage>There was a problem with fetching quotes</ErrorMessage>
+            ) : null}
+            {isLoading ? <LoadingMessage>Fetching quotes</LoadingMessage> : null}
+            {isSuccess ? (
+              <QuotesContainer>
+                <div>
+                  <div>
+                    {quotes?.quotes.map((quote) => (
+                      <QuoteBlock key={quote.id}>
+                        <QuoteText>"{quote.quote}"</QuoteText>
+                        <CiteContainer>
+                          <div>
+                            <AuthorText>{quote.author}</AuthorText>
+                          </div>
+                        </CiteContainer>
+                      </QuoteBlock>
+                    ))}
+                  </div>
+                  <div>
+                    {isFetching ? <LoadingSpan>Loading...</LoadingSpan> : null}{" "}
+                    <div>
+                      <PageButton
+                        onClick={() => setPage((old) => Math.max(old - 1, 0))}
+                        disabled={page === 1}
+                      >
+                        Previous
+                      </PageButton>{" "}
+                      <PageNumber>{page}</PageNumber>
+                      <NextPageButton
+                        onClick={() => {
+                          if (!isPreviousData && quotes?.hasMore) {
+                            setPage((old) => old + 1);
+                          }
+                        }}
+                        disabled={isPreviousData || !quotes?.hasMore}
+                      >
+                        Next
+                      </NextPageButton>
+                    </div>
+                  </div>
+                </div>
+              </QuotesContainer>
+            ) : null}
+          </div>
+        </Container>
+        )
+    
+    }
+    
+    export default PaginatedQuotes;
     `
     }
   ];
