@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 26.20 - data js  
+/**react-design-patterns-app - version 27.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'PaginatedQuotes'  commentss
+ *     --> Adding 'PaginatedQuotes'  implemention
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5868,6 +5868,17 @@ const UsersApiHookLogicAndDataAbs = () => {
     }
     
     export default PaginatedQuotes;
+    `
+    },
+    {
+    id: 163,
+    name: 'PaginatedQuotes implementation',
+    code:   
+    `
+      <QueryClientProvider client={queryClient}>
+        <ToastContainer />
+        <PaginatedQuotes />
+      </QueryClientProvider>
     `
     }
   ];
