@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 26.19 - data js  
+/**react-design-patterns-app - version 26.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'PaginatedQuotes'  id
+ *     --> Adding 'PaginatedQuotes'  commentss
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5794,7 +5794,12 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
       const PaginatedQuotes = () => {
 
+      /**this state will mutate the page number
+       * starting as default value at 1*/  
       const [page, setPage] = useState(1);
+
+      /**all of these are the params destructured 
+       * from 'fetchQuotesByPage'*/
       const {
           data: quotes,
           isLoading,
@@ -5805,7 +5810,9 @@ const UsersApiHookLogicAndDataAbs = () => {
         } = useQuery(["quotes", page], () => fetchQuotesByPage(page), {
           keepPreviousData: true,
         });
-    
+
+        /**Depending on the API data, the params will handle to render
+         * UI or Error in case the data is not avaible*/
         return(
             <Container>
           <div>
