@@ -10,10 +10,10 @@ import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component
 import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 
 
-/**react-design-patterns-app - version 27.03 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 27.04 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'paginatedimplementation' code
+ *     --> Adding 'paginatedimplementation' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -247,7 +247,8 @@ const FetchingDataWitReactQuery = () => {
                 ( the scope behavior will be the same as the previous app )
             </p>
 
-            
+            <BashCode code={paginatedimplementation}/>
+
             </SectionWrapper>
         
         </div>
