@@ -11,6 +11,7 @@ import SearchMealsComponent from "./api.layer.use.cases.meal.search.component.js
 import SearchMealComponentErrorLogger from "./api.layer.use.cases.meal.search.error.logger.component.jsx";
 import UseCasesMealApiSearch from "./api.layer.use.cases.meal.search.jsx";
 import FetchTopQuotes from "./api.layer.use.cases.quotes.component.jsx";
+import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination.jsx";
 import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component.jsx";
 import BashCode from "./bash.higlight.component";
 import BooksUseTransitionAfter from "./book.use.transition.after.component";
@@ -123,10 +124,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 25.11 - components > index  
+/**react-design-patterns-app - version 27.05 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'UpdateQuotesForm'
+ *     --> Importing and exporting 'PaginatedQuotes'
  * 
  * Note: Pending to make responsive design
  */
@@ -254,5 +255,6 @@ export {
          SearchMealComponentErrorLogger,
          FetchingDataWitReactQuery,
          FetchTopQuotes,
-         UpdateQuotesForm
+         UpdateQuotesForm,
+         PaginatedQuotes
         }
