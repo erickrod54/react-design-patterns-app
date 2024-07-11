@@ -3,10 +3,10 @@ import { fetchQuotesByPage } from "../api/api.layer.index"
 import { useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 27.05 - api pagination
+/**react-design-patterns-app - version 27.06 - api pagination
  * - Features: 
  * 
- *     --> Building 'PaginatedQuotes' 
+ *     --> Refactoring 'Title'  styles
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -23,6 +23,12 @@ const Title = styled.h2`
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: darkorange;
+  background-color: lavender;
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 8px;
+  margin: 8px;
 `;
 
 const ErrorMessage = styled.p`
