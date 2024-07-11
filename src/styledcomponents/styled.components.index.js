@@ -10,6 +10,7 @@ import { AlertWrapper,
          ButtonsOptContextStyle,
          ChildWrapper,
          Container,
+         ContainerPaginated,
          ContainerPostForm,
          CoverContainer,
          CustomTitleStyle,
@@ -49,10 +50,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 26.06 - styledcomponents > index
+/**react-design-patterns-app - version 27.08 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ButtonPostForm' 
+ *     --> Importing and exporting 'ContainerPaginated' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -113,4 +114,5 @@ export { SectionWrapper,
          TitlePostForm,
          FormPost,
          Label,
-         InputPost, ButtonPostForm, FormGroup, MealListContainer, MealItem }
+         InputPost,
+         ContainerPaginated, ButtonPostForm, FormGroup, MealListContainer, MealItem }
