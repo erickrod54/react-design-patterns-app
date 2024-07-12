@@ -48,12 +48,12 @@ import { AlertWrapper,
          SectionWrapper,
          ShoppingCounterWrapper,
          SingleButtonWrapper,
-         StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
+         StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePaginated, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 27.08 - styledcomponents > index
+/**react-design-patterns-app - version 27.09 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ContainerPaginated' 
+ *     --> Importing and exporting 'TitlePaginated' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -115,4 +115,5 @@ export { SectionWrapper,
          FormPost,
          Label,
          InputPost,
-         ContainerPaginated, ButtonPostForm, FormGroup, MealListContainer, MealItem }
+         ContainerPaginated,
+         TitlePaginated, ButtonPostForm, FormGroup, MealListContainer, MealItem }
