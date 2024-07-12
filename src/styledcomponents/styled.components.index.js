@@ -17,6 +17,7 @@ import { AlertWrapper,
          DisplayWrapper,
          Emoji,
          ErrorMessage,
+         ErrorMessagePagination,
          Fieldset,
          Form,
          FormGroup,
@@ -50,10 +51,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePaginated, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 27.09 - styledcomponents > index
+/**react-design-patterns-app - version 27.10 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'TitlePaginated' 
+ *     --> Importing and exporting 'ErrorMessagePagination' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -116,4 +117,5 @@ export { SectionWrapper,
          Label,
          InputPost,
          ContainerPaginated,
-         TitlePaginated, ButtonPostForm, FormGroup, MealListContainer, MealItem }
+         TitlePaginated, 
+         ErrorMessagePagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
