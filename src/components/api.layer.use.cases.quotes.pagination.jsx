@@ -2,22 +2,19 @@ import { useQuery } from "react-query";
 import { fetchQuotesByPage } from "../api/api.layer.index"
 import { useState } from "react";
 import styled from "styled-components";
+import { ContainerPaginated } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 27.06 - api pagination
+/**react-design-patterns-app - version 27.08 - api pagination
  * - Features: 
  * 
- *     --> Refactoring 'Title'  styles
+ *     --> Migrating 'ContainerPaginated'  styles
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-const Container = styled.div`
-  padding: 8px;
-  max-width: 2xl;
-  margin: auto;
-`;
+
 
 const Title = styled.h2`
   font-weight: bold;
@@ -111,7 +108,7 @@ const PaginatedQuotes = () => {
     });
 
     return(
-        <Container>
+        <ContainerPaginated>
       <div>
         <Title>Paginated Quotes</Title>
         {isError ? (
@@ -159,7 +156,7 @@ const PaginatedQuotes = () => {
           </QuotesContainer>
         ) : null}
       </div>
-    </Container>
+    </ContainerPaginated>
     )
 
 }
