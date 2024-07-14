@@ -2,28 +2,18 @@ import { useQuery } from "react-query";
 import { fetchQuotesByPage } from "../api/api.layer.index"
 import { useState } from "react";
 import styled from "styled-components";
-import { ContainerPaginated, ErrorMessagePagination, LoadingMessagePagination, QuotesContainerPagination, TitlePaginated } from "../styledcomponents/styled.components.index";
+import { ContainerPaginated, ErrorMessagePagination, LoadingMessagePagination, QuoteBlockPagination, QuotesContainerPagination, TitlePaginated } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 27.12 - api pagination
+/**react-design-patterns-app - version 27.13 - api pagination
  * - Features: 
  * 
- *     --> Migrating 'QuotesContainerPagination'  styles
+ *     --> Migrating 'QuoteBlockPagination'  styles
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-const QuoteBlock = styled.blockquote`
-  position: relative;
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-style: italic;
-  border-left: 4px solid #718096;
-  background-color: #f7fafc;
-  color: #4a5568;
-  margin-bottom: 1rem;
-`;
 
 const QuoteText = styled.p`
   margin-bottom: 1rem;
@@ -98,14 +88,14 @@ const PaginatedQuotes = () => {
             <div>
               <div>
                 {quotes?.quotes.map((quote) => (
-                  <QuoteBlock key={quote.id}>
+                  <QuoteBlockPagination key={quote.id}>
                     <QuoteText>"{quote.quote}"</QuoteText>
                     <CiteContainer>
                       <div>
                         <AuthorText>{quote.author}</AuthorText>
                       </div>
                     </CiteContainer>
-                  </QuoteBlock>
+                  </QuoteBlockPagination>
                 ))}
               </div>
               <div>
