@@ -2,20 +2,17 @@ import { useQuery } from "react-query";
 import { fetchQuotesByPage } from "../api/api.layer.index"
 import { useState } from "react";
 import styled from "styled-components";
-import { ContainerPaginated, ErrorMessagePagination, LoadingMessagePagination, TitlePaginated } from "../styledcomponents/styled.components.index";
+import { ContainerPaginated, ErrorMessagePagination, LoadingMessagePagination, QuotesContainerPagination, TitlePaginated } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 27.11 - api pagination
+/**react-design-patterns-app - version 27.12 - api pagination
  * - Features: 
  * 
- *     --> Migrating 'LoadingMessagePagination'  styles
+ *     --> Migrating 'QuotesContainerPagination'  styles
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
-
-
-const QuotesContainer = styled.div``;
 
 const QuoteBlock = styled.blockquote`
   position: relative;
@@ -97,7 +94,7 @@ const PaginatedQuotes = () => {
         ) : null}
         {isLoading ? <LoadingMessagePagination>Fetching quotes</LoadingMessagePagination> : null}
         {isSuccess ? (
-          <QuotesContainer>
+          <QuotesContainerPagination>
             <div>
               <div>
                 {quotes?.quotes.map((quote) => (
@@ -134,7 +131,7 @@ const PaginatedQuotes = () => {
                 </div>
               </div>
             </div>
-          </QuotesContainer>
+          </QuotesContainerPagination>
         ) : null}
       </div>
     </ContainerPaginated>
