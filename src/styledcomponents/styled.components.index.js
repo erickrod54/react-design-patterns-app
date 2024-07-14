@@ -43,6 +43,7 @@ import { AlertWrapper,
          OpenModalWrapper, OutQuotContainer, OutsideTable, Panel,
          PrimaryButton,
          QuoteBlock,
+         QuoteBlockPagination,
          QuoteText,
          QuotesContainer,
          QuotesContainerPagination,
@@ -53,10 +54,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePaginated, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 27.12 - styledcomponents > index
+/**react-design-patterns-app - version 27.13 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'QuotesContainerPagination' 
+ *     --> Importing and exporting 'QuoteBlockPagination' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -122,4 +123,5 @@ export { SectionWrapper,
          TitlePaginated, 
          ErrorMessagePagination,
          LoadingMessagePagination, 
-         QuotesContainerPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
+         QuotesContainerPagination,
+         QuoteBlockPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
