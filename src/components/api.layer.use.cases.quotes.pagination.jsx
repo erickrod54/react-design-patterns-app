@@ -2,16 +2,17 @@ import { useQuery } from "react-query";
 import { fetchQuotesByPage } from "../api/api.layer.index"
 import { useState } from "react";
 import styled from "styled-components";
-import { ContainerPaginated,
+import { CiteContainer,
+         ContainerPaginated,
          ErrorMessagePagination,
          LoadingMessagePagination,
          QuoteBlockPagination,
          QuotesContainerPagination, QuoteTextPagination, TitlePaginated } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 27.14 - api pagination
+/**react-design-patterns-app - version 27.15 - api pagination
  * - Features: 
  * 
- *     --> Migrating 'QuoteTextPagination'  styles
+ *     --> Migrating 'CiteContainer'  styles
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -21,11 +22,7 @@ import { ContainerPaginated,
 
 
 
-const CiteContainer = styled.cite`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+
 
 const AuthorText = styled.span`
   margin-bottom: 1px;
