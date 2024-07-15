@@ -2,12 +2,16 @@ import { useQuery } from "react-query";
 import { fetchQuotesByPage } from "../api/api.layer.index"
 import { useState } from "react";
 import styled from "styled-components";
-import { ContainerPaginated, ErrorMessagePagination, LoadingMessagePagination, QuoteBlockPagination, QuotesContainerPagination, TitlePaginated } from "../styledcomponents/styled.components.index";
+import { ContainerPaginated,
+         ErrorMessagePagination,
+         LoadingMessagePagination,
+         QuoteBlockPagination,
+         QuotesContainerPagination, QuoteTextPagination, TitlePaginated } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 27.13 - api pagination
+/**react-design-patterns-app - version 27.14 - api pagination
  * - Features: 
  * 
- *     --> Migrating 'QuoteBlockPagination'  styles
+ *     --> Migrating 'QuoteTextPagination'  styles
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -15,9 +19,7 @@ import { ContainerPaginated, ErrorMessagePagination, LoadingMessagePagination, Q
 */
 
 
-const QuoteText = styled.p`
-  margin-bottom: 1rem;
-`;
+
 
 const CiteContainer = styled.cite`
   display: flex;
@@ -89,7 +91,7 @@ const PaginatedQuotes = () => {
               <div>
                 {quotes?.quotes.map((quote) => (
                   <QuoteBlockPagination key={quote.id}>
-                    <QuoteText>"{quote.quote}"</QuoteText>
+                    <QuoteTextPagination>"{quote.quote}"</QuoteTextPagination>
                     <CiteContainer>
                       <div>
                         <AuthorText>{quote.author}</AuthorText>
