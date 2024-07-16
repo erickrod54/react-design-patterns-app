@@ -42,7 +42,7 @@ import { AlertWrapper,
          ModalBackground,
          ModalContent,
          MultipleFormWrapper,
-         OpenModalWrapper, OutQuotContainer, OutsideTable, PageButton, Panel,
+         OpenModalWrapper, OutQuotContainer, OutsideTable, PageButton, PageNumber, Panel,
          PrimaryButton,
          QuoteBlock,
          QuoteBlockPagination,
@@ -57,10 +57,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePaginated, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 27.18 - styledcomponents > index
+/**react-design-patterns-app - version 27.19 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'PageButton' 
+ *     --> Importing and exporting 'PageNumber' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -131,4 +131,5 @@ export { SectionWrapper,
          CiteContainer,
          AuthorText,
          PageButton,
+         PageNumber,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
