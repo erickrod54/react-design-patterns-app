@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 27.16 - styled.components
+/**react-design-patterns-app - version 27.18 - styled.components
  * - Features: 
  * 
- *     -->  writting 'AuthorText' styles 
+ *     -->  writting 'PageButton' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,15 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const PageButton = styled.button`
+	background-color: ${(props) => (props.isLoading ? "#CBD5E0" : "#4299E1")};
+	color: ${(props) => (props.isLoading ? "#A0AEC0" : "#fff")};
+	padding: 12px 16px;
+	border: none;
+	cursor: ${(props) => (props.isLoading ? "not-allowed" : "pointer")};
+	min-width: 100px;
+`;
 
 export const AuthorText = styled.span`
   margin-bottom: 1px;
