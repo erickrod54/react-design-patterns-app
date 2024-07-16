@@ -7,29 +7,20 @@ import { AuthorText,
          ContainerPaginated,
          ErrorMessagePagination,
          LoadingMessagePagination,
+         PageButton,
          QuoteBlockPagination,
          QuotesContainerPagination, QuoteTextPagination, TitlePaginated } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 27.16 - api pagination
+/**react-design-patterns-app - version 27.18 - api pagination
  * - Features: 
  * 
- *     --> Migrating 'AuthorText'  styles
+ *     --> Migrating 'PageButton'  styles
  *
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-
-const PageButton = styled.button`
-  background-color: ${(props) => (props.isLoading ? "#CBD5E0" : "#4299E1")};
-  color: ${(props) => (props.isLoading ? "#A0AEC0" : "#fff")};
-  padding: 12px 16px;
-  border: none;
-  cursor: ${(props) => (props.isLoading ? "not-allowed" : "pointer")};
-  min-width: 100px;
-`;
 
 const PageNumber = styled.span`
   font-size: 1.125rem;
