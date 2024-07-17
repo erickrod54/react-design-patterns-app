@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 27.20 - styled.components
+/**react-design-patterns-app - version 28.00 - styled.components
  * - Features: 
  * 
- *     -->  writting 'NextPageButton' styles 
+ *     -->  writting 'LoadingSpan' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,11 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const LoadingSpan = styled.span`
+	padding-left: 25px;
+	color: orange;
+`;
 
 export const NextPageButton = styled.button`
 	background-color: ${(props) => (props.isLoading ? "#CBD5E0" : "#4299E1")};
