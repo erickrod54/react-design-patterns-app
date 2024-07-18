@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 28.02 - styled.components
+/**react-design-patterns-app - version 28.03 - styled.components
  * - Features: 
  * 
- *     -->  writting 'TitlePaginated' styles  to tailwind
+ *     -->  writting 'ErrorMessagePagination' styles  to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -79,8 +79,10 @@ export const QuotesContainerPagination = styled.div``;
 export const LoadingMessagePagination = styled.p``;
 
 export const ErrorMessagePagination = styled.p`
-	color: #c53030;
+	${tw`text-red-600`}
+
 `;
+
 export const TitlePaginated = styled.h2`
 	${tw`font-bold text-2xl mb-4 text-orange-500  bg-gray-100 w-fit rounded-xl p-2 m-2`}
 `;
