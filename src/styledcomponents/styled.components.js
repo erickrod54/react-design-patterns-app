@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 28.00 - styled.components
+/**react-design-patterns-app - version 28.01 - styled.components
  * - Features: 
  * 
- *     -->  writting 'LoadingSpan' styles 
+ *     -->  writting 'ContainerPaginated' styles  to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -94,9 +94,8 @@ export const TitlePaginated = styled.h2`
 `;
 
 export const ContainerPaginated = styled.div`
-  padding: 8px;
-  max-width: 2xl;
-  margin: auto;
+	${tw`p-2 max-w-2xl mx-auto`}
+
 `;
 
 export const ButtonPostForm = styled.button`
