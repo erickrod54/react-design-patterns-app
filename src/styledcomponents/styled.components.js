@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 28.03 - styled.components
+/**react-design-patterns-app - version 28.04 - styled.components
  * - Features: 
  * 
- *     -->  writting 'ErrorMessagePagination' styles  to tailwind
+ *     -->  writting 'QuoteBlockPagination' styles  to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -64,14 +64,8 @@ export const QuoteTextPagination = styled.p`
 	margin-bottom: 1rem;
 `;
 export const QuoteBlockPagination = styled.blockquote`
-	position: relative;
-	padding: 1rem;
-	font-size: 1.5rem;
-	font-style: italic;
-	border-left: 4px solid #718096;
-	background-color: #f7fafc;
-	color: #4a5568;
-	margin-bottom: 1rem;
+	${tw`relative p-4 text-xl italic border-l-4 border-gray-500 bg-gray-50 text-gray-700 mb-4`}
+
 `;
 
 export const QuotesContainerPagination = styled.div``;
