@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 28.07 - styled.components
+/**react-design-patterns-app - version 28.08 - styled.components
  * - Features: 
  * 
- *     -->  writting 'AuthorText' styles  to tailwind
+ *     -->  writting 'PageNumber' styles  to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -32,10 +32,8 @@ export const NextPageButton = styled.button`
 `;
 
 export const PageNumber = styled.span`
-	font-size: 1.125rem;
-	font-style: italic;
-	padding-left: 15px;
-	padding-right: 15px;
+	${tw`text-lg italic pl-4 pr-4`}
+
 `;
 
 export const PageButton = styled.button`
