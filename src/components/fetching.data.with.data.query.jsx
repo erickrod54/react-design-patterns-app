@@ -8,12 +8,13 @@ import BashCode from "./bash.higlight.component";
 import { ToastContainer } from "react-toastify";
 import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component";
 import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
+import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
-/**react-design-patterns-app - version 27.06 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 28.09 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Rendering 'PaginatedQuotes' component
+ *     --> Starting 'Infinite Scroll Quotes' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -258,6 +259,24 @@ const FetchingDataWitReactQuery = () => {
                 <ToastContainer />
                 <PaginatedQuotes />
             </QueryClientProvider>
+
+            <br/>
+                
+            <br />
+
+            <br />
+
+            <br />
+            
+            <CustomTitleStyle>
+                    <CustomTitle  title={<p className="fetching-data-withj-react-query-infinite-scroll-quotes"><span > Infinite Scroll Quotes </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                also there are app the requires patterns in <span className="text-white font-semibold"> demand of data </span> so first
+                it starts by <span className="text-white font-semibold"> making a new API function </span> because infinte scroll is 
+                related with the <span className="text-white font-semibold"> move of the cursor </span> ( when it is moving down )
+            </p>
             
 
             </SectionWrapper>
