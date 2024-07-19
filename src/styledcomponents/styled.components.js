@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 28.06 - styled.components
+/**react-design-patterns-app - version 28.07 - styled.components
  * - Features: 
  * 
- *     -->  writting 'CiteContainer' styles  to tailwind
+ *     -->  writting 'AuthorText' styles  to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -48,10 +48,8 @@ export const PageButton = styled.button`
 `;
 
 export const AuthorText = styled.span`
-  margin-bottom: 1px;
-  font-size: 0.875rem;
-  font-style: italic;
-  font-weight: bold;
+  	${tw`mb-0.5 text-sm italic font-bold`}
+
 `;
 
 export const CiteContainer = styled.cite`
