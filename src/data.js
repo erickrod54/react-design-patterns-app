@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 28.10- data js  
+/**react-design-patterns-app - version 28.11- data js  
  * - Features: 
  *    
- *     --> Adding 'fetchQuotesByCursor API - Infinite Scroll' id  
+ *     --> Adding 'fetchQuotesByCursor API - Infinite Scroll' comments  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5896,6 +5896,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       export const fetchQuotesByPage = (page) => 
         api.get("",{params: {page}}).then((res) => res.data);
     
+      /**here the function uses the cursor as params*/
       export const fetchQuotesByCursor = (cursor) => 
         api.get("",{params: {cursor}}).then((res) => res.data);
     `
