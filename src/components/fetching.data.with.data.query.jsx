@@ -11,10 +11,10 @@ import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
-/**react-design-patterns-app - version 28.09 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 28.11 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'Infinite Scroll Quotes' 
+ *     --> Adding 'fetchapibycursor' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -37,6 +37,7 @@ const FetchingDataWitReactQuery = () => {
     const apiquotepagination = CodeData[162].code;
     const paginatedquotescomponent = CodeData[163].code;
     const paginatedimplementation = CodeData[164].code;
+    const fetchapibycursor = CodeData[165].code;
 
     
 
@@ -275,9 +276,11 @@ const FetchingDataWitReactQuery = () => {
             <p>
                 also there are app the requires patterns in <span className="text-white font-semibold"> demand of data </span> so first
                 it starts by <span className="text-white font-semibold"> making a new API function </span> because infinte scroll is 
-                related with the <span className="text-white font-semibold"> move of the cursor </span> ( when it is moving down )
+                related with the <span className="text-white font-semibold"> move of the cursor </span> ( when it is moving down ), 
+                as follows:
             </p>
             
+            <BashCode code={fetchapibycursor}/>
 
             </SectionWrapper>
         
