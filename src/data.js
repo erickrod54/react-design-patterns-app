@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 27.02 - data js  
+/**react-design-patterns-app - version 28.09- data js  
  * - Features: 
  *    
- *     --> Adding 'PaginatedQuotes'  comments
+ *     --> Adding 'fetchQuotesByCursor API - Infinite Scroll'  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5881,8 +5881,27 @@ const UsersApiHookLogicAndDataAbs = () => {
         <PaginatedQuotes />
       </QueryClientProvider>
     `
+    },
+    {
+    id: 164,
+    name: 'fetchQuotesByCursor API - Infinite Scroll',
+    code:   
+    `
+      export const fetchTopQuotes = () =>
+      api.get("top_quotes").then((res) => res.data.quotes);
+    
+      export const postQuote = (quote) => api.post("", quote);
+      export const resetQuotes = () => api.post("reset", {});
+    
+      export const fetchQuotesByPage = (page) => 
+        api.get("",{params: {page}}).then((res) => res.data);
+    
+      export const fetchQuotesByCursor = (cursor) => 
+        api.get("",{params: {cursor}}).then((res) => res.data);
+    `
     }
   ];
+
 
   /**List Pattern data  -- start */
   
