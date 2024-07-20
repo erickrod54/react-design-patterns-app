@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 28.11- data js  
+/**react-design-patterns-app - version 28.12- data js  
  * - Features: 
  *    
- *     --> Adding 'fetchQuotesByCursor API - Infinite Scroll' comments  
+ *     --> Adding 'InfiniteScrollQuotes' code   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5900,9 +5900,75 @@ const UsersApiHookLogicAndDataAbs = () => {
       export const fetchQuotesByCursor = (cursor) => 
         api.get("",{params: {cursor}}).then((res) => res.data);
     `
+    },
+    {
+    id: 165,
+    name: 'fetchQuotesByCursor API - Infinite Scroll',
+    code:   
+    `
+      const InfiniteScrollQuotes = () => {
+      const { ref: loadMoreRef, inView } = useInView();
+      const {
+        data: quotes,
+        isLoading,
+        isFetchingNextPage,
+        isSuccess,
+        isError,
+        fetchNextPage,
+        hasNextPage,
+      } = useInfiniteQuery(
+        "quotes",
+        ({ pageParam = 0 }) => fetchQuotesByCursor(pageParam),
+        {
+          getNextPageParam: (lastPage, pages) => {
+            return lastPage.nextCursor;
+          },
+        }
+      );
+      useEffect(() => {
+        if (inView && !isFetchingNextPage && hasNextPage) {
+          fetchNextPage();
+        }
+      }, [inView]);
+      return (
+        <Container>
+          <div>
+            <Title>Infinite Scroll Quotes</Title>
+            {isError ? (
+              <ErrorMessage>There was a problem with fetching quotes</ErrorMessage>
+            ) : null}
+            {isLoading ? <LoadingMessage>Fetching quotes</LoadingMessage> : null}
+            {isSuccess ? (
+              <QuotesContainer>
+                <div>
+                  <div>
+                    {quotes?.pages.map((data) =>
+                      data.quotes.map((quote) => (
+                        <QuoteBlock key={quote.id}>
+                          <QuoteText>"{quote.quote}"</QuoteText>
+                          <CiteContainer>
+                            <div>
+                              <AuthorText>{quote.author}</AuthorText>
+                            </div>
+                          </CiteContainer>
+                        </QuoteBlock>
+                      ))
+                    )}
+                    <div ref={loadMoreRef}></div>
+                  </div>
+                  {isFetchingNextPage ? <span>Loading...</span> : null}{" "}
+                </div>
+              </QuotesContainer>
+            ) : null}
+          </div>
+        </Container>
+      );
+    };
+    export default InfiniteScrollQuotes;
+    `
     }
   ];
-
+  
 
   /**List Pattern data  -- start */
   
