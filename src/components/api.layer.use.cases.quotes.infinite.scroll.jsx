@@ -4,10 +4,10 @@ import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.s
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 28.13 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 28.14 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Building 'InfiniteScrollQuotes' Component
+ *     --> Building 'ToggleText' style Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -89,6 +89,18 @@ const Button = styled.button`
     color: #a0aec0;
   }
 `;
+
+const ToggleText = styled.span`
+  color: ${(props) => (props.display ? "#e53e3e" : "#38a169")}; /* Red for 'Hide', Green for 'Show' */
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 
 
 const InfiniteScrollQuotes = () => {
