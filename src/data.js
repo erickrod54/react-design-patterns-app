@@ -4,7 +4,7 @@ import { layoutexamples, sidebarexample } from "./assets/index.assets"
 /**react-design-patterns-app - version 28.13- data js  
  * - Features: 
  *    
- *     --> Adding 'InfiniteScrollQuotes' id   
+ *     --> Adding 'InfiniteScrollQuotes' comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5907,7 +5907,11 @@ const UsersApiHookLogicAndDataAbs = () => {
     code:   
     `
       const InfiniteScrollQuotes = () => {
+
+      /**destructured from useInView and belong to react-intersection-observer*/
       const { ref: loadMoreRef, inView } = useInView();
+
+      /**props destructured from fetchQuotesByCursor and come from the server*/
       const {
         data: quotes,
         isLoading,
@@ -5925,11 +5929,17 @@ const UsersApiHookLogicAndDataAbs = () => {
           },
         }
       );
+
+      /**the useEffect checks once the component mounts to control the 
+       * quotes data behavior*/
       useEffect(() => {
         if (inView && !isFetchingNextPage && hasNextPage) {
           fetchNextPage();
         }
       }, [inView]);
+
+      /**the Component checks once props are in place to control the 
+       * quotes loading behavior*/
       return (
         <Container>
           <div>
