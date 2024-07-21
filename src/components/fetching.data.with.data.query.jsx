@@ -11,10 +11,10 @@ import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
-/**react-design-patterns-app - version 28.12 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 28.13 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'InfiniteScrollQuotes' component
+ *     --> Adding 'InfiniteScrollQuotes' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -38,6 +38,7 @@ const FetchingDataWitReactQuery = () => {
     const paginatedquotescomponent = CodeData[163].code;
     const paginatedimplementation = CodeData[164].code;
     const fetchapibycursor = CodeData[165].code;
+    const infinitescrollquotes = CodeData[166].code;
 
     
 
@@ -288,6 +289,8 @@ const FetchingDataWitReactQuery = () => {
                 </span> and the <span className="text-white font-semibold"> fetchQuotesByCursor </span>  function 
                 in a useEffect to control the Component Flow when the component mounts:
             </p>
+
+            <BashCode code={infinitescrollquotes}/>
 
             </SectionWrapper>
         
