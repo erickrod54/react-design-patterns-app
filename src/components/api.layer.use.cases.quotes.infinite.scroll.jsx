@@ -4,10 +4,10 @@ import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.s
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 28.17 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 28.18 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Rendering 'HiddenMessage' style Component
+ *     --> Changing 'ToggleText' style colors
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -91,7 +91,7 @@ const Button = styled.button`
 `;
 
 const ToggleText = styled.span`
-  color: ${(props) => (props.display ? "#e53e3e" : "#38a169")}; /* Red for 'Hide', Green for 'Show' */
+  color: ${(props) => (props.display ? "#9900ff" : "#ffee03")}; /* Red for 'Hide', Green for 'Show' */
   font-weight: bold;
   font-size: 1rem;
   transition: color 0.3s ease;
