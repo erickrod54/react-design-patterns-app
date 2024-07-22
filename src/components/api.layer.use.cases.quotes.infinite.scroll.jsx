@@ -4,10 +4,10 @@ import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.s
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 28.15 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 28.16 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Rendering 'ToggleText' style Component
+ *     --> Building 'HiddenMessage' style Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -101,7 +101,17 @@ const ToggleText = styled.span`
   }
 `;
 
-
+const HiddenMessage = styled.h2`
+  font-size: 1.5rem; /* Large, readable size */
+  color: #718096; /* Neutral gray for a subtle message */
+  text-align: center; /* Center the text */
+  margin-top: 1rem; /* Add space above the message */
+  background-color: #f7fafc; /* Light background for emphasis */
+  padding: 0.5rem 1rem; /* Add padding for better readability */
+  border-radius: 0.5rem; /* Rounded corners */
+  border: 1px solid #e2e8f0; /* Light border for definition */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+`;
 
 const InfiniteScrollQuotes = () => {
   const { ref: loadMoreRef, inView } = useInView();
