@@ -4,10 +4,10 @@ import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.s
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 28.16 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 28.17 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Building 'HiddenMessage' style Component
+ *     --> Rendering 'HiddenMessage' style Component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -151,7 +151,8 @@ const InfiniteScrollQuotes = () => {
             {display ? "Hide Component" : "Show Component"}
         </ToggleText>
       </Button>
-      {display ? (
+      {!display && <HiddenMessage>The component is hidden</HiddenMessage>}
+      {display && (
         <Container>
           <div>
             <Title>Infinite Scroll Quotes</Title>
@@ -185,8 +186,6 @@ const InfiniteScrollQuotes = () => {
             )}
           </div>
         </Container>
-      ) : (
-        <h2>The component is hidden</h2>
       )}
     </>
   );
