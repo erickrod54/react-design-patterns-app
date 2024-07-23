@@ -11,10 +11,10 @@ import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
-/**react-design-patterns-app - version 28.13 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 28.19 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'InfiniteScrollQuotes' code
+ *     --> Rendering 'InfiniteScrollQuotes' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -287,10 +287,22 @@ const FetchingDataWitReactQuery = () => {
                 the <span className="text-white font-semibold"> server in the backend </span>  will be the same 
                 as the prevoius app. The component will change by using the <span className="text-white font-semibold"> server props 
                 </span> and the <span className="text-white font-semibold"> fetchQuotesByCursor </span>  function 
-                in a useEffect to control the Component Flow when the component mounts:
+                in a useEffect to control the Component Flow when the component mounts
             </p>
 
+            
+
+
             <BashCode code={infinitescrollquotes}/>
+
+            <p>
+                the <span className="text-white font-semibold"> InfiniteScrollQuotes </span>  will render as follows:
+            </p>
+
+            <QueryClientProvider client={queryClient}>
+                <ToastContainer />
+                <InfiniteScrollQuotes/>
+            </QueryClientProvider>
 
             </SectionWrapper>
         
