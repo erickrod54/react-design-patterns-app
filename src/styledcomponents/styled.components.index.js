@@ -14,6 +14,7 @@ import { AlertWrapper,
          Container,
          ContainerPaginated,
          ContainerPostForm,
+         ContainerScroll,
          CoverContainer,
          CustomTitleStyle,
          DisplayWrapper,
@@ -59,10 +60,10 @@ import { AlertWrapper,
          SingleButtonWrapper,
          StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePaginated, TitlePostForm, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 28.00 - styledcomponents > index
+/**react-design-patterns-app - version 28.20 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'LoadingSpan' 
+ *     --> Importing and exporting 'ContainerScroll' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -136,4 +137,5 @@ export { SectionWrapper,
          PageNumber,
          NextPageButton,
          LoadingSpan,
+         ContainerScroll,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
