@@ -11,6 +11,7 @@ import SearchMealsComponent from "./api.layer.use.cases.meal.search.component.js
 import SearchMealComponentErrorLogger from "./api.layer.use.cases.meal.search.error.logger.component.jsx";
 import UseCasesMealApiSearch from "./api.layer.use.cases.meal.search.jsx";
 import FetchTopQuotes from "./api.layer.use.cases.quotes.component.jsx";
+import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll.jsx";
 import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination.jsx";
 import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component.jsx";
 import BashCode from "./bash.higlight.component";
@@ -124,10 +125,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 27.05 - components > index  
+/**react-design-patterns-app - version 28.19 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'PaginatedQuotes'
+ *     --> Importing and exporting 'InfiniteScrollQuotes'
  * 
  * Note: Pending to make responsive design
  */
@@ -256,5 +257,6 @@ export {
          FetchingDataWitReactQuery,
          FetchTopQuotes,
          UpdateQuotesForm,
-         PaginatedQuotes
+         PaginatedQuotes,
+         InfiniteScrollQuotes
         }
