@@ -3,24 +3,18 @@ import { useInfiniteQuery } from "react-query";
 import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.scroll";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ContainerScroll } from "../styledcomponents/styled.components";
+import { ContainerScroll, TitleScroll } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 28.20 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 29.01 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Migrating 'ContainerScroll' style component
+ *     --> Migrating 'TitleScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
 
-
-const Title = styled.h2`
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-`;
 
 const ErrorMessage = styled.p`
   color: #c53030;
@@ -152,7 +146,7 @@ const InfiniteScrollQuotes = () => {
       {display && (
         <ContainerScroll>
           <div>
-            <Title>Infinite Scroll Quotes</Title>
+            <TitleScroll>Infinite Scroll Quotes</TitleScroll>
             {isError && (
               <ErrorMessage>
                 There was a problem with fetching quotes
