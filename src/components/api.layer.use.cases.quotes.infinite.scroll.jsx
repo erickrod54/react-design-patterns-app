@@ -3,21 +3,18 @@ import { useInfiniteQuery } from "react-query";
 import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.scroll";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { ContainerScroll } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 28.18 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 28.20 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Changing 'ToggleText' style colors
+ *     --> Migrating 'ContainerScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-const Container = styled.div`
-  padding: 2rem 0;
-  max-width: 2xl;
-  margin: auto;
-`;
+
 
 const Title = styled.h2`
   font-weight: bold;
@@ -153,7 +150,7 @@ const InfiniteScrollQuotes = () => {
       </Button>
       {!display && <HiddenMessage>The component is hidden</HiddenMessage>}
       {display && (
-        <Container>
+        <ContainerScroll>
           <div>
             <Title>Infinite Scroll Quotes</Title>
             {isError && (
@@ -185,7 +182,7 @@ const InfiniteScrollQuotes = () => {
               </QuotesContainer>
             )}
           </div>
-        </Container>
+        </ContainerScroll>
       )}
     </>
   );
