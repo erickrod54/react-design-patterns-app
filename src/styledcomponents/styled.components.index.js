@@ -21,6 +21,7 @@ import { AlertWrapper,
          Emoji,
          ErrorMessage,
          ErrorMessagePagination,
+         ErrorMessageScroll,
          Fieldset,
          Form,
          FormGroup,
@@ -58,12 +59,15 @@ import { AlertWrapper,
          SectionWrapper,
          ShoppingCounterWrapper,
          SingleButtonWrapper,
-         StepFlowWrapper, TableTitleWrapper, Title, TitleForQuote, TitlePaginated, TitlePostForm, TitleScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
+         StepFlowWrapper,
+         TableTitleWrapper,
+         Title,
+         TitleForQuote, TitlePaginated, TitlePostForm, TitleScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 29.00 - styledcomponents > index
+/**react-design-patterns-app - version 29.02 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'TitleScroll' 
+ *     --> Importing and exporting 'ErrorMessageScroll' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -139,4 +143,5 @@ export { SectionWrapper,
          LoadingSpan,
          ContainerScroll,
          TitleScroll,
+         ErrorMessageScroll,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
