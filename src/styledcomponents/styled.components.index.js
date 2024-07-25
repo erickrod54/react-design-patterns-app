@@ -55,6 +55,7 @@ import { AlertWrapper,
          QuoteTextPagination,
          QuotesContainer,
          QuotesContainerPagination,
+         QuotesContainerScroll,
          ReviewsContainer,
          SectionItemCenterWrapper,
          SectionWrapper,
@@ -65,10 +66,10 @@ import { AlertWrapper,
          Title,
          TitleForQuote, TitlePaginated, TitlePostForm, TitleScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 29.03 - styledcomponents > index
+/**react-design-patterns-app - version 29.04 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'LoadingMessageScroll' 
+ *     --> Importing and exporting 'QuotesContainerScroll' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -146,4 +147,5 @@ export { SectionWrapper,
          TitleScroll,
          ErrorMessageScroll,
          LoadingMessageScroll,
+         QuotesContainerScroll,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
