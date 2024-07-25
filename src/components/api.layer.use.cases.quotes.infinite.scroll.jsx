@@ -3,12 +3,12 @@ import { useInfiniteQuery } from "react-query";
 import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.scroll";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ContainerScroll, TitleScroll } from "../styledcomponents/styled.components";
+import { ContainerScroll, ErrorMessageScroll, TitleScroll } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 29.01 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 29.02 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Migrating 'TitleScroll' style component
+ *     --> Migrating 'ErrorMessageScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -16,9 +16,6 @@ import { ContainerScroll, TitleScroll } from "../styledcomponents/styled.compone
 
 
 
-const ErrorMessage = styled.p`
-  color: #c53030;
-`;
 
 const LoadingMessage = styled.p``;
 
@@ -148,9 +145,9 @@ const InfiniteScrollQuotes = () => {
           <div>
             <TitleScroll>Infinite Scroll Quotes</TitleScroll>
             {isError && (
-              <ErrorMessage>
+              <ErrorMessageScroll>
                 There was a problem with fetching quotes
-              </ErrorMessage>
+              </ErrorMessageScroll>
             )}
             {isLoading && (
               <LoadingMessage>Fetching quotes</LoadingMessage>
