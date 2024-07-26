@@ -54,6 +54,7 @@ import { AlertWrapper,
          QuoteBlockScroll,
          QuoteText,
          QuoteTextPagination,
+         QuoteTextScroll,
          QuotesContainer,
          QuotesContainerPagination,
          QuotesContainerScroll,
@@ -70,7 +71,7 @@ import { AlertWrapper,
 /**react-design-patterns-app - version 29.05 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'QuoteBlockScroll' 
+ *     --> Importing and exporting 'QuoteTextScroll' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -150,4 +151,5 @@ export { SectionWrapper,
          LoadingMessageScroll,
          QuotesContainerScroll,
          QuoteBlockScroll,
+         QuoteTextScroll,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
