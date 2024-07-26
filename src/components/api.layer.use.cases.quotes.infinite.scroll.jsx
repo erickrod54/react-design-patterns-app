@@ -3,12 +3,12 @@ import { useInfiniteQuery } from "react-query";
 import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.scroll";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, TitleScroll } from "../styledcomponents/styled.components";
+import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, QuotesContainerScroll, TitleScroll } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 29.03 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 29.04 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Migrating 'LoadingMessageScroll' style component
+ *     --> Migrating 'QuotesContainerScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -16,10 +16,6 @@ import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, TitleScroll 
 
 
 
-
-
-
-const QuotesContainer = styled.div``;
 
 const QuoteBlock = styled.blockquote`
   position: relative;
@@ -153,7 +149,7 @@ const InfiniteScrollQuotes = () => {
               <LoadingMessageScroll>Fetching quotes</LoadingMessageScroll>
             )}
             {isSuccess && (
-              <QuotesContainer>
+              <QuotesContainerScroll>
                 <div>
                   {quotes?.pages.map((data) =>
                     data.quotes.map((quote) => (
@@ -170,7 +166,7 @@ const InfiniteScrollQuotes = () => {
                   <div ref={loadMoreRef}></div>
                 </div>
                 {isFetchingNextPage && <span>Loading...</span>}
-              </QuotesContainer>
+              </QuotesContainerScroll>
             )}
           </div>
         </ContainerScroll>
