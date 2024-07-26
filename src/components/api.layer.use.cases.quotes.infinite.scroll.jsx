@@ -3,12 +3,12 @@ import { useInfiniteQuery } from "react-query";
 import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.scroll";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, QuotesContainerScroll, TitleScroll } from "../styledcomponents/styled.components";
+import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, QuoteBlockScroll, QuotesContainerScroll, TitleScroll } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 29.04 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 29.05 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Migrating 'QuotesContainerScroll' style component
+ *     --> Migrating 'QuoteBlockScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -17,16 +17,7 @@ import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, QuotesContai
 
 
 
-const QuoteBlock = styled.blockquote`
-  position: relative;
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-style: italic;
-  border-left: 4px solid #718096;
-  background-color: #f7fafc;
-  color: #4a5568;
-  margin-bottom: 1rem;
-`;
+
 
 const QuoteText = styled.p`
   margin-bottom: 1rem;
@@ -153,14 +144,14 @@ const InfiniteScrollQuotes = () => {
                 <div>
                   {quotes?.pages.map((data) =>
                     data.quotes.map((quote) => (
-                      <QuoteBlock key={quote.id}>
+                      <QuoteBlockScroll key={quote.id}>
                         <QuoteText>"{quote.quote}"</QuoteText>
                         <CiteContainer>
                           <div>
                             <AuthorText>{quote.author}</AuthorText>
                           </div>
                         </CiteContainer>
-                      </QuoteBlock>
+                      </QuoteBlockScroll>
                     ))
                   )}
                   <div ref={loadMoreRef}></div>
