@@ -3,12 +3,15 @@ import { useInfiniteQuery } from "react-query";
 import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.scroll";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, QuoteBlockScroll, QuotesContainerScroll, TitleScroll } from "../styledcomponents/styled.components";
+import { ContainerScroll,
+         ErrorMessageScroll,
+         LoadingMessageScroll,
+         QuoteBlockScroll, QuotesContainerScroll, QuoteTextScroll, TitleScroll } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 29.05 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 29.06 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Migrating 'QuoteBlockScroll' style component
+ *     --> Migrating 'QuoteTextScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -19,9 +22,7 @@ import { ContainerScroll, ErrorMessageScroll, LoadingMessageScroll, QuoteBlockSc
 
 
 
-const QuoteText = styled.p`
-  margin-bottom: 1rem;
-`;
+
 
 const CiteContainer = styled.cite`
   display: flex;
@@ -145,7 +146,7 @@ const InfiniteScrollQuotes = () => {
                   {quotes?.pages.map((data) =>
                     data.quotes.map((quote) => (
                       <QuoteBlockScroll key={quote.id}>
-                        <QuoteText>"{quote.quote}"</QuoteText>
+                        <QuoteTextScroll>"{quote.quote}"</QuoteTextScroll>
                         <CiteContainer>
                           <div>
                             <AuthorText>{quote.author}</AuthorText>
