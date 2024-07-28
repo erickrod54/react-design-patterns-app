@@ -3,6 +3,7 @@ import { AlertWrapper,
          AuthorInfo,
          AuthorName,
          AuthorText,
+         AuthorTextScroll,
          BooksUseTransitionContainer,
          ButtonGeneral,
          ButtonPostForm,
@@ -69,10 +70,10 @@ import { AlertWrapper,
          Title,
          TitleForQuote, TitlePaginated, TitlePostForm, TitleScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 29.07 - styledcomponents > index
+/**react-design-patterns-app - version 29.08 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'CiteContainerScroll' 
+ *     --> Importing and exporting 'AuthorTextScroll' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -154,4 +155,5 @@ export { SectionWrapper,
          QuoteBlockScroll,
          QuoteTextScroll,
          CiteContainerScroll,
+         AuthorTextScroll,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
