@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 29.09 - styled.components
+/**react-design-patterns-app - version 29.10 - styled.components
  * - Features: 
  * 
- *     -->  writting 'ButtonScroll' styles
+ *     -->  writting 'ToggleTextScroll' styles
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,18 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const ToggleTextScroll = styled.span`
+	color: ${(props) => (props.display ? "#9900ff" : "#ffee03")}; /* Red for 'Hide', Green for 'Show' */
+	font-weight: bold;
+	font-size: 1rem;
+	transition: color 0.3s ease;
+
+	&:hover {
+	text-decoration: underline;
+	}
+`;
+
 export const ButtonScroll = styled.button`
 	margin-bottom: 1px;
 	font-size: 0.875rem; /* Tailored to a readable size */
