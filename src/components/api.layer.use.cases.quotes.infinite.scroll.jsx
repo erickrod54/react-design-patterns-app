@@ -3,50 +3,24 @@ import { useInfiniteQuery } from "react-query";
 import { fetchQuotesByCursor } from "../api/api.layer.use.case.quotes.infinite.scroll";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { AuthorTextScroll, CiteContainerScroll, ContainerScroll,
+import { AuthorTextScroll,
+         ButtonScroll,
+         CiteContainerScroll,
+         ContainerScroll,
          ErrorMessageScroll,
          LoadingMessageScroll,
          QuoteBlockScroll, QuotesContainerScroll, QuoteTextScroll, TitleScroll } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 29.08 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 29.09 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Migrating 'AuthorTextScroll' style component
+ *     --> Migrating 'ButtonScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
 
-
-const Button = styled.button`
-  margin-bottom: 1px;
-  font-size: 0.875rem; /* Tailored to a readable size */
-  font-style: italic;
-  font-weight: bold;
-  width: fit-content;
-  background-color: #4299e1; /* Blue color for contrast */
-  color: #ffffff; /* White text for better visibility */
-  border: none;
-  border-radius: 0.375rem; /* Rounded corners */
-  padding: 8px 12px; /* Comfortable padding */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #2b6cb0; /* Darker blue on hover */
-  }
-
-  &:active {
-    background-color: #2c5282; /* Even darker blue on active */
-  }
-
-  &:disabled {
-    background-color: #cbd5e0; /* Disabled state */
-    cursor: not-allowed;
-    color: #a0aec0;
-  }
-`;
 
 const ToggleText = styled.span`
   color: ${(props) => (props.display ? "#9900ff" : "#ffee03")}; /* Red for 'Hide', Green for 'Show' */
@@ -104,11 +78,11 @@ const InfiniteScrollQuotes = () => {
 
   return (
     <>
-      <Button onClick={toggleDisplay}>
+      <ButtonScroll onClick={toggleDisplay}>
         <ToggleText display={display}>
             {display ? "Hide Component" : "Show Component"}
         </ToggleText>
-      </Button>
+      </ButtonScroll>
       {!display && <HiddenMessage>The component is hidden</HiddenMessage>}
       {display && (
         <ContainerScroll>
