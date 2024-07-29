@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 29.10 - styled.components
+/**react-design-patterns-app - version 29.11 - styled.components
  * - Features: 
  * 
- *     -->  writting 'ToggleTextScroll' styles
+ *     -->  writting 'HiddenMessage' styles
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,18 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const HiddenMessage = styled.h2`
+	font-size: 1.5rem; /* Large, readable size */
+	color: #718096; /* Neutral gray for a subtle message */
+	text-align: center; /* Center the text */
+	margin-top: 1rem; /* Add space above the message */
+	background-color: #f7fafc; /* Light background for emphasis */
+	padding: 0.5rem 1rem; /* Add padding for better readability */
+	border-radius: 0.5rem; /* Rounded corners */
+	border: 1px solid #e2e8f0; /* Light border for definition */
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+`;
 
 export const ToggleTextScroll = styled.span`
 	color: ${(props) => (props.display ? "#9900ff" : "#ffee03")}; /* Red for 'Hide', Green for 'Show' */
