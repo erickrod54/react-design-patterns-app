@@ -32,6 +32,7 @@ import { AlertWrapper,
          FormWrapper,
          FormWrapperDeferred,
          HeavyComponentWrapper,
+         HiddenMessage,
          Input,
          InputPost,
          KeyExerciseWrapper,
@@ -74,10 +75,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 29.10 - styledcomponents > index
+/**react-design-patterns-app - version 29.11 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ToggleTextScroll' 
+ *     --> Importing and exporting 'HiddenMessage' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -162,4 +163,5 @@ export { SectionWrapper,
          AuthorTextScroll,
          ButtonScroll,
          ToggleTextScroll,
+         HiddenMessage,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
