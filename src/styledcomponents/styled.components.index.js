@@ -69,12 +69,15 @@ import { AlertWrapper,
          StepFlowWrapper,
          TableTitleWrapper,
          Title,
-         TitleForQuote, TitlePaginated, TitlePostForm, TitleScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
+         TitleForQuote,
+         TitlePaginated,
+         TitlePostForm,
+         TitleScroll, ToggleTextScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 29.09 - styledcomponents > index
+/**react-design-patterns-app - version 29.10 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ButtonScroll' 
+ *     --> Importing and exporting 'ToggleTextScroll' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -158,4 +161,5 @@ export { SectionWrapper,
          CiteContainerScroll,
          AuthorTextScroll,
          ButtonScroll,
+         ToggleTextScroll,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
