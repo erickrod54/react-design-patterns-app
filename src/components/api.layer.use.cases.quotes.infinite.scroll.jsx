@@ -9,12 +9,13 @@ import { AuthorTextScroll,
          ContainerScroll,
          ErrorMessageScroll,
          LoadingMessageScroll,
-         QuoteBlockScroll, QuotesContainerScroll, QuoteTextScroll, TitleScroll } from "../styledcomponents/styled.components";
+         QuoteBlockScroll, QuotesContainerScroll, QuoteTextScroll, TitleScroll, 
+         ToggleTextScroll} from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 29.09 - InfiniteScrollQuotes
+/**react-design-patterns-app - version 29.10 - InfiniteScrollQuotes
  * - Features: 
  * 
- *     --> Migrating 'ButtonScroll' style component
+ *     --> Migrating 'ToggleTextScroll' style component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -22,16 +23,7 @@ import { AuthorTextScroll,
 
 
 
-const ToggleText = styled.span`
-  color: ${(props) => (props.display ? "#9900ff" : "#ffee03")}; /* Red for 'Hide', Green for 'Show' */
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease;
 
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 const HiddenMessage = styled.h2`
   font-size: 1.5rem; /* Large, readable size */
@@ -79,9 +71,9 @@ const InfiniteScrollQuotes = () => {
   return (
     <>
       <ButtonScroll onClick={toggleDisplay}>
-        <ToggleText display={display}>
+        <ToggleTextScroll display={display}>
             {display ? "Hide Component" : "Show Component"}
-        </ToggleText>
+        </ToggleTextScroll>
       </ButtonScroll>
       {!display && <HiddenMessage>The component is hidden</HiddenMessage>}
       {display && (
