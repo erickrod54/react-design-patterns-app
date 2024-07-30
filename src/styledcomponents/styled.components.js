@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 29.12 - styled.components
+/**react-design-patterns-app - version 29.15 - styled.components
  * - Features: 
  * 
- *     -->  refactoring 'ContainerScroll' styles to tailwind
+ *     -->  refactoring 'QuoteBlockScroll' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -86,14 +86,8 @@ export const QuoteTextScroll = styled.p`
 `;
 
 export const QuoteBlockScroll = styled.blockquote`
-  position: relative;
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-style: italic;
-  border-left: 4px solid #718096;
-  background-color: #f7fafc;
-  color: #4a5568;
-  margin-bottom: 1rem;
+  	${tw`relative p-4 text-xl italic border-l-4 border-gray-600 bg-gray-100 text-gray-700 mb-4`}
+
 `;
 
 export const QuotesContainerScroll = styled.div``;
@@ -101,13 +95,12 @@ export const QuotesContainerScroll = styled.div``;
 export const LoadingMessageScroll = styled.p``;
 
 export const ErrorMessageScroll = styled.p`
-color: #c53030;
-`;
+	${tw`text-red-700`}
 
+`;
 export const TitleScroll = styled.h2`
-	font-weight: bold;
-	font-size: 2rem;
-	margin-bottom: 1rem;
+	${tw`font-bold text-2xl mb-4`}
+
 `;
 
 export const ContainerScroll = styled.div`
