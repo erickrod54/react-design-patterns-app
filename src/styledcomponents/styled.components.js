@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 29.15 - styled.components
+/**react-design-patterns-app - version 29.16 - styled.components
  * - Features: 
  * 
- *     -->  refactoring 'CiteContainerScroll' styles to tailwind
+ *     -->  refactoring 'AuthorTextScroll' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -69,10 +69,8 @@ export const ButtonScroll = styled.button`
 	}
 `;
 export const AuthorTextScroll = styled.span`
-	margin-bottom: 1px;
-	font-size: 0.875rem;
-	font-style: italic;
-	font-weight: bold;
+	${tw`mb-[1px] text-sm italic font-bold`}
+
 `;
 
 export const CiteContainerScroll = styled.cite`
