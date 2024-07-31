@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 29.17 - styled.components
+/**react-design-patterns-app - version 29.20 - styled.components
  * - Features: 
  * 
- *     -->  refactoring 'HiddenMessage' styles to tailwind
+ *     -->  refactoring 'cancel-query-with-react-query-quotes-app' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -808,6 +808,13 @@ export const CustomTitleStyle = styled.div`
 			${tw`text-amber-300 underline`}
 		}	
 }
+
+.cancel-query-with-react-query-quotes-app{
+	span{
+			${tw`text-amber-200 underline`}
+		}	
+}
+
 
 `
 
