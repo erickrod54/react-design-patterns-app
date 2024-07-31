@@ -11,10 +11,10 @@ import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
-/**react-design-patterns-app - version 28.19 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 29.20 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Rendering 'InfiniteScrollQuotes' component
+ *     --> Starting 'Cancel Query with React query' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -304,6 +304,35 @@ const FetchingDataWitReactQuery = () => {
                 <InfiniteScrollQuotes/>
             </QueryClientProvider>
 
+            
+            <br/>
+                
+            <br />
+
+            <br />
+
+            <br />
+
+            <CustomTitleStyle>
+                    <CustomTitle  title={<p className="cancel-query-with-react-query-quotes-app"><span > Cancel Query with React Query </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                no here comes the question how to implement <span className="text-white font-semibold"> request cancellation in applications using 
+                React Query and Axios</span> some goals that highlisht this implementation can be:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Multiple method to cancel API request </span> ( older method using a cancel function and the newer method utilizing an abort signal, focusing on the latter )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Demonstrate Practical Usage </span> ( By Building React components to manage request cancellation effectively. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  Scenarios for Usage </span> (Includes use cases that usefulness of request cancellation for applications with frequent API requests.)
+                </li>
+            </ul>
             </SectionWrapper>
         
         </div>
