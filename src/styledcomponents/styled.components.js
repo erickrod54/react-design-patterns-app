@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 29.16 - styled.components
+/**react-design-patterns-app - version 29.17 - styled.components
  * - Features: 
  * 
- *     -->  refactoring 'AuthorTextScroll' styles to tailwind
+ *     -->  refactoring 'HiddenMessage' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -18,15 +18,8 @@ import tw from 'twin.macro';
  */
 
 export const HiddenMessage = styled.h2`
-	font-size: 1.5rem; /* Large, readable size */
-	color: #718096; /* Neutral gray for a subtle message */
-	text-align: center; /* Center the text */
-	margin-top: 1rem; /* Add space above the message */
-	background-color: #f7fafc; /* Light background for emphasis */
-	padding: 0.5rem 1rem; /* Add padding for better readability */
-	border-radius: 0.5rem; /* Rounded corners */
-	border: 1px solid #e2e8f0; /* Light border for definition */
-	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+	${tw`text-xl text-gray-500 text-center mt-4 bg-gray-100 p-2 px-4 rounded-lg border border-gray-200 shadow-sm`}
+
 `;
 
 export const ToggleTextScroll = styled.span`
