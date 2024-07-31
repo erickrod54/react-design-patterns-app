@@ -48,7 +48,6 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.7.3"
+    "tailwindcss": "^3.3.5"
   }
 }
