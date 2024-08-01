@@ -11,10 +11,11 @@ import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
-/**react-design-patterns-app - version 29.20 - FetchingDataWitReactQuery
+
+/**react-design-patterns-app - version 30.00 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'Cancel Query with React query' component
+ *     --> Starting 'Advantages' of React Query Cancellation
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -333,6 +334,31 @@ const FetchingDataWitReactQuery = () => {
                     <span className="text-white font-semibold">  Scenarios for Usage </span> (Includes use cases that usefulness of request cancellation for applications with frequent API requests.)
                 </li>
             </ul>
+
+            <p>
+                some <span className="text-white font-semibold"> Advantages of the Implementation </span> can be:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Efficient Resource Usage </span> ( Canceling unnecessary API requests prevents overloading servers and consuming unnecessary bandwidth. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Improved User Experience </span> ( By canceling requests based on user input - e.g., a checkbox -, the application remains responsive to user actions. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  Error Management </span> (The implementation handles aborted requests gracefully by catching errors and optionally displaying user-friendly messages - e.g., toast notifications -)
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  Adherence to Modern Practices </span> ( Leveraging AbortSignal aligns with modern web development standards and is supported by Axios since version 0.22.)
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  Flexibility </span> (The example demonstrates a dynamic approach where users can toggle cancellation behavior with a checkbox)
+                </li>
+            </ul>
+
+
+
             </SectionWrapper>
         
         </div>
