@@ -12,10 +12,10 @@ import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
 
-/**react-design-patterns-app - version 30.01 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 30.02 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'Disadvantages' of React Query Cancellation
+ *     --> Starting 'API layer' of React Query Cancellation
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -379,7 +379,10 @@ const FetchingDataWitReactQuery = () => {
                 </li>
             </ul>
 
-
+            <p>
+                so as first step will be to build the <span className="text-white font-semibold"> API layer </span> that essentially will 
+                behave very similar to the previous ones:
+            </p>
 
             </SectionWrapper>
         
