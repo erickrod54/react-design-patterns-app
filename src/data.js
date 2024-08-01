@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 30.03- data js  
+/**react-design-patterns-app - version 30.04- data js  
  * - Features: 
  *    
- *     --> Adding 'fetchTopQuotesWithCancellation API layer' id   
+ *     --> Adding 'fetchTopQuotesWithCancellation API layer' comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5982,6 +5982,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: 'fetchTopQuotesWithCancellation API layer',
     code:   
     `
+    /**this request will handle the request for the 
+     * react query cancellation component*/
     export const fetchTopQuotesWithCancellation = (config = {}) =>
     api.get("top_quotes", config).then((res) => res.data.quotes);
   
