@@ -12,10 +12,10 @@ import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
 
-/**react-design-patterns-app - version 30.00 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 30.01 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'Advantages' of React Query Cancellation
+ *     --> Starting 'Disadvantages' of React Query Cancellation
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -354,6 +354,28 @@ const FetchingDataWitReactQuery = () => {
                 </li>
                 <li>
                     <span className="text-white font-semibold">  Flexibility </span> (The example demonstrates a dynamic approach where users can toggle cancellation behavior with a checkbox)
+                </li>
+            </ul>
+
+            <p>
+                And some <span className="text-white font-semibold"> Disadvantages of the Implementation </span> can be:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Complexity </span> ( Introducing request cancellation may increase code complexity )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Performance Overhead </span> ( Using state variables and managing additional hooks like useQueryClient adds a slight overhead, particularly in apps with simple APIs )
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  Limited Use Cases </span> ( Request cancellation is unnecessary for all API requests, and implementing it universally can lead to overengineering )
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  Dependency on Specific Versions </span> ( This method relies on Axios 0.22+ and React Query 3.3+, which might be incompatible with older projects.)
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  Error Handling Overhead </span> ( Displaying error messages like "request aborted" might confuse users and requires careful consideration of the user interface.)
                 </li>
             </ul>
 
