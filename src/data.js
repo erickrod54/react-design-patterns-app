@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 30.06- data js  
+/**react-design-patterns-app - version 30.07- data js  
  * - Features: 
  *    
- *     --> Adding 'QueryCancellationWithAbortSignal Component' id   
+ *     --> Adding 'QueryCancellationWithAbortSignal Component' comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6002,9 +6002,12 @@ const UsersApiHookLogicAndDataAbs = () => {
     code:   
     `
       const QueryCancellationWithAbortSignal = () => {
+      
+      /**this is the state that will mutate the signal*/  
       const [shouldAbort, setShouldAbort] = useState(true);
       const queryClient = useQueryClient();
       
+      /**props destructured from fetchTopQuotesWithCancellation*/
       const {
         data: quotes,
         isSuccess,
@@ -6017,6 +6020,7 @@ const UsersApiHookLogicAndDataAbs = () => {
             signal,
           }).catch((error) => {
             if (error.aborted) {
+              /**once catched get show in toastify*/
               toast.error("Request aborted");
               return;
             }
@@ -6028,6 +6032,8 @@ const UsersApiHookLogicAndDataAbs = () => {
           enabled: false,
         }
       );
+
+      /**at component level, the abort is handled*/
       const onFetchQuotes = () => {
         queryClient.refetchQueries("top-aborted-quotes-abort-controller");
         setTimeout(() => {
