@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 30.05- data js  
+/**react-design-patterns-app - version 30.06- data js  
  * - Features: 
  *    
- *     --> Adding 'QueryCancellationWithAbortSignal Component'    
+ *     --> Adding 'QueryCancellationWithAbortSignal Component' id   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5997,7 +5997,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 167,
+    id: 168,
     name: 'QueryCancellationWithAbortSignal Component',
     code:   
     `
