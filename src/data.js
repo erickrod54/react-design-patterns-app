@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 30.04- data js  
+/**react-design-patterns-app - version 30.05- data js  
  * - Features: 
  *    
- *     --> Adding 'fetchTopQuotesWithCancellation API layer' comments   
+ *     --> Adding 'QueryCancellationWithAbortSignal Component'    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -5994,6 +5994,88 @@ const UsersApiHookLogicAndDataAbs = () => {
   
     export const fetchQuotesByCursor = (cursor) =>
     api.get("", { params: { cursor } }).then((res) => res.data);
+    `
+    },
+    {
+    id: 167,
+    name: 'QueryCancellationWithAbortSignal Component',
+    code:   
+    `
+      const QueryCancellationWithAbortSignal = () => {
+      const [shouldAbort, setShouldAbort] = useState(true);
+      const queryClient = useQueryClient();
+      
+      const {
+        data: quotes,
+        isSuccess,
+        isLoading,
+        isError,
+      } = useQuery(
+        "top-aborted-quotes-abort-controller",
+        ({ signal }) => {
+          return fetchTopQuotesWithCancellation({
+            signal,
+          }).catch((error) => {
+            if (error.aborted) {
+              toast.error("Request aborted");
+              return;
+            }
+            throw error;
+          });
+        },
+        {
+          refetchOnWindowFocus: false,
+          enabled: false,
+        }
+      );
+      const onFetchQuotes = () => {
+        queryClient.refetchQueries("top-aborted-quotes-abort-controller");
+        setTimeout(() => {
+          shouldAbort &&
+            queryClient.cancelQueries("top-aborted-quotes-abort-controller");
+        }, 200);
+      };
+      return (
+        <Container>
+          <div>
+            <Title>Query Cancellation With Abort Controller</Title>
+            <div>
+              <CheckboxLabel>
+                <CheckboxInput
+                  type="checkbox"
+                  checked={shouldAbort}
+                  onChange={() => setShouldAbort((checked) => !checked)}
+                />
+                Abort
+              </CheckboxLabel>
+            </div>
+            {isError ? (
+              <ErrorMessage>There was a problem with fetching quotes</ErrorMessage>
+            ) : null}
+            <div>
+              <FetchButton onClick={onFetchQuotes}>Fetch quotes</FetchButton>
+            </div>
+            {isLoading ? <LoadingMessage>Fetching quotes</LoadingMessage> : null}
+            {isSuccess ? (
+              <QuotesContainer>
+                {quotes?.map((quote) => (
+                  <QuoteBlock key={quote.id}>
+                    <QuoteText>"{quote.quote}"</QuoteText>
+                    <CiteContainer>
+                      <div>
+                        <AuthorText>{quote.author}</AuthorText>
+                      </div>
+                    </CiteContainer>
+                  </QuoteBlock>
+                ))}
+              </QuotesContainer>
+            ) : null}
+          </div>
+        </Container>
+      );
+    };
+    
+    export default QueryCancellationWithAbortSignal;
     `
     }
   ];
