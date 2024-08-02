@@ -12,10 +12,10 @@ import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
 
-/**react-design-patterns-app - version 30.04 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 30.06 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'apirequestforcancellation' code
+ *     --> Starting 'QueryCancellationWithAbortSignal' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -386,6 +386,13 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={apirequestforcancellation}/>
+
+            <p>
+                the component <span className="text-white font-semibold"> QueryCancellationWithAbortSignal </span> will focus on
+                handle an <span className="text-white font-semibold"> state that handle the signal </span>, the specific query
+                to abort the request <span className="text-white font-semibold"> top-aborted-quotes-abort-controller </span>
+                and the aborted once catched will be displayed with a <span className="text-white font-semibold"> react-toastify </span>:
+            </p>
 
             </SectionWrapper>
         
