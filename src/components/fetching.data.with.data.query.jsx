@@ -12,10 +12,10 @@ import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
 
-/**react-design-patterns-app - version 30.02 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 30.04 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Starting 'API layer' of React Query Cancellation
+ *     --> Adding 'apirequestforcancellation' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -40,7 +40,8 @@ const FetchingDataWitReactQuery = () => {
     const paginatedimplementation = CodeData[164].code;
     const fetchapibycursor = CodeData[165].code;
     const infinitescrollquotes = CodeData[166].code;
-
+    const apirequestforcancellation = CodeData[167].code;
+    
     
 
     return(
@@ -383,6 +384,8 @@ const FetchingDataWitReactQuery = () => {
                 so as first step will be to build the <span className="text-white font-semibold"> API layer </span> that essentially will 
                 behave very similar to the previous ones:
             </p>
+
+            <BashCode code={apirequestforcancellation}/>
 
             </SectionWrapper>
         
