@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 29.20 - styled.components
+/**react-design-patterns-app - version 30.09 - styled.components
  * - Features: 
  * 
- *     -->  refactoring 'cancel-query-with-react-query-quotes-app' styles 
+ *     -->  writting 'ContainerCancellation' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,12 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const ContainerCancellation = styled.div`
+	padding: 2rem 0;
+	max-width: 2xl;
+	margin: auto;
+`;
 
 export const HiddenMessage = styled.h2`
 	${tw`text-xl text-gray-500 text-center mt-4 bg-gray-100 p-2 px-4 rounded-lg border border-gray-200 shadow-sm`}
