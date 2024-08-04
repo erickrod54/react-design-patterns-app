@@ -11,6 +11,7 @@ import { AlertWrapper,
          ButtonUseTransition,
          ButtonWrapper,
          ButtonsOptContextStyle,
+         CheckboxLabel,
          ChildWrapper,
          CiteContainer,
          CiteContainerScroll,
@@ -77,10 +78,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 30.10 - styledcomponents > index
+/**react-design-patterns-app - version 30.11 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'TitleCancellation' 
+ *     --> Importing and exporting 'CheckboxLabel' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -168,4 +169,5 @@ export { SectionWrapper,
          HiddenMessage,
          ContainerCancellation,
          TitleCancellation,
+         CheckboxLabel,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
