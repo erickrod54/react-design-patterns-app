@@ -3,22 +3,17 @@ import { useQuery, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { fetchTopQuotesWithCancellation } from "../api/api.layer.index";
-import { ContainerCancellation } from "../styledcomponents/styled.components.index";
+import { ContainerCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 30.09 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 30.10 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'ContainerCancellation'
+ *     --> Migrating 'TitleCancellation'
  * 
  * Note: pending to import and export the rest of the API's 
  */
 
 
-const Title = styled.h2`
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-`;
 
 const CheckboxLabel = styled.label`
   margin-bottom: 0.5rem;
@@ -111,7 +106,7 @@ const QueryCancellationWithAbortSignal = () => {
   return (
     <ContainerCancellation>
       <div>
-        <Title>Query Cancellation With Abort Controller</Title>
+        <TitleCancellation>Query Cancellation With Abort Controller</TitleCancellation>
         <div>
           <CheckboxLabel>
             <CheckboxInput
