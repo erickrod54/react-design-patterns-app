@@ -28,6 +28,7 @@ import { AlertWrapper,
          ErrorMessage,
          ErrorMessagePagination,
          ErrorMessageScroll,
+         FetchButton,
          Fieldset,
          Form,
          FormGroup,
@@ -79,10 +80,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 30.12 - styledcomponents > index
+/**react-design-patterns-app - version 30.13 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'CheckboxInput' 
+ *     --> Importing and exporting 'FetchButton' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -172,4 +173,5 @@ export { SectionWrapper,
          TitleCancellation,
          CheckboxLabel,
          CheckboxInput,
+         FetchButton,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
