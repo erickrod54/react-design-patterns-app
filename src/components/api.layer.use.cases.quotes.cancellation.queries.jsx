@@ -3,21 +3,16 @@ import { useQuery, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { fetchTopQuotesWithCancellation } from "../api/api.layer.index";
-import { ContainerCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
+import { CheckboxLabel, ContainerCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 30.10 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 30.11 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'TitleCancellation'
+ *     --> Migrating 'CheckboxLabel'
  * 
  * Note: pending to import and export the rest of the API's 
  */
 
-
-
-const CheckboxLabel = styled.label`
-  margin-bottom: 0.5rem;
-`;
 
 const CheckboxInput = styled.input`
   margin-right: 0.75rem;
