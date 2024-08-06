@@ -3,21 +3,16 @@ import { useQuery, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { fetchTopQuotesWithCancellation } from "../api/api.layer.index";
-import { CheckboxInput, CheckboxLabel, ContainerCancellation, FetchButton, TitleCancellation } from "../styledcomponents/styled.components.index";
+import { CheckboxInput, CheckboxLabel, ContainerCancellation, ErrorMessageCancellation, FetchButton, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 30.13 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 30.14 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'FetchButton'
+ *     --> Migrating 'ErrorMessageCancellation'
  * 
  * Note: pending to import and export the rest of the API's 
  */
 
-
-
-const ErrorMessage = styled.p`
-  color: #c53030;
-`;
 
 const LoadingMessage = styled.p``;
 
@@ -104,7 +99,7 @@ const QueryCancellationWithAbortSignal = () => {
           </CheckboxLabel>
         </div>
         {isError ? (
-          <ErrorMessage>There was a problem with fetching quotes</ErrorMessage>
+          <ErrorMessageCancellation>There was a problem with fetching quotes</ErrorMessageCancellation>
         ) : null}
         <div>
           <FetchButton onClick={onFetchQuotes}>Fetch quotes</FetchButton>
