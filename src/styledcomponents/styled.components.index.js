@@ -60,6 +60,7 @@ import { AlertWrapper,
          OpenModalWrapper, OutQuotContainer, OutsideTable, PageButton, PageNumber, Panel,
          PrimaryButton,
          QuoteBlock,
+         QuoteBlockCancellation,
          QuoteBlockPagination,
          QuoteBlockScroll,
          QuoteText,
@@ -83,10 +84,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 30.16 - styledcomponents > index
+/**react-design-patterns-app - version 30.17 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'QuotesContainerCancellation' 
+ *     --> Importing and exporting 'QuoteBlockCancellation' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -180,4 +181,5 @@ export { SectionWrapper,
          ErrorMessageCancellation,
          LoadingMessageCancellation,
          QuotesContainerCancellation,
+         QuoteBlockCancellation,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
