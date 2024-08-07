@@ -7,23 +7,19 @@ import { CheckboxInput,
          CheckboxLabel,
          ContainerCancellation,
          ErrorMessageCancellation,
-         FetchButton, LoadingMessageCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
+         FetchButton, LoadingMessageCancellation, QuotesContainerCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 30.15 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 30.16 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'LoadingMessageCancellation'
+ *     --> Migrating 'QuotesContainerCancellation'
  * 
  * Note: pending to import and export the rest of the API's 
  */
 
 
 
-const QuotesContainer = styled.div`
-  max-height: 24rem;
-  overflow-y: auto;
-  border-top: 1px solid #cbd5e0;
-`;
+
 
 const QuoteBlock = styled.blockquote`
   position: relative;
@@ -109,7 +105,7 @@ const QueryCancellationWithAbortSignal = () => {
         </div>
         {isLoading ? <LoadingMessageCancellation>Fetching quotes</LoadingMessageCancellation> : null}
         {isSuccess ? (
-          <QuotesContainer>
+          <QuotesContainerCancellation>
             {quotes?.map((quote) => (
               <QuoteBlock key={quote.id}>
                 <QuoteText>"{quote.quote}"</QuoteText>
@@ -120,7 +116,7 @@ const QueryCancellationWithAbortSignal = () => {
                 </CiteContainer>
               </QuoteBlock>
             ))}
-          </QuotesContainer>
+          </QuotesContainerCancellation>
         ) : null}
       </div>
     </ContainerCancellation>
