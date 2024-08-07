@@ -3,18 +3,21 @@ import { useQuery, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { fetchTopQuotesWithCancellation } from "../api/api.layer.index";
-import { CheckboxInput, CheckboxLabel, ContainerCancellation, ErrorMessageCancellation, FetchButton, TitleCancellation } from "../styledcomponents/styled.components.index";
+import { CheckboxInput,
+         CheckboxLabel,
+         ContainerCancellation,
+         ErrorMessageCancellation,
+         FetchButton, LoadingMessageCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 30.14 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 30.15 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'ErrorMessageCancellation'
+ *     --> Migrating 'LoadingMessageCancellation'
  * 
  * Note: pending to import and export the rest of the API's 
  */
 
 
-const LoadingMessage = styled.p``;
 
 const QuotesContainer = styled.div`
   max-height: 24rem;
@@ -104,7 +107,7 @@ const QueryCancellationWithAbortSignal = () => {
         <div>
           <FetchButton onClick={onFetchQuotes}>Fetch quotes</FetchButton>
         </div>
-        {isLoading ? <LoadingMessage>Fetching quotes</LoadingMessage> : null}
+        {isLoading ? <LoadingMessageCancellation>Fetching quotes</LoadingMessageCancellation> : null}
         {isSuccess ? (
           <QuotesContainer>
             {quotes?.map((quote) => (
