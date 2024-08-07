@@ -66,6 +66,7 @@ import { AlertWrapper,
          QuoteTextPagination,
          QuoteTextScroll,
          QuotesContainer,
+         QuotesContainerCancellation,
          QuotesContainerPagination,
          QuotesContainerScroll,
          ReviewsContainer,
@@ -82,10 +83,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 30.15 - styledcomponents > index
+/**react-design-patterns-app - version 30.16 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'LoadingMessageCancellation' 
+ *     --> Importing and exporting 'QuotesContainerCancellation' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -178,4 +179,5 @@ export { SectionWrapper,
          FetchButton,
          ErrorMessageCancellation,
          LoadingMessageCancellation,
+         QuotesContainerCancellation,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
