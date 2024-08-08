@@ -63,6 +63,7 @@ import { AlertWrapper,
          QuoteBlockCancellation,
          QuoteBlockPagination,
          QuoteBlockScroll,
+         QuoteTexCancellation,
          QuoteText,
          QuoteTextPagination,
          QuoteTextScroll,
@@ -84,10 +85,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 30.17 - styledcomponents > index
+/**react-design-patterns-app - version 30.18 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'QuoteBlockCancellation' 
+ *     --> Importing and exporting 'QuoteTexCancellation' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -182,4 +183,5 @@ export { SectionWrapper,
          LoadingMessageCancellation,
          QuotesContainerCancellation,
          QuoteBlockCancellation,
+         QuoteTexCancellation,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
