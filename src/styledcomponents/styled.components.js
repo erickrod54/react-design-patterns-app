@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 30.18 - styled.components
+/**react-design-patterns-app - version 30.19 - styled.components
  * - Features: 
  * 
- *     -->  writting 'QuoteTexCancellation' styles 
+ *     -->  writting 'CiteContainerCancellation' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,12 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const CiteContainerCancellation = styled.cite`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+`;
 
 export const QuoteTexCancellation = styled.p`
 	margin-bottom: 1rem;
