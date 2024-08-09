@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { fetchTopQuotesWithCancellation } from "../api/api.layer.index";
-import { CheckboxInput,
+import { AuthorTextCancellation, CheckboxInput,
          CheckboxLabel,
          CiteContainerCancellation,
          ContainerCancellation,
@@ -13,22 +13,17 @@ import { CheckboxInput,
          QuoteBlockCancellation,
          QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 30.19 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 31.00 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'CiteContainerCancellation'
+ *     --> Migrating 'AuthorTextCancellation'
  * t
  * Note: pending to import and export the rest of the API's 
  */
 
 
 
-const AuthorText = styled.span`
-  margin-bottom: 1px;
-  font-size: 0.875rem;
-  font-style: italic;
-  font-weight: bold;
-`;
+
 
 const QueryCancellationWithAbortSignal = () => {
   const [shouldAbort, setShouldAbort] = useState(true);
@@ -92,7 +87,7 @@ const QueryCancellationWithAbortSignal = () => {
                 <QuoteTexCancellation>"{quote.quote}"</QuoteTexCancellation>
                 <CiteContainerCancellation>
                   <div>
-                    <AuthorText>{quote.author}</AuthorText>
+                    <AuthorTextCancellation>{quote.author}</AuthorTextCancellation>
                   </div>
                 </CiteContainerCancellation>
               </QuoteBlockCancellation>
