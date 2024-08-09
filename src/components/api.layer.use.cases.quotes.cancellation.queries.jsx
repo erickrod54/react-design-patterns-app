@@ -13,10 +13,10 @@ import { AuthorTextCancellation, CheckboxInput,
          QuoteBlockCancellation,
          QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 31.00 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 31.01 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'AuthorTextCancellation'
+ *     --> Building 'display' state
  * t
  * Note: pending to import and export the rest of the API's 
  */
@@ -28,6 +28,7 @@ import { AuthorTextCancellation, CheckboxInput,
 const QueryCancellationWithAbortSignal = () => {
   const [shouldAbort, setShouldAbort] = useState(true);
   const queryClient = useQueryClient();
+  const [display, setDisplay] = useState(false);
   
   const {
     data: quotes,
