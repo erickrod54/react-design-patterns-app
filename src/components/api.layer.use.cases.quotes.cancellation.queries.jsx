@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { fetchTopQuotesWithCancellation } from "../api/api.layer.index";
 import { CheckboxInput,
          CheckboxLabel,
+         CiteContainerCancellation,
          ContainerCancellation,
          ErrorMessageCancellation,
          FetchButton,
@@ -12,20 +13,15 @@ import { CheckboxInput,
          QuoteBlockCancellation,
          QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 30.18 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 30.19 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'QuoteTexCancellation'
- * 
+ *     --> Migrating 'CiteContainerCancellation'
+ * t
  * Note: pending to import and export the rest of the API's 
  */
 
 
-const CiteContainer = styled.cite`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 const AuthorText = styled.span`
   margin-bottom: 1px;
@@ -94,11 +90,11 @@ const QueryCancellationWithAbortSignal = () => {
             {quotes?.map((quote) => (
               <QuoteBlockCancellation key={quote.id}>
                 <QuoteTexCancellation>"{quote.quote}"</QuoteTexCancellation>
-                <CiteContainer>
+                <CiteContainerCancellation>
                   <div>
                     <AuthorText>{quote.author}</AuthorText>
                   </div>
-                </CiteContainer>
+                </CiteContainerCancellation>
               </QuoteBlockCancellation>
             ))}
           </QuotesContainerCancellation>
