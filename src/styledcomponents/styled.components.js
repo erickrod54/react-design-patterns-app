@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 31.00 - styled.components
+/**react-design-patterns-app - version 31.02 - styled.components
  * - Features: 
  * 
- *     -->  writting 'AuthorTextCancellation' styles 
+ *     -->  writting 'ToggleTextScrollCancellation' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -17,6 +17,16 @@ import tw from 'twin.macro';
  * to use them in the custom titles
  */
 
+export const ToggleTextScrollCancellation = styled.span`
+	color: ${(props) => (props.display ? "#9900ff" : "#ffee03")}; /* Red for 'Hide', Green for 'Show' */
+	font-weight: bold;
+	font-size: 1rem;
+	transition: color 0.3s ease;
+
+	&:hover {
+	text-decoration: underline;
+	}
+`;
 
 export const AuthorTextCancellation = styled.span`
   margin-bottom: 1px;
