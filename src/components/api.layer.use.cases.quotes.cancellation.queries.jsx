@@ -11,27 +11,17 @@ import { AuthorTextCancellation, CheckboxInput,
          FetchButton,
          LoadingMessageCancellation,
          QuoteBlockCancellation,
-         QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation } from "../styledcomponents/styled.components.index";
+         QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation, 
+         ToggleTextScrollCancellation} from "../styledcomponents/styled.components.index";
 
 /**react-design-patterns-app - version 31.02 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Building 'ToggleTextScrollCancellation' component
+ *     --> Migrating 'ToggleTextScrollCancellation' 
  * t
  * Note: pending to import and export the rest of the API's 
  */
 
-
- const ToggleTextScrollCancellation = styled.span`
-	color: ${(props) => (props.display ? "#9900ff" : "#ffee03")}; /* Red for 'Hide', Green for 'Show' */
-	font-weight: bold;
-	font-size: 1rem;
-	transition: color 0.3s ease;
-
-	&:hover {
-	text-decoration: underline;
-	}
-`;
 
 const QueryCancellationWithAbortSignal = () => {
   const [shouldAbort, setShouldAbort] = useState(true);
