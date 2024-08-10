@@ -9,18 +9,20 @@ import { AuthorTextCancellation, CheckboxInput,
          ContainerCancellation,
          ErrorMessageCancellation,
          FetchButton,
+         HiddenMessage,
          LoadingMessageCancellation,
          QuoteBlockCancellation,
          QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation, 
          ToggleTextScrollCancellation} from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 31.02 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 31.03 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Migrating 'ToggleTextScrollCancellation' 
+ *     --> Importing 'HiddenMessage' 
  * t
  * Note: pending to import and export the rest of the API's 
  */
+
 
 
 const QueryCancellationWithAbortSignal = () => {
