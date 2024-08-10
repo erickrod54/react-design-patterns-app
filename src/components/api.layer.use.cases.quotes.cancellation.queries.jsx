@@ -15,15 +15,43 @@ import { AuthorTextCancellation, CheckboxInput,
          QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation, 
          ToggleTextScrollCancellation} from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 31.03 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 31.04 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Importing 'HiddenMessage' 
+ *     --> Building 'ButtonScrollCancellation' 
  * t
  * Note: pending to import and export the rest of the API's 
  */
 
 
+const ButtonScrollCancellation = styled.button`
+	margin-bottom: 1px;
+	font-size: 0.875rem; /* Tailored to a readable size */
+	font-style: italic;
+	font-weight: bold;
+	width: fit-content;
+	background-color: #4299e1; /* Blue color for contrast */
+	color: #ffffff; /* White text for better visibility */
+	border: none;
+	border-radius: 0.375rem; /* Rounded corners */
+	padding: 8px 12px; /* Comfortable padding */
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+	background-color: #2b6cb0; /* Darker blue on hover */
+	}
+
+	&:active {
+	background-color: #2c5282; /* Even darker blue on active */
+	}
+
+	&:disabled {
+	background-color: #cbd5e0; /* Disabled state */
+	cursor: not-allowed;
+	color: #a0aec0;
+	}
+`;
 
 const QueryCancellationWithAbortSignal = () => {
   const [shouldAbort, setShouldAbort] = useState(true);
