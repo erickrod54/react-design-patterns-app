@@ -15,10 +15,10 @@ import { AuthorTextCancellation, ButtonScrollCancellation, CheckboxInput,
          QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation, 
          ToggleTextScrollCancellation} from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 31.05 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 31.06 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Importing 'ButtonScrollCancellation' 
+ *     --> Building 'toggleDisplay' 
  * t
  * Note: pending to import and export the rest of the API's 
  */
@@ -51,6 +51,11 @@ const QueryCancellationWithAbortSignal = () => {
       enabled: false,
     }
   );
+
+  const toggleDisplay = () => {
+    setDisplay((prev) => !prev);
+  };
+
   const onFetchQuotes = () => {
     queryClient.refetchQueries("top-aborted-quotes-abort-controller");
     setTimeout(() => {
