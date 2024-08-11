@@ -15,10 +15,10 @@ import { AuthorTextCancellation, ButtonScrollCancellation, CheckboxInput,
          QuotesContainerCancellation, QuoteTexCancellation, TitleCancellation, 
          ToggleTextScrollCancellation} from "../styledcomponents/styled.components.index";
 
-/**react-design-patterns-app - version 31.06 - QueryCancellationWithAbortSignal
+/**react-design-patterns-app - version 31.07 - QueryCancellationWithAbortSignal
  * - Features: 
  * 
- *     --> Building 'toggleDisplay' 
+ *     --> Adding 'toggleDisplay' feature 
  * t
  * Note: pending to import and export the rest of the API's 
  */
@@ -64,42 +64,52 @@ const QueryCancellationWithAbortSignal = () => {
     }, 200);
   };
   return (
-    <ContainerCancellation>
-      <div>
-        <TitleCancellation>Query Cancellation With Abort Controller</TitleCancellation>
+    <>
+    <ButtonScrollCancellation onClick={toggleDisplay}>
+        <ToggleTextScrollCancellation display={display}>
+            {display ? "Hide Component" : "Show Component"}
+        </ToggleTextScrollCancellation>
+      </ButtonScrollCancellation>
+      {!display && <HiddenMessage>The component is hidden</HiddenMessage>}
+      {display && (
+      <ContainerCancellation>
         <div>
-          <CheckboxLabel>
-            <CheckboxInput
-              type="checkbox"
-              checked={shouldAbort}
-              onChange={() => setShouldAbort((checked) => !checked)}
-            />
-            Abort
-          </CheckboxLabel>
+          <TitleCancellation>Query Cancellation With Abort Controller</TitleCancellation>
+          <div>
+            <CheckboxLabel>
+              <CheckboxInput
+                type="checkbox"
+                checked={shouldAbort}
+                onChange={() => setShouldAbort((checked) => !checked)}
+              />
+              Abort
+            </CheckboxLabel>
+          </div>
+          {isError ? (
+            <ErrorMessageCancellation>There was a problem with fetching quotes</ErrorMessageCancellation>
+          ) : null}
+          <div>
+            <FetchButton onClick={onFetchQuotes}>Fetch quotes</FetchButton>
+          </div>
+          {isLoading ? <LoadingMessageCancellation>Fetching quotes</LoadingMessageCancellation> : null}
+          {isSuccess ? (
+            <QuotesContainerCancellation>
+              {quotes?.map((quote) => (
+                <QuoteBlockCancellation key={quote.id}>
+                  <QuoteTexCancellation>"{quote.quote}"</QuoteTexCancellation>
+                  <CiteContainerCancellation>
+                    <div>
+                      <AuthorTextCancellation>{quote.author}</AuthorTextCancellation>
+                    </div>
+                  </CiteContainerCancellation>
+                </QuoteBlockCancellation>
+              ))}
+            </QuotesContainerCancellation>
+          ) : null}
         </div>
-        {isError ? (
-          <ErrorMessageCancellation>There was a problem with fetching quotes</ErrorMessageCancellation>
-        ) : null}
-        <div>
-          <FetchButton onClick={onFetchQuotes}>Fetch quotes</FetchButton>
-        </div>
-        {isLoading ? <LoadingMessageCancellation>Fetching quotes</LoadingMessageCancellation> : null}
-        {isSuccess ? (
-          <QuotesContainerCancellation>
-            {quotes?.map((quote) => (
-              <QuoteBlockCancellation key={quote.id}>
-                <QuoteTexCancellation>"{quote.quote}"</QuoteTexCancellation>
-                <CiteContainerCancellation>
-                  <div>
-                    <AuthorTextCancellation>{quote.author}</AuthorTextCancellation>
-                  </div>
-                </CiteContainerCancellation>
-              </QuoteBlockCancellation>
-            ))}
-          </QuotesContainerCancellation>
-        ) : null}
-      </div>
-    </ContainerCancellation>
+      </ContainerCancellation>
+      )}
+    </>
   );
 };
 
