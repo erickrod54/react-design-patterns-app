@@ -12,10 +12,10 @@ import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
 
 
 
-/**react-design-patterns-app - version 30.07 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 30.08 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'apicancellationcomponent' component
+ *     --> Adding 'cancellationcomponent' code
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -42,7 +42,7 @@ const FetchingDataWitReactQuery = () => {
     const infinitescrollquotes = CodeData[166].code;
     const apirequestforcancellation = CodeData[167].code;
     const apicancellationcomponent = CodeData[168].code;
-    
+    const cancellationcomponent = CodeData[169].code;
     
 
     return(
@@ -396,6 +396,12 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={apicancellationcomponent}/>
+
+            <p>
+                the <span className="text-white font-semibold"> QueryCancellationWithAbortSignal </span>  will be scoped as follows:
+            </p>
+
+            <BashCode code={cancellationcomponent}/>
 
         
             </SectionWrapper>
