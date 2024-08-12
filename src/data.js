@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 31.09- data js  
+/**react-design-patterns-app - version 31.10- data js  
  * - Features: 
  *    
- *     --> Adding 'QueryCancellationWithAbortSignal' comments   
+ *     --> Adding 'State Management Patterns' comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -234,6 +234,12 @@ export const patternCard = [
       id:36,
       category:'API Layer and Async Operations',
       pattern:'Fetching Data with React Query',
+      description:''
+    },
+    {
+      id:36,
+      category:'API Layer and Async Operations',
+      pattern:'State Management Patterns',
       description:''
     },
 ]
