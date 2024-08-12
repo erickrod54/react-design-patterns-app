@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 31.10- data js  
+/**react-design-patterns-app - version 31.11- data js  
  * - Features: 
  *    
- *     --> Adding 'State Management Patterns' comments   
+ *     --> Adding 'State Management Patterns' id   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -237,7 +237,7 @@ export const patternCard = [
       description:''
     },
     {
-      id:36,
+      id:37,
       category:'API Layer and Async Operations',
       pattern:'State Management Patterns',
       description:''
