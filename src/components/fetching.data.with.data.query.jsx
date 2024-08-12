@@ -9,13 +9,14 @@ import { ToastContainer } from "react-toastify";
 import UpdateQuotesForm from "./api.layer.use.cases.quotes.post.update.component";
 import PaginatedQuotes from "./api.layer.use.cases.quotes.pagination";
 import InfiniteScrollQuotes from "./api.layer.use.cases.quotes.infinite.scroll";
+import QueryCancellationWithAbortSignal from "./api.layer.use.cases.quotes.cancellation.queries";
 
 
 
-/**react-design-patterns-app - version 30.08 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 30.09 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding 'cancellationcomponent' code
+ *     --> Rendering 'QueryCancellationWithAbortSignal' component
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -402,6 +403,15 @@ const FetchingDataWitReactQuery = () => {
             </p>
 
             <BashCode code={cancellationcomponent}/>
+
+            <p>
+                  will be render as follows:
+            </p>
+
+            <QueryClientProvider client={queryClient}>
+                <ToastContainer />
+                <QueryCancellationWithAbortSignal />
+            </QueryClientProvider>
 
         
             </SectionWrapper>
