@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 31.14 - styled.components
+/**react-design-patterns-app - version 31.15 - styled.components
  * - Features: 
  * 
- *     -->  writting 'TitleCancellation' styles to tailwind
+ *     -->  writting 'CheckboxLabel' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -107,7 +107,7 @@ export const CheckboxInput = styled.input`
 	margin-right: 0.75rem;
 `;
 export const CheckboxLabel = styled.label`
-	margin-bottom: 0.5rem;
+		${tw`mb-2`}
 `;
 
 export const TitleCancellation = styled.h2`
