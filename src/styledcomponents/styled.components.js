@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 31.12 - styled.components
+/**react-design-patterns-app - version 31.13 - styled.components
  * - Features: 
  * 
- *     -->  writting 'state-management-patterns' styles 
+ *     -->  writting 'ContainerCancellation' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -117,9 +117,8 @@ export const TitleCancellation = styled.h2`
 `;
 
 export const ContainerCancellation = styled.div`
-	padding: 2rem 0;
-	max-width: 2xl;
-	margin: auto;
+	${tw`py-8 max-w-2xl mx-auto`}
+
 `;
 
 export const HiddenMessage = styled.h2`
