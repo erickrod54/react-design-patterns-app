@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 31.16 - styled.components
+/**react-design-patterns-app - version 31.17 - styled.components
  * - Features: 
  * 
- *     -->  writting 'CheckboxInput' styles to tailwind
+ *     -->  writting 'FetchButton' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -98,9 +98,7 @@ color: #c53030;
 `;
 
 export const FetchButton = styled.button`
-	background-color: #4299e1;
-	color: #fff;
-	padding: 0.75rem 1rem;
+	${tw`bg-blue-500 text-white px-4 py-3`}
 `;
 
 export const CheckboxInput = styled.input`
