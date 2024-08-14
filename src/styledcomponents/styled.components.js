@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 32.01 - styled.components
+/**react-design-patterns-app - version 32.02 - styled.components
  * - Features: 
  * 
- *     -->  writting 'CiteContainerCancellation' styles to tailwind
+ *     -->  writting 'AuthorTextCancellation' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -58,10 +58,8 @@ export const ToggleTextScrollCancellation = styled.span`
 `;
 
 export const AuthorTextCancellation = styled.span`
-  margin-bottom: 1px;
-  font-size: 0.875rem;
-  font-style: italic;
-  font-weight: bold;
+  	${tw`mb-[1px] text-sm italic font-bold`}
+
 `;
 
 export const CiteContainerCancellation = styled.cite`
