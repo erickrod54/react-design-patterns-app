@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 31.20 - styled.components
+/**react-design-patterns-app - version 32.00 - styled.components
  * - Features: 
  * 
- *     -->  writting 'QuoteBlockCancellation' styles to tailwind
+ *     -->  writting 'QuoteTexCancellation' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -71,7 +71,8 @@ export const CiteContainerCancellation = styled.cite`
 `;
 
 export const QuoteTexCancellation = styled.p`
-	margin-bottom: 1rem;
+	${tw`mb-4`}
+
 `;
 
 export const QuoteBlockCancellation = styled.blockquote`
