@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 31.17 - styled.components
+/**react-design-patterns-app - version 31.18 - styled.components
  * - Features: 
  * 
- *     -->  writting 'FetchButton' styles to tailwind
+ *     -->  writting 'ErrorMessageCancellation' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -94,7 +94,7 @@ export const QuotesContainerCancellation = styled.div`
 export const LoadingMessageCancellation = styled.p``;
 
 export const ErrorMessageCancellation = styled.p`
-color: #c53030;
+	${tw`text-red-900`}
 `;
 
 export const FetchButton = styled.button`
