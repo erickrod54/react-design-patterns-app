@@ -3,10 +3,10 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 32.04 - StateManagementPatterns
+/**react-design-patterns-app - version 32.05 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'StateManagementPatterns' Advantages
+ *     --> Adding 'StateManagementPatterns' Disadvantages
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -71,6 +71,25 @@ const StateManagementPatterns = () => {
                 </li>
                 <li>
                     <span className="text-white font-semibold"> Increased Maintainability </span> ( Cleaner and simpler codebases are easier to debug and extend )
+                </li>
+            </ul>
+
+            <p>
+                some <span className="text-white font-semibold"> Disadvantages </span> of this implementation are:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Additional Dependency </span> ( Requires installing and maintaining the immer library, adding external reliance )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Learning Curve </span> ( Developers need to familiarize themselves with the immer library and its behavior )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Performance Considerations </span> ( In certain edge cases, the abstraction layer may introduce slight overhead compared to manual immutability handling. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Not a React Native Solution </span> ( While helpful, it doesn't replace all React state management solutions like context or state management libraries. )
                 </li>
             </ul>
 
