@@ -11,13 +11,14 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
         HOCPattern,
         LayoutComponentPattern,
         PortalsAdvHooks,
+         StateManagementPatterns,
          UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 22.13 - SinglePatternPage
+/**react-design-patterns-app - version 32.02 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'FetchingDataWitReactQuery'
+ *     --> Adding 'StateManagementPatterns'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -87,6 +88,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 36 ) {
         return <FetchingDataWitReactQuery />
+    }
+
+    if ( Number(patternId) === 37 ) {
+        return <StateManagementPatterns />
     }
 
     
