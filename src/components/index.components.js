@@ -84,6 +84,7 @@ import ShoppingCounter from "./shopping.cart.app.optimize.context.api.component.
 import ShoppingCounterPerformance from "./shopping.cart.app.optimize.context.performance.api.component.tsx";
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
+import StateManagementPatterns from "./state.magament.patterns.component.jsx";
 import TheOutSideControlled from "./theoutside.controlled.component";
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
@@ -126,10 +127,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 30.08 - components > index  
+/**react-design-patterns-app - version 32.02 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'QueryCancellationWithAbortSignal'
+ *     --> Importing and exporting 'StateManagementPatterns'
  * 
  * Note: Pending to make responsive design
  */
@@ -260,5 +261,6 @@ export {
          UpdateQuotesForm,
          PaginatedQuotes,
          InfiniteScrollQuotes,
-         QueryCancellationWithAbortSignal
+         QueryCancellationWithAbortSignal,
+         StateManagementPatterns
         }
