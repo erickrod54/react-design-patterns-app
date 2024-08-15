@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 31.11- data js  
+/**react-design-patterns-app - version 32.05- data js  
  * - Features: 
  *    
- *     --> Adding 'State Management Patterns' id   
+ *     --> Adding 'PersonState - State Management'    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6101,8 +6101,58 @@ const UsersApiHookLogicAndDataAbs = () => {
       <QueryCancellationWithAbortSignal />
     </QueryClientProvider>
     `
+    },
+    {
+    id: 169,
+    name: ' PersonState - State Management',
+    code:   
+    `
+    const PersonState = () => {
+        const [ person, setPerson ] = useState({
+            name: "Superman",
+        })
+    
+        const onChange = () => {
+          /** This won't work*/
+          person.age = 24;
+        }
+    
+        const onReset = () => {
+            setPerson({...person, age: 0})
+        }
+    
+        const { name, age } = person;
+    
+        return(
+            <ListWrapper>
+                <BooksUseTransitionContainer>
+                    <div>
+                        <PrimaryButton>
+                            <button onClick={onChange}>set age</button>
+                        </PrimaryButton>  
+                        
+                        <SecondaryButton>
+                            <button onClick={onReset}>reset age</button>
+                        </SecondaryButton>
+                    </div>
+                </BooksUseTransitionContainer>
+                 <h2> Person Name:</h2>
+                 <h2 className="author-name"><span>{name}</span></h2>
+    
+                 {age ? 
+                 <p><span>Age: </span> {age} years</p>
+                 :
+                 null
+                }
+            </ListWrapper>
+        )
+    }
+    
+    export default PersonState;
+    `
     }
   ];
+
 
   /**List Pattern data  -- start */
   
