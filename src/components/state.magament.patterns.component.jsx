@@ -3,10 +3,10 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 31.12 - StateManagementPatterns
+/**react-design-patterns-app - version 32.03 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Building 'StateManagementPatterns' 
+ *     --> Adding 'StateManagementPatterns' goals
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -31,6 +31,26 @@ const StateManagementPatterns = () => {
                 altering the original object a new object is created with the desired changes.
             </p>
 
+            <p>
+                state management in React can be simplified and improved by using the <span className="text-white font-semibold"> useImmer hook </span> from the 
+                <span className="text-white font-semibold"> immer library </span>. the <span className="text-white font-semibold"> main goals </span> 
+                of this implementation as follows:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Highlight React's state management challenges </span> ( directly mutating state in React is not allowed and how adhering to immutability can lead to verbose code )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Introduce the useImmer hook </span> ( simplifies state updates by allowing mutations while preserving immutability under the hood )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Provide practical examples </span> ( Show the difference between traditional state management in React and the use of useImmer through a Trello/Jira-like task management app )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Promote cleaner code </span> ( Advocate for better code readability and maintainability using useImmer )
+                </li>
+            </ul>
 
             </SectionWrapper>
         </div>
