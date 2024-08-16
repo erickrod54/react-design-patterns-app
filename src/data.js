@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.05- data js  
+/**react-design-patterns-app - version 32.06- data js  
  * - Features: 
  *    
- *     --> Adding 'PersonState - State Management'    
+ *     --> Adding 'PersonState - State Management' id    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6103,7 +6103,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 169,
+    id: 170,
     name: ' PersonState - State Management',
     code:   
     `
