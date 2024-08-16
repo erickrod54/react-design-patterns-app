@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 32.02 - styled.components
+/**react-design-patterns-app - version 32.07 - styled.components
  * - Features: 
  * 
- *     -->  writting 'AuthorTextCancellation' styles to tailwind
+ *     -->  writting 'SecondaryButton' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -501,10 +501,16 @@ export const ButtonGeneral = styled.div`
 export const PrimaryButton = styled(ButtonGeneral)`
 	input,
 	button{
-		${tw`flex justify-center items-center bg-violet-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer`}
+		${tw`flex justify-center items-center bg-violet-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer rounded cursor-pointer hover:rounded-lg`}
 	}
 `
 
+export const SecondaryButton = styled(ButtonGeneral)`
+	input,
+	button{
+		${tw`flex justify-center items-center bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer`}
+	}
+`
 export const KeyExerciseWrapper = styled.div`
 	${tw`flex flex-col m-4 p-4 justify-center items-center text-white text-2xl `}
 `
