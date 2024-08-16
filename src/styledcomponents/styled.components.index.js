@@ -75,6 +75,7 @@ import { AlertWrapper,
          QuotesContainerPagination,
          QuotesContainerScroll,
          ReviewsContainer,
+         SecondaryButton,
          SectionItemCenterWrapper,
          SectionWrapper,
          ShoppingCounterWrapper,
@@ -88,10 +89,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToggleTextScrollCancellation, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 31.05 - styledcomponents > index
+/**react-design-patterns-app - version 32.07 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ButtonScrollCancellation' 
+ *     --> Importing and exporting 'SecondaryButton' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -191,4 +192,5 @@ export { SectionWrapper,
          AuthorTextCancellation,
          ToggleTextScrollCancellation,
          ButtonScrollCancellation,
+         SecondaryButton,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
