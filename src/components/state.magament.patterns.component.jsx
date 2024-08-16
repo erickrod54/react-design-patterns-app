@@ -2,11 +2,13 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import PersonState from "./state.magament.patterns.use.case.person";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 32.05 - StateManagementPatterns
+/**react-design-patterns-app - version 32.07 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'StateManagementPatterns' Disadvantages
+ *     --> Adding 'personstatewrongcode' Disadvantages
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -15,6 +17,8 @@ import { usePatternsAppContext } from "../context";
 const StateManagementPatterns = () => {
 
     const { CodeData } = usePatternsAppContext();
+
+    const personstatewrongcode = CodeData[170].code;
     
     return(
         <div>
@@ -92,6 +96,13 @@ const StateManagementPatterns = () => {
                     <span className="text-white font-semibold"> Not a React Native Solution </span> ( While helpful, it doesn't replace all React state management solutions like context or state management libraries. )
                 </li>
             </ul>
+
+            <p>
+                so React state management because of <span className="text-white font-semibold"> Immutability Paradigm </span>, 
+                if i want to modified data directly as follows won't work:
+            </p>
+
+            <BashCode code={personstatewrongcode}/>
 
             </SectionWrapper>
         </div>
