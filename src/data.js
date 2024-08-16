@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.06- data js  
+/**react-design-patterns-app - version 32.07- data js  
  * - Features: 
  *    
- *     --> Adding 'PersonState - State Management' id    
+ *     --> Adding 'PersonState - State Management' comments    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6113,7 +6113,7 @@ const UsersApiHookLogicAndDataAbs = () => {
         })
     
         const onChange = () => {
-          /** This won't work*/
+          /** This won't work -  because the React Immutability Paradigm*/
           person.age = 24;
         }
     
