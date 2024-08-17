@@ -85,6 +85,7 @@ import ShoppingCounterPerformance from "./shopping.cart.app.optimize.context.per
 import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
 import StateManagementPatterns from "./state.magament.patterns.component.jsx";
+import PersonState from "./state.magament.patterns.use.case.person.jsx";
 import TheOutSideControlled from "./theoutside.controlled.component";
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
@@ -127,10 +128,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 32.02 - components > index  
+/**react-design-patterns-app - version 32.09 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'StateManagementPatterns'
+ *     --> Importing and exporting 'PersonState'
  * 
  * Note: Pending to make responsive design
  */
@@ -262,5 +263,6 @@ export {
          PaginatedQuotes,
          InfiniteScrollQuotes,
          QueryCancellationWithAbortSignal,
-         StateManagementPatterns
+         StateManagementPatterns,
+         PersonState
         }
