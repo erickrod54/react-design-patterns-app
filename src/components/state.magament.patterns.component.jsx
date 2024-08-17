@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 32.07 - StateManagementPatterns
+/**react-design-patterns-app - version 32.09 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'personstatewrongcode' Disadvantages
+ *     --> Adding 'personstaterightcode' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -19,6 +19,7 @@ const StateManagementPatterns = () => {
     const { CodeData } = usePatternsAppContext();
 
     const personstatewrongcode = CodeData[170].code;
+    const personstaterightcode = CodeData[171].code;
     
     return(
         <div>
@@ -103,6 +104,13 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={personstatewrongcode}/>
+
+            <p>
+                so React state management by <span className="text-white font-semibold"> Immutability Paradigm </span>, 
+                will work as follows:
+            </p>    
+
+            <BashCode code={personstaterightcode}/>
 
             </SectionWrapper>
         </div>
