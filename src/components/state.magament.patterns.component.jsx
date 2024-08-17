@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 32.09 - StateManagementPatterns
+/**react-design-patterns-app - version 32.10 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'personstaterightcode' 
+ *     --> Rendering 'PersonState'code 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -111,6 +111,12 @@ const StateManagementPatterns = () => {
             </p>    
 
             <BashCode code={personstaterightcode}/>
+
+            <p>
+                resulting <span className="text-white font-semibold"> PersonState </span> as follows:
+            </p>
+
+            <PersonState />
 
             </SectionWrapper>
         </div>
