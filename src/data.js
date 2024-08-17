@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.09- data js  
+/**react-design-patterns-app - version 32.10- data js  
  * - Features: 
  *    
- *     --> Adding 'PersonState - State Management' right code id    
+ *     --> Adding 'boardData' data    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6298,3 +6298,42 @@ export const books = [
 ]
 
 /**List Pattern data  -- end */
+
+/**List boardData data  -- start */
+export const boardData = {
+  name: "Developers",
+  columns: [
+    {
+      name: "Backlog",
+      tasks: [
+        {
+          name: "Update dependencies",
+        },
+        {
+          name: "Add review feature",
+        },
+      ],
+    },
+    {
+      name: "Todo",
+      tasks: [
+        {
+          name: "Fix modal transition",
+        },
+      ],
+    },
+    {
+      name: "In progress",
+      tasks: [
+        {
+          name: "Create task board",
+        },
+      ],
+    },
+    {
+      name: "Complete",
+      tasks: [],
+    },
+  ],
+};
+/**List boardData data  -- end */
