@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.07- data js  
+/**react-design-patterns-app - version 32.08- data js  
  * - Features: 
  *    
- *     --> Adding 'PersonState - State Management' comments    
+ *     --> Adding 'PersonState - State Management' right code    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6148,6 +6148,97 @@ const UsersApiHookLogicAndDataAbs = () => {
         )
     }
     
+    export default PersonState;
+    `
+    },
+    {
+    id: 170,
+    name: ' PersonState - State Management',
+    code:   
+    `
+    const PersonState = () => {
+    const [ person, setPerson ] = useState({
+        name: "Superman",
+    })
+
+    const onChange = () => {
+        /**this will work - because complies with the React Immutability Paradigm by 
+         * making use the useState hook to modify state not directly*/
+        setPerson({...person, age: 24})
+    }
+
+    const onReset = () => {
+        
+        setPerson({...person, age: 0})
+    }
+
+    const { name, age } = person;
+
+        return(
+            <ListWrapper>
+                <BooksUseTransitionContainer>
+                    <div>
+                        <PrimaryButton>
+                            <button onClick={onChange}>set age</button>
+                        </PrimaryButton>  
+                        
+                        <SecondaryButton>
+                            <button onClick={onReset}>reset age</button>
+                        </SecondaryButton>
+                    </div>
+                </BooksUseTransitionContainer>
+                <h2> Person Name:</h2>
+                <h2 className="author-name"><span>{name}</span></h2>
+
+                {age ? 
+                <p><span>Age: </span> {age} years</p>
+                :
+                null
+                }
+            </ListWrapper>
+        )
+    }
+
+    export default PersonState;const PersonState = () => {
+        const [ person, setPerson ] = useState({
+            name: "Superman",
+        })
+
+        const onChange = () => {
+            setPerson({...person, age: 24})
+        }
+
+        const onReset = () => {
+            setPerson({...person, age: 0})
+        }
+
+        const { name, age } = person;
+
+        return(
+            <ListWrapper>
+                <BooksUseTransitionContainer>
+                    <div>
+                        <PrimaryButton>
+                            <button onClick={onChange}>set age</button>
+                        </PrimaryButton>  
+                        
+                        <SecondaryButton>
+                            <button onClick={onReset}>reset age</button>
+                        </SecondaryButton>
+                    </div>
+                </BooksUseTransitionContainer>
+                <h2> Person Name:</h2>
+                <h2 className="author-name"><span>{name}</span></h2>
+
+                {age ? 
+                <p><span>Age: </span> {age} years</p>
+                :
+                null
+                }
+            </ListWrapper>
+        )
+    }
+
     export default PersonState;
     `
     }
