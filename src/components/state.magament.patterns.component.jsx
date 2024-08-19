@@ -4,11 +4,12 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
+import TasksBoard from "./state.magament.patterns.use.case.task.board";
 
-/**react-design-patterns-app - version 32.10 - StateManagementPatterns
+/**react-design-patterns-app - version 32.16 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Rendering 'PersonState'code 
+ *     --> Starting 'TaskBoard' data 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -20,6 +21,7 @@ const StateManagementPatterns = () => {
 
     const personstatewrongcode = CodeData[170].code;
     const personstaterightcode = CodeData[171].code;
+    const boarddata = CodeData[172].code;
     
     return(
         <div>
@@ -117,6 +119,10 @@ const StateManagementPatterns = () => {
             </p>
 
             <PersonState />
+
+            <p>
+                so let's work in the taskboard, so have the following data set <span className="text-white font-semibold"> boardData </span> as follows: 
+            </p>
 
             </SectionWrapper>
         </div>
