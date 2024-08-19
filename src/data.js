@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.16- data js  
+/**react-design-patterns-app - version 32.17- data js  
  * - Features: 
  *    
- *     --> Adding 'boardData' id    
+ *     --> Adding 'TasksBoard' code    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6284,9 +6284,109 @@ const UsersApiHookLogicAndDataAbs = () => {
       ],
     };
     `
+    },
+    {
+    id: 172,
+    name: ' TasksBoard - State Management',
+    code:   
+    `
+    const TasksBoard = (props) => {
+        
+        const { boardData } = usePatternsAppContext();
+    
+        const [board, setBoard] = useState(boardData);
+        const [selectedTask, setSelectedTask] = useState();
+        
+        const onSelectTask = (columnIdx, taskIdx) => {
+            setSelectedTask({
+              columnIdx,
+              taskIdx,
+            });
+        };
+    
+        const onTaskNameChange = (e) => {
+            if (!selectedTask) return;
+            const { columnIdx, taskIdx } = selectedTask;
+        
+              setBoard((board) => {
+                return {
+                  ...board,
+                  columns: [
+                    ...board.columns.map((column, _columnIdx) => {
+                      if (columnIdx !== _columnIdx) {
+                        return column;
+                      }
+                      return {
+                        ...column,
+                        tasks: column.tasks.map((task, _taskIdx) => {
+                          if (taskIdx !== _taskIdx) {
+                            return task;
+                          }
+                          return {
+                            ...task,
+                            name: e.target.value,
+                          };
+                        }),
+                      };
+                    }),
+                  ],
+                };
+              });
+          };
+      
+          
+        return (
+            <Container>
+            <Header>
+              <HeaderBackground>
+                <BoardTitle>{board.name}</BoardTitle>
+              </HeaderBackground>
+              <Content>
+                {board.columns.map((column, columnIdx) => (
+                  <ColumnContainer key={columnIdx}>
+                    <ColumnHeader>{column.name}</ColumnHeader>
+                    <TaskContainer>
+                      {column.tasks.map((task, taskIdx) => (
+                        <TaskButton
+                          key={taskIdx}
+                          isSelected={
+                            columnIdx === selectedTask?.columnIdx &&
+                            taskIdx === selectedTask?.taskIdx
+                          }
+                          onClick={() => onSelectTask(columnIdx, taskIdx)}
+                        >
+                          <h4>{task.name}</h4>
+                        </TaskButton>
+                      ))}
+                    </TaskContainer>
+                  </ColumnContainer>
+                ))}
+                <div>
+                  <UpdateTaskHeader>
+                    {selectedTask ? "Update task" : "Select a task to update"}
+                  </UpdateTaskHeader>
+                  {selectedTask ? (
+                    <UpdateTaskInput
+                      type="text"
+                      value={
+                        board.columns[selectedTask.columnIdx].tasks[
+                          selectedTask.taskIdx
+                        ].name
+                      }
+                      onChange={onTaskNameChange}
+                    />
+                  ) : null}
+                </div>
+              </Content>
+            </Header>
+          </Container>
+        );
+      };
+      export default TasksBoard;
+    `
     }
   ];
-
+  
   
   /**List Pattern data  -- start */
   
