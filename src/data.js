@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.10- data js  
+/**react-design-patterns-app - version 32.15- data js  
  * - Features: 
  *    
- *     --> Adding 'boardData' data    
+ *     --> Adding 'boardData' to CodeData    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6241,10 +6241,53 @@ const UsersApiHookLogicAndDataAbs = () => {
 
     export default PersonState;
     `
+    },
+    {
+    id: 171,
+    name: ' boardData - State Management',
+    code:   
+    `
+    const boardData = {
+    name: "Developers",
+    columns: [
+        {
+          name: "Backlog",
+          tasks: [
+            {
+              name: "Update dependencies",
+            },
+            {
+              name: "Add review feature",
+            },
+          ],
+        },
+        {
+          name: "Todo",
+          tasks: [
+            {
+              name: "Fix modal transition",
+            },
+          ],
+        },
+        {
+          name: "In progress",
+          tasks: [
+            {
+              name: "Create task board",
+            },
+          ],
+        },
+        {
+          name: "Complete",
+          tasks: [],
+        },
+      ],
+    };
+    `
     }
   ];
 
-
+  
   /**List Pattern data  -- start */
   
   export const authors = [
