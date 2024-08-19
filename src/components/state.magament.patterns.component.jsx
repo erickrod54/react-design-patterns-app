@@ -6,10 +6,10 @@ import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 
-/**react-design-patterns-app - version 32.16 - StateManagementPatterns
+/**react-design-patterns-app - version 32.17 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'TaskBoard' data 
+ *     --> Adding 'boarddata'  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -121,8 +121,11 @@ const StateManagementPatterns = () => {
             <PersonState />
 
             <p>
-                so let's work in the taskboard, so have the following data set <span className="text-white font-semibold"> boardData </span> as follows: 
+                so let's work in the  <span className="text-white font-semibold"> TasksBoard </span>, so have the following 
+                data set <span className="text-white font-semibold"> boardData </span> as follows: 
             </p>
+
+            <BashCode code={boarddata}/>
 
             </SectionWrapper>
         </div>
