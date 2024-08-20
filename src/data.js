@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.17- data js  
+/**react-design-patterns-app - version 32.18- data js  
  * - Features: 
  *    
- *     --> Adding 'TasksBoard' code    
+ *     --> Adding 'TasksBoard' id    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6286,7 +6286,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 172,
+    id: 173,
     name: ' TasksBoard - State Management',
     code:   
     `
