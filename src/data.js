@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 32.18- data js  
+/**react-design-patterns-app - version 32.19- data js  
  * - Features: 
  *    
- *     --> Adding 'TasksBoard' id    
+ *     --> Adding 'TasksBoard' comments    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6297,6 +6297,8 @@ const UsersApiHookLogicAndDataAbs = () => {
         const [board, setBoard] = useState(boardData);
         const [selectedTask, setSelectedTask] = useState();
         
+        /**this handler will iterate over every task by
+         * culumn id and task id*/
         const onSelectTask = (columnIdx, taskIdx) => {
             setSelectedTask({
               columnIdx,
@@ -6304,24 +6306,36 @@ const UsersApiHookLogicAndDataAbs = () => {
             });
         };
     
+       /**and this handler will update the name of the selected task*/
         const onTaskNameChange = (e) => {
+            /** if there is not selected task will return*/
             if (!selectedTask) return;
+            /**destructure column task id and task id*/
             const { columnIdx, taskIdx } = selectedTask;
         
+              /**inside of the setter (mutator) a function will handle 
+               * the data update*/
               setBoard((board) => {
                 return {
+                /**i return the board data props*/
                   ...board,
+                  /**then i map the columns*/
                   columns: [
                     ...board.columns.map((column, _columnIdx) => {
                       if (columnIdx !== _columnIdx) {
                         return column;
                       }
+                       /**once i have the column i return it*/ 
                       return {
                         ...column,
+                        /**then i return the task id ( here i have the name )*/
                         tasks: column.tasks.map((task, _taskIdx) => {
+                          /**the if flow to return the task*/
                           if (taskIdx !== _taskIdx) {
                             return task;
                           }
+                          /**then finally i will return the task along
+                           * with the name edited by the user*/  
                           return {
                             ...task,
                             name: e.target.value,
