@@ -6,10 +6,10 @@ import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 
-/**react-design-patterns-app - version 32.18 - StateManagementPatterns
+/**react-design-patterns-app - version 32.19 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'taskboardcode'  
+ *     --> Adding 'taskboardcode'  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -134,7 +134,7 @@ const StateManagementPatterns = () => {
                 a considerable complexity 
             </p>
 
-            
+            <BashCode code={taskboardcode}/>
 
             </SectionWrapper>
         </div>
