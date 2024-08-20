@@ -3,10 +3,10 @@ import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 32.19 - TasksBoard
+/**react-design-patterns-app - version 32.20 - TasksBoard
  * - Features: 
  * 
- *     --> Refactoring 'BoardTitle'
+ *     --> Refactoring 'HeaderBackground'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -23,8 +23,9 @@ const Header = styled.div`
 `;
 
 const HeaderBackground = styled.div`
-  background-color: #34d399;
+  background-color: #348bd3;
   padding: 1rem 4px 4px 4px;
+  font-size: x-large;
 `;
 
 const BoardTitle = styled.h2`
