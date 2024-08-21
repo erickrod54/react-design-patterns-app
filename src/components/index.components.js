@@ -86,6 +86,7 @@ import SplitScreen from "./split.screen.component";
 import SplitScreenVariation from "./split.screen.variation.component";
 import StateManagementPatterns from "./state.magament.patterns.component.jsx";
 import PersonState from "./state.magament.patterns.use.case.person.jsx";
+import TasksBoard from "./state.magament.patterns.use.case.task.board.jsx";
 import TheOutSideControlled from "./theoutside.controlled.component";
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
@@ -128,10 +129,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 32.09 - components > index  
+/**react-design-patterns-app - version 33.03 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'PersonState'
+ *     --> Importing and exporting 'TasksBoard'
  * 
  * Note: Pending to make responsive design
  */
@@ -264,5 +265,6 @@ export {
          InfiniteScrollQuotes,
          QueryCancellationWithAbortSignal,
          StateManagementPatterns,
-         PersonState
+         PersonState,
+         TasksBoard
         }
