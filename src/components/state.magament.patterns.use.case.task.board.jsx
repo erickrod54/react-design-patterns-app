@@ -3,10 +3,10 @@ import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 33.01 - TasksBoard
+/**react-design-patterns-app - version 33.02 - TasksBoard
  * - Features: 
  * 
- *     --> Refactoring 'ColumnHeader'
+ *     --> Refactoring 'UpdateTaskInput'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -82,7 +82,8 @@ const UpdateTaskHeader = styled.h2`
 const UpdateTaskInput = styled.input`
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #466997;
+  color: #000;
 `;
 
 const TasksBoard = (props) => {
