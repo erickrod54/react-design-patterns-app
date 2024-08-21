@@ -3,10 +3,10 @@ import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 33.00 - TasksBoard
+/**react-design-patterns-app - version 33.01 - TasksBoard
  * - Features: 
  * 
- *     --> Refactoring 'Content'
+ *     --> Refactoring 'ColumnHeader'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -50,6 +50,7 @@ const ColumnContainer = styled.div`
 const ColumnHeader = styled.h3`
   font-weight: 600;
   margin-bottom: 0.75rem;
+  color: aliceblue;
 `;
 
 const TaskContainer = styled.div`
