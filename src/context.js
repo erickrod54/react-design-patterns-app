@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react"
-import { CodeData, ImagesData, IntroComponentData, authors, books, myNestedObject, patternCard } from "./data";
+import { CodeData, ImagesData, IntroComponentData, authors, boardData, books, myNestedObject, patternCard } from "./data";
 import axios from "axios";
 
-/**react-design-patterns-app - version 13.01 - context js  
+/**react-design-patterns-app - version 33.03 - context js  
  * - Features: 
  * 
- *     --> Clearing 'setShowCallback' state
+ *     --> Adding 'boardData' data
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -55,7 +55,8 @@ export const PatternsAppProvider = ({ children }) => {
                 CallbackHandler,
                 myNestedObject,
                 getDataFromServer,
-                getDataFromLocalStorage
+                getDataFromLocalStorage,
+                boardData
              }}
         >
             {children}
