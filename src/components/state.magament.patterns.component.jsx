@@ -6,10 +6,10 @@ import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 
-/**react-design-patterns-app - version 33.03 - StateManagementPatterns
+/**react-design-patterns-app - version 33.04 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Rendering 'TasksBoard'  component
+ *     --> Starting 'useImmer'  implementation
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -141,6 +141,12 @@ const StateManagementPatterns = () => {
             </p>
 
             <TasksBoard />
+
+            <p>
+                the complexity of the <span className="text-white font-semibold"> state management </span> ( it can be seen that 
+                the maping and returning multiple times makes very complex and dificult to maintain ) above can solve by 
+                implementing <span className="text-white font-semibold"> useImmer </span> library, first i start by:
+            </p>
 
             </SectionWrapper>
         </div>
