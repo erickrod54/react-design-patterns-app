@@ -6,10 +6,10 @@ import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 
-/**react-design-patterns-app - version 33.04 - StateManagementPatterns
+/**react-design-patterns-app - version 33.05 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'useImmer'  implementation
+ *     --> Adding 'taskboardimmercode1'  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -23,6 +23,7 @@ const StateManagementPatterns = () => {
     const personstaterightcode = CodeData[171].code;
     const boarddata = CodeData[172].code;
     const taskboardcode = CodeData[173].code;
+    const taskboardimmercode1 = CodeData[174].code;
     
     return(
         <div>
@@ -148,6 +149,14 @@ const StateManagementPatterns = () => {
                 implementing <span className="text-white font-semibold"> useImmer </span> library, first i start by:
             </p>
 
+
+            <BashCode code={taskboardimmercode1}/>
+
+            <p>
+                the <span className="text-white font-semibold"> useImmer </span> library 
+            </p>
+
+            
             </SectionWrapper>
         </div>
     )
