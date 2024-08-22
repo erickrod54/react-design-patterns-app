@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 33.04- data js  
+/**react-design-patterns-app - version 33.05- data js  
  * - Features: 
  *    
- *     --> Adding 'TasksBoardImmer' snippet 1    
+ *     --> Adding 'TasksBoardImmer' snippet 1  id  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6400,7 +6400,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 173,
+    id: 174,
     name: ' TasksBoardImmer - Snippet 1',
     code:   
     `
