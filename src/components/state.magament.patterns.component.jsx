@@ -6,10 +6,10 @@ import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 
-/**react-design-patterns-app - version 33.05 - StateManagementPatterns
+/**react-design-patterns-app - version 33.09 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'taskboardimmercode1'  
+ *     --> Adding 'taskboardimmercode2'  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -24,6 +24,7 @@ const StateManagementPatterns = () => {
     const boarddata = CodeData[172].code;
     const taskboardcode = CodeData[173].code;
     const taskboardimmercode1 = CodeData[174].code;
+    const taskboardimmercode2 = CodeData[175].code;
     
     return(
         <div>
@@ -153,9 +154,11 @@ const StateManagementPatterns = () => {
             <BashCode code={taskboardimmercode1}/>
 
             <p>
-                the <span className="text-white font-semibold"> useImmer </span> library 
+                the <span className="text-white font-semibold"> useImmer </span> library has to be installed previuosly,
+                now the <span className="text-white font-semibold"> onSelectTask </span> handler stays the same:
             </p>
 
+            <BashCode code={taskboardimmercode2}/>
             
             </SectionWrapper>
         </div>
