@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 33.08- data js  
+/**react-design-patterns-app - version 33.09- data js  
  * - Features: 
  *    
- *     --> Adding 'TasksBoardImmer' snippet 2 id    
+ *     --> Adding 'TasksBoardImmer' snippet 2 comments    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6433,6 +6433,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     const [board, setBoard] = useImmer(boardData);
     const [selectedTask, setSelectedTask] = useState();
 
+    /**the onSelectTask still as preiously setting 
+     * the column id and task id*/  
     const onSelectTask = (columnIdx, taskIdx) => {
         setSelectedTask({
           columnIdx,
