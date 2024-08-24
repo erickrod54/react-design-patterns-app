@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 33.12- data js  
+/**react-design-patterns-app - version 33.13- data js  
  * - Features: 
  *    
- *     --> Adding 'TasksBoardImmer - Snippet 3' id   
+ *     --> Adding 'TasksBoardImmer - Snippet 3' comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6469,10 +6469,18 @@ const UsersApiHookLogicAndDataAbs = () => {
             });
         };
     
+        /**here is where everything changes using useImmer, i catch the event*/
         const onTaskNameChange = (e) => {
+
+            /**here i check for the selectedTask*/
             if (!selectedTask) return;
+
+            /**i destructure here selectedTask props*/
             const { columnIdx, taskIdx } = selectedTask;
-        
+
+            /**the setter will be way easier because i can 
+             * asign to the board column with the corresponding
+             * id the e.target.value -user input value - */
             setBoard((board) => {
               board.columns[columnIdx].tasks[taskIdx].name = e.target.value;
             });
