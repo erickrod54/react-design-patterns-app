@@ -6,10 +6,10 @@ import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 
-/**react-design-patterns-app - version 33.10 - StateManagementPatterns
+/**react-design-patterns-app - version 33.13 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'onTaskNameChange'  
+ *     --> Adding 'taskboardimmercode3' code  
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -25,6 +25,7 @@ const StateManagementPatterns = () => {
     const taskboardcode = CodeData[173].code;
     const taskboardimmercode1 = CodeData[174].code;
     const taskboardimmercode2 = CodeData[175].code;
+    const taskboardimmercode3 = CodeData[176].code;
     
     return(
         <div>
@@ -163,8 +164,10 @@ const StateManagementPatterns = () => {
             <p>
                 the <span className="text-white font-semibold"> onTaskNameChange  </span> in this case will 
                 have high modifications due to a <span className="text-white font-semibold"> useImmer </span>
-                state management
+                state management, as follows:
             </p>
+            
+            <BashCode code={taskboardimmercode3}/>
             
             </SectionWrapper>
         </div>
