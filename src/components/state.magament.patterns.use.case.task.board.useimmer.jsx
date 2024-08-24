@@ -3,10 +3,10 @@ import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 33.09 - TasksBoardImmer
+/**react-design-patterns-app - version 33.13 - TasksBoardImmer
  * - Features: 
  * 
- *     --> Building 'onSelectTask'
+ *     --> Building 'onTaskNameChange'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -98,8 +98,17 @@ const TasksBoardImmer = (props) => {
           columnIdx,
           taskIdx,
         });
-      };
-  
+    };
+
+    const onTaskNameChange = (e) => {
+        if (!selectedTask) return;
+        const { columnIdx, taskIdx } = selectedTask;
+    
+        setBoard((board) => {
+          board.columns[columnIdx].tasks[taskIdx].name = e.target.value;
+        });
+    };
+      
       
     return (
         <></>
