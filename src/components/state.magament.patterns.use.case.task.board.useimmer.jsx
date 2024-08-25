@@ -3,10 +3,10 @@ import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 33.13 - TasksBoardImmer
+/**react-design-patterns-app - version 33.15 - TasksBoardImmer
  * - Features: 
  * 
- *     --> Building 'onTaskNameChange'
+ *     --> Rendering 'TasksBoardImmer'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -111,7 +111,50 @@ const TasksBoardImmer = (props) => {
       
       
     return (
-        <></>
+        <Container>
+            <Header>
+                <HeaderBackground>
+                <BoardTitle>{board.name}</BoardTitle>
+                </HeaderBackground>
+                <Content>
+                {board.columns.map((column, columnIdx) => (
+                    <ColumnContainer key={columnIdx}>
+                    <ColumnHeader>{column.name}</ColumnHeader>
+                    <TaskContainer>
+                        {column.tasks.map((task, taskIdx) => (
+                        <TaskButton
+                            key={taskIdx}
+                            isSelected={
+                            columnIdx === selectedTask?.columnIdx &&
+                            taskIdx === selectedTask?.taskIdx
+                            }
+                            onClick={() => onSelectTask(columnIdx, taskIdx)}
+                        >
+                            <h4>{task.name}</h4>
+                        </TaskButton>
+                        ))}
+                    </TaskContainer>
+                    </ColumnContainer>
+                ))}
+                <div>
+                    <UpdateTaskHeader>
+                    {selectedTask ? "Update task" : "Select a task to update"}
+                    </UpdateTaskHeader>
+                    {selectedTask ? (
+                    <UpdateTaskInput
+                        type="text"
+                        value={
+                        board.columns[selectedTask.columnIdx].tasks[
+                            selectedTask.taskIdx
+                        ].name
+                        }
+                        onChange={onTaskNameChange}
+                    />
+                    ) : null}
+                </div>
+                </Content>
+            </Header>
+        </Container>
     );
   };
   export default TasksBoardImmer;
