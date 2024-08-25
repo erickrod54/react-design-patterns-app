@@ -87,6 +87,7 @@ import SplitScreenVariation from "./split.screen.variation.component";
 import StateManagementPatterns from "./state.magament.patterns.component.jsx";
 import PersonState from "./state.magament.patterns.use.case.person.jsx";
 import TasksBoard from "./state.magament.patterns.use.case.task.board.jsx";
+import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer.jsx";
 import TheOutSideControlled from "./theoutside.controlled.component";
 import TopUseEffect from "./top.use.effect.component";
 import TopUseLayoutEffect from "./top.uselayouteffect.component";
@@ -129,10 +130,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 33.03 - components > index  
+/**react-design-patterns-app - version 33.17 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'TasksBoard'
+ *     --> Importing and exporting 'TasksBoardImmer'
  * 
  * Note: Pending to make responsive design
  */
@@ -266,5 +267,6 @@ export {
          QueryCancellationWithAbortSignal,
          StateManagementPatterns,
          PersonState,
-         TasksBoard
+         TasksBoard,
+         TasksBoardImmer
         }
