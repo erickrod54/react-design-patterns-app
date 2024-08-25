@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 33.16 - StateManagementPatterns
+/**react-design-patterns-app - version 33.17 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'taskimmercode'   
+ *     --> Adding 'taskboardimmercode'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -27,6 +27,7 @@ const StateManagementPatterns = () => {
     const taskboardimmercode1 = CodeData[174].code;
     const taskboardimmercode2 = CodeData[175].code;
     const taskboardimmercode3 = CodeData[176].code;
+    const taskboardimmercode = CodeData[177].code;
     
     return(
         <div>
@@ -172,10 +173,10 @@ const StateManagementPatterns = () => {
             
             <p>
                 so the complete component will have <span className="text-white font-semibold"> exactly the same behavior </span> with 
-                better <span className="text-white font-semibold"> performance and better readbility </span>:
+                better <span className="text-white font-semibold"> performance and better readbility </span> as follows:
             </p>
 
-            
+            <BashCode code={taskboardimmercode}/>
 
             </SectionWrapper>
         </div>
