@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 33.17 - StateManagementPatterns
+/**react-design-patterns-app - version 33.18 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'taskboardimmercode'   
+ *     --> Adding 'TasksBoardImmer'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -177,6 +177,12 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={taskboardimmercode}/>
+
+            <p>
+                resulting in: 
+            </p>
+
+            <TasksBoardImmer />
 
             </SectionWrapper>
         </div>
