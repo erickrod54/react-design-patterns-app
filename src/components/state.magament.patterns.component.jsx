@@ -5,11 +5,12 @@ import { usePatternsAppContext } from "../context";
 import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
+import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 33.13 - StateManagementPatterns
+/**react-design-patterns-app - version 33.16 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'taskboardimmercode3' code  
+ *     --> Starting 'taskimmercode'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -169,6 +170,13 @@ const StateManagementPatterns = () => {
             
             <BashCode code={taskboardimmercode3}/>
             
+            <p>
+                so the complete component will have <span className="text-white font-semibold"> exactly the same behavior </span> with 
+                better <span className="text-white font-semibold"> performance and better readbility </span>:
+            </p>
+
+            
+
             </SectionWrapper>
         </div>
     )
