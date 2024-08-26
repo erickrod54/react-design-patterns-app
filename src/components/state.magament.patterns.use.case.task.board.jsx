@@ -2,22 +2,20 @@ import React, { useState } from "react";
 import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
-import { ContainerTasksBoard } from "../styledcomponents/styled.components";
+import { ContainerTasksBoard, HeaderTaskBoard } from "../styledcomponents/styled.components";
 
 
-/**react-design-patterns-app - version 33.19 - TasksBoard
+/**react-design-patterns-app - version 33.20 - TasksBoard
  * - Features: 
  * 
- *     --> Migrating 'ContainerTasksBoard'
+ *     --> Migrating 'HeaderTaskBoard'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
 
-const Header = styled.div`
-  text-align: left;
-`;
+
 
 const HeaderBackground = styled.div`
   background-color: #348bd3;
@@ -130,7 +128,7 @@ const TasksBoard = (props) => {
       
     return (
         <ContainerTasksBoard>
-        <Header>
+        <HeaderTaskBoard>
           <HeaderBackground>
             <BoardTitle>{board.name}</BoardTitle>
           </HeaderBackground>
@@ -171,7 +169,7 @@ const TasksBoard = (props) => {
               ) : null}
             </div>
           </Content>
-        </Header>
+        </HeaderTaskBoard>
       </ContainerTasksBoard>
     );
   };
