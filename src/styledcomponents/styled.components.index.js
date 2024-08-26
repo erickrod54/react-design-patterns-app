@@ -24,6 +24,7 @@ import { AlertWrapper,
          ContainerPaginated,
          ContainerPostForm,
          ContainerScroll,
+         ContainerTasksBoard,
          CoverContainer,
          CustomTitleStyle,
          DisplayWrapper,
@@ -89,10 +90,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToggleTextScrollCancellation, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 32.07 - styledcomponents > index
+/**react-design-patterns-app - version 33.19 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'SecondaryButton' 
+ *     --> Importing and exporting 'ContainerTasksBoard' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -193,4 +194,5 @@ export { SectionWrapper,
          ToggleTextScrollCancellation,
          ButtonScrollCancellation,
          SecondaryButton,
+         ContainerTasksBoard,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
