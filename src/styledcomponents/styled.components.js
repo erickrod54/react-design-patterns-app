@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 33.20 - styled.components
+/**react-design-patterns-app - version 34.00 - styled.components
  * - Features: 
  * 
- *     -->  writting 'HeaderTaskBoard' styles to tailwind
+ *     -->  writting 'HeaderBackgroundTaskBoard' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,12 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const HeaderBackgroundTaskBoard = styled.div`
+	background-color: #348bd3;
+	padding: 1rem 4px 4px 4px;
+	font-size: x-large;
+`;
 
 export const HeaderTaskBoard = styled.div`
 	text-align: left;
