@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
-import { ContainerTasksBoard, HeaderTaskBoard } from "../styledcomponents/styled.components";
+import { ContainerTasksBoard, HeaderBackgroundTaskBoard, HeaderTaskBoard } from "../styledcomponents/styled.components";
 
-
-/**react-design-patterns-app - version 33.20 - TasksBoard
+/**react-design-patterns-app - version 34.00 - TasksBoard
  * - Features: 
  * 
  *     --> Migrating 'HeaderTaskBoard'
@@ -17,11 +16,7 @@ import { ContainerTasksBoard, HeaderTaskBoard } from "../styledcomponents/styled
 
 
 
-const HeaderBackground = styled.div`
-  background-color: #348bd3;
-  padding: 1rem 4px 4px 4px;
-  font-size: x-large;
-`;
+
 
 const BoardTitle = styled.h2`
   font-weight: bold;
@@ -129,9 +124,9 @@ const TasksBoard = (props) => {
     return (
         <ContainerTasksBoard>
         <HeaderTaskBoard>
-          <HeaderBackground>
+          <HeaderBackgroundTaskBoard>
             <BoardTitle>{board.name}</BoardTitle>
-          </HeaderBackground>
+          </HeaderBackgroundTaskBoard>
           <Content>
             {board.columns.map((column, columnIdx) => (
               <ColumnContainer key={columnIdx}>
