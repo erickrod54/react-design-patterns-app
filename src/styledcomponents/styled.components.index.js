@@ -5,6 +5,7 @@ import { AlertWrapper,
          AuthorText,
          AuthorTextCancellation,
          AuthorTextScroll,
+         BoardTitleTaskBoard,
          BooksUseTransitionContainer,
          ButtonGeneral,
          ButtonPostForm,
@@ -92,10 +93,10 @@ import { AlertWrapper,
          TitlePostForm,
          TitleScroll, ToggleTextScroll, ToggleTextScrollCancellation, ToolTipWrapper, WriterContainer } from "./styled.components";
 
-/**react-design-patterns-app - version 34.00 - styledcomponents > index
+/**react-design-patterns-app - version 34.01 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'HeaderBackgroundTaskBoard' 
+ *     --> Importing and exporting 'BoardTitleTaskBoard' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -199,4 +200,5 @@ export { SectionWrapper,
          ContainerTasksBoard,
          HeaderTaskBoard,
          HeaderBackgroundTaskBoard,
+         BoardTitleTaskBoard,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
