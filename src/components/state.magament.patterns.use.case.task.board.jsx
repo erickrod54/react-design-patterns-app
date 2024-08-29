@@ -7,24 +7,18 @@ import { BoardTitleTaskBoard,
          ColumnHeaderTaskBoard,
          ContainerTasksBoard,
          ContentTaskBoard,
-         HeaderBackgroundTaskBoard, HeaderTaskBoard } from "../styledcomponents/styled.components";
+         HeaderBackgroundTaskBoard, HeaderTaskBoard, 
+         TaskContainerBoard} from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 34.04 - TasksBoard
+/**react-design-patterns-app - version 34.05 - TasksBoard
  * - Features: 
  * 
- *     --> Migrating 'ColumnHeaderTaskBoard'
+ *     --> Migrating 'TaskContainerBoard'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-const TaskContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  height: 70vh;
-`;
 
 const TaskButton = styled.button`
   border: 1px solid #e2e8f0;
@@ -107,7 +101,7 @@ const TasksBoard = (props) => {
             {board.columns.map((column, columnIdx) => (
               <ColumnContainerTaskBoard key={columnIdx}>
                 <ColumnHeaderTaskBoard>{column.name}</ColumnHeaderTaskBoard>
-                <TaskContainer>
+                <TaskContainerBoard>
                   {column.tasks.map((task, taskIdx) => (
                     <TaskButton
                       key={taskIdx}
@@ -120,7 +114,7 @@ const TasksBoard = (props) => {
                       <h4>{task.name}</h4>
                     </TaskButton>
                   ))}
-                </TaskContainer>
+                </TaskContainerBoard>
               </ColumnContainerTaskBoard>
             ))}
             <div>
