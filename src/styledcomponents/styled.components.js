@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 34.05 - styled.components
+/**react-design-patterns-app - version 34.06 - styled.components
  * - Features: 
  * 
- *     -->  writting 'TaskContainerBoard' styles 
+ *     -->  writting 'TaskButtonBoard' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -17,6 +17,19 @@ import tw from 'twin.macro';
  * to use them in the custom titles
  */
 
+export const TaskButtonBoard = styled.button`
+	border: 1px solid #e2e8f0;
+	min-width: 200px;
+	height: 50px;
+	width: 100%;
+	background-color: ${({ isSelected }) => (isSelected ? "#34d399" : "#fff")};
+	color: ${({ isSelected }) => (isSelected ? "#fff" : "#000")};
+	cursor: pointer;
+
+	&:hover {
+	background-color: #e2e8f0;
+	}
+`;
 export const TaskContainerBoard = styled.div`
 	display: flex;
 	flex-direction: column;
