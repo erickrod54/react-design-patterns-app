@@ -9,21 +9,17 @@ import { BoardTitleTaskBoard,
          ContentTaskBoard,
          HeaderBackgroundTaskBoard, HeaderTaskBoard, 
          TaskButtonBoard, 
-         TaskContainerBoard} from "../styledcomponents/styled.components";
+         TaskContainerBoard,
+         UpdateTaskHeaderBoard} from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 34.06 - TasksBoard
+/**react-design-patterns-app - version 34.07 - TasksBoard
  * - Features: 
  * 
- *     --> Migrating 'TaskButtonBoard'
+ *     --> Migrating 'UpdateTaskHeaderBoard'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
-
-const UpdateTaskHeader = styled.h2`
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-`;
 
 const UpdateTaskInput = styled.input`
   width: 100%;
@@ -104,9 +100,9 @@ const TasksBoard = (props) => {
               </ColumnContainerTaskBoard>
             ))}
             <div>
-              <UpdateTaskHeader>
+              <UpdateTaskHeaderBoard>
                 {selectedTask ? "Update task" : "Select a task to update"}
-              </UpdateTaskHeader>
+              </UpdateTaskHeaderBoard>
               {selectedTask ? (
                 <UpdateTaskInput
                   type="text"
