@@ -8,31 +8,17 @@ import { BoardTitleTaskBoard,
          ContainerTasksBoard,
          ContentTaskBoard,
          HeaderBackgroundTaskBoard, HeaderTaskBoard, 
+         TaskButtonBoard, 
          TaskContainerBoard} from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 34.05 - TasksBoard
+/**react-design-patterns-app - version 34.06 - TasksBoard
  * - Features: 
  * 
- *     --> Migrating 'TaskContainerBoard'
+ *     --> Migrating 'TaskButtonBoard'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
-
-
-const TaskButton = styled.button`
-  border: 1px solid #e2e8f0;
-  min-width: 200px;
-  height: 50px;
-  width: 100%;
-  background-color: ${({ isSelected }) => (isSelected ? "#34d399" : "#fff")};
-  color: ${({ isSelected }) => (isSelected ? "#fff" : "#000")};
-  cursor: pointer;
-
-  &:hover {
-    background-color: #e2e8f0;
-  }
-`;
 
 const UpdateTaskHeader = styled.h2`
   font-weight: 600;
@@ -103,7 +89,7 @@ const TasksBoard = (props) => {
                 <ColumnHeaderTaskBoard>{column.name}</ColumnHeaderTaskBoard>
                 <TaskContainerBoard>
                   {column.tasks.map((task, taskIdx) => (
-                    <TaskButton
+                    <TaskButtonBoard
                       key={taskIdx}
                       isSelected={
                         columnIdx === selectedTask?.columnIdx &&
@@ -112,7 +98,7 @@ const TasksBoard = (props) => {
                       onClick={() => onSelectTask(columnIdx, taskIdx)}
                     >
                       <h4>{task.name}</h4>
-                    </TaskButton>
+                    </TaskButtonBoard>
                   ))}
                 </TaskContainerBoard>
               </ColumnContainerTaskBoard>
