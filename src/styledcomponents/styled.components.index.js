@@ -99,12 +99,12 @@ import { AlertWrapper,
          TitleScroll,
          ToggleTextScroll,
          ToggleTextScrollCancellation,
-         ToolTipWrapper, UpdateTaskHeaderBoard, WriterContainer } from "./styled.components";
+         ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskInputBoard, WriterContainer } from "./styled.components";
          
-/**react-design-patterns-app - version 34.07 - styledcomponents > index
+/**react-design-patterns-app - version 34.08 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'UpdateTaskHeaderBoard' 
+ *     --> Importing and exporting 'UpdateTaskInputBoard' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -215,4 +215,5 @@ export { SectionWrapper,
          TaskContainerBoard,
          TaskButtonBoard,
          UpdateTaskHeaderBoard,
+         UpdateTaskInputBoard,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
