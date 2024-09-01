@@ -45,6 +45,7 @@ import { AlertWrapper,
          FormPost,
          FormWrapper,
          FormWrapperDeferred,
+         HeaderBackgroundImmer,
          HeaderBackgroundTaskBoard,
          HeaderImmer,
          HeaderTaskBoard,
@@ -103,10 +104,10 @@ import { AlertWrapper,
          ToggleTextScrollCancellation,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskInputBoard, WriterContainer } from "./styled.components";
          
-/**react-design-patterns-app - version 34.10 - styledcomponents > index
+/**react-design-patterns-app - version 34.11 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'HeaderImmer' 
+ *     --> Importing and exporting 'HeaderBackgroundImmer' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -220,4 +221,5 @@ export { SectionWrapper,
          UpdateTaskInputBoard,
          ContainerImmer,
          HeaderImmer,
+         HeaderBackgroundImmer,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
