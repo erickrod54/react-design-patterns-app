@@ -5,6 +5,7 @@ import { AlertWrapper,
          AuthorText,
          AuthorTextCancellation,
          AuthorTextScroll,
+         BoardTitleImmer,
          BoardTitleTaskBoard,
          BooksUseTransitionContainer,
          ButtonGeneral,
@@ -104,10 +105,10 @@ import { AlertWrapper,
          ToggleTextScrollCancellation,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskInputBoard, WriterContainer } from "./styled.components";
          
-/**react-design-patterns-app - version 34.11 - styledcomponents > index
+/**react-design-patterns-app - version 34.12 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'HeaderBackgroundImmer' 
+ *     --> Importing and exporting 'BoardTitleImmer' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -222,4 +223,5 @@ export { SectionWrapper,
          ContainerImmer,
          HeaderImmer,
          HeaderBackgroundImmer,
+         BoardTitleImmer,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
