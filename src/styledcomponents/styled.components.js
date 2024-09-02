@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 34.12 - styled.components
+/**react-design-patterns-app - version 34.13 - styled.components
  * - Features: 
  * 
- *     -->  writting 'BoardTitleImmer' styles 
+ *     -->  writting 'ContentImmer' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,14 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const ContentImmer = styled.div`
+	display: flex;
+	gap: 1rem;
+	overflow-x: auto;
+	padding-left: 25px;
+	background-color: #3b3d97;
+`;
 
 export const BoardTitleImmer = styled.h2`
 	font-weight: bold;
