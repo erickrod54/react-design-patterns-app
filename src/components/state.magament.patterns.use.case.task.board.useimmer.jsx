@@ -2,22 +2,17 @@ import React, { useState } from "react";
 import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
-import { ContainerImmer, HeaderBackgroundImmer, HeaderImmer } from "../styledcomponents/styled.components";
+import { BoardTitleImmer, ContainerImmer, HeaderBackgroundImmer, HeaderImmer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 34.11 - TasksBoardImmer
+/**react-design-patterns-app - version 34.12 - TasksBoardImmer
  * - Features: 
  * 
- *     --> Migrating 'HeaderBackgroundImmer'
+ *     --> Migrating 'BoardTitleImmer'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-const BoardTitle = styled.h2`
-  font-weight: bold;
-  color: #080707;
-`;
 
 const Content = styled.div`
   display: flex;
@@ -100,7 +95,7 @@ const TasksBoardImmer = (props) => {
         <ContainerImmer>
             <HeaderImmer>
                 <HeaderBackgroundImmer>
-                <BoardTitle>{board.name}</BoardTitle>
+                <BoardTitleImmer>{board.name}</BoardTitleImmer>
                 </HeaderBackgroundImmer>
                 <Content>
                 {board.columns.map((column, columnIdx) => (
