@@ -2,23 +2,17 @@ import React, { useState } from "react";
 import { useImmer } from "use-immer";
 import { usePatternsAppContext } from "../context";
 import styled from "styled-components";
-import { BoardTitleImmer, ContainerImmer, ContentImmer, HeaderBackgroundImmer, HeaderImmer } from "../styledcomponents/styled.components";
+import { BoardTitleImmer, ColumnContainerImmer, ContainerImmer, ContentImmer, HeaderBackgroundImmer, HeaderImmer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 34.13 - TasksBoardImmer
+/**react-design-patterns-app - version 34.15 - TasksBoardImmer
  * - Features: 
  * 
- *     --> Migrating 'ContentImmer'
+ *     --> Migrating 'ColumnContainerImmer'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-const ColumnContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-right: 1.5rem;
-`;
 
 const ColumnHeader = styled.h3`
   font-weight: 600;
@@ -91,7 +85,7 @@ const TasksBoardImmer = (props) => {
                 </HeaderBackgroundImmer>
                 <ContentImmer>
                 {board.columns.map((column, columnIdx) => (
-                    <ColumnContainer key={columnIdx}>
+                    <ColumnContainerImmer key={columnIdx}>
                     <ColumnHeader>{column.name}</ColumnHeader>
                     <TaskContainer>
                         {column.tasks.map((task, taskIdx) => (
@@ -107,7 +101,7 @@ const TasksBoardImmer = (props) => {
                         </TaskButton>
                         ))}
                     </TaskContainer>
-                    </ColumnContainer>
+                    </ColumnContainerImmer>
                 ))}
                 <div>
                     <UpdateTaskHeader>
