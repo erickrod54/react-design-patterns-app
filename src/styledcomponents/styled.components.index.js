@@ -21,6 +21,7 @@ import { AlertWrapper,
          CiteContainer,
          CiteContainerCancellation,
          CiteContainerScroll,
+         ColumnContainerImmer,
          ColumnContainerTaskBoard,
          ColumnHeaderTaskBoard,
          Container,
@@ -106,10 +107,10 @@ import { AlertWrapper,
          ToggleTextScrollCancellation,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskInputBoard, WriterContainer } from "./styled.components";
          
-/**react-design-patterns-app - version 34.13 - styledcomponents > index
+/**react-design-patterns-app - version 34.14 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'ContentImmer' 
+ *     --> Importing and exporting 'ColumnContainerImmer' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -226,4 +227,5 @@ export { SectionWrapper,
          HeaderBackgroundImmer,
          BoardTitleImmer,
          ContentImmer,
+         ColumnContainerImmer,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
