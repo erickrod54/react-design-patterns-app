@@ -7,25 +7,18 @@ import { BoardTitleImmer,
          ColumnHeaderImmer,
          ContainerImmer,
          ContentImmer,
-         HeaderBackgroundImmer, HeaderImmer } from "../styledcomponents/styled.components";
+         HeaderBackgroundImmer, HeaderImmer, 
+         TaskContainerImmer} from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 34.16 - TasksBoardImmer
+/**react-design-patterns-app - version 34.17 - TasksBoardImmer
  * - Features: 
  * 
- *     --> Migrating 'ColumnHeaderImmer'
+ *     --> Migrating 'TaskContainerImmer'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-
-const TaskContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  height: 70vh;
-`;
 
 const TaskButton = styled.button`
   border: 1px solid #e2e8f0;
@@ -87,7 +80,7 @@ const TasksBoardImmer = (props) => {
                 {board.columns.map((column, columnIdx) => (
                     <ColumnContainerImmer key={columnIdx}>
                     <ColumnHeaderImmer>{column.name}</ColumnHeaderImmer>
-                    <TaskContainer>
+                    <TaskContainerImmer>
                         {column.tasks.map((task, taskIdx) => (
                         <TaskButton
                             key={taskIdx}
@@ -100,7 +93,7 @@ const TasksBoardImmer = (props) => {
                             <h4>{task.name}</h4>
                         </TaskButton>
                         ))}
-                    </TaskContainer>
+                    </TaskContainerImmer>
                     </ColumnContainerImmer>
                 ))}
                 <div>
