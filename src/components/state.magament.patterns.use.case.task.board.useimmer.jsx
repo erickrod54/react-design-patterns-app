@@ -8,31 +8,18 @@ import { BoardTitleImmer,
          ContainerImmer,
          ContentImmer,
          HeaderBackgroundImmer, HeaderImmer, 
+         TaskButtonImmer, 
          TaskContainerImmer} from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 34.17 - TasksBoardImmer
+/**react-design-patterns-app - version 34.18 - TasksBoardImmer
  * - Features: 
  * 
- *     --> Migrating 'TaskContainerImmer'
+ *     --> Migrating 'TaskButtonImmer'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-const TaskButton = styled.button`
-  border: 1px solid #e2e8f0;
-  min-width: 200px;
-  height: 50px;
-  width: 100%;
-  background-color: ${({ isSelected }) => (isSelected ? "#34d399" : "#fff")};
-  color: ${({ isSelected }) => (isSelected ? "#fff" : "#000")};
-  cursor: pointer;
-
-  &:hover {
-    background-color: #e2e8f0;
-  }
-`;
 
 const UpdateTaskHeader = styled.h2`
   font-weight: 600;
@@ -82,7 +69,7 @@ const TasksBoardImmer = (props) => {
                     <ColumnHeaderImmer>{column.name}</ColumnHeaderImmer>
                     <TaskContainerImmer>
                         {column.tasks.map((task, taskIdx) => (
-                        <TaskButton
+                        <TaskButtonImmer
                             key={taskIdx}
                             isSelected={
                             columnIdx === selectedTask?.columnIdx &&
@@ -91,7 +78,7 @@ const TasksBoardImmer = (props) => {
                             onClick={() => onSelectTask(columnIdx, taskIdx)}
                         >
                             <h4>{task.name}</h4>
-                        </TaskButton>
+                        </TaskButtonImmer>
                         ))}
                     </TaskContainerImmer>
                     </ColumnContainerImmer>
