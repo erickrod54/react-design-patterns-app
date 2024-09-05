@@ -9,22 +9,19 @@ import { BoardTitleImmer,
          ContentImmer,
          HeaderBackgroundImmer, HeaderImmer, 
          TaskButtonImmer, 
-         TaskContainerImmer} from "../styledcomponents/styled.components";
-
-/**react-design-patterns-app - version 34.18 - TasksBoardImmer
+         TaskContainerImmer,
+         UpdateTaskHeaderImmer} from "../styledcomponents/styled.components";
+         
+/**react-design-patterns-app - version 34.19 - TasksBoardImmer
  * - Features: 
  * 
- *     --> Migrating 'TaskButtonImmer'
+ *     --> Migrating 'UpdateTaskHeaderImmer'
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
 
-const UpdateTaskHeader = styled.h2`
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-`;
 
 const UpdateTaskInput = styled.input`
   width: 100%;
@@ -84,9 +81,9 @@ const TasksBoardImmer = (props) => {
                     </ColumnContainerImmer>
                 ))}
                 <div>
-                    <UpdateTaskHeader>
+                    <UpdateTaskHeaderImmer>
                     {selectedTask ? "Update task" : "Select a task to update"}
-                    </UpdateTaskHeader>
+                    </UpdateTaskHeaderImmer>
                     {selectedTask ? (
                     <UpdateTaskInput
                         type="text"
