@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 34.18 - styled.components
+/**react-design-patterns-app - version 34.19 - styled.components
  * - Features: 
  * 
- *     -->  writting 'TaskButtonImmer' styles 
+ *     -->  writting 'UpdateTaskHeaderImmer' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,11 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const UpdateTaskHeaderImmer = styled.h2`
+	font-weight: 600;
+	margin-bottom: 0.75rem;
+`;
 
 export const TaskButtonImmer = styled.button`
 	border: 1px solid #e2e8f0;
