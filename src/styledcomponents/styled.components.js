@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.01 - styled.components
+/**react-design-patterns-app - version 35.02 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'HeaderTaskBoard' styles to tailwind
+ *     --> Fixing 'ContainerTasksBoard' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -159,7 +159,7 @@ export const HeaderTaskBoard = styled.div`
 `;
 
 export const ContainerTasksBoard = styled.div`
-  	${tw`py-8 max-w-4xl mx-auto`}
+  	${tw`py-8 mx-auto`}
 `;
 
 export const ButtonScrollCancellation = styled.button`
