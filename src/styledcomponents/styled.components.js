@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.03 - styled.components
+/**react-design-patterns-app - version 35.04 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'HeaderBackgroundTaskBoard' styles to tailwind
+ *     --> Refactoring 'BoardTitleTaskBoard' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -143,8 +143,7 @@ export const ContentTaskBoard = styled.div`
 `;
 
 export const BoardTitleTaskBoard = styled.h2`
-  font-weight: bold;
-  color: #080707;
+  	${tw`font-bold text-[#080707]`}
 `;
 
 export const HeaderBackgroundTaskBoard = styled.div`
