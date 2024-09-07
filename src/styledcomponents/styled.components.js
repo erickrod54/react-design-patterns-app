@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.05 - styled.components
+/**react-design-patterns-app - version 35.06 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'ContentTaskBoard' styles to tailwind
+ *     --> Refactoring 'ColumnContainerTaskBoard' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -130,10 +130,10 @@ export const ColumnHeaderTaskBoard = styled.h3`
 `;
 
 export const ColumnContainerTaskBoard = styled.div`
-	display: flex;
-	flex-direction: column;
-	margin-right: 1.5rem;
+	${tw`flex flex-col mr-6`}
+
 `;
+
 export const ContentTaskBoard = styled.div`
 	${tw`flex gap-4 overflow-x-auto pl-[25px] bg-[#3b3d97]`}
 
