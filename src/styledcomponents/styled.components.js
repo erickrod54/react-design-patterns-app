@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.16 - styled.components
+/**react-design-patterns-app - version 35.17 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'ColumnContainerImmer' styles to tailwind
+ *     --> Refactoring 'ColumnHeaderImmer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -51,9 +51,8 @@ export const TaskContainerImmer = styled.div`
 `;
 
 export const ColumnHeaderImmer = styled.h3`
-	font-weight: 600;
-	margin-bottom: 0.75rem;
-	color: aliceblue;
+	${tw`font-semibold mb-3 text-slate-100`}
+
 `;
 
 export const ColumnContainerImmer = styled.div`
