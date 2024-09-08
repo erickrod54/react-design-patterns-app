@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.11 - styled.components
+/**react-design-patterns-app - version 35.12 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'ContainerImmer' styles to tailwind
+ *     --> Refactoring 'HeaderImmer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -82,7 +82,7 @@ export const HeaderBackgroundImmer = styled.div`
 `;
 
 export const HeaderImmer = styled.div`
-	text-align: left;
+	${tw`text-left`}
 `;
 
 export const ContainerImmer = styled.div`
