@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.14 - styled.components
+/**react-design-patterns-app - version 35.15 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'BoardTitleImmer' styles to tailwind
+ *     --> Refactoring 'ContentImmer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -63,11 +63,8 @@ export const ColumnContainerImmer = styled.div`
 `;
 
 export const ContentImmer = styled.div`
-	display: flex;
-	gap: 1rem;
-	overflow-x: auto;
-	padding-left: 25px;
-	background-color: #3b3d97;
+	${tw`flex gap-4 overflow-x-auto pl-[25px] bg-[#3b3d97]`}
+
 `;
 
 export const BoardTitleImmer = styled.h2`
