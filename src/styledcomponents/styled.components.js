@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.12 - styled.components
+/**react-design-patterns-app - version 35.14 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'HeaderImmer' styles to tailwind
+ *     --> Refactoring 'BoardTitleImmer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -71,14 +71,12 @@ export const ContentImmer = styled.div`
 `;
 
 export const BoardTitleImmer = styled.h2`
-	font-weight: bold;
-	color: #080707;
+	${tw`font-bold text-[#080707]`}
 `;
 
 export const HeaderBackgroundImmer = styled.div`
-	background-color: #348bd3;
-	padding: 1rem 4px 4px 4px;
-	font-size: x-large;
+	${tw`bg-[#348bd3] px-1 py-4 text-xl`}
+
 `;
 
 export const HeaderImmer = styled.div`
