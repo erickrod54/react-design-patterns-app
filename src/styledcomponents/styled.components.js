@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 35.19 - styled.components
+/**react-design-patterns-app - version 35.20 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'UpdateTaskHeaderImmer' styles to tailwind
+ *     --> Refactoring 'UpdateTaskInputImmer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -18,10 +18,8 @@ import tw from 'twin.macro';
  */
 
 export const UpdateTaskInputImmer = styled.input`
-	width: 100%;
-	padding: 0.5rem;
-	border: 1px solid #466997;
-	color: #000;
+	${tw`w-full p-2 border border-[#466997] text-black`}
+
 `;
 
 export const UpdateTaskHeaderImmer = styled.h2`
