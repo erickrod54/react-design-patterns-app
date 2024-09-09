@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 33.15- data js  
+/**react-design-patterns-app - version 36.01- data js  
  * - Features: 
  *    
- *     --> Adding 'TasksBoardImmer code' id  
+ *     --> Adding 'ShoppingListHeaderBefore' code   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6572,10 +6572,34 @@ const UsersApiHookLogicAndDataAbs = () => {
     };
     export default TasksBoardImmer;
     `
+    },
+    {
+    id: 177,
+    name: ' TasksBoardImmer code',
+    code:   
+    `
+    const StyledContainer = styled.div\`
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    \`;
+
+    const StyledHeading = styled.h2\`
+      font-weight: bold;
+    \`;
+
+    const ShoppingListHeaderBefore = (props) => {
+      return (
+        <StyledContainer>
+          <StyledHeading>Shopping List</StyledHeading>
+          <span>{props.shoppingList.length} items 🛒</span>
+        </StyledContainer>
+      );
+    };
+    export default ShoppingListHeaderBefore;
+    `
     }
   ];
-  
-
 
   /**List Pattern data  -- start */
   
