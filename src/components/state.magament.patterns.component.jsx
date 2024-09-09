@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 33.18 - StateManagementPatterns
+/**react-design-patterns-app - version 35.20 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'TasksBoardImmer'   
+ *     --> Developing 'TasksBoardImmer'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -183,6 +183,12 @@ const StateManagementPatterns = () => {
             </p>
 
             <TasksBoardImmer />
+
+            <p>
+                then <span className="text-white font-semibold"> useImmer </span> allows to safely modify
+                objects directly, the advantages of improved readability, reduced verbosity, and adherence to 
+                functional paradigms 
+            </p>
 
             </SectionWrapper>
         </div>
