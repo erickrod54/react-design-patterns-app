@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 35.20 - StateManagementPatterns
+/**react-design-patterns-app - version 36.00 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Developing 'TasksBoardImmer'   
+ *     --> Developing 'useReducer and useImmerReducer hook'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -188,6 +188,19 @@ const StateManagementPatterns = () => {
                 then <span className="text-white font-semibold"> useImmer </span> allows to safely modify
                 objects directly, the advantages of improved readability, reduced verbosity, and adherence to 
                 functional paradigms 
+            </p>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="use-reducer-hook-patterns"><span > useReducer and useImmerReducer hook </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                This implementation aims to demonstrate how <span className="text-white font-semibold"> useReducer </span> 
+                is used for <span className="text-white font-semibold"> managing complex state transitions </span> 
+                in a more <span className="text-white font-semibold"> organized and maintainable way. </span> The 
+                lesson transitions to introducing the useImmerReducer hook, which simplifies state management by handling 
+                <span className="text-white font-semibold"> immutability internally, </span> leading to cleaner and more concise 
+                reducer logic.
             </p>
 
             </SectionWrapper>
