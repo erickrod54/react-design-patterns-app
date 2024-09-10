@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.01- data js  
+/**react-design-patterns-app - version 36.02- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListHeaderBefore' code   
+ *     --> Adding 'ShoppingListHeaderBefore' id   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6574,20 +6574,10 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 177,
+    id: 178,
     name: ' TasksBoardImmer code',
     code:   
     `
-    const StyledContainer = styled.div\`
-      margin-bottom: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-    \`;
-
-    const StyledHeading = styled.h2\`
-      font-weight: bold;
-    \`;
-
     const ShoppingListHeaderBefore = (props) => {
       return (
         <StyledContainer>
