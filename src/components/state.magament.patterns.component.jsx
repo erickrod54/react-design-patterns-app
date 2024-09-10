@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 36.00 - StateManagementPatterns
+/**react-design-patterns-app - version 36.03 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Developing 'useReducer and useImmerReducer hook'   
+ *     --> Developing 'useReducer' approach   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -28,6 +28,7 @@ const StateManagementPatterns = () => {
     const taskboardimmercode2 = CodeData[175].code;
     const taskboardimmercode3 = CodeData[176].code;
     const taskboardimmercode = CodeData[177].code;
+    const shoppinglistheader = CodeData[178].code;
     
     return(
         <div>
@@ -201,6 +202,19 @@ const StateManagementPatterns = () => {
                 lesson transitions to introducing the useImmerReducer hook, which simplifies state management by handling 
                 <span className="text-white font-semibold"> immutability internally, </span> leading to cleaner and more concise 
                 reducer logic.
+            </p>
+
+            <p>
+                the use case for the implementation will be a shopping list cart, let's look first 
+                the <span className="text-white font-semibold"> useReducer </span> approach, for this 
+                let's start step by step building the cart shop list <span className="text-white font-semibold"> 
+                ShoppingListRowBefore </span> that will be compose by a 
+                header <span className="text-white font-semibold"> ShoppingListHeaderBefore </span> 
+                and a row list that will contain every item <span className="text-white font-semibold"> ShoppingListRowBefore </span>
+            </p>
+
+            <p>
+                let's build <span className="text-white font-semibold"> ShoppingListHeaderBefore </span> step by step:
             </p>
 
             </SectionWrapper>
