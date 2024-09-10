@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 36.03 - StateManagementPatterns
+/**react-design-patterns-app - version 36.04 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Developing 'useReducer' approach   
+ *     --> Adidng 'shoppinglistheader' code   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -216,6 +216,8 @@ const StateManagementPatterns = () => {
             <p>
                 let's build <span className="text-white font-semibold"> ShoppingListHeaderBefore </span> step by step:
             </p>
+
+            <BashCode code={shoppinglistheader}/>
 
             </SectionWrapper>
         </div>
