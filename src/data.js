@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.03- data js  
+/**react-design-patterns-app - version 36.04- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListHeaderBefore' name   
+ *     --> Adding 'ShoppingListHeaderBefore' comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6578,10 +6578,12 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' ShoppingListHeaderBefore code',
     code:   
     `
+    /**this is the main header component*/
     const ShoppingListHeaderBefore = (props) => {
       return (
         <StyledContainer>
           <StyledHeading>Shopping List</StyledHeading>
+          {/**here will have the items length*/}
           <span>{props.shoppingList.length} items 🛒</span>
         </StyledContainer>
       );
