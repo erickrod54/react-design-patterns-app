@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 36.04 - StateManagementPatterns
+/**react-design-patterns-app - version 36.06 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adidng 'shoppinglistheader' code   
+ *     --> Starting 'ShoppingListRowBefore'    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -218,6 +218,11 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={shoppinglistheader}/>
+
+            <p>
+                now let's build <span className="text-white font-semibold"> ShoppingListRowBefore </span>, this component 
+                will display the data related to items on the list:
+            </p>
 
             </SectionWrapper>
         </div>
