@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.04- data js  
+/**react-design-patterns-app - version 36.05- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListHeaderBefore' comments   
+ *     --> Adding 'ShoppingListRowBefore' code   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6589,6 +6589,51 @@ const UsersApiHookLogicAndDataAbs = () => {
       );
     };
     export default ShoppingListHeaderBefore;
+    `
+    },
+    {
+    id: 178,
+    name: ' ShoppingListRowBefore code',
+    code:   
+    `
+    const ShoppingListRowBefore = (props) => {
+    
+      const { item, deleteItem, index } = props;
+      const { name, isEditing, cancelEdit, setName, onSaveItem, onEditItem } =
+        useEditShoppingItem(props);
+        
+        return (
+          <StyledContainer>
+            <StyledInputContainer>
+              {isEditing ? (
+                <StyledInput
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              ) : (
+                <StyledText>{item.name}</StyledText>
+              )}
+            </StyledInputContainer>
+            <StyledButtonContainer>
+              {isEditing ? (
+                <>
+                  <StyledButton onClick={onSaveItem}>Save</StyledButton>
+                  <StyledButton onClick={cancelEdit}>Cancel</StyledButton>
+                </>
+              ) : (
+                <>
+                  <StyledButton onClick={onEditItem}>Edit</StyledButton>
+                  <StyledButton onClick={() => deleteItem({ index })}>
+                    Delete
+                  </StyledButton>
+                </>
+              )}
+            </StyledButtonContainer>
+          </StyledContainer>
+        );
+      };
+    export default ShoppingListRowBefore;
     `
     }
   ];
