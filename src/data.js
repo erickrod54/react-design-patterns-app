@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.07- data js  
+/**react-design-patterns-app - version 36.08- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListRowBefore' id   
+ *     --> Adding 'ShoppingListRowBefore' comment   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6596,12 +6596,16 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' ShoppingListRowBefore code',
     code:   
     `
+    /**this component will display the data od the shopping list*/
     const ShoppingListRowBefore = (props) => {
     
+      /**this props comes from the methods - useReducer approach -*/
       const { item, deleteItem, index } = props;
       const { name, isEditing, cancelEdit, setName, onSaveItem, onEditItem } =
         useEditShoppingItem(props);
         
+        /**will render and perform operations as addition, 
+         * saving and deleting items*/
         return (
           <StyledContainer>
             <StyledInputContainer>
