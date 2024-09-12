@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.10- data js  
+/**react-design-patterns-app - version 36.11- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListRowBefore - useEditShoppingItem' id    
+ *     --> Adding 'ShoppingListRowBefore - useEditShoppingItem' comments    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6645,6 +6645,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' ShoppingListRowBefore - useEditShoppingItem',
     code:   
     `
+    /**each row will be editable and can be saved*/
     const useEditShoppingItem = (props) => {
     const { item, updateItem, index } = props;
     const [name, setName] = useState(item.name);
