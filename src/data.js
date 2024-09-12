@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.11- data js  
+/**react-design-patterns-app - version 36.12- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListRowBefore - useEditShoppingItem' comments    
+ *     --> Adding 'ShoppingListRowBefore - useEditShoppingItem' 2nd comments    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6654,6 +6654,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       setName(props.item.name);
     }, [props.item]);
 
+    /**this will be the method to save the user entry*/
     const onSaveItem = () => {
           updateItem({
             index,
@@ -6664,9 +6665,13 @@ const UsersApiHookLogicAndDataAbs = () => {
           });
           setIsEditing(false);
         };
+
+        /**this will the method to edit the user entry*/
         const onEditItem = () => {
           setIsEditing(true);
         };
+
+        /**this will the method to cancel edit the user entry*/
         const cancelEdit = () => {
           setIsEditing(false);
           setName(props.item.name);
