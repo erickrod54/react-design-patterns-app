@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 36.12 - StateManagementPatterns
+/**react-design-patterns-app - version 34.15 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'shoppinglistrow' operations    
+ *     --> Adding 'shoppinglistrowoperations' code    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -232,6 +232,8 @@ const StateManagementPatterns = () => {
                 and <span className="text-white font-semibold"> ShoppingListRowBefore </span> multiple
                 oparations per row that the user can perform as follows:
             </p>
+
+            <BashCode code={shoppinglistrowoperations}/>
         
             </SectionWrapper>
         </div>
