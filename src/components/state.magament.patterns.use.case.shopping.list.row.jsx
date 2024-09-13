@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 36.13 - ShoppingListHeaderBefore
+/**react-design-patterns-app - version 36.15 - ShoppingListHeaderBefore
  * - Features: 
  * 
- *     -->  Building 'ShoppingListRowBefore' styles 
+ *     -->  Building 'ShoppingListRowBefore'  
  * 
  * Note: useEditShoppingItem will have:
  * 
@@ -80,4 +80,41 @@ const useEditShoppingItem = (props) => {
     onEditItem,
   };
 };
+
+const ShoppingListRowBefore = (props) => {
+  const { item, deleteItem, index } = props;
+  const { name, isEditing, cancelEdit, setName, onSaveItem, onEditItem } =
+    useEditShoppingItem(props);
+  return (
+    <StyledContainer>
+      <StyledInputContainer>
+        {isEditing ? (
+          <StyledInput
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        ) : (
+          <StyledText>{item.name}</StyledText>
+        )}
+      </StyledInputContainer>
+      <StyledButtonContainer>
+        {isEditing ? (
+          <>
+            <StyledButton onClick={onSaveItem}>Save</StyledButton>
+            <StyledButton onClick={cancelEdit}>Cancel</StyledButton>
+          </>
+        ) : (
+          <>
+            <StyledButton onClick={onEditItem}>Edit</StyledButton>
+            <StyledButton onClick={() => deleteItem({ index })}>
+              Delete
+            </StyledButton>
+          </>
+        )}
+      </StyledButtonContainer>
+    </StyledContainer>
+  );
+};
+export default ShoppingListRowBefore;
 
