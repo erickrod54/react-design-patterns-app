@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 36.12 - ShoppingListHeaderBefore
+/**react-design-patterns-app - version 36.13 - ShoppingListHeaderBefore
  * - Features: 
  * 
- *     -->  Building 'useEditShoppingItem' 
+ *     -->  Building 'ShoppingListRowBefore' styles 
  * 
  * Note: useEditShoppingItem will have:
  * 
@@ -16,6 +16,32 @@ import styled from "styled-components";
  * from 'useEditShoppingItem'
  * 
  */
+
+const StyledContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const StyledInputContainer = styled.div``;
+
+const StyledInput = styled.input`
+  width: 100%;
+`;
+
+const StyledText = styled.div``;
+
+const StyledButtonContainer = styled.div`
+  display: flex;
+  gap: 0.75rem;
+`;
+
+const StyledButton = styled.button`
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 const useEditShoppingItem = (props) => {
   const { item, updateItem, index } = props;
