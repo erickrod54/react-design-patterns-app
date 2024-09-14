@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 34.15 - StateManagementPatterns
+/**react-design-patterns-app - version 36.15 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'shoppinglistrowoperations' code    
+ *     --> Fxing version    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
