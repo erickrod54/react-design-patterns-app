@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.12- data js  
+/**react-design-patterns-app - version 36.16- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListRowBefore - useEditShoppingItem' 2nd comments    
+ *     --> Adding 'shoppingItems data    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6686,9 +6686,33 @@ const UsersApiHookLogicAndDataAbs = () => {
         };
       };
     `
+    },
+    {
+    id: 180,
+    name: ' shoppingItems - data',
+    code:   
+    `
+    const shoppingItems = {
+    newShoppingItemName: "",
+    items: [
+      {
+        id: "1",
+        name: "Sea Salt",
+      },
+      {
+        id: "2",
+        name: "Apples",
+      },
+      {
+        id: "3",
+        name: "Chicken breasts",
+      },
+    ],
+  };
+    `
     }
   ];
-
+  
   
 
   /**List Pattern data  -- start */
