@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.16- data js  
+/**react-design-patterns-app - version 36.17- data js  
  * - Features: 
  *    
- *     --> Adding 'shoppingItems data    
+ *     --> Adding 'shoppingItems data id   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6688,7 +6688,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 180,
+    id: 181,
     name: ' shoppingItems - data',
     code:   
     `
