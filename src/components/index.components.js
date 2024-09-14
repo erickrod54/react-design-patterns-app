@@ -132,10 +132,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 34.15 - components > index  
+/**react-design-patterns-app - version 36.15 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting 'ShoppingListRowBefore'
+ *     --> Fixing version
  * 
  * Note: Pending to make responsive design
  */
