@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 36.18- data js  
+/**react-design-patterns-app - version 36.20- data js  
  * - Features: 
  *    
- *     --> Adding 'shoppingItems data comments   
+ *     --> Adding 'reducer - actions'   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6713,9 +6713,52 @@ const UsersApiHookLogicAndDataAbs = () => {
     ],
   };
     `
+    },
+    {
+    id: 181,
+    name: ' reducer - actions',
+    code:   
+    `
+    const reducer = (state, action) => {
+
+      switch (action.type) {
+    
+        case "UPDATE_NEW_SHOPPING_ITEM_NAME":
+          return {
+            ...state,
+            newShoppingItemName: action.payload,
+          };
+    
+        case "ADD_ITEM":
+          return {
+            ...state,
+            newShoppingItemName: "",
+            items: [...state.items, action.payload],
+          };
+    
+        case "UPDATE_ITEM":
+          return {
+            ...state,
+            items: state.items.map((item, idx) => {
+              if (idx === action.payload.index) {
+                return action.payload.item;
+              }
+              return item;
+            }),
+          };
+    
+        case "DELETE_ITEM":
+          return {
+            ...state,
+            items: state.items.filter((_, idx) => idx !== action.payload.index),
+          };
+        default:
+          return state;
+      }
+    };
+    `
     }
   ];
-  
   
 
   /**List Pattern data  -- start */
