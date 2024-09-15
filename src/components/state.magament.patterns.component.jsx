@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 36.15 - StateManagementPatterns
+/**react-design-patterns-app - version 36.18 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Fxing version    
+ *     --> Starting 'shoppingItems'    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -234,6 +234,11 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={shoppinglistrowoperations}/>
+
+            <p>
+                now let's build the <span className="text-white font-semibold"> ShoppingListBefore </span> having 
+                the starter data <span className="text-white font-semibold"> shoppingItems </span> as follows:
+            </p>
         
             </SectionWrapper>
         </div>
