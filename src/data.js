@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 37.00- data js  
+/**react-design-patterns-app - version 37.01- data js  
  * - Features: 
  *    
- *     --> Adding 'reducer - actions' id   
+ *     --> Adding 'reducer - actions' commments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6719,24 +6719,37 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' reducer - actions',
     code:   
     `
+    /**the reducer state manage all actions related to an app feature 
+     * in one place*/
     const reducer = (state, action) => {
 
+      /**from here will be implemented a switch - case
+       * conditional, only one action selected depending on the 'action.type'*/
       switch (action.type) {
-    
+
+        /**first case to update an item*/
         case "UPDATE_NEW_SHOPPING_ITEM_NAME":
+
+          /**i spread the state, and update the name with the action.payload*/
           return {
             ...state,
             newShoppingItemName: action.payload,
           };
-    
+
+        /**second case to update add item*/  
         case "ADD_ITEM":
+          /**i spread the state, and on items i spread all 
+           * items and add the action.payload*/
           return {
             ...state,
             newShoppingItemName: "",
             items: [...state.items, action.payload],
           };
-    
+
+        /**third case update item*/
         case "UPDATE_ITEM":
+          /**i spread the state, and on item i map based on 
+           * item and idx, then i return the action.payload.item*/
           return {
             ...state,
             items: state.items.map((item, idx) => {
@@ -6746,8 +6759,11 @@ const UsersApiHookLogicAndDataAbs = () => {
               return item;
             }),
           };
-    
+
+        /**fourth case delete item*/
         case "DELETE_ITEM":
+          /**i return the state, and then i filter based on the 
+           * item id to return a new array updated*/
           return {
             ...state,
             items: state.items.filter((_, idx) => idx !== action.payload.index),
