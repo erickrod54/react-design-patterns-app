@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 36.19 - StateManagementPatterns
+/**react-design-patterns-app - version 37.01 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'shoppinglistrowdata'    
+ *     --> Adding 'reducer - actions'    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -242,6 +242,11 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={shoppinglistrowdata}/>
+
+            <p>
+                then following let's work on the actions <span className="text-white font-semibold"> reducer - actions </span> 
+                as follows:
+            </p>
         
             </SectionWrapper>
         </div>
