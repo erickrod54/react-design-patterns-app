@@ -3,10 +3,10 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 
-/**react-design-patterns-app - version 37.03 - ShoppingListBefore
+/**react-design-patterns-app - version 37.04 - ShoppingListBefore
  * - Features: 
  * 
- *     -->  Building 'ShoppingListBefore' 
+ *     -->  Building 'getUuid' 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -19,7 +19,8 @@ import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.l
  *    
  */
 
-
+//Generate an id for new shopping list items
+const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
 
 //Initial state for the shopping list reducer
 
