@@ -3,10 +3,10 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 
-/**react-design-patterns-app - version 37.04 - ShoppingListBefore
+/**react-design-patterns-app - version 37.05- ShoppingListBefore
  * - Features: 
  * 
- *     -->  Building 'getUuid' 
+ *     -->  Adding 'ShoppingListBefore' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -18,6 +18,40 @@ import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.l
  *     -->  DELETE_ITEM
  *    
  */
+
+const StyledContainer = styled.div`
+  padding-top: 2rem;
+  max-width: 4xl;
+  margin: 0 auto;
+  text-align: left;
+`;
+
+const StyledWrapper = styled.div`
+  max-width: xs;
+`;
+
+const StyledAddItemContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  max-width: xs;
+`;
+
+const StyledLabel = styled.label`
+  margin-bottom: 0.5rem;
+`;
+
+const StyledInput = styled.input`
+  width: 100%;
+`;
+
+const StyledButton = styled.button`
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background-color: #86c784;
+  color: #1a472a;
+`;
 
 //Generate an id for new shopping list items
 const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
