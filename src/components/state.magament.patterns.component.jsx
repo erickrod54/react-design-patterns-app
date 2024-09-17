@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 37.02 - StateManagementPatterns
+/**react-design-patterns-app - version 37.05 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'reducer - actions' code   
+ *     --> Starting 'ShoppingListBefore' s   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -250,6 +250,14 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={reduceractions}/>
+
+            <p>
+                these actions will be used in the <span className="text-white font-semibold"> ShoppingListBefore </span> 
+                component by the <span className="text-white font-semibold"> useReducer </span> hook, then actions will 
+                be performed acording with the user choice:
+            </p>
+
+    
         
             </SectionWrapper>
         </div>
