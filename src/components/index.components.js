@@ -87,6 +87,7 @@ import SplitScreenVariation from "./split.screen.variation.component";
 import StateManagementPatterns from "./state.magament.patterns.component.jsx";
 import PersonState from "./state.magament.patterns.use.case.person.jsx";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header.jsx";
+import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list.jsx";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row.jsx";
 import TasksBoard from "./state.magament.patterns.use.case.task.board.jsx";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer.jsx";
@@ -132,10 +133,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 36.15 - components > index  
+/**react-design-patterns-app - version 37.05 - components > index  
  * - Features: 
  * 
- *     --> Fixing version
+ *     --> Importing and exporting  'ShoppingListBefore'
  * 
  * Note: Pending to make responsive design
  */
@@ -272,5 +273,6 @@ export {
          TasksBoard,
          ShoppingListHeaderBefore,
          TasksBoardImmer,
+         ShoppingListBefore,
          ShoppingListRowBefore
         }
