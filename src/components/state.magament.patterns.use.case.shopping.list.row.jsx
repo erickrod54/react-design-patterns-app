@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 37.05 - ShoppingListRowBefore
+/**react-design-patterns-app - version 37.06 - ShoppingListRowBefore
  * - Features: 
  * 
- *     -->  Refactoring 'StyledButton'  
+ *     -->  Refactoring 'StyledText'  
  * 
  * Note: useEditShoppingItem will have:
  * 
@@ -29,7 +29,13 @@ const StyledInput = styled.input`
   width: 100%;
 `;
 
-const StyledText = styled.div``;
+const StyledText = styled.div`
+  color: white;
+  font-size: 1.5rem;
+  background-color: #816899;
+  margin: 0.75rem;
+  padding: 0.75rem;
+`;
 
 const StyledButtonContainer = styled.div`
   display: flex;
