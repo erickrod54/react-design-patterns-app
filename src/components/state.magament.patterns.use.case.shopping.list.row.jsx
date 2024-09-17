@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 36.15 - ShoppingListHeaderBefore
+/**react-design-patterns-app - version 37.05 - ShoppingListRowBefore
  * - Features: 
  * 
- *     -->  Building 'ShoppingListRowBefore'  
+ *     -->  Refactoring 'StyledButton'  
  * 
  * Note: useEditShoppingItem will have:
  * 
@@ -37,9 +37,20 @@ const StyledButtonContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
+margin: 1rem;
+padding: 0.75rem;
+color: white;
+width: 8rem;
+background-color: darkblue;
   text-decoration: none;
+  border: 1px solid white;
+
+
   &:hover {
-    text-decoration: underline;
+    background-color: white;
+    color: darkblue;
+    border-radius: 0.75rem;
+    border: 1px solid orange;
   }
 `;
 
