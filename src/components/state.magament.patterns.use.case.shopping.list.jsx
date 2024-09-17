@@ -3,10 +3,10 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 
-/**react-design-patterns-app - version 37.05- ShoppingListBefore
+/**react-design-patterns-app - version 37.07- ShoppingListBefore
  * - Features: 
  * 
- *     -->  Adding 'ShoppingListBefore' styles 
+ *     -->  Refactoring 'StyledButton' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -49,8 +49,18 @@ const StyledInput = styled.input`
 const StyledButton = styled.button`
   align-self: flex-end;
   padding: 0.5rem 1rem;
-  background-color: #86c784;
+  background-color: white;
   color: #1a472a;
+  width: 30%;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  &:hover {
+    background-color: white;
+    color: darkblue;
+    border-radius: 0.75rem;
+    border: 1px solid orange;
+  }
 `;
 
 //Generate an id for new shopping list items
