@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 37.09- data js  
+/**react-design-patterns-app - version 37.10- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListBefore' id    
+ *     --> Adding 'ShoppingListBefore' first comments    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6781,6 +6781,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     const ShoppingListBefore = (props) => {
 
+    /**here the state is declared and the useReducer combine actions and data*/  
     const [shoppingList, dispatch] = useReducer(reducer, shoppingItems);
   
       const addItem = () => {
