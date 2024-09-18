@@ -3,10 +3,10 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 
-/**react-design-patterns-app - version 37.08- ShoppingListBefore
+/**react-design-patterns-app - version 37.09- ShoppingListBefore
  * - Features: 
  * 
- *     -->  Refactoring 'StyledLabel' styles 
+ *     -->  Refactoring 'StyledInput' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -46,6 +46,11 @@ const StyledLabel = styled.label`
 
 const StyledInput = styled.input`
   width: 100%;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 0.30rem;
+  color: black;
+  font-size: 1.5rem;
 `;
 
 const StyledButton = styled.button`
