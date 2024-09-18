@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 37.03- data js  
+/**react-design-patterns-app - version 37.09- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListBefore'    
+ *     --> Adding 'ShoppingListBefore' id    
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6775,7 +6775,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 182,
+    id: 183,
     name: ' ShoppingListBefore - Compoent',
     code:   
     `
