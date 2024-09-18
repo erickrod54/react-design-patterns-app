@@ -7,10 +7,10 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 
-/**react-design-patterns-app - version 37.05 - StateManagementPatterns
+/**react-design-patterns-app - version 37.09 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'ShoppingListBefore' s   
+ *     --> Adding 'shoppinglistcomponent' code   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -33,6 +33,7 @@ const StateManagementPatterns = () => {
     const shoppinglistrowoperations = CodeData[180].code;
     const shoppinglistrowdata = CodeData[181].code;
     const reduceractions = CodeData[182].code;
+    const shoppinglistcomponent = CodeData[183].code;
     
     return(
         <div>
@@ -257,6 +258,7 @@ const StateManagementPatterns = () => {
                 be performed acording with the user choice:
             </p>
 
+            <BashCode code={shoppinglistcomponent}/>
     
         
             </SectionWrapper>
