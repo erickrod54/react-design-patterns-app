@@ -6,11 +6,13 @@ import PersonState from "./state.magament.patterns.use.case.person";
 import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
+import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list";
 
-/**react-design-patterns-app - version 37.09 - StateManagementPatterns
+ 
+/**react-design-patterns-app - version 37.10 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'shoppinglistcomponent' code   
+ *     --> Adding 'ShoppingListBefore' code   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -259,6 +261,13 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={shoppinglistcomponent}/>
+
+            <p>
+                resulting <span className="text-white font-semibold"> ShoppingListBefore </span> 
+                in the following:
+            </p>
+
+            <ShoppingListBefore />
     
         
             </SectionWrapper>
