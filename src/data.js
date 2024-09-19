@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 37.13- data js  
+/**react-design-patterns-app - version 37.14- data js  
  * - Features: 
  *    
- *     --> Adding 'shoppingItemsImmer' id   
+ *     --> Adding 'shoppingItemsImmer' comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6856,6 +6856,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' shoppingItemsImmer - Compoent',
     code:   
     `
+      /**this is the initial data for ShopingListImmer*/
       const shoppingItemsImmer = {
         newShoppingItemName: "",
         items: [
