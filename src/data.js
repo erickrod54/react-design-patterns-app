@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 37.11- data js  
+/**react-design-patterns-app - version 37.12- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListBefore' second comments    
+ *     --> Adding 'shoppingItemsImmer' code   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6849,6 +6849,30 @@ const UsersApiHookLogicAndDataAbs = () => {
       );
     };
     export default ShoppingListBefore;
+    `
+    },
+    {
+    id: 183,
+    name: ' shoppingItemsImmer - Compoent',
+    code:   
+    `
+      const shoppingItemsImmer = {
+        newShoppingItemName: "",
+        items: [
+          {
+            id: "1",
+            name: "Plumbs",
+          },
+          {
+            id: "2",
+            name: "Apples Cider",
+          },
+          {
+            id: "3",
+            name: "Chicken legs",
+          },
+        ],
+      };
     `
     }
   ];
