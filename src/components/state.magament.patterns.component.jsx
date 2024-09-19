@@ -9,10 +9,10 @@ import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useim
 import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list";
 
  
-/**react-design-patterns-app - version 37.10 - StateManagementPatterns
+/**react-design-patterns-app - version 37.12 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'ShoppingListBefore' code   
+ *     --> Starting 'ShoppingListImmer'    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -268,6 +268,13 @@ const StateManagementPatterns = () => {
             </p>
 
             <ShoppingListBefore />
+
+            <p>
+                now the implementation using the <span className="text-white font-semibold"> useImmerReducer </span> 
+                so the implementation improve the functionality by modifying two sections in the <span className="text-white font-semibold"> ShoppingListBefore </span>
+                let's say its going to be <span className="text-white font-semibold"> ShoppingListImmer </span> 
+                the new Component, as follows: 
+            </p>
     
         
             </SectionWrapper>
