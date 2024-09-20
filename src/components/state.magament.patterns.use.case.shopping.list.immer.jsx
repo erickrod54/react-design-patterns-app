@@ -4,10 +4,10 @@ import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shoppin
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
 
-/**react-design-patterns-app - version 37.16 - ShoppingListImmer
+/**react-design-patterns-app - version 37.17 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  writting  'ShoppingListImmer' styles 
+ *     -->  Building  'getUuid'  
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -72,6 +72,9 @@ const StyledButton = styled.button`
     border: 1px solid orange;
   }
 `;
+
+//Generate an id for new shopping list items
+const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
 
 /**the inital  data for immer implementation*/
 const shoppingItemsImmer = {
