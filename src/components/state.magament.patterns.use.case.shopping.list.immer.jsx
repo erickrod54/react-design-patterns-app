@@ -4,10 +4,10 @@ import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shoppin
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
 
-/**react-design-patterns-app - version 37.15- ShoppingListImmer
+/**react-design-patterns-app - version 37.16 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Building 'reducer'  
+ *     -->  writting  'ShoppingListImmer' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -21,6 +21,57 @@ import { useImmerReducer } from "use-immer";
  * with a dynamic object asigment 
  *    
  */
+
+const StyledContainer = styled.div`
+  padding-top: 2rem;
+  max-width: 4xl;
+  margin: 0 auto;
+  text-align: left;
+`;
+
+const StyledWrapper = styled.div`
+  max-width: xs;
+`;
+
+const StyledAddItemContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  max-width: xs;
+`;
+
+const StyledLabel = styled.label`
+  margin-bottom: 0.5rem;
+  color: yellow;
+  font-size: 1.5rem;
+`;
+
+const StyledInput = styled.input`
+  width: 100%;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 0.30rem;
+  color: black;
+  font-size: 1.5rem;
+`;
+
+const StyledButton = styled.button`
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #1a472a;
+  width: 30%;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  &:hover {
+    background-color: white;
+    color: darkblue;
+    border-radius: 0.75rem;
+    border: 1px solid orange;
+  }
+`;
 
 /**the inital  data for immer implementation*/
 const shoppingItemsImmer = {
