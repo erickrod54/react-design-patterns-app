@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 37.14- data js  
+/**react-design-patterns-app - version 37.20- data js  
  * - Features: 
  *    
- *     --> Adding 'shoppingItemsImmer' comments   
+ *     --> Adding 'reducer - useImmerReducer' code   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6873,6 +6873,41 @@ const UsersApiHookLogicAndDataAbs = () => {
             name: "Chicken legs",
           },
         ],
+      };
+    `
+    },
+    {
+    id: 184,
+    name: ' reducer - useImmerReducer',
+    code:   
+    `
+        const reducer = (state, action) => {
+    
+        switch (action.type) {
+      
+        
+        case "UPDATE_NEW_SHOPPING_ITEM_NAME":
+            state.newShoppingItemName = action.payload;
+            break;
+    
+        
+        case "ADD_ITEM":
+          state.newShoppingItemName = "";
+          state.items.push(action.payload);
+          break;
+    
+        
+        case "UPDATE_ITEM":
+            state.items.splice(action.payload.index, 1, action.payload.item);
+            break;
+    
+        
+        case "DELETE_ITEM":
+            state.items.splice(action.payload.index, 1);
+            break;
+            
+        }
+        return state;
       };
     `
     }
