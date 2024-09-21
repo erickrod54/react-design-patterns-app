@@ -4,10 +4,10 @@ import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shoppin
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
 
-/**react-design-patterns-app - version 37.17 - ShoppingListImmer
+/**react-design-patterns-app - version 37.18 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Building  'getUuid'  
+ *     -->  Building  'getUuid' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
