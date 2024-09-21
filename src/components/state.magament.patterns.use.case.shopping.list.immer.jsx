@@ -4,10 +4,10 @@ import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shoppin
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
 
-/**react-design-patterns-app - version 37.18 - ShoppingListImmer
+/**react-design-patterns-app - version 37.19 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Building  'getUuid' styles 
+ *     -->  Refactoring  'ADD_ITEM' action.type 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -108,9 +108,9 @@ const reducer = (state, action) => {
 
     // Add a new item to the shopping list
     case "ADD_ITEM":
-        state.newShoppingItemName == "";
-        state.items.push(action.payload);
-        break;
+      state.newShoppingItemName = "";
+      state.items.push(action.payload);
+      break;
 
     // Update an existing item in the shopping list
     case "UPDATE_ITEM":
