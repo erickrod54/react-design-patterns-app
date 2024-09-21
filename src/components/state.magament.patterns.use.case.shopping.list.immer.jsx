@@ -4,10 +4,10 @@ import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shoppin
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
 
-/**react-design-patterns-app - version 37.19 - ShoppingListImmer
+/**react-design-patterns-app - version 37.20 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Refactoring  'ADD_ITEM' action.type 
+ *     -->  Building  'ShoppingListImmer' 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -126,5 +126,71 @@ const reducer = (state, action) => {
     return state;
   };
 
+  const ShoppingListImmer = (props) => {
+
+    const [shoppingList, dispatch] = useImmerReducer(reducer, shoppingItemsImmer);
+  
+    const addItem = () => {
+      if (!shoppingList.newShoppingItemName) return;
+      dispatch({
+        type: "ADD_ITEM",
+        payload: {
+          id: getUuid(),
+          name: shoppingList.newShoppingItemName,
+        },
+      });
+    };
+  
+    const deleteItem = (item) => {
+      dispatch({
+        type: "DELETE_ITEM",
+        payload: item,
+      });
+    };
+  
+    const updateItem = (payload) => {
+      dispatch({
+        type: "UPDATE_ITEM",
+        payload,
+      });
+    };
+  
+    const onChangeShoppingListItemName = (e) => {
+      dispatch({
+        type: "UPDATE_NEW_SHOPPING_ITEM_NAME",
+        payload: e.target.value,
+      });
+    };
+  
+    return (
+      <StyledContainer>
+        <StyledWrapper>
+          <ShoppingListHeaderBefore shoppingList={shoppingList.items} />
+          <div style={{ marginBottom: "1.5rem" }}>
+            {shoppingList.items.map((item, index) => (
+              <ShoppingListRowBefore
+                key={item.id}
+                item={item}
+                index={index}
+                updateItem={updateItem}
+                deleteItem={deleteItem}
+              />
+            ))}
+          </div>
+          <StyledAddItemContainer>
+            <StyledLabel htmlFor="shoppingItemField">Add item</StyledLabel>
+            <StyledInput
+              type="text"
+              id="shoppingItemField"
+              value={shoppingList.newShoppingItemName}
+              onChange={onChangeShoppingListItemName}
+            />
+            <StyledButton onClick={addItem}>Add</StyledButton>
+          </StyledAddItemContainer>
+        </StyledWrapper>
+      </StyledContainer>
+    );
+  };
+  export default ShoppingListImmer;
 
 
