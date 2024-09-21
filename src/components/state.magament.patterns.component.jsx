@@ -7,13 +7,12 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list";
-import ShoppingListImmer from "./state.magament.patterns.use.case.shopping.list.immer";
 
  
-/**react-design-patterns-app - version 37.16 - StateManagementPatterns
+/**react-design-patterns-app - version 37.17 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'shoppinglistrowdataimmer' code    
+ *     --> Clearing imports   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -279,8 +278,6 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={shoppinglistrowdataimmer}/>
-
-            <ShoppingListImmer />
             
             </SectionWrapper>
         </div>
