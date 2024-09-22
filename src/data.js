@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 37.20- data js  
+/**react-design-patterns-app - version 38.00- data js  
  * - Features: 
  *    
- *     --> Adding 'reducer - useImmerReducer' code   
+ *     --> Adding 'reducer - useImmerReducer' id   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6877,7 +6877,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 184,
+    id: 185,
     name: ' reducer - useImmerReducer',
     code:   
     `
