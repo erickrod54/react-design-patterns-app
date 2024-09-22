@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 38.02- data js  
+/**react-design-patterns-app - version 38.04- data js  
  * - Features: 
  *    
- *     --> Adding 'reducer - useImmerReducer' 2nd comments   
+ *     --> Adding 'ShoppingListImmer; code   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6909,6 +6909,79 @@ const UsersApiHookLogicAndDataAbs = () => {
             
         }
         return state;
+      };
+    `
+    },
+    {
+    id: 185,
+    name: ' ShoppingListImmer',
+    code:   
+    `   const ShoppingListImmer = (props) => {
+
+        const [shoppingList, dispatch] = useImmerReducer(reducer, shoppingItemsImmer);
+      
+        const addItem = () => {
+          if (!shoppingList.newShoppingItemName) return;
+          dispatch({
+            type: "ADD_ITEM",
+            payload: {
+              id: getUuid(),
+              name: shoppingList.newShoppingItemName,
+            },
+          });
+        };
+      
+        const deleteItem = (item) => {
+          dispatch({
+            type: "DELETE_ITEM",
+            payload: item,
+          });
+        };
+      
+        const updateItem = (payload) => {
+          dispatch({
+            type: "UPDATE_ITEM",
+            payload,
+          });
+        };
+      
+        const onChangeShoppingListItemName = (e) => {
+          dispatch({
+            type: "UPDATE_NEW_SHOPPING_ITEM_NAME",
+            payload: e.target.value,
+          });
+        };
+      
+        return (
+          <StyledContainer>
+            <StyledWrapper>
+              <ShoppingListHeaderBefore shoppingList={shoppingList.items} />
+              <div style={{ marginBottom: "1.5rem" }}>
+                {shoppingList.items.map((item, index) => (
+                  <ShoppingListRowBefore
+                    key={item.id}
+                    item={item}
+                    index={index}
+                    updateItem={updateItem}
+                    deleteItem={deleteItem}
+                  />
+                ))}
+              </div>
+              <StyledAddItemContainer>
+                <StyledLabel htmlFor="shoppingItemField">Add item</StyledLabel>
+                <StyledInput
+                  type="text"
+                  id="shoppingItemField"
+                  value={shoppingList.newShoppingItemName}
+                  onChange={onChangeShoppingListItemName}
+                />
+                <StyledButton onClick={addItem}>Add</StyledButton>
+              </StyledAddItemContainer>
+            </StyledWrapper>
+          </StyledContainer>
+        );
+      };
+      export default ShoppingListImmer;
       };
     `
     }
