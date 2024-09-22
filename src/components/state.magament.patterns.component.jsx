@@ -9,10 +9,10 @@ import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useim
 import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list";
 
  
-/**react-design-patterns-app - version 38.03 - StateManagementPatterns
+/**react-design-patterns-app - version 38.04 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'useImmerReducer actions'    
+ *     --> Adding 'useimmerreduceractions actions'  code   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -37,6 +37,7 @@ const StateManagementPatterns = () => {
     const reduceractions = CodeData[182].code;
     const shoppinglistcomponent = CodeData[183].code;
     const shoppinglistrowdataimmer = CodeData[184].code;
+    const useimmerreduceractions = CodeData[185].code;
     
     return(
         <div>
@@ -283,6 +284,8 @@ const StateManagementPatterns = () => {
                 then as second step let's build the <span className="text-white font-semibold"> useImmerReducer actions </span>
                 that will dynamicly asign values to the object without the need to return an object, as follows:
             </p>
+            
+            <BashCode code={useimmerreduceractions}/>
             
             </SectionWrapper>
         </div>
