@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 38.00- data js  
+/**react-design-patterns-app - version 38.01- data js  
  * - Features: 
  *    
- *     --> Adding 'reducer - useImmerReducer' id   
+ *     --> Adding 'reducer - useImmerReducer' first comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6880,17 +6880,18 @@ const UsersApiHookLogicAndDataAbs = () => {
     id: 185,
     name: ' reducer - useImmerReducer',
     code:   
-    `
+    `   /**this reducer has actions types with syntax
+          * according with useImmer, dynamic object asignation*/
         const reducer = (state, action) => {
     
         switch (action.type) {
       
-        
+        // Update the name of the new shopping item
         case "UPDATE_NEW_SHOPPING_ITEM_NAME":
             state.newShoppingItemName = action.payload;
             break;
     
-        
+        // Add a new item to the shopping list
         case "ADD_ITEM":
           state.newShoppingItemName = "";
           state.items.push(action.payload);
