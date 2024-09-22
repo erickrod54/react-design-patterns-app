@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 38.01- data js  
+/**react-design-patterns-app - version 38.02- data js  
  * - Features: 
  *    
- *     --> Adding 'reducer - useImmerReducer' first comments   
+ *     --> Adding 'reducer - useImmerReducer' 2nd comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6897,12 +6897,12 @@ const UsersApiHookLogicAndDataAbs = () => {
           state.items.push(action.payload);
           break;
     
-        
+        // Update an existing item in the shopping list
         case "UPDATE_ITEM":
             state.items.splice(action.payload.index, 1, action.payload.item);
             break;
     
-        
+        // Delete an item from the shopping list
         case "DELETE_ITEM":
             state.items.splice(action.payload.index, 1);
             break;
