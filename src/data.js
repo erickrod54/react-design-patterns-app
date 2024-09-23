@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 38.06- data js  
+/**react-design-patterns-app - version 38.07- data js  
  * - Features: 
  *    
- *     --> Adding 'ShoppingListImmer first comments   
+ *     --> Adding 'ShoppingListImmer 2nd comments   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -6920,6 +6920,7 @@ const UsersApiHookLogicAndDataAbs = () => {
         /**this will be the new component ShoppingListImmer*/
         const ShoppingListImmer = (props) => {
 
+        /**here i implement the useImmerReducer, previuosly install the library*/  
         const [shoppingList, dispatch] = useImmerReducer(reducer, shoppingItemsImmer);
       
         const addItem = () => {
