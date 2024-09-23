@@ -1,5 +1,5 @@
 import React from "react";
-import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
+import {  CustomTitleStyle, SectionWrapper, StyledShoppingList } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import PersonState from "./state.magament.patterns.use.case.person";
@@ -9,10 +9,10 @@ import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useim
 import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list";
 
  
-/**react-design-patterns-app - version 38.08 - StateManagementPatterns
+/**react-design-patterns-app - version 38.09 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'shoppinglistcode'     
+ *     --> Adding 'StyledShoppingList' to 'ShoppingListBefore'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -270,7 +270,9 @@ const StateManagementPatterns = () => {
                 in the following:
             </p>
 
-                <ShoppingListBefore />
+               <StyledShoppingList>
+                    <ShoppingListBefore />
+                </StyledShoppingList>     
         
             <p>
                 now the implementation using the <span className="text-white font-semibold"> useImmerReducer </span> 
