@@ -9,10 +9,10 @@ import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useim
 import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list";
 
  
-/**react-design-patterns-app - version 38.07 - StateManagementPatterns
+/**react-design-patterns-app - version 38.08 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'ShoppingListImmer'     
+ *     --> Adding 'shoppinglistcode'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -38,6 +38,7 @@ const StateManagementPatterns = () => {
     const shoppinglistcomponent = CodeData[183].code;
     const shoppinglistrowdataimmer = CodeData[184].code;
     const useimmerreduceractions = CodeData[185].code;
+    const shoppinglistcode = CodeData[186].code;
     
     return(
         <div>
@@ -293,6 +294,9 @@ const StateManagementPatterns = () => {
                 data to implement <span className="text-white font-semibold"> useImmerReducer </span> and manage states and 
                 actions with dynamiclly object asignation accordinglly
             </p>
+
+            <BashCode code={shoppinglistcode}/>
+                       
             
             </SectionWrapper>
         </div>
