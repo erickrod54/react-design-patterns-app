@@ -7,12 +7,13 @@ import BashCode from "./bash.higlight.component";
 import TasksBoard from "./state.magament.patterns.use.case.task.board";
 import TasksBoardImmer from "./state.magament.patterns.use.case.task.board.useimmer";
 import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list";
+import ShoppingListImmer from "./state.magament.patterns.use.case.shopping.list.immer";
 
  
-/**react-design-patterns-app - version 38.09 - StateManagementPatterns
+/**react-design-patterns-app - version 38.10 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Adding 'StyledShoppingList' to 'ShoppingListBefore'     
+ *     --> Starting 'ShoppingListImmer'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -298,6 +299,11 @@ const StateManagementPatterns = () => {
             </p>
 
             <BashCode code={shoppinglistcode}/>
+
+            <p>
+                resulting <span className="text-white font-semibold"> ShoppingListImmer </span> with more readibility and an
+                improvement in funtionality
+            </p>
                        
             
             </SectionWrapper>
