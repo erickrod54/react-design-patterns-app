@@ -95,6 +95,7 @@ import { AlertWrapper,
          ShoppingCounterWrapper,
          SingleButtonWrapper,
          StepFlowWrapper,
+         StyledContainerReducer,
          StyledShoppingList,
          TableTitleWrapper,
          TaskButtonBoard,
@@ -112,10 +113,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
 
          
-/**react-design-patterns-app - version 37.16 - styledcomponents > index
+/**react-design-patterns-app - version 38.13 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'StyledShoppingList' 
+ *     --> Importing and exporting 'StyledContainerReducer' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -239,4 +240,5 @@ export { SectionWrapper,
          UpdateTaskHeaderImmer,
          UpdateTaskInputImmer,
          StyledShoppingList,
+         StyledContainerReducer,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
