@@ -2,11 +2,12 @@ import React, { useReducer } from "react";
 import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
+import { StyledContainerReducer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 37.09- ShoppingListBefore
+/**react-design-patterns-app - version 38.13 - ShoppingListBefore
  * - Features: 
  * 
- *     -->  Refactoring 'StyledInput' styles 
+ *     -->  Migrating 'StyledContainerReducer' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -19,12 +20,7 @@ import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.l
  *    
  */
 
-const StyledContainer = styled.div`
-  padding-top: 2rem;
-  max-width: 4xl;
-  margin: 0 auto;
-  text-align: left;
-`;
+
 
 const StyledWrapper = styled.div`
   max-width: xs;
@@ -168,7 +164,7 @@ const ShoppingListBefore = (props) => {
   };
 
   return (
-    <StyledContainer>
+    <StyledContainerReducer>
       <StyledWrapper>
         <ShoppingListHeaderBefore shoppingList={shoppingList.items} />
         <div style={{ marginBottom: "1.5rem" }}>
@@ -193,7 +189,7 @@ const ShoppingListBefore = (props) => {
           <StyledButton onClick={addItem}>Add</StyledButton>
         </StyledAddItemContainer>
       </StyledWrapper>
-    </StyledContainer>
+    </StyledContainerReducer>
   );
 };
 export default ShoppingListBefore;
