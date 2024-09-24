@@ -10,10 +10,10 @@ import ShoppingListBefore from "./state.magament.patterns.use.case.shopping.list
 import ShoppingListImmer from "./state.magament.patterns.use.case.shopping.list.immer";
 
  
-/**react-design-patterns-app - version 38.10 - StateManagementPatterns
+/**react-design-patterns-app - version 38.11 - StateManagementPatterns
  * - Features: 
  * 
- *     --> Starting 'ShoppingListImmer'     
+ *     --> Rendering 'ShoppingListImmer'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -304,6 +304,8 @@ const StateManagementPatterns = () => {
                 resulting <span className="text-white font-semibold"> ShoppingListImmer </span> with more readibility and an
                 improvement in funtionality
             </p>
+
+            <ShoppingListImmer />
                        
             
             </SectionWrapper>
