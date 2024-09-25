@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 38.14 - styled.components
+/**react-design-patterns-app - version 38.15 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledWrapperReducer' styles 
+ *     --> writting 'StyledAddItemContainerReducer' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -17,6 +17,13 @@ import tw from 'twin.macro';
  * to use them in the custom titles
  */
 
+export const StyledAddItemContainerReducer = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 0.5rem;
+	max-width: xs;
+`;
 export const StyledWrapperReducer = styled.div`
 	max-width: xs;
 `;
