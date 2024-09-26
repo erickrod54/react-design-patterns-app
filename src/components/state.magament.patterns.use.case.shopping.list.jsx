@@ -2,12 +2,12 @@ import React, { useReducer } from "react";
 import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
-import { StyledAddItemContainerReducer, StyledContainerReducer, StyledLabelReducer, StyledWrapperReducer } from "../styledcomponents/styled.components";
+import { StyledAddItemContainerReducer, StyledContainerReducer, StyledInputReducer, StyledLabelReducer, StyledWrapperReducer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 38.16 - ShoppingListBefore
+/**react-design-patterns-app - version 38.17 - ShoppingListBefore
  * - Features: 
  * 
- *     -->  Migrating 'StyledLabelReducer' styles 
+ *     -->  Migrating 'StyledInputReducer' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -20,15 +20,6 @@ import { StyledAddItemContainerReducer, StyledContainerReducer, StyledLabelReduc
  *    
  */
 
-
-const StyledInput = styled.input`
-  width: 100%;
-  margin: 4px;
-  padding: 4px;
-  border-radius: 0.30rem;
-  color: black;
-  font-size: 1.5rem;
-`;
 
 const StyledButton = styled.button`
   align-self: flex-end;
@@ -161,7 +152,7 @@ const ShoppingListBefore = (props) => {
         </div>
         <StyledAddItemContainerReducer>
           <StyledLabelReducer htmlFor="shoppingItemField">Add item</StyledLabelReducer>
-          <StyledInput
+          <StyledInputReducer
             type="text"
             id="shoppingItemField"
             value={shoppingList.newShoppingItemName}
