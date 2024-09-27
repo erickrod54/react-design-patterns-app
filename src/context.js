@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react"
-import { CodeData, ImagesData, IntroComponentData, authors, boardData, books, myNestedObject, patternCard } from "./data";
+import { CodeData, ImagesData, IntroComponentData, authors, boardData, books, myNestedObject, patternCard, shoppingItems } from "./data";
 import axios from "axios";
 
-/**react-design-patterns-app - version 33.03 - context js  
+/**react-design-patterns-app - version 38.19 - context js  
  * - Features: 
  * 
- *     --> Adding 'boardData' data
+ *     --> Adding 'shoppingItems' data
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -56,7 +56,8 @@ export const PatternsAppProvider = ({ children }) => {
                 myNestedObject,
                 getDataFromServer,
                 getDataFromLocalStorage,
-                boardData
+                boardData,
+                shoppingItems
              }}
         >
             {children}
