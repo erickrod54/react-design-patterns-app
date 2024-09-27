@@ -3,11 +3,12 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { StyledAddItemContainerReducer, StyledButtonReducer, StyledContainerReducer, StyledInputReducer, StyledLabelReducer, StyledWrapperReducer } from "../styledcomponents/styled.components";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 38.18 - ShoppingListBefore
+/**react-design-patterns-app - version 38.19 - ShoppingListBefore
  * - Features: 
  * 
- *     -->  Migrating 'StyledButtonReducer' styles 
+ *     -->  Migrating 'shoppingItems' data 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -24,26 +25,6 @@ import { StyledAddItemContainerReducer, StyledButtonReducer, StyledContainerRedu
 
 //Generate an id for new shopping list items
 const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
-
-//Initial state for the shopping list reducer
-
-const shoppingItems = {
-  newShoppingItemName: "",
-  items: [
-    {
-      id: "1",
-      name: "Sea Salt",
-    },
-    {
-      id: "2",
-      name: "Apples",
-    },
-    {
-      id: "3",
-      name: "Chicken breasts",
-    },
-  ],
-};
 
 const reducer = (state, action) => {
 
@@ -84,6 +65,8 @@ const reducer = (state, action) => {
 };
 
 const ShoppingListBefore = (props) => {
+
+  const { shoppingItems } = usePatternsAppContext();
 
   const [shoppingList, dispatch] = useReducer(reducer, shoppingItems);
 
