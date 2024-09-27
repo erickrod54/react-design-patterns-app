@@ -2,12 +2,12 @@ import React, { useReducer } from "react";
 import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
-import { StyledAddItemContainerReducer, StyledContainerReducer, StyledInputReducer, StyledLabelReducer, StyledWrapperReducer } from "../styledcomponents/styled.components";
+import { StyledAddItemContainerReducer, StyledButtonReducer, StyledContainerReducer, StyledInputReducer, StyledLabelReducer, StyledWrapperReducer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 38.17 - ShoppingListBefore
+/**react-design-patterns-app - version 38.18 - ShoppingListBefore
  * - Features: 
  * 
- *     -->  Migrating 'StyledInputReducer' styles 
+ *     -->  Migrating 'StyledButtonReducer' styles 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -21,22 +21,6 @@ import { StyledAddItemContainerReducer, StyledContainerReducer, StyledInputReduc
  */
 
 
-const StyledButton = styled.button`
-  align-self: flex-end;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  color: #1a472a;
-  width: 30%;
-  font-size: 1.25rem;
-  font-weight: 600;
-
-  &:hover {
-    background-color: white;
-    color: darkblue;
-    border-radius: 0.75rem;
-    border: 1px solid orange;
-  }
-`;
 
 //Generate an id for new shopping list items
 const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
@@ -158,7 +142,7 @@ const ShoppingListBefore = (props) => {
             value={shoppingList.newShoppingItemName}
             onChange={onChangeShoppingListItemName}
           />
-          <StyledButton onClick={addItem}>Add</StyledButton>
+          <StyledButtonReducer onClick={addItem}>Add</StyledButtonReducer>
         </StyledAddItemContainerReducer>
       </StyledWrapperReducer>
     </StyledContainerReducer>
