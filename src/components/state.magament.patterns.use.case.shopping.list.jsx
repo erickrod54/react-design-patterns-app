@@ -4,11 +4,12 @@ import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shoppin
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { StyledAddItemContainerReducer, StyledButtonReducer, StyledContainerReducer, StyledInputReducer, StyledLabelReducer, StyledWrapperReducer } from "../styledcomponents/styled.components";
 import { usePatternsAppContext } from "../context";
+import { reducerone } from "../actions/actions.index";
 
-/**react-design-patterns-app - version 38.19 - ShoppingListBefore
+/**react-design-patterns-app - version 38.20 - ShoppingListBefore
  * - Features: 
  * 
- *     -->  Migrating 'shoppingItems' data 
+ *     -->  Migrating 'reducerone' data 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -26,49 +27,13 @@ import { usePatternsAppContext } from "../context";
 //Generate an id for new shopping list items
 const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
 
-const reducer = (state, action) => {
 
-  switch (action.type) {
-
-    case "UPDATE_NEW_SHOPPING_ITEM_NAME":
-      return {
-        ...state,
-        newShoppingItemName: action.payload,
-      };
-
-    case "ADD_ITEM":
-      return {
-        ...state,
-        newShoppingItemName: "",
-        items: [...state.items, action.payload],
-      };
-
-    case "UPDATE_ITEM":
-      return {
-        ...state,
-        items: state.items.map((item, idx) => {
-          if (idx === action.payload.index) {
-            return action.payload.item;
-          }
-          return item;
-        }),
-      };
-
-    case "DELETE_ITEM":
-      return {
-        ...state,
-        items: state.items.filter((_, idx) => idx !== action.payload.index),
-      };
-    default:
-      return state;
-  }
-};
 
 const ShoppingListBefore = (props) => {
 
   const { shoppingItems } = usePatternsAppContext();
 
-  const [shoppingList, dispatch] = useReducer(reducer, shoppingItems);
+  const [shoppingList, dispatch] = useReducer(reducerone, shoppingItems);
 
   const addItem = () => {
     if (!shoppingList.newShoppingItemName) return;
