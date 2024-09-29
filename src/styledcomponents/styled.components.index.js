@@ -99,6 +99,7 @@ import { AlertWrapper,
          StyledButtonReducer,
          StyledContainerBefore,
          StyledContainerReducer,
+         StyledHeadingBefore,
          StyledInputReducer,
          StyledLabelReducer,
          StyledShoppingList,
@@ -119,10 +120,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
 
          
-/**react-design-patterns-app - version 39.01 - styledcomponents > index
+/**react-design-patterns-app - version 39.02 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'StyledContainerBefore' 
+ *     --> Importing and exporting 'StyledHeadingBefore' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -253,4 +254,5 @@ export { SectionWrapper,
          StyledInputReducer,
          StyledButtonReducer,
          StyledContainerBefore,
+         StyledHeadingBefore,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
