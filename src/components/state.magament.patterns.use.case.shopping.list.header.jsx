@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { StyledContainerBefore } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 36.06 - ShoppingListHeaderBefore
+/**react-design-patterns-app - version 39.01 - ShoppingListHeaderBefore
  * - Features: 
  * 
- *     -->  Refactoring 'ShoppingListHeaderBefore' styles
+ *     -->  Migrating 'StyledContainerBefore' styles
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -15,22 +16,7 @@ import styled from "styled-components";
  * to use them in the custom titles
  */
 
-const StyledContainer = styled.div`
-  margin-bottom: 1.5rem;
-  display: flex;
-  //justify-content: space-between;
-  background-color: blueviolet;
-  color: aliceblue;
-  padding: 4rem;
-  border-radius: 1rem;
-  font-size: 1.5rem;
 
-  span{
-    color: yellow;
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-  `;
 
 const StyledHeading = styled.h2`
   font-weight: bold;
@@ -39,10 +25,10 @@ const StyledHeading = styled.h2`
 
 const ShoppingListHeaderBefore = (props) => {
   return (
-    <StyledContainer>
+    <StyledContainerBefore>
         <StyledHeading>Shopping List</StyledHeading>
         <span>{props.shoppingList.length} items 🛒</span>
-    </StyledContainer>
+    </StyledContainerBefore>
   );
 };
 export default ShoppingListHeaderBefore;
