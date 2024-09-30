@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 39.04 - styled.components
+/**react-design-patterns-app - version 39.05 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledWrapperImmer' styles 
+ *     --> writting 'StyledAddItemContainerImmer' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,15 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const StyledAddItemContainerImmer = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 0.5rem;
+	max-width: xs;
+`;
+
 export const StyledWrapperImmer = styled.div`
 	max-width: xs;
 `;
