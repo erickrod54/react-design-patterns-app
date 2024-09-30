@@ -3,12 +3,12 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
-import { StyledContainerImmer } from "../styledcomponents/styled.components";
+import { StyledContainerImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 39.03 - ShoppingListImmer
+/**react-design-patterns-app - version 39.04 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Building  'StyledContainerImmer' 
+ *     -->  Migrating  'StyledContainerImmer' 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -24,10 +24,6 @@ import { StyledContainerImmer } from "../styledcomponents/styled.components";
  */
 
 
-
-const StyledWrapper = styled.div`
-  max-width: xs;
-`;
 
 const StyledAddItemContainer = styled.div`
   display: flex;
@@ -160,7 +156,7 @@ const reducer = (state, action) => {
   
     return (
       <StyledContainerImmer>
-        <StyledWrapper>
+        <StyledWrapperImmer>
           <ShoppingListHeaderBefore shoppingList={shoppingList.items} />
           <div style={{ marginBottom: "1.5rem" }}>
             {shoppingList.items.map((item, index) => (
@@ -183,7 +179,7 @@ const reducer = (state, action) => {
             />
             <StyledButton onClick={addItem}>Add</StyledButton>
           </StyledAddItemContainer>
-        </StyledWrapper>
+        </StyledWrapperImmer>
       </StyledContainerImmer>
     );
   };
