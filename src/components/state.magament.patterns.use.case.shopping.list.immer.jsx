@@ -3,12 +3,12 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
-import { StyledAddItemContainerImmer, StyledContainerImmer, StyledInputImmer, StyledLabelImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
+import { StyledAddItemContainerImmer, StyledButtonImmer, StyledContainerImmer, StyledInputImmer, StyledLabelImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 39.07 - ShoppingListImmer
+/**react-design-patterns-app - version 39.08 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Migrating  'StyledInputImmer' 
+ *     -->  Migrating  'StyledButtonImmer' 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -23,23 +23,6 @@ import { StyledAddItemContainerImmer, StyledContainerImmer, StyledInputImmer, St
  *    
  */
 
-
-const StyledButton = styled.button`
-  align-self: flex-end;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  color: #1a472a;
-  width: 30%;
-  font-size: 1.25rem;
-  font-weight: 600;
-
-  &:hover {
-    background-color: white;
-    color: darkblue;
-    border-radius: 0.75rem;
-    border: 1px solid orange;
-  }
-`;
 
 //Generate an id for new shopping list items
 const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
@@ -153,7 +136,7 @@ const reducer = (state, action) => {
               value={shoppingList.newShoppingItemName}
               onChange={onChangeShoppingListItemName}
             />
-            <StyledButton onClick={addItem}>Add</StyledButton>
+            <StyledButtonImmer onClick={addItem}>Add</StyledButtonImmer>
           </StyledAddItemContainerImmer>
         </StyledWrapperImmer>
       </StyledContainerImmer>
