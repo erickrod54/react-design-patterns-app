@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 39.07 - styled.components
+/**react-design-patterns-app - version 39.08 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledInputImmer' styles 
+ *     --> writting 'StyledButtonImmer' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,23 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const StyledButtonImmer = styled.button`
+	align-self: flex-end;
+	padding: 0.5rem 1rem;
+	background-color: white;
+	color: #1a472a;
+	width: 30%;
+	font-size: 1.25rem;
+	font-weight: 600;
+
+	&:hover {
+		background-color: white;
+		color: darkblue;
+		border-radius: 0.75rem;
+		border: 1px solid orange;
+	}
+`;
 
 export const StyledInputImmer = styled.input`
 	width: 100%;
