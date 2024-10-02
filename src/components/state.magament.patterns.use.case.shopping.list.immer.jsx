@@ -3,12 +3,12 @@ import styled from "styled-components";
 import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shopping.list.header";
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
-import { StyledAddItemContainerImmer, StyledContainerImmer, StyledLabelImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
+import { StyledAddItemContainerImmer, StyledContainerImmer, StyledInputImmer, StyledLabelImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 39.06 - ShoppingListImmer
+/**react-design-patterns-app - version 39.07 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Migrating  'StyledLabelImmer' 
+ *     -->  Migrating  'StyledInputImmer' 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -23,16 +23,6 @@ import { StyledAddItemContainerImmer, StyledContainerImmer, StyledLabelImmer, St
  *    
  */
 
-
-
-const StyledInput = styled.input`
-  width: 100%;
-  margin: 4px;
-  padding: 4px;
-  border-radius: 0.30rem;
-  color: black;
-  font-size: 1.5rem;
-`;
 
 const StyledButton = styled.button`
   align-self: flex-end;
@@ -157,7 +147,7 @@ const reducer = (state, action) => {
           </div>
           <StyledAddItemContainerImmer>
             <StyledLabelImmer htmlFor="shoppingItemField">Add item</StyledLabelImmer>
-            <StyledInput
+            <StyledInputImmer
               type="text"
               id="shoppingItemField"
               value={shoppingList.newShoppingItemName}
