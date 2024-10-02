@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 38.19- data js  
+/**react-design-patterns-app - version 38.20- data js  
  * - Features: 
  *    
- *     --> Adding 'shoppingItems'   
+ *     --> Adding 'shoppingItemsImmer'   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -265,6 +265,24 @@ export const IntroComponentData = [
     ]
   }
 ]
+
+export const shoppingItemsImmer = {
+  newShoppingItemName: "",
+  items: [
+    {
+      id: "1",
+      name: "Plumbs",
+    },
+    {
+      id: "2",
+      name: "Apples Cider",
+    },
+    {
+      id: "3",
+      name: "Chicken legs",
+    },
+  ],
+};
 
 export const shoppingItems = {
   newShoppingItemName: "",
