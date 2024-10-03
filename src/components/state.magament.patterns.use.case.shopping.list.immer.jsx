@@ -4,11 +4,12 @@ import ShoppingListHeaderBefore from "./state.magament.patterns.use.case.shoppin
 import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.list.row";
 import { useImmerReducer } from "use-immer";
 import { StyledAddItemContainerImmer, StyledButtonImmer, StyledContainerImmer, StyledInputImmer, StyledLabelImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 39.08 - ShoppingListImmer
+/**react-design-patterns-app - version 39.09 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Migrating  'StyledButtonImmer' 
+ *     -->  Migrating  'shoppingItemsImmer' 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -27,24 +28,7 @@ import { StyledAddItemContainerImmer, StyledButtonImmer, StyledContainerImmer, S
 //Generate an id for new shopping list items
 const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
 
-/**the inital  data for immer implementation*/
-const shoppingItemsImmer = {
-  newShoppingItemName: "",
-  items: [
-    {
-      id: "1",
-      name: "Plumbs",
-    },
-    {
-      id: "2",
-      name: "Apples Cider",
-    },
-    {
-      id: "3",
-      name: "Chicken legs",
-    },
-  ],
-};
+
 
 /**this reducer has actions types with syntax
  * according with useImmer, dynamic object asignation*/
@@ -78,6 +62,8 @@ const reducer = (state, action) => {
   };
 
   const ShoppingListImmer = (props) => {
+
+      const { shoppingItemsImmer } = usePatternsAppContext();
 
     const [shoppingList, dispatch] = useImmerReducer(reducer, shoppingItemsImmer);
   
