@@ -5,12 +5,12 @@ import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.l
 import { StyledAddItemContainerReducer, StyledButtonReducer, StyledContainerReducer, StyledInputReducer, StyledLabelReducer, StyledWrapperReducer } from "../styledcomponents/styled.components";
 import { usePatternsAppContext } from "../context";
 import { reducerone } from "../actions/actions.index";
-import { getUuid } from "../utils/shopping.list.utils";
+import { getUuid } from "../utils/utils.index";
 
-/**react-design-patterns-app - version 39.00 - ShoppingListBefore
+/**react-design-patterns-app - version 39.11 - ShoppingListBefore
  * - Features: 
  * 
- *     -->  Migrating 'getUuid'  
+ *     -->  Switching 'getUuid' import  
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
