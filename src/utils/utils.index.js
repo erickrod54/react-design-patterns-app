@@ -1,9 +1,9 @@
-import { getUuid } from "./shopping.list.utils";
+import { getUuid, getUuidImmer } from "./shopping.list.utils";
 
-/**react-design-patterns-app - version 39.10 - getUuid
+/**react-design-patterns-app - version 39.11 - getUuid
  * - Features: 
  * 
- *     --> Migrating 'getUuid' util 
+ *     --> Migrating 'getUuidImmer' util 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -15,5 +15,5 @@ import { getUuid } from "./shopping.list.utils";
  * to use them in the custom titles
  */
 
-export { getUuid }
+export { getUuid, getUuidImmer }
 
