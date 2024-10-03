@@ -1,7 +1,7 @@
-/**react-design-patterns-app - version 39.00 - getUuid
+/**react-design-patterns-app - version 39.10 - utils 
  * - Features: 
  * 
- *     --> Migrating 'getUuid' util 
+ *     --> Building 'getUuidImmer' util 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -15,3 +15,6 @@
 
 //Generate an id for new shopping list items
 export const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
+
+//Generate an id for new shopping list items
+export const getUuidImmer = () => "_" + Math.random().toString(36).substr(2, 9);
