@@ -6,11 +6,12 @@ import { useImmerReducer } from "use-immer";
 import { StyledAddItemContainerImmer, StyledButtonImmer, StyledContainerImmer, StyledInputImmer, StyledLabelImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
 import { usePatternsAppContext } from "../context";
 import { getUuidImmer } from "../utils/shopping.list.utils";
+import { reducertwo } from "../actions/shopping.list.reducer.immer.actions";
 
-/**react-design-patterns-app - version 39.11 - ShoppingListImmer
+/**react-design-patterns-app - version 39.12 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Migrating  'getUuidImmer' 
+ *     -->  Migrating  'reducertwo' 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -25,44 +26,11 @@ import { getUuidImmer } from "../utils/shopping.list.utils";
  *    
  */
 
-
-
-/**this reducer has actions types with syntax
- * according with useImmer, dynamic object asignation*/
-const reducer = (state, action) => {
-
-    switch (action.type) {
-  
-     // Update the name of the new shopping item
-     case "UPDATE_NEW_SHOPPING_ITEM_NAME":
-        state.newShoppingItemName = action.payload;
-        break;
-
-    // Add a new item to the shopping list
-    case "ADD_ITEM":
-      state.newShoppingItemName = "";
-      state.items.push(action.payload);
-      break;
-
-    // Update an existing item in the shopping list
-    case "UPDATE_ITEM":
-        state.items.splice(action.payload.index, 1, action.payload.item);
-        break;
-
-    // Delete an item from the shopping list
-    case "DELETE_ITEM":
-        state.items.splice(action.payload.index, 1);
-        break;
-        
-    }
-    return state;
-  };
-
   const ShoppingListImmer = (props) => {
 
       const { shoppingItemsImmer } = usePatternsAppContext();
 
-    const [shoppingList, dispatch] = useImmerReducer(reducer, shoppingItemsImmer);
+    const [shoppingList, dispatch] = useImmerReducer(reducertwo, shoppingItemsImmer);
   
     const addItem = () => {
       if (!shoppingList.newShoppingItemName) return;
