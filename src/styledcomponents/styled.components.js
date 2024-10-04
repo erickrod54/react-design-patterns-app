@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 39.08 - styled.components
+/**react-design-patterns-app - version 39.12 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledButtonImmer' styles 
+ *     --> writting 'StyledShoppingList' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -141,13 +141,8 @@ export const StyledContainerReducer = styled.div`
 `;
 
 export const StyledShoppingList = styled.div`
-	margin: 0 auto;
-	max-width: 6xl;
-	text-align: center;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	padding-left: 25px;
-	padding-right: 25px;
+	${tw`mx-auto max-w-6xl text-center mt-8 mb-8 px-6`}
+
 `;
 
 export const UpdateTaskInputImmer = styled.input`
