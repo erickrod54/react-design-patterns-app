@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 39.12 - styled.components
+/**react-design-patterns-app - version 39.13 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledShoppingList' styles to tailwind
+ *     --> writting 'StyledContainerReducer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -134,10 +134,8 @@ export const StyledWrapperReducer = styled.div`
 `;
 
 export const StyledContainerReducer = styled.div`
-	padding-top: 2rem;
-	max-width: 4xl;
-	margin: 0 auto;
-	text-align: left;
+	${tw`pt-8 max-w-4xl mx-auto text-left`}
+
 `;
 
 export const StyledShoppingList = styled.div`
