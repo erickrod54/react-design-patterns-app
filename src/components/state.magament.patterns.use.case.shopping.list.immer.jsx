@@ -5,11 +5,12 @@ import ShoppingListRowBefore from "./state.magament.patterns.use.case.shopping.l
 import { useImmerReducer } from "use-immer";
 import { StyledAddItemContainerImmer, StyledButtonImmer, StyledContainerImmer, StyledInputImmer, StyledLabelImmer, StyledWrapperImmer } from "../styledcomponents/styled.components";
 import { usePatternsAppContext } from "../context";
+import { getUuidImmer } from "../utils/shopping.list.utils";
 
-/**react-design-patterns-app - version 39.09 - ShoppingListImmer
+/**react-design-patterns-app - version 39.11 - ShoppingListImmer
  * - Features: 
  * 
- *     -->  Migrating  'shoppingItemsImmer' 
+ *     -->  Migrating  'getUuidImmer' 
  * 
  * Note: the reducer actions will implement later the 
  * useImmerReducer hook in  order to perform the following
@@ -23,10 +24,6 @@ import { usePatternsAppContext } from "../context";
  * with a dynamic object asigment 
  *    
  */
-
-
-//Generate an id for new shopping list items
-const getUuid = () => "_" + Math.random().toString(36).substr(2, 9);
 
 
 
@@ -72,7 +69,7 @@ const reducer = (state, action) => {
       dispatch({
         type: "ADD_ITEM",
         payload: {
-          id: getUuid(),
+          id: getUuidImmer(),
           name: shoppingList.newShoppingItemName,
         },
       });
