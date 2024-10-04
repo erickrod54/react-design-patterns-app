@@ -1,9 +1,10 @@
 import { reducerone } from "./shopping.list.reducer.actions";
+import { reducertwo } from "./shopping.list.reducer.immer.actions";
 
-/**react-design-patterns-app - version 38.20 - actions > index
+/**react-design-patterns-app - version 39.12 - actions > index
  * - Features: 
  * 
- *     -->  Migrating 'reducerone' data 
+ *     -->  Migrating 'reducertwo' data 
  * 
  * Note: the reducer actions will implement later the 
  * useReducer hook in  order to perform the following
@@ -16,4 +17,4 @@ import { reducerone } from "./shopping.list.reducer.actions";
  *    
  */
 
-export { reducerone }
+export { reducerone, reducertwo }
