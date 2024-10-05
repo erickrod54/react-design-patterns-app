@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 39.17 - styled.components
+/**react-design-patterns-app - version 39.18 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledInputReducer' styles to tailwind
+ *     --> writting 'StyledButtonReducer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -91,20 +91,8 @@ export const StyledContainerBefore = styled.div`
 `;
 
 export const StyledButtonReducer = styled.button`
-	align-self: flex-end;
-	padding: 0.5rem 1rem;
-	background-color: white;
-	color: #1a472a;
-	width: 30%;
-	font-size: 1.25rem;
-	font-weight: 600;
+	${tw`self-end px-4 py-2 bg-white text-[#1a472a] w-1/3 text-lg font-semibold hover:bg-white hover:text-blue-900 hover:rounded-lg hover:border hover:border-orange-500`}
 
-	&:hover {
-	background-color: white;
-	color: darkblue;
-	border-radius: 0.75rem;
-	border: 1px solid orange;
-	}
 `;
 
 export const StyledInputReducer = styled.input`
