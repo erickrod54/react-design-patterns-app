@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 39.15 - styled.components
+/**react-design-patterns-app - version 39.16 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledAddItemContainerReducer' styles to tailwind
+ *     --> writting 'StyledLabelReducer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -117,9 +117,8 @@ export const StyledInputReducer = styled.input`
 `;
 
 export const StyledLabelReducer = styled.label`
-	margin-bottom: 0.5rem;
-	color: yellow;
-	font-size: 1.5rem;
+	${tw`mb-2 text-yellow-200 text-xl`}
+
 `;
 
 export const StyledAddItemContainerReducer = styled.div`
