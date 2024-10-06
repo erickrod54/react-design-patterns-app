@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 39.21 - styled.components
+/**react-design-patterns-app - version 40.00 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledWrapperImmer' styles to tailwind
+ *     --> writting 'StyledAddItemContainerImmer' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -50,11 +50,8 @@ export const StyledLabelImmer = styled.label`
 `;
 
 export const StyledAddItemContainerImmer = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	gap: 0.5rem;
-	max-width: xs;
+	${tw`flex flex-col justify-end gap-2 max-w-xs`}
+
 `;
 
 export const StyledWrapperImmer = styled.div`
