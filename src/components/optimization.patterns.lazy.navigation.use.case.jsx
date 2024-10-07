@@ -5,14 +5,34 @@ import Home from "./optimization.patterns.home.use.case";
 import About from "./optimization.patterns.about.use.case";
 import Contact from "./optimization.patterns.contact.use.case";
 
-/**react-design-patterns-app - version 40.04 - LazyNavigation - 
+/**react-design-patterns-app - version 40.05 - LazyNavigation - 
  * - Features: 
  * 
- *     --> Building 'RouteReflector'
+ *     --> writting 'LazyNavigation' styles
  * 
  * Note: This is the first topic
  */
 
+const AppContainer = styled.div`
+  margin: 0 auto;
+  max-width: 6xl;
+  text-align: center;
+  margin-top: 8rem;
+`;
+
+const Heading = styled.h1`
+  font-weight: 600;
+  font-size: 2xl;
+`;
+
+const NavContainer = styled.div`
+  margin-top: 8rem;
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-around;
+`;
 
 
 // RouteReflector Component
