@@ -5,10 +5,10 @@ import Home from "./optimization.patterns.home.use.case";
 import About from "./optimization.patterns.about.use.case";
 import Contact from "./optimization.patterns.contact.use.case";
 
-/**react-design-patterns-app - version 40.05 - LazyNavigation - 
+/**react-design-patterns-app - version 40.06 - LazyNavigation - 
  * - Features: 
  * 
- *     --> writting 'LazyNavigation' styles
+ *     --> Building 'LazyNavigation' 
  * 
  * Note: This is the first topic
  */
@@ -54,5 +54,34 @@ const RouteReflector = () => {
       />
     );
   };
+
+  // LazyNavigation Component
+  function LazyNavigation() {
+    return (
+
+            <AppContainer>
+            <Heading>Advanced React - Codelicks Academy</Heading>
+            <NavContainer>
+                <Nav>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+                </Nav>
+            </NavContainer>
+    
+            {/* Input reflecting the current route */}
+            <RouteReflector />
+    
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+            </AppContainer>
+
+    );
+  }
+  
+  export default LazyNavigation;
   
  
