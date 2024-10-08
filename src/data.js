@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 38.20- data js  
+/**react-design-patterns-app - version 40.06- data js  
  * - Features: 
  *    
- *     --> Adding 'shoppingItemsImmer'   
+ *     --> Adding 'Lazy and Code Splitting'   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -240,6 +240,12 @@ export const patternCard = [
       id:37,
       category:'API Layer and Async Operations',
       pattern:'State Management Patterns',
+      description:''
+    },
+    {
+      id:38,
+      category:'Performance',
+      pattern:'Lazy and Code Splitting',
       description:''
     },
 ]
