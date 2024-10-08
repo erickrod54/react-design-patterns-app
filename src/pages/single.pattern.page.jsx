@@ -10,15 +10,16 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          FunctionalProgramming,
         HOCPattern,
         LayoutComponentPattern,
+        LazyAndCodeSplittingPerformance,
         PortalsAdvHooks,
          StateManagementPatterns,
          UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 32.02 - SinglePatternPage
+/**react-design-patterns-app - version 40.06 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'StateManagementPatterns'
+ *     --> Adding 'LazyAndCodeSplittingPerformance'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -92,6 +93,10 @@ const SinglePatternPage = () => {
 
     if ( Number(patternId) === 37 ) {
         return <StateManagementPatterns />
+    }
+
+    if ( Number(patternId) === 38 ) {
+        return <LazyAndCodeSplittingPerformance />
     }
 
     
