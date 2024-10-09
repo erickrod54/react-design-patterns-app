@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
  
-/**react-design-patterns-app - version 40.10 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 40.11 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adding Advantages of Code Splitting and Lazy Loading    
+ *     --> Adding Disadvantyages of Code Splitting and Lazy Loading    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -64,6 +64,25 @@ const LazyAndCodeSplittingPerformance = () => {
                 </li>
                 <li>
                     <span className="text-white font-semibold"> Efficient Code Management </span> ( Instead of having a single massive JavaScript file, code splitting allows for modular, maintainable chunks that can be updated independently as the application evolves. )
+                </li>
+            </ul>
+
+            <p>
+                some important <span className="text-white font-semibold"> Disadvantages  </span>  of <span className="text-white font-semibold"> code splitting and lazy loading </span>:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Initial Complexity </span> ( Implementing lazy loading and code splitting adds complexity to the project. Developers must handle the dynamic import of components, configure React.lazy and Suspense, and manage loading states appropriately. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Flickering </span> ( If not handled properly, lazy loading can result in flickering or unnecessary loading states, particularly when a component is loaded faster than the loader appears or if the delay is too short, as shown in the example where no loading indicator is shown when the component loads quickly. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> SEO Considerations </span> ( Lazy loading can sometimes interfere with SEO - Search Engine Optimization - since search engines might not crawl lazily-loaded content. However, this can be mitigated using server-side rendering or static site generation -SSG- )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Overhead with Small Applications </span> (For smaller applications, lazy loading might add unnecessary overhead since the cost of splitting and loading chunks could outweigh the benefits of faster initial loading. )
                 </li>
             </ul>
 
