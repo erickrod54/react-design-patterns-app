@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
  
-/**react-design-patterns-app - version 40.09 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 40.10 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Developing Lazy and code splitting and lazy loading     
+ *     --> Adding Advantages of Code Splitting and Lazy Loading    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -45,6 +45,25 @@ const LazyAndCodeSplittingPerformance = () => {
                 </li>
                 <li>
                     <span className="text-white font-semibold"> Introducing Delayed Loading Indicators </span> ( introduces a method for adding a delayed loading indicator, so the user is only shown a loader if the content takes a noticeable amount of time to load )
+                </li>
+            </ul>
+
+            <p>
+                some important <span className="text-white font-semibold"> Advantages </span>  of <span className="text-white font-semibold"> code splitting and lazy loading </span>:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Faster Initial Load </span> ( loading only the code necessary for the initial view - e.g., the home page -, the application can load more quickly, improving user experience, especially for large applications. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Reduced Bandwidth Usage </span> ( Users only download the resources they need at any given moment, saving bandwidth, which can be particularly beneficial for users on slower internet connections or those with limited data plan)
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Better User Experience </span> ( Loading pages on-demand helps reduce wait times for users, and with a loading spinner, users can be given feedback that content is loading. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Efficient Code Management </span> ( Instead of having a single massive JavaScript file, code splitting allows for modular, maintainable chunks that can be updated independently as the application evolves. )
                 </li>
             </ul>
 
