@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
  
-/**react-design-patterns-app - version 40.07 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 40.09 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adding Lazy and code splitting and lazy loading goal     
+ *     --> Developing Lazy and code splitting and lazy loading     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -31,6 +31,22 @@ const LazyAndCodeSplittingPerformance = () => {
                 code that is necessary </span> for the current page, <span className="text-white font-semibold"> instead of downloading the entire application bundle upfront</span> ,
                  which can be inefficient and slow down the initial page load.
             </p>
+
+            <p>
+                some important <span className="text-white font-semibold"> Goals </span>  of <span className="text-white font-semibold"> code splitting and lazy loading </span>:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Improved Application Loading Performance </span> (  By splitting the code into smaller bundles that can be loaded on-demand )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Demonstrating Lazy Loading in React </span> ( React's React.lazy and Suspense components to load components dynamically as needed, rather than loading all components upfront )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Introducing Delayed Loading Indicators </span> ( introduces a method for adding a delayed loading indicator, so the user is only shown a loader if the content takes a noticeable amount of time to load )
+                </li>
+            </ul>
 
             </SectionWrapper>
 
