@@ -2,12 +2,12 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
- 
-/**react-design-patterns-app - version 40.12 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 40.13 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Starting 'React Routing  example'    
+ *     --> Adding 'homecodesplitting'    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -89,8 +89,12 @@ const LazyAndCodeSplittingPerformance = () => {
             </ul>
 
             <p>
-                lets start by a <span className="text-white font-semibold"> React Routing </span> example where this pattern can be applied: 
+                lets start by a <span className="text-white font-semibold"> React Routing </span> example where this pattern can be applied, so this
+                component will be compose by <span className="text-white font-semibold"> Home, About, Contact </span> sub-components and a 
+                <span className="text-white font-semibold"> LazyNavigation </span>
             </p>
+
+            <BashCode code={homecodesplitting}/>
 
             </SectionWrapper>
 
