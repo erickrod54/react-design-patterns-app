@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 40.15- data js  
+/**react-design-patterns-app - version 40.16- data js  
  * - Features: 
  *    
- *     --> Adding 'About - Lazy and Code Splitting Pattern' id   
+ *     --> Adding 'About - Lazy and Code Splitting Pattern' 2nd comment  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7044,9 +7044,10 @@ const UsersApiHookLogicAndDataAbs = () => {
     },
     {
     id: 188,
-    name: ' Home - Lazy and Code Splitting Pattern',
+    name: ' About - Lazy and Code Splitting Pattern',
     code:   
     `
+      /**this is a simple About component for navigation purpuses*/
       const About = (props) => {
           return <div>About</div>;
       };
