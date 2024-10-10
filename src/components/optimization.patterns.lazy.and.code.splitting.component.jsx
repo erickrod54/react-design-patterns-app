@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
  
-/**react-design-patterns-app - version 40.11 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 40.12 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adding Disadvantyages of Code Splitting and Lazy Loading    
+ *     --> Starting 'React Routing  example'    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -16,6 +16,8 @@ import { usePatternsAppContext } from "../context";
 const LazyAndCodeSplittingPerformance = () => {
 
     const { CodeData } = usePatternsAppContext();
+
+    const homecodesplitting = CodeData[187].code;
     
     return(
         <div>
@@ -85,6 +87,10 @@ const LazyAndCodeSplittingPerformance = () => {
                     <span className="text-white font-semibold"> Overhead with Small Applications </span> (For smaller applications, lazy loading might add unnecessary overhead since the cost of splitting and loading chunks could outweigh the benefits of faster initial loading. )
                 </li>
             </ul>
+
+            <p>
+                lets start by a <span className="text-white font-semibold"> React Routing </span> example where this pattern can be applied: 
+            </p>
 
             </SectionWrapper>
 
