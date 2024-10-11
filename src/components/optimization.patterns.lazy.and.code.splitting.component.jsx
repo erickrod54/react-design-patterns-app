@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 40.17 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 40.20 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Starting 'Contact' sub component    
+ *     --> Adding 'Contact' sub component    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -19,6 +19,7 @@ const LazyAndCodeSplittingPerformance = () => {
 
     const homecodesplitting = CodeData[187].code;
     const aboutcodesplitting = CodeData[188].code;
+    const contactcodesplitting = CodeData[189].code;
     
     return(
         <div>
@@ -107,6 +108,7 @@ const LazyAndCodeSplittingPerformance = () => {
                 And the  <span className="text-white font-semibold"> Contact </span> component as follows:
             </p>
             
+            <BashCode code={contactcodesplitting}/>
 
             </SectionWrapper>
 
