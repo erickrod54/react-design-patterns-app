@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 40.14 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 40.16 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Starting 'About' sub component    
+ *     --> Adding 'About' sub component    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -18,6 +18,7 @@ const LazyAndCodeSplittingPerformance = () => {
     const { CodeData } = usePatternsAppContext();
 
     const homecodesplitting = CodeData[187].code;
+    const aboutcodesplitting = CodeData[188].code;
     
     return(
         <div>
@@ -99,6 +100,9 @@ const LazyAndCodeSplittingPerformance = () => {
             <p>
                 Then the  <span className="text-white font-semibold"> About </span> component as follows:
             </p>
+
+            <BashCode code={aboutcodesplitting}/>
+            
 
             </SectionWrapper>
 
