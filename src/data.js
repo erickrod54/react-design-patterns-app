@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 40.18- data js  
+/**react-design-patterns-app - version 40.19- data js  
  * - Features: 
  *    
- *     --> Adding 'Contact - Code Splitting and Lazy Loading Pattern' id 
+ *     --> Adding 'Contact - Code Splitting and Lazy Loading Pattern' comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7060,6 +7060,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' Contact - Lazy and Code Splitting Pattern',
     code:   
     `  
+    /**this is a simple Contact component for navigation purpuses*/
     const Contact = (props) => {
       return <div>Contact</div>;
     };
