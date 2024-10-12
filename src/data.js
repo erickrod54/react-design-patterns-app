@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 40.19- data js  
+/**react-design-patterns-app - version 41.00- data js  
  * - Features: 
  *    
- *     --> Adding 'Contact - Code Splitting and Lazy Loading Pattern' comments 
+ *     --> Adding 'RouteReflector - Code Splitting and Lazy Loading Pattern' comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7065,6 +7065,30 @@ const UsersApiHookLogicAndDataAbs = () => {
       return <div>Contact</div>;
     };
     export default Contact;
+    `
+    },
+    {
+    id: 189,
+    name: ' RouteReflector - Lazy and Code Splitting Pattern',
+    code:   
+    `  
+    const RouteReflector = () => {
+      const location = useLocation();
+      const [scopedPath, setScopedPath] = useState(location.pathname); 
+    
+      useEffect(() => {
+        setScopedPath(location.pathname);
+      }, [location]);
+    
+      return (
+        <input
+          type="text"
+          value={scopedPath} // Reflecting the current path in the input
+          readOnly
+          className="border p-2"
+        />
+      );
+    };
     `
     }
   ];
