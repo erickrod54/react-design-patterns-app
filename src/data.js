@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.02- data js  
+/**react-design-patterns-app - version 41.03- data js  
  * - Features: 
  *    
- *     --> Adding 'RouteReflector - Code Splitting and Lazy Loading Pattern' first comments 
+ *     --> Adding 'RouteReflector - Code Splitting and Lazy Loading Pattern' 2nd comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7077,6 +7077,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       const location = useLocation();// Hook to get current location/path
       const [scopedPath, setScopedPath] = useState(location.pathname); // Local state to hold the scoped path
     
+      // Update the scoped path whenever the location changes
       useEffect(() => {
         setScopedPath(location.pathname);
       }, [location]);
