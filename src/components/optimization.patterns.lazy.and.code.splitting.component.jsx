@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 40.20 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 41.00 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adding 'Contact' sub component    
+ *     --> Staritng 'RouteReflector' sub component    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -109,6 +109,11 @@ const LazyAndCodeSplittingPerformance = () => {
             </p>
             
             <BashCode code={contactcodesplitting}/>
+
+            <p>
+                then lets make an extra component <span className="text-white font-semibold"> RouteReflector </span>
+                just to check the navigation <span className="text-white font-semibold"> pathname </span>
+            </p>
 
             </SectionWrapper>
 
