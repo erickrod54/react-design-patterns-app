@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.04- data js  
+/**react-design-patterns-app - version 41.05- data js  
  * - Features: 
  *    
- *     --> Adding 'LazyNavigation - Code Splitting and Lazy Loading Pattern' 
+ *     --> Adding 'LazyNavigation - Code Splitting and Lazy Loading Pattern' id 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7094,7 +7094,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 190,
+    id: 191,
     name: ' LazyNavigation - Lazy and Code Splitting Pattern',
     code:   
     `
