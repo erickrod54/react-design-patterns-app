@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.03- data js  
+/**react-design-patterns-app - version 41.04- data js  
  * - Features: 
  *    
- *     --> Adding 'RouteReflector - Code Splitting and Lazy Loading Pattern' 2nd comments 
+ *     --> Adding 'LazyNavigation - Code Splitting and Lazy Loading Pattern' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7091,6 +7091,40 @@ const UsersApiHookLogicAndDataAbs = () => {
         />
       );
     };
+    `
+    },
+    {
+    id: 190,
+    name: ' LazyNavigation - Lazy and Code Splitting Pattern',
+    code:   
+    `
+    function LazyNavigation() {
+    return (
+
+              <AppContainer>
+              <Heading>Advanced React - Codelicks Academy</Heading>
+              <NavContainer>
+                  <Nav>
+                  <Link to="/">Home</Link>
+                  <Link to="/about">About</Link>
+                  <Link to="/contact">Contact</Link>
+                  </Nav>
+              </NavContainer>
+      
+              {/* Input reflecting the current route */}
+              <RouteReflector />
+      
+              <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+              </Routes>
+              </AppContainer>
+
+      );
+    }
+    
+    export default LazyNavigation;
     `
     }
   ];
