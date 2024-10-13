@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 41.03 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 41.04 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adidng 'routerreflectcodesplitting' sub component    
+ *     --> Adidng 'LazyNavigation' sub component    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -117,6 +117,11 @@ const LazyAndCodeSplittingPerformance = () => {
             </p>
 
             <BashCode code={routerreflectcodesplitting}/>
+
+            <p>
+                Then the Component <span className="text-white font-semibold"> LazyNavigation </span> 
+                that will hold the navigation will be as follows:
+            </p>
 
             </SectionWrapper>
 
