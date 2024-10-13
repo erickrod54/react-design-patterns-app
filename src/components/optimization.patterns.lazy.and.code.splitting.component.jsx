@@ -21,6 +21,7 @@ const LazyAndCodeSplittingPerformance = () => {
     const aboutcodesplitting = CodeData[188].code;
     const contactcodesplitting = CodeData[189].code;
     const routerreflectcodesplitting = CodeData[190].code;
+    const lazynavigationcodesplitting = CodeData[191].code;
     
     return(
         <div>
@@ -122,6 +123,8 @@ const LazyAndCodeSplittingPerformance = () => {
                 Then the Component <span className="text-white font-semibold"> LazyNavigation </span> 
                 that will hold the navigation will be as follows:
             </p>
+
+            <BashCode code={lazynavigationcodesplitting}/>
 
             </SectionWrapper>
 
