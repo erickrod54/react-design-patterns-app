@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 
-/**react-design-patterns-app - version 41.05 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 41.10 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adidng 'ButtonAsCleanCode' and 'LazyNavigation' link    
+ *     --> Strating Lazy Loading Implementation    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -134,6 +134,12 @@ const LazyAndCodeSplittingPerformance = () => {
             <ButtonAsCleanCode size="xl">
                 <a href="https://codesandbox.io/p/sandbox/d6n8f8"> Go to LazyNavigation App ( external link )</a>
             </ButtonAsCleanCode>
+
+            <p>
+                so lets start to modify and apply <span className="text-white font-semibold"> optimization changes </span> to 
+                the code base, the first step will modify the imports, the sub components currently are imported as
+                follows: 
+            </p>
 
             </SectionWrapper>
 
