@@ -3,11 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
+import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 
-/**react-design-patterns-app - version 41.04 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 41.05 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adidng 'LazyNavigation' sub component    
+ *     --> Adidng 'ButtonAsCleanCode' and 'LazyNavigation' link    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -125,6 +126,14 @@ const LazyAndCodeSplittingPerformance = () => {
             </p>
 
             <BashCode code={lazynavigationcodesplitting}/>
+
+            <p>
+                resulting as follows:
+            </p>
+
+            <ButtonAsCleanCode size="xl">
+                <a href="https://codesandbox.io/p/sandbox/d6n8f8"> Go to LazyNavigation App ( external link )</a>
+            </ButtonAsCleanCode>
 
             </SectionWrapper>
 
