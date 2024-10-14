@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.07 - data js  
+/**react-design-patterns-app - version 41.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyNavigation - Code Splitting and Lazy Loading Pattern' second comments 
+ *     --> Adding 'LazyNavigation - imports 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7127,6 +7127,16 @@ const UsersApiHookLogicAndDataAbs = () => {
     }
     
     export default LazyNavigation;
+    `
+    },
+    {
+    id: 191,
+    name: ' LazyNavigation - imports',
+    code:   
+    `
+    import Home from "./optimization.patterns.home.use.case";
+    import About from "./optimization.patterns.about.use.case";
+    import Contact from "./optimization.patterns.contact.use.case";
     `
     }
   ];
