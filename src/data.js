@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.12 - data js  
+/**react-design-patterns-app - version 41.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyNavigation - lazy imports id  
+ *     --> Adding 'LazyNavigation - lazy imports comments  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7145,6 +7145,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' LazyNavigation - lazy imports',
     code:   
     `
+    /**the new imports replacing the old ones will be as this,
+     * and Lazy previously imported from react library*/
     const Home = lazy(() => import("./optimization.patterns.home.use.cases"));
     const About = lazy(() => import("./optimization.patterns.about.use.cases"));
     const Contact = lazy(() => import("./optimization.patterns.contact.use.cases"));
