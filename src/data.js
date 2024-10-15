@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.13 - data js  
+/**react-design-patterns-app - version 41.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyNavigation - lazy imports comments  
+ *     --> Adding 'Suspense - lazy implementation  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7150,6 +7150,39 @@ const UsersApiHookLogicAndDataAbs = () => {
     const Home = lazy(() => import("./optimization.patterns.home.use.cases"));
     const About = lazy(() => import("./optimization.patterns.about.use.cases"));
     const Contact = lazy(() => import("./optimization.patterns.contact.use.cases"));
+    `
+    },
+    {
+    id: 193,
+    name: ' Suspense - lazy implementation',
+    code:   
+    `
+      function LazyNavigation() {
+        return (
+          <AppContainer>
+            <Heading>Optimized Pattern! - Lazy Loading and Code Splitting</Heading>
+            <NavContainer>
+              <Nav>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+              </Nav>
+            </NavContainer>
+      
+            {/* Input reflecting the current route */}
+            <RouteReflector />
+            <Suspense fallback={<h3> Loading </h3>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Suspense>
+          </AppContainer>
+        );
+      }
+      
+      export default LazyNavigation;
     `
     }
   ];
