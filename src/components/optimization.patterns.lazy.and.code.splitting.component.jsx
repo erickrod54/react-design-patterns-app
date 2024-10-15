@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 
-/**react-design-patterns-app - version 41.10 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 41.11 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Strating Lazy Loading Implementation    
+ *     --> Adding 'lazynavigationimports'    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -23,6 +23,7 @@ const LazyAndCodeSplittingPerformance = () => {
     const contactcodesplitting = CodeData[189].code;
     const routerreflectcodesplitting = CodeData[190].code;
     const lazynavigationcodesplitting = CodeData[191].code;
+    const lazynavigationimports = CodeData[192].code;
     
     return(
         <div>
@@ -140,6 +141,8 @@ const LazyAndCodeSplittingPerformance = () => {
                 the code base, the first step will modify the imports, the sub components currently are imported as
                 follows: 
             </p>
+
+            <BashCode code={lazynavigationimports}/>
 
             </SectionWrapper>
 
