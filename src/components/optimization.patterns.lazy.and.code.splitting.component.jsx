@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 
-/**react-design-patterns-app - version 41.14 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 41.16 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Starting 'Suspense' implementation    
+ *     --> Adding 'lazynavigationsuspense' implementation    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -25,6 +25,7 @@ const LazyAndCodeSplittingPerformance = () => {
     const lazynavigationcodesplitting = CodeData[191].code;
     const lazynavigationimports = CodeData[192].code;
     const lazynavigationimportsnew = CodeData[193].code;
+    const lazynavigationsuspense = CodeData[194].code;
     
     return(
         <div>
@@ -158,7 +159,8 @@ const LazyAndCodeSplittingPerformance = () => {
                 so the next step will be implementing <span className="text-white font-semibold"> Suspense </span>
                 for all routing, as follows:
             </p>
-            
+
+            <BashCode code={lazynavigationsuspense}/>            
 
             </SectionWrapper>
 
