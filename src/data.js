@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.14 - data js  
+/**react-design-patterns-app - version 41.15 - data js  
  * - Features: 
  *    
- *     --> Adding 'Suspense - lazy implementation  
+ *     --> Adding 'Suspense - lazy implementation  id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7153,7 +7153,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 193,
+    id: 194,
     name: ' Suspense - lazy implementation',
     code:   
     `
