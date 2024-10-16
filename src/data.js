@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.16 - data js  
+/**react-design-patterns-app - version 41.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'Suspense - lazy implementation  comments
+ *     --> Adding 'LazyLoader'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7185,6 +7185,36 @@ const UsersApiHookLogicAndDataAbs = () => {
       }
       
       export default LazyNavigation;
+    `
+    },
+    {
+    id: 194,
+    name: ' LazyLoader - lazy implementation',
+    code:   
+    `
+  const LazyLoader = ({ show = false, delay = 0 }) => {
+
+    const [showLoader, setShowLoader] = useState(false);
+  
+      useEffect(() => {
+        let timeout;
+    
+        if (!show) {
+          setShowLoader(false);
+          return;
+        }
+    
+        if (delay === 0) {
+          setShowLoader(true);
+        } else {
+          timeout = setTimeout(() => setShowLoader(true), delay);
+        }
+      }, [show, delay]);
+    
+      return showLoader ? <h3>Loading...</h3> : null;
+    };
+    
+    export default LazyLoader;
     `
     }
   ];
