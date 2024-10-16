@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.15 - data js  
+/**react-design-patterns-app - version 41.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'Suspense - lazy implementation  id
+ *     --> Adding 'Suspense - lazy implementation  comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7171,6 +7171,8 @@ const UsersApiHookLogicAndDataAbs = () => {
       
             {/* Input reflecting the current route */}
             <RouteReflector />
+
+            {/**this is where suspnese wraps the routing*/}
             <Suspense fallback={<h3> Loading </h3>}>
               <Routes>
                 <Route path="/" element={<Home />} />
