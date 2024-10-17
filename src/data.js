@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.17 - data js  
+/**react-design-patterns-app - version 41.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyLoader'
+ *     --> Adding 'LazyLoader' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7188,7 +7188,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 194,
+    id: 195,
     name: ' LazyLoader - lazy implementation',
     code:   
     `
