@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.18 - data js  
+/**react-design-patterns-app - version 41.19 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyLoader' id
+ *     --> Adding 'LazyLoader' first comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7192,8 +7192,10 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' LazyLoader - lazy implementation',
     code:   
     `
+  /**the Lazy loader will receive the props show and delay*/  
   const LazyLoader = ({ show = false, delay = 0 }) => {
 
+    /**the local state to show the laoder*/
     const [showLoader, setShowLoader] = useState(false);
   
       useEffect(() => {
