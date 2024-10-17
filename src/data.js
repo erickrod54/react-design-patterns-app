@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.20 - data js  
+/**react-design-patterns-app - version 42.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyLoader' 2nd comments
+ *     --> Adding 'LazyLoader' custom loader
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7219,6 +7219,39 @@ const UsersApiHookLogicAndDataAbs = () => {
     };
     
     export default LazyLoader;
+    `
+    },
+    {
+    id: 195,
+    name: ' LazyNavigation - custom loader',
+    code:   
+    `
+    function LazyNavigation() {
+      return (
+        <AppContainer>
+          <Heading>Optimized Pattern! - Lazy Loading and Code Splitting</Heading>
+          <NavContainer>
+            <Nav>
+              <Link to="/">Home</Link>
+              <Link to="/about">About</Link>
+              <Link to="/contact">Contact</Link>
+            </Nav>
+          </NavContainer>
+    
+          {/* Input reflecting the current route */}
+          <RouteReflector />
+          <Suspense fallback={<LazyLoader show delay={500} />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
+        </AppContainer>
+      );
+    }
+    
+    export default LazyNavigation;
     `
     }
   ];
