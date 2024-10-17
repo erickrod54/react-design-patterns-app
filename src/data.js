@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 41.19 - data js  
+/**react-design-patterns-app - version 41.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyLoader' first comments
+ *     --> Adding 'LazyLoader' 2nd comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7198,6 +7198,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     /**the local state to show the laoder*/
     const [showLoader, setShowLoader] = useState(false);
   
+      /**the timeout will triggered depending on 
+       * the show and delay*/
       useEffect(() => {
         let timeout;
     
