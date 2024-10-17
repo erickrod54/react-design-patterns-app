@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 
-/**react-design-patterns-app - version 41.20 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 42.00 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Starting 'LazyLoader'     
+ *     --> Adding 'lazynavigationsone'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -26,6 +26,7 @@ const LazyAndCodeSplittingPerformance = () => {
     const lazynavigationimports = CodeData[192].code;
     const lazynavigationimportsnew = CodeData[193].code;
     const lazynavigationsuspense = CodeData[194].code;
+    const lazynavigationsone = CodeData[195].code;
     
     return(
         <div>
@@ -164,8 +165,11 @@ const LazyAndCodeSplittingPerformance = () => {
 
             <p>
                 the <span className="text-white font-semibold"> h3 </span> element can be replaced by a custom loader,
-                let's have a custom loader <span className="text-white font-semibold"> LazyLoader </span> 
-            </p>       
+                let's have a custom loader <span className="text-white font-semibold"> LazyLoader </span> as follows:
+            </p>
+
+            <BashCode code={lazynavigationsone}/>
+                 
 
             </SectionWrapper>
 
