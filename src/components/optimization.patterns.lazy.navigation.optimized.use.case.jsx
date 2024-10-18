@@ -4,10 +4,10 @@ import { useLocation } from "react-router-dom";
 import { lazy, Suspense, useEffect, useState } from "react";
 import LazyLoader from "./optimization.patterns.lazy.loader.component";
 
-/**react-design-patterns-app - version 41.08 - data js  
+/**react-design-patterns-app - version 42.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyNavigation - imports 
+ *     --> Renaming 'LazyNavigation to 'LazyNavigationOptimized' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -59,7 +59,7 @@ const RouteReflector = () => {
 };
 
 // LazyNavigation Component
-function LazyNavigation() {
+function LazyNavigationOptimized() {
   return (
     <AppContainer>
       <Heading>Optimized Pattern! - Lazy Loading and Code Splitting</Heading>
@@ -84,4 +84,4 @@ function LazyNavigation() {
   );
 }
 
-export default LazyNavigation;
+export default LazyNavigationOptimized;
