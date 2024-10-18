@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 42.03 - data js  
+/**react-design-patterns-app - version 42.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyNavigationOptimized - lazy loading'
+ *     --> Adding 'LazyNavigationOptimized - lazy loading' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7257,7 +7257,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 196,
+    id: 197,
     name: ' LazyNavigationOptimized - lazy loading',
     code:   
     `
