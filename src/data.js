@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 42.01 - data js  
+/**react-design-patterns-app - version 42.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyLoader' custom loader id
+ *     --> Adding 'LazyLoader' custom loader comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7240,6 +7240,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     
           {/* Input reflecting the current route */}
           <RouteReflector />
+          {/**the Suspense react library component will receive a as fallout
+           * the custom component*/}
           <Suspense fallback={<LazyLoader show delay={500} />}>
             <Routes>
               <Route path="/" element={<Home />} />
