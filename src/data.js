@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 42.00 - data js  
+/**react-design-patterns-app - version 42.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyLoader' custom loader
+ *     --> Adding 'LazyLoader' custom loader id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7222,7 +7222,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 195,
+    id: 196,
     name: ' LazyNavigation - custom loader',
     code:   
     `
