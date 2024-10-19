@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 
-/**react-design-patterns-app - version 42.05 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 42.06 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adding 'LazynavigationOptimized'     
+ *     --> Adding 'lazynavigationstwo'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -27,6 +27,7 @@ const LazyAndCodeSplittingPerformance = () => {
     const lazynavigationimportsnew = CodeData[193].code;
     const lazynavigationsuspense = CodeData[194].code;
     const lazynavigationsone = CodeData[195].code;
+    const lazynavigationstwo = CodeData[197].code;
     
     return(
         <div>
@@ -175,6 +176,9 @@ const LazyAndCodeSplittingPerformance = () => {
                 <span className="text-white font-semibold"> custom Lazy loader </span> component, this 
                 will have custom props as neeeded for the lazy loading case, as follows:
             </p>
+
+            <BashCode code={lazynavigationstwo}/>
+
                  
 
             </SectionWrapper>
