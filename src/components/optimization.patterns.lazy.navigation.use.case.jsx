@@ -4,21 +4,17 @@ import styled from "styled-components";
 import Home from "./optimization.patterns.home.use.case";
 import About from "./optimization.patterns.about.use.case";
 import Contact from "./optimization.patterns.contact.use.case";
+import { AppContainerNavigation } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 40.06 - LazyNavigation - 
+/**react-design-patterns-app - version 42.08 - LazyNavigation - 
  * - Features: 
  * 
- *     --> Building 'LazyNavigation' 
+ *     --> Migrating 'AppContainerNavigation' 
  * 
  * Note: This is the first topic
  */
 
-const AppContainer = styled.div`
-  margin: 0 auto;
-  max-width: 6xl;
-  text-align: center;
-  margin-top: 8rem;
-`;
+
 
 const Heading = styled.h1`
   font-weight: 600;
@@ -59,7 +55,7 @@ const RouteReflector = () => {
   function LazyNavigation() {
     return (
 
-            <AppContainer>
+            <AppContainerNavigation>
             <Heading>Advanced React - Codelicks Academy</Heading>
             <NavContainer>
                 <Nav>
@@ -77,7 +73,7 @@ const RouteReflector = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
-            </AppContainer>
+            </AppContainerNavigation>
 
     );
   }
