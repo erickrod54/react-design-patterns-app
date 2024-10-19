@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import ButtonAsCleanCode from "./button.as.clean.code.tip.component";
 
-/**react-design-patterns-app - version 42.06 - LazyAndCodeSplittingPerformance
+/**react-design-patterns-app - version 42.07 - LazyAndCodeSplittingPerformance
  * - Features: 
  * 
- *     --> Adding 'lazynavigationstwo'     
+ *     --> Adding 'LazyNavigationOptimized'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -179,6 +179,13 @@ const LazyAndCodeSplittingPerformance = () => {
 
             <BashCode code={lazynavigationstwo}/>
 
+            <p>
+                resulting as follows:
+            </p>
+
+            <ButtonAsCleanCode size="xl">
+                <a href="https://codesandbox.io/p/sandbox/d6n8f8"> Go to LazyNavigationOptimized App ( external link )</a>
+            </ButtonAsCleanCode>
                  
 
             </SectionWrapper>
