@@ -4,21 +4,17 @@ import styled from "styled-components";
 import Home from "./optimization.patterns.home.use.case";
 import About from "./optimization.patterns.about.use.case";
 import Contact from "./optimization.patterns.contact.use.case";
-import { AppContainerNavigation, HeadingNavigation } from "../styledcomponents/styled.components";
+import { AppContainerNavigation, HeadingNavigation, NavContainer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 42.09 - LazyNavigation - 
+/**react-design-patterns-app - version 42.11 - LazyNavigation - 
  * - Features: 
  * 
- *     --> Migrating 'HeadingNavigation' 
+ *     --> Migrating 'NavContainer' 
  * 
  * Note: This is the first topic
  */
 
 
-
-const NavContainer = styled.div`
-  margin-top: 8rem;
-`;
 
 const Nav = styled.nav`
   display: flex;
