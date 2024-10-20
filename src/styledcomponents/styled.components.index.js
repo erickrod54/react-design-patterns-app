@@ -54,6 +54,7 @@ import { AlertWrapper,
          HeaderBackgroundTaskBoard,
          HeaderImmer,
          HeaderTaskBoard,
+         HeadingNavigation,
          HeavyComponentWrapper,
          HiddenMessage,
          Input,
@@ -127,10 +128,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
 
          
-/**react-design-patterns-app - version 42.08 - styledcomponents > index
+/**react-design-patterns-app - version 42.09 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'AppContainerNavigation' 
+ *     --> Importing and exporting 'HeadingNavigation' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -269,4 +270,5 @@ export { SectionWrapper,
          StyledInputImmer,
          StyledButtonImmer,
          AppContainerNavigation,
+         HeadingNavigation,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
