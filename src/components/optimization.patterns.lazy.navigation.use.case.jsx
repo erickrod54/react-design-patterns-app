@@ -4,22 +4,17 @@ import styled from "styled-components";
 import Home from "./optimization.patterns.home.use.case";
 import About from "./optimization.patterns.about.use.case";
 import Contact from "./optimization.patterns.contact.use.case";
-import { AppContainerNavigation } from "../styledcomponents/styled.components";
+import { AppContainerNavigation, HeadingNavigation } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 42.08 - LazyNavigation - 
+/**react-design-patterns-app - version 42.09 - LazyNavigation - 
  * - Features: 
  * 
- *     --> Migrating 'AppContainerNavigation' 
+ *     --> Migrating 'HeadingNavigation' 
  * 
  * Note: This is the first topic
  */
 
 
-
-const Heading = styled.h1`
-  font-weight: 600;
-  font-size: 2xl;
-`;
 
 const NavContainer = styled.div`
   margin-top: 8rem;
@@ -56,7 +51,7 @@ const RouteReflector = () => {
     return (
 
             <AppContainerNavigation>
-            <Heading>Advanced React - Codelicks Academy</Heading>
+            <HeadingNavigation>Advanced React - Codelicks Academy</HeadingNavigation>
             <NavContainer>
                 <Nav>
                 <Link to="/">Home</Link>
