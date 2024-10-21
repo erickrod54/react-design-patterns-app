@@ -3,11 +3,12 @@ import { Link, Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { lazy, Suspense, useEffect, useState } from "react";
 import LazyLoader from "./optimization.patterns.lazy.loader.component";
+import { AppContainerOptimized } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 42.05 - data js  
+/**react-design-patterns-app - version 42.13 - data js  
  * - Features: 
  *    
- *     --> Renaming 'LazyNavigation to 'LazyNavigationOptimized' 
+ *     --> Migrating 'AppContainerOptimized' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -17,12 +18,7 @@ const Home = lazy(() => import("./optimization.patterns.home.use.cases"));
 const About = lazy(() => import("./optimization.patterns.about.use.cases"));
 const Contact = lazy(() => import("./optimization.patterns.contact.use.cases"));
 
-const AppContainer = styled.div`
-  margin: 0 auto;
-  max-width: 6xl;
-  text-align: center;
-  margin-top: 8rem;
-`;
+
 
 const Heading = styled.h1`
   font-weight: 600;
@@ -61,7 +57,7 @@ const RouteReflector = () => {
 // LazyNavigation Component
 function LazyNavigationOptimized() {
   return (
-    <AppContainer>
+    <AppContainerOptimized>
       <Heading>Optimized Pattern! - Lazy Loading and Code Splitting</Heading>
       <NavContainer>
         <Nav>
@@ -80,7 +76,7 @@ function LazyNavigationOptimized() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
-    </AppContainer>
+    </AppContainerOptimized>
   );
 }
 
