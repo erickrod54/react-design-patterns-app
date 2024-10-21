@@ -75,6 +75,7 @@ import { AlertWrapper,
          ModalBackground,
          ModalContent,
          MultipleFormWrapper,
+         Nav,
          NavContainer,
          NextPageButton,
          OpenModalWrapper, OutQuotContainer, OutsideTable, PageButton, PageNumber, Panel,
@@ -129,10 +130,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
 
          
-/**react-design-patterns-app - version 42.11 - styledcomponents > index
+/**react-design-patterns-app - version 42.12 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'NavContainer' 
+ *     --> Importing and exporting 'Nav' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -273,4 +274,5 @@ export { SectionWrapper,
          AppContainerNavigation,
          HeadingNavigation,
          NavContainer,
+         Nav,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
