@@ -4,22 +4,16 @@ import styled from "styled-components";
 import Home from "./optimization.patterns.home.use.case";
 import About from "./optimization.patterns.about.use.case";
 import Contact from "./optimization.patterns.contact.use.case";
-import { AppContainerNavigation, HeadingNavigation, NavContainer } from "../styledcomponents/styled.components";
+import { AppContainerNavigation, HeadingNavigation, Nav, NavContainer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 42.11 - LazyNavigation - 
+/**react-design-patterns-app - version 42.12 - LazyNavigation - 
  * - Features: 
  * 
- *     --> Migrating 'NavContainer' 
+ *     --> Migrating 'Nav' 
  * 
  * Note: This is the first topic
  */
 
-
-
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-around;
-`;
 
 
 // RouteReflector Component
