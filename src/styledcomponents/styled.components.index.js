@@ -56,6 +56,7 @@ import { AlertWrapper,
          HeaderImmer,
          HeaderTaskBoard,
          HeadingNavigation,
+         HeadingOptimized,
          HeavyComponentWrapper,
          HiddenMessage,
          Input,
@@ -131,10 +132,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
 
          
-/**react-design-patterns-app - version 42.13 - styledcomponents > index
+/**react-design-patterns-app - version 42.14 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'AppContainerOptimized' 
+ *     --> Importing and exporting 'HeadingOptimized' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -277,4 +278,5 @@ export { SectionWrapper,
          NavContainer,
          Nav,
          AppContainerOptimized,
+         HeadingOptimized,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
