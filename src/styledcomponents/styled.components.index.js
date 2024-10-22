@@ -79,6 +79,7 @@ import { AlertWrapper,
          MultipleFormWrapper,
          Nav,
          NavContainer,
+         NavContainerOptimized,
          NextPageButton,
          OpenModalWrapper, OutQuotContainer, OutsideTable, PageButton, PageNumber, Panel,
          PrimaryButton,
@@ -132,10 +133,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
 
          
-/**react-design-patterns-app - version 42.14 - styledcomponents > index
+/**react-design-patterns-app - version 42.15 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'HeadingOptimized' 
+ *     --> Importing and exporting 'NavContainerOptimized' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -279,4 +280,5 @@ export { SectionWrapper,
          Nav,
          AppContainerOptimized,
          HeadingOptimized,
+         NavContainerOptimized,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
