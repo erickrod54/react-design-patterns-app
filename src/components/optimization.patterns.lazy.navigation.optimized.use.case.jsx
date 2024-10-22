@@ -3,12 +3,12 @@ import { Link, Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { lazy, Suspense, useEffect, useState } from "react";
 import LazyLoader from "./optimization.patterns.lazy.loader.component";
-import { AppContainerOptimized, HeadingOptimized } from "../styledcomponents/styled.components";
+import { AppContainerOptimized, HeadingOptimized, NavContainerOptimized } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 42.14 - data js  
+/**react-design-patterns-app - version 42.15 - LazyNavigationOptimized js  
  * - Features: 
  *    
- *     --> Migrating 'HeadingOptimized' 
+ *     --> Migrating 'NavContainerOptimized' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -19,10 +19,6 @@ const About = lazy(() => import("./optimization.patterns.about.use.cases"));
 const Contact = lazy(() => import("./optimization.patterns.contact.use.cases"));
 
 
-
-const NavContainer = styled.div`
-  margin-top: 8rem;
-`;
 
 const Nav = styled.nav`
   display: flex;
@@ -54,13 +50,13 @@ function LazyNavigationOptimized() {
   return (
     <AppContainerOptimized>
       <HeadingOptimized>Optimized Pattern! - Lazy Loading and Code Splitting</HeadingOptimized>
-      <NavContainer>
+      <NavContainerOptimized>
         <Nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
         </Nav>
-      </NavContainer>
+      </NavContainerOptimized>
 
       {/* Input reflecting the current route */}
       <RouteReflector />
