@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 42.16 - styled.components
+/**react-design-patterns-app - version 42.17 - styled.components
  * - Features: 
  * 
- *     --> writting 'NavOptimized' styles 
+ *     --> writting 'AppContainerNavigation' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -53,10 +53,7 @@ export const HeadingNavigation = styled.h1`
 `;
 
 export const AppContainerNavigation = styled.div`
-	margin: 0 auto;
-	max-width: 6xl;
-	text-align: center;
-	margin-top: 8rem;
+	${tw`mx-auto max-w-6xl text-center mt-32`}	
 `;
 
 export const StyledButtonImmer = styled.button`
