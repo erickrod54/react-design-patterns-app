@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 43.00 - styled.components
+/**react-design-patterns-app - version 43.01 - styled.components
  * - Features: 
  * 
- *     --> writting 'AppContainerOptimized' styles to tailwind
+ *     --> writting 'HeadingOptimized' styles to tailwind
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -27,8 +27,8 @@ export const NavContainerOptimized = styled.div`
 `;
 
 export const HeadingOptimized = styled.h1`
-	font-weight: 600;
-	font-size: 2xl;
+	${tw`font-semibold text-2xl`}	
+
 `;
 
 export const AppContainerOptimized = styled.div`
