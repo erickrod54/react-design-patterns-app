@@ -12,14 +12,15 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
         LayoutComponentPattern,
         LazyAndCodeSplittingPerformance,
         PortalsAdvHooks,
+         RenderingOptimization,
          StateManagementPatterns,
          UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 40.06 - SinglePatternPage
+/**react-design-patterns-app - version 43.04 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'LazyAndCodeSplittingPerformance'
+ *     --> Adding 'RenderingOptimization'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -99,7 +100,9 @@ const SinglePatternPage = () => {
         return <LazyAndCodeSplittingPerformance />
     }
 
-    
+    if ( Number(patternId) === 39 ) {
+        return <RenderingOptimization/>
+    }
 }
 
 export default SinglePatternPage;
