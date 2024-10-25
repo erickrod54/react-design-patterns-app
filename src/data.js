@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 42.05 - data js  
+/**react-design-patterns-app - version 43.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'LazyNavigationOptimized - lazy loading' comments
+ *     --> Adding 'Rendering Optimization'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -246,6 +246,12 @@ export const patternCard = [
       id:38,
       category:'Performance',
       pattern:'Lazy and Code Splitting',
+      description:''
+    },
+    {
+      id:39,
+      category:'Performance',
+      pattern:'Rendering Optimization',
       description:''
     },
 ]
