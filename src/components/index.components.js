@@ -72,6 +72,7 @@ import LazyLoader from "./lazy.loader.component.jsx";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
 import LazyAndCodeSplittingPerformance from "./optimization.patterns.lazy.and.code.splitting.component.jsx";
+import RenderingOptimization from "./optimization.patterns.rendering.component.jsx";
 import ParentComponent from "./parent.observer.pattern.component";
 import { Secondary, SmallWarning, WarningButton } from "./partial.composition.pattern";
 import PortalsAdvHooks from "./portals.advanced.hooks";
@@ -135,10 +136,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 40.09 - components > index  
+/**react-design-patterns-app - version 43.04 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'LazyAndCodeSplittingPerformance'
+ *     --> Importing and exporting  'RenderingOptimization'
  * 
  * Note: Pending to make responsive design
  */
@@ -278,5 +279,6 @@ export {
          ShoppingListBefore,
          ShoppingListRowBefore,
          ShoppingListImmer,
-         LazyAndCodeSplittingPerformance
+         LazyAndCodeSplittingPerformance,
+         RenderingOptimization
         }
