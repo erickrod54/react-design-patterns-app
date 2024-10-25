@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 43.05 - components > index  
+/**react-design-patterns-app - version 43.06 - components > index  
  * - Features: 
  * 
- *     --> writting 'IngredientsList' styles
+ *     --> Building 'IngredientsList' sub component
  * 
  * Note: Pending to make responsive design
  */
@@ -30,4 +30,25 @@ const StyledListItem = styled.li`
 const StyledButton = styled.button`
   cursor: pointer;
 `;
+
+const IngredientsList = (props) => {
+    console.log("IngredientsList rendered");
+    const { ingredients, deleteIngredient } = props;
+    return (
+      <StyledContainer>
+        <StyledList>
+          {ingredients.map((ingredient) => (
+            <StyledListItem key={ingredient.id}>
+              <span>{ingredient.name}</span>
+              <StyledButton onClick={() => deleteIngredient(ingredient.id)}>
+                X
+              </StyledButton>
+            </StyledListItem>
+          ))}
+        </StyledList>
+      </StyledContainer>
+    );
+  };
+  
+  export default IngredientsList;
 
