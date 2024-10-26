@@ -71,6 +71,7 @@ import LayoutComponentPattern from "./layout.pattern.component";
 import LazyLoader from "./lazy.loader.component.jsx";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
+import IngredientsInfoHelper from "./optimization.patterns.ingredient.info.helper.jsx";
 import LazyAndCodeSplittingPerformance from "./optimization.patterns.lazy.and.code.splitting.component.jsx";
 import RenderingOptimization from "./optimization.patterns.rendering.component.jsx";
 import ParentComponent from "./parent.observer.pattern.component";
@@ -136,10 +137,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 43.04 - components > index  
+/**react-design-patterns-app - version 43.07 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'RenderingOptimization'
+ *     --> Importing and exporting  'IngredientsInfoHelper'
  * 
  * Note: Pending to make responsive design
  */
@@ -280,5 +281,6 @@ export {
          ShoppingListRowBefore,
          ShoppingListImmer,
          LazyAndCodeSplittingPerformance,
-         RenderingOptimization
+         RenderingOptimization,
+         IngredientsInfoHelper,
         }
