@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 43.06 - components > index  
+/**react-design-patterns-app - version 43.07 - components > index  
  * - Features: 
  * 
- *     --> writting  'StyledButton'
+ *     --> Building  'IngredientsInfoHelper'
  * 
  * Note: Pending to make responsive design
  */
@@ -17,3 +17,9 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
+const IngredientsInfoHelper = (props) => {
+    console.log("IngredientsInfoHelper rendered");
+    return <StyledButton>📙</StyledButton>;
+  };
+  
+  export default IngredientsInfoHelper;
