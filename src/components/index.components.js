@@ -72,6 +72,7 @@ import LazyLoader from "./lazy.loader.component.jsx";
 import MessageLocalStorage from "./message.local.storage.component";
 import ControlledModal from "./modal.controlled.component";
 import AddIngredient from "./optimization.patterns.add.ingredient.jsx";
+import IngredientsComponent from "./optimization.patterns.ingredient.component.jsx";
 import IngredientsInfoHelper from "./optimization.patterns.ingredient.info.helper.jsx";
 import IngredientsList from "./optimization.patterns.ingredient.list.jsx";
 import LazyAndCodeSplittingPerformance from "./optimization.patterns.lazy.and.code.splitting.component.jsx";
@@ -139,10 +140,10 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 
 
-/**react-design-patterns-app - version 43.09 - components > index  
+/**react-design-patterns-app - version 43.13 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'AddIngredient'
+ *     --> Importing and exporting  'IngredientsComponent'
  * 
  * Note: Pending to make responsive design
  */
@@ -286,5 +287,6 @@ export {
          RenderingOptimization,
          IngredientsInfoHelper,
          IngredientsList,
-         AddIngredient
+         AddIngredient,
+         IngredientsComponent
         }
