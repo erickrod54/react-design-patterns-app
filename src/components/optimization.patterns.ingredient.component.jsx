@@ -3,10 +3,10 @@ import { nanoid } from "nanoid";
 import styled from "styled-components";
 
 
-/**react-design-patterns-app - version 43.09 - Ingredients  
+/**react-design-patterns-app - version 43.10 - IngredientsComponent  
  * - Features: 
  * 
- *     --> writting  'IngredientsComponent' styles
+ *     --> Building  'initialIngredients' data
  * 
  * Note: Pending to make responsive design
  */
@@ -40,3 +40,17 @@ const StyledSpaceY4 = styled.div`
   }
 `;
 
+const initialIngredients = [
+    {
+      id: nanoid(),
+      name: "500g Chicken Breasts",
+    },
+    {
+      id: nanoid(),
+      name: "300 ml milk",
+    },
+    {
+      id: nanoid(),
+      name: "1 tbsp salt",
+    },
+  ];
