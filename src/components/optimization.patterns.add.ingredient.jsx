@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 43.09 - AddIngredient  
+/**react-design-patterns-app - version 43.17 - AddIngredient  
  * - Features: 
  * 
- *     --> Building  'AddIngredient' 
+ *     --> Building  'StyledFieldset' 
  * 
  * Note: Pending to make responsive design
  */
@@ -16,6 +16,7 @@ const StyledFieldset = styled.fieldset`
   margin-bottom: 1.5rem;
 
   label {
+    color: white;
   }
 
   input {
