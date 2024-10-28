@@ -3,10 +3,10 @@ import { nanoid } from "nanoid";
 import styled from "styled-components";
 import { AddIngredient, IngredientsInfoHelper, IngredientsList } from "./index.components";
 
-/**react-design-patterns-app - version 43.13 - IngredientsComponent  
+/**react-design-patterns-app - version 43.14 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Adding  'IngredientsInfoHelper' import
+ *     --> Refactoring  'StyledContainer' styles
  * 
  * Note: Pending to make responsive design
  */
@@ -16,6 +16,7 @@ const StyledContainer = styled.div`
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
+  background: blueviolet;
 
   > div {
     display: flex;
