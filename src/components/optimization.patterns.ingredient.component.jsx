@@ -3,10 +3,10 @@ import { nanoid } from "nanoid";
 import styled from "styled-components";
 import { AddIngredient, IngredientsInfoHelper, IngredientsList } from "./index.components";
 
-/**react-design-patterns-app - version 43.14 - IngredientsComponent  
+/**react-design-patterns-app - version 43.15 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Refactoring  'StyledContainer' styles
+ *     --> Refactoring  'StyledContainer' styles by white space
  * 
  * Note: Pending to make responsive design
  */
@@ -22,6 +22,8 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
   }
 
   > div > h2 {
