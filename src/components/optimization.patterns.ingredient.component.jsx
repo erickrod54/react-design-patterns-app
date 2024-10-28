@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import styled from "styled-components";
-import { AddIngredient, IngredientsList } from "./index.components";
+import { AddIngredient, IngredientsInfoHelper, IngredientsList } from "./index.components";
 
-
-/**react-design-patterns-app - version 43.12 - IngredientsComponent  
+/**react-design-patterns-app - version 43.13 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Adding  'IngredientsComponent' imports
+ *     --> Adding  'IngredientsInfoHelper' import
  * 
  * Note: Pending to make responsive design
  */
