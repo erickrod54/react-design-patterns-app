@@ -3,10 +3,10 @@ import { nanoid } from "nanoid";
 import styled from "styled-components";
 import { AddIngredient, IngredientsInfoHelper, IngredientsList } from "./index.components";
 
-/**react-design-patterns-app - version 43.16 - IngredientsComponent  
+/**react-design-patterns-app - version 43.17 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Refactoring  'StyledContainer' styles by radius
+ *     --> Refactoring  'StyledContainer' fonts
  * 
  * Note: Pending to make responsive design
  */
@@ -28,6 +28,9 @@ const StyledContainer = styled.div`
   }
 
   > div > h2 {
+    font-size: x-large;
+    color: white;
+    text-decoration: underline;
   }
 `;
 
