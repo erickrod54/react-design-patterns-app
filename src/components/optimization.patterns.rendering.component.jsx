@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
 
-/**react-design-patterns-app - version 43.20 - RenderingOptimization
+/**react-design-patterns-app - version 44.00 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting  'memo and useCallback'     
+ *     --> Developing  'memo and useCallback' comcepts    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -30,6 +30,7 @@ const RenderingOptimization = () => {
                 it will be covered two patterns:
             </p>
 
+
             <ul className="list-white-space">
                 <li>
                     <span className="text-white font-semibold"> memo </span> (  Optimizes React components by memoizing them, preventing unnecessary re-renders if their props haven't changed. )
@@ -39,6 +40,13 @@ const RenderingOptimization = () => {
                 </li>
             </ul>
 
+            <p>
+                So lets make the implementation that will involves creating a simple application for <span className="text-white font-semibold"> 
+                managing a list of ingredients (adding/removing) </span> and <span className="text-white font-semibold"> optimizing its performance </span>
+                by <span className="text-white font-semibold"> addressing unnecessary re-renders. </span> React's <span className="text-white font-semibold"> 
+                memo and useCallback </span> are used to <span className="text-white font-semibold"> optimize components and prevent avoidable updates by preserving 
+                referential integrity and minimizing wasted renders. </span>
+            </p>
     
             </SectionWrapper>
         </div>
