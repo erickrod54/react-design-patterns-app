@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 43.04 - data js  
+/**react-design-patterns-app - version 44.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'Rendering Optimization'
+ *     --> Adding 'IngredientsInfoHelper'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7296,8 +7296,22 @@ const UsersApiHookLogicAndDataAbs = () => {
     
     export default LazyNavigationOptimized;
     `
+    },
+    {
+    id: 197,
+    name: ' LazyNavigationOptimized - lazy loading',
+    code:   
+    `
+    const IngredientsInfoHelper = (props) => {
+      console.log("IngredientsInfoHelper rendered");
+      return <StyledButton>📙</StyledButton>;
+    };
+
+    export default IngredientsInfoHelper;
+    `
     }
   ];
+  
 
   /**List Pattern data  -- start */
   
