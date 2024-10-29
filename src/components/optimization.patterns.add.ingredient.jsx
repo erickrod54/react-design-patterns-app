@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-/**react-design-patterns-app - version 43.17 - AddIngredient  
+/**react-design-patterns-app - version 43.18 - AddIngredient  
  * - Features: 
  * 
- *     --> Building  'StyledFieldset' 
+ *     --> Refactoring 'StyledFieldset' styles 
  * 
  * Note: Pending to make responsive design
  */
@@ -14,6 +14,7 @@ const StyledFieldset = styled.fieldset`
   flex-direction: column;
   align-items: start;
   margin-bottom: 1.5rem;
+  font-size: 1.3rem;
 
   label {
     color: white;
