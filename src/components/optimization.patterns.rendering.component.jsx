@@ -2,12 +2,12 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
-
-/**react-design-patterns-app - version 44.00 - RenderingOptimization
+/**react-design-patterns-app - version 44.02 - RenderingOptimization
  * - Features: 
  * 
- *     --> Developing  'memo and useCallback' comcepts    
+ *     --> Starting  'ingredientsinfohelper'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -16,6 +16,8 @@ import { usePatternsAppContext } from "../context";
 const RenderingOptimization = () => {
 
     const { CodeData } = usePatternsAppContext();
+
+    const ingredientsinfohelper = CodeData[198].code;
     
     return(
         <div>
@@ -47,6 +49,12 @@ const RenderingOptimization = () => {
                 memo and useCallback </span> are used to <span className="text-white font-semibold"> optimize components and prevent avoidable updates by preserving 
                 referential integrity and minimizing wasted renders. </span>
             </p>
+
+            <p>
+                first lets start by the subcomponents, <span className="text-white font-semibold"> IngredientsInfoHelper </span> its a component that will 
+                have a help menu icon
+            </p>
+            
     
             </SectionWrapper>
         </div>
