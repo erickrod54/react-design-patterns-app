@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.01 - data js  
+/**react-design-patterns-app - version 44.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsInfoHelper' id
+ *     --> Adding 'IngredientsInfoHelper' first comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7302,6 +7302,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' LazyNavigationOptimized - lazy loading',
     code:   
     `
+    /**this component will handle a help icon*/
     const IngredientsInfoHelper = (props) => {
       console.log("IngredientsInfoHelper rendered");
       return <StyledButton>📙</StyledButton>;
