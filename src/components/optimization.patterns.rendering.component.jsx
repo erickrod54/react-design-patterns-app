@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 44.02 - RenderingOptimization
+/**react-design-patterns-app - version 44.03 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting  'ingredientsinfohelper'     
+ *     --> Adding  'ingredientsinfohelper'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -52,8 +52,10 @@ const RenderingOptimization = () => {
 
             <p>
                 first lets start by the subcomponents, <span className="text-white font-semibold"> IngredientsInfoHelper </span> its a component that will 
-                have a help menu icon
+                have a help menu icon, and will be as follows:
             </p>
+
+            <BashCode code={ingredientsinfohelper}/>
             
     
             </SectionWrapper>
