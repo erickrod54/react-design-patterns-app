@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.03 - data js  
+/**react-design-patterns-app - version 44.04 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsInfoHelper' 2nd comments
+ *     --> Adding 'IngredientsList'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7311,6 +7311,36 @@ const UsersApiHookLogicAndDataAbs = () => {
     };
 
     export default IngredientsInfoHelper;
+    `
+    },
+    {
+    id: 198,
+    name: ' IngredientsList - Rendering Optimization',
+    code:   
+    `
+    const IngredientsList = (props) => {
+
+    console.log("IngredientsList rendered");
+
+    const { ingredients, deleteIngredient } = props;
+
+    return (
+        <StyledContainer>
+          <StyledList>
+            {ingredients.map((ingredient) => (
+              <StyledListItem key={ingredient.id}>
+                <span>{ingredient.name}</span>
+                <StyledButton onClick={() => deleteIngredient(ingredient.id)}>
+                  X
+                </StyledButton>
+              </StyledListItem>
+            ))}
+          </StyledList>
+        </StyledContainer>
+      );
+    };
+    
+    export default IngredientsList;
     `
     }
   ];
