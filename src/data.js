@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.02 - data js  
+/**react-design-patterns-app - version 44.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsInfoHelper' first comments
+ *     --> Adding 'IngredientsInfoHelper' 2nd comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7304,6 +7304,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     /**this component will handle a help icon*/
     const IngredientsInfoHelper = (props) => {
+      /**the console log will trigger every component render, 
+       * it helps to detect where the adjusts are needed*/
       console.log("IngredientsInfoHelper rendered");
       return <StyledButton>📙</StyledButton>;
     };
