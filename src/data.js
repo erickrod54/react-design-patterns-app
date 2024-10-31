@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.05 - data js  
+/**react-design-patterns-app - version 44.06 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsList' id
+ *     --> Adding 'IngredientsList' first comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7318,9 +7318,13 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' IngredientsList - Rendering Optimization',
     code:   
     `
+    /** this component will render the ingredient list*/
     const IngredientsList = (props) => {
 
+    /**the log will help to track how many times render, so it will 
+     * be ajusted if necessary*/  
     console.log("IngredientsList rendered");
+
 
     const { ingredients, deleteIngredient } = props;
 
