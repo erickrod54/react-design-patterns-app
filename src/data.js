@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.07 - data js  
+/**react-design-patterns-app - version 44.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsList' 2nd comments
+ *     --> Adding 'AddIngredient' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7347,6 +7347,46 @@ const UsersApiHookLogicAndDataAbs = () => {
     };
     
     export default IngredientsList;
+    `
+    },
+    {
+    id: 199,
+    name: ' AddIngredient - Rendering Optimization',
+    code:   
+    `
+    const AddIngredient = (props) => {
+
+    console.log("AddIngredient rendered");
+
+    const { addIngredient, ingredient, setIngredient } = props;
+  
+    return (
+          <form className="">
+            <StyledFieldset>
+              <label>Add ingredient</label>
+              <input
+                type="text"
+                value={ingredient}
+                onChange={(e) => setIngredient(e.target.value)}
+              />
+            </StyledFieldset>
+            <StyledButtonContainer>
+              <StyledButton
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (!ingredient) return;
+                  addIngredient(ingredient);
+                  setIngredient("");
+                }}
+              >
+                Add
+              </StyledButton>
+            </StyledButtonContainer>
+          </form>
+        );
+      };
+      
+      export default AddIngredient;
     `
     }
   ];
