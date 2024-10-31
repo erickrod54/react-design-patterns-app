@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.06 - data js  
+/**react-design-patterns-app - version 44.07 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsList' first comments
+ *     --> Adding 'IngredientsList' 2nd comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7325,7 +7325,8 @@ const UsersApiHookLogicAndDataAbs = () => {
      * be ajusted if necessary*/  
     console.log("IngredientsList rendered");
 
-
+    /**data props destrcutured to be displayed in the return
+     * as also the delete function*/
     const { ingredients, deleteIngredient } = props;
 
     return (
@@ -7334,6 +7335,7 @@ const UsersApiHookLogicAndDataAbs = () => {
             {ingredients.map((ingredient) => (
               <StyledListItem key={ingredient.id}>
                 <span>{ingredient.name}</span>
+                {/**the X will be generted with each element, indicates that can be deleted*/}
                 <StyledButton onClick={() => deleteIngredient(ingredient.id)}>
                   X
                 </StyledButton>
