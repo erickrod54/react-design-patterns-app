@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 44.03 - RenderingOptimization
+/**react-design-patterns-app - version 44.04 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'ingredientsinfohelper'     
+ *     --> Starting  'ingredientsinfohelper'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -18,6 +18,7 @@ const RenderingOptimization = () => {
     const { CodeData } = usePatternsAppContext();
 
     const ingredientsinfohelper = CodeData[198].code;
+    const ingredientslist = CodeData[199].code;
     
     return(
         <div>
@@ -56,7 +57,12 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={ingredientsinfohelper}/>
-            
+
+            <p>
+                then will follow the ingredients list <span className="text-white font-semibold"> IngredientsList </span> component that 
+                will display the ingredient <span className="text-white font-semibold"> - ingredients prop -</span> name and also will have the feature to
+                delete it <span className="text-white font-semibold"> deleteIngredient </span>  
+            </p>
     
             </SectionWrapper>
         </div>
