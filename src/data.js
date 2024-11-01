@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.12 - data js  
+/**react-design-patterns-app - version 44.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'initialIngredients' 
+ *     --> Adding 'initialIngredients' comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7399,6 +7399,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' initialIngredients - Rendering Optimization',
     code:   
     `
+      /**this will be the initital ingredients data*/
       const initialIngredients = [
       {
         id: nanoid(),
