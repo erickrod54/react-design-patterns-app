@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 44.05 - RenderingOptimization
+/**react-design-patterns-app - version 44.09 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'ingredientsinfohelper'     
+ *     --> Starting  'AddIngredient'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -65,6 +65,13 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={ingredientslist}/>
+
+            <p>
+                then will follow the feature to add a new ingrdient that will be a sub component <span className="text-white font-semibold"> AddIngredient </span> 
+                and this also will be tracked ( to check how many renders ) with a <span className="text-white font-semibold"> console log </span> like the previous 
+                sub components
+            </p>
+            
 
 
             </SectionWrapper>
