@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.10 - data js  
+/**react-design-patterns-app - version 44.11 - data js  
  * - Features: 
  *    
- *     --> Adding 'AddIngredient' first comments 
+ *     --> Adding 'AddIngredient' 2nd comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7374,6 +7374,7 @@ const UsersApiHookLogicAndDataAbs = () => {
                 onChange={(e) => setIngredient(e.target.value)}
               />
             </StyledFieldset>
+            {/**the button will verify if the ingredient is present*/}
             <StyledButtonContainer>
               <StyledButton
                 onClick={(e) => {
