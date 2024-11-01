@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.09 - data js  
+/**react-design-patterns-app - version 44.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'AddIngredient' id 
+ *     --> Adding 'AddIngredient' first comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7354,10 +7354,14 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' AddIngredient - Rendering Optimization',
     code:   
     `
+    /**this component will add an ingredient to the 
+     * list*/
     const AddIngredient = (props) => {
 
+    /**the console log to track the component renders*/  
     console.log("AddIngredient rendered");
 
+    /**props destructured to add and set the ingredient*/
     const { addIngredient, ingredient, setIngredient } = props;
   
     return (
