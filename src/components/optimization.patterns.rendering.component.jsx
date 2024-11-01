@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 44.09 - RenderingOptimization
+/**react-design-patterns-app - version 44.11 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting  'AddIngredient'     
+ *     --> Adding  'AddIngredient'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -19,6 +19,7 @@ const RenderingOptimization = () => {
 
     const ingredientsinfohelper = CodeData[198].code;
     const ingredientslist = CodeData[199].code;
+    const addIngredient = CodeData[200].code;
     
     return(
         <div>
@@ -72,7 +73,7 @@ const RenderingOptimization = () => {
                 sub components
             </p>
             
-
+            <BashCode code={addIngredient}/>
 
             </SectionWrapper>
         </div>
