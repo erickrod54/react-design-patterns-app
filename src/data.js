@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.14 - data js  
+/**react-design-patterns-app - version 44.15 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponent' code 
+ *     --> Adding 'IngredientsComponent' id 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7417,7 +7417,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 201,
+    id: 202,
     name: ' initialIngredients - Rendering Optimization',
     code:   
     `
