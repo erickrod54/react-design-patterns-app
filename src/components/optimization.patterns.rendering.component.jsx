@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 44.11 - RenderingOptimization
+/**react-design-patterns-app - version 44.13 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'AddIngredient'     
+ *     --> Starting  'initialIngredients'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -20,6 +20,7 @@ const RenderingOptimization = () => {
     const ingredientsinfohelper = CodeData[198].code;
     const ingredientslist = CodeData[199].code;
     const addIngredient = CodeData[200].code;
+    const addIngredient1 = CodeData[201].code;
     
     return(
         <div>
@@ -74,6 +75,11 @@ const RenderingOptimization = () => {
             </p>
             
             <BashCode code={addIngredient}/>
+
+            <p>
+                then initial data <span className="text-white font-semibold"> c  </span> will be as follows:
+            </p>
+
 
             </SectionWrapper>
         </div>
