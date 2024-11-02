@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.13 - data js  
+/**react-design-patterns-app - version 44.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'initialIngredients' comments 
+ *     --> Adding 'IngredientsComponent' code 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7415,9 +7415,68 @@ const UsersApiHookLogicAndDataAbs = () => {
       },
     ];
     `
+    },
+    {
+    id: 201,
+    name: ' initialIngredients - Rendering Optimization',
+    code:   
+    `
+    const IngredientsComponent = (props) => {
+
+    console.log("Ingredient rendered");
+
+    const [ingredient, setIngredient] = useState("");
+    const [ingredients, setIngredients] = useState(initialIngredients);
+  
+    const addIngredient = (ingredient) => {
+
+      setIngredients((ingredients) => [
+        ...ingredients,
+        {
+          name: ingredient,
+          id: nanoid(),
+
+        },
+      ]);
+    };
+  
+    const deleteIngredient = (id) => {
+      setIngredients((ingredients) => ingredients.filter((ing) => ing.id !== id));
+    };
+  
+    const createIngredientsHeaderText = () => {
+
+      console.log("createIngredientsHeaderText called");
+      return <StyledHeading2>Ingredients ({ingredients.length})</StyledHeading2>;
+    };
+  
+      return (
+        <StyledContainer>
+          <div>
+            {createIngredientsHeaderText()}
+            <IngredientsInfoHelper />
+          </div>
+    
+          <StyledSpaceY4>
+            <IngredientsList
+              ingredients={ingredients}
+              deleteIngredient={deleteIngredient}
+            />
+    
+            <AddIngredient
+              addIngredient={addIngredient}
+              ingredient={ingredient}
+              setIngredient={setIngredient}
+            />
+          </StyledSpaceY4>
+        </StyledContainer>
+      );
+    };
+    
+    export default IngredientsComponent;
+    `
     }
   ];
-
 
   /**List Pattern data  -- start */
   
