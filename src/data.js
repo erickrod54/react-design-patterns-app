@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.15 - data js  
+/**react-design-patterns-app - version 44.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponent' id 
+ *     --> Adding 'IngredientsComponent' first comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7421,6 +7421,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' initialIngredients - Rendering Optimization',
     code:   
     `
+    /**this component will render the whole application */
     const IngredientsComponent = (props) => {
 
     console.log("Ingredient rendered");
@@ -7428,6 +7429,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     const [ingredient, setIngredient] = useState("");
     const [ingredients, setIngredients] = useState(initialIngredients);
   
+    /** this metthod will be to add ingredients and will be pass as prop
+     * for AddIngredient Component*/
     const addIngredient = (ingredient) => {
 
       setIngredients((ingredients) => [
