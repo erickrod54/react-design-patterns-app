@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 44.17 - data js  
+/**react-design-patterns-app - version 44.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponent' 2nd comments 
+ *     --> Adding 'IngredientsComponent' 3third comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7451,6 +7451,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     /**this small component will display the ingredients length*/
     const createIngredientsHeaderText = () => {
 
+      /**this console log will track how many times this component is called*/
       console.log("createIngredientsHeaderText called");
       return <StyledHeading2>Ingredients ({ingredients.length})</StyledHeading2>;
     };
