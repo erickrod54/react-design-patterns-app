@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent } from "./index.components";
 
-/**react-design-patterns-app - version 44.20 - RenderingOptimization
+/**react-design-patterns-app - version 45.00 - RenderingOptimization
  * - Features: 
  * 
- *     --> Rendering 'IngredientsComponent'     
+ *     --> Starting 'memo' and 'useCallback' implementation    
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -99,6 +99,52 @@ const RenderingOptimization = () => {
             </p>
 
             <IngredientsComponent />
+
+            <br>
+            </br>
+
+            <p>
+                by only typing while inspecting the chrome Java Console, al this components are rendered:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Ingredient rendered </span> (  Optimizes React components by memoizing them, preventing unnecessary re-renders if their props haven't changed. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> createIngredientsHeaderText called </span> ( Memoizes a function to maintain its reference between renders, preventing it from being recreated unless dependencies change. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Ingredient rendered </span> (  Optimizes React components by memoizing them, preventing unnecessary re-renders if their props haven't changed. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> createIngredientsHeaderText called </span> ( Memoizes a function to maintain its reference between renders, preventing it from being recreated unless dependencies change. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> IngredientsInfoHelper rendered </span> (  Optimizes React components by memoizing them, preventing unnecessary re-renders if their props haven't changed. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> IngredientsInfoHelper rendered </span> ( Memoizes a function to maintain its reference between renders, preventing it from being recreated unless dependencies change. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> IngredientsList rendered </span> (  Optimizes React components by memoizing them, preventing unnecessary re-renders if their props haven't changed. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> IngredientsList rendered </span> ( Memoizes a function to maintain its reference between renders, preventing it from being recreated unless dependencies change. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  AddIngredient rendered </span> (  Optimizes React components by memoizing them, preventing unnecessary re-renders if their props haven't changed. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold">  AddIngredient rendered </span> ( Memoizes a function to maintain its reference between renders, preventing it from being recreated unless dependencies change. )
+                </li>
+            </ul>
+
+            <p>
+                most of them rendered twice, so lets fix this using <span className="text-white font-semibold"> memo </span> and 
+                <span className="text-white font-semibold"> useCallback </span>
+            </p>
+
 
             </SectionWrapper>
         </div>
