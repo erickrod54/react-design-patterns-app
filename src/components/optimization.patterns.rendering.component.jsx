@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 44.18 - RenderingOptimization
+/**react-design-patterns-app - version 44.19 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting 'Ingredientscomponent'     
+ *     --> Adding 'Ingredientscomponent'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -91,9 +91,8 @@ const RenderingOptimization = () => {
                 will be as follows:
             </p>
 
-       
+            <BashCode code={Ingredientscomponent}/>
 
-            
             </SectionWrapper>
         </div>
 )
