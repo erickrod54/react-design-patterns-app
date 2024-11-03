@@ -3,11 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
+import { IngredientsComponent } from "./index.components";
 
-/**react-design-patterns-app - version 44.19 - RenderingOptimization
+/**react-design-patterns-app - version 44.20 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding 'Ingredientscomponent'     
+ *     --> Rendering 'IngredientsComponent'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -92,6 +93,12 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={Ingredientscomponent}/>
+
+            <p>
+                resulting <span className="text-white font-semibold"> IngredientsComponent </span> in:
+            </p>
+
+            <IngredientsComponent />
 
             </SectionWrapper>
         </div>
