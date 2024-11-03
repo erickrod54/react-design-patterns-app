@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 44.15 - RenderingOptimization
+/**react-design-patterns-app - version 44.18 - RenderingOptimization
  * - Features: 
  * 
- *     --> Renaming 'addIngredient1' to 'initialIngredients'     
+ *     --> Starting 'Ingredientscomponent'     
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -21,6 +21,7 @@ const RenderingOptimization = () => {
     const ingredientslist = CodeData[199].code;
     const addIngredient = CodeData[200].code;
     const initialIngredients  = CodeData[201].code;
+    const Ingredientscomponent  = CodeData[202].code;
     
     return(
         <div>
@@ -81,6 +82,16 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={initialIngredients}/>
+
+            <p>
+                And the component will be composed by the sub components <span className="text-white font-semibold"> IngredientsComponent  </span>,
+                this component will drill props to the <span className="text-white font-semibold"> IngredientsList </span>, the 
+                <span className="text-white font-semibold"> IngredientsInfoHelper </span> , and the 
+                <span className="text-white font-semibold"> AddIngredient </span>  
+                will be as follows:
+            </p>
+
+       
 
             
             </SectionWrapper>
