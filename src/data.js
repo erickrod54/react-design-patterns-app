@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 45.01 - data js  
+/**react-design-patterns-app - version 45.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsListOptimized' code
+ *     --> Adding 'IngredientsListOptimized' id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7483,7 +7483,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 202,
+    id: 203,
     name: ' IngredientsListOptimized - memo and callback',
     code:   
     `
