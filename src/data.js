@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 45.02 - data js  
+/**react-design-patterns-app - version 45.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsListOptimized' id
+ *     --> Adding 'IngredientsListOptimized' first comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7487,9 +7487,15 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' IngredientsListOptimized - memo and callback',
     code:   
     `
+      /**this is the optimized IngredientsList component */
       const IngredientsListOptimized = (props) => {
+
           console.log("IngredientsList rendered");
+
+          /**this props are drilled from a component in a upper level, as IngredientsComponent,
+           * so in order to the memoization to work, this props need to be look to optimized*/
           const { ingredients, deleteIngredient } = props;
+          
           return (
             <StyledContainer>
               <StyledList>
