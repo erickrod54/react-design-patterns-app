@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import { IngredientsComponent } from "./index.components";
 
 
-/**react-design-patterns-app - version 45.04 - RenderingOptimization
+/**react-design-patterns-app - version 45.05 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting 'IngredientsListOptimized'   
+ *     --> Adding 'ingredientslistoptimized'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -24,6 +24,7 @@ const RenderingOptimization = () => {
     const addIngredient = CodeData[200].code;
     const initialIngredients  = CodeData[201].code;
     const Ingredientscomponent  = CodeData[202].code;
+    const ingredientslistoptimized  = CodeData[203].code;
     
     return(
         <div>
@@ -141,12 +142,16 @@ const RenderingOptimization = () => {
                 </li>
             </ul>
 
+
             <p>
                 most of them rendered twice, but lets work in the <span className="text-white font-semibold"> IngredientsList </span> , so lets fix this 
                 using <span className="text-white font-semibold"> memo </span> and <span className="text-white font-semibold"> useCallback </span>, lets 
                 start by <span className="text-white font-semibold"> IngredientsList </span> by memoizing it and let called 
                 <span className="text-white font-semibold"> IngredientsListOptimized </span> as follows: 
             </p>
+
+
+            <BashCode code={ingredientslistoptimized}/>
 
 
             </SectionWrapper>
