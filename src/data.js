@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 45.06 - data js  
+/**react-design-patterns-app - version 45.07 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsListOptimized' id
+ *     --> Adding 'IngredientsListOptimized' comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7538,6 +7538,8 @@ const UsersApiHookLogicAndDataAbs = () => {
           ]);
         };
         
+        /**useCallback will received two arguments, the function to memoized
+        * and a dependency array*/
         const deleteIngredient = useCallback(
             (id) => {
                 setIngredients((ingredients) => ingredients.filter((ing) => ing.id !== id));
