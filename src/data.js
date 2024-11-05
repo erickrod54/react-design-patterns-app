@@ -1,10 +1,10 @@
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
 
-/**react-design-patterns-app - version 45.04 - data js  
+/**react-design-patterns-app - version 45.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsListOptimized' 2nd comments
+ *     --> Adding 'IngredientsListOptimized'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7514,6 +7514,65 @@ const UsersApiHookLogicAndDataAbs = () => {
         
         /**here is implemented the memoization for the component*/
         export default memo(IngredientsListOptimized);
+    `
+    },
+    {
+    id: 203,
+    name: ' IngredientsListOptimized - memo and callback',
+    code:   
+    `
+        const IngredientsComponentOptimized = (props) => {
+
+        console.log("Ingredient rendered");
+        
+        const [ingredient, setIngredient] = useState("");
+        const [ingredients, setIngredients] = useState(initialIngredients);
+      
+        const addIngredient = (ingredient) => {
+          setIngredients((ingredients) => [
+            ...ingredients,
+            {
+              name: ingredient,
+              id: nanoid(),
+            },
+          ]);
+        };
+      
+        const deleteIngredient = useCallback(
+            (id) => {
+                setIngredients((ingredients) => ingredients.filter((ing) => ing.id !== id));
+              }
+            ,[])
+      
+        const createIngredientsHeaderText = () => {
+          console.log("createIngredientsHeaderText called");
+          return <StyledHeading2>Ingredients ({ingredients.length})</StyledHeading2>;
+        };
+      
+        return (
+          <StyledContainer>
+            <div>
+              {createIngredientsHeaderText()}
+              <IngredientsInfoHelper />
+            </div>
+      
+            <StyledSpaceY4>
+              <IngredientsListOptimized
+                ingredients={ingredients}
+                deleteIngredient={deleteIngredient}
+              />
+      
+              <AddIngredient
+                addIngredient={addIngredient}
+                ingredient={ingredient}
+                setIngredient={setIngredient}
+              />
+            </StyledSpaceY4>
+          </StyledContainer>
+        );
+      };
+      
+      export default IngredientsComponentOptimized;
     `
     }
   ];
