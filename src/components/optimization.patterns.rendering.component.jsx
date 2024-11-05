@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import { IngredientsComponent } from "./index.components";
 
 
-/**react-design-patterns-app - version 45.05 - RenderingOptimization
+/**react-design-patterns-app - version 45.07 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding 'ingredientslistoptimized'   
+ *     --> Starting 'IngredientsComponentOptimized'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -150,8 +150,14 @@ const RenderingOptimization = () => {
                 <span className="text-white font-semibold"> IngredientsListOptimized </span> as follows: 
             </p>
 
-
             <BashCode code={ingredientslistoptimized}/>
+
+            <p>
+                as it seen the  <span className="text-white font-semibold"> props are drilled from a component in a upper level </span>, as 
+                <span className="text-white font-semibold"> IngredientsComponent </span>, so in order to the memoization to work, this props 
+                need to be look to optimized so lets call this new optimized component <span className="text-white font-semibold"> IngredientsComponentOptimized </span>
+                and will be as follows:
+            </p>
 
 
             </SectionWrapper>
