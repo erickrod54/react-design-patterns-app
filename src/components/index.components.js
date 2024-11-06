@@ -138,14 +138,15 @@ import UserInfoDataSource from "./user.info.hook.dsource.component";
 import WithoutKeysExercise from "./withoutkeys.exersice.component";
 import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
+import IngredientsListOptimized from './optimization.patterns.ingredient.list.memo.and.callback.jsx';
 
-
-/**react-design-patterns-app - version 43.13 - components > index  
+/**react-design-patterns-app - version 45.08 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'IngredientsComponent'
+ *     --> Importing and exporting  'IngredientsListOptimized'
  * 
- * Note: Pending to make responsive design
+ * Note: the component 'IngredientsListOptimized' like is memoized 
+ * cannot be auto imported, so i have to write it, and will work
  */
 
 export { 
@@ -288,5 +289,6 @@ export {
          IngredientsInfoHelper,
          IngredientsList,
          AddIngredient,
-         IngredientsComponent
+         IngredientsComponent,
+         IngredientsListOptimized
         }
