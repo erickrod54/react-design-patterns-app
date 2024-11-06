@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import { IngredientsComponent } from "./index.components";
 
 
-/**react-design-patterns-app - version 45.07 - RenderingOptimization
+/**react-design-patterns-app - version 45.08 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting 'IngredientsComponentOptimized'   
+ *     --> Adding 'ingredientsComponentoptimized'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -25,6 +25,7 @@ const RenderingOptimization = () => {
     const initialIngredients  = CodeData[201].code;
     const Ingredientscomponent  = CodeData[202].code;
     const ingredientslistoptimized  = CodeData[203].code;
+    const ingredientsComponentoptimized  = CodeData[204].code;
     
     return(
         <div>
@@ -159,6 +160,7 @@ const RenderingOptimization = () => {
                 and will be as follows:
             </p>
 
+            <BashCode code={ingredientsComponentoptimized}/>
 
             </SectionWrapper>
         </div>
