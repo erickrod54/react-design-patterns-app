@@ -3,13 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
-import { IngredientsComponent } from "./index.components";
+import { IngredientsComponent, IngredientsComponentOptimized } from "./index.components";
 
-
-/**react-design-patterns-app - version 45.08 - RenderingOptimization
+/**react-design-patterns-app - version 45.09 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding 'ingredientsComponentoptimized'   
+ *     --> Rendering 'IngredientsComponentOptimized'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -161,6 +160,15 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={ingredientsComponentoptimized}/>
+
+            <p>
+                so the functionality of <span className="text-white font-semibold"> deleteIngredient  </span> get memoized 
+                by using <span className="text-white font-semibold"> useCallback  
+                </span> resulting <span className="text-white font-semibold"> IngredientsComponentOptimized </span> in: 
+            </p>  
+
+            <IngredientsComponentOptimized />
+
 
             </SectionWrapper>
         </div>
