@@ -2,37 +2,17 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import styled from "styled-components";
 import { AddIngredient, IngredientsInfoHelper, IngredientsList } from "./index.components";
+import { StyledContainerIngredients } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 43.17 - IngredientsComponent  
+/**react-design-patterns-app - version 45.10 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Refactoring  'StyledContainer' fonts
+ *     --> Migrating  'StyledContainerIngredients' styles
  * 
  * Note: Pending to make responsive design
  */
 
-const StyledContainer = styled.div`
-  margin-top: 2rem;
-  max-width: 20rem;
-  margin-left: auto;
-  margin-right: auto;
-  background: blueviolet;
-  border-radius: 1rem;
 
-  > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  > div > h2 {
-    font-size: x-large;
-    color: white;
-    text-decoration: underline;
-  }
-`;
 
 const StyledHeading2 = styled.h2`
   margin-bottom: 1rem;
@@ -87,7 +67,7 @@ const initialIngredients = [
     };
   
     return (
-      <StyledContainer>
+      <StyledContainerIngredients>
         <div>
           {createIngredientsHeaderText()}
           <IngredientsInfoHelper />
@@ -105,7 +85,7 @@ const initialIngredients = [
             setIngredient={setIngredient}
           />
         </StyledSpaceY4>
-      </StyledContainer>
+      </StyledContainerIngredients>
     );
   };
   
