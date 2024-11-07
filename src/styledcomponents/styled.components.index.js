@@ -112,6 +112,7 @@ import { AlertWrapper,
          StyledContainerIngredients,
          StyledContainerReducer,
          StyledHeadingBefore,
+         StyledHeadingIngredients,
          StyledInputImmer,
          StyledInputReducer,
          StyledLabelImmer,
@@ -135,10 +136,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
 
          
-/**react-design-patterns-app - version 45.10 - styledcomponents > index
+/**react-design-patterns-app - version 45.11 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'StyledContainerIngredients' 
+ *     --> Importing and exporting 'StyledHeadingIngredients' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -285,4 +286,5 @@ export { SectionWrapper,
          NavContainerOptimized,
          NavOptimized,
          StyledContainerIngredients,
+         StyledHeadingIngredients,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
