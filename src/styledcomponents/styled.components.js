@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 45.12 - styled.components
+/**react-design-patterns-app - version 45.13 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledSpaceY4Ingredients' styles 
+ *     --> writting 'StyledFieldsetIngredients' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,26 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const StyledFieldsetIngredients = styled.fieldset`
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+
+	label {
+	color: white;
+	margin-bottom: 1.5rem;
+	}
+
+	input {
+	color: black;
+	font-size: 2rem;
+	width: 100%;
+	border-radius: 0.25rem;
+	}
+`;
 
 export const StyledSpaceY4Ingredients = styled.div`
 	margin-top: 1rem;
