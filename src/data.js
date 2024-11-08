@@ -1,10 +1,10 @@
+import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-
-/**react-design-patterns-app - version 45.08 - data js  
+/**react-design-patterns-app - version 45.13 - data js  
  * - Features: 
  *    
- *     --> Renaming 'IngredientsComponentOptimized' to 'IngredientsComponentOptimized' 
+ *     --> Adding 'IngredientsComponentOptimized' data 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -256,6 +256,20 @@ export const patternCard = [
     },
 ]
 
+export const initialIngredientsone = [
+    {
+      id: nanoid(),
+      name: "500g Chicken Breasts",
+    },
+    {
+      id: nanoid(),
+      name: "300 ml milk",
+    },
+    {
+      id: nanoid(),
+      name: "1 tbsp salt",
+    },
+  ];
 
 export const IntroComponentData = [
   {
