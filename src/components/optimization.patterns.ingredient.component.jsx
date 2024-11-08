@@ -3,34 +3,24 @@ import { nanoid } from "nanoid";
 import styled from "styled-components";
 import { AddIngredient, IngredientsInfoHelper, IngredientsList } from "./index.components";
 import { StyledContainerIngredients, StyledHeadingIngredients, StyledSpaceY4Ingredients } from "../styledcomponents/styled.components";
+import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 45.12 - IngredientsComponent  
+/**react-design-patterns-app - version 45.13 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Migrating  'StyledSpaceY4Ingredients' styles
+ *     --> Migrating  'initialIngredientsone' data
  * 
  * Note: Pending to make responsive design
  */
 
-const initialIngredients = [
-    {
-      id: nanoid(),
-      name: "500g Chicken Breasts",
-    },
-    {
-      id: nanoid(),
-      name: "300 ml milk",
-    },
-    {
-      id: nanoid(),
-      name: "1 tbsp salt",
-    },
-  ];
-
   const IngredientsComponent = (props) => {
+
+    const { initialIngredientsone } = usePatternsAppContext();
+    
+    
     console.log("Ingredient rendered");
     const [ingredient, setIngredient] = useState("");
-    const [ingredients, setIngredients] = useState(initialIngredients);
+    const [ingredients, setIngredients] = useState(initialIngredientsone);
   
     const addIngredient = (ingredient) => {
       setIngredients((ingredients) => [
