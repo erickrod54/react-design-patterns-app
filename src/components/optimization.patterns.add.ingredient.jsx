@@ -1,21 +1,16 @@
 import styled from "styled-components";
-import { StyledFieldsetIngredients } from "../styledcomponents/styled.components";
+import { StyledButtonContainerIngredients, StyledFieldsetIngredients } from "../styledcomponents/styled.components";
 
 
-/**react-design-patterns-app - version 45.14 - AddIngredient  
+/**react-design-patterns-app - version 45.15 - AddIngredient  
  * - Features: 
  * 
- *     --> Migrating  'StyledFieldsetIngredients' styles 
+ *     --> Migrating  'StyledButtonContainerIngredients' styles 
  * 
  * Note: Pending to make responsive design
  */
 
 
-
-const StyledButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
 
 const StyledButton = styled.button`
   background-color: #1f6feb;
@@ -38,7 +33,7 @@ const AddIngredient = (props) => {
             onChange={(e) => setIngredient(e.target.value)}
           />
         </StyledFieldsetIngredients>
-        <StyledButtonContainer>
+        <StyledButtonContainerIngredients>
           <StyledButton
             onClick={(e) => {
               e.preventDefault();
@@ -49,7 +44,7 @@ const AddIngredient = (props) => {
           >
             Add
           </StyledButton>
-        </StyledButtonContainer>
+        </StyledButtonContainerIngredients>
       </form>
     );
   };
