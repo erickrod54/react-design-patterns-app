@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 45.15 - styled.components
+/**react-design-patterns-app - version 45.16 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledButtonContainerIngredients' styles 
+ *     --> writting 'StyledButtonIngredients' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,13 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const StyledButtonIngredients = styled.button`
+	background-color: #1f6feb;
+	color: #ffffff;
+	padding: 0.75rem 1.5rem;
+	min-width: 5rem;
+`;
 
 export const StyledButtonContainerIngredients = styled.div`
 	display: flex;
