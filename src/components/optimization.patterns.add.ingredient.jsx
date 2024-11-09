@@ -1,33 +1,16 @@
 import styled from "styled-components";
+import { StyledFieldsetIngredients } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 43.19 - AddIngredient  
+
+/**react-design-patterns-app - version 45.14 - AddIngredient  
  * - Features: 
  * 
- *     --> Refactoring 'StyledFieldset' fonts and white space 
+ *     --> Migrating  'StyledFieldsetIngredients' styles 
  * 
  * Note: Pending to make responsive design
  */
 
 
-const StyledFieldset = styled.fieldset`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-
-  label {
-    color: white;
-    margin-bottom: 1.5rem;
-  }
-
-  input {
-    color: black;
-    font-size: 2rem;
-    width: 100%;
-    border-radius: 0.25rem;
-  }
-`;
 
 const StyledButtonContainer = styled.div`
   display: flex;
@@ -47,14 +30,14 @@ const AddIngredient = (props) => {
   
     return (
       <form className="">
-        <StyledFieldset>
+        <StyledFieldsetIngredients>
           <label>Add ingredient</label>
           <input
             type="text"
             value={ingredient}
             onChange={(e) => setIngredient(e.target.value)}
           />
-        </StyledFieldset>
+        </StyledFieldsetIngredients>
         <StyledButtonContainer>
           <StyledButton
             onClick={(e) => {
