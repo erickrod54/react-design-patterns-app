@@ -1,16 +1,14 @@
 import styled from "styled-components";
+import { StyledContainerIngredient } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 43.06 - components > index  
+/**react-design-patterns-app - version 45.18 - components > index  
  * - Features: 
  * 
- *     --> Building 'IngredientsList' sub component
+ *     --> Migrating 'StyledContainerIngredient' 
  * 
  * Note: Pending to make responsive design
  */
 
-const StyledContainer = styled.div`
-  text-align: left;
-`;
 
 const StyledList = styled.ul`
   border-color: #d1d5db; /* Replace with your desired color */
@@ -35,7 +33,7 @@ const IngredientsList = (props) => {
     console.log("IngredientsList rendered");
     const { ingredients, deleteIngredient } = props;
     return (
-      <StyledContainer>
+      <StyledContainerIngredient>
         <StyledList>
           {ingredients.map((ingredient) => (
             <StyledListItem key={ingredient.id}>
@@ -46,7 +44,7 @@ const IngredientsList = (props) => {
             </StyledListItem>
           ))}
         </StyledList>
-      </StyledContainer>
+      </StyledContainerIngredient>
     );
   };
   
