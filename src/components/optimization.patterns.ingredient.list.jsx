@@ -1,18 +1,14 @@
 import styled from "styled-components";
-import { StyledContainerIngredient, StyledListIngredient, StyledListItemIngredient } from "../styledcomponents/styled.components";
+import { StyledButtonIngredientList, StyledContainerIngredient, StyledListIngredient, StyledListItemIngredient } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 45.20 - components > index  
+/**react-design-patterns-app - version 46.00 - components > index  
  * - Features: 
  * 
- *     --> Migrating 'StyledListItemIngredient' 
+ *     --> Migrating 'StyledButtonIngredientList' 
  * 
  * Note: Pending to make responsive design
  */
 
-
-const StyledButton = styled.button`
-  cursor: pointer;
-`;
 
 const IngredientsList = (props) => {
     console.log("IngredientsList rendered");
@@ -23,9 +19,9 @@ const IngredientsList = (props) => {
           {ingredients.map((ingredient) => (
             <StyledListItemIngredient key={ingredient.id}>
               <span>{ingredient.name}</span>
-              <StyledButton onClick={() => deleteIngredient(ingredient.id)}>
+              <StyledButtonIngredientList onClick={() => deleteIngredient(ingredient.id)}>
                 X
-              </StyledButton>
+              </StyledButtonIngredientList>
             </StyledListItemIngredient>
           ))}
         </StyledListIngredient>
