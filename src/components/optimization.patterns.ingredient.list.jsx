@@ -1,23 +1,14 @@
 import styled from "styled-components";
-import { StyledContainerIngredient, StyledListIngredient } from "../styledcomponents/styled.components";
+import { StyledContainerIngredient, StyledListIngredient, StyledListItemIngredient } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 45.19 - components > index  
+/**react-design-patterns-app - version 45.20 - components > index  
  * - Features: 
  * 
- *     --> Migrating 'StyledListIngredient' 
+ *     --> Migrating 'StyledListItemIngredient' 
  * 
  * Note: Pending to make responsive design
  */
 
-
-
-const StyledListItem = styled.li`
-  padding-top: 0.75rem; /* Adjust as needed */
-  padding-bottom: 0.75rem; /* Adjust as needed */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
 
 const StyledButton = styled.button`
   cursor: pointer;
@@ -30,12 +21,12 @@ const IngredientsList = (props) => {
       <StyledContainerIngredient>
         <StyledListIngredient>
           {ingredients.map((ingredient) => (
-            <StyledListItem key={ingredient.id}>
+            <StyledListItemIngredient key={ingredient.id}>
               <span>{ingredient.name}</span>
               <StyledButton onClick={() => deleteIngredient(ingredient.id)}>
                 X
               </StyledButton>
-            </StyledListItem>
+            </StyledListItemIngredient>
           ))}
         </StyledListIngredient>
       </StyledContainerIngredient>
