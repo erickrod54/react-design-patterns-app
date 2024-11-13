@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 46.03 - styled.components
+/**react-design-patterns-app - version 46.04 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledListOptimized' styles 
+ *     --> writting 'StyledListItemOptimized' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,14 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const StyledListItemOptimized = styled.li`
+	padding-top: 0.75rem; /* Adjust as needed */
+	padding-bottom: 0.75rem; /* Adjust as needed */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+`;
 
 export const StyledListOptimized = styled.ul`
 	border-color: #d1d5db; /* Replace with your desired color */
