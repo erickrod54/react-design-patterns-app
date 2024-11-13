@@ -1,17 +1,15 @@
 import { memo } from "react";
 import styled from "styled-components";
+import { StyledContainerOptimized } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 45.01 - IngredientsListOptimized  
+/**react-design-patterns-app - version 46.02 - IngredientsListOptimized  
  * - Features: 
  * 
- *     --> Building 'IngredientsListOptimized' 
+ *     --> Migrating 'StyledContainerOptimized' 
  * 
  * Note: Pending to make responsive design
  */
 
-const StyledContainer = styled.div`
-  text-align: left;
-`;
 
 const StyledList = styled.ul`
   border-color: #d1d5db; /* Replace with your desired color */
@@ -36,7 +34,7 @@ const IngredientsListOptimized = (props) => {
     console.log("IngredientsList rendered");
     const { ingredients, deleteIngredient } = props;
     return (
-      <StyledContainer>
+      <StyledContainerOptimized>
         <StyledList>
           {ingredients.map((ingredient) => (
             <StyledListItem key={ingredient.id}>
@@ -47,7 +45,7 @@ const IngredientsListOptimized = (props) => {
             </StyledListItem>
           ))}
         </StyledList>
-      </StyledContainer>
+      </StyledContainerOptimized>
     );
   };
   
