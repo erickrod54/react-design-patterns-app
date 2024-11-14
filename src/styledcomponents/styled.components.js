@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 46.05 - styled.components
+/**react-design-patterns-app - version 46.06 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledButtonOptimized' styles 
+ *     --> writting 'StyledContainerOptimal' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,29 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const StyledContainerOptimal = styled.div`
+	margin-top: 2rem;
+	max-width: 20rem;
+	margin-left: auto;
+	margin-right: auto;
+	background: blueviolet;
+	border-radius: 1rem;
+
+	> div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 1rem;
+	padding: 1rem;
+	}
+
+	> div > h2 {
+	font-size: x-large;
+	color: white;
+	text-decoration: underline;
+	}
+`;
 
 export const StyledButtonOptimized = styled.button`
 	cursor: pointer;
