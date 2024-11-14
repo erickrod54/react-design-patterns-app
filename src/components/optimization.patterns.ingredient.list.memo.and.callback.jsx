@@ -1,19 +1,15 @@
 import { memo } from "react";
 import styled from "styled-components";
-import { StyledContainerOptimized, StyledListItemOptimized, StyledListOptimized } from "../styledcomponents/styled.components";
+import { StyledButtonOptimized, StyledContainerOptimized, StyledListItemOptimized, StyledListOptimized } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 46.04 - IngredientsListOptimized  
+/**react-design-patterns-app - version 46.05 - IngredientsListOptimized  
  * - Features: 
  * 
- *     --> Migrating 'StyledListItemOptimized' 
+ *     --> Migrating 'StyledButtonOptimized' 
  * 
  * Note: Pending to make responsive design
  */
 
-
-const StyledButton = styled.button`
-  cursor: pointer;
-`;
 
 const IngredientsListOptimized = (props) => {
     console.log("IngredientsList rendered");
@@ -24,9 +20,9 @@ const IngredientsListOptimized = (props) => {
           {ingredients.map((ingredient) => (
             <StyledListItemOptimized key={ingredient.id}>
               <span>{ingredient.name}</span>
-              <StyledButton onClick={() => deleteIngredient(ingredient.id)}>
+              <StyledButtonOptimized onClick={() => deleteIngredient(ingredient.id)}>
                 X
-              </StyledButton>
+              </StyledButtonOptimized>
             </StyledListItemOptimized>
           ))}
         </StyledListOptimized>
