@@ -1,24 +1,15 @@
 import { memo } from "react";
 import styled from "styled-components";
-import { StyledContainerOptimized, StyledListOptimized } from "../styledcomponents/styled.components";
+import { StyledContainerOptimized, StyledListItemOptimized, StyledListOptimized } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 46.03 - IngredientsListOptimized  
+/**react-design-patterns-app - version 46.04 - IngredientsListOptimized  
  * - Features: 
  * 
- *     --> Migrating 'StyledListOptimized' 
+ *     --> Migrating 'StyledListItemOptimized' 
  * 
  * Note: Pending to make responsive design
  */
 
-
-
-const StyledListItem = styled.li`
-  padding-top: 0.75rem; /* Adjust as needed */
-  padding-bottom: 0.75rem; /* Adjust as needed */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
 
 const StyledButton = styled.button`
   cursor: pointer;
@@ -31,12 +22,12 @@ const IngredientsListOptimized = (props) => {
       <StyledContainerOptimized>
         <StyledListOptimized>
           {ingredients.map((ingredient) => (
-            <StyledListItem key={ingredient.id}>
+            <StyledListItemOptimized key={ingredient.id}>
               <span>{ingredient.name}</span>
               <StyledButton onClick={() => deleteIngredient(ingredient.id)}>
                 X
               </StyledButton>
-            </StyledListItem>
+            </StyledListItemOptimized>
           ))}
         </StyledListOptimized>
       </StyledContainerOptimized>
