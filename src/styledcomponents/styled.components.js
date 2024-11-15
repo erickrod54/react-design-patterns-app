@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 46.06 - styled.components
+/**react-design-patterns-app - version 46.07 - styled.components
  * - Features: 
  * 
- *     --> writting 'StyledContainerOptimal' styles 
+ *     --> writting 'StyledHeading2Optimized' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,11 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+
+export const StyledHeading2Optimized = styled.h2`
+	margin-bottom: 1rem;
+	font-weight: 600;
+`;
 
 export const StyledContainerOptimal = styled.div`
 	margin-top: 2rem;
