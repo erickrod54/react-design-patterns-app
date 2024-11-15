@@ -2,37 +2,15 @@ import { useCallback, useState } from "react";
 import { nanoid } from "nanoid";
 import styled from "styled-components";
 import { AddIngredient, IngredientsInfoHelper, IngredientsListOptimized } from "./index.components";
+import { StyledContainerOptimal } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 45.01 - IngredientsComponent  
+/**react-design-patterns-app - version 45.06 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Building  'IngredientsComponentOptimized'
+ *     --> Migrating  'StyledContainerOptimal'
  * 
  * Note: Pending to make responsive design
- */
-
-const StyledContainer = styled.div`
-  margin-top: 2rem;
-  max-width: 20rem;
-  margin-left: auto;
-  margin-right: auto;
-  background: blueviolet;
-  border-radius: 1rem;
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  > div > h2 {
-    font-size: x-large;
-    color: white;
-    text-decoration: underline;
-  }
-`;
+ */s
 
 const StyledHeading2 = styled.h2`
   margin-bottom: 1rem;
@@ -91,7 +69,7 @@ const initialIngredients = [
     };
   
     return (
-      <StyledContainer>
+      <StyledContainerOptimal>
         <div>
           {createIngredientsHeaderText()}
           <IngredientsInfoHelper />
@@ -109,7 +87,7 @@ const initialIngredients = [
             setIngredient={setIngredient}
           />
         </StyledSpaceY4>
-      </StyledContainer>
+      </StyledContainerOptimal>
     );
   };
   
