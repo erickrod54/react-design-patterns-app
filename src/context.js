@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react"
-import { CodeData, ImagesData, IntroComponentData, authors, boardData, books, initialIngredientsone, myNestedObject, patternCard, shoppingItems, shoppingItemsImmer } from "./data";
+import { CodeData, ImagesData, IntroComponentData, authors, boardData, books, initialIngredientsone, initialIngredientstwo, myNestedObject, patternCard, shoppingItems, shoppingItemsImmer } from "./data";
 import axios from "axios";
 
 
-/**react-design-patterns-app - version 45.13 - context js  
+/**react-design-patterns-app - version 46.09 - context js  
  * - Features: 
  * 
- *     --> Adding 'initialIngredientsone' data
+ *     --> Adding 'initialIngredientstwo' data
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -60,7 +60,8 @@ export const PatternsAppProvider = ({ children }) => {
                 boardData,
                 shoppingItems,
                 shoppingItemsImmer,
-                initialIngredientsone
+                initialIngredientsone,
+                initialIngredientstwo
              }}
         >
             {children}
