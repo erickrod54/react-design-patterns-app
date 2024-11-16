@@ -2,24 +2,16 @@ import { useCallback, useState } from "react";
 import { nanoid } from "nanoid";
 import styled from "styled-components";
 import { AddIngredient, IngredientsInfoHelper, IngredientsListOptimized } from "./index.components";
-import { StyledContainerOptimal, StyledHeading2Optimized } from "../styledcomponents/styled.components";
+import { StyledContainerOptimal, StyledHeading2Optimized, StyledSpaceY4Optimized } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 45.07 - IngredientsComponent  
+/**react-design-patterns-app - version 45.08 - IngredientsComponent  
  * - Features: 
  * 
- *     --> Migrating  'StyledHeading2Optimized'
+ *     --> Migrating  'StyledSpaceY4Optimized'
  * 
  * Note: Pending to make responsive design
  */
 
-
-const StyledSpaceY4 = styled.div`
-  margin-top: 1rem;
-
-  > * + * {
-    margin-top: 1rem;
-  }
-`;
 
 const initialIngredients = [
     {
@@ -71,7 +63,7 @@ const initialIngredients = [
           <IngredientsInfoHelper />
         </div>
   
-        <StyledSpaceY4>
+        <StyledSpaceY4Optimized>
           <IngredientsListOptimized
             ingredients={ingredients}
             deleteIngredient={deleteIngredient}
@@ -82,7 +74,7 @@ const initialIngredients = [
             ingredient={ingredient}
             setIngredient={setIngredient}
           />
-        </StyledSpaceY4>
+        </StyledSpaceY4Optimized>
       </StyledContainerOptimal>
     );
   };
