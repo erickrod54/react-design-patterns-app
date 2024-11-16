@@ -133,6 +133,7 @@ import { AlertWrapper,
          StyledListOptimized,
          StyledShoppingList,
          StyledSpaceY4Ingredients,
+         StyledSpaceY4Optimized,
          StyledWrapperImmer,
          StyledWrapperReducer,
          TableTitleWrapper,
@@ -151,10 +152,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
         
       
-/**react-design-patterns-app - version 46.07 - styledcomponents > index
+/**react-design-patterns-app - version 46.08 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'StyledHeading2Optimized' 
+ *     --> Importing and exporting 'StyledSpaceY4Optimized' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -317,4 +318,5 @@ export { SectionWrapper,
          StyledButtonOptimized,
          StyledContainerOptimal,
          StyledHeading2Optimized,
+         StyledSpaceY4Optimized,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
