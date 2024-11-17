@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized } from "./index.components";
 
-/**react-design-patterns-app - version 46.13 - RenderingOptimization
+/**react-design-patterns-app - version 46.14 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting  'useMemo hook ' for state values   
+ *     --> Adding  'useMemo hook ' for state values   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -25,6 +25,7 @@ const RenderingOptimization = () => {
     const Ingredientscomponent  = CodeData[202].code;
     const ingredientslistoptimized  = CodeData[203].code;
     const ingredientsComponentoptimized  = CodeData[204].code;
+    const ingredientsComponentoptimizedtwo  = CodeData[205].code;
     
     return(
         <div>
@@ -176,7 +177,16 @@ const RenderingOptimization = () => {
                 <span className="text-white font-semibold"> states values </span>, in this case i have a state 
                 value in the component <span className="text-white font-semibold"> deleteIngredient  </span>
                 that calculates the lenght of the ingredient list in the <span className="text-white font-semibold"> IngredientsComponent </span>, 
-                and the value get <span className="text-white font-semibold"> updated or not gets a re render </span>
+                and the value get <span className="text-white font-semibold"> updated or not gets a re render </span> as follows:
+            </p>
+
+            <BashCode code={ingredientsComponentoptimizedtwo}/>
+
+
+            <p>
+                cna be noticed that <span className="text-white font-semibold"> createIngredientsHeaderText </span> is renamed as 
+                <span className="text-white font-semibold"> ingredientsText </span> and is not been called as a function, because 
+                internally <span className="text-white font-semibold"> useMemo hook </span> calls it
             </p>
 
 
