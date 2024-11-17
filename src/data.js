@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 46.12 - data js  
+/**react-design-patterns-app - version 46.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponentOptimizedTwo -  useMemo' frist comment  
+ *     --> Adding 'IngredientsComponentOptimizedTwo -  useMemo' second comment  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7637,7 +7637,9 @@ const UsersApiHookLogicAndDataAbs = () => {
                 setIngredients((ingredients) => ingredients.filter((ing) => ing.id !== id));
               }
             ,[])
-          
+        /**here i memoized implementing useMemo the state values
+         * that generate the ingredients lenght, so it does not get render,
+         * if the number does not change*/  
         const ingredientsText = useMemo(
             () => {
               
