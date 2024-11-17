@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 46.11 - data js  
+/**react-design-patterns-app - version 46.12 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponentOptimizedTwo -  useMemo' id  
+ *     --> Adding 'IngredientsComponentOptimizedTwo -  useMemo' frist comment  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7611,6 +7611,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     name: ' IngredientsComponentOptimizedTwo -  useMemo',
     code:   
     `
+      /**this is variant more optimized*/
       const IngredientsComponentOptimizedTwo = (props) => {
 
       const { initialIngredientstwo } = usePatternsAppContext();
