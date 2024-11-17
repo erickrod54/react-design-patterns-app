@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized } from "./index.components";
 
-/**react-design-patterns-app - version 45.09 - RenderingOptimization
+/**react-design-patterns-app - version 46.13 - RenderingOptimization
  * - Features: 
  * 
- *     --> Rendering 'IngredientsComponentOptimized'   
+ *     --> Starting  'useMemo hook ' for state values   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -168,6 +168,16 @@ const RenderingOptimization = () => {
             </p>  
 
             <IngredientsComponentOptimized />
+
+            <br></br>
+
+            <p>
+                in the memo library also can be seen the <span className="text-white font-semibold"> useMemo hook </span> can be use to memoize 
+                <span className="text-white font-semibold"> states values </span>, in this case i have a state 
+                value in the component <span className="text-white font-semibold"> deleteIngredient  </span>
+                that calculates the lenght of the ingredient list in the <span className="text-white font-semibold"> IngredientsComponent </span>, 
+                and the value get <span className="text-white font-semibold"> updated or not gets a re render </span>
+            </p>
 
 
             </SectionWrapper>
