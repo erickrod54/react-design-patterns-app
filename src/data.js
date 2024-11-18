@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 46.16 - data js  
+/**react-design-patterns-app - version 46.17 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponentOptimizedTwo -  State Allocation Main Component'  
+ *     --> Adding 'IngredientsComponentOptimizedTwo -  State Allocation Main Component'  id 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7675,7 +7675,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 205,
+    id: 206,
     name: ' IngredientsComponentOptimizedTwo -  State Allocation Main Component',
     code:   
     `
