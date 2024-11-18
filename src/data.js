@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 46.17 - data js  
+/**react-design-patterns-app - version 46.18 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponentOptimizedTwo -  State Allocation Main Component'  id 
+ *     --> Adding 'IngredientsComponentOptimizedTwo -  State Allocation Main Component'  comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7685,7 +7685,8 @@ const UsersApiHookLogicAndDataAbs = () => {
     const { initialIngredientstwo } = usePatternsAppContext();
       
       console.log("Ingredient rendered");
-
+      /**here the states are declared, but they are used by 'AddIngredient'
+       * and prop drilled there, so essentially this is way gets re render*/
       const [ingredient, setIngredient] = useState("");
       const [ingredients, setIngredients] = useState(initialIngredientstwo);
     
