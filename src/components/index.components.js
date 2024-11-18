@@ -140,11 +140,12 @@ import WithtKeysExercise from "./withtkeys.exersice.component";
 import Writer from "./writer.use.transition.before.component";
 import IngredientsListOptimized from './optimization.patterns.ingredient.list.memo.and.callback.jsx';
 import IngredientsComponentOptimized from "./optimization.patterns.ingredient.component.memo.and.callback.jsx";
+import IngredientsComponentOptimizedTwo from "./optimization.patterns.ingredient.component.memo.and.callback.two.jsx";
 
-/**react-design-patterns-app - version 45.09 - components > index  
+/**react-design-patterns-app - version 46.14 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'IngredientsComponentOptimized'
+ *     --> Importing and exporting  'IngredientsComponentOptimizedTwo'
  * 
  * Note: the component 'IngredientsListOptimized' like is memoized 
  * cannot be auto imported, so i have to write it, and will work
@@ -292,5 +293,6 @@ export {
          AddIngredient,
          IngredientsComponent,
          IngredientsListOptimized,
-         IngredientsComponentOptimized
+         IngredientsComponentOptimized,
+         IngredientsComponentOptimizedTwo
         }
