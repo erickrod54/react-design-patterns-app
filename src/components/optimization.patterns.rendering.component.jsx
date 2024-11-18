@@ -3,12 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
-import { IngredientsComponent, IngredientsComponentOptimized } from "./index.components";
+import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 46.14 - RenderingOptimization
+/**react-design-patterns-app - version 46.15 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'useMemo hook ' for state values   
+ *     --> Renering  'IngredientsComponentOptimizedTwo'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -186,9 +186,20 @@ const RenderingOptimization = () => {
             <p>
                 cna be noticed that <span className="text-white font-semibold"> createIngredientsHeaderText </span> is renamed as 
                 <span className="text-white font-semibold"> ingredientsText </span> and is not been called as a function, because 
-                internally <span className="text-white font-semibold"> useMemo hook </span> calls it
+                internally <span className="text-white font-semibold"> useMemo hook </span> calls it, so the new compoent 
+                <span className="text-white font-semibold"> IngredientsComponentOptimizedTwo </span> will result in 
             </p>
 
+            <IngredientsComponentOptimizedTwo />
+
+            <br>
+            </br>
+
+            <p>
+                cna be noticed that <span className="text-white font-semibold"> ingredientsText </span>  gets called and 
+                trigger <span className="text-white font-semibold"> console.log("createIngredientsHeaderText called"); </span>
+                only when a new ingredient is added
+            </p>
 
             </SectionWrapper>
         </div>
