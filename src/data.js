@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 46.20 - data js  
+/**react-design-patterns-app - version 47.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'AddIngredient -  State Allocation Sub Component'   
+ *     --> Adding 'AddIngredient -  State Allocation Sub Component' id  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7740,7 +7740,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 206,
+    id: 207,
     name: ' AddIngredient -  State Allocation Main Component',
     code:   
     `
