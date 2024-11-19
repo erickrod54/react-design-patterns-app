@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 46.15 - RenderingOptimization
+/**react-design-patterns-app - version 46.16 - RenderingOptimization
  * - Features: 
  * 
- *     --> Renering  'IngredientsComponentOptimizedTwo'   
+ *     --> Starting  'State Allocation'   
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -196,9 +196,23 @@ const RenderingOptimization = () => {
             </br>
 
             <p>
-                cna be noticed that <span className="text-white font-semibold"> ingredientsText </span>  gets called and 
+                can be noticed that <span className="text-white font-semibold"> ingredientsText </span>  gets called and 
                 trigger <span className="text-white font-semibold"> console.log("createIngredientsHeaderText called"); </span>
                 only when a new ingredient is added
+            </p>
+
+            <CustomTitleStyle>
+                <CustomTitle  title={<p className="rendering-optimization-state-allocation"><span > State Allocation </span></p>} />
+            </CustomTitleStyle>
+
+            <p>
+                 <span className="text-white font-semibold"> State Allocation </span>  is a tecnique 
+                 that ensures that state is managed as <span className="text-white font-semibold"> 
+                 close as possible to where it is needed, reducing 
+                 unnecessary renders. </span> for this implementation the aim is look in the component 
+                 and sub components states that are declared outside from where is needed, i have states 
+                 that are drilled top <span className="text-white font-semibold"> IngredientsComponentOptimizedTwo </span>
+                 down to <span className="text-white font-semibold"> AddIngredient </span> as can be seen here:
             </p>
 
             </SectionWrapper>
