@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 46.19 - data js  
+/**react-design-patterns-app - version 46.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsComponentOptimizedTwo -  State Allocation Main Component'  2nd comments 
+ *     --> Adding 'AddIngredient -  State Allocation Sub Component'   
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7737,6 +7737,46 @@ const UsersApiHookLogicAndDataAbs = () => {
     };
     
     export default IngredientsComponentOptimizedTwo;
+    `
+    },
+    {
+    id: 206,
+    name: ' AddIngredient -  State Allocation Main Component',
+    code:   
+    `
+    /**this will be the base code for AddIngredientOptimized*/
+     const AddIngredient = (props) => {
+
+      console.log("AddIngredient rendered");
+      const { addIngredient, ingredient, setIngredient } = props;
+    
+      return (
+        <form className="">
+          <StyledFieldsetIngredients>
+            <label>Add ingredient</label>
+            <input
+              type="text"
+              value={ingredient}
+              onChange={(e) => setIngredient(e.target.value)}
+            />
+          </StyledFieldsetIngredients>
+          <StyledButtonContainerIngredients>
+            <StyledButtonIngredients
+              onClick={(e) => {
+                e.preventDefault();
+                if (!ingredient) return;
+                addIngredient(ingredient);
+                setIngredient("");
+              }}
+            >
+              Add
+            </StyledButtonIngredients>
+          </StyledButtonContainerIngredients>
+        </form>
+      );
+    };
+    
+    export default AddIngredient;
     `
     }
   ];
