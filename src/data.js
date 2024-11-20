@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 47.02 - data js  
+/**react-design-patterns-app - version 47.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'AddIngredient -  State Allocation Sub Component' 2nd comments  
+ *     --> Adding 'IngredientsComponentOptimizedThree -  State Allocation Main Component'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7780,6 +7780,68 @@ const UsersApiHookLogicAndDataAbs = () => {
     };
     
     export default AddIngredient;
+    `
+    },
+    {
+    id: 207,
+    name: ' AddIngredient -  State Allocation Main Component',
+    code:   
+    `
+      const IngredientsComponentOptimizedThree = (props) => {
+
+        const { initialIngredientstwo } = usePatternsAppContext();
+        
+        console.log("Ingredient rendered");
+       
+        const [ingredients, setIngredients] = useState(initialIngredientstwo);
+      
+        const addIngredient = (ingredient) => {
+          setIngredients((ingredients) => [
+            ...ingredients,
+            {
+              name: ingredient,
+              id: nanoid(),
+            },
+          ]);
+        };
+      
+        /**useCallback will received two arguments, the function to memoized
+         * and a dependency array*/
+        const deleteIngredient = useCallback(
+            (id) => {
+                setIngredients((ingredients) => ingredients.filter((ing) => ing.id !== id));
+              }
+            ,[])
+          
+        const ingredientsText = useMemo(
+            () => {
+                console.log("createIngredientsHeaderText called");
+                return <StyledHeading2Optimized>Ingredients ({ingredients.length})</StyledHeading2Optimized>;
+              }
+            , [ingredients.length]) 
+      
+        return (
+          <StyledContainerOptimal>
+            <div>
+              {ingredientsText}
+              <IngredientsInfoHelper />
+            </div>
+      
+            <StyledSpaceY4Optimized>
+              <IngredientsListOptimized
+                ingredients={ingredients}
+                deleteIngredient={deleteIngredient}
+              />
+      
+              <AddIngredientOptimized
+                addIngredient={addIngredient}
+              />
+            </StyledSpaceY4Optimized>
+          </StyledContainerOptimal>
+        );
+      };
+      
+      export default IngredientsComponentOptimizedThree;
     `
     }
   ];
