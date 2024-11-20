@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 47.01 - data js  
+/**react-design-patterns-app - version 47.02 - data js  
  * - Features: 
  *    
- *     --> Adding 'AddIngredient -  State Allocation Sub Component' comments  
+ *     --> Adding 'AddIngredient -  State Allocation Sub Component' 2nd comments  
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7751,6 +7751,8 @@ const UsersApiHookLogicAndDataAbs = () => {
       /**here the states are destructured and received from IngredientsComponentOptimizedTwo */
       const { addIngredient, ingredient, setIngredient } = props;
     
+      /**here will be used to set the user entry as well 
+       * for multiple verifications*/
       return (
         <form className="">
           <StyledFieldsetIngredients>
