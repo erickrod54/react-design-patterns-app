@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 47.02 - RenderingOptimization
+/**react-design-patterns-app - version 47.06 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'stateallocationstartaddingredient' 
+ *     --> Starting  'IngredientsComponentOptimizedThree' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -28,6 +28,7 @@ const RenderingOptimization = () => {
     const ingredientsComponentoptimizedtwo  = CodeData[205].code;
     const stateallocationstart  = CodeData[206].code;
     const stateallocationstartaddingredient  = CodeData[207].code;
+
     
     return(
         <div>
@@ -225,7 +226,13 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={stateallocationstartaddingredient}/>
-            
+
+            <p>
+                so lets start by the main component <span className="text-white font-semibold"> IngredientsComponentOptimizedTwo </span> 
+                and will be renamed as <span className="text-white font-semibold"> IngredientsComponentOptimizedThree </span> so will 
+                be allocating the <span className="text-white font-semibold"> ingredient </span> state:
+            </p>
+  
 
             </SectionWrapper>
         </div>
