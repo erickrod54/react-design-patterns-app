@@ -3,12 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
-import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedTwo } from "./index.components";
+import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 47.08 - RenderingOptimization
+/**react-design-patterns-app - version 47.11 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'addIngredientoptimized' 
+ *     --> Rendering  'IngredientsComponentOptimizedThree' 
  * 
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -242,6 +242,26 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={addIngredientoptimized}/>  
+
+            <p>
+                resulting in :
+            </p>
+
+            <IngredientsComponentOptimizedThree />
+
+            <p>
+                by only typing while inspecting the chrome Java Console, <span className="text-white font-semibold"> Ingredient rendered </span>  are rendered:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> AddIngredient  </span> ( Memoizes a function to maintain its reference between renders, preventing it from being recreated unless dependencies change. )
+                </li>
+            </ul>
+
+            <p>
+                getting an optimal result
+            </p>
 
             </SectionWrapper>
         </div>
