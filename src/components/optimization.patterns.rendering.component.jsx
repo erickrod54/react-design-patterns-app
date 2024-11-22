@@ -5,11 +5,11 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 47.11 - RenderingOptimization
+/**react-design-patterns-app - version 47.12 - RenderingOptimization
  * - Features: 
  * 
- *     --> Rendering  'IngredientsComponentOptimizedThree' 
- * 
+ *     --> Starting  'IngredientsInfoHelper'  optimization
+ *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
@@ -260,7 +260,16 @@ const RenderingOptimization = () => {
             </ul>
 
             <p>
-                getting an optimal result
+                getting an optimal result, however there is some more optimization that can be done 
+                in this application, as ca be in the <span className="text-white font-semibold"> IngredientsInfoHelper </span>
+            </p>
+
+            <BashCode code={ingredientsinfohelper}/>
+
+            <p>
+                that even when does not receive props gets <span className="text-white font-semibold"> re render </span>
+                so this can be fixed by two ways or get the subcomponent wrap with <span className="text-white font-semibold"> memo </span>
+                as follows:
             </p>
 
             </SectionWrapper>
