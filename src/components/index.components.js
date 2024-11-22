@@ -141,11 +141,12 @@ import Writer from "./writer.use.transition.before.component";
 import IngredientsListOptimized from './optimization.patterns.ingredient.list.memo.and.callback.jsx';
 import IngredientsComponentOptimized from "./optimization.patterns.ingredient.component.memo.and.callback.jsx";
 import IngredientsComponentOptimizedTwo from "./optimization.patterns.ingredient.component.memo.and.callback.two.jsx";
+import AddIngredientOptimized from './optimization.patterns.add.ingredient.optimized.jsx';
 
-/**react-design-patterns-app - version 46.14 - components > index  
+/**react-design-patterns-app - version 47.09 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'IngredientsComponentOptimizedTwo'
+ *     --> Importing and exporting  'AddIngredientOptimized'
  * 
  * Note: the component 'IngredientsListOptimized' like is memoized 
  * cannot be auto imported, so i have to write it, and will work
@@ -294,5 +295,6 @@ export {
          IngredientsComponent,
          IngredientsListOptimized,
          IngredientsComponentOptimized,
-         IngredientsComponentOptimizedTwo
+         IngredientsComponentOptimizedTwo,
+         AddIngredientOptimized,
         }
