@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 47.12 - RenderingOptimization
+/**react-design-patterns-app - version 47.14 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting  'IngredientsInfoHelper'  optimization
+ *     --> Adding  'IngredientsInfoHelper'  optimization
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -30,6 +30,7 @@ const RenderingOptimization = () => {
     const stateallocationstartaddingredient  = CodeData[207].code;
     const ingredientscomponentOptimizedthree  = CodeData[208].code;
     const addIngredientoptimized  = CodeData[209].code;
+    const ingredientsinfohelperoptimized  = CodeData[209].code;
 
     
     return(
@@ -271,6 +272,8 @@ const RenderingOptimization = () => {
                 so this can be fixed by two ways or get the subcomponent wrap with <span className="text-white font-semibold"> memo </span>
                 as follows:
             </p>
+
+            <BashCode code={ingredientsinfohelperoptimized}/>
 
             </SectionWrapper>
         </div>
