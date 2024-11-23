@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 47.13 - data js  
+/**react-design-patterns-app - version 47.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsInfoHelper' memo
+ *     --> Adding 'IngredientsInfoHelper' memo id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7885,7 +7885,7 @@ const UsersApiHookLogicAndDataAbs = () => {
     `
     },
     {
-    id: 209,
+    id: 210,
     name: ' IngredientsInfoHelper -  memo',
     code:   
     `
