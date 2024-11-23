@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 47.14 - RenderingOptimization
+/**react-design-patterns-app - version 47.15 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'IngredientsInfoHelper'  optimization
+ *     --> Adding  'IngredientsInfoHelper'  optimization id
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -30,7 +30,7 @@ const RenderingOptimization = () => {
     const stateallocationstartaddingredient  = CodeData[207].code;
     const ingredientscomponentOptimizedthree  = CodeData[208].code;
     const addIngredientoptimized  = CodeData[209].code;
-    const ingredientsinfohelperoptimized  = CodeData[209].code;
+    const ingredientsinfohelperoptimized  = CodeData[210].code;
 
     
     return(
