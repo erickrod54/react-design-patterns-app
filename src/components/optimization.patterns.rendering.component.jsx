@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 47.15 - RenderingOptimization
+/**react-design-patterns-app - version 47.19 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'IngredientsInfoHelper'  optimization id
+ *     --> Starting  'IngredientsInfoHelper'  optimization lifting up component
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -31,6 +31,7 @@ const RenderingOptimization = () => {
     const ingredientscomponentOptimizedthree  = CodeData[208].code;
     const addIngredientoptimized  = CodeData[209].code;
     const ingredientsinfohelperoptimized  = CodeData[210].code;
+    const ingredientsComponentoptimizedfour  = CodeData[211].code;
 
     
     return(
@@ -274,6 +275,16 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={ingredientsinfohelperoptimized}/>
+
+            <p>
+                or can be done by <span className="text-white font-semibold"> lifting up </span> the <span className="text-white font-semibold"> IngredientsInfoHelper </span>
+                Component and passing it as a prop, so lets do it step by step, first is going to be mofify the <span className="text-white font-semibold"> IngredientsComponentOptimizedThree </span>
+                by removing the <span className="text-white font-semibold"> IngredientsInfoHelper </span> and passing it as a prop, so renaming it as 
+                <span className="text-white font-semibold"> IngredientsComponentOptimizedFour </span>, will be as follows:
+            </p>
+            
+           
+
 
             </SectionWrapper>
         </div>
