@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 47.19 - RenderingOptimization
+/**react-design-patterns-app - version 47.20 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting  'IngredientsInfoHelper'  optimization lifting up component
+ *     --> Adding  'IngredientsComponentOptimizedFour '
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -283,7 +283,7 @@ const RenderingOptimization = () => {
                 <span className="text-white font-semibold"> IngredientsComponentOptimizedFour </span>, will be as follows:
             </p>
             
-           
+            <BashCode code={ingredientsComponentoptimizedfour}/>
 
 
             </SectionWrapper>
