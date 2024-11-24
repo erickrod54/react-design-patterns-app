@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 47.15 - data js  
+/**react-design-patterns-app - version 47.16 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsInfoHelper' memo comments
+ *     --> Adding 'IngredientsComponentOptimizedFour' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7892,7 +7892,69 @@ const UsersApiHookLogicAndDataAbs = () => {
       /** is like the previous implemention on 'IngredientsListOptimized'*/
       export default memo(IngredientsInfoHelper);
     `
-    }
+    },
+    {
+      id: 210,
+      name: ' IngredientsComponentOptimizedFour -  lifting up sub component',
+      code:   
+      `
+      const IngredientsComponentOptimizedFour = ({ ingredientsInfoHelper }) => {
+
+          const { initialIngredientstwo } = usePatternsAppContext();
+          
+          console.log("Ingredient rendered");
+
+          const [ingredients, setIngredients] = useState(initialIngredientstwo);
+        
+          const addIngredient = (ingredient) => {
+            setIngredients((ingredients) => [
+              ...ingredients,
+              {
+                name: ingredient,
+                id: nanoid(),
+              },
+            ]);
+          };
+        
+          /**useCallback will received two arguments, the function to memoized
+           * and a dependency array*/
+          const deleteIngredient = useCallback(
+              (id) => {
+                  setIngredients((ingredients) => ingredients.filter((ing) => ing.id !== id));
+                }
+              ,[])
+            
+          const ingredientsText = useMemo(
+              () => {
+                  console.log("createIngredientsHeaderText called");
+                  return <StyledHeading2Optimized>Ingredients ({ingredients.length})</StyledHeading2Optimized>;
+                }
+              , [ingredients.length]) 
+        
+          return (
+            <StyledContainerOptimal>
+              <div>
+                {ingredientsText}
+                {ingredientsInfoHelper}  
+              </div>
+        
+              <StyledSpaceY4Optimized>
+                <IngredientsListOptimized
+                  ingredients={ingredients}
+                  deleteIngredient={deleteIngredient}
+                />
+        
+                <AddIngredientOptimized
+                  addIngredient={addIngredient}
+                />
+              </StyledSpaceY4Optimized>
+            </StyledContainerOptimal>
+          );
+        };
+        
+        export default IngredientsComponentOptimizedFour;
+      `
+      }
   ];
 
   /**List Pattern data  -- start */
