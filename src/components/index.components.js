@@ -143,11 +143,12 @@ import IngredientsComponentOptimized from "./optimization.patterns.ingredient.co
 import IngredientsComponentOptimizedTwo from "./optimization.patterns.ingredient.component.memo.and.callback.two.jsx";
 import AddIngredientOptimized from './optimization.patterns.add.ingredient.optimized.jsx';
 import IngredientsComponentOptimizedThree  from './optimization.patterns.ingredient.component.memo.and.callback.three.jsx'
+import IngredientsComponentOptimizedFour from "./optimization.patterns.ingredient.component.memo.and.callback.four.jsx";
 
-/**react-design-patterns-app - version 47.10 - components > index  
+/**react-design-patterns-app - version 48.03 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'IngredientsComponentOptimizedThree'
+ *     --> Importing and exporting  'IngredientsComponentOptimizedFour'
  * 
  * Note: the component 'IngredientsListOptimized' like is memoized 
  * cannot be auto imported, so i have to write it, and will work
@@ -299,4 +300,5 @@ export {
          IngredientsComponentOptimizedTwo,
          AddIngredientOptimized,
          IngredientsComponentOptimizedThree,
+         IngredientsComponentOptimizedFour,
         }
