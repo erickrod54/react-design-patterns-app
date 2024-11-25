@@ -3,12 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
-import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
+import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedFour, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo, IngredientsInfoHelper } from "./index.components";
 
-/**react-design-patterns-app - version 48.03 - RenderingOptimization
+/**react-design-patterns-app - version 48.04 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'ingredientsComponentoptimizedfourrender ' render
+ *     --> Rendering  'IngredientsComponentOptimizedFour ' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -291,6 +291,12 @@ const RenderingOptimization = () => {
             </p>
 
             <BashCode code={ingredientsComponentoptimizedfourrender}/>
+
+            <p>
+                resulting <span className="text-white font-semibold"> IngredientsComponentOptimizedFour </span> as follows:   
+            </p>
+
+            <IngredientsComponentOptimizedFour ingredientsInfoHelper={IngredientsInfoHelper}/>
 
             </SectionWrapper>
         </div>
