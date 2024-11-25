@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import { IngredientsComponent, IngredientsComponentOptimized, IngredientsComponentOptimizedThree, IngredientsComponentOptimizedTwo } from "./index.components";
 
-/**react-design-patterns-app - version 48.02 - RenderingOptimization
+/**react-design-patterns-app - version 48.03 - RenderingOptimization
  * - Features: 
  * 
- *     --> Starting  'IngredientsComponentOptimizedFour ' render
+ *     --> Adding  'ingredientsComponentoptimizedfourrender ' render
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -32,6 +32,7 @@ const RenderingOptimization = () => {
     const addIngredientoptimized  = CodeData[209].code;
     const ingredientsinfohelperoptimized  = CodeData[210].code;
     const ingredientsComponentoptimizedfour  = CodeData[211].code;
+    const ingredientsComponentoptimizedfourrender  = CodeData[212].code;
 
     
     return(
@@ -289,6 +290,7 @@ const RenderingOptimization = () => {
                 and the <span className="text-white font-semibold"> IngredientsComponentOptimizedFour </span> will be render in the following way:
             </p>
 
+            <BashCode code={ingredientsComponentoptimizedfourrender}/>
 
             </SectionWrapper>
         </div>
