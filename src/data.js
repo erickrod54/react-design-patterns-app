@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.00 - data js  
+/**react-design-patterns-app - version 48.01 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsInfoHelper' lifting up id
+ *     --> Adding 'IngredientsInfoHelper' lifting up comments
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7963,6 +7963,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       name: ' IngredientsInfoHelper -  lifting up sub component',
       code:   
       `
+        /** the IngredientsInfoHelper has to be previously imported at IngredientsComponentOptimizedFour render level*/
         <IngredientsComponentOptimizedFour ingredientsInfoHelper={IngredientsInfoHelper}/>
       `
       }
