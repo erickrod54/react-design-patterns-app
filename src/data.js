@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.01 - data js  
+/**react-design-patterns-app - version 48.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'IngredientsInfoHelper' lifting up comments
+ *     --> Adding 'Trottling Rendering Optimization' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -252,6 +252,12 @@ export const patternCard = [
       id:39,
       category:'Performance',
       pattern:'Rendering Optimization',
+      description:''
+    },
+    {
+      id:40,
+      category:'Performance',
+      pattern:'Trottling Rendering Optimization',
       description:''
     },
 ]
