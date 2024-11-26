@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.05 - data js  
+/**react-design-patterns-app - version 48.06 - data js  
  * - Features: 
  *    
- *     --> Adding 'Trottling Rendering Optimization' 
+ *     --> Adding 'useMousePosition -  throttling' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7972,9 +7972,38 @@ const UsersApiHookLogicAndDataAbs = () => {
         /** the IngredientsInfoHelper has to be previously imported at IngredientsComponentOptimizedFour render level*/
         <IngredientsComponentOptimizedFour ingredientsInfoHelper={IngredientsInfoHelper}/>
       `
+      },
+      {
+      id: 212,
+      name: 'useMousePosition -  throttling',
+      code:   
+      `
+        export const useMousePosition = (options) => {
+
+        const throttleTime = options?.throttleTime || 200;
+        const [position, setPosition] = useState({
+          x: 0,
+          y: 0,
+        });
+      
+        useEffect(() => {
+          const onMouseMove = throttle((e) => {
+            const { clientX: x, clientY: y } = e;
+            setPosition({
+              x,
+              y,
+            });
+          }, throttleTime);
+      
+          window.addEventListener("mousemove", onMouseMove);
+          return () => window.removeEventListener("mousemove", onMouseMove);
+        }, []);
+      
+        return position;
+      };
+      `
       }
-  ];
-            
+  ];          
 
   /**List Pattern data  -- start */
   
