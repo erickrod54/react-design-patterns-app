@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.07 - data js  
+/**react-design-patterns-app - version 48.08 - data js  
  * - Features: 
  *    
- *     --> Adding 'useMousePosition -  throttling' id 
+ *     --> Adding 'useMousePosition -  throttling' comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -7978,6 +7978,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       name: 'useMousePosition -  throttling',
       code:   
       `
+       /*this is the hook for calculate the mouse position in the component render**/
         export const useMousePosition = (options) => {
 
         const throttleTime = options?.throttleTime || 200;
