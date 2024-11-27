@@ -3,10 +3,10 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 48.08 - RenderingOptimization
+/**react-design-patterns-app - version 48.09 - RenderingOptimization
  * - Features: 
  * 
- *     --> Developing  'ThrottlingRendering' 
+ *     --> Developing  'ThrottlingRendering Advantages' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -31,6 +31,25 @@ const ThrottlingRendering = () => {
                     unnecessary function executions that can slow down the application.
                     <span className="text-white font-semibold"> The throttling technique ensures that the function runs at most once in a specified time interval,</span> improving efficiency.
                 </p>
+
+                <p>
+                    Some <span className="text-white font-semibold"> Advantages </span> of this implementation can be:
+                </p>
+                
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> Performance Optimization </span> (  Reduces unnecessary function executions, preventing performance bottlenecks. )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Better User Experience </span> ( Smooths out UI interactions by reducing rapid updates. )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">  Prevents Event Overload </span> ( Stops the system from being overwhelmed by excessive event calls. )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold">  Customizable </span> ( The throttle function allows for adjustable time intervals, making it adaptable to different use cases.)
+                    </li>
+                </ul>
 
             </SectionWrapper>
 
