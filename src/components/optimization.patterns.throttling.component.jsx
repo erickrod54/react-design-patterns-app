@@ -2,11 +2,12 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 48.11 - RenderingOptimization
+/**react-design-patterns-app - version 48.12 - RenderingOptimization
  * - Features: 
  * 
- *     --> Developing  'usemouseposition' 
+ *     --> Adding  'usemouseposition' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -73,6 +74,7 @@ const ThrottlingRendering = () => {
                     calculate the mouse position:
                 </p>
 
+            <BashCode code={usemouseposition}/>
 
             </SectionWrapper>
 
