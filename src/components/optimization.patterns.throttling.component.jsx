@@ -3,10 +3,10 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 48.09 - RenderingOptimization
+/**react-design-patterns-app - version 48.10 - RenderingOptimization
  * - Features: 
  * 
- *     --> Developing  'ThrottlingRendering Advantages' 
+ *     --> Developing  'ThrottlingRendering Disadvantages' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -48,6 +48,22 @@ const ThrottlingRendering = () => {
                     </li>
                     <li>
                         <span className="text-white font-semibold">  Customizable </span> ( The throttle function allows for adjustable time intervals, making it adaptable to different use cases.)
+                    </li>
+                </ul>
+
+                <p>
+                    Some <span className="text-white font-semibold"> Disadvantages </span> of this implementation can be:
+                </p>
+                
+                <ul className="list-white-space">
+                    <li>
+                        <span className="text-white font-semibold"> Latency in Updates </span> (  Since the function executes only once per interval, some intermediate updates may be skipped. )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Complexity in Some Cases </span> ( Implementing throttling correctly can introduce additional logic that might be hard to manage in certain applications. )
+                    </li>
+                    <li>
+                        <span className="text-white font-semibold"> Less Precise Data </span> (  If used in real-time tracking - e.g., precise cursor tracking -, some data points may be lost. )
                     </li>
                 </ul>
 
