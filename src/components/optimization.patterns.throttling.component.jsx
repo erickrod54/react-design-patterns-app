@@ -3,10 +3,10 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 48.10 - RenderingOptimization
+/**react-design-patterns-app - version 48.11 - RenderingOptimization
  * - Features: 
  * 
- *     --> Developing  'ThrottlingRendering Disadvantages' 
+ *     --> Developing  'usemouseposition' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -16,6 +16,7 @@ const ThrottlingRendering = () => {
 
     const { CodeData } = usePatternsAppContext();
 
+    const usemouseposition  = CodeData[213].code;
     
     return(
         <div>
@@ -66,6 +67,12 @@ const ThrottlingRendering = () => {
                         <span className="text-white font-semibold"> Less Precise Data </span> (  If used in real-time tracking - e.g., precise cursor tracking -, some data points may be lost. )
                     </li>
                 </ul>
+
+                <p>
+                    so lets start by building <span className="text-white font-semibold"> useMousePosition </span> hook that will
+                    calculate the mouse position:
+                </p>
+
 
             </SectionWrapper>
 
