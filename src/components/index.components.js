@@ -144,11 +144,12 @@ import IngredientsComponentOptimizedTwo from "./optimization.patterns.ingredient
 import AddIngredientOptimized from './optimization.patterns.add.ingredient.optimized.jsx';
 import IngredientsComponentOptimizedThree  from './optimization.patterns.ingredient.component.memo.and.callback.three.jsx'
 import IngredientsComponentOptimizedFour from "./optimization.patterns.ingredient.component.memo.and.callback.four.jsx";
+import ThrottlingRendering from "./optimization.patterns.throttling.component.jsx";
 
-/**react-design-patterns-app - version 48.03 - components > index  
+/**react-design-patterns-app - version 48.05 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'IngredientsComponentOptimizedFour'
+ *     --> Importing and exporting  'ThrottlingRendering'
  * 
  * Note: the component 'IngredientsListOptimized' like is memoized 
  * cannot be auto imported, so i have to write it, and will work
@@ -301,4 +302,5 @@ export {
          AddIngredientOptimized,
          IngredientsComponentOptimizedThree,
          IngredientsComponentOptimizedFour,
+         ThrottlingRendering
         }
