@@ -14,13 +14,14 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
         PortalsAdvHooks,
          RenderingOptimization,
          StateManagementPatterns,
+         ThrottlingRendering,
          UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 43.04 - SinglePatternPage
+/**react-design-patterns-app - version 48.05 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'RenderingOptimization'
+ *     --> Adding 'ThrottlingRendering'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -103,6 +104,11 @@ const SinglePatternPage = () => {
     if ( Number(patternId) === 39 ) {
         return <RenderingOptimization/>
     }
+
+    if ( Number(patternId) === 40 ) {
+        return <ThrottlingRendering/>
+    }
+    
 }
 
 export default SinglePatternPage;
