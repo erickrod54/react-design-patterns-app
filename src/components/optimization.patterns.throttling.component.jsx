@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 48.12 - RenderingOptimization
+/**react-design-patterns-app - version 48.13 - RenderingOptimization
  * - Features: 
  * 
- *     --> Adding  'usemouseposition' 
+ *     --> Adding  'mouseposition' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -18,6 +18,7 @@ const ThrottlingRendering = () => {
     const { CodeData } = usePatternsAppContext();
 
     const usemouseposition  = CodeData[213].code;
+    const mouseposition  = CodeData[214].code;
     
     return(
         <div>
@@ -74,7 +75,14 @@ const ThrottlingRendering = () => {
                     calculate the mouse position:
                 </p>
 
-            <BashCode code={usemouseposition}/>
+                    <BashCode code={usemouseposition}/>
+
+                   <p>
+                        and the <span className="text-white font-semibold"> TrackMouse  </span> that will get thte mouse postition by using 
+                        the <span className="text-white font-semibold"> useMousePosition  </span> hook, as follows: 
+                   </p>
+            
+                    <BashCode code={mouseposition}/>
 
             </SectionWrapper>
 
