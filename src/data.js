@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.08 - data js  
+/**react-design-patterns-app - version 48.09 - data js  
  * - Features: 
  *    
- *     --> Adding 'useMousePosition -  throttling' comments 
+ *     --> Adding 'TrackMouse -  throttling' comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8002,6 +8002,24 @@ const UsersApiHookLogicAndDataAbs = () => {
       
         return position;
       };
+      `
+      },
+      {
+      id: 213,
+      name: 'TrackMouse -  throttling',
+      code:   
+      `
+        const TrackMouse = (props) => {
+        const position = useMousePosition();
+      
+        return (
+            <div>
+              Last mouse position - x: {position.x}, y: {position.y}
+            </div>
+          );
+        };
+        
+        export default TrackMouse;
       `
       }
   ];          
