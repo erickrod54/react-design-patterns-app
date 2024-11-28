@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.09 - data js  
+/**react-design-patterns-app - version 48.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'TrackMouse -  throttling' comments 
+ *     --> Adding 'TrackMouse -  component' id 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8005,7 +8005,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       `
       },
       {
-      id: 213,
+      id: 214,
       name: 'TrackMouse -  throttling',
       code:   
       `
