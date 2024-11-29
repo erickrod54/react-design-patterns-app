@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { useMousePosition } from "../hooks/optimization.patterns.use.mouse.hook";
 
-/**react-design-patterns-app - version 48.18 - TrackMouse
+/**react-design-patterns-app - version 48.19 - TrackMouse
  * - Features: 
  * 
- *     --> Adding  'TrackMouseWrapper' border radius and styled library
+ *     --> Adding  'TrackMouseWrapper' white space at bottom
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -13,6 +13,7 @@ import { useMousePosition } from "../hooks/optimization.patterns.use.mouse.hook"
 const TrackMouseWrapper = styled.div`
     margin: auto;
     margin-top: 4rem;
+    margin-bottom: 4rem;
     padding: 2rem;
     background: blueviolet;
     color: white;
