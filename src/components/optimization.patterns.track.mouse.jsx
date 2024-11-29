@@ -1,16 +1,18 @@
 import { useMousePosition } from "../hooks/optimization.patterns.use.mouse.hook";
 
-/**react-design-patterns-app - version 48.14 - TrackMouse
+/**react-design-patterns-app - version 48.15 - TrackMouse
  * - Features: 
  * 
- *     --> writting  'TrackMouseWrapper' styled component
+ *     --> Adding  'TrackMouseWrapper' white space
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
 const TrackMouseWrapper = styled.div`
-
+    margin: auto;
+    margin-top: 4rem;
+    padding: 2rem;
 `
 
 const TrackMouse = (props) => {
