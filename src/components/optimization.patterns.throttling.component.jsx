@@ -3,11 +3,12 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
+import TrackMouse from "./optimization.patterns.track.mouse";
 
-/**react-design-patterns-app - version 48.13 - RenderingOptimization
+/**react-design-patterns-app - version 48.19 - ThrottlingRendering
  * - Features: 
  * 
- *     --> Adding  'mouseposition' 
+ *     --> Rendering  'TrackMouse' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -83,6 +84,13 @@ const ThrottlingRendering = () => {
                    </p>
             
                     <BashCode code={mouseposition}/>
+
+
+                    <TrackMouse />
+
+                    <p>
+                        so at this point the app has a lot of render because is tracking every position of the maouse
+                    </p>
 
             </SectionWrapper>
 
