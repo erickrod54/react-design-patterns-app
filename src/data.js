@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.10 - data js  
+/**react-design-patterns-app - version 48.20 - data js  
  * - Features: 
  *    
- *     --> Adding 'TrackMouse -  component' id 
+ *     --> Adding 'TrackMouseNotOptimal 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8020,6 +8020,24 @@ const UsersApiHookLogicAndDataAbs = () => {
         };
         
         export default TrackMouse;
+      `
+      },
+      {
+      id: 214,
+      name: 'TrackMouseNotOptimal -  throttling',
+      code:   
+      `        
+      const TrackMouseNotOptimal = (props) => {
+        const position = useMousePositionNotThrottling();
+      
+        return (
+          <TrackMouseWrapper>
+              Last mouse position - <span> x: {position.x}, y: {position.y} </span>
+          </TrackMouseWrapper>
+        );
+      };
+      
+      export default TrackMouseNotOptimal;
       `
       }
   ];          
