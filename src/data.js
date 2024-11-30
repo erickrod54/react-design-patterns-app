@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 48.20 - data js  
+/**react-design-patterns-app - version 49.00 - data js  
  * - Features: 
  *    
- *     --> Adding 'TrackMouseNotOptimal 
+ *     --> Adding 'TrackMouseNotOptimal id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8023,7 +8023,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       `
       },
       {
-      id: 214,
+      id: 215,
       name: 'TrackMouseNotOptimal -  throttling',
       code:   
       `        
