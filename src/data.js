@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 49.01 - data js  
+/**react-design-patterns-app - version 49.03 - data js  
  * - Features: 
  *    
- *     --> Adding 'TrackMouseNotOptimal comments
+ *     --> Adding 'useMousePositionNotThrottling' 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8041,9 +8041,39 @@ const UsersApiHookLogicAndDataAbs = () => {
       
       export default TrackMouseNotOptimal;
       `
+      },
+      {
+      id: 215,
+      name: 'useMousePositionNotThrottling -  throttling',
+      code:   
+      `
+      export const useMousePositionNotThrottling = () => {
+  
+      const [position, setPosition] = useState({
+        x: 0,
+        y: 0,
+      });
+    
+      useEffect(() => {
+        const onMouseMove = (e) => {
+          const { clientX: x, clientY: y } = e;
+          setPosition({
+            x,
+            y,
+          });
+        };
+    
+        window.addEventListener("mousemove", onMouseMove);
+        return () => window.removeEventListener("mousemove", onMouseMove);
+      }, []);
+    
+      return position;
+    };
+      `
       }
   ];          
 
+  
   /**List Pattern data  -- start */
   
   export const authors = [
