@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 49.04 - data js  
+/**react-design-patterns-app - version 49.05 - data js  
  * - Features: 
  *    
- *     --> Adding 'useMousePositionNotThrottling' id 
+ *     --> Adding 'useMousePositionNotThrottling' comments 
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8048,12 +8048,14 @@ const UsersApiHookLogicAndDataAbs = () => {
       code:   
       `
       export const useMousePositionNotThrottling = () => {
-  
+      /**there is no throttling time intervals*/  
       const [position, setPosition] = useState({
         x: 0,
         y: 0,
       });
     
+      /**is rendering the mouse position once mounts the component
+       *  without any flags and times*/
       useEffect(() => {
         const onMouseMove = (e) => {
           const { clientX: x, clientY: y } = e;
