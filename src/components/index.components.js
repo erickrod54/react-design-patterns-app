@@ -145,11 +145,12 @@ import AddIngredientOptimized from './optimization.patterns.add.ingredient.optim
 import IngredientsComponentOptimizedThree  from './optimization.patterns.ingredient.component.memo.and.callback.three.jsx'
 import IngredientsComponentOptimizedFour from "./optimization.patterns.ingredient.component.memo.and.callback.four.jsx";
 import ThrottlingRendering from "./optimization.patterns.throttling.component.jsx";
+import TrackMouse from "./optimization.patterns.track.mouse.jsx";
 
-/**react-design-patterns-app - version 48.05 - components > index  
+/**react-design-patterns-app - version 49.07 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'ThrottlingRendering'
+ *     --> Importing and exporting  'TrackMouse'
  * 
  * Note: the component 'IngredientsListOptimized' like is memoized 
  * cannot be auto imported, so i have to write it, and will work
@@ -302,5 +303,6 @@ export {
          AddIngredientOptimized,
          IngredientsComponentOptimizedThree,
          IngredientsComponentOptimizedFour,
-         ThrottlingRendering
+         ThrottlingRendering,
+         TrackMouse
         }
