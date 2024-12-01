@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import TrackMouse from "./optimization.patterns.track.mouse";
 import TrackMouseNotOptimal from "./optimization.patterns.track.mouse.not.optimal";
 
-/**react-design-patterns-app - version 49.05 - ThrottlingRendering
+/**react-design-patterns-app - version 49.06 - ThrottlingRendering
  * - Features: 
  * 
- *     --> Rendering  'TrackMouse' and 'TrackMouseNotOptimal'
+ *     --> Rendering  'usetrackmousenotoptimal'
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -23,6 +23,7 @@ const ThrottlingRendering = () => {
     const usemouseposition  = CodeData[213].code;
     const mouseposition  = CodeData[214].code;
     const trackmousenotoptimal  = CodeData[215].code;
+    const usetrackmousenotoptimal  = CodeData[216].code;
     
     return(
         <div>
@@ -116,7 +117,7 @@ const ThrottlingRendering = () => {
                         follows:
                     </p>
 
-                    
+                    <BashCode code={usetrackmousenotoptimal}/>
 
             </SectionWrapper>
 
