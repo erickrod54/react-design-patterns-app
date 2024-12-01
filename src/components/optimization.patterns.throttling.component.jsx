@@ -4,11 +4,13 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import TrackMouse from "./optimization.patterns.track.mouse";
+import TrackMouseNotOptimal from "./optimization.patterns.track.mouse.not.optimal";
 
-/**react-design-patterns-app - version 48.19 - ThrottlingRendering
+/**react-design-patterns-app - version 49.05 - ThrottlingRendering
  * - Features: 
  * 
- *     --> Rendering  'TrackMouse' 
+ *     --> Rendering  'TrackMouse' and 'TrackMouseNotOptimal'
+ *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -20,6 +22,7 @@ const ThrottlingRendering = () => {
 
     const usemouseposition  = CodeData[213].code;
     const mouseposition  = CodeData[214].code;
+    const trackmousenotoptimal  = CodeData[215].code;
     
     return(
         <div>
@@ -89,8 +92,31 @@ const ThrottlingRendering = () => {
                     <TrackMouse />
 
                     <p>
-                        so at this point the app has a lot of render because is tracking every position of the maouse
+                        so at this point the app is performing an <span className="text-white font-semibold"> extensive rendering  </span>  
+                        because is <span className="text-white font-semibold"> tracking every position of the mouse  </span> and every 
+                        position is a render, but is not than extensive 
+                        without <span className="text-white font-semibold"> Throttle Function Execution Logic  </span> 
+                        that controls rendering flow, making renders with time intervals and using flags when is necessary, without 
+                        these improvements will look as follows:
                     </p>
+
+                    <TrackMouseNotOptimal />
+
+                    <p>
+                        which way more <span className="text-white font-semibold"> extensive rendering  </span>, because will be the 
+                        base code without <span className="text-white font-semibold"> throttling  </span>, so there's no control 
+                        in the render, and depending on the use case can lead render crashes, this <span className="text-white font-semibold"> TrackMouseNotOptimal  </span>   
+                        will be as follows:
+                    </p>
+
+                    <BashCode code={trackmousenotoptimal}/>
+
+                    <p>
+                        and the <span className="text-white font-semibold"> useMousePositionNotThrottling </span> hook without the throttling as 
+                        follows:
+                    </p>
+
+                    
 
             </SectionWrapper>
 
