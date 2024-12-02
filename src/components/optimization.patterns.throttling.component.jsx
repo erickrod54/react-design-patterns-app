@@ -3,13 +3,13 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
-import TrackMouse from "./optimization.patterns.track.mouse";
-import TrackMouseNotOptimal from "./optimization.patterns.track.mouse.not.optimal";
+import {TrackMouse, TrackMouseNotOptimal, } from "./index.components";
 
-/**react-design-patterns-app - version 49.06 - ThrottlingRendering
+
+/**react-design-patterns-app - version 49.08 - ThrottlingRendering
  * - Features: 
  * 
- *     --> Rendering  'usetrackmousenotoptimal'
+ *     --> Fxing importd  
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
