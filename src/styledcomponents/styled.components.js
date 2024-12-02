@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 48.05 - styled.components
+/**react-design-patterns-app - version 48.10 - styled.components
  * - Features: 
  * 
- *     --> writting 'trottling-rendering-optimization' styles 
+ *     --> writting 'debouncing-executions' styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -1358,6 +1358,10 @@ export const CustomTitleStyle = styled.div`
 
 .rendering-optimization-state-allocation{
 	${tw`text-fuchsia-300 underline`}
+}
+
+.debouncing-executions{
+	${tw`text-orange-400 underline`}
 }
 
 `
