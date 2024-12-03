@@ -3,10 +3,10 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 49.11 - DebouncingExecutions
+/**react-design-patterns-app - version 49.12 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Developing 'Debouncing Executions' Disdvantages
+ *     --> Starting 'Search' 
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -64,6 +64,11 @@ const DebouncingExecutions = () => {
                     <span className="text-white font-semibold"> Not Suitable for All Cases </span> ( For cases like real-time mouse tracking, throttling may be a better alternative. )
                 </li>
             </ul>
+
+            <p>
+                a good implementation can be done in a  <span className="text-white font-semibold"> Search </span> component, that without 
+                debouncing can fall in the disvantages from above
+            </p>
 
             </ SectionWrapper>
         </div>
