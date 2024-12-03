@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 49.05 - data js  
+/**react-design-patterns-app - version 49.10 - data js  
  * - Features: 
  *    
- *     --> Adding 'useMousePositionNotThrottling' comments 
+ *     --> Adding 'DebouncingExecutions'  - Performance
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -258,6 +258,12 @@ export const patternCard = [
       id:40,
       category:'Performance',
       pattern:'Trottling Rendering Optimization',
+      description:''
+    },
+    {
+      id:41,
+      category:'Performance',
+      pattern:'Debouncing Executions',
       description:''
     },
 ]
