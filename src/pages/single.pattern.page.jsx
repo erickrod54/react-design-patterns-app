@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          ControlledUnControlledPattern,
          CustomHookPattern,
+         DebouncingExecutions,
          ErrorBoundaries,
          FetchingDataWitReactQuery,
          ForwardingRefs,
@@ -18,10 +19,10 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 48.05 - SinglePatternPage
+/**react-design-patterns-app - version 49.10 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'ThrottlingRendering'
+ *     --> Adding 'DebouncingExecutions'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -108,7 +109,11 @@ const SinglePatternPage = () => {
     if ( Number(patternId) === 40 ) {
         return <ThrottlingRendering/>
     }
-    
+
+    if ( Number(patternId) === 41 ) {
+        return <DebouncingExecutions />
+    }
+
 }
 
 export default SinglePatternPage;
