@@ -147,11 +147,12 @@ import IngredientsComponentOptimizedFour from "./optimization.patterns.ingredien
 import ThrottlingRendering from "./optimization.patterns.throttling.component.jsx";
 import TrackMouse from "./optimization.patterns.track.mouse.jsx";
 import TrackMouseNotOptimal from "./optimization.patterns.track.mouse.not.optimal.jsx";
+import DebouncingExecutions from "./optimization.patterns.debouncing.component.jsx";
 
-/**react-design-patterns-app - version 49.08 - components > index  
+/**react-design-patterns-app - version 49.12 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'TrackMouseNotOptimal'
+ *     --> Importing and exporting  'DebouncingExecutions'
  * 
  * Note: the component 'IngredientsListOptimized' like is memoized 
  * cannot be auto imported, so i have to write it, and will work
@@ -306,5 +307,6 @@ export {
          IngredientsComponentOptimizedFour,
          ThrottlingRendering,
          TrackMouse,
-         TrackMouseNotOptimal
+         TrackMouseNotOptimal,
+         DebouncingExecutions
         }
