@@ -3,10 +3,10 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
-/**react-design-patterns-app - version 49.10 - DebouncingExecutions
+/**react-design-patterns-app - version 49.11 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Developing 'Debouncing Executions' Advantages
+ *     --> Developing 'Debouncing Executions' Disdvantages
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -46,6 +46,22 @@ const DebouncingExecutions = () => {
                 </li>
                 <li>
                     <span className="text-white font-semibold"> Enhances User Experience </span> ( Prevents lag or delays caused by multiple function executions )
+                </li>
+            </ul>
+
+            <p>
+                some important <span className="text-white font-semibold"> Disadvantages </span> are:
+            </p>
+
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Delayed Execution </span> ( The function only executes after the delay period, which may cause a slight lag in real-time applications. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Potentially Skipped Updates </span> ( If the user keeps interacting continuously, the function may never execute. )
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Not Suitable for All Cases </span> ( For cases like real-time mouse tracking, throttling may be a better alternative. )
                 </li>
             </ul>
 
