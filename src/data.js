@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 49.13 - data js  
+/**react-design-patterns-app - version 49.14 - data js  
  * - Features: 
  *    
- *     --> Adding 'Search -  Debouncing'  - Performance
+ *     --> Adding 'Search -  Debouncing'  - Performance id
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8080,7 +8080,7 @@ const UsersApiHookLogicAndDataAbs = () => {
       `
       },
       {
-      id: 216,
+      id: 217,
       name: 'Search -  Debouncing',
       code:   
       `
