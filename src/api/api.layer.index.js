@@ -3,12 +3,13 @@ import { fetchTopQuotesWithCancellation } from './api.layer.use.case.quotes.canc
 import { fetchQuotesByCursor } from './api.layer.use.case.quotes.infinite.scroll';
 import { fetchQuotesByPage } from './api.layer.use.case.quotes.pagination';
 import { postQuote, resetQuotes } from './api.layer.use.case.quotes.post.update';
+import { searchMeals } from './api.meal.main';
 
 
-/**react-design-patterns-app - version 30.08 - Api Layer index
+/**react-design-patterns-app - version 49.14 - Api Layer index
  * - Features: 
  * 
- *     --> Importing and exporting 'fetchTopQuotesWithCancellation'
+ *     --> Importing and exporting 'searchMeals'
  * 
  * Note: pending to import and export the rest of the API's 
  */
@@ -18,4 +19,6 @@ export {  fetchTopQuotes,
           resetQuotes,
           fetchQuotesByPage,
           fetchQuotesByCursor,
-          fetchTopQuotesWithCancellation }
+          fetchTopQuotesWithCancellation,
+          searchMeals  
+        }
