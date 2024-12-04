@@ -2,11 +2,13 @@ import React from "react";
 import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.components";
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
+import BashCode from "./bash.higlight.component";
 
-/**react-design-patterns-app - version 49.12 - DebouncingExecutions
+
+/**react-design-patterns-app - version 49.14 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Starting 'Search' 
+ *     --> Adding 'searchcomponent' 
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -16,6 +18,9 @@ import { usePatternsAppContext } from "../context";
 const DebouncingExecutions = () => {
 
     const { CodeData } = usePatternsAppContext();
+
+    const searchcomponent = CodeData[217].code;
+    
     
     return(
         <div>
@@ -67,8 +72,10 @@ const DebouncingExecutions = () => {
 
             <p>
                 a good implementation can be done in a  <span className="text-white font-semibold"> Search </span> component, that without 
-                debouncing can fall in the disvantages from above
+                debouncing can fall in the disvantages from above, the component will be as follows:
             </p>
+
+            <BashCode code={searchcomponent}/>
 
             </ SectionWrapper>
         </div>
