@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 49.10 - data js  
+/**react-design-patterns-app - version 49.13 - data js  
  * - Features: 
  *    
- *     --> Adding 'DebouncingExecutions'  - Performance
+ *     --> Adding 'Search -  Debouncing'  - Performance
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8077,6 +8077,46 @@ const UsersApiHookLogicAndDataAbs = () => {
     
       return position;
     };
+      `
+      },
+      {
+      id: 216,
+      name: 'Search -  Debouncing',
+      code:   
+      `
+       const Search = () => {
+
+        const [query, setQuery] = useState("");
+        const [meals, setMeals] = useState([]);
+      
+        const initSearchApiRequest = useMemo(() => {
+          return async (q) => {
+            setMeals(await searchMeals(q));
+          };
+        }, []);
+      
+        const onChangeQuery = (e) => {
+          const q = e.target.value;
+          setQuery(q);
+          initSearchApiRequest(q);
+        };
+      
+        return (
+          <div>
+            <form>
+              <label>Search meals</label>
+              <input type="text" value={query} onChange={onChangeQuery} />
+            </form>
+            <ul>
+              {meals?.map((meal) => {
+                return <li key={meal.idMeal}>{meal.strMeal}</li>;
+              })}
+            </ul>
+          </div>
+        );
+      };
+      
+      export default Search;
       `
       }
   ];          
