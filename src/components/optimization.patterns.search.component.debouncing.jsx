@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
 
-/**react-design-patterns-app - version 49.18 - Search
+/**react-design-patterns-app - version 49.19 - Search
  * - Features: 
  * 
- *     --> writting  'SearchInput '  styles
+ *     --> writting  'SearchResults '  styles
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -47,6 +47,13 @@ const SearchInput = styled.input`
   color: #bbb;
   }
 `
+
+const SearchResults = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+`
+
   
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -70,11 +77,11 @@ const Search = () => {
         <SearchLabel>Search meals</SearchLabel>
         <SearchInput type="text" value={query} onChange={onChangeQuery} />
       </SearchForm>
-      <ul>
+      <SearchResults>
         {meals?.map((meal) => {
           return <li key={meal.idMeal}>{meal.strMeal}</li>;
         })}
-      </ul>
+      </SearchResults>
     </SearchContainer>
   );
 };
