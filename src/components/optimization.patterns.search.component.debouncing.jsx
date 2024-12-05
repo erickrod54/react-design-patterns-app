@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
 
-/**react-design-patterns-app - version 49.15 - Search
+/**react-design-patterns-app - version 49.16 - Search
  * - Features: 
  * 
- *     --> writting  'SearchContainer '  styles
+ *     --> writting  'SearchForm '  styles
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -20,6 +20,13 @@ import React, { useMemo, useState } from "react";
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     text-align: center;
   `
+
+const SearchForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+`
   
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -39,10 +46,10 @@ const Search = () => {
 
   return (
     <SearchContainer>
-      <form>
+      <SearchForm>
         <label>Search meals</label>
         <input type="text" value={query} onChange={onChangeQuery} />
-      </form>
+      </SearchForm>
       <ul>
         {meals?.map((meal) => {
           return <li key={meal.idMeal}>{meal.strMeal}</li>;
