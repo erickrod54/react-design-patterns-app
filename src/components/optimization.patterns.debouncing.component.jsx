@@ -3,12 +3,13 @@ import {  CustomTitleStyle, SectionWrapper } from "../styledcomponents/styled.co
 import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
+import Search from "./optimization.patterns.search.component.debouncing";
 
 
-/**react-design-patterns-app - version 49.14 - DebouncingExecutions
+/**react-design-patterns-app - version 49.20 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Adding 'searchcomponent' 
+ *     --> Adding 'apirequest' 
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -20,6 +21,8 @@ const DebouncingExecutions = () => {
     const { CodeData } = usePatternsAppContext();
 
     const searchcomponent = CodeData[217].code;
+    const apirequest = CodeData[149].code;
+
     
     
     return(
@@ -76,6 +79,14 @@ const DebouncingExecutions = () => {
             </p>
 
             <BashCode code={searchcomponent}/>
+
+            <p>
+                and the API, will be a meals - API used in a previous app as it is <span className="text-white font-semibold"> Search </span> component, that without 
+                debouncing can fall in the disvantages from above, the component will be as follows:
+            </p>
+
+            <BashCode code={apirequest}/>
+            
 
             </ SectionWrapper>
         </div>
