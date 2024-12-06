@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
 
 
-/**react-design-patterns-app - version 49.20 - DebouncingExecutions
+/**react-design-patterns-app - version 50.00 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Adding 'apirequest' 
+ *     --> Adding 'Search' 
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -86,7 +86,12 @@ const DebouncingExecutions = () => {
             </p>
 
             <BashCode code={apirequest}/>
+
+            <p>
+                resulting <span className="text-white font-semibold"> Search </span> component as follows:
+            </p>
             
+            <Search />
 
             </ SectionWrapper>
         </div>
