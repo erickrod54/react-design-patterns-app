@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
 
-/**react-design-patterns-app - version 49.20 - Search
+/**react-design-patterns-app - version 50.00 - Search
  * - Features: 
  * 
- *     --> writting  'SearchItem '  styles
+ *     --> writting  'placeholder '  for SearchInput styles
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -84,7 +84,7 @@ const Search = () => {
     <SearchContainer>
       <SearchForm>
         <SearchLabel>Search meals</SearchLabel>
-        <SearchInput type="text" value={query} onChange={onChangeQuery} />
+        <SearchInput type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
       </SearchForm>
       <SearchResults>
         {meals?.map((meal) => {
