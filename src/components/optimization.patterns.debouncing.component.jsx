@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
 
 
-/**react-design-patterns-app - version 50.00 - DebouncingExecutions
+/**react-design-patterns-app - version 50.01 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Adding 'Search' 
+ *     --> Starting 'debouncing' 
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -90,8 +90,17 @@ const DebouncingExecutions = () => {
             <p>
                 resulting <span className="text-white font-semibold"> Search </span> component as follows:
             </p>
-            
+
             <Search />
+
+            <p>
+                in this case function <span className="text-white font-semibold"> searchMeals </span> executes memoized to 
+                <span className="text-white font-semibold"> fetchMeals </span>, but even when the function is memoized 
+                <span className="text-white font-semibold"> as user input in a search bar </span> makes it a 
+                <span className="text-white font-semibold"> high-frequency event </span>, that eventually 
+                as the app scale can make it not optimal, this can be fixed by a <span className="text-white font-semibold"> debouncing </span>  
+                util function
+            </p>
 
             </ SectionWrapper>
         </div>
