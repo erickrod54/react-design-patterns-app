@@ -1,9 +1,10 @@
+import { debounce } from "./debouncing";
 import { getUuid, getUuidImmer } from "./shopping.list.utils";
 
-/**react-design-patterns-app - version 39.11 - getUuid
+/**react-design-patterns-app - version 50.02 - getUuid
  * - Features: 
  * 
- *     --> Migrating 'getUuidImmer' util 
+ *     --> Migrating 'debounce' util 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -15,5 +16,5 @@ import { getUuid, getUuidImmer } from "./shopping.list.utils";
  * to use them in the custom titles
  */
 
-export { getUuid, getUuidImmer }
+export { getUuid, getUuidImmer, debounce }
 
