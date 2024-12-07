@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
 
 
-/**react-design-patterns-app - version 50.05 - DebouncingExecutions
+/**react-design-patterns-app - version 50.06 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Adding 'debouncing' 
+ *     --> Changing 'debouncing' id 
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -22,7 +22,7 @@ const DebouncingExecutions = () => {
 
     const searchcomponent = CodeData[217].code;
     const apirequest = CodeData[149].code;
-    const debouncing = CodeData[217].code;
+    const debouncing = CodeData[218].code;
 
 
     
