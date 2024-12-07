@@ -3,10 +3,10 @@ import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
 import { debounce } from "../utils/debouncing";
 
-/**react-design-patterns-app - version 50.04 - SearchDebounce
+/**react-design-patterns-app - version 50.05 - SearchDebounce
  * - Features: 
  * 
- *     --> writting  'SearchDebounce '  styles
+ *     --> Building  'SearchDebounce '  
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -63,5 +63,38 @@ border-radius: 5px;
 transition: background 0.3s;
 cursor: pointer;
 `
+
+const SearchDebounce = () => {
+    const [query, setQuery] = useState("");
+    const [meals, setMeals] = useState([]);
+  
+    const initSearchApiRequest = useMemo(() => {
+      return debounce(async (q) => {
+        setMeals(await searchMeals(q));
+      }, 500);
+    }, []);
+  
+    const onChangeQuery = (e) => {
+      const q = e.target.value;
+      setQuery(q);
+      initSearchApiRequest(q);
+    };
+  
+    return (
+      <SearchContainer>
+        <SearchForm>
+          <SearchLabel>Search meals</SearchLabel>
+          <SearchInput type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
+        </SearchForm>
+        <SearchResults>
+          {meals?.map((meal) => {
+            return <SearchItem key={meal.idMeal}>{meal.strMeal}</SearchItem>;
+          })}
+        </SearchResults>
+      </SearchContainer>
+    );
+  };
+  
+  export default SearchDebounce;
 
   
