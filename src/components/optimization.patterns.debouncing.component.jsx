@@ -6,10 +6,10 @@ import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
 
 
-/**react-design-patterns-app - version 50.01 - DebouncingExecutions
+/**react-design-patterns-app - version 50.05 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Starting 'debouncing' 
+ *     --> Adding 'debouncing' 
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -22,6 +22,8 @@ const DebouncingExecutions = () => {
 
     const searchcomponent = CodeData[217].code;
     const apirequest = CodeData[149].code;
+    const debouncing = CodeData[217].code;
+
 
     
     
@@ -75,7 +77,9 @@ const DebouncingExecutions = () => {
 
             <p>
                 a good implementation can be done in a  <span className="text-white font-semibold"> Search </span> component, that without 
-                debouncing can fall in the disvantages from above, the component will be as follows:
+                debouncing can fall in the disvantages from above, cheking under network chrome develepover tools tab, the component will be
+                <span className="text-white font-semibold"> requests as the typing goes </span> in one single search, the component will be 
+                as follows:
             </p>
 
             <BashCode code={searchcomponent}/>
@@ -99,8 +103,11 @@ const DebouncingExecutions = () => {
                 <span className="text-white font-semibold"> as user input in a search bar </span> makes it a 
                 <span className="text-white font-semibold"> high-frequency event </span>, that eventually 
                 as the app scale can make it not optimal, this can be fixed by a <span className="text-white font-semibold"> debouncing </span>  
-                util function
+                util function, as follows:
             </p>
+
+            <BashCode code={debouncing}/>
+            
 
             </ SectionWrapper>
         </div>
