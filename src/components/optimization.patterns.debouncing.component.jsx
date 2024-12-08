@@ -4,11 +4,12 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
+import SearchDebounce from "./optimization.patterns.search.component.debouncing.implemented";
 
-/**react-design-patterns-app - version 50.08 - DebouncingExecutions
+/**react-design-patterns-app - version 50.09 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Adding 'SearchDebounce'  
+ *     --> Rendering 'SearchDebounce'  
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -117,6 +118,16 @@ const DebouncingExecutions = () => {
             
 
             <BashCode code={seaerchdebouncing}/>
+
+            <p>
+                resulting <span className="text-white font-semibold"> SearchDebounce  </span> in:
+            </p>
+
+            <SearchDebounce />
+
+            <p>
+                and cheking in the network tab will be less requests by user interaction
+            </p>
             
 
             </ SectionWrapper>
