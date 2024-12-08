@@ -5,7 +5,6 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
 
-
 /**react-design-patterns-app - version 50.06 - DebouncingExecutions
  * - Features: 
  * 
