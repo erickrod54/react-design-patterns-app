@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
 
-/**react-design-patterns-app - version 50.06 - DebouncingExecutions
+/**react-design-patterns-app - version 50.07 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Changing 'debouncing' id 
+ *     --> Starting 'SearchDebounce'  
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -22,6 +22,7 @@ const DebouncingExecutions = () => {
     const searchcomponent = CodeData[217].code;
     const apirequest = CodeData[149].code;
     const debouncing = CodeData[218].code;
+    const seaerchdebouncing = CodeData[219].code;
 
 
     
@@ -106,6 +107,13 @@ const DebouncingExecutions = () => {
             </p>
 
             <BashCode code={debouncing}/>
+
+            <p>
+                the debouncing will be implementated at  <span className="text-white font-semibold"> initSearchApiRequest  </span> 
+                because makes <span className="text-white font-semibold"> high frequency API requests, </span> so debouncing prevents 
+                <span className="text-white font-semibold"> excessive API calls on every character input, reducing 
+                unnecessary network requests and improving efficiency.</span>
+            </p>
             
 
             </ SectionWrapper>
