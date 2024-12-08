@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import { layoutexamples, sidebarexample } from "./assets/index.assets"
 
-/**react-design-patterns-app - version 50.03 - data js  
+/**react-design-patterns-app - version 50.06 - data js  
  * - Features: 
  *    
- *     --> Adding debounce - utils id
+ *     --> Adding 'SearchDebounce -  Debouncing implementation'
  * 
  * Note: This component will have later the main menu
  * to each pattern and its explanations and use cases
@@ -8137,8 +8137,48 @@ const UsersApiHookLogicAndDataAbs = () => {
       };
     };
       `
+      },
+      {
+      id: 218,
+      name: 'SearchDebounce -  Debouncing implementation',
+      code:   
+      `
+      const SearchDebounce = () => {
+
+        const [query, setQuery] = useState("");
+        const [meals, setMeals] = useState([]);
+      
+        const initSearchApiRequest = useMemo(() => {
+          return debounce(async (q) => {
+            setMeals(await searchMeals(q));
+          }, 500);
+        }, []);
+      
+        const onChangeQuery = (e) => {
+          const q = e.target.value;
+          setQuery(q);
+          initSearchApiRequest(q);
+        };
+      
+        return (
+          <SearchContainer>
+            <SearchForm>
+              <SearchLabel>Search meals</SearchLabel>
+              <SearchInput type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
+            </SearchForm>
+            <SearchResults>
+              {meals?.map((meal) => {
+                return <SearchItem key={meal.idMeal}>{meal.strMeal}</SearchItem>;
+              })}
+            </SearchResults>
+          </SearchContainer>
+        );
+      };
+      
+      export default SearchDebounce;
+      `
       }
-  ];          
+  ];   
   
   /**List Pattern data  -- start */
   
