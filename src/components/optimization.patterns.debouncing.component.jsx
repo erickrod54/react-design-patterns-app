@@ -5,10 +5,10 @@ import { usePatternsAppContext } from "../context";
 import BashCode from "./bash.higlight.component";
 import Search from "./optimization.patterns.search.component.debouncing";
 
-/**react-design-patterns-app - version 50.07 - DebouncingExecutions
+/**react-design-patterns-app - version 50.08 - DebouncingExecutions
  * - Features: 
  * 
- *     --> Starting 'SearchDebounce'  
+ *     --> Adding 'SearchDebounce'  
  *
  *
  * Note: 'UserInfo' with a few modifications ends up in 
@@ -114,6 +114,9 @@ const DebouncingExecutions = () => {
                 <span className="text-white font-semibold"> excessive API calls on every character input, reducing 
                 unnecessary network requests and improving efficiency.</span>
             </p>
+            
+
+            <BashCode code={seaerchdebouncing}/>
             
 
             </ SectionWrapper>
