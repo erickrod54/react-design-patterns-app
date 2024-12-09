@@ -1,25 +1,18 @@
 import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
+import { SearchContainer } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 50.00 - Search
+/**react-design-patterns-app - version 50.10 - Search
  * - Features: 
  * 
- *     --> writting  'placeholder '  for SearchInput styles
+ *     --> Migrating  'SearchContainer ' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-  const SearchContainer = styled.div`
-    width: 50%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #222; /* Dark gray for contrast */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    text-align: center;
-  `
+ 
 
 const SearchForm = styled.form`
     display: flex;
