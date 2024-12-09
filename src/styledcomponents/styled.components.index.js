@@ -98,6 +98,7 @@ import { AlertWrapper,
          QuotesContainerScroll,
          ReviewsContainer,
          SearchContainer,
+         SearchForm,
          SecondaryButton,
          SectionItemCenterWrapper,
          SectionWrapper,
@@ -153,10 +154,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
         
       
-/**react-design-patterns-app - version 50.10 - styledcomponents > index
+/**react-design-patterns-app - version 50.11 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'SearchContainer' 
+ *     --> Importing and exporting 'SearchForm' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -321,4 +322,5 @@ export { SectionWrapper,
          StyledHeading2Optimized,
          StyledSpaceY4Optimized,
          SearchContainer,
+         SearchForm,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
