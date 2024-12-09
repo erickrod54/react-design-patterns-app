@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
-import { SearchContainer } from "../styledcomponents/styled.components";
+import { SearchContainer, SearchForm } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 50.10 - Search
+/**react-design-patterns-app - version 50.11 - Search
  * - Features: 
  * 
- *     --> Migrating  'SearchContainer ' 
+ *     --> Migrating  'SearchForm ' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -14,12 +14,7 @@ import { SearchContainer } from "../styledcomponents/styled.components";
 
  
 
-const SearchForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-`
+
 
 const SearchLabel = styled.label`
   font-size: 18px;
