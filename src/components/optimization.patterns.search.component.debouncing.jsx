@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
-import { SearchContainer, SearchForm, SearchLabel } from "../styledcomponents/styled.components";
+import { SearchContainer, SearchForm, SearchLabelNoDebounce } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 50.12 - Search
+/**react-design-patterns-app - version 50.13 - Search
  * - Features: 
  * 
- *     --> Migrating  'SearchLabel ' 
+ *     --> Migrating  'SearchLabelNoDebounce ' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
@@ -63,7 +63,7 @@ const Search = () => {
   return (
     <SearchContainer>
       <SearchForm>
-        <SearchLabel>Search meals</SearchLabel>
+        <SearchLabelNoDebounce>Search meals</SearchLabelNoDebounce>
         <SearchInput type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
       </SearchForm>
       <SearchResults>
