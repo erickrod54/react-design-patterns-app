@@ -1,23 +1,17 @@
 import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
-import { SearchContainer, SearchForm, SearchInput, SearchLabelNoDebounce } from "../styledcomponents/styled.components";
+import { SearchContainer, SearchForm, SearchInput, SearchLabelNoDebounce, SearchResults } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 50.14 - Search
+/**react-design-patterns-app - version 50.15 - Search
  * - Features: 
  * 
- *     --> Migrating  'SearchInput ' 
+ *     --> Migrating  'SearchResults ' 
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-const SearchResults = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-`
 
 const SearchItem = styled.li`
 padding: 10px;
