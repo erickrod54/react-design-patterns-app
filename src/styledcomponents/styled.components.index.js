@@ -99,6 +99,7 @@ import { AlertWrapper,
          ReviewsContainer,
          SearchContainer,
          SearchForm,
+         SearchInput,
          SearchLabel,
          SearchLabelNoDebounce,
          SecondaryButton,
@@ -156,10 +157,10 @@ import { AlertWrapper,
          ToolTipWrapper, UpdateTaskHeaderBoard, UpdateTaskHeaderImmer, UpdateTaskInputBoard, UpdateTaskInputImmer, WriterContainer } from "./styled.components";
         
          
-/**react-design-patterns-app - version 50.13 - styledcomponents > index
+/**react-design-patterns-app - version 50.14 - styledcomponents > index
  * - Features: 
  * 
- *     --> Importing and exporting 'SearchLabelNoDebounce' 
+ *     --> Importing and exporting 'SearchInput' 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -326,4 +327,5 @@ export { SectionWrapper,
          SearchContainer,
          SearchForm,
          SearchLabelNoDebounce,
+         SearchInput,
          QuoteTextPagination, ButtonPostForm, FormGroup, MealListContainer, MealItem }
