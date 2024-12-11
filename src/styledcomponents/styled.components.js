@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 50.14 - styled.components
+/**react-design-patterns-app - version 50.15 - styled.components
  * - Features: 
  * 
- *     --> writting'SearchInput'  styles 
+ *     --> writting 'SearchResults'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -17,18 +17,24 @@ import tw from 'twin.macro';
  * to use them in the custom titles
  */
 
-export const SearchInput = styled.input`
-width: 80%;
-padding: 10px;
-font-size: 16px;
-border: 2px solid #ffcc00; /* Bright yellow border */
-border-radius: 5px;
-background-color: #333; /* Dark gray */
-color: white;
-outline: none;
+export const SearchResults = styled.ul`
+	list-style: none;
+	padding: 0;
+	margin-top: 20px;
+`
 
-.search-input::placeholder {
-color: #bbb;
+export const SearchInput = styled.input`
+	width: 80%;
+	padding: 10px;
+	font-size: 16px;
+	border: 2px solid #ffcc00; /* Bright yellow border */
+	border-radius: 5px;
+	background-color: #333; /* Dark gray */
+	color: white;
+	outline: none;
+
+	.search-input::placeholder {
+	color: #bbb;
 }
 `
 
