@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 50.19 - styled.components
+/**react-design-patterns-app - version 50.20 - styled.components
  * - Features: 
  * 
- *     --> writting 'SearchLabelDebounce'  styles 
+ *     --> writting 'SearchInputDebounce'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -16,6 +16,20 @@ import tw from 'twin.macro';
  * i have to create a root access custom color palette in order 
  * to use them in the custom titles
  */
+export const SearchInputDebounce = styled.input`
+	width: 80%;
+	padding: 10px;
+	font-size: 16px;
+	border: 2px solid #ffcc00; /* Bright yellow border */
+	border-radius: 5px;
+	background-color: #333; /* Dark gray */
+	color: white;
+	outline: none;
+
+	.search-input::placeholder {
+	color: #bbb;
+	}
+`
 
 export const SearchLabelDebounce = styled.label`
 	font-size: 18px;
