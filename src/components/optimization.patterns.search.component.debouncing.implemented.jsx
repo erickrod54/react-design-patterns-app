@@ -2,25 +2,17 @@ import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
 import { debounce } from "../utils/debouncing";
-import { SearchContainerDebouncing } from "../styledcomponents/styled.components";
+import { SearchContainerDebouncing, SearchFormDebounce } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 50.17 - SearchDebounce
+/**react-design-patterns-app - version 50.18 - SearchDebounce
  * - Features: 
  * 
- *     --> Migrating  'SearchContainerDebouncing '  
+ *     --> Migrating  'SearchFormDebounce '  
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
 
-
-
-const SearchForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-`
 
 const SearchLabel = styled.label`
   font-size: 18px;
@@ -75,10 +67,10 @@ const SearchDebounce = () => {
   
     return (
       <SearchContainerDebouncing>
-        <SearchForm>
+        <SearchFormDebounce>
           <SearchLabel>Search meals</SearchLabel>
           <SearchInput type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
-        </SearchForm>
+        </SearchFormDebounce>
         <SearchResults>
           {meals?.map((meal) => {
             return <SearchItem key={meal.idMeal}>{meal.strMeal}</SearchItem>;
