@@ -2,31 +2,16 @@ import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
 import { debounce } from "../utils/debouncing";
-import { SearchContainerDebouncing, SearchFormDebounce, SearchLabelDebounce } from "../styledcomponents/styled.components";
+import { SearchContainerDebouncing, SearchFormDebounce, SearchInputDebounce, SearchLabelDebounce } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 50.19 - SearchDebounce
+/**react-design-patterns-app - version 50.20 - SearchDebounce
  * - Features: 
  * 
- *     --> Migrating  'SearchLabelDebounce '  
+ *     --> Migrating  'SearchInputDebounce '  
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
-
-const SearchInput = styled.input`
-  width: 80%;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #ffcc00; /* Bright yellow border */
-  border-radius: 5px;
-  background-color: #333; /* Dark gray */
-  color: white;
-  outline: none;
-
-  .search-input::placeholder {
-  color: #bbb;
-  }
-`
 
 const SearchResults = styled.ul`
   list-style: none;
@@ -63,7 +48,7 @@ const SearchDebounce = () => {
       <SearchContainerDebouncing>
         <SearchFormDebounce>
           <SearchLabelDebounce>Search meals</SearchLabelDebounce>
-          <SearchInput type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
+          <SearchInputDebounce type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
         </SearchFormDebounce>
         <SearchResults>
           {meals?.map((meal) => {
