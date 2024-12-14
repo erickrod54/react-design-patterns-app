@@ -2,22 +2,16 @@ import styled from "styled-components";
 import { searchMeals } from "../api/api.layer.index";
 import React, { useMemo, useState } from "react";
 import { debounce } from "../utils/debouncing";
-import { SearchContainerDebouncing, SearchFormDebounce, SearchInputDebounce, SearchLabelDebounce } from "../styledcomponents/styled.components";
+import { SearchContainerDebouncing, SearchFormDebounce, SearchInputDebounce, SearchLabelDebounce, SearchResultsDebounce } from "../styledcomponents/styled.components";
 
-/**react-design-patterns-app - version 50.20 - SearchDebounce
+/**react-design-patterns-app - version 51.00 - SearchDebounce
  * - Features: 
  * 
- *     --> Migrating  'SearchInputDebounce '  
+ *     --> Migrating  'SearchResultsDebounce '  
  *
  * Note: 'UserInfo' with a few modifications ends up in 
  * 'UserInfoWithHook'  
 */
-
-const SearchResults = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-`
 
 const SearchItem = styled.li`
 padding: 10px;
@@ -50,11 +44,11 @@ const SearchDebounce = () => {
           <SearchLabelDebounce>Search meals</SearchLabelDebounce>
           <SearchInputDebounce type="text" value={query} onChange={onChangeQuery} placeholder="Type a meal here"/>
         </SearchFormDebounce>
-        <SearchResults>
+        <SearchResultsDebounce>
           {meals?.map((meal) => {
             return <SearchItem key={meal.idMeal}>{meal.strMeal}</SearchItem>;
           })}
-        </SearchResults>
+        </SearchResultsDebounce>
       </SearchContainerDebouncing>
     );
   };
