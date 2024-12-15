@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 51.02 - styled.components
+/**react-design-patterns-app - version 51.03 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'SearchItemDebounce'  styles 
+ *     --> Refactoring 'SearchResultsDebounce'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -22,9 +22,7 @@ export const SearchItemDebounce = styled.li`
 `
 
 export const SearchResultsDebounce = styled.ul`
-	list-style: none;
-	padding: 0;
-	margin-top: 20px;
+	${tw`list-none p-0 mt-5`}	
 `
 
 export const SearchInputDebounce = styled.input`
