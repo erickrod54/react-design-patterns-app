@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 51.10 - styled.components
+/**react-design-patterns-app - version 51.11 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'SearchInput'  styles 
+ *     --> Refactoring 'SearchLabelNoDebounce'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -54,9 +54,7 @@ export const SearchInput = styled.input`
 `
 
 export const SearchLabelNoDebounce = styled.label`
-	font-size: 18px;
-	font-weight: bold;
-	color: #ffcc00; /* Bright yellow for contrast */
+	${tw`text-lg font-bold text-yellow-400`}	
 `
 
 export const SearchForm = styled.form`
