@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 51.09 - styled.components
+/**react-design-patterns-app - version 51.10 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'SearchResults'  styles 
+ *     --> Refactoring 'SearchInput'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -50,18 +50,7 @@ export const SearchResults = styled.ul`
 `
 
 export const SearchInput = styled.input`
-	width: 80%;
-	padding: 10px;
-	font-size: 16px;
-	border: 2px solid #ffcc00; /* Bright yellow border */
-	border-radius: 5px;
-	background-color: #333; /* Dark gray */
-	color: white;
-	outline: none;
-
-	.search-input::placeholder {
-	color: #bbb;
-}
+	${tw`w-4/5 p-4 text-base border-2 border-yellow-400 rounded-md bg-gray-800 text-white outline-none placeholder-gray-400`}	
 `
 
 export const SearchLabelNoDebounce = styled.label`
