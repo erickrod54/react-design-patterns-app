@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 51.06 - styled.components
+/**react-design-patterns-app - version 51.07 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'SearchFormDebounce'  styles 
+ *     --> Refactoring 'SearchContainerDebouncing'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -38,13 +38,7 @@ export const SearchFormDebounce = styled.form`
 `
 
 export const SearchContainerDebouncing = styled.div`
-	width: 50%;
-	margin: 50px auto;
-	padding: 20px;
-	background-color: #222; /* Dark gray for contrast */
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-	text-align: center;
+	${tw`w-1/2 mx-auto my-12 p-5 bg-gray-900 rounded-lg shadow-lg text-center shadow-white/10`}	
 `
 
 export const SearchItem = styled.li`
