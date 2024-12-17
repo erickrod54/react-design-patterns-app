@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 51.11 - styled.components
+/**react-design-patterns-app - version 51.12 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'SearchLabelNoDebounce'  styles 
+ *     --> Refactoring 'SearchForm'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -58,10 +58,7 @@ export const SearchLabelNoDebounce = styled.label`
 `
 
 export const SearchForm = styled.form`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
+	${tw`flex flex-col items-center gap-2.5`}	
 `
 
 export const SearchContainer = styled.div`
