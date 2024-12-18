@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 51.17 - styled.components
+/**react-design-patterns-app - version 51.18 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'StyledListItemOptimized'  styles 
+ *     --> Refactoring 'StyledListOptimized'  styles 
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -105,10 +105,7 @@ export const StyledListItemOptimized = styled.li`
 `;
 
 export const StyledListOptimized = styled.ul`
-	border-color: #d1d5db; /* Replace with your desired color */
-	border-width: 0;
-	border-style: solid;
-	border-top-width: 1px; /* Add this line for the first item */
+	${tw`border-t-2 border-solid border-[#d1d5db]`}	
 `;
 
 export const StyledContainerOptimized = styled.div`
