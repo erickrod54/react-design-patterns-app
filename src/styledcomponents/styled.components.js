@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 52.00 - styled.components
+/**react-design-patterns-app - version 52.01 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'StyledButtonIngredientList'  styles more  
+ *     --> Refactoring 'StyledListItemIngredient'  styles more  
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -116,11 +116,8 @@ export const StyledButtonIngredientList = styled.button`
 	${tw`cursor-pointer`}		
 `;
 export const StyledListItemIngredient = styled.li`
-	padding-top: 0.75rem; /* Adjust as needed */
-	padding-bottom: 0.75rem; /* Adjust as needed */
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	${tw`pt-3 pb-3 flex justify-between items-center`}		
+	
 `;
 
 export const StyledListIngredient = styled.ul`
