@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 51.19 - styled.components
+/**react-design-patterns-app - version 51.20 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'StyledContainerOptimized'  styles 
+ *     --> Refactoring 'StyledContainerOptimized'  styles more  
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -109,7 +109,7 @@ export const StyledListOptimized = styled.ul`
 `;
 
 export const StyledContainerOptimized = styled.div`
-	${tw`text-left`}	
+	${tw`cursor-pointer`}		
 `;
 
 export const StyledButtonIngredientList = styled.button`
