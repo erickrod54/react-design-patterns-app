@@ -5,6 +5,7 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          ControlledUnControlledPattern,
          CustomHookPattern,
          DebouncingExecutions,
+         DesignSystemCore,
          ErrorBoundaries,
          FetchingDataWitReactQuery,
          ForwardingRefs,
@@ -19,10 +20,10 @@ import { AdvancedHooks, ApiLayerAndAsync, CleanCodeTips, ContainerPattern,
          UseCasesMealApiSearch, } from "../components/index.components";
 
 
-/**react-design-patterns-app - version 49.10 - SinglePatternPage
+/**react-design-patterns-app - version 52.03 - SinglePatternPage
  * - Features: 
  * 
- *     --> Adding 'DebouncingExecutions'
+ *     --> Adding 'DesignSystemCore'
  * 
  * Note: the cards components with the card information
  * will be displayed here
@@ -74,6 +75,10 @@ const SinglePatternPage = () => {
         return <ErrorBoundaries />
     }
     
+    if ( Number(patternId) === 11 ) {
+        return <DesignSystemCore/>
+    }
+
     if ( Number(patternId) === 10 ) {
         return <AdvancedHooks />
     }
