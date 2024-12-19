@@ -150,11 +150,12 @@ import TrackMouseNotOptimal from "./optimization.patterns.track.mouse.not.optima
 import DebouncingExecutions from "./optimization.patterns.debouncing.component.jsx";
 import Search from "./optimization.patterns.search.component.debouncing.jsx";
 import SearchDebounce from "./optimization.patterns.search.component.debouncing.implemented.jsx";
+import DesignSystemCore from "./design.systems.core.jsx";
 
-/**react-design-patterns-app - version 50.05 - components > index  
+/**react-design-patterns-app - version 52.03 - components > index  
  * - Features: 
  * 
- *     --> Importing and exporting  'SearchDebounce'
+ *     --> Importing and exporting  'DesignSystemCore'
  * 
  * Note: the component 'IngredientsListOptimized' like is memoized 
  * cannot be auto imported, so i have to write it, and will work
@@ -312,5 +313,6 @@ export {
          TrackMouseNotOptimal,
          DebouncingExecutions,
          Search,
-         SearchDebounce
+         SearchDebounce,
+         DesignSystemCore
         }
