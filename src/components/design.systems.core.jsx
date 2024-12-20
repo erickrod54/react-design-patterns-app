@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
 
-/**react-design-patterns-app - version 52.06 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 52.07 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding ' UI kit' concepts
+ *     --> Adding ' Component Libraries ' concepts
  * 
  * Note: This is the introduction to design systems
 */
@@ -81,6 +81,27 @@ const DesignSystemCore = () => {
                     <span className="text-white font-semibold"> UI kits streamline the design process by giving designers ready-to-use components </span>, 
                     ensuring <span className="text-white font-semibold"> consistency in UI elements throughout
                     the design. </span>
+                </li>
+            </ul>
+
+            <p>
+                    then following on <span className="text-white font-semibold"> Component Libraries </span>:
+                </p>
+            
+            <ul className="list-white-space">
+                <li>
+                    <span className="text-white font-semibold"> Component libraries </span> are repositories of 
+                    <span className="text-white font-semibold"> reusable UI components,</span> usually developed with a 
+                    specific <span className="text-white font-semibold"> framework like React, Angular, or Vue. </span>
+                </li>
+                <li>
+                     These components are <span className="text-white font-semibold"> pre-built, tested, and ready to be used by developers </span>, 
+                     <span className="text-white font-semibold"> saving time and reducing errors. </span>
+                     A <span className="text-white font-semibold"> component library can include elements such as buttons, modals, form fields, and navigation components. </span>
+                </li>
+                <li>
+                    The key benefit here is <span className="text-white font-semibold"> reusability—once a component </span> is built and added to the 
+                    <span className="text-white font-semibold"> library, it can be used across multiple projects or pages. </span>
                 </li>
             </ul>
             
