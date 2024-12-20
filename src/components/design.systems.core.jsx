@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
 
-/**react-design-patterns-app - version 52.05 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 52.06 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding ' Design Language' concepts
+ *     --> Adding ' UI kit' concepts
  * 
  * Note: This is the introduction to design systems
 */
@@ -65,7 +65,25 @@ const DesignSystemCore = () => {
                     create a <span className="text-white font-semibold"> readable and cohesive experience across different devices. </span>
                 </li>
             </ul>
-                
+
+                <p>
+                    then following on <span className="text-white font-semibold"> UI Kits </span>:
+                </p>
+            
+            <ul className="list-white-space">
+                <li>
+                    A <span className="text-white font-semibold"> UI kit is a collection of reusable elements </span> such as 
+                    <span className="text-white font-semibold"> buttons, icons, forms, and other visual 
+                    components.</span> These elements are <span className="text-white font-semibold"> pre-designed in a tool like Figma </span> and act 
+                    <span className="text-white font-semibold"> as building blocks for creating consistent and scalable user interfaces.</span> 
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> UI kits streamline the design process by giving designers ready-to-use components </span>, 
+                    ensuring <span className="text-white font-semibold"> consistency in UI elements throughout
+                    the design. </span>
+                </li>
+            </ul>
+            
             </SectionWrapper>
         </div>
     )
