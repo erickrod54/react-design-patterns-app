@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
 
-/**react-design-patterns-app - version 52.08 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 52.09 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding ' Style Guides ' concepts
+ *     --> Adding ' OnBoarding ' worflow
  * 
  * Note: This is the introduction to design systems
 */
@@ -126,6 +126,29 @@ const DesignSystemCore = () => {
                 <li>
                     <span className="text-white font-semibold"> Style guides help everyone in the team </span> (designers, developers, product managers) 
                     stay <span className="text-white font-semibold"> aligned on how to implement the design system. </span>
+                </li>
+            </ul>
+
+            <p>
+                    so an implementation of a design system can be included in a <span className="text-white font-semibold"> Onboarding for new team members </span>:
+                </p>
+            
+            <ul className="list-white-space">
+                <li>
+                    Provide a <span className="text-white font-semibold"> central style guide that helps new members quickly access necessary 
+                    information to start working on the project.</span>
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Once the design system is stable, UI kits </span>  help designers 
+                    <span className="text-white font-semibold"> prototype quickly </span>
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Developers can use the component library </span> to build features 
+                    <span className="text-white font-semibold"> rapidly with pre-designed components. </span>
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Designers and developers </span> can work seamlessly because both have 
+                    <span className="text-white font-semibold"> access to the same, pre-built, and pre-designed resources </span>
                 </li>
             </ul>
             
