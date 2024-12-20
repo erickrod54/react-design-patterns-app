@@ -4,10 +4,10 @@ import CustomTitle from "./custom.title.component";
 import { usePatternsAppContext } from "../context";
 
 
-/**react-design-patterns-app - version 52.07 - FetchingDataWitReactQuery
+/**react-design-patterns-app - version 52.08 - FetchingDataWitReactQuery
  * - Features: 
  * 
- *     --> Adding ' Component Libraries ' concepts
+ *     --> Adding ' Style Guides ' concepts
  * 
  * Note: This is the introduction to design systems
 */
@@ -102,6 +102,30 @@ const DesignSystemCore = () => {
                 <li>
                     The key benefit here is <span className="text-white font-semibold"> reusability—once a component </span> is built and added to the 
                     <span className="text-white font-semibold"> library, it can be used across multiple projects or pages. </span>
+                </li>
+            </ul>
+
+            <p>
+                    then following on <span className="text-white font-semibold"> Style Guides </span>:
+                </p>
+            
+            <ul className="list-white-space">
+                <li>
+                    A style guide is a <span className="text-white font-semibold"> detailed document or a set of rules </span> 
+                    that explains <span className="text-white font-semibold"> how the design system components should be used. </span>
+                     It includes <span className="text-white font-semibold"> guidelines for typography, spacing, color usage, interaction 
+                    patterns, and accessibility considerations. </span>
+                </li>
+                <li>
+                     <span className="text-white font-semibold"> Storybook and Gatsby </span> are examples of <span className="text-white font-semibold"> 
+                     tools used to document and showcase these components interactively.</span> With 
+                     <span className="text-white font-semibold"> Storybook, developers and designers can see the components in action,</span>
+                      while <span className="text-white font-semibold"> Gatsby can be used to build static 
+                     sites </span> that document the design system.
+                </li>
+                <li>
+                    <span className="text-white font-semibold"> Style guides help everyone in the team </span> (designers, developers, product managers) 
+                    stay <span className="text-white font-semibold"> aligned on how to implement the design system. </span>
                 </li>
             </ul>
             
