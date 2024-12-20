@@ -2,10 +2,10 @@ import styled from "styled-components";
 /**this is the tw macro import */
 import tw from 'twin.macro';
 
-/**react-design-patterns-app - version 52.03 - styled.components
+/**react-design-patterns-app - version 52.05 - styled.components
  * - Features: 
  * 
- *     --> Refactoring 'design-system-core'  styles   
+ *     --> Refactoring 'design-system-core'  styles more   
  * 
  * Note: the macro 'tw' in order to work and use has to be installed
  * there is around 4 or 5 libraries and this is oen of the most active
@@ -1395,7 +1395,7 @@ export const CustomTitleStyle = styled.div`
 }
 
 .design-system-core{
-	${tw`design-system-core`}
+	${tw`text-fuchsia-300 underline`}
 }
 `
 
